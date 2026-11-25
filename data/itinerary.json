@@ -1,10 +1,25 @@
 {
  "_meta": {
-  "basis": "Built only from activities whose hours and prices were verified on the venue's own site (data/activities.json). No travel time is asserted here; the only transit figure quoted is The Met's own ~1 h 25 min M4 estimate for The Cloisters.",
+  "basis": "Built only from activities whose hours and prices were verified on the venue’s own site (data/activities.json). Each rendered day row links to the official pages for its planned activities. No travel time is asserted here; the only transit figure quoted is The Met’s own ~1 h 25 min M4 estimate for The Cloisters.",
   "weekday_logic": "Placement respects published closures: the Whitney is closed Tuesdays, so it sits on Mon and Fri; the 9/11 Museum is closed most Tuesdays, so it sits on Wed.",
   "length_options": "7 nights (15–22 Feb 2027) is the priced baseline. A 14-night stay repeats this loop with the second week left open for starred dinners, shopping and weather contingency — nothing in week two is asserted as verified.",
   "caveat": "February weather can close outdoor plans. Central Park, the High Line and the Statue ferry all have no indoor substitute listed on this site yet — that is open question Q11.",
-  "prices_not_summed": "No daily spend total is shown: adult admission is known, but restaurant prices are not verified, so a daily total would be a guess."
+  "prices_not_summed": "No daily spend total is shown: adult admission is known, but restaurant prices are not verified, so a daily total would be a guess.",
+  "source_links": [
+   {
+    "label": "MTA schedule guidance",
+    "url": "https://www.mta.info/developers/gtfs-schedules-transition"
+   },
+   {
+    "label": "MICHELIN NYC directory",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+   },
+   {
+    "label": "Central Park alerts",
+    "url": "https://www.centralparknyc.org/alerts"
+   }
+  ],
+  "week2_source_note": "Second-week suggestions are planning prompts, not verified bookings; the linked official planning sources are the starting point for route, award, and weather re-checks."
  },
  "days": [
   {

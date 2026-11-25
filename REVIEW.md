@@ -2,6 +2,8 @@
 
 Session `arena-c2e08f03` · branch `arena/c2e08f03-nyfun3` · checked 2026-11-25.
 
+**Final-integration note (2026-11-25, session `ed92e764`):** this document is retained as the original Phase A review. The numbered irregularities below record what that session observed; the "resolution" lines describe the combined three-session state. R1–R3 are now closed by `README.md`, `.gitignore`, `scripts/validate_site.py`, `scripts/check_inline_js.py`, and `.github/workflows/validate-site.yml`. R8 is partly closed: 10 selected starred rows now publish `2 × official per-person price` arithmetic with first-party menu/FAQ/PDF links and exclusions; 62 rows remain blank + `unverified`.
+
 Scope of this review: every file in the repository, plus every value published on the site,
 checked against the official page named in its row. Third-party blogs, aggregators, listicles
 and price-scraper sites were not accepted as sources at any point.
@@ -12,11 +14,11 @@ and price-scraper sites were not accepted as sources at any point.
 
 | Path | What it is | Verdict |
 |---|---|---|
-| `README.md` | Original stub: `# NYFun3` | **Irregularity R1** — no purpose, no run instructions, no source policy. Left untouched on purpose (shared file, not in this session's scope to rewrite without asking). |
+| `README.md` | Original stub: `# NYFun3` | **Irregularity R1** — no purpose, no run instructions, no source policy. **Resolved:** integrated README documents pages, data, source rules, preview, and validation. |
 | `.git` | Single initial commit `c251442` before this session | Clean; no unexpected history, no large objects, no committed secrets, no `.env`. |
 | GitHub Pages | Source `main`, path `/`, HTTPS enforced | Correct for a static site. |
-| `.gitignore` | Absent | **Irregularity R2** — nothing to ignore yet (no build step, no dependencies), but the absence should be deliberate rather than accidental. |
-| Tests / CI | Absent | **Irregularity R3** — a site whose entire value is "every row has a source" has no automated check that links resolve. Recorded here, fixed only if approved (see `plan.html` suggestion S3). |
+| `.gitignore` | Absent | **Irregularity R2** — nothing to ignore yet (no build step, no dependencies), but the absence should be deliberate rather than accidental. **Resolved:** `.gitignore` excludes Python, Node, and editor artifacts. |
+| Tests / CI | Absent | **Irregularity R3** — a site whose entire value is "every row has a source" has no automated check that links resolve. **Resolved:** standard-library validators and a GitHub Actions workflow now check schemas, links, anchors, navigation, source columns, price arithmetic, and JS syntax. |
 
 Files added by this session, each reviewed line by line:
 
@@ -31,18 +33,20 @@ Files added by this session, each reviewed line by line:
 ## 2. Irregularities found
 
 ### R1 — README is a bare stub
-`README.md` contains eight bytes of content and states nothing about the project, the
-verification standard, or how to preview the site. Anyone picking this repo up cold cannot
-tell what it is. **Not fixed** in this pass because `README.md` predates the session and
-rewriting shared documentation without approval would violate the coordination rules.
+`README.md` originally contained eight bytes of content and stated nothing about the project,
+the verification standard, or how to preview the site. **Resolved in final integration:** it
+now documents the pages, data, official-source rule, local preview, and validators.
 
 ### R2 — No `.gitignore`
-No build artefacts exist today, so nothing is currently leaking into Git. If a bundler or
-`node_modules` is ever introduced this becomes a real problem.
+No build artefacts existed at review time. **Resolved:** `.gitignore` now covers Python caches,
+virtual environments, pytest caches, `node_modules/`, and `.DS_Store`.
 
 ### R3 — Nothing verifies the verification
-The central promise of the site is "every row has an official source link". There is no
-link checker and no schema check. A stale Michelin URL would be invisible.
+The central promise of the site was "every row has an official source link", with no link
+checker or schema check. **Resolved:** `scripts/validate_site.py` checks internal/external URL
+shape, every local target and anchor, JSON schemas, source columns, price arithmetic, and nav;
+`scripts/check_inline_js.py` checks JavaScript syntax; `.github/workflows/validate-site.yml`
+runs both in CI.
 
 ### R4 — Branch-name convention conflict
 The repo protocol asks for `session-<id>/<task>` branches. The session is pinned by the
@@ -68,8 +72,10 @@ caveat; the star cells are not claimed as final.
 
 ### R8 — Michelin publishes no price, only a band
 `$`–`$$$$` is a band, not a number. A "cost per couple" figure cannot be derived from it
-without inventing a number. The column is therefore blank and flagged. This is the single
-biggest gap against the original brief.
+without inventing a number. The original column was blank and flagged. **Partly resolved:**
+10 selected rows now use first-party menu/FAQ/PDF amounts as `2 × official per-person price`,
+with links and an exclusions caveat; the other 62 rows remain blank + `unverified`. No figure
+is a quoted all-in bill or a 2027 price guarantee.
 
 ### R9 — Starred restaurant sites are JavaScript apps
 `le-bernardin.com` and `jean-georges.com` return no menu prices to a text fetch. Several
@@ -155,19 +161,19 @@ site. For a February trip that is a real planning hole; it is open question Q11.
 | `data/michelin.json` | 5 three-star + 7 two-star with full hours from Guide pages. Validates as JSON, 12 records. |
 | `data/michelin_two_star.json` | All 15 two-star records; 7 overlap the file above and were merged by name in `michelin_all.json`, not duplicated at render time. |
 | `data/michelin_one_star.json` | 52 one-star rows. Where the Guide page was not fetched, hours and website are blank with an explicit flag — 43 of 52 rows still need their hours captured. **This is the largest known gap.** |
-| `data/michelin_all.json` | Merged, de-duplicated, filterable source for the Michelin and Restaurants pages. 72 rows. |
+| `data/michelin_all.json` | Merged, de-duplicated, filterable source for the Michelin and Restaurants pages. 72 rows; 10 have verified official menu arithmetic; 20 have a verified neighbourhood; 52 are ungrouped/flags. |
 | `data/hotels.json` | 9 hotels, all with the exact quote URL. Michelin-proximity count deliberately null. |
-| `data/activities.json` | 15 activities; 1 row carries an unverified price (AMNH), 8 rows carry an unverified or seasonal hours cell (2 of those are seasonal-by-design: the High Line and the Statue ferry). |
+| `data/activities.json` | 15 activities; final integration has 10 populated baseline-hours rows, 5 blank/partial/unverified hours rows, and 1 unverified price (AMNH). The High Line, Statue, Central Park, and Grand Central rows are now explicit current official baselines, not 2027 calendar confirmations. |
 | `data/itinerary.json` | Derived only from verified activity hours; no invented travel times. |
-| `index.html`, `assets/` | Static, no build step, no external JS. Renders on GitHub Pages as-is. |
+| `index.html`, `assets/` | Static, no build step, no external JS. Renders on GitHub Pages as-is; root nav now includes Itinerary and Flagged for Review. |
 | `assets/app.js` | All rendering escapes text before insertion; no `innerHTML` of raw remote data. |
 
 ---
 
 ## 5. Honest summary
 
-The repository is in good shape structurally: static, dependency-free, mobile-first, and
-every published value traces to an official page. The three things that genuinely limit the
-deliverable are (a) no verified per-couple restaurant prices, (b) no computed Michelin
-proximity ranking, and (c) 43 one-star rows whose hours have not yet been read off their
-Guide pages. All three are stated on the site rather than papered over.
+The integrated repository is static, dependency-free, mobile-first, and every published table
+row has a source link. The remaining limitations are (a) only 10 of 72 starred rows have
+verified per-couple menu arithmetic, (b) no computed Michelin proximity ranking, and (c) 43
+one-star rows whose hours have not yet been read off their Guide pages. All three are stated on
+the site and in the Flagged for Review queue rather than papered over.

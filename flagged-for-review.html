@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review — NYC 2027 trip planner</title>
+<meta name="description" content="Published list of items marked needs review, with official source links and a concrete next check.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html" aria-current="page">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Flagged for Review</h1>
+    <p>Everything marked <span class="unver">needs review</span> is published here. These items do <strong>not</strong> block the dashboard: unknown values stay blank and flagged in their original tables until an official source is checked.</p>
+  </div>
+
+  <section class="panel">
+    <h2>Review queue</h2>
+    <p class="lede">The board defines <code>needs review</code> as “published on the Flagged for Review page”. Each row links to the official starting point and names the next check.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>ID</th><th>Item</th><th>Status</th><th>Next check</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr id="NR-01"><td><strong>NR-01</strong></td><td>2027 MICHELIN star status is not yet knowable; the next New York ceremony is 14 Dec 2026.</td><td><span class="pill warn">needs review</span></td><td>Re-read the Guide after the ceremony and update every star label.</td><td class="small"><a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener noreferrer">2025 MICHELIN list</a><br><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN NYC directory</a></td></tr>
+        <tr id="NR-02"><td><strong>NR-02</strong></td><td>Hotel rates are Booking.com third-party snapshots, not official hotel quotes.</td><td><span class="pill warn">needs review</span></td><td>Confirm a matching direct/booking checkout total including taxes and fees.</td><td class="small"><a href="https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages" target="_blank" rel="noopener noreferrer">Pages config</a><br><a href="https://www.hgunewyork.com/" target="_blank" rel="noopener noreferrer">HGU official site</a></td></tr>
+        <tr id="NR-03"><td><strong>NR-03</strong></td><td>Cheapest upcoming time to book / best time to book remain unverified.</td><td><span class="pill warn">needs review</span></td><td>Re-quote the exact dates after the trip length is chosen; do not infer a booking-time rule.</td><td class="small"><a href="https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&amp;checkout=2027-02-22&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0&amp;selected_currency=USD" target="_blank" rel="noopener noreferrer">HGU exact-date quote</a></td></tr>
+        <tr id="NR-04"><td><strong>NR-04</strong></td><td>2027 one-hour transit counts are unverified; current GTFS cannot be extended to Feb–Mar 2027.</td><td><span class="pill warn">needs review</span></td><td>Use a date-specific MTA journey planner after the final hotel and restaurant list is known.</td><td class="small"><a href="https://www.mta.info/developers/gtfs-schedules-transition" target="_blank" rel="noopener noreferrer">MTA transition guidance</a><br><a href="https://new.mta.info/guides/apps" target="_blank" rel="noopener noreferrer">MTA app guidance</a></td></tr>
+        <tr id="NR-05"><td><strong>NR-05</strong></td><td>Some one-star hours and Met/Cloisters/NYPL building hours remain blank where official hours did not render.</td><td><span class="pill warn">needs review</span></td><td>Read the official hours panels in a browser and record the capture date.</td><td class="small"><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN directory</a><br><a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener noreferrer">The Met visit page</a><br><a href="https://www.nypl.org/locations/schwarzman" target="_blank" rel="noopener noreferrer">NYPL location</a></td></tr>
+        <tr id="NR-06"><td><strong>NR-06</strong></td><td>Bib Gourmand and merely Guide-listed venues are not fully catalogued.</td><td><span class="pill warn">needs review</span></td><td>Decide whether to include the Guide’s broader tiers, then catalogue them from the Guide.</td><td class="small"><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN NYC directory</a></td></tr>
+        <tr id="NR-07"><td><strong>NR-07</strong></td><td>2–4-week hotel pricing and 2027 date-specific admission totals are not captured.</td><td><span class="pill warn">needs review</span></td><td>Re-run exact-date quotes after trip length is confirmed.</td><td class="small"><a href="https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south" target="_blank" rel="noopener noreferrer">Hyatt official site</a><br><a href="https://www.citypass.com/new-york" target="_blank" rel="noopener noreferrer">CityPASS official page</a></td></tr>
+        <tr id="NR-08"><td><strong>NR-08</strong></td><td>Direct official hotel APIs/pages did not expose exact-date totals; diagnostics recorded blocks.</td><td><span class="pill warn">needs review</span></td><td>Retry official booking engines near travel; keep Booking.com labeled as third-party.</td><td class="small"><a href="https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south" target="_blank" rel="noopener noreferrer">Hyatt official site</a><br><a href="research/verification-log.md">Diagnostics log</a></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="panel">
+    <h2>How to use this page</h2>
+    <ul class="tight">
+      <li><strong>Blank is a value.</strong> A blank cell with <span class="unver">unverified</span> means the official source did not publish the fact; it never means zero.</li>
+      <li><strong>Do not infer 2027.</strong> Stars, schedules, hotel rates, and menu prices may change before travel.</li>
+      <li><strong>Source links are starting points.</strong> Use them to re-check the fact on the operator, venue, Guide, or transit authority’s own page.</li>
+      <li><strong>Coordination:</strong> the task board and work logs are in <a href="COORDINATION.md">COORDINATION.md</a>; the curated dossier’s own findings are in <a href="pages/findings.html">pages/findings.html</a>.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Verification date 25 November 2026. <code>needs review</code> does not block the published dashboard; it keeps unresolved official-source checks visible.</p>
+</footer>
+</body>
+</html>

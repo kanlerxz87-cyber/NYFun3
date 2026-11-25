@@ -1,3 +1,4 @@
+<a id="trip-brief"></a>
 # NYC Trip Planner — February/March 2027
 
 A static, mobile-first planning dashboard for a two-adult New York City trip in the window
@@ -18,9 +19,10 @@ No build step, dependencies, or framework. The primary dashboard is plain HTML w
 | `hotels.html` | 9 hotels with 7-night totals for 15–22 Feb 2027, checked against private-bathroom and queen-bed requirements. |
 | `itinerary.html` | 7-day plan sequenced around published closures. |
 | `plan.html` | Executive summary, 9 reviewable suggestions, 11 open questions, irregularities found. |
+| `flagged-for-review.html` | Published NR-01–NR-08 `needs review` queue, each with an official starting source and next check. |
 | `pages/index.html` | Supplemental curated dossier: itinerary, hotel snapshots, dining/menu arithmetic, attraction hours, and research notes. |
 
-Supporting documents: `REVIEW.md` (repo review, irregularities R1–R20),
+Supporting documents: `REVIEW.md` (repo review, irregularities R1–R20, with final-integration resolutions),
 `VERIFICATION.md` (what was checked, against which page, and when), and `RESEARCH.md`
 (the supplemental dossier source/method log). The nested `pages/` dossier complements the
 data-driven root site; it does not replace the existing JSON datasets or star/activity tables.
@@ -37,10 +39,13 @@ represented as official hotel quotes or guaranteed all-in prices. The supplement
 dossier also includes selected published restaurant-menu arithmetic and creator-review leads;
 menu estimates are not final bills, and social links are not treated as factual authorities.
 
-Several gaps remain visible: the primary MICHELIN table is not a complete per-couple menu-cost
-catalogue, restaurant sites may not expose menu data, and no official source publishes subway
-times per hotel/restaurant pair. Each gap is listed rather than papered over with a plausible
-number.
+Several gaps remain visible: the primary MICHELIN table is only a partial per-couple menu-cost
+catalogue (10 selected rows have explicit `2 × official per-person price` arithmetic; 62 remain
+blank + `unverified`), restaurant sites may not expose menu data, and no official source publishes
+subway times per hotel/restaurant pair. The figures that are published are paired with
+menu/FAQ/PDF links and an exclusions caveat; they are not quoted all-in totals or 2027 price
+guarantees. Each gap is listed rather than papered over with a plausible number, and the
+`needs review` queue lives on `flagged-for-review.html`.
 
 ## Data files
 
@@ -52,17 +57,24 @@ number.
 | `data/michelin_two_star.json` | All 15 two-star records. |
 | `data/michelin_one_star.json` | All 52 one-star records. |
 | `data/michelin_all.json` | Merged, de-duplicated source used by the site (72 rows). |
-| `data/itinerary.json` | 7-day plan, derived only from verified activity hours. |
+| `data/itinerary.json` | 7-day plan plus 3 second-week suggestions, derived from source-linked activity data. |
 
-## Preview locally
+## Preview and validation
 
 ```sh
 python3 -m http.server 8000 --bind 0.0.0.0
-# then open http://localhost:8000/
+# then open http://localhost:8000/ in your own browser (local preview only)
+python scripts/validate_site.py
+python scripts/check_inline_js.py
+node scripts/check_rendered_tables.js
 ```
 
 Opening `index.html` directly from disk will not work: browsers block `fetch()` of local JSON
-over `file://`. Any static server is fine.
+over `file://`. Any static server is fine. The validators check JSON schemas, official source links, local links/anchors, navigation,
+table Source columns, and `2 × official per-person` arithmetic; the JavaScript checker runs
+`node --check` on every script; the rendered-table harness executes each root renderer with a
+minimal DOM stub and checks all 175 generated rows for source links.
+`.github/workflows/validate-site.yml` runs both on pushes and pull requests.
 
 ## Verification status (25 November 2026)
 
@@ -70,11 +82,12 @@ over `file://`. Any static server is fine.
   snapshot only**. The next New York ceremony is **14 Dec 2026** — before the trip. Re-check
   every star after that date.
 - **Hotel prices:** live Booking.com rate cards, captured with their URLs. These move daily.
-- **Known gaps:** 43 of 52 one-star rows lack verified hours; 50 of 72 rows lack a verified
-  neighbourhood; the primary 72-row MICHELIN dataset has no complete per-couple cost catalogue
-  (the supplement contains menu arithmetic for eight selected candidates); no Michelin "within
-  1 hour" hotel count has been computed. These gaps are flagged on the site and listed in
-  `plan.html` §4 / `pages/findings.html`.
+- **Known gaps:** 43 of 52 one-star rows lack verified hours; 52 of 72 rows lack a verified
+  neighbourhood (20 verified plus 2 flagged Guide-blurb clues rendered as "Not yet grouped");
+  62 of 72 starred rows still lack a published first-party menu subtotal (10 have selected
+  official-menu arithmetic, and the supplement adds eight curated candidates); no Michelin
+  "within 1 hour" hotel count has been computed. These gaps are flagged on the site and listed
+  in `plan.html` §4 / `pages/findings.html` / `flagged-for-review.html`.
 
 ## Contributing / parallel sessions
 

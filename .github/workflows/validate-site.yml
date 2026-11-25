@@ -1,0 +1,32 @@
+name: Validate static site
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Schema, links, source columns, JS syntax
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate data, links, source columns, and navigation
+        run: python scripts/validate_site.py
+      - name: Check JavaScript syntax
+        run: python scripts/check_inline_js.py
+      - name: Render dynamic tables and verify generated source links
+        run: node scripts/check_rendered_tables.js

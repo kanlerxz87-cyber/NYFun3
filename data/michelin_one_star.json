@@ -1,9 +1,12 @@
 {
  "_meta": {
-  "note": "One-star tier of the 2025 MICHELIN Guide New York. Names, cuisine labels and Guide URLs are transcribed from MICHELIN's own announcement of 18 Nov 2025. Rows with empty hours/site/price are deliberately blank and flagged rather than guessed.",
+  "note": "One-star tier of the 2025 MICHELIN Guide New York. Names, cuisine labels and Guide URLs are transcribed from MICHELIN's own announcement of 18 Nov 2025. Rows with empty hours/site/price are deliberately blank and flagged rather than guessed. Final integration adds official menu arithmetic for selected rows and preserves blank + unverified prices elsewhere.",
   "announcement_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
   "count_note": "This announcement lists 52 names under One Star including two outside Manhattan-proper boroughs' core and one in Westchester (La Bastide). MICHELIN's NYC filter reports 50 one-star restaurants in NYC as of 2 Nov 2026. The 52-vs-50 difference is FLAGGED for review and not silently reconciled.",
-  "verification_date": "2026-11-25"
+  "verification_date": "2026-11-25",
+  "menu_price_integration": "Final integration 2026-11-25: 10 starred rows carry selected official menu/FAQ/PDF prices. Couple figures are arithmetic (2 × official per-person amount), not quoted all-in totals; they exclude beverages, tax, and gratuity unless the official page says otherwise. No 2027 price is inferred.",
+  "price_arithmetic_rule": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+  "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link."
  },
  "restaurants": [
   {
@@ -31,7 +34,14 @@
    "phone": "+1 917-663-6223",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Bar Miller",
@@ -50,7 +60,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "bōm",
@@ -69,7 +86,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Bridges (NEW)",
@@ -88,7 +112,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Café Boulud",
@@ -107,7 +138,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Casa Mono",
@@ -126,7 +164,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Corima",
@@ -145,7 +190,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Cote",
@@ -162,9 +214,34 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/cote",
    "booking_url": "",
    "phone": "",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "menu_price_per_person_usd": 84,
+   "price_for_two_usd": 168,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "price_options": [
+    {
+     "label": "Butcher's Feast",
+     "per_person_usd": 84,
+     "for_two_usd": 168,
+     "source_url": "https://www.cotekoreansteakhouse.com/nycdinnermenu"
+    },
+    {
+     "label": "Steak Omakase",
+     "per_person_usd": 225,
+     "for_two_usd": 450,
+     "source_url": "https://www.cotekoreansteakhouse.com/nycdinnermenu"
+    }
+   ],
+   "price_source_url": "https://www.cotekoreansteakhouse.com/nycdinnermenu",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.cotekoreansteakhouse.com/nycdinnermenu"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official dinner menu prints per-person prices; supplements and the $110-per-person wine pairing are additional.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-25"
   },
   {
    "name": "Crown Shy",
@@ -183,7 +260,14 @@
    "phone": "+1 212-517-1932",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — official à la carte menu prices exist, but no fixed per-person couple menu price was captured.",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "Official page: https://www.crownshy.nyc/menus/. The menu is à la carte; sample-order arithmetic is kept in the curated dossier, not asserted as a fixed per-couple price in the root dataset.",
+   "price_for_two_note": "Official page: https://www.crownshy.nyc/menus/. The menu is à la carte; sample-order arithmetic is kept in the curated dossier, not asserted as a fixed per-couple price in the root dataset.",
+   "price_verified_on": ""
   },
   {
    "name": "Daniel",
@@ -200,9 +284,50 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/daniel",
    "booking_url": "",
    "phone": "",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "menu_price_per_person_usd": 195,
+   "price_for_two_usd": 390,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "price_options": [
+    {
+     "label": "Three-course prix fixe",
+     "per_person_usd": 195,
+     "for_two_usd": 390,
+     "source_url": "https://www.danielnyc.com/cuisine/prix-fixe"
+    },
+    {
+     "label": "Five-course prix fixe",
+     "per_person_usd": 255,
+     "for_two_usd": 510,
+     "source_url": "https://www.danielnyc.com/cuisine/prix-fixe"
+    },
+    {
+     "label": "Seven-course tasting",
+     "per_person_usd": 295,
+     "for_two_usd": 590,
+     "source_url": "https://www.danielnyc.com/cuisine/tasting-menu"
+    },
+    {
+     "label": "Vegetarian tasting",
+     "per_person_usd": 295,
+     "for_two_usd": 590,
+     "source_url": "https://www.danielnyc.com/cuisine/tasting-menu"
+    }
+   ],
+   "price_source_url": "https://www.danielnyc.com/cuisine/prix-fixe",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.danielnyc.com/cuisine/prix-fixe"
+    },
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.danielnyc.com/cuisine/tasting-menu"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official prix-fixe page lists optional wine pairing at $195 per person; the tasting page lists optional pairing at $225.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-25"
   },
   {
    "name": "Dirt Candy",
@@ -221,7 +346,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Essential by Christophe",
@@ -240,7 +372,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Estela",
@@ -259,7 +398,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Family Meal at Blue Hill",
@@ -278,7 +424,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Francie",
@@ -297,7 +450,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Frevo",
@@ -316,7 +476,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Gramercy Tavern",
@@ -341,9 +508,28 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gramercy-tavern",
    "booking_url": "https://www.opentable.com/r/gramercy-tavern-new-york",
    "phone": "+1 212-477-0777",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "menu_price_per_person_usd": 178,
+   "price_for_two_usd": 356,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "price_options": [
+    {
+     "label": "Seasonal Dining Room menu",
+     "per_person_usd": 178,
+     "for_two_usd": 356,
+     "source_url": "https://www.gramercytavern.com/dining-room-menu/"
+    }
+   ],
+   "price_source_url": "https://www.gramercytavern.com/dining-room-menu/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.gramercytavern.com/dining-room-menu/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu also lists an optional $118-per-person wine pairing and à la carte items; only the explicit per-person seasonal menu is multiplied here.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-25"
   },
   {
    "name": "Huso (NEW)",
@@ -362,7 +548,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Icca",
@@ -381,7 +574,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Jeju Noodle Bar",
@@ -400,7 +600,14 @@
    "phone": "+1 646-666-0947",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Jōji",
@@ -419,7 +626,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Jua",
@@ -438,7 +652,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Kochi",
@@ -457,7 +678,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Kosaka",
@@ -476,7 +704,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "L’Abeille",
@@ -495,7 +730,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "La Bastide by Andrea Calstier",
@@ -514,7 +756,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Le Coucou",
@@ -539,9 +788,58 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
    "booking_url": "https://resy.com/cities/new-york-ny/venues/le-coucou",
    "phone": "+1 212-271-4252",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "menu_price_per_person_usd": 81,
+   "price_for_two_usd": 162,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "price_options": [
+    {
+     "label": "Dinner prix fixe",
+     "per_person_usd": 255,
+     "for_two_usd": 510,
+     "source_url": "https://lecoucou.com/"
+    },
+    {
+     "label": "When the Clock Strikes Coucou",
+     "per_person_usd": 395,
+     "for_two_usd": 790,
+     "source_url": "https://lecoucou.com/"
+    },
+    {
+     "label": "Two-course lunch",
+     "per_person_usd": 81,
+     "for_two_usd": 162,
+     "source_url": "https://lecoucou.com/"
+    },
+    {
+     "label": "Three-course lunch",
+     "per_person_usd": 125,
+     "for_two_usd": 250,
+     "source_url": "https://lecoucou.com/"
+    },
+    {
+     "label": "A Very Coucou Lunch",
+     "per_person_usd": 150,
+     "for_two_usd": 300,
+     "source_url": "https://lecoucou.com/"
+    },
+    {
+     "label": "A Very Coucou Dinner",
+     "per_person_usd": 220,
+     "for_two_usd": 440,
+     "source_url": "https://lecoucou.com/"
+    }
+   ],
+   "price_source_url": "https://lecoucou.com/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://lecoucou.com/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official page says lunch and Very Coucou menus are priced per person and do not include tax or gratuity; wine accompaniments are extra. The 4-course $240 menu is for parties of 7–10 and is not a couple price.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-25"
   },
   {
    "name": "Le Pavillon",
@@ -560,7 +858,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Mari",
@@ -579,7 +884,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Meju",
@@ -598,7 +910,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Muku (NEW)",
@@ -617,7 +936,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Noda",
@@ -636,7 +962,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Nōksu",
@@ -655,7 +988,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Noz 17",
@@ -674,7 +1014,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Oiji Mi",
@@ -693,7 +1040,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Oxomoco",
@@ -712,7 +1066,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Restaurant Yuu",
@@ -731,7 +1092,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Rezdôra",
@@ -748,9 +1116,28 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/rezdora-osteria-emiliana",
    "booking_url": "restaurant manages its own bookings (Michelin page)",
    "phone": "+1 646-692-9090",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "menu_price_per_person_usd": 110,
+   "price_for_two_usd": 220,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "price_options": [
+    {
+     "label": "Regional pasta tasting",
+     "per_person_usd": 110,
+     "for_two_usd": 220,
+     "source_url": "https://www.rezdora.nyc/menus/"
+    }
+   ],
+   "price_source_url": "https://www.rezdora.nyc/menus/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.rezdora.nyc/menus/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu says the full table must participate; optional wine pairing is $90 per person, so two paired tastings would be 2 × ($110 + $90) = $400 before exclusions. Only the unpaired per-person tasting is shown as the base couple subtotal.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-25"
   },
   {
    "name": "Semma",
@@ -777,7 +1164,14 @@
    "phone": "+1 212-373-8900",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Shion 69 Leonard Street",
@@ -796,7 +1190,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Shmoné",
@@ -815,7 +1216,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Shota Omakase",
@@ -834,7 +1242,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Sushi Nakazawa",
@@ -853,7 +1268,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Tempura Matsui",
@@ -872,7 +1294,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "The Four Horsemen",
@@ -891,7 +1320,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Torien",
@@ -910,7 +1346,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Torrisi",
@@ -929,7 +1372,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Tsukimi",
@@ -948,7 +1398,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Tuome",
@@ -967,7 +1424,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Yamada (NEW)",
@@ -986,7 +1450,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "YingTao",
@@ -1005,7 +1476,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   },
   {
    "name": "Yoshino",
@@ -1024,7 +1502,14 @@
    "phone": "",
    "menu_price_per_person_usd": "",
    "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured"
+   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_options": [],
+   "price_source_url": "",
+   "price_sources": [],
+   "price_basis": "",
+   "price_caveat": "",
+   "price_for_two_note": "",
+   "price_verified_on": ""
   }
  ]
 }

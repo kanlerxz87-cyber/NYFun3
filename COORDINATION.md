@@ -26,6 +26,7 @@ Shared task board. Read this before starting work. This file was combined by fin
 
 The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pinned to fixed `arena/<id>-nyfun3` branches and cannot create or switch branches. Resolution: non-overlapping file scopes are recorded here; each phase merged to `main` through GitHub, and the final review publishes through a pull request from the fixed branch to `main`. No session pushes directly to another branch.
 
+<a id="task-board"></a>
 ## Task board
 
 | ID | Task | Status | Owner session | File scope |
@@ -42,7 +43,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T10 | First Pages integration and live checks | `done` | `arena-c2e08f03` | `main` publish |
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
-| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `in progress` | `ed92e764` | shared outputs, `review.html`, `scripts/**`, `COORDINATION.md`, `README.md`, PR to `main` |
+| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `in progress` | `ed92e764` | shared outputs, `flagged-for-review.html`, `review.html`, `scripts/**`, `.github/workflows/validate-site.yml`, `COORDINATION.md`, `README.md`, PR to `main` |
 
 ## `needs review` items — published on Flagged for Review page
 
@@ -52,7 +53,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | NR-02 | Hotel rates are Booking.com third-party snapshots, not official hotel quotes | `needs review` | [GitHub Pages API](https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages) · [HGU official site](https://www.hgunewyork.com/) |
 | NR-03 | Cheapest upcoming time to book / best time to book remain unverified | `needs review` | [HGU exact-date quote](https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD) |
 | NR-04 | 2027 one-hour transit counts are unverified; current GTFS cannot be extended | `needs review` | [MTA schedule-transition guidance](https://www.mta.info/developers/gtfs-schedules-transition) |
-| NR-05 | 48 one-star hours cells, Met/Cloisters/NYPL building hours remain blank where official hours did not render | `needs review` | [MICHELIN NYC directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants) · [The Met visit page](https://www.metmuseum.org/plan-your-visit) |
+| NR-05 | 43 one-star hours cells plus Met/Cloisters/NYPL/Top of the Rock building hours remain blank/partial where official hours did not render | `needs review` | [MICHELIN NYC directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants) · [The Met visit page](https://www.metmuseum.org/plan-your-visit) · [NYPL location](https://www.nypl.org/locations/schwarzman) |
 | NR-06 | Bib Gourmand and merely Guide-listed venues are not fully catalogued | `needs review` | [MICHELIN NYC directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants) |
 | NR-07 | 2–4-week hotel pricing and 2027 date-specific admission totals are not captured | `needs review` | [Hyatt Midtown-South official site](https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south) |
 | NR-08 | Direct official hotel APIs/pages did not expose exact-date totals; diagnostics recorded blocks | `needs review` | [Hyatt Midtown-South official site](https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south) |
@@ -90,4 +91,14 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | 2026-11-25 | `ed92e764` | Phase A shared outputs on `main` | Final review needs the root dashboard and data | Merged `origin/main` into fixed branch. |
 | 2026-11-25 | `ed92e764` | `COORDINATION.md` | Add/add and content conflicts because three sessions created/updated the board | Combined board preserves all task boards, work logs, source lists, verification notes, and irregularities. |
 | 2026-11-25 | `arena-61fbe157` | root `index.html` | Add dossier link | Link present in root dashboard; retained in final integration. |
-| 2026-11-25 | `ed92e764` | shared `data/*.json`, `*.html`, `pages/**` | Re-verify combined data and publish final integration | T13 in progress; PR to `main` planned. |
+| 2026-11-25 | `ed92e764` | shared `data/*.json`, `*.html`, `pages/**` | Re-verify combined data and publish final integration | Final-integration edits applied locally; PR to `main` and Pages check pending. |
+
+## Work log — Final integration (`ed92e764`)
+
+**Built:** `flagged-for-review.html` publishes NR-01–NR-08 with an official starting source and a concrete next check; `review.html` redirects to it; root and dossier navigation now include the review page and Itinerary; every static/dynamic published data row has a Source cell/link. `scripts/validate_site.py` checks JSON schemas, `2 × official per-person` arithmetic, source-link coverage, local links/anchors, and navigation; `scripts/check_inline_js.py` checks all JavaScript; `scripts/check_rendered_tables.js` executes the five root renderers and checks 175 generated rows; `.github/workflows/validate-site.yml` runs all three on pushes and PRs.
+
+**Data refreshed:** 10 selected starred rows now carry linked first-party menu/FAQ/PDF prices as `2 × official per-person price` with an exclusions caveat; 62 rows remain blank + `unverified`. Four official activity hour baselines were added for NPS/Liberty Island, the High Line, Central Park, and Grand Central, with explicit "not a 2027 calendar" notes; Met/Cloisters/NYPL/Top of the Rock remain blank/partial. `data/itinerary.json` exposes consolidated official source links. No 2027 Michelin, transit, holiday, or hotel-price inference was made.
+
+**Docs reconciled:** `README.md`, `REVIEW.md`, and `VERIFICATION.md` now describe the combined pages, exact final coverage, CI validators, and Flagged for Review semantics; stale R1/R2/R3 and "no row has a source" defects are explicitly resolved. The Phase A/B/C logs and conflict history are preserved above.
+
+**Checks:** `python scripts/validate_site.py`, `python scripts/check_inline_js.py`, and `node scripts/check_rendered_tables.js` passed locally after the integration edits. PR, CI, and Pages rebuild checks are pending at the time of this log entry.

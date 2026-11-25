@@ -39,6 +39,34 @@
       return '<a href="' + window.NYF.esc(url) + '" target="_blank" rel="noopener noreferrer">' +
         window.NYF.esc(label || "source") + "</a>";
     },
+    priceForTwo: function (r) {
+      var options = (r && r.price_options) || [];
+      if (!options.length) {
+        return window.NYF.unverified(
+          (r && (r.price_for_two_note || r.price_flag)) ||
+          "No first-party dollar price — MICHELIN publishes a band only."
+        );
+      }
+      var html = options.map(function (o) {
+        var pp = Number(o.per_person_usd), pair = Number(o.for_two_usd);
+        return '<div class="small"><strong>2 × ' + window.NYF.money0(pp) + " = " + window.NYF.money0(pair) + "</strong>" +
+          '<br><span class="muted">' + window.NYF.esc(o.label || "Official menu") + "</span>" +
+          (o.source_url ? "<br>" + window.NYF.srcLink(o.source_url, "official menu / FAQ / PDF") : "") +
+          "</div>";
+      }).join("<hr style='border:none;border-top:1px solid #eef1f5;margin:6px 0'>");
+      if (r.price_caveat) html += '<span class="flag">' + window.NYF.esc(r.price_caveat) + "</span>";
+      return html;
+    },
+    sourceCell: function (r) {
+      if (!r) return window.NYF.unverified("No official source link captured.");
+      var links = [];
+      if (r.michelin_url) links.push(window.NYF.srcLink(r.michelin_url, "Guide page"));
+      (r.price_sources || []).forEach(function (s, i) {
+        if (s && s.url) links.push(window.NYF.srcLink(s.url, s.label || ("official menu " + (i + 1))));
+      });
+      if (!links.length && r.price_source_url) links.push(window.NYF.srcLink(r.price_source_url, "official menu / FAQ / PDF"));
+      return links.length ? links.join("<br>") : window.NYF.unverified("No official source link captured.");
+    },
     load: function (path, render) {
       var host = document.getElementById("table-host");
       if (!host) return;
