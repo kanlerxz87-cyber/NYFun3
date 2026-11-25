@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive summary, suggestions &amp; open questions — NYC 2027</title>
+<meta name="description" content="Executive summary of the NYC 2027 trip plan, reviewable suggestions before implementation, and the information still needed.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="plan.html" aria-current="page">Summary &amp; Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Executive summary</h1>
+    <p>Where the research stands on 25 November 2026, what it supports today, and what is still missing before anything gets booked.</p>
+  </div>
+
+  <section class="panel">
+    <h2>1. The shape of the trip</h2>
+    <p class="lede">Fixed constraints, as given.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Item</th><th>Value</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Party</td><td>2 adults</td><td><span class="pill ok">set</span></td></tr>
+        <tr><td>Travel window</td><td>15 Feb – 23 Mar 2027; allowed up to 2–4 weeks</td><td><span class="pill ok">set</span></td></tr>
+        <tr><td>Preferred start</td><td>15–18 Feb 2027</td><td><span class="pill ok">set</span></td></tr>
+        <tr><td>Length used for pricing</td><td>7 nights (15–22 Feb 2027)</td><td><span class="pill ok">set — matches the requested total-for-7-nights basis</span></td></tr>
+        <tr><td>Hotel requirements</td><td>Private bathroom; queen bed or larger</td><td><span class="pill ok">applied as a filter</span></td></tr>
+        <tr><td>Transit rule</td><td>Activities ≤ 1 hour from the hotel</td><td><span class="pill warn">partially applied — see §4</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="panel">
+    <h2>2. What the data supports right now</h2>
+    <ul class="tight">
+      <li><strong>Nine hotels priced for the exact preferred week.</strong> Cheapest compliant totals before tax, lowest first: HGU New York $1,091.60 (queen) · Eurostars Wall Street $1,127 · Hyatt Place Chelsea $1,183 (king) · Arlo Midtown $1,255 (king). Pestana CR7's cheapest king is $1,327 and its $26/night resort fee is already inside that number.</li>
+      <li><strong>Two hotels fail the bed rule and are labelled, not hidden:</strong> The Mayfair (full/double at its cheapest tier) and Blue Angel (full bed, windowless room category).</li>
+      <li><strong>Seventy-two starred Michelin entries catalogued</strong> — 5 three-star, 15 two-star, 52 one-star — each with star status stated explicitly, area assigned, hours where the Guide published them, and a link to the Guide page.</li>
+      <li><strong>Fifteen activities with first-party hours and prices</strong>, including four free staples (Central Park, the High Line, the Schwarzman Building, Grand Central) that materially lower the daily spend.</li>
+      <li><strong>One meaningful saving is quantified:</strong> New York CityPASS is $149 per adult for five attractions whose own box-office prices sum to $307.04 per the operator's own comparison table.</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>3. Suggestions — pick a path before anything is implemented</h2>
+    <p class="lede">Each option is scoped so you can approve or reject it individually. Nothing below has been applied to the site.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>#</th><th>Suggestion</th><th>Why it matters</th><th>Effort</th></tr></thead>
+      <tbody>
+        <tr><td>S1</td><td>Make <strong>HGU New York</strong> the anchor hotel and build a walking-first itinerary around NoMad/Flatiron.</td><td>Cheapest queen-bed compliant total, and it sits nearest the densest star cluster (Atomix ★★, Odo ★★, Joo Ok ★★, Rezdôra ★, Semma ★, Gramercy Tavern ★).</td><td>Low</td></tr>
+        <tr><td>S2</td><td>Make <strong>Eurostars Wall Street</strong> the budget anchor instead.</td><td>Lowest absolute total ($1,127 before tax) but puts every Midtown museum and most starred restaurants at the far end of a long ride.</td><td>Low</td></tr>
+        <tr><td>S3</td><td>Verify the <strong>"55 within 1 hour" Michelin count</strong> properly, hotel by hotel, using a published journey planner.</td><td>This is the one ranking you asked for that is still blank. It needs one measured journey per restaurant per hotel.</td><td>High</td></tr>
+        <tr><td>S4</td><td>Add a <strong>Bib Gourmand tier</strong> (76 venues in the 2025 selection) as the value counterweight to the starred list.</td><td>Starred dinners run $$$$; Bib Gourmand is the Guide's own "good food at moderate price" marker and would fix the empty cost column.</td><td>Medium</td></tr>
+        <tr><td>S5</td><td>Add a <strong>day-by-day 7-day and 14-day itinerary</strong> built from the activities and clusters already verified.</td><td>Right now the site answers "what exists", not "what do I do on Tuesday".</td><td>Medium</td></tr>
+        <tr><td>S6</td><td>Re-pull <strong>every hotel rate for 8–14 March</strong> as well as 15–22 Feb, and show the cheaper of the two.</td><td>You allowed a window up to 23 March; only the February week has been priced.</td><td>Medium</td></tr>
+        <tr><td>S7</td><td>Add <strong>fixed review links</strong> (a specific YouTube video, TikTok and Instagram post per venue) instead of search links.</td><td>Searches never break, but they are not a curated opinion. Fixed links are a nicer read and rot over time.</td><td>Medium</td></tr>
+        <tr><td>S8</td><td>Add a <strong>restaurant reservation timeline</strong> — when each booking window opens relative to 15 Feb 2027.</td><td>Masa, Joo Ok, Jōji and similar release seats on fixed horizons; missing the window means missing the meal.</td><td>Medium</td></tr>
+        <tr><td>S9</td><td>Add a <strong>weather-and-closure layer</strong> for February (wind-chill, snow contingency indoors).</td><td>A February trip where every plan is outdoors needs a fallback for each day.</td><td>Low</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="panel">
+    <h2>4. Questions / information needed</h2>
+    <p class="lede">Grouped by how blocking each one is. The "how to find out" column is deliberate — every item is answerable from an official source.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Question</th><th>Why it blocks progress</th><th>How to get the answer</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td>Do you want the room to be <em>only</em> queen, or is a king at a slightly higher rate acceptable?</td><td>The cheapest compliant tier differs by hotel; it decides whether Eurostars or HGU wins.</td><td>Your call.</td><td>You</td></tr>
+        <tr><td>Is 7 nights the plan, or 10–14?</td><td>All hotel totals are for 7 nights; longer stays change the nightly curve.</td><td>Your call; then re-price with a longer checkout date.</td><td>You</td></tr>
+        <tr><td>Do you need step-free access or an ADA room?</td><td>Pestana CR7's cheapest king card is the ADA room; if you don't need it, a non-ADA king must be chosen.</td><td>Your call.</td><td>You</td></tr>
+        <tr><td>Is a dinner budget per couple set (e.g. $300 / $600 / $1,000)?</td><td>Decides whether the list should lead with one-star or two/three-star venues.</td><td>Your call; MICHELIN's $–$$$$ band narrows the shortlist meanwhile.</td><td>You</td></tr>
+        <tr><td>Which neighbourhood do you want to sleep in?</td><td>Drives the entire ≤1-hour activity rule.</td><td>Your call — the hotel table shows the trade-off.</td><td>You</td></tr>
+        <tr><td>What are the exact per-night journey times from each shortlisted hotel to each starred restaurant?</td><td>Blocks the Michelin-within-1-hour hotel ranking you asked for.</td><td>Query a published journey planner (MTA trip planner) for every hotel × restaurant pair and record the minute figure with a timestamp.</td><td>Next session</td></tr>
+        <tr><td>What does a starred dinner actually cost for two?</td><td>Blocks the "estimated/actual cost per couple" column.</td><td>Read each restaurant's own menu/reservation page (Resy/Tock/SevenRooms listings sometimes publish the tasting-menu price); record only what the venue states.</td><td>Next session</td></tr>
+        <tr><td>Do The Met and The Cloisters run reduced winter hours in Feb 2027?</td><td>Their hours block did not render during capture, so the cell is blank.</td><td>Open metmuseum.org/plan-your-visit in a browser and read the hours panel; note the date checked.</td><td>Next session</td></tr>
+        <tr><td>Which 2026 stars changed on 14 December 2026?</td><td>Every star cell on this site predates that ceremony.</td><td>Re-read the Guide's New York 2026 announcement after the ceremony; update star counts and the two/three-star pages.</td><td>After 14 Dec 2026</td></tr>
+        <tr><td>Do you want Bib Gourmand and "listed, not starred" venues included?</td><td>Affects whether the restaurant list roughly triples in size.</td><td>Your call — then the Guide's Bib Gourmand list is the source.</td><td>You</td></tr>
+        <tr><td>Is a February snow/wind contingency needed for outdoor plans?</td><td>Central Park, the High Line and the Statue ferry are all weather-exposed.</td><td>Your call; then each outdoor day needs a verified indoor alternative.</td><td>You</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="panel">
+    <h2>5. Irregularities found while checking the repo and sources</h2>
+    <ul class="tight">
+      <li>The Guide's own New York filter reports <strong>50 one-star</strong> restaurants in NYC, while its 18 November 2025 announcement lists <strong>52</strong> one-star names (the extra two include La Bastide by Andrea Calstier in North Salem, Westchester). Flagged, not silently reconciled.</li>
+      <li>Michelin's <strong>two-star</strong> set: the NYC filter says 14, the announcement lists 15 names — the fifteenth is Blue Hill at Stone Barns in Tarrytown, outside the subway network.</li>
+      <li>Third-party menu-price aggregators contradicted each other on identical dishes for the same restaurants. They were rejected as sources; no figure on this site comes from them.</li>
+      <li>Several restaurant websites are JavaScript single-page apps that return no prices to a text fetch. That is why the cost column is blank rather than filled.</li>
+      <li>The Met's own transit note says the M4 from Fifth Avenue to The Cloisters takes about <strong>1 h 25 min</strong> — so The Cloisters cannot satisfy the 1-hour rule from Midtown.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Verification date 25 November 2026. Sources are linked per row on the Activities, Restaurants, Michelin and Hotels pages.</p>
+</footer>
+</body>
+</html>
