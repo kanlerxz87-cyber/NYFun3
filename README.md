@@ -1,34 +1,83 @@
-# NYFun3 — New York 2027 trip dossier
+# NYC Trip Planner — February/March 2027
 
-A static, responsive GitHub Pages site for researching a New York City trip for two adults. It organizes a date-aware itinerary, hotel comparisons, MICHELIN dining, attractions, and an evidence/open-questions log.
+A static, mobile-first planning dashboard for a two-adult New York City trip in the window
+**15 Feb – 23 Mar 2027** (preferred start 15–18 Feb 2027).
 
-## Browse the site
+**Live site:** https://kanlerxz87-cyber.github.io/NYFun3/
 
-- [`index.html`](index.html) — overview and key planning decisions
-- [`pages/itinerary.html`](pages/itinerary.html) — Feb 15–18 three-night mini-plan, Feb 15–22 seven-night core, and optional second week
-- [`pages/hotels.html`](pages/hotels.html) — official room-fit evidence and clearly labeled third-party price snapshots
-- [`pages/dining.html`](pages/dining.html) — year-stamped MICHELIN status, official hours/menu arithmetic, and creator review leads
-- [`pages/experiences.html`](pages/experiences.html) — attraction hours, admission sources, and review videos
-- [`pages/findings.html`](pages/findings.html) — unresolved questions, method, and data-quality caveats
-- [`RESEARCH.md`](RESEARCH.md) — source inventory and research details
+No build step, dependencies, or framework. The primary dashboard is plain HTML with JSON data loaded at runtime; the supplemental dossier has a separate stylesheet and small progressive-enhancement script.
+
+## Pages
+
+| Page | What it holds |
+|---|---|
+| `index.html` | Dashboard: what exists, how to read the tables, known limitations. |
+| `activities.html` | 15 museums, parks, landmarks and passes — weekday hours, exceptions, adult prices, review searches. |
+| `restaurants.html` | Starred restaurant shortlist, filterable by area and tier. |
+| `michelin.html` | All 72 starred entries (5 ★★★ / 15 ★★ / 52 ★), cluster counts, star status stated per row. |
+| `hotels.html` | 9 hotels with 7-night totals for 15–22 Feb 2027, checked against private-bathroom and queen-bed requirements. |
+| `itinerary.html` | 7-day plan sequenced around published closures. |
+| `plan.html` | Executive summary, 9 reviewable suggestions, 11 open questions, irregularities found. |
+| `pages/index.html` | Supplemental curated dossier: itinerary, hotel snapshots, dining/menu arithmetic, attraction hours, and research notes. |
+
+Supporting documents: `REVIEW.md` (repo review, irregularities R1–R20),
+`VERIFICATION.md` (what was checked, against which page, and when), and `RESEARCH.md`
+(the supplemental dossier source/method log). The nested `pages/` dossier complements the
+data-driven root site; it does not replace the existing JSON datasets or star/activity tables.
+The root `.nojekyll` file keeps the linked Markdown research log available to GitHub Pages as-is.
+
+## The rule this repo is built on
+
+> Official venue, hotel-room, museum, award, and transit facts need a linked primary source.
+> Unknown official facts remain blank and flagged — never inferred or estimated.
+
+For live hotel availability, the dashboard can show date-specific Booking.com observations;
+those are explicitly marked as **third-party snapshots**, linked to their query, and are not
+represented as official hotel quotes or guaranteed all-in prices. The supplemental `pages/`
+dossier also includes selected published restaurant-menu arithmetic and creator-review leads;
+menu estimates are not final bills, and social links are not treated as factual authorities.
+
+Several gaps remain visible: the primary MICHELIN table is not a complete per-couple menu-cost
+catalogue, restaurant sites may not expose menu data, and no official source publishes subway
+times per hotel/restaurant pair. Each gap is listed rather than papered over with a plausible
+number.
+
+## Data files
+
+| File | Contents |
+|---|---|
+| `data/activities.json` | 15 activities, each with `source_url`. |
+| `data/hotels.json` | 9 hotels, each with the exact quote URL (check-in, check-out, 2 adults). |
+| `data/michelin.json` | 5 three-star + 7 two-star, full detail. |
+| `data/michelin_two_star.json` | All 15 two-star records. |
+| `data/michelin_one_star.json` | All 52 one-star records. |
+| `data/michelin_all.json` | Merged, de-duplicated source used by the site (72 rows). |
+| `data/itinerary.json` | 7-day plan, derived only from verified activity hours. |
 
 ## Preview locally
 
-No build step, package install, or JavaScript framework is required. From the repository root:
-
-```bash
-python3 -m http.server 4173 --bind 0.0.0.0
+```sh
+python3 -m http.server 8000 --bind 0.0.0.0
+# then open http://localhost:8000/
 ```
 
-Then open <http://localhost:4173>. The JavaScript is an optional progressive enhancement for filtering hotel rows and restaurant cards; all core content remains available without it.
+Opening `index.html` directly from disk will not work: browsers block `fetch()` of local JSON
+over `file://`. Any static server is fine.
 
-## Evidence and date caveats
+## Verification status (25 November 2026)
 
-- Research snapshot: **November 25, 2026**.
-- Feb 15–18, 2027 is three nights and conflicts with the separate one-week minimum. The site keeps that conflict visible; Feb 15–22 is a separate seven-night comparison window.
-- The trip duration is also described as both 1–2 weeks and up to 2–4 weeks. The itinerary shows a seven-night core and an optional second week, not an assumed four-week stay.
-- Official exact-date hotel totals were not verified. Numeric room rates are dated Booking.com snapshots, not official quotes or guaranteed all-in totals. Taxes, city tax, resort-fee inclusion, cancellation terms, and breakfast must be checked at checkout.
-- The latest awarded NYC MICHELIN list found for this snapshot is 2025; the 2026 ceremony is scheduled after the research date. All award claims are labeled by year.
-- MTA route minutes, 2027 holiday schedules, and some attraction/menu prices remain unverified and are explicitly flagged rather than guessed.
+- **Stars:** the MICHELIN 2025 selection (announced 18 Nov 2025) is current **as of this
+  snapshot only**. The next New York ceremony is **14 Dec 2026** — before the trip. Re-check
+  every star after that date.
+- **Hotel prices:** live Booking.com rate cards, captured with their URLs. These move daily.
+- **Known gaps:** 48 of 52 one-star rows lack verified hours; 52 of 72 rows lack a verified
+  neighbourhood; the primary 72-row MICHELIN dataset has no complete per-couple cost catalogue
+  (the supplement contains menu arithmetic for eight selected candidates); no Michelin "within
+  1 hour" hotel count has been computed. These gaps are flagged on the site and listed in
+  `plan.html` §4 / `pages/findings.html`.
 
-The project is configured for GitHub Pages from the repository root on `main`. Changes on an Arena working branch will publish after they are merged into that configured source branch.
+## Contributing / parallel sessions
+
+Read `COORDINATION.md` first. It holds the task board, the claim protocol and the file-scope
+rules. Shared outputs (the combined data files, `index.html` nav, and the `main` publish) are
+changed only by the integration session.

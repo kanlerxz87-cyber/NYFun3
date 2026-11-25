@@ -1,0 +1,383 @@
+{
+ "_meta": {
+  "generated": "2026-11-25",
+  "trip_window": "2027-02-15 → 2027-03-23 (preferred 2027-02-15 → 2027-02-18)",
+  "verification_rule": "Every row cites the venue's own official page in source_url. Any field that could not be read from that page is left empty and carries an *_flag explanation. Nothing is inferred.",
+  "excluded": "Broadway shows, The Edge, Circle Line, Chelsea Market and similar were NOT listed because no first-party price/hours page was verified in this pass. They are candidates for a later pass, not silently dropped.",
+  "transport_rule": "Rows whose own official page states a >1 hour transit time from Midtown are marked in transport_note."
+ },
+ "activities": [
+  {
+   "id": "moma",
+   "name": "The Museum of Modern Art (MoMA)",
+   "category": "Museum",
+   "address": "11 W 53rd St, New York, NY 10019",
+   "neighborhood": "Midtown",
+   "official_site": "https://www.moma.org/visit/",
+   "source_url": "https://www.moma.org/visit/",
+   "hours_table": {
+    "Mon": "10:30–17:30",
+    "Tue": "10:30–17:30",
+    "Wed": "10:30–17:30",
+    "Thu": "10:30–17:30",
+    "Fri": "10:30–20:30",
+    "Sat": "10:30–17:30",
+    "Sun": "10:30–17:30"
+   },
+   "exceptions": "Closed Thanksgiving Day and Christmas Day. Galleries close ~15 min before the Museum. Free for NY State residents Fri 17:30–20:30 (ticket must be reserved in advance).",
+   "price_adult_usd": 30,
+   "price_note": "Adult $30; seniors 65+ $22; students $17; 16 and under free. Tickets include all galleries and special exhibitions.",
+   "typical_duration": "3–4 hours",
+   "booking": "https://visit.moma.org/select",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=MoMA%20New%20York%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=MoMA%20New%20York%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/MoMANYC/"
+   },
+   "transport_note": "B/E/M at 5th Ave–53 St or N/R/W at 5th Ave–59 St."
+  },
+  {
+   "id": "met",
+   "name": "The Metropolitan Museum of Art (The Met Fifth Avenue)",
+   "category": "Museum",
+   "address": "1000 Fifth Ave, New York, NY 10028",
+   "neighborhood": "Upper East Side",
+   "official_site": "https://www.metmuseum.org/plan-your-visit",
+   "source_url": "https://www.metmuseum.org/plan-your-visit",
+   "hours_table": {},
+   "hours_flag": "UNVERIFIED — the hours block was not present in the fetched page text; confirm on the official Plan Your Visit page before booking.",
+   "exceptions": "Pay-what-you-wish only for NY State residents and NY/NJ/CT students (in person / NY billing address).",
+   "price_adult_usd": 30,
+   "price_note": "Adult $30; seniors 65+ $22; students $17; children 12 and under free.",
+   "typical_duration": "Half day",
+   "booking": "https://engage.metmuseum.org/admission",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Met%20Museum%20New%20York%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=Met%20Museum%20New%20York%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/metmuseum/"
+   },
+   "transport_note": "4/5/6 to 86 St then 3 blocks west; M1–M4 bus along 5th/Madison."
+  },
+  {
+   "id": "cloisters",
+   "name": "The Met Cloisters",
+   "category": "Museum",
+   "address": "99 Margaret Corbin Dr, New York, NY 10040",
+   "neighborhood": "Fort Tryon Park, Upper Manhattan",
+   "official_site": "https://www.metmuseum.org/plan-your-visit/met-cloisters",
+   "source_url": "https://www.metmuseum.org/plan-your-visit/met-cloisters",
+   "hours_table": {},
+   "hours_flag": "UNVERIFIED — hours block not in fetched text.",
+   "exceptions": "",
+   "price_adult_usd": 30,
+   "price_note": "Same ticket pricing as The Met Fifth Avenue: adult $30.",
+   "typical_duration": "2–3 hours",
+   "booking": "https://engage.metmuseum.org/admission",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=The%20Cloisters%20New%20York",
+    "tiktok_search": "https://www.tiktok.com/search?q=The%20Cloisters%20New%20York",
+    "instagram_search": "https://www.instagram.com/explore/tags/metcloisters/"
+   },
+   "transport_note": "A train to 190 St + 10-min walk, or M4 bus. The Met's own page states M4 from 5th Ave/83 St takes ~1 h 25 min — EXCEEDS the 1-hour transit rule; treat as a half-day excursion."
+  },
+  {
+   "id": "amnh",
+   "name": "American Museum of Natural History",
+   "category": "Museum",
+   "address": "Central Park West at 79th St, New York, NY 10024",
+   "neighborhood": "Upper West Side",
+   "official_site": "https://www.amnh.org/plan-your-visit/hours",
+   "source_url": "https://www.amnh.org/plan-your-visit/hours",
+   "hours_table": {
+    "Mon": "10:00–17:30",
+    "Tue": "10:00–17:30",
+    "Wed": "10:00–17:30",
+    "Thu": "10:00–17:30",
+    "Fri": "10:00–17:30",
+    "Sat": "10:00–17:30",
+    "Sun": "10:00–17:30"
+   },
+   "exceptions": "Open daily 10:00–17:30. Closed Thanksgiving Day and Christmas Day. Extended hours on select Nov–Jan dates only (not in the Feb/Mar trip window). Entrance before 10:00 or after 17:00: Central Park West & 81 St / Rose Center.",
+   "price_adult_usd": null,
+   "price_note": "UNVERIFIED from AMNH's own site — the admission page did not render. CityPASS (authorised partner) publishes the AMNH box-office adult price as $43.00 incl. one ticketed exhibition. Confirm at tickets.amnh.org before purchase.",
+   "typical_duration": "3–4 hours",
+   "booking": "https://tickets.amnh.org/select",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=AMNH%20New%20York%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=AMNH%20New%20York%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/AMNH/"
+   },
+   "transport_note": "B/C to 81 St–Museum of Natural History; 1 to 79 St."
+  },
+  {
+   "id": "whitney",
+   "name": "Whitney Museum of American Art",
+   "category": "Museum",
+   "address": "99 Gansevoort St, New York, NY 10014",
+   "neighborhood": "Meatpacking District",
+   "official_site": "https://whitney.org/visit",
+   "source_url": "https://whitney.org/visit",
+   "hours_table": {
+    "Mon": "10:30–18:00",
+    "Tue": "Closed",
+    "Wed": "10:30–18:00",
+    "Thu": "10:30–18:00",
+    "Fri": "10:30–22:00",
+    "Sat": "10:30–18:00",
+    "Sun": "10:30–18:00"
+   },
+   "exceptions": "Closed Tuesdays. Free Friday Nights and Free Second Sundays programmes are published; check the official free-admission page for current terms. Holiday hours published separately.",
+   "price_adult_usd": 30,
+   "price_note": "Adult $30; seniors and students $24; 25 and under free.",
+   "typical_duration": "2–3 hours",
+   "booking": "https://whitney.org/admission",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Whitney%20Museum%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=Whitney%20Museum%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/whitneymuseum/"
+   },
+   "transport_note": "A/C/E/L to 14 St–8 Ave, ~6 blocks."
+  },
+  {
+   "id": "guggenheim",
+   "name": "Solomon R. Guggenheim Museum",
+   "category": "Museum",
+   "address": "1071 Fifth Ave, New York, NY 10128",
+   "neighborhood": "Upper East Side",
+   "official_site": "https://www.guggenheim.org/plan-your-visit",
+   "source_url": "https://www.guggenheim.org/plan-your-visit",
+   "hours_table": {
+    "Mon": "10:30–17:30",
+    "Tue": "10:30–17:30",
+    "Wed": "10:30–17:30",
+    "Thu": "10:30–17:30",
+    "Fri": "10:30–17:30",
+    "Sat": "10:30–17:30",
+    "Sun": "10:30–17:30"
+   },
+   "exceptions": "Open every day 10:30–17:30. Members-only hours on select Mondays 18:00–20:00. Last tickets issued ~15 min before closing. Pay What You Wish Tuesdays and Sundays 16:00–17:30.",
+   "price_adult_usd": 30,
+   "price_note": "Adult $30; students and seniors 65+ $19; under 12 free.",
+   "typical_duration": "1.5–2 hours",
+   "booking": "https://www.guggenheim.org/buy-tickets",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Guggenheim%20Museum%20New%20York",
+    "tiktok_search": "https://www.tiktok.com/search?q=Guggenheim%20Museum%20New%20York",
+    "instagram_search": "https://www.instagram.com/explore/tags/guggenheim/"
+   },
+   "transport_note": "4/5/6 to 86 St then walk; M1–M4 along 5th Ave."
+  },
+  {
+   "id": "911",
+   "name": "9/11 Memorial & Museum",
+   "category": "Museum / Memorial",
+   "address": "180 Greenwich St, New York, NY 10007",
+   "neighborhood": "Financial District",
+   "official_site": "https://www.911memorial.org/visit",
+   "source_url": "https://www.911memorial.org/visit/visit-museum-1",
+   "hours_table": {
+    "Mon": "09:00–19:00",
+    "Tue": "Select Tuesdays only — see special-hours page",
+    "Wed": "09:00–19:00",
+    "Thu": "09:00–19:00",
+    "Fri": "09:00–19:00",
+    "Sat": "09:00–19:00",
+    "Sun": "09:00–19:00"
+   },
+   "exceptions": "Museum open Wednesday–Monday plus select Tuesdays, 09:00–19:00, last entry 17:30. Advance timed tickets required. Free Admission Mondays 17:30–19:00 (tickets released online each Monday from 07:00 ET, first come). The outdoor Memorial is FREE and open daily 08:00–20:00.",
+   "price_adult_usd": 36,
+   "price_note": "Museum admission $24–$36 (official site's published range); official quoted adult price $36 via CityPASS box-office listing. Audio guide $11 extra.",
+   "typical_duration": "1.5 hours (Museum 45–90 min per official guidance)",
+   "booking": "https://visit.911memorial.org/WebStore/shop/ViewItems.aspx?CG=tickets&C=museum",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=9%2F11%20Memorial%20Museum%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=9%2F11%20Memorial%20Museum%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/911memorial/"
+   },
+   "transport_note": "A/C/E/2/3/4/5/R/W to Fulton St; E to World Trade Center."
+  },
+  {
+   "id": "intrepid",
+   "name": "Intrepid Museum",
+   "category": "Museum (aircraft carrier)",
+   "address": "Pier 86, W 46th St & 12th Ave, New York, NY 10036",
+   "neighborhood": "Hell's Kitchen / Hudson River",
+   "official_site": "https://intrepidmuseum.org/plan-your-visit/visitor-information",
+   "source_url": "https://intrepidmuseum.org/plan-your-visit/visitor-information/tickets",
+   "hours_table": {
+    "Mon": "10:00–17:00",
+    "Tue": "10:00–17:00",
+    "Wed": "10:00–17:00",
+    "Thu": "10:00–17:00",
+    "Fri": "10:00–17:00",
+    "Sat": "10:00–17:00",
+    "Sun": "10:00–17:00"
+   },
+   "exceptions": "Fall/winter hours (1 Oct–31 Mar) daily 10:00–17:00, last entry 16:00. Closed Thanksgiving and Christmas Day. Published 2027 closure list does not include any Feb/Mar dates.",
+   "price_adult_usd": 38,
+   "price_note": "Adult (13–64) $38; seniors 65+/college $36; ages 5–12 $28; 4 and under free. Add-ons $11–$13 each. All tickets non-refundable.",
+   "typical_duration": "2–3 hours",
+   "booking": "https://intrepidmuseum.org/purchase",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Intrepid%20Museum%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=Intrepid%20Museum%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/intrepidmuseum/"
+   },
+   "transport_note": "A/C/E to 42 St–Port Authority then 12th Ave walk; M42 bus."
+  },
+  {
+   "id": "topoftherock",
+   "name": "Top of the Rock Observation Deck",
+   "category": "Observation deck",
+   "address": "30 Rockefeller Plaza, New York, NY 10112",
+   "neighborhood": "Midtown",
+   "official_site": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/",
+   "source_url": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
+   "hours_table": {},
+   "hours_flag": "PARTIAL — official page displays a live 'OPEN 8 AM – 12 AM' banner; per-weekday hours were not published in the fetched text.",
+   "exceptions": "Timed admission. Prices vary by date/time slot — the official page states box-office prices of roughly $46–$72 depending on date and time.",
+   "price_adult_usd": 42,
+   "price_note": "Timed admission 'From $42'; All-Inclusive Pass (deck + The Beam + SKYLIFT) 'From $82'. Date-specific price must be checked at checkout.",
+   "typical_duration": "1–1.5 hours",
+   "booking": "https://www.rockefellercenter.com/buy-tickets/timed-admission/",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Top%20of%20the%20Rock%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=Top%20of%20the%20Rock%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/topoftherocknyc/"
+   },
+   "transport_note": "B/D/F/M to 47–50 Sts–Rockefeller Center."
+  },
+  {
+   "id": "statue",
+   "name": "Statue of Liberty & Ellis Island (Statue City Cruises ferry)",
+   "category": "Landmark / Ferry",
+   "address": "Ferry departs Battery Park (Castle Clinton), New York, NY 10004",
+   "neighborhood": "Battery Park / Harbour",
+   "official_site": "https://www.nps.gov/stli/planyourvisit/fees.htm",
+   "source_url": "https://www.nps.gov/stli/planyourvisit/fees.htm",
+   "hours_table": {},
+   "hours_flag": "UNVERIFIED — NPS fee page does not publish ferry sailing times; check the authorised operator's page.",
+   "exceptions": "NPS charges no entrance fee; a Statue City Cruises ferry ticket is mandatory and is the ONLY authorised operator. Reserve in advance; unauthorised sellers at The Battery are flagged by NPS as a scam risk. Pedestal/Crown access adds $0.30 and Crown is restricted.",
+   "price_adult_usd": 26,
+   "price_note": "Adult 13+ $26; senior 62+ $23; children 4–12 $17; under 4 free. Ellis Island Hard Hat tour +$55 (13+ only).",
+   "typical_duration": "Half day",
+   "booking": "https://www.cityexperiences.com/new-york/city-cruises/statue/",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Statue%20of%20Liberty%20Ellis%20Island%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=Statue%20of%20Liberty%20Ellis%20Island%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/statueofliberty/"
+   },
+   "transport_note": "4/5 to Bowling Green; R/W to Whitehall St; 1 to South Ferry."
+  },
+  {
+   "id": "highline",
+   "name": "The High Line",
+   "category": "Park / Walk",
+   "address": "Elevator/stairs access from Gansevoort St to W 34th St, New York, NY 10011",
+   "neighborhood": "Chelsea / West Side",
+   "official_site": "https://www.thehighline.org/visit/",
+   "source_url": "https://www.thehighline.org/visit/",
+   "hours_table": {},
+   "hours_flag": "SEASONAL — see exceptions (hours depend on season, not weekday).",
+   "exceptions": "1 Apr–30 Nov: 07:00–22:00. 1 Dec–31 Mar: 07:00–20:00 — this covers the whole Feb 15–Mar 23 window. Rail Yard Preserve (30–34 St) closes at dusk. Free docent-led tours on select days. Elevator status is published separately — check before relying on step-free access.",
+   "price_adult_usd": 0,
+   "price_note": "Free public park.",
+   "typical_duration": "1–2 hours",
+   "booking": "",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=High%20Line%20New%20York",
+    "tiktok_search": "https://www.tiktok.com/search?q=High%20Line%20New%20York",
+    "instagram_search": "https://www.instagram.com/explore/tags/thehighline/"
+   },
+   "transport_note": "A/C/E/L to 14 St–8 Ave; 1 to 14 St; L to 8 Ave."
+  },
+  {
+   "id": "centralpark",
+   "name": "Central Park",
+   "category": "Park",
+   "address": "59th St to 110th St, between 5th Ave and Central Park West",
+   "neighborhood": "Manhattan (central)",
+   "official_site": "https://www.centralparknyc.org/visit",
+   "source_url": "https://www.centralparknyc.org/visit",
+   "hours_table": {},
+   "hours_flag": "UNVERIFIED — the Conservancy's hours anchor was present but the hours text did not render in the fetched page.",
+   "exceptions": "Park closures and alerts are published on the Conservancy's alerts page; check it on the day for weather closures. Free.",
+   "price_adult_usd": 0,
+   "price_note": "Free. Optional paid attractions inside the park (e.g. rowboat rental, Carousel, zoo) are priced separately by their operators.",
+   "typical_duration": "1–3 hours",
+   "booking": "",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Central%20Park%20New%20York",
+    "tiktok_search": "https://www.tiktok.com/search?q=Central%20Park%20New%20York",
+    "instagram_search": "https://www.instagram.com/explore/tags/centralparknyc/"
+   },
+   "transport_note": "A/B/C/D/1 to Columbus Circle (SW corner); N/R/W to 5th Ave–59 St (SE corner)."
+  },
+  {
+   "id": "nypl",
+   "name": "New York Public Library — Stephen A. Schwarzman Building",
+   "category": "Architecture / Free",
+   "address": "476 Fifth Ave at 42nd St, New York, NY 10018",
+   "neighborhood": "Midtown",
+   "official_site": "https://www.nypl.org/locations/schwarzman",
+   "source_url": "https://www.nypl.org/locations/schwarzman",
+   "hours_table": {},
+   "hours_flag": "UNVERIFIED — building hours are referenced but were not in the fetched text.",
+   "exceptions": "Last entry 15 minutes before closure. Rose Main Reading Room: free daily guided tour, or 'visiting hour' 10:00–11:00 Mon–Sat (final entry 10:50). Polonsky Treasures exhibition ongoing and free.",
+   "price_adult_usd": 0,
+   "price_note": "Free.",
+   "typical_duration": "45–90 min",
+   "booking": "https://www.nypl.org/events/tours/schwarzman",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=NYPL%20Schwarzman%20Building",
+    "tiktok_search": "https://www.tiktok.com/search?q=NYPL%20Schwarzman%20Building",
+    "instagram_search": "https://www.instagram.com/explore/tags/nypl/"
+   },
+   "transport_note": "B/D/F/M to 42 St–Bryant Park; 7 to 5th Ave."
+  },
+  {
+   "id": "grandcentral",
+   "name": "Grand Central Terminal",
+   "category": "Architecture / Free",
+   "address": "89 E 42nd St, New York, NY 10017",
+   "neighborhood": "Midtown East",
+   "official_site": "https://grandcentralterminal.com/",
+   "source_url": "https://grandcentralterminal.com/",
+   "hours_table": {},
+   "hours_flag": "UNVERIFIED — hours not captured; the terminal's own site is the only acceptable source.",
+   "exceptions": "Working transit hub — access can be restricted during events. Free to enter.",
+   "price_adult_usd": 0,
+   "price_note": "Free to enter; food and shopping extra.",
+   "typical_duration": "45 min",
+   "booking": "",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=Grand%20Central%20Terminal",
+    "tiktok_search": "https://www.tiktok.com/search?q=Grand%20Central%20Terminal",
+    "instagram_search": "https://www.instagram.com/explore/tags/grandcentralterminal/"
+   },
+   "transport_note": "4/5/6/7/S to Grand Central–42 St."
+  },
+  {
+   "id": "citypass",
+   "name": "New York CityPASS (5 attractions, 9 days)",
+   "category": "Pass / Bundle",
+   "address": "Digital ticket — redeem at each attraction",
+   "neighborhood": "Citywide",
+   "official_site": "https://www.citypass.com/new-york",
+   "source_url": "https://www.citypass.com/new-york",
+   "hours_table": {},
+   "hours_flag": "N/A — a pass, not a venue.",
+   "exceptions": "Valid 9 days from first use. Includes Empire State Building, AMNH, Top of the Rock, 9/11 Memorial & Museum, plus a choice of Statue of Liberty/Ellis Island, Circle Line cruise, Intrepid, Guggenheim, Edge or Whitney. Reservations required at most included attractions. A $2 per-ticket processing fee applies.",
+   "price_adult_usd": 149,
+   "price_note": "Adult (18+) $149.00; child (6–17) $129.00. CityPASS publishes the comparison regular price as $307.04 adult, i.e. claimed saving up to 51%.",
+   "typical_duration": "Used across the whole trip",
+   "booking": "https://www.citypass.com/new-york",
+   "social": {
+    "youtube_search": "https://www.youtube.com/results?search_query=New%20York%20CityPASS%20review",
+    "tiktok_search": "https://www.tiktok.com/search?q=New%20York%20CityPASS%20review",
+    "instagram_search": "https://www.instagram.com/explore/tags/citypass/"
+   },
+   "transport_note": "N/A."
+  }
+ ]
+}

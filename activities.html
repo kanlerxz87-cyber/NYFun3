@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Activities — NYC 2027 trip planner</title>
+<meta name="description" content="Source-verified NYC activities with weekday hours, exceptions, adult prices and review links.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html" aria-current="page">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Activities</h1>
+    <p>Hours, exceptions and adult admission taken from each venue's own site. Review links open searches on YouTube, TikTok and Instagram rather than fixed videos — a fixed video can disappear, a search cannot.</p>
+  </div>
+
+  <section class="panel">
+    <h2>Weekday hours, prices and exceptions</h2>
+    <p class="lede">Prices are per adult, pre-booked where a booking link is shown. Tap a source link to confirm on the day.</p>
+    <div id="table-host"><p class="loading">Loading activities…</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>Transit notes against the 1-hour rule</h2>
+    <p class="lede">The Met's own page states the M4 bus from the Met to The Cloisters runs about 1 h 25 min — so The Cloisters is flagged as a half-day excursion, not a 1-hour stop. Everything else sits on the Manhattan grid.</p>
+    <p class="small muted" style="margin:0">No journey time in this table was computed here; the Cloisters figure is quoted from The Met's own page.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Sources: each venue's official visit or ticket page (linked per row). Verification date 25 November 2026.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+NYF.load("data/activities.json", function (json) {
+  var rows = json.activities.map(function (a) {
+    var price = a.price_adult_usd === 0 ? "Free" : (a.price_adult_usd ? NYF.money0(a.price_adult_usd) : NYF.unverified("Price not published on the official page."));
+    if (a.price_adult_usd && a.price_note) price += '<div class="flag small" style="color:#5d6673">' + NYF.esc(a.price_note) + "</div>";
+    if (a.price_adult_usd === null && a.price_note) price += '<div class="flag">' + NYF.esc(a.price_note.replace(/^UNVERIFIED[^—]*—\s*/i, "")) + "</div>";
+    var social = [a.social.youtube_search, a.social.tiktok_search, a.social.instagram_search]
+      .map(function (u, i) { return '<a href="' + u + '" target="_blank" rel="noopener noreferrer">' + ["YouTube","TikTok","Instagram"][i] + "</a>"; }).join(" · ");
+    return "<tr>" +
+      '<td><strong>' + NYF.esc(a.name) + "</strong><br><span class='muted small'>" + NYF.esc(a.address) + "</span>" +
+        (a.booking ? '<br><a class="small" href="' + a.booking + '" target="_blank" rel="noopener noreferrer">Book / tickets</a>' : "") + "</td>" +
+      "<td>" + NYF.hoursCell(a.hours_table, a.hours_flag) + "</td>" +
+      '<td class="small">' + (a.exceptions ? NYF.esc(a.exceptions) : '<span class="muted">None published</span>') + "</td>" +
+      '<td class="num">' + price + "</td>" +
+      '<td class="small">' + NYF.esc(a.typical_duration || "") + "</td>" +
+      '<td class="small">' + (a.transport_note ? NYF.esc(a.transport_note) : "") + "</td>" +
+      '<td class="small">' + social + "</td>" +
+      '<td class="small">' + NYF.srcLink(a.source_url, "official page") + "</td>" +
+    "</tr>";
+  }).join("");
+  document.getElementById("table-host").innerHTML =
+    '<div class="scroll"><table><thead><tr>' +
+    "<th>Activity</th><th>Days open &amp; hours</th><th>Exceptions</th><th class='num'>Adult price</th>" +
+    "<th>Suggested time</th><th>Transit</th><th>Reviews</th><th>Source</th>" +
+    "</tr></thead><tbody>" + rows + "</tbody></table></div>" +
+    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(json._meta.excluded) + "</p>";
+});
+</script>
+</body>
+</html>

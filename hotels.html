@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotels — NYC 2027 trip planner</title>
+<meta name="description" content="Nine NYC hotels with verified 7-night totals for 15–22 Feb 2027, checked against a private-bathroom and queen-bed requirement.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="hotels.html" aria-current="page">Hotels</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Hotels — 7 nights, 2 adults</h1>
+    <p>All figures are <strong>totals for 15–22 Feb 2027</strong> (7 nights, 1 room, 2 adults), captured from Booking.com rate cards on 25 Nov 2026.
+       Totals are <em>before</em> New York's 14.75% tax and $4/night city tax unless stated. Every row links to the exact URL used.</p>
+  </div>
+
+  <section class="panel">
+    <h2>Ranked cheapest first</h2>
+    <p class="lede">Sorted by the cheapest room that meets your brief where one was captured, then by the cheapest available total. Two hotels fail the bed rule — Blue Angel and The Mayfair — and are kept in the table with a red verdict rather than deleted, so you can see what the cheap end of the market actually offers.</p>
+    <div id="table-host"><p class="loading">Loading hotels…</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>Rate tiers individually</h2>
+    <p class="lede">The cheapest total on a search card is often a smaller room. These are the specific rate cards read on each property page.</p>
+    <div id="tiers"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Tax maths, so nothing surprises you</h2>
+    <ul class="tight">
+      <li>New York City hotel tax: <strong>14.75%</strong> plus a <strong>$4 per night</strong> city tax — both added at checkout on top of the "total before taxes" figures.</li>
+      <li>Example: Pestana CR7 at <strong>$1,327</strong> before tax for 7 nights → 14.75% tax = $195.73, city tax = $28 → roughly <strong>$1,550.73</strong> all-in. The $26/night resort fee is already inside the $1,327.</li>
+      <li>That all-in figure is arithmetic on published numbers, not a quoted price — the booking engine is the only authority.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Source: Booking.com property pages with <code>checkin=2027-02-15&amp;checkout=2027-02-22&amp;group_adults=2</code>, read 25 November 2026. Prices are live and change daily.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+NYF.load("data/hotels.json", function (json) {
+  function displayTotal(h) {
+    if (!h.rate_tiers || !h.rate_tiers.length) return h.search_page_cheapest_total_usd || null;
+    var t = h.rate_tiers.slice().sort(function (a, b) {
+      return (a.total_before_tax_usd || 9e9) - (b.total_before_tax_usd || 9e9);
+    })[0];
+    return t ? t.total_before_tax_usd : (h.search_page_cheapest_total_usd || null);
+  }
+  var hs = json.hotels.slice().sort(function (a, b) {
+    return (displayTotal(a) || 9e9) - (displayTotal(b) || 9e9);
+  });
+
+  var body = hs.map(function (h) {
+    var bedOk = /^Yes/.test(h.room_meets_queen_or_larger || "");
+    var bathOk = /^Yes/.test(h.room_meets_private_bathroom || "");
+    var cheapestTier = (h.rate_tiers || []).slice().sort(function (a, b) {
+      return (a.total_before_tax_usd || 9e9) - (b.total_before_tax_usd || 9e9);
+    })[0];
+    var total = cheapestTier ? NYF.money(cheapestTier.total_before_tax_usd) :
+      (h.search_page_cheapest_total_usd ? NYF.money(h.search_page_cheapest_total_usd) : NYF.unverified("No total captured."));
+    var totalNote = cheapestTier ? '<span class="small muted">' + NYF.esc(cheapestTier.room) + "</span>" :
+      '<span class="flag">Search-card price — the room type is not confirmed, so the bed rule is unverified for this figure.</span>';
+
+    function verdict(ok, txt) {
+      var clean = String(txt || "").replace(/^(Yes|No)\s*[—-]\s*/i, "");
+      return '<div style="margin-bottom:6px">' + (ok ? '<span class="pill ok">Yes</span>' : '<span class="pill warn">No / unverified</span>') +
+        '&nbsp;<span class="small">' + NYF.esc(clean) + "</span></div>";
+    }
+    return "<tr>" +
+      "<td><strong>" + NYF.esc(h.name) + "</strong><br><span class='muted small'>" + NYF.esc(h.address) + "</span>" +
+        "<br><span class='small'>" + NYF.esc(h.amenities || "") + "</span>" +
+        (h.amenities_flag ? '<span class="flag">' + NYF.esc(h.amenities_flag) + "</span>" : "") + "</td>" +
+      "<td class='small'>" + NYF.esc(h.area) + "</td>" +
+      '<td class="num">' + total + "<br>" + totalNote + "</td>" +
+      "<td>" + verdict(bathOk, h.room_meets_private_bathroom) + verdict(bedOk, h.room_meets_queen_or_larger) + "</td>" +
+      "<td class='small'>" + NYF.esc(h.taxes_note || "") + "</td>" +
+      "<td class='small'>" + NYF.esc(h.michelin_cluster || "") +
+        (h.michelin_within_1h_count ? "<br><strong>" + h.michelin_within_1h_count + " within 1 h</strong>" :
+          '<div style="margin-top:6px"><span class="unver">count unverified</span><span class="flag">' +
+          NYF.esc(h.michelin_count_flag || "Needs a measured journey time per restaurant.") + "</span></div>") + "</td>" +
+      '<td class="small">' + NYF.srcLink(h.booking_url, "rate page") +
+        (h.official_site ? "<br>" + NYF.srcLink(h.official_site, "hotel site") : "") + "</td>" +
+    "</tr>";
+  }).join("");
+
+  document.getElementById("table-host").innerHTML =
+    '<div class="scroll"><table><thead><tr>' +
+      "<th>Hotel</th><th>Area</th><th class='num'>7-night total (before tax)</th><th>Meets requirements</th>" +
+      "<th>Taxes &amp; fees</th><th>Michelin proximity</th><th>Source</th>" +
+    "</tr></thead><tbody>" + body + "</tbody></table></div>" +
+    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(json._meta.michelin_ranking_caveat) + "</p>";
+
+  var tierRows = [];
+  hs.forEach(function (h) {
+    (h.rate_tiers || []).forEach(function (t) {
+      tierRows.push("<tr><td><strong>" + NYF.esc(h.name) + "</strong></td><td class='small'>" + NYF.esc(t.room) +
+        "</td><td class='num'>" + NYF.money(t.total_before_tax_usd) + "</td>" +
+        (t.per_night_usd ? "<td class='num'>" + NYF.money0(t.per_night_usd) + "</td>" : "<td class='num'>—</td>") +
+        "<td class='small'>" + NYF.esc(t.cancellation || "") + "</td><td class='small'>" + NYF.esc(t.meets_bed_rule || "") + "</td></tr>");
+    });
+  });
+  document.getElementById("tiers").innerHTML = tierRows.length
+    ? '<div class="scroll"><table><thead><tr><th>Hotel</th><th>Room</th><th class="num">7 nights, before tax</th><th class="num">Per night</th><th>Cancellation</th><th>Bed rule</th></tr></thead><tbody>' + tierRows.join("") + "</tbody></table></div>"
+    : '<p class="loading">No individual rate cards were captured for these properties in this pass — only the search-card total.</p>';
+});
+</script>
+</body>
+</html>
