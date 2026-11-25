@@ -117,9 +117,11 @@ Post-publish checks run against the **live** site (not just local):
   `/itinerary.html` `/plan.html` all render with populated tables.
 - Michelin cluster table: 20 rows; the "Not yet grouped" row makes the unverified
   neighbourhoods explicit instead of misfiling them under a guessed area.
-- Hotel table: order corrected to cheapest-compliant-first (HGU $1,091.60 → Eurostars
-  $1,127 → citizenM $1,113 → Hyatt $1,183 → Arlo $1,255 → Pestana $1,327 → Artezen $1,358.69),
-  duplicated "YesYes" labels removed, run-together flag text separated.
+- Hotel table: ordering corrected to the cheapest captured total for each property, which is
+  now Blue Angel $990 → Mayfair $1,060 → HGU $1,091.60 → citizenM $1,113 → Eurostars $1,127 →
+  Hyatt $1,183 → Arlo $1,255 → Pestana $1,327 → Artezen $1,358.69. The two cheapest fail the
+  queen-bed rule and carry a red verdict, so the cheapest *compliant* hotel is HGU at $1,091.60.
+  Duplicated "YesYes" labels removed; run-together flag text separated.
 - `plan.html` §2 corrected: it previously implied every row had an area and hours. It now
   states 20 of 72 verified neighbourhoods and 48 of 52 one-star rows still missing hours.
 
