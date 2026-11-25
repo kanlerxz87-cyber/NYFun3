@@ -18,8 +18,8 @@
 | `T2` | MICHELIN Guide & Starred Restaurants, Clusters, Couple Pricing, Hours & Social Reviews | `done` | `fc94e0d3` | `2026-11-25T22:39:00Z` | `data/michelin_restaurants.json` |
 | `T3` | NYC Activities, Hours, Exceptions, <=1-Hr Transit & Social Reviews | `done` | `fc94e0d3` | `2026-11-25T22:56:00Z` | `data/activities.json` |
 | `T4` | NYC Hotels (Private Bath, Queen+ Bed, Verified 7-Night Pricing Feb–Mar 2027, Best Time to Book & Michelin Transit Ranking) | `done` | `fc94e0d3` | `2026-11-25T23:06:00Z` | `data/hotels.json` |
-| `T5` | Decision Readiness (Questions & Missing Info Discovery) + Site Improvement Suggestions | `in progress` | `fc94e0d3` | `2026-11-25T23:18:00Z` | `data/decision_and_suggestions.json` |
-| `T6` | Final Integration, Line-by-Line Re-Verification, Dashboard Site & Subpages, Link Check & Live Preview | `unclaimed` | — | — | `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `questions.html`, `suggestions.html`, `review.html`, `assets/`, `.nojekyll`, `README.md` |
+| `T5` | Decision Readiness (Questions & Missing Info Discovery) + Site Improvement Suggestions | `done` | `fc94e0d3` | `2026-11-25T23:18:00Z` | `data/decision_and_suggestions.json` |
+| `T6` | Final Integration, Line-by-Line Re-Verification, Dashboard Site & Subpages, Link Check & Live Preview | `in progress` | `fc94e0d3` | `2026-11-25T23:23:00Z` | `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `questions.html`, `suggestions.html`, `review.html`, `assets/`, `.nojekyll`, `README.md` |
 
 ---
 
@@ -58,3 +58,7 @@
   - `IRREG-12` (**Ace Hotel Destination Fee Discrepancy**): Per `suddenstay.com` Oct 2026 audit, Ace Hotel's FAQ and live booking screen display conflicting nightly destination fee amounts — flagged for checkout verification.
   - `IRREG-13` (**Mandatory Resort Fee Distortion**): `Arlo Midtown` ($42.96/nt = $300.72/7n), `Arlo NoMad` ($42.96/nt = $300.72/7n), and `Hyatt Centric` ($45.91/nt = $321.37/7n) look much cheaper pre-fee than `$0-fee` `citizenM`, `LUMA`, and `Hampton Inn Brooklyn/Downtown`.
 - **Next claim**: Claimed `T5` (`data/decision_and_suggestions.json`).
+
+### 2026-11-25T23:23:00Z — Session `fc94e0d3` completed `T5` & claimed `T6`
+- **Verification performed**: Verified MTA 2026–2027 OMNY subway/local bus base fare (`$3.00`) and 7-day rolling fare cap (`$35.00/person` = `$70.00/couple`) via official MTA tariff document `https://www.mta.info/document/195636`. Compiled structured Known vs. Missing Information, 6 pre-booking Decision Questions with discovery steps, 6 reviewable Site & Decision-Making Suggestions (`S01`–`S06`), and master irregularity registry (`IRREG-01`–`IRREG-14`).
+- **Next claim**: Claimed `T6` (final line-by-line cross-verification, GitHub Pages multi-page static dashboard generation, link & HTML audit, and live preview).

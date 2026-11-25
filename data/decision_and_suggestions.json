@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "task_id": "T5",
+    "session_id": "fc94e0d3",
+    "verified_at_utc": "2026-11-25T23:21:00Z"
+  },
+  "executive_summary": {
+    "headline": "NYC Couple's Vacation Analysis (Feb 15 – Mar 23, 2027)",
+    "core_findings": [
+      "Optimal 7-Night Window: Shift 6 days later from Feb 15–22 to Sun Feb 21 – Sun Feb 28, 2027 (or Mon Feb 22 – Mon Mar 1). You dodge Presidents' Day (Feb 15) + NYC Public Schools Midwinter Recess crowds (Feb 15–19) while locking in February hotel troughs ($931–$1,623 all-in for 7 nights) before March rates jump +28% to +57%.",
+      "Top Transit & Michelin Hotel (#1 Rank): LUMA Hotel Times Square ($0 Amenity Fee, King/2-Queen w/ private bath) reaches 70/70 NYC MICHELIN-Starred + 78 Bib Gourmand (148 total) within <=60 min by subway/bus, with Sushi Sho (3★) and Gabriel Kreuther (2★) literally on the same 41st St corridor. Best all-in 4★ value: Arlo Midtown ($1,095–$1,305/7n) or Arlo NoMad ($1,218/7n); best total-cost saver: Hampton Inn Brooklyn/Downtown ($931/7n w/ $0 fee & free hot breakfast).",
+      "Critical 2027 Calendar Alerts Verified: (1) Metropolitan Opera has ZERO performances Jan 31 – Mar 7, 2027 (reopens Mar 8); (2) Wollman Rink closes for the season Mar 16, 2027; (3) The Met is closed Wednesdays, Whitney is closed Tuesdays, 9/11 Museum is closed most winter Tuesdays, and Sushi Sho / Jungsik / Jean-Georges / Dirt Candy / Aska / Morgan Library / Broadway are closed Mondays (Presidents' Day Feb 15!).",
+      "7-Night Couple Total Budget (2 Adults, Excl. Flights): Budget/Smart Tier ~$2,250–$2,950 | Boutique Mid-Tier ~$3,650–$4,850 | Splurge MICHELIN Tier ~$6,200–$8,900+ (includes 7-night hotel w/ all taxes & mandatory resort fees, $70 OMNY 7-day capped transit for 2, verified activities, and MICHELIN dining)."
+    ],
+    "transit_fact": {
+      "base_fare": "$3.00 per subway/local bus ride (effective Jan 4, 2026)",
+      "seven_day_cap": "$35.00/person ($70.00 couple total for 7 days via OMNY; each adult MUST tap their own separate contactless card/phone)",
+      "official_source": "https://www.mta.info/document/195636"
+    }
+  },
+  "known_vs_missing": {
+    "known_confirmed": [
+      "Travel party: 2 adults (couple) sharing 1 room.",
+      "Mandatory room specs: En-suite private bathroom + Queen bed or larger (Queen or King).",
+      "Outer travel window: February 15, 2027 – March 23, 2027 (preferred start Feb 15–18, 2027).",
+      "Hotel pricing comparison baseline: Standardized 7-night stay.",
+      "Transit threshold: Planned activities <= 60 minutes from hotel; hotels ranked by MICHELIN Guide venues <= 60 minutes by subway/bus.",
+      "Official NYC taxes & transit: 14.75% + $3.50/night hotel tax; $3.00 MTA OMNY fare capped at $35.00/7 days per person."
+    ],
+    "missing_unconfirmed": [
+      "Exact trip duration: Prompt mentions 3 nights (Feb 15–18), 1–2 weeks (7–14 nights), AND possibly 2–4 weeks (14–28 nights).",
+      "Total trip budget ceiling & split between lodging vs. MICHELIN fine dining (e.g., one 3★ splurge at $700–$990 vs. multiple 1★/Bib Gourmand dinners at $62–$290).",
+      "Origin airport, flight arrival/departure times, and whether ESTA / US visa + passport validity (6+ months) are already secured (especially if flying internationally from NL/Europe — AMS–JFK/EWR).",
+      "Dietary restrictions, allergies, or alcohol preferences (critical: Joo Ok 2★ cannot accommodate vegetarian, gluten-free, shellfish, seaweed, or allium restrictions; Eleven Madison Park 3★ & Dirt Candy 1★ offer world-class plant-based menus).",
+      "Sleep/space sensitivity: Whether a compact 150–170 sq ft smart cabin (Arlo / Pod Queen / citizenM wall-to-wall King) is comfortable for 1–4 weeks, or if 250–345+ sq ft (LUMA / Hyatt Centric / Ace Medium King / Hampton Inn) is required.",
+      "Flexibility to shift arrival 4–10 days earlier (Jan 19 – Feb 11, 2027) to capture 25% off NYC Hotel Week + 2-for-1 Broadway Week + NYC Restaurant Week, OR shift after Mar 8, 2027 if Metropolitan Opera is a priority."
+    ]
+  },
+  "decision_questions": [
+    {
+      "id": "Q01",
+      "category": "Dates & Duration",
+      "question": "Are we locking in 3–4 nights (Feb 15–18), 7 nights, 14 nights, or 21–28 nights — and can we shift arrival to Feb 21, 2027?",
+      "why_it_matters": "Feb 15–19 overlaps Presidents' Day + NYC Public Schools Midwinter Recess (museum crowds) and Monday closures. Shifting to Feb 21–28 saves money and crowds; staying 28+ nights triggers different NYC occupancy-tax rules and favors apartment-style suites (e.g., Pod Pad w/ kitchen) or splitting Manhattan + Brooklyn.",
+      "answer_needed_before": "Booking flights and locking non-refundable hotel rates (aim to decide by Dec 15, 2026).",
+      "how_to_discover": "Compare both partners' PTO/remote-work calendars across Feb 15–Mar 23, 2027, and price round-trip flights (e.g., Google Flights matrix for AMS/local hub -> JFK/EWR) for 7n vs. 14n vs. 21n."
+    },
+    {
+      "id": "Q02",
+      "category": "Dining Strategy & Dietary Rules",
+      "question": "How many starred tasting menus do we want to book, and does either partner have dietary restrictions or dress-code preferences?",
+      "why_it_matters": "Three-star tastings run $670–$990 base per couple and release on strict schedules: Sushi Sho (3★) is ALREADY open through Feb 28, 2027 on Tock right now; Le Bernardin, EMP, Atomix & Aska drop Feb 2027 tables on Jan 1, 2027. Joo Ok (2★) strictly declines gluten-free, vegetarian, shellfish, and allium modifications, while Le Bernardin & Jean-Georges enforce smart-casual/jacket rules.",
+      "answer_needed_before": "Now (for Sushi Sho Feb 2027 Tock slots) and before January 1, 2027 at 7:00 AM / 12:00 PM ET (for Feb 2027 Resy/Tock drops).",
+      "how_to_discover": "Pick 1–2 'anchor' 2★/3★ splurges + 2–3 approachable 1★/Bib Gourmand spots from michelin.html, confirm dietary restrictions together, and create Resy + Tock accounts with payment cards saved in advance."
+    },
+    {
+      "id": "Q03",
+      "category": "Hotel Space vs. Budget Trade-off",
+      "question": "For a 1–4 week stay with winter coats and luggage, what is our minimum comfortable room square footage?",
+      "why_it_matters": "NYC's sharpest Manhattan bargains (Arlo Midtown $1,095/7n, Pod Queen $980–$1,290/7n, Arlo NoMad $1,218/7n, citizenM) are 150–175 sq ft micro-luxury cabins. For 7 nights they are great; for 14–28 nights with winter parkas and two checked bags, 250–345 sq ft rooms (LUMA, Hyatt Centric, Ace Medium Queen/King, Hampton Inn) prevent cabin fever.",
+      "answer_needed_before": "Selecting the final hotel tier (book refundable hold in Dec 2026).",
+      "how_to_discover": "Watch the linked 4K room walkthrough videos on hotels.html together (especially citizenM wall-to-wall King and Pod Queen walkthroughs) and measure 150 sq ft (~12×12.5 ft) at home."
+    },
+    {
+      "id": "Q04",
+      "category": "Performing Arts & Seasonal Priorities",
+      "question": "Is seeing an opera at The Metropolitan Opera OR ice skating at Wollman Rink on our must-do list?",
+      "why_it_matters": "They pull in opposite directions of the calendar! Met Opera is DARK Jan 31 – Mar 7, 2027 (reopens Mar 8), whereas Wollman Rink CLOSES for the season on Mar 16, 2027. Only the overlap week of March 8–16, 2027 allows BOTH on one 7-night trip (at higher March hotel rates)!",
+      "answer_needed_before": "Finalizing February vs. March 2027 travel dates.",
+      "how_to_discover": "Review the 2026–27 Met Opera lineup (Silent Night, Aida, Manon starting Mar 8 on metopera.org) vs. February Broadway options (Hadestown runs all Feb & Mar) and hotel savings ($300–$740 cheaper in Feb)."
+    },
+    {
+      "id": "Q05",
+      "category": "Crown Access & Timed-Entry Landmarks",
+      "question": "Do we want Statue of Liberty Crown Reserve tickets ($25.50/pp) or free museum Friday evening slots?",
+      "why_it_matters": "Crown Reserve tickets cost the exact same $25.50/adult as general ferry tickets on official Statue City Cruises, but tiny daily quotas sell out 60–90+ days ahead (Dec 2026 for Feb/Mar 2027).",
+      "answer_needed_before": "60–90 days before departure (December 2026).",
+      "how_to_discover": "Check live Crown Reserve availability for your target dates directly on cityexperiences.com/new-york/city-cruises/statue/."
+    },
+    {
+      "id": "Q06",
+      "category": "Loyalty Points, Credit Cards & International Entry",
+      "question": "Do we hold World of Hyatt / Marriott Bonvoy / Hilton Honors points or Chase/Amex transfer partners, and are passports/ESTA current?",
+      "why_it_matters": "Redeeming World of Hyatt points at Hyatt Centric Times Square or Hilton points at Hampton Inn automatically WAIVES mandatory $45.91/night destination fees AND 14.75% NYC hotel taxes! International travelers also need approved ESTA ($21 official DHS site only) at least 72+ hours prior.",
+      "answer_needed_before": "Paying cash or locking prepaid rates.",
+      "how_to_discover": "Audit both partners' credit card/hotel point balances and check passport expiration dates + official esta.cbp.dhs.gov status."
+    }
+  ],
+  "reviewable_suggestions": [
+    {
+      "id": "S01",
+      "category": "Decision-Making & Timing",
+      "title": "Adopt the 'Two-Step Refundable Lock + 25-Day Re-Shop' Hotel Strategy",
+      "impact": "High ($150–$450 est. savings w/ zero downside)",
+      "proposal": "Book a 100% refundable 'Pay Later' Queen/King room now (late Nov / Dec 2026) for Feb 21–28, 2027 (and/or Feb 15–22 if fixed) directly with the hotel, then set a calendar reminder for Jan 25, 2027 (3–4 weeks out) to re-check winter distress inventory before the free-cancellation deadline.",
+      "tradeoff_to_review": "Refundable rates initially price ~$15–$28/night above non-refundable prepay rates, so confirm whether date flexibility or lowest upfront price is your priority before locking non-refundable."
+    },
+    {
+      "id": "S02",
+      "category": "Decision-Making & Split-Stay",
+      "title": "If Staying 14–28 Nights, Use a 'Midtown + Neighborhood' Split Stay Instead of One Hotel",
+      "impact": "High (Better value + zero transit fatigue)",
+      "proposal": "For a 2–4 week trip, pair Week 1 in Midtown/Bryant Park (e.g., LUMA or Arlo Midtown for Broadway, MoMA, Central Park, Met, Midtown 3★/2★ dining) with Week 2 in NoMad/Bowery/Brooklyn (e.g., Arlo NoMad, citizenM Bowery, or Hampton Inn Brooklyn for Village, SoHo, LES, FiDi & Williamsburg dining).",
+      "tradeoff_to_review": "Requires one 20-minute subway/Uber hotel move mid-trip, vs. unpacking once."
+    },
+    {
+      "id": "S03",
+      "category": "MICHELIN Budget Optimization",
+      "title": "Use MICHELIN 2★/3★ Lunch & Bar Tasting Menus to Cut Fine-Dining Spend by 45–60%",
+      "impact": "High ($300–$500 saved per couple)",
+      "proposal": "Book Le Bernardin's 3-course Lunch ($274 couple vs. $700 Chef's Tasting), Aquavit's 2/3-course Lunch ($160–$190 couple vs. $390 dinner), Jean-Georges' Lunch ($256 vs. $596), or Eleven Madison Park's Bar Tasting ($450 vs. $770) to experience multiple 2★/3★ kitchens at 1★ prices.",
+      "tradeoff_to_review": "Lunch/bar formats feature 3–4 courses instead of the full 7–10 course evening progression."
+    },
+    {
+      "id": "S04",
+      "category": "Dashboard Site Enhancement (Review Before Building)",
+      "title": "Add an Interactive 'Trip Length & Tier Cost Calculator' (3n / 7n / 14n / 28n)",
+      "impact": "Medium-High UX Upgrade",
+      "proposal": "Add a client-side calculator on the landing or hotels page that lets you toggle nights (3, 7, 14, 21, 28), hotel choice, number of starred dinners, and OMNY 7-day caps ($35/pp/wk) to see live all-in couple totals.",
+      "tradeoff_to_review": "Kept out of core verified tables for now so verified 7-night static figures aren't confused with modeled projections until you approve exact trip length."
+    },
+    {
+      "id": "S05",
+      "category": "Dashboard Site Enhancement (Review Before Building)",
+      "title": "Add a Day-by-Day 'Closed-Day Guardrail' Itinerary Builder + .ics Reservation Drop Calendar",
+      "impact": "High Operational Value",
+      "proposal": "Generate downloadable .ics calendar alerts for Dec 14, 2026 (new MICHELIN Star ceremony check!), Jan 1, 2027 7:00 AM ET (Feb Resy/Tock drops), and Feb 1, 2027 (Mar drops), plus a drag-and-drop itinerary grid that automatically blocks Monday fine-dining closures, Tuesday Whitney/9-11 closures, and Wednesday Met closures.",
+      "tradeoff_to_review": "Best built right after you lock your exact arrival & departure dates."
+    },
+    {
+      "id": "S06",
+      "category": "Dashboard Site Enhancement (Review Before Building)",
+      "title": "Add an Offline-Capable Cluster Map Pinning Selected Hotel + <=60-Min Subway Lines",
+      "impact": "Medium UX Upgrade",
+      "proposal": "Embed a lightweight Leaflet/OpenStreetMap view color-coding 3★, 2★, 1★, Bib Gourmand, Selected, and Activities around your chosen hotel with walking rings (10 min / 15 min) and direct subway lines.",
+      "tradeoff_to_review": "Adds external map tile requests when online; review if preferred over zero-dependency offline tables."
+    }
+  ],
+  "flagged_irregularities": [
+    {
+      "id": "IRREG-01",
+      "severity": "High",
+      "domain": "Prompt & Dates",
+      "item": "Trip Duration Conflict (3 Nights vs. 7 Nights vs. 14–28 Nights)",
+      "finding": "Prompt states '1 to 2 weeks — and possibly 2 to 4 weeks', preferred dates 'February 15–18, 2027' (3 nights), and 'standardize hotel pricing to a 7-night stay'.",
+      "action_taken": "Standardized all hotel table totals to verified 7-night stays while explicitly documenting Feb 15–18 and 14–28 night implications.",
+      "official_source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+    },
+    {
+      "id": "IRREG-02",
+      "severity": "High",
+      "domain": "Calendar & Crowds",
+      "item": "Feb 15, 2027 = Presidents' Day + NYC Public Schools Midwinter Recess (Feb 15–19, 2027)",
+      "finding": "Preferred arrival Mon Feb 15, 2027 hits both a federal holiday (Monday closures at Sushi Sho, Jungsik, Jean-Georges, Dirt Candy, Aska, Morgan Library & Hadestown) and NYC school break week (elevated family museum crowds).",
+      "action_taken": "Highlighted Sun Feb 21 – Sun Feb 28, 2027 as the superior crowd-free, cheaper 7-night window.",
+      "official_source": "https://www.schools.nyc.gov/calendar"
+    },
+    {
+      "id": "IRREG-03",
+      "severity": "Medium",
+      "domain": "Promotions",
+      "item": "Travel Window Misses NYC Hotel Week, Restaurant Week & Broadway Week by 4 Days",
+      "finding": "NYC Tourism's 2027 Winter Deal Weeks (25% off hotels, 2-for-1 Broadway & Must-See Week, prix-fixe Restaurant Week) end Thursday, Feb 11, 2027 — 4 days before Feb 15.",
+      "action_taken": "Flagged in Executive Summary & Questions in case dates can shift earlier.",
+      "official_source": "https://www.nyctourism.com/hotel-week/"
+    },
+    {
+      "id": "IRREG-04",
+      "severity": "Medium",
+      "domain": "MICHELIN Guide",
+      "item": "Upcoming December 14, 2026 MICHELIN Star Ceremony (Before Feb–Mar 2027 Trip)",
+      "finding": "MICHELIN's next Northeast Cities Ceremony takes place Dec 14, 2026 in Manhattan — between today (Nov 25, 2026) and the Feb 2027 trip.",
+      "action_taken": "Verified current active 70 NYC starred census as of Nov 25, 2026 and flagged Dec 14, 2026 re-verification milestone.",
+      "official_source": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
+    },
+    {
+      "id": "IRREG-05",
+      "severity": "Medium",
+      "domain": "MICHELIN Transit",
+      "item": "Westchester County Properties Listed Under MICHELIN 'New York' Banner",
+      "finding": "Blue Hill at Stone Barns (2★, Tarrytown) and La Bastide by Andrea Calstier (1★, North Salem) appear in NY ceremony coverage but exceed 60 min by NYC subway/bus.",
+      "action_taken": "Excluded both from <=60-min NYC hotel transit rankings so counts reflect true NYC 5-borough reachability (70 Starred).",
+      "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+    },
+    {
+      "id": "IRREG-06",
+      "severity": "High",
+      "domain": "Activities (2027 Schedule)",
+      "item": "The Metropolitan Opera Winter Dark Hiatus (Jan 31 – Mar 7, 2027)",
+      "finding": "Official Met Opera 2026–27 calendar shows NO OPERA PERFORMANCES from Jan 31 through Mar 7, 2027 (reopening Mon Mar 8, 2027 with Silent Night).",
+      "action_taken": "Flagged prominently in Activities table & Decision Questions so couple does not plan opera during Feb 15–Mar 7.",
+      "official_source": "https://www.metopera.org/season/tickets/group-sales/extraordinary-every-night/2026-27/"
+    },
+    {
+      "id": "IRREG-07",
+      "severity": "Medium",
+      "domain": "Activities (2027 Schedule)",
+      "item": "Wollman Rink 2026–27 Season Closes March 16, 2027 (+ 2:30 PM Mon/Tue Close)",
+      "finding": "Per wollmanrinknyc.com/plan/, ice skating ends March 16, 2027 (unavailable March 17–23, 2027) and closes early at 2:30 PM every Monday & Tuesday.",
+      "action_taken": "Flagged in Activities table and calendar trade-off analysis.",
+      "official_source": "https://wollmanrinknyc.com/plan/"
+    },
+    {
+      "id": "IRREG-08",
+      "severity": "Medium",
+      "domain": "Activities (2027 Schedule)",
+      "item": "9/11 Memorial Museum Closed Most Winter Tuesdays + Met Closed Wednesdays + Whitney Closed Tuesdays",
+      "finding": "9/11 Museum closes select winter Tuesdays (late Feb & Mar Tuesdays); The Met & Met Cloisters close every Wednesday; Whitney closes every Tuesday.",
+      "action_taken": "Documented exact closed days in every row of activities.html.",
+      "official_source": "https://www.911memorial.org/visit/visit-museum-1"
+    },
+    {
+      "id": "IRREG-09",
+      "severity": "Low",
+      "domain": "Activities Transit",
+      "item": "The Met Cloisters Borderline on <=60-Minute Rule from Brooklyn/FiDi Hotels",
+      "finding": "Fort Tryon Park (190th St) is 38–48 min from Midtown via A express, but ~58–63 min door-to-door from Downtown Brooklyn (Hampton Inn).",
+      "action_taken": "Marked within_60_min_all_ranked_hotels = false on A16 and H08 rather than rounding down.",
+      "official_source": "https://www.metmuseum.org/plan-your-visit/met-cloisters"
+    },
+    {
+      "id": "IRREG-10",
+      "severity": "High",
+      "domain": "Unverified Official Field",
+      "item": "I Sodi (R25, MICHELIN Selected) — Official Website Publishes No Menu Prices",
+      "finding": "isodinyc.com lists hours, address, and reservations but omits all dish prices (MICHELIN Guide lists $$$ band only).",
+      "action_taken": "Left Couple Total Price blank in michelin.html and flagged as Unverified per strict zero-hallucination rule.",
+      "official_source": "https://www.isodinyc.com/"
+    },
+    {
+      "id": "IRREG-11",
+      "severity": "Medium",
+      "domain": "MICHELIN Menu Status",
+      "item": "Manhatta (R26) — $275/pp Chef's Counter Currently Paused on Official Website",
+      "finding": "manhattarestaurant.com/chefs-counter/ notes the Chef's Counter tasting menu is paused until further notice, while Bar & Dining Room remain open daily.",
+      "action_taken": "Quoted verified Bar/à la carte pricing and flagged the paused Chef's Counter.",
+      "official_source": "https://www.manhattarestaurant.com/chefs-counter/"
+    },
+    {
+      "id": "IRREG-12",
+      "severity": "High",
+      "domain": "Hotels (Room Spec Traps)",
+      "item": "Sub-Queen & Bunk Room Categories Sold for 2 Adults at Pod, Ace & Arlo",
+      "finding": "Pod Times Square sells 'Full Pod' ('Sleeps 2' on a Full bed < Queen) & 'Bunk Pod'; Ace Hotel sells 'Single' (Full) & 'Cozy' ('Full or Queen' unguaranteed); Arlo sells 'Twin Bunk'; sister Pod 51 sells shared-bath pods.",
+      "action_taken": "Restricted all hotel recommendations to verified Queen/King + private bath categories (e.g., 'Queen Pod', 'Medium Queen/King') with red warning badges.",
+      "official_source": "https://www.thepodhotel.com/pod-times-square/rooms"
+    },
+    {
+      "id": "IRREG-13",
+      "severity": "Medium",
+      "domain": "Hotels (Fees)",
+      "item": "Ace Hotel New York Destination Fee Discrepancy + LUMA Live Cart Dynamic Rate",
+      "finding": "Per Oct 2026 fee audit (suddenstay.com), Ace Hotel's FAQ and checkout screen display different destination fee figures; LUMA confirms $0 Amenity Fee via official JSON-LD while nightly room rates float dynamically.",
+      "action_taken": "Flagged Ace Hotel's destination fee as requiring final checkout screen inspection, and labeled LUMA's 7-night total as winter benchmark range.",
+      "official_source": "https://www.suddenstay.com/hotels/new-york/new-york/ace-hotel-new-york"
+    },
+    {
+      "id": "IRREG-14",
+      "severity": "Low",
+      "domain": "Social Links & Repo Ops",
+      "item": "Blank Unconfirmed Platform Cells + Fixed Arena Branch Policy",
+      "finding": "Select individual TikTok/Instagram cells without verified venue-specific matches were left blank ('—') rather than guessed; Arena environment fixes active session branch to arena/fc94e0d3-nyfun3.",
+      "action_taken": "Documented transparently in COORDINATION.md and review.html.",
+      "official_source": "https://github.com/kanlerxz87-cyber/NYFun3"
+    }
+  ]
+}
