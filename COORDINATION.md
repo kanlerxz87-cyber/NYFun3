@@ -4,7 +4,7 @@ Shared task board. Read this before starting work.
 
 - **Repo:** `kanlerxz87-cyber/NYFun3`
 - **Live site:** https://kanlerxz87-cyber.github.io/NYFun3/ (GitHub Pages, source = `main` branch, `/` root)
-- **Board last updated:** 2026-11-25 (session `arena-c2e08f03`)
+- **Board last updated:** 2026-11-25 (supplemental dossier session `arena/61fbe157-nyfun3`)
 
 ## Rules in force
 
@@ -14,7 +14,7 @@ Shared task board. Read this before starting work.
 4. Need a change in someone else's file? Log a request below; do not edit it.
 5. Small, frequent commits. `git pull --rebase` before every push.
 6. Shared outputs (`data/*.json` combined tables, `index.html` nav, Pages publish) are changed only by the final integration session.
-7. Verification standard: every published value needs an official source link. Unconfirmed values are left blank and flagged. Never infer or fill in values.
+7. Verification standard: official venue, hotel-room, award, and transit facts need a primary source link. If a date-specific hotel rate is only available from Booking.com, label and link it as a third-party snapshot, include the capture date, and state fee/tax caveats; it is never an official rate or guaranteed total. Unknown facts remain blank and flagged; never infer values.
 8. Claims older than 60 minutes with no commits may be taken over; note the handoff.
 
 ## Branch-naming irregularity (logged for review)
@@ -38,6 +38,7 @@ At integration time, merge `arena/c2e08f03-nyfun3` into `main`.
 | T8 | Suggestions / decision section | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | section 3 of `plan.html` (S1–S9) | — |
 | T9 | Verification log (line-by-line) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `VERIFICATION.md` | — |
 | T10 | Integration: merge to `main`, re-verify, publish Pages | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `main` publish | — |
+| T11 | Supplemental curated trip dossier and source/method log | done | arena-61fbe157 | arena/61fbe157-nyfun3 | `pages/`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, `README.md` | root dashboard dossier link; Pages integration |
 
 ## Work log
 
@@ -89,8 +90,10 @@ rows. No empty renders, no JS exceptions.
 
 **Gaps now recorded on the site itself** (not hidden):
 
-- No verified per-couple restaurant price. MICHELIN publishes a band only; venue sites are
-  JS SPAs or gate menus behind booking. Column blank + flagged. → open question Q7.
+- The 72-row starred dataset has no comprehensive per-couple menu-cost catalogue. MICHELIN
+  publishes a band and many venue sites do not expose fixed menus; root table remains blank +
+  flagged. The supplemental dossier adds menu arithmetic for eight selected candidates only.
+  → open question Q7 remains for the full dataset.
 - No Michelin "within 1 hour" hotel ranking. Needs one measured journey per hotel ×
   restaurant pair. Column `null` + flagged. → open question Q6.
 - 48 of 52 one-star rows lack hours (Guide page not yet read). Flagged per row.
@@ -129,7 +132,21 @@ Post-publish checks run against the **live** site (not just local):
 test — worth recording as a process lesson: render tests confirmed "non-empty HTML", which is
 not the same as "correct HTML". All three are fixed and re-verified live.
 
-**Remaining gaps are unchanged and deliberately not closed:** no per-couple restaurant price,
-no Michelin-within-1-hour hotel ranking, 48 one-star hours cells, 52 ungrouped rows, no Bib
-Gourmand tier. Each is flagged on the site and carries a concrete method for closing it in
-`plan.html` §4.
+**Latest upstream status (25 Nov 2026):** the root dataset now reports 43 of 52 one-star
+rows without verified hours and 50 of 72 rows without verified neighbourhoods; earlier counts
+above describe the initial pass. Remaining gaps are no comprehensive per-couple menu costs for
+all 72 starred rows (the supplemental dossier has eight selected restaurant price calculations),
+no Michelin-within-1-hour hotel ranking, 43 one-star hours cells, 50 ungrouped rows, and no Bib
+Gourmand tier in the all-stars dataset. Each is flagged on the site and carries a concrete
+method for closing it in `plan.html` §4 or `pages/findings.html`.
+
+
+### arena-61fbe157 — 2026-11-25
+
+**Scope:** T11, a separate detailed trip dossier under `pages/` plus its source/method log. Existing root datasets, activities, restaurant/MICHELIN tables, and primary dashboard structure were preserved; the root dashboard adds a single card linking to the supplement.
+
+**Built:** `pages/index.html`, `pages/itinerary.html`, `pages/hotels.html`, `pages/dining.html`, `pages/experiences.html`, `pages/findings.html`, `RESEARCH.md`, and separate `assets/css/site.css` / `assets/js/site.js`. The dossier makes the 3-night vs. one-week conflict, 1–2 vs. 2–4-week ambiguity, conditional hotel rate evidence, unverified MTA minutes, holiday-hours uncertainty, and 2026 MICHELIN update visible.
+
+**Verification:** Node syntax, local HTML/file/fragment/accessibility checks, and HTTP 200 checks passed for the main pages, supplement, shared assets, research log, and `.nojekyll`.
+
+**Integration:** The existing root dashboard and README link to the nested dossier. The changes are on the pinned active branch `arena/61fbe157-nyfun3`; pull request #2 is the GitHub Pages integration path.
