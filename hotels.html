@@ -19,6 +19,8 @@
       <a href="hotels.html" aria-current="page">Hotels</a>
       <a href="itinerary.html">Itinerary</a>
       <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
     </nav>
   </div>
 </header>
@@ -116,11 +118,13 @@ NYF.load("data/hotels.json", function (json) {
       tierRows.push("<tr><td><strong>" + NYF.esc(h.name) + "</strong></td><td class='small'>" + NYF.esc(t.room) +
         "</td><td class='num'>" + NYF.money(t.total_before_tax_usd) + "</td>" +
         (t.per_night_usd ? "<td class='num'>" + NYF.money0(t.per_night_usd) + "</td>" : "<td class='num'>—</td>") +
-        "<td class='small'>" + NYF.esc(t.cancellation || "") + "</td><td class='small'>" + NYF.esc(t.meets_bed_rule || "") + "</td></tr>");
+        "<td class='small'>" + NYF.esc(t.cancellation || "") + "</td><td class='small'>" + NYF.esc(t.meets_bed_rule || "") +
+        "</td><td class='small'>" + NYF.srcLink(h.official_site, "official hotel") +
+        (h.source_url ? "<br>" + NYF.srcLink(h.source_url, "rate snapshot") : "") + "</td></tr>");
     });
   });
   document.getElementById("tiers").innerHTML = tierRows.length
-    ? '<div class="scroll"><table><thead><tr><th>Hotel</th><th>Room</th><th class="num">7 nights, before tax</th><th class="num">Per night</th><th>Cancellation</th><th>Bed rule</th></tr></thead><tbody>' + tierRows.join("") + "</tbody></table></div>"
+    ? '<div class="scroll"><table><thead><tr><th>Hotel</th><th>Room</th><th class="num">7 nights, before tax</th><th class="num">Per night</th><th>Cancellation</th><th>Bed rule</th><th>Source</th></tr></thead><tbody>' + tierRows.join("") + "</tbody></table></div>"
     : '<p class="loading">No individual rate cards were captured for these properties in this pass — only the search-card total.</p>';
 });
 </script>

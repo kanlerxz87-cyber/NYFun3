@@ -1,0 +1,854 @@
+{
+  "generated_at_utc": "2026-11-25T22:48:12.849456+00:00",
+  "method": "Direct HTTPS GET to official public URLs from a GitHub Actions runner; no values inferred.",
+  "hyatt": {
+    "nyczm": {
+      "source": "https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+      "status": 403,
+      "bytes": 12858,
+      "has_avg_night": false,
+      "has_price_specification": false,
+      "structured_examples": [],
+      "visible_rate_snippets": []
+    },
+    "nyczt": {
+      "source": "https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+      "status": 403,
+      "bytes": 12858,
+      "has_avg_night": false,
+      "has_price_specification": false,
+      "structured_examples": [],
+      "visible_rate_snippets": []
+    },
+    "search": {
+      "source": "https://www.hyatt.com/search/hotels/en-US/New%20York?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false&location=New+York",
+      "status": 403,
+      "bytes": 12858,
+      "shop_room_codes": [],
+      "spirit_codes": []
+    }
+  },
+  "michelin": {
+    "base": {
+      "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+      "status": 202,
+      "bytes": 0,
+      "restaurant_links_found": 0,
+      "first_links": [],
+      "card_examples": [],
+      "page_label": []
+    },
+    "all_starred": {
+      "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+      "status": 202,
+      "bytes": 0,
+      "restaurant_links_found": 0,
+      "first_links": [],
+      "card_examples": [],
+      "page_label": []
+    },
+    "three_star": {
+      "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/3-stars-michelin",
+      "status": 202,
+      "bytes": 0,
+      "restaurant_links_found": 0,
+      "first_links": [],
+      "card_examples": [],
+      "page_label": []
+    },
+    "two_star": {
+      "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/2-stars-michelin",
+      "status": 202,
+      "bytes": 0,
+      "restaurant_links_found": 0,
+      "first_links": [],
+      "card_examples": [],
+      "page_label": []
+    },
+    "one_star": {
+      "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin",
+      "status": 202,
+      "bytes": 0,
+      "restaurant_links_found": 0,
+      "first_links": [],
+      "card_examples": [],
+      "page_label": []
+    },
+    "bib_gourmand": {
+      "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/bib-gourmand",
+      "status": 202,
+      "bytes": 0,
+      "restaurant_links_found": 0,
+      "first_links": [],
+      "card_examples": [],
+      "page_label": []
+    },
+    "selected": {
+      "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/selected-restaurants",
+      "status": 202,
+      "bytes": 0,
+      "restaurant_links_found": 0,
+      "first_links": [],
+      "card_examples": [],
+      "page_label": []
+    },
+    "individual_pages": {
+      "le_coucou": {
+        "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
+        "status": 202,
+        "bytes": 0,
+        "structured_examples": [],
+        "visible_detail_snippets": []
+      },
+      "sushi_sho": {
+        "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
+        "status": 202,
+        "bytes": 0,
+        "structured_examples": [],
+        "visible_detail_snippets": []
+      }
+    }
+  },
+  "mta_gtfs": {
+    "subway_regular": {
+      "source": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip",
+      "status": 200,
+      "bytes": 5606305,
+      "files": [
+        "agency.txt",
+        "calendar.txt",
+        "calendar_dates.txt",
+        "feed_info.txt",
+        "routes.txt",
+        "shapes.txt",
+        "stop_times.txt",
+        "stops.txt",
+        "transfers.txt",
+        "trips.txt"
+      ],
+      "stops.txt": {
+        "rows": 1488,
+        "header": [
+          "stop_id",
+          "stop_name",
+          "stop_lat",
+          "stop_lon",
+          "location_type",
+          "parent_station"
+        ],
+        "sample": [
+          {
+            "stop_id": "101",
+            "stop_name": "Van Cortlandt Park-242 St",
+            "stop_lat": "40.889248",
+            "stop_lon": "-73.898583",
+            "location_type": "1",
+            "parent_station": ""
+          },
+          {
+            "stop_id": "101N",
+            "stop_name": "Van Cortlandt Park-242 St",
+            "stop_lat": "40.889248",
+            "stop_lon": "-73.898583",
+            "location_type": "",
+            "parent_station": "101"
+          }
+        ]
+      },
+      "routes.txt": {
+        "rows": 29,
+        "header": [
+          "route_id",
+          "agency_id",
+          "route_short_name",
+          "route_long_name",
+          "route_desc",
+          "route_type",
+          "route_url",
+          "route_color",
+          "route_text_color",
+          "route_sort_order"
+        ],
+        "sample": [
+          {
+            "route_id": "A",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "A",
+            "route_long_name": "8 Avenue Express",
+            "route_desc": "Trains operate between Inwood-207 St, Manhattan and Far Rockaway-Mott Av, Queens at all times. Also, from about 6 AM until about midnight, additional trains operate between Inwood-207 St and Ozone Park-Lefferts Blvd (trains typically alternate between Ozone Park and Far Rockaway). During weekday morning rush hours, special trains operate from Rockaway Park-Beach 116 St, Queens, toward Manhattan. These trains make local stops in Queens between Rockaway Park and Broad Channel. Similarly, in the evening, rush hour special trains leave Manhattan operating toward Rockaway Park-Beach 116 St.",
+            "route_type": "1",
+            "route_url": "https://www.mta.info/schedules/subway/a-train",
+            "route_color": "0062CF",
+            "route_text_color": "FFFFFF",
+            "route_sort_order": "1"
+          },
+          {
+            "route_id": "C",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "C",
+            "route_long_name": "8 Avenue Local",
+            "route_desc": "Trains operate between 168 St, Manhattan, and Euclid Av, Brooklyn, daily from about 6 AM to 11 PM.",
+            "route_type": "1",
+            "route_url": "https://www.mta.info/schedules/subway/c-train",
+            "route_color": "0062CF",
+            "route_text_color": "FFFFFF",
+            "route_sort_order": "2"
+          }
+        ]
+      },
+      "calendar.txt": {
+        "rows": 3,
+        "header": [
+          "service_id",
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday",
+          "start_date",
+          "end_date"
+        ],
+        "sample": [
+          {
+            "service_id": "Sunday",
+            "monday": "0",
+            "tuesday": "0",
+            "wednesday": "0",
+            "thursday": "0",
+            "friday": "0",
+            "saturday": "0",
+            "sunday": "1",
+            "start_date": "20261101",
+            "end_date": "20270515"
+          },
+          {
+            "service_id": "Saturday",
+            "monday": "0",
+            "tuesday": "0",
+            "wednesday": "0",
+            "thursday": "0",
+            "friday": "0",
+            "saturday": "1",
+            "sunday": "0",
+            "start_date": "20261101",
+            "end_date": "20270515"
+          }
+        ]
+      },
+      "date_min": "20261126",
+      "date_max": "20270215",
+      "calendar_dates.txt": {
+        "rows": 10,
+        "header": [
+          "service_id",
+          "date",
+          "exception_type"
+        ],
+        "sample": [
+          {
+            "service_id": "Sunday",
+            "date": "20261126",
+            "exception_type": "1"
+          },
+          {
+            "service_id": "Sunday",
+            "date": "20261225",
+            "exception_type": "1"
+          }
+        ]
+      },
+      "stop_times_sample": "trip_id,stop_id,arrival_time,departure_time,stop_sequence\nAFA26GEN-1038-Sunday-00_000600_1..S03R,101S,00:06:00,00:06:00,1\nAFA26GEN-1038-Sunday-00_000600_1..S03R,103S,00:07:30,00:07:30,2\nAFA26GEN-1038-Sunday-00_000600_1..S03R,104S,00:09:00,00:09:00,3\nAFA26GEN-1038-Sunday-00_000600_1..S03R,106S,00:10:30,00:10:30,4\nAFA26GEN-1038-Sunday-00_000600_1..S03R,107S,00:12:00,00:12:00,5\nAFA26GEN-1038-Sunday-00_000600_1..S03R,108S,00:13:00,00:13:00,6\nAFA26GEN-1038-Sunday-00_000600_1..S03R,109S,00:14:30,00:14:30,7\nAFA26GEN-1038-Sunday-00_000600_1..S03R,110S,00:16:00,00:16:00,8\nAFA26GEN-1038-Sunday-00_000600_1..S03R,111S,00:17:30,00:17:30,9\nAFA26GEN-1038-Sunday-00_000600_1..S03R,112S,00:19:30,00:19:30,10\nAFA26GEN-1038-Sunday-00_000600_1..S03R,113S,00:21:00,00:21:00,11\nAFA26GEN-1038-Sunday-00_000600_1..S0"
+    },
+    "bus_manhattan": {
+      "source": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_m.zip",
+      "status": 200,
+      "bytes": 8322100,
+      "files": [
+        "agency.txt",
+        "calendar.txt",
+        "calendar_dates.txt",
+        "routes.txt",
+        "shapes.txt",
+        "stops.txt",
+        "stop_times.txt",
+        "trips.txt",
+        "feed_info.txt"
+      ],
+      "stops.txt": {
+        "rows": 1823,
+        "header": [
+          "stop_id",
+          "stop_name",
+          "stop_desc",
+          "stop_lat",
+          "stop_lon",
+          "zone_id",
+          "stop_url",
+          "location_type",
+          "parent_station"
+        ],
+        "sample": [
+          {
+            "stop_id": "101014",
+            "stop_name": "WILLIS AV/E 138 ST",
+            "stop_desc": "",
+            "stop_lat": "  40.808930",
+            "stop_lon": " -73.922855",
+            "zone_id": "",
+            "stop_url": "",
+            "location_type": "0",
+            "parent_station": ""
+          },
+          {
+            "stop_id": "101015",
+            "stop_name": "WILLIS AV/E 140 ST",
+            "stop_desc": "",
+            "stop_lat": "  40.810634",
+            "stop_lon": " -73.921632",
+            "zone_id": "",
+            "stop_url": "",
+            "location_type": "0",
+            "parent_station": ""
+          }
+        ]
+      },
+      "routes.txt": {
+        "rows": 307,
+        "header": [
+          "route_id",
+          "agency_id",
+          "route_short_name",
+          "route_long_name",
+          "route_desc",
+          "route_type",
+          "route_color",
+          "route_text_color"
+        ],
+        "sample": [
+          {
+            "route_id": "B1",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "B1",
+            "route_long_name": "Bay Ridge - Manhattan Beach",
+            "route_desc": "via 86th St / Ocean Pkwy",
+            "route_type": "3",
+            "route_color": "00AEEF",
+            "route_text_color": "FFFFFF"
+          },
+          {
+            "route_id": "B11",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "B11",
+            "route_long_name": "Sunset Park - Midwood",
+            "route_desc": "via 49th & 50th St / Avenue J",
+            "route_type": "3",
+            "route_color": "006CB7",
+            "route_text_color": "FFFFFF"
+          }
+        ]
+      },
+      "calendar.txt": {
+        "rows": 21,
+        "header": [
+          "service_id",
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday",
+          "start_date",
+          "end_date"
+        ],
+        "sample": [
+          {
+            "service_id": "MQ_D6-Weekday-SDon",
+            "monday": "1",
+            "tuesday": "1",
+            "wednesday": "1",
+            "thursday": "1",
+            "friday": "1",
+            "saturday": "0",
+            "sunday": "0",
+            "start_date": "20261009",
+            "end_date": "20261223"
+          },
+          {
+            "service_id": "MQ_D6-Saturday",
+            "monday": "0",
+            "tuesday": "0",
+            "wednesday": "0",
+            "thursday": "0",
+            "friday": "0",
+            "saturday": "1",
+            "sunday": "0",
+            "start_date": "20261010",
+            "end_date": "20270102"
+          }
+        ]
+      },
+      "date_min": "20261011",
+      "date_max": "20270101",
+      "calendar_dates.txt": {
+        "rows": 310,
+        "header": [
+          "service_id",
+          "date",
+          "exception_type"
+        ],
+        "sample": [
+          {
+            "service_id": "MQ_D6-Weekday-SDon",
+            "date": "20261012",
+            "exception_type": "2"
+          },
+          {
+            "service_id": "MQ_D6-Weekday-SDon",
+            "date": "20261126",
+            "exception_type": "2"
+          }
+        ]
+      },
+      "stop_times_sample": "trip_id,arrival_time,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type,timepoint\r\nMQ_O6-Weekday-009000_SBS60_901,01:30:00,01:30:00,403117,1,0,0,1\r\nMQ_O6-Weekday-009000_SBS60_901,01:33:11,01:33:11,403122,2,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:34:31,01:34:31,404262,3,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:35:51,01:35:51,401442,4,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:37:32,01:37:32,405424,5,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:39:50,01:39:50,402656,6,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:42:42,01:42:42,405417,7,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:44:38,01:44:38,405422,8,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:46:00,01:46:00,405421,9,0,0,1\r\nMQ_O6-Weekday-009000_SBS60_901,01:46:37,01:46:37,403673,10,0,0,0\r\nMQ_O6-Weekday-009000_SBS60_901,01:49:16,01:49:16,80321"
+    },
+    "bus_brooklyn": {
+      "source": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_b.zip",
+      "status": 200,
+      "bytes": 17046285,
+      "files": [
+        "agency.txt",
+        "calendar.txt",
+        "calendar_dates.txt",
+        "routes.txt",
+        "shapes.txt",
+        "stops.txt",
+        "stop_times.txt",
+        "trips.txt",
+        "feed_info.txt"
+      ],
+      "stops.txt": {
+        "rows": 4575,
+        "header": [
+          "stop_id",
+          "stop_name",
+          "stop_desc",
+          "stop_lat",
+          "stop_lon",
+          "zone_id",
+          "stop_url",
+          "location_type",
+          "parent_station"
+        ],
+        "sample": [
+          {
+            "stop_id": "300000",
+            "stop_name": "ORIENTAL BLVD/MACKENZIE ST",
+            "stop_desc": "",
+            "stop_lat": "  40.578350",
+            "stop_lon": " -73.940029",
+            "zone_id": "",
+            "stop_url": "",
+            "location_type": "0",
+            "parent_station": ""
+          },
+          {
+            "stop_id": "300002",
+            "stop_name": "ORIENTAL BLVD/JAFFRAY ST",
+            "stop_desc": "",
+            "stop_lat": "  40.578066",
+            "stop_lon": " -73.943029",
+            "zone_id": "",
+            "stop_url": "",
+            "location_type": "0",
+            "parent_station": ""
+          }
+        ]
+      },
+      "routes.txt": {
+        "rows": 307,
+        "header": [
+          "route_id",
+          "agency_id",
+          "route_short_name",
+          "route_long_name",
+          "route_desc",
+          "route_type",
+          "route_color",
+          "route_text_color"
+        ],
+        "sample": [
+          {
+            "route_id": "B1",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "B1",
+            "route_long_name": "Bay Ridge - Manhattan Beach",
+            "route_desc": "via 86th St / Ocean Pkwy",
+            "route_type": "3",
+            "route_color": "00AEEF",
+            "route_text_color": "FFFFFF"
+          },
+          {
+            "route_id": "B11",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "B11",
+            "route_long_name": "Sunset Park - Midwood",
+            "route_desc": "via 49th & 50th St / Avenue J",
+            "route_type": "3",
+            "route_color": "006CB7",
+            "route_text_color": "FFFFFF"
+          }
+        ]
+      },
+      "calendar.txt": {
+        "rows": 36,
+        "header": [
+          "service_id",
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday",
+          "start_date",
+          "end_date"
+        ],
+        "sample": [
+          {
+            "service_id": "EN_D6-Weekday-SDon",
+            "monday": "1",
+            "tuesday": "1",
+            "wednesday": "1",
+            "thursday": "1",
+            "friday": "1",
+            "saturday": "0",
+            "sunday": "0",
+            "start_date": "20261009",
+            "end_date": "20261223"
+          },
+          {
+            "service_id": "EN_D6-Saturday",
+            "monday": "0",
+            "tuesday": "0",
+            "wednesday": "0",
+            "thursday": "0",
+            "friday": "0",
+            "saturday": "1",
+            "sunday": "0",
+            "start_date": "20261010",
+            "end_date": "20270102"
+          }
+        ]
+      },
+      "date_min": "20261011",
+      "date_max": "20270101",
+      "calendar_dates.txt": {
+        "rows": 455,
+        "header": [
+          "service_id",
+          "date",
+          "exception_type"
+        ],
+        "sample": [
+          {
+            "service_id": "EN_D6-Weekday-SDon",
+            "date": "20261012",
+            "exception_type": "2"
+          },
+          {
+            "service_id": "EN_D6-Weekday-SDon",
+            "date": "20261103",
+            "exception_type": "2"
+          }
+        ]
+      },
+      "stop_times_sample": "trip_id,arrival_time,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type,timepoint\r\nEN_O6-Weekday-028500_SBS82_901,04:45:00,04:45:00,304083,1,0,0,1\r\nEN_O6-Weekday-028500_SBS82_901,04:47:35,04:47:35,304085,2,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,04:49:05,04:49:05,308865,3,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,04:51:33,04:51:33,306950,4,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,04:53:47,04:53:47,304092,5,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,04:57:00,04:57:00,308903,6,0,0,1\r\nEN_O6-Weekday-028500_SBS82_901,04:59:16,04:59:16,300610,7,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,05:01:10,05:01:10,300614,8,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,05:03:05,05:03:05,300618,9,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,05:06:02,05:06:02,304115,10,0,0,0\r\nEN_O6-Weekday-028500_SBS82_901,05:07:22,05:07:22,80119"
+    },
+    "bus_queens": {
+      "source": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_q.zip",
+      "status": 200,
+      "bytes": 5983145,
+      "files": [
+        "agency.txt",
+        "calendar.txt",
+        "calendar_dates.txt",
+        "routes.txt",
+        "shapes.txt",
+        "stops.txt",
+        "stop_times.txt",
+        "trips.txt",
+        "feed_info.txt"
+      ],
+      "stops.txt": {
+        "rows": 1422,
+        "header": [
+          "stop_id",
+          "stop_name",
+          "stop_desc",
+          "stop_lat",
+          "stop_lon",
+          "zone_id",
+          "stop_url",
+          "location_type",
+          "parent_station"
+        ],
+        "sample": [
+          {
+            "stop_id": "100646",
+            "stop_name": "BOSTON RD/E 180 ST",
+            "stop_desc": "",
+            "stop_lat": "  40.842561",
+            "stop_lon": " -73.878332",
+            "zone_id": "",
+            "stop_url": "",
+            "location_type": "0",
+            "parent_station": ""
+          },
+          {
+            "stop_id": "103374",
+            "stop_name": "BRUSH AV/BRUCKNER BLVD",
+            "stop_desc": "",
+            "stop_lat": "  40.828085",
+            "stop_lon": " -73.841003",
+            "zone_id": "",
+            "stop_url": "",
+            "location_type": "0",
+            "parent_station": ""
+          }
+        ]
+      },
+      "routes.txt": {
+        "rows": 307,
+        "header": [
+          "route_id",
+          "agency_id",
+          "route_short_name",
+          "route_long_name",
+          "route_desc",
+          "route_type",
+          "route_color",
+          "route_text_color"
+        ],
+        "sample": [
+          {
+            "route_id": "B1",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "B1",
+            "route_long_name": "Bay Ridge - Manhattan Beach",
+            "route_desc": "via 86th St / Ocean Pkwy",
+            "route_type": "3",
+            "route_color": "00AEEF",
+            "route_text_color": "FFFFFF"
+          },
+          {
+            "route_id": "B11",
+            "agency_id": "MTA NYCT",
+            "route_short_name": "B11",
+            "route_long_name": "Sunset Park - Midwood",
+            "route_desc": "via 49th & 50th St / Avenue J",
+            "route_type": "3",
+            "route_color": "006CB7",
+            "route_text_color": "FFFFFF"
+          }
+        ]
+      },
+      "calendar.txt": {
+        "rows": 20,
+        "header": [
+          "service_id",
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday",
+          "start_date",
+          "end_date"
+        ],
+        "sample": [
+          {
+            "service_id": "CS_D6-Weekday-SDon",
+            "monday": "1",
+            "tuesday": "1",
+            "wednesday": "1",
+            "thursday": "1",
+            "friday": "1",
+            "saturday": "0",
+            "sunday": "0",
+            "start_date": "20261009",
+            "end_date": "20261223"
+          },
+          {
+            "service_id": "CS_D6-Weekday-SDon-BM",
+            "monday": "1",
+            "tuesday": "1",
+            "wednesday": "1",
+            "thursday": "1",
+            "friday": "0",
+            "saturday": "0",
+            "sunday": "1",
+            "start_date": "20261008",
+            "end_date": "20261222"
+          }
+        ]
+      },
+      "date_min": "20261011",
+      "date_max": "20270101",
+      "calendar_dates.txt": {
+        "rows": 310,
+        "header": [
+          "service_id",
+          "date",
+          "exception_type"
+        ],
+        "sample": [
+          {
+            "service_id": "CS_D6-Weekday-SDon",
+            "date": "20261012",
+            "exception_type": "2"
+          },
+          {
+            "service_id": "CS_D6-Weekday-SDon-BM",
+            "date": "20261011",
+            "exception_type": "2"
+          }
+        ]
+      },
+      "stop_times_sample": "trip_id,arrival_time,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type,timepoint\r\nCS_O6-Weekday-096700_MISC_683,16:07:00,16:07:00,505021,1,0,0,1\r\nCS_O6-Weekday-096700_MISC_683,16:08:26,16:08:26,502464,2,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:10:23,16:10:23,502466,3,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:11:48,16:11:48,505039,4,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:13:30,16:13:30,502471,5,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:15:00,16:15:00,502727,6,0,0,1\r\nCS_O6-Weekday-096700_MISC_683,16:15:50,16:15:50,502728,7,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:17:47,16:17:47,505059,8,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:18:52,16:18:52,501172,9,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:20:08,16:20:08,502735,10,0,0,0\r\nCS_O6-Weekday-096700_MISC_683,16:20:58,16:20:58,502736,11,0,0,0\r"
+    }
+  },
+  "census_geocoder": {
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=52+West+36th+Street%2C+New+York%2C+NY+10018&benchmark=Public_AR_Current&format=json",
+    "status": 200,
+    "bytes": 642,
+    "parsed": {
+      "result": {
+        "input": {
+          "address": {
+            "address": "52 West 36th Street, New York, NY 10018"
+          },
+          "benchmark": {
+            "isDefault": true,
+            "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+            "id": "4",
+            "benchmarkName": "Public_AR_Current"
+          }
+        },
+        "addressMatches": [
+          {
+            "tigerLine": {
+              "side": "L",
+              "tigerLineId": "656933569"
+            },
+            "coordinates": {
+              "x": -73.98533683003,
+              "y": 40.750379887212
+            },
+            "addressComponents": {
+              "zip": "10018",
+              "streetName": "36TH",
+              "preType": "",
+              "city": "NEW YORK",
+              "preDirection": "W",
+              "suffixDirection": "",
+              "fromAddress": "2",
+              "state": "NY",
+              "suffixType": "ST",
+              "toAddress": "98",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "52 W 36TH ST, NEW YORK, NY, 10018"
+          }
+        ]
+      }
+    }
+  },
+  "activities": {
+    "met": {
+      "source": "https://www.metmuseum.org/visit/plan-your-visit",
+      "status": 429,
+      "bytes": 21127,
+      "title": "Vercel Security Checkpoint",
+      "snippets": []
+    },
+    "moma": {
+      "source": "https://www.moma.org/visit",
+      "status": 403,
+      "bytes": 5598,
+      "title": "Just a moment...",
+      "snippets": []
+    },
+    "amnh": {
+      "source": "https://www.amnh.org/visit",
+      "status": 403,
+      "bytes": 64156,
+      "title": "CAPTCHA",
+      "snippets": []
+    },
+    "central_park": {
+      "source": "https://www.nycgovparks.org/parks/central-park",
+      "status": 405,
+      "bytes": 2507,
+      "title": "Human Verification",
+      "snippets": []
+    },
+    "high_line": {
+      "source": "https://www.thehighline.org/visit/",
+      "status": 200,
+      "bytes": 132082,
+      "title": "Visitor Info | The High Line",
+      "snippets": [
+        "oon! Close Alert Your gift tripled $200,000 matching challenge Through midnight on Giving Tuesday on 12/1, keep the park you love extraordinary—and do three times the good Donate Join or ",
+        "e. Click on Park access & info below to see a complete list of entrances. The High Line’s hours vary by season: April 1 – November 30: 7am to 10pm December 1 – March 31: 7am to 8pm Plea",
+        "e business day in advance of your visit to submit your request. Requests will be reviewed Monday through Friday, 9am to 5pm. Transportation + – Subway Bus Bike Racks Bike racks are locat",
+        "in advance of your visit to submit your request. Requests will be reviewed Monday through Friday, 9am to 5pm. Transportation + – Subway Bus Bike Racks Bike racks are located at street le"
+      ]
+    },
+    "statue_liberty": {
+      "source": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+      "status": 200,
+      "bytes": 35293,
+      "title": "Operating Hours & Seasons - Statue Of Liberty National Monument (U.S. National Park Service)",
+      "snippets": [
+        "Operating Hours & Seasons - Statue Of Liberty National Monument (U.S. National Park Service) An official ",
+        "l Statue Of Liberty National Monument Info Alerts Maps Calendar Fees Contact Us Operating Hours & Seasons The Statue of Liberty is only accessible via ferry. Please check the ferry sche"
+      ]
+    },
+    "911_memorial": {
+      "source": "https://www.911memorial.org/visit/memorial-and-museum/hours",
+      "status": 404,
+      "bytes": 58139,
+      "title": "Page Not Found | National September 11 Memorial & Museum",
+      "snippets": [
+        "isit Tickets and Tours Guided Tours Groups Discounts and Special Admissions New York Free Sundays Visitor Information The Museum Exhibitions The Collection Programs and Events The Memori",
+        "iew on map reservations@911memorial.org (212) 312-8800 Contact Us About Media Center RFPs Hours 9/11 Memorial Daily, 8 a.m.-8 p.m. 9/11 Museum Weds-Mon, 9 a.m.-7 p.m. plus select Tues &",
+        "morial.org (212) 312-8800 Contact Us About Media Center RFPs Hours 9/11 Memorial Daily, 8 a.m.-8 p.m. 9/11 Museum Weds-Mon, 9 a.m.-7 p.m. plus select Tues & holiday hours Get Tickets T",
+        "org (212) 312-8800 Contact Us About Media Center RFPs Hours 9/11 Memorial Daily, 8 a.m.-8 p.m. 9/11 Museum Weds-Mon, 9 a.m.-7 p.m. plus select Tues & holiday hours Get Tickets Ticketho",
+        " About Media Center RFPs Hours 9/11 Memorial Daily, 8 a.m.-8 p.m. 9/11 Museum Weds-Mon, 9 a.m.-7 p.m. plus select Tues & holiday hours Get Tickets Ticketholder Benefits Museum Store Le",
+        "Media Center RFPs Hours 9/11 Memorial Daily, 8 a.m.-8 p.m. 9/11 Museum Weds-Mon, 9 a.m.-7 p.m. plus select Tues & holiday hours Get Tickets Ticketholder Benefits Museum Store Learn Mor",
+        "orial Daily, 8 a.m.-8 p.m. 9/11 Museum Weds-Mon, 9 a.m.-7 p.m. plus select Tues & holiday hours Get Tickets Ticketholder Benefits Museum Store Learn More Careers Accessibility Calendar ",
+        "isit Tickets and Tours Guided Tours Groups Discounts and Special Admissions New York Free Sundays Visitor Information The Museum Exhibitions The Collection Programs and Events The Memori"
+      ]
+    },
+    "empire_state": {
+      "source": "https://www.esbnyc.com/buy-tickets",
+      "status": 200,
+      "bytes": 660979,
+      "title": "Empire State Building Observation Deck Tickets | Buy Online",
+      "snippets": [
+        "& BOOKING Ticket Types Group Tickets Manage My Booking Ambassador Program Plan your visit Hours & Directions Accessibility & Safety FAQ About About History Architecture & Design Facts &",
+        "schedule Anytime NYC Skyline Views More Details Buy Tickets from $46 Save Up To $35 Black Friday Offer: Flex Anytime Ticket Buy Tickets from $46 Access to 86th Floor Observation Deck Buy",
+        "c two observation decks, which include the open-air 86th Floor Observation Deck and the enclosed 102nd Floor Observation Deck . Unlike any other observatory or other newer attractions, t",
+        "d floor Observation Decks ? The Empire State Building's 102nd Floor Observation Deck is enclosed and the 86th Floor Observation Deck is open to the air. The 102nd Floor Observation Deck ",
+        " a timed entry slot before you arrive. For current opening times before you book, see our Hours of Operation . What is the Empire State Building tickets cancellation policy? Empire Stat",
+        "m Experiences Celebrities at ESB 2026 Run-Up Birthday Celebrations 95th Anniversary Visit Hours & Directions Accessibility & Safety Ticket Types Group Tickets Manage my booking FAQ Abou",
+        "ities at ESB 2026 Run-Up Birthday Celebrations 95th Anniversary Livestream Live Cam Visit Hours & Directions Accessibility & Safety Ticket Types Group Tickets Manage my booking FAQ ESB "
+      ]
+    }
+  }
+}

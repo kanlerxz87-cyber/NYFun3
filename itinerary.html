@@ -19,6 +19,8 @@
       <a href="hotels.html">Hotels</a>
       <a href="itinerary.html" aria-current="page">Itinerary</a>
       <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
     </nav>
   </div>
 </header>
@@ -31,7 +33,7 @@
 
   <section class="panel">
     <h2>Day by day</h2>
-    <p class="lede">Each slot links to the activity's verified hours and price. Evenings are left open on purpose — restaurant timings are not yet verified.</p>
+    <p class="lede">Each planned activity links to its official page, and every row has a consolidated Source cell. Evenings are left open on purpose where no official restaurant timing was captured.</p>
     <div id="table-host"><p class="loading">Loading itinerary…</p></div>
   </section>
 
@@ -47,9 +49,9 @@
 
 <script src="assets/app.js"></script>
 <script>
-var NAMES = {};
+var NAMES = {}, SOURCES = {};
 fetch("data/activities.json").then(function (r) { return r.json(); }).then(function (j) {
-  j.activities.forEach(function (a) { NAMES[a.id] = a.name; });
+  j.activities.forEach(function (a) { NAMES[a.id] = a.name; SOURCES[a.id] = a; });
   return fetch("data/itinerary.json");
 }).then(function (r) { return r.json(); }).then(function (j) {
   function slot(list) {
@@ -57,23 +59,42 @@ fetch("data/activities.json").then(function (r) { return r.json(); }).then(funct
     return list.map(function (s) {
       if (typeof s === "string") return '<span class="small">' + NYF.esc(s) + "</span>";
       var name = NAMES[s.activity] || s.activity;
+      var a = SOURCES[s.activity] || {};
       return '<div class="small"><strong>' + NYF.esc(name) + "</strong>" +
-        (s.why ? '<br><span class="muted">' + NYF.esc(s.why) + "</span>" : "") + "</div>";
+        (s.why ? '<br><span class="muted">' + NYF.esc(s.why) + "</span>" : "") +
+        (a.source_url ? '<br>' + NYF.srcLink(a.source_url, "official page") : "") + "</div>";
     }).join("<hr style='border:none;border-top:1px solid #eef1f5;margin:6px 0'>");
   }
+  function rowSources(d) {
+    var ids = [], urls = [];
+    ["morning", "afternoon", "evening"].forEach(function (k) {
+      (d[k] || []).forEach(function (s) {
+        if (s && typeof s !== "string" && SOURCES[s.activity]) {
+          var a = SOURCES[s.activity];
+          [a.source_url, a.hours_source_url].forEach(function (u) {
+            if (u && urls.indexOf(u) === -1) urls.push(u);
+          });
+        }
+      });
+    });
+    return urls.map(function (u, i) { return NYF.srcLink(u, "official source " + (i + 1)); }).join("<br>") ||
+      '<span class="unver">unverified</span>';
+  }
   document.getElementById("table-host").innerHTML =
-    '<div class="scroll"><table><thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th><th>Dinner area</th><th>Note</th></tr></thead><tbody>' +
+    '<div class="scroll"><table><thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th><th>Dinner area</th><th>Note</th><th>Source</th></tr></thead><tbody>' +
     j.days.map(function (d) {
       return "<tr><td><strong>Day " + d.day + "</strong><br><span class='muted small'>" + NYF.esc(d.weekday) +
         "</span></td><td>" + slot(d.morning) + "</td><td>" + slot(d.afternoon) + "</td><td>" + slot(d.evening) +
         "</td><td class='small'>" + NYF.esc(d.dinner_area || "") + "</td><td class='small'>" +
-        (d.note ? NYF.esc(d.note) : '<span class="muted">—</span>') + "</td></tr>";
+        (d.note ? NYF.esc(d.note) : '<span class="muted">—</span>') + "</td><td class='small'>" + rowSources(d) + "</td></tr>";
     }).join("") + "</tbody></table></div>" +
     '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(j._meta.weekday_logic) + " " + NYF.esc(j._meta.caveat) + "</p>";
 
+  var week2Sources = (j._meta.source_links || []).map(function (x) { return NYF.srcLink(x.url, x.label); }).join(" · ");
   document.getElementById("week2").innerHTML =
     '<ul class="tight">' + j.second_week_suggestions.map(function (s) { return "<li>" + NYF.esc(s) + "</li>"; }).join("") + "</ul>" +
-    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(j._meta.length_options) + "</p>";
+    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(j._meta.length_options) + "</p>" +
+    (week2Sources ? '<p class="small" style="margin:8px 0 0">Official planning sources: ' + week2Sources + "</p>" : "");
 }).catch(function (e) {
   document.getElementById("table-host").innerHTML = '<p class="loading">Could not load itinerary data: ' + NYF.esc(e.message) + "</p>";
 });

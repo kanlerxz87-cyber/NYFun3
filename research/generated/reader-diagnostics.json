@@ -1,0 +1,150 @@
+{
+  "generated_at_utc": "2026-11-25T22:48:32.123427+00:00",
+  "warning": "Jina Reader is a retrieval proxy. The official source is recorded in official_source; values are not authoritative until confirmed on that official page or its official structured data.",
+  "requests": {
+    "hyatt_nyczm": {
+      "official_source": "https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+      "html": {
+        "reader_url": "https://r.jina.ai/https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "official_source": "https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "respond_with": "html",
+        "http_status": 401,
+        "bytes": 133,
+        "head": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "body_excerpt": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "title": null,
+        "has_avg_night": false,
+        "has_price_specification": false,
+        "structured_examples": [],
+        "restaurant_links_found": 0,
+        "first_restaurant_links": [],
+        "rate_snippets": [],
+        "restaurant_html_excerpt": null
+      },
+      "text": {
+        "reader_url": "https://r.jina.ai/https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "official_source": "https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "respond_with": "text",
+        "http_status": 200,
+        "bytes": 258,
+        "head": "Title: \n\nURL Source: https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false\n\nWarning: Target URL returned error 429: Too Many Requests\n\nMarkdown Content:\nundefined\n",
+        "body_excerpt": "Title: \n\nURL Source: https://www.hyatt.com/shop/rooms/nyczm?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false\n\nWarning: Target URL returned error 429: Too Many Requests\n\nMarkdown Content:\nundefined\n",
+        "text_snippets": []
+      }
+    },
+    "hyatt_nyczt": {
+      "official_source": "https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+      "html": {
+        "reader_url": "https://r.jina.ai/https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "official_source": "https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "respond_with": "html",
+        "http_status": 401,
+        "bytes": 133,
+        "head": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "body_excerpt": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "title": null,
+        "has_avg_night": false,
+        "has_price_specification": false,
+        "structured_examples": [],
+        "restaurant_links_found": 0,
+        "first_restaurant_links": [],
+        "rate_snippets": [],
+        "restaurant_html_excerpt": null
+      },
+      "text": {
+        "reader_url": "https://r.jina.ai/https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "official_source": "https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false",
+        "respond_with": "text",
+        "http_status": 200,
+        "bytes": 258,
+        "head": "Title: \n\nURL Source: https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false\n\nWarning: Target URL returned error 429: Too Many Requests\n\nMarkdown Content:\nundefined\n",
+        "body_excerpt": "Title: \n\nURL Source: https://www.hyatt.com/shop/rooms/nyczt?checkinDate=2027-02-15&checkoutDate=2027-02-22&rooms=1&adults=2&kids=0&rate=Standard&accessibilityCheck=false\n\nWarning: Target URL returned error 429: Too Many Requests\n\nMarkdown Content:\nundefined\n",
+        "text_snippets": []
+      }
+    },
+    "michelin_base": {
+      "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+      "html": {
+        "reader_url": "https://r.jina.ai/https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+        "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+        "respond_with": "html",
+        "http_status": 401,
+        "bytes": 133,
+        "head": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "body_excerpt": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "title": null,
+        "has_avg_night": false,
+        "has_price_specification": false,
+        "structured_examples": [],
+        "restaurant_links_found": 0,
+        "first_restaurant_links": [],
+        "rate_snippets": [],
+        "restaurant_html_excerpt": null
+      },
+      "text": null
+    },
+    "michelin_all_starred": {
+      "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+      "html": {
+        "reader_url": "https://r.jina.ai/https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+        "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+        "respond_with": "html",
+        "http_status": 401,
+        "bytes": 133,
+        "head": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "body_excerpt": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "title": null,
+        "has_avg_night": false,
+        "has_price_specification": false,
+        "structured_examples": [],
+        "restaurant_links_found": 0,
+        "first_restaurant_links": [],
+        "rate_snippets": [],
+        "restaurant_html_excerpt": null
+      },
+      "text": null
+    },
+    "michelin_le_coucou": {
+      "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
+      "html": {
+        "reader_url": "https://r.jina.ai/https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
+        "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
+        "respond_with": "html",
+        "http_status": 401,
+        "bytes": 133,
+        "head": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "body_excerpt": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "title": null,
+        "has_avg_night": false,
+        "has_price_specification": false,
+        "structured_examples": [],
+        "restaurant_links_found": 0,
+        "first_restaurant_links": [],
+        "rate_snippets": [],
+        "restaurant_html_excerpt": null
+      },
+      "text": null
+    },
+    "michelin_one_star": {
+      "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin",
+      "html": {
+        "reader_url": "https://r.jina.ai/https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin",
+        "official_source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin",
+        "respond_with": "html",
+        "http_status": 401,
+        "bytes": 133,
+        "head": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "body_excerpt": "AuthenticationRequiredError: Authentication is required to use this feature (Browser rendered HTML). Please provide a valid API key.\n",
+        "title": null,
+        "has_avg_night": false,
+        "has_price_specification": false,
+        "structured_examples": [],
+        "restaurant_links_found": 0,
+        "first_restaurant_links": [],
+        "rate_snippets": [],
+        "restaurant_html_excerpt": null
+      },
+      "text": null
+    }
+  }
+}

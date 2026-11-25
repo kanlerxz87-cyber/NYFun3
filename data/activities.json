@@ -4,7 +4,9 @@
   "trip_window": "2027-02-15 → 2027-03-23 (preferred 2027-02-15 → 2027-02-18)",
   "verification_rule": "Every row cites the venue's own official page in source_url. Any field that could not be read from that page is left empty and carries an *_flag explanation. Nothing is inferred.",
   "excluded": "Broadway shows, The Edge, Circle Line, Chelsea Market and similar were NOT listed because no first-party price/hours page was verified in this pass. They are candidates for a later pass, not silently dropped.",
-  "transport_rule": "Rows whose own official page states a >1 hour transit time from Midtown are marked in transport_note."
+  "transport_rule": "Rows whose own official page states a >1 hour transit time from Midtown are marked in transport_note.",
+  "hours_capture_note": "Official baseline hours captured 2026-11-25. A populated hours cell is the venue’s current published baseline, not a guarantee for 15–22 Feb 2027; holiday, weather, and service exceptions still need date-specific re-checks.",
+  "hours_source_rule": "Rows with a separate official hours page expose it in hours_source_url, and the Activities renderer shows both the primary official page and the official hours page."
  },
  "activities": [
   {
@@ -24,7 +26,7 @@
     "Sat": "10:30–17:30",
     "Sun": "10:30–17:30"
    },
-   "exceptions": "Closed Thanksgiving Day and Christmas Day. Galleries close ~15 min before the Museum. Free for NY State residents Fri 17:30–20:30 (ticket must be reserved in advance).",
+   "exceptions": "MoMA is open every day except Thanksgiving and Christmas. Friday 17:30–20:30 is Uniqlo Free Friday Nights for NY State residents with advance reservation. Stores and restaurants have different hours.",
    "price_adult_usd": 30,
    "price_note": "Adult $30; seniors 65+ $22; students $17; 16 and under free. Tickets include all galleries and special exhibitions.",
    "typical_duration": "3–4 hours",
@@ -34,7 +36,11 @@
     "tiktok_search": "https://www.tiktok.com/search?q=MoMA%20New%20York%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/MoMANYC/"
    },
-   "transport_note": "B/E/M at 5th Ave–53 St or N/R/W at 5th Ave–59 St."
+   "transport_note": "B/E/M at 5th Ave–53 St or N/R/W at 5th Ave–59 St.",
+   "hours_source_url": "https://www.moma.org/visit/",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_flag": "CURRENT BASELINE — official visit page shows Mon–Thu/Sat–Sun 10:30–17:30 and Fri 10:30–20:30; closed Thanksgiving and Christmas. Galleries close about 15 minutes before museum closing."
   },
   {
    "id": "met",
@@ -45,7 +51,7 @@
    "official_site": "https://www.metmuseum.org/plan-your-visit",
    "source_url": "https://www.metmuseum.org/plan-your-visit",
    "hours_table": {},
-   "hours_flag": "UNVERIFIED — the hours block was not present in the fetched page text; confirm on the official Plan Your Visit page before booking.",
+   "hours_flag": "UNVERIFIED — the official Plan Your Visit page was refetched in final integration; the public-hours panel still did not render. Confirm in a browser before booking.",
    "exceptions": "Pay-what-you-wish only for NY State residents and NY/NJ/CT students (in person / NY billing address).",
    "price_adult_usd": 30,
    "price_note": "Adult $30; seniors 65+ $22; students $17; children 12 and under free.",
@@ -56,7 +62,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Met%20Museum%20New%20York%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/metmuseum/"
    },
-   "transport_note": "4/5/6 to 86 St then 3 blocks west; M1–M4 bus along 5th/Madison."
+   "transport_note": "4/5/6 to 86 St then 3 blocks west; M1–M4 bus along 5th/Madison.",
+   "hours_source_url": "https://www.metmuseum.org/plan-your-visit",
+   "hours_verified_on": "",
+   "hours_baseline_note": ""
   },
   {
    "id": "cloisters",
@@ -67,7 +76,7 @@
    "official_site": "https://www.metmuseum.org/plan-your-visit/met-cloisters",
    "source_url": "https://www.metmuseum.org/plan-your-visit/met-cloisters",
    "hours_table": {},
-   "hours_flag": "UNVERIFIED — hours block not in fetched text.",
+   "hours_flag": "UNVERIFIED — the official Met Cloisters page was refetched in final integration; the public-hours panel still did not render. Confirm in a browser before booking.",
    "exceptions": "",
    "price_adult_usd": 30,
    "price_note": "Same ticket pricing as The Met Fifth Avenue: adult $30.",
@@ -78,7 +87,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=The%20Cloisters%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/metcloisters/"
    },
-   "transport_note": "A train to 190 St + 10-min walk, or M4 bus. The Met's own page states M4 from 5th Ave/83 St takes ~1 h 25 min — EXCEEDS the 1-hour transit rule; treat as a half-day excursion."
+   "transport_note": "A train to 190 St + 10-min walk, or M4 bus. The Met's own page states M4 from 5th Ave/83 St takes ~1 h 25 min — EXCEEDS the 1-hour transit rule; treat as a half-day excursion.",
+   "hours_source_url": "https://www.metmuseum.org/plan-your-visit/met-cloisters",
+   "hours_verified_on": "",
+   "hours_baseline_note": ""
   },
   {
    "id": "amnh",
@@ -97,7 +109,7 @@
     "Sat": "10:00–17:30",
     "Sun": "10:00–17:30"
    },
-   "exceptions": "Open daily 10:00–17:30. Closed Thanksgiving Day and Christmas Day. Extended hours on select Nov–Jan dates only (not in the Feb/Mar trip window). Entrance before 10:00 or after 17:00: Central Park West & 81 St / Rose Center.",
+   "exceptions": "Open daily 10:00–17:30; closed Thanksgiving Day and Christmas Day. Temporary hall closures are posted weekly. Extended holiday hours apply only to listed 2026–2027 dates; no Feb 2027 exception is asserted.",
    "price_adult_usd": null,
    "price_note": "UNVERIFIED from AMNH's own site — the admission page did not render. CityPASS (authorised partner) publishes the AMNH box-office adult price as $43.00 incl. one ticketed exhibition. Confirm at tickets.amnh.org before purchase.",
    "typical_duration": "3–4 hours",
@@ -107,7 +119,11 @@
     "tiktok_search": "https://www.tiktok.com/search?q=AMNH%20New%20York%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/AMNH/"
    },
-   "transport_note": "B/C to 81 St–Museum of Natural History; 1 to 79 St."
+   "transport_note": "B/C to 81 St–Museum of Natural History; 1 to 79 St.",
+   "hours_source_url": "https://www.amnh.org/plan-your-visit/hours",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_flag": "CURRENT BASELINE — official hours page says open daily 10:00–17:30; closed Thanksgiving and Christmas. Extended holiday hours are date-specific and not a 2027 confirmation."
   },
   {
    "id": "whitney",
@@ -136,7 +152,11 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Whitney%20Museum%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/whitneymuseum/"
    },
-   "transport_note": "A/C/E/L to 14 St–8 Ave, ~6 blocks."
+   "transport_note": "A/C/E/L to 14 St–8 Ave, ~6 blocks.",
+   "hours_source_url": "https://whitney.org/visit",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_flag": "CURRENT BASELINE — official visit page shows Tue closed and Fri 10:30–22:00; holiday hours listed for 2026 are not a 2027 confirmation."
   },
   {
    "id": "guggenheim",
@@ -165,7 +185,11 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Guggenheim%20Museum%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/guggenheim/"
    },
-   "transport_note": "4/5/6 to 86 St then walk; M1–M4 along 5th Ave."
+   "transport_note": "4/5/6 to 86 St then walk; M1–M4 along 5th Ave.",
+   "hours_source_url": "https://www.guggenheim.org/plan-your-visit",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_flag": "CURRENT BASELINE — official plan-your-visit page says every day 10:30–17:30, with select Monday members-only hours 18:00–20:00. Holiday hours listed for 2026 are not a 2027 confirmation."
   },
   {
    "id": "911",
@@ -184,9 +208,9 @@
     "Sat": "09:00–19:00",
     "Sun": "09:00–19:00"
    },
-   "exceptions": "Museum open Wednesday–Monday plus select Tuesdays, 09:00–19:00, last entry 17:30. Advance timed tickets required. Free Admission Mondays 17:30–19:00 (tickets released online each Monday from 07:00 ET, first come). The outdoor Memorial is FREE and open daily 08:00–20:00.",
+   "exceptions": "Museum open Wed–Mon and select Tuesdays 09:00–19:00; last admission 60 minutes before closing. Memorial open daily 08:00–20:00. Timed tickets must be purchased in advance; free admission Mondays 17:30–19:00.",
    "price_adult_usd": 36,
-   "price_note": "Museum admission $24–$36 (official site's published range); official quoted adult price $36 via CityPASS box-office listing. Audio guide $11 extra.",
+   "price_note": "Museum admission $24–$36 (official site’s published range); $36 is the upper end, not a date-specific 2027 quote. Audio guide $11 extra.",
    "typical_duration": "1.5 hours (Museum 45–90 min per official guidance)",
    "booking": "https://visit.911memorial.org/WebStore/shop/ViewItems.aspx?CG=tickets&C=museum",
    "social": {
@@ -194,7 +218,11 @@
     "tiktok_search": "https://www.tiktok.com/search?q=9%2F11%20Memorial%20Museum%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/911memorial/"
    },
-   "transport_note": "A/C/E/2/3/4/5/R/W to Fulton St; E to World Trade Center."
+   "transport_note": "A/C/E/2/3/4/5/R/W to Fulton St; E to World Trade Center.",
+   "hours_source_url": "https://www.911memorial.org/visit/visit-museum-1",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_flag": "CURRENT BASELINE — official visit page says Wed–Mon and select Tuesdays 09:00–19:00, last entry 18:00 (visit page says 17:30 last admission); free Monday 17:30–19:00. Memorial open daily 08:00–20:00. 2027 select-Tuesday calendar not asserted."
   },
   {
    "id": "intrepid",
@@ -223,7 +251,11 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Intrepid%20Museum%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/intrepidmuseum/"
    },
-   "transport_note": "A/C/E to 42 St–Port Authority then 12th Ave walk; M42 bus."
+   "transport_note": "A/C/E to 42 St–Port Authority then 12th Ave walk; M42 bus.",
+   "hours_source_url": "https://intrepidmuseum.org/plan-your-visit/visitor-information/tickets",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_flag": "SEASONAL — official ticket page says Oct–Mar daily 10:00–17:00 and Apr–Sep weekends/holidays 10:00–18:00. Last entry one hour before closing; 2027 calendar not yet asserted."
   },
   {
    "id": "topoftherock",
@@ -234,7 +266,7 @@
    "official_site": "https://www.rockefellercenter.com/attractions/top-of-the-rock-observation-deck/",
    "source_url": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
    "hours_table": {},
-   "hours_flag": "PARTIAL — official page displays a live 'OPEN 8 AM – 12 AM' banner; per-weekday hours were not published in the fetched text.",
+   "hours_flag": "PARTIAL — official page captured 2026-11-25 displays a live “OPEN 8 AM – 12 AM” banner; per-weekday 2027 hours were not published in the fetched text.",
    "exceptions": "Timed admission. Prices vary by date/time slot — the official page states box-office prices of roughly $46–$72 depending on date and time.",
    "price_adult_usd": 42,
    "price_note": "Timed admission 'From $42'; All-Inclusive Pass (deck + The Beam + SKYLIFT) 'From $82'. Date-specific price must be checked at checkout.",
@@ -245,7 +277,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Top%20of%20the%20Rock%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/topoftherocknyc/"
    },
-   "transport_note": "B/D/F/M to 47–50 Sts–Rockefeller Center."
+   "transport_note": "B/D/F/M to 47–50 Sts–Rockefeller Center.",
+   "hours_source_url": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
+   "hours_verified_on": "",
+   "hours_baseline_note": ""
   },
   {
    "id": "statue",
@@ -255,9 +290,17 @@
    "neighborhood": "Battery Park / Harbour",
    "official_site": "https://www.nps.gov/stli/planyourvisit/fees.htm",
    "source_url": "https://www.nps.gov/stli/planyourvisit/fees.htm",
-   "hours_table": {},
-   "hours_flag": "UNVERIFIED — NPS fee page does not publish ferry sailing times; check the authorised operator's page.",
-   "exceptions": "NPS charges no entrance fee; a Statue City Cruises ferry ticket is mandatory and is the ONLY authorised operator. Reserve in advance; unauthorised sellers at The Battery are flagged by NPS as a scam risk. Pedestal/Crown access adds $0.30 and Crown is restricted.",
+   "hours_table": {
+    "Mon": "09:00–16:30",
+    "Tue": "09:00–16:30",
+    "Wed": "09:00–16:30",
+    "Thu": "09:00–16:30",
+    "Fri": "09:00–16:30",
+    "Sat": "09:00–16:30",
+    "Sun": "09:00–16:30"
+   },
+   "hours_flag": "PARTIAL — NPS publishes park hours and last statue entrance, not ferry sailing times. Ferry-only access; check the authorised operator schedule. 2027 holiday calendar is not published.",
+   "exceptions": "NPS park hours every day 09:00–16:30; Liberty Island Information Center 09:30–16:30; last statue entrance 15:30. Access is by Statue City Cruises ferry only. NPS lists 26 Nov 2026 Thanksgiving and 25 Dec 2026 Christmas closures; no Feb/Mar 2027 exceptions are asserted.",
    "price_adult_usd": 26,
    "price_note": "Adult 13+ $26; senior 62+ $23; children 4–12 $17; under 4 free. Ellis Island Hard Hat tour +$55 (13+ only).",
    "typical_duration": "Half day",
@@ -267,7 +310,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Statue%20of%20Liberty%20Ellis%20Island%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/statueofliberty/"
    },
-   "transport_note": "4/5 to Bowling Green; R/W to Whitehall St; 1 to South Ferry."
+   "transport_note": "4/5 to Bowling Green; R/W to Whitehall St; 1 to South Ferry.",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_source_url": "https://www.nps.gov/stli/planyourvisit/hours.htm"
   },
   {
    "id": "highline",
@@ -277,9 +323,17 @@
    "neighborhood": "Chelsea / West Side",
    "official_site": "https://www.thehighline.org/visit/",
    "source_url": "https://www.thehighline.org/visit/",
-   "hours_table": {},
-   "hours_flag": "SEASONAL — see exceptions (hours depend on season, not weekday).",
-   "exceptions": "1 Apr–30 Nov: 07:00–22:00. 1 Dec–31 Mar: 07:00–20:00 — this covers the whole Feb 15–Mar 23 window. Rail Yard Preserve (30–34 St) closes at dusk. Free docent-led tours on select days. Elevator status is published separately — check before relying on step-free access.",
+   "hours_table": {
+    "Mon": "07:00–20:00 (1 Dec–31 Mar)",
+    "Tue": "07:00–20:00 (1 Dec–31 Mar)",
+    "Wed": "07:00–20:00 (1 Dec–31 Mar)",
+    "Thu": "07:00–20:00 (1 Dec–31 Mar)",
+    "Fri": "07:00–20:00 (1 Dec–31 Mar)",
+    "Sat": "07:00–20:00 (1 Dec–31 Mar)",
+    "Sun": "07:00–20:00 (1 Dec–31 Mar)"
+   },
+   "hours_flag": "SEASONAL — official visitor page captured 2026-11-25. Winter rule covers the Feb–Mar trip window, but re-check the 2027 seasonal calendar and same-day access notices.",
+   "exceptions": "Official seasonal hours: 1 Apr–30 Nov 07:00–22:00; 1 Dec–31 Mar 07:00–20:00. Rail Yard Preserve (30th–34th St) closes at dusk. Elevator status and free tours are published separately; check before relying on step-free access.",
    "price_adult_usd": 0,
    "price_note": "Free public park.",
    "typical_duration": "1–2 hours",
@@ -289,7 +343,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=High%20Line%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/thehighline/"
    },
-   "transport_note": "A/C/E/L to 14 St–8 Ave; 1 to 14 St; L to 8 Ave."
+   "transport_note": "A/C/E/L to 14 St–8 Ave; 1 to 14 St; L to 8 Ave.",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_source_url": "https://www.thehighline.org/visit/"
   },
   {
    "id": "centralpark",
@@ -299,9 +356,17 @@
    "neighborhood": "Manhattan (central)",
    "official_site": "https://www.centralparknyc.org/visit",
    "source_url": "https://www.centralparknyc.org/visit",
-   "hours_table": {},
-   "hours_flag": "UNVERIFIED — the Conservancy's hours anchor was present but the hours text did not render in the fetched page.",
-   "exceptions": "Park closures and alerts are published on the Conservancy's alerts page; check it on the day for weather closures. Free.",
+   "hours_table": {
+    "Mon": "06:00–01:00",
+    "Tue": "06:00–01:00",
+    "Wed": "06:00–01:00",
+    "Thu": "06:00–01:00",
+    "Fri": "06:00–01:00",
+    "Sat": "06:00–01:00",
+    "Sun": "06:00–01:00"
+   },
+   "hours_flag": "CURRENT BASELINE — official Conservancy page says 06:00–01:00, 365 days a year; weather closures can still change access. Re-check alerts before travel.",
+   "exceptions": "Park closures and weather alerts are published by the Conservancy; check them on the day. Optional paid attractions inside the park are priced separately by their operators.",
    "price_adult_usd": 0,
    "price_note": "Free. Optional paid attractions inside the park (e.g. rowboat rental, Carousel, zoo) are priced separately by their operators.",
    "typical_duration": "1–3 hours",
@@ -311,7 +376,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Central%20Park%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/centralparknyc/"
    },
-   "transport_note": "A/B/C/D/1 to Columbus Circle (SW corner); N/R/W to 5th Ave–59 St (SE corner)."
+   "transport_note": "A/B/C/D/1 to Columbus Circle (SW corner); N/R/W to 5th Ave–59 St (SE corner).",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_source_url": "https://www.centralparknyc.org/visit"
   },
   {
    "id": "nypl",
@@ -322,7 +390,7 @@
    "official_site": "https://www.nypl.org/locations/schwarzman",
    "source_url": "https://www.nypl.org/locations/schwarzman",
    "hours_table": {},
-   "hours_flag": "UNVERIFIED — building hours are referenced but were not in the fetched text.",
+   "hours_flag": "UNVERIFIED — the official page confirms last entry 15 minutes before closure and a Rose Main Reading Room visiting hour 10:00–11:00 Mon–Sat, but building hours did not render in the fetched text.",
    "exceptions": "Last entry 15 minutes before closure. Rose Main Reading Room: free daily guided tour, or 'visiting hour' 10:00–11:00 Mon–Sat (final entry 10:50). Polonsky Treasures exhibition ongoing and free.",
    "price_adult_usd": 0,
    "price_note": "Free.",
@@ -333,7 +401,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=NYPL%20Schwarzman%20Building",
     "instagram_search": "https://www.instagram.com/explore/tags/nypl/"
    },
-   "transport_note": "B/D/F/M to 42 St–Bryant Park; 7 to 5th Ave."
+   "transport_note": "B/D/F/M to 42 St–Bryant Park; 7 to 5th Ave.",
+   "hours_source_url": "https://www.nypl.org/locations/schwarzman",
+   "hours_verified_on": "",
+   "hours_baseline_note": ""
   },
   {
    "id": "grandcentral",
@@ -342,10 +413,18 @@
    "address": "89 E 42nd St, New York, NY 10017",
    "neighborhood": "Midtown East",
    "official_site": "https://grandcentralterminal.com/",
-   "source_url": "https://grandcentralterminal.com/",
-   "hours_table": {},
-   "hours_flag": "UNVERIFIED — hours not captured; the terminal's own site is the only acceptable source.",
-   "exceptions": "Working transit hub — access can be restricted during events. Free to enter.",
+   "source_url": "https://grandcentralterminal.com/visit/",
+   "hours_table": {
+    "Mon": "05:15–02:00",
+    "Tue": "05:15–02:00",
+    "Wed": "05:15–02:00",
+    "Thu": "05:15–02:00",
+    "Fri": "05:15–02:00",
+    "Sat": "05:15–02:00",
+    "Sun": "05:15–02:00"
+   },
+   "hours_flag": "CURRENT BASELINE — official Visit page says the terminal is open to the public daily 05:15–02:00; individual stores, restaurants, market, Dining Concourse and holiday hours may differ.",
+   "exceptions": "Working transit hub — access can be restricted during events. Individual business and holiday hours may differ; check the official directory. Free to enter.",
    "price_adult_usd": 0,
    "price_note": "Free to enter; food and shopping extra.",
    "typical_duration": "45 min",
@@ -355,7 +434,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Grand%20Central%20Terminal",
     "instagram_search": "https://www.instagram.com/explore/tags/grandcentralterminal/"
    },
-   "transport_note": "4/5/6/7/S to Grand Central–42 St."
+   "transport_note": "4/5/6/7/S to Grand Central–42 St.",
+   "hours_verified_on": "2026-11-25",
+   "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
+   "hours_source_url": "https://grandcentralterminal.com/visit/"
   },
   {
    "id": "citypass",
@@ -377,7 +459,10 @@
     "tiktok_search": "https://www.tiktok.com/search?q=New%20York%20CityPASS%20review",
     "instagram_search": "https://www.instagram.com/explore/tags/citypass/"
    },
-   "transport_note": "N/A."
+   "transport_note": "N/A.",
+   "hours_source_url": "",
+   "hours_verified_on": "",
+   "hours_baseline_note": ""
   }
  ]
 }

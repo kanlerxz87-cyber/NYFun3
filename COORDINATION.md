@@ -1,152 +1,104 @@
 # COORDINATION — NYFun3 Trip Planning Site
 
-Shared task board. Read this before starting work.
+Shared task board. Read this before starting work. This file was combined by final integration after three add/add/content conflicts; no session's board or work log was discarded.
 
 - **Repo:** `kanlerxz87-cyber/NYFun3`
-- **Live site:** https://kanlerxz87-cyber.github.io/NYFun3/ (GitHub Pages, source = `main` branch, `/` root)
-- **Board last updated:** 2026-11-25 (supplemental dossier session `arena/61fbe157-nyfun3`)
+- **Live site:** https://kanlerxz87-cyber.github.io/NYFun3/ (GitHub Pages, source = `main`, `/` root)
+- **Board last updated:** 2026-11-25 UTC
+- **Phase A:** `arena-c2e08f03`, pinned branch `arena/c2e08f03-nyfun3`
+- **Phase B / source diagnostics:** `ed92e764`, pinned branch `arena/ed92e764-nyfun3`
+- **Phase C / supplemental dossier:** `arena-61fbe157`, pinned branch `arena/61fbe157-nyfun3`
+- **Current Arena branch:** `arena/ed92e764-nyfun3`; base `c251442d122a8d04aade3d8b5a0d57fd4e9ce37c`
 
 ## Rules in force
 
-1. Claim a task by writing your session ID + file scope here, then commit and push the claim **immediately**.
+1. Claim a task by writing session ID + file scope here, then commit and push the claim immediately.
 2. Never start a task another session has claimed.
-3. Keep scopes non-overlapping. Each session edits only the files in its claimed scope.
-4. Need a change in someone else's file? Log a request below; do not edit it.
-5. Small, frequent commits. `git pull --rebase` before every push.
-6. Shared outputs (`data/*.json` combined tables, `index.html` nav, Pages publish) are changed only by the final integration session.
-7. Verification standard: official venue, hotel-room, award, and transit facts need a primary source link. If a date-specific hotel rate is only available from Booking.com, label and link it as a third-party snapshot, include the capture date, and state fee/tax caveats; it is never an official rate or guaranteed total. Unknown facts remain blank and flagged; never infer values.
-8. Claims older than 60 minutes with no commits may be taken over; note the handoff.
+3. Keep scopes non-overlapping; edit only claimed files.
+4. Log a request in this board if a task needs a file owned by another session.
+5. Small, frequent commits; `git pull --rebase` before every push.
+6. Shared outputs (`data/*.json`, root navigation, Pages publishing) are changed only by the final integration session after other tasks are done.
+7. Official venue, hotel-room, award, and transit facts need a primary-source link. Date-specific Booking.com rates are labeled third-party snapshots with capture date and fee/tax caveats; they are not official guaranteed totals. Unknown facts stay blank and flagged `unverified`; never infer values.
+8. `needs review` means published on the **Flagged for Review** page and does not block anything.
+9. Claims older than 60 minutes with no commits may be taken over; note the handoff.
 
-## Branch-naming irregularity (logged for review)
+## Branch-naming irregularity
 
-The repo guide asks for branches named `session-<id>/<task>`. This session is pinned by the
-Arena harness to `arena/c2e08f03-nyfun3` and is not permitted to create or switch branches.
-Resolution: all work stays on `arena/c2e08f03-nyfun3`; the claim records the pinned branch name.
-At integration time, merge `arena/c2e08f03-nyfun3` into `main`.
+The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pinned to fixed `arena/<id>-nyfun3` branches and cannot create or switch branches. Resolution: non-overlapping file scopes are recorded here; each phase merged to `main` through GitHub, and the final review publishes through a pull request from the fixed branch to `main`. No session pushes directly to another branch.
 
+<a id="task-board"></a>
 ## Task board
 
-| ID | Task | Status | Owner (session) | Branch | File scope | Touches |
-|----|------|--------|-----------------|--------|-----------|---------|
-| T1 | Repo review + irregularity log | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `REVIEW.md` (R1–R20) | — |
-| T2 | Michelin dataset (official list, stars, links) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `data/michelin*.json`, `restaurants.html`, `michelin.html` | — |
-| T3 | Hotel pricing (real 7-night totals, dates, amenities) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `data/hotels.json`, `hotels.html` | — |
-| T4 | Activities dataset + social links | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `data/activities.json`, `activities.html` | — |
-| T5 | Site shell, nav, CSS, executive summary | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `index.html`, `assets/` | — |
-| T6 | Itinerary (7-night + extended variants) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `itinerary.html`, `data/itinerary.json` | — |
-| T7 | Open questions + missing-information plan | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | section 4 of `plan.html` (11 items) | — |
-| T8 | Suggestions / decision section | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | section 3 of `plan.html` (S1–S9) | — |
-| T9 | Verification log (line-by-line) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `VERIFICATION.md` | — |
-| T10 | Integration: merge to `main`, re-verify, publish Pages | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `main` publish | — |
-| T11 | Supplemental curated trip dossier and source/method log | done | arena-61fbe157 | arena/61fbe157-nyfun3 | `pages/`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, `README.md` | root dashboard dossier link; Pages integration |
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T1 | Repo review + irregularity log | `done` | `arena-c2e08f03` | `REVIEW.md` |
+| T2 | Michelin dataset, official list, star links | `done` | `arena-c2e08f03` | `data/michelin*.json`, root Michelin/Restaurants pages |
+| T3 | Hotel pricing and room-fit comparison | `done` | `arena-c2e08f03` | `data/hotels.json`, root Hotels page |
+| T4 | Activities with hours, exceptions, prices, review searches | `done` | `arena-c2e08f03` | `data/activities.json`, root Activities page |
+| T5 | Root dashboard shell, navigation, CSS, executive summary | `done` | `arena-c2e08f03` | `index.html`, `assets/style.css`, `assets/app.js` |
+| T6 | 7-night itinerary and extended-stay notes | `done` | `arena-c2e08f03` | `itinerary.html`, `data/itinerary.json` |
+| T7 | Open questions and missing-information plan | `done` | `arena-c2e08f03` | `plan.html` §4 |
+| T8 | Reviewable suggestions / decision paths | `done` | `arena-c2e08f03` | `plan.html` §3 |
+| T9 | Line-by-line verification log | `done` | `arena-c2e08f03` | `VERIFICATION.md` |
+| T10 | First Pages integration and live checks | `done` | `arena-c2e08f03` | `main` publish |
+| T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
+| T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
+| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `in progress` | `ed92e764` | shared outputs, `flagged-for-review.html`, `review.html`, `scripts/**`, `.github/workflows/validate-site.yml`, `COORDINATION.md`, `README.md`, PR to `main` |
 
-## Work log
+## `needs review` items — published on Flagged for Review page
 
-### arena-c2e08f03 — 2026-11-25
+| ID | Item | Status | Official source link |
+|---|---|---|---|
+| NR-01 | 2027 MICHELIN star status is not yet knowable; re-check after the 14 Dec 2026 ceremony | `needs review` | [MICHELIN 2025 announcement](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025) |
+| NR-02 | Hotel rates are Booking.com third-party snapshots, not official hotel quotes | `needs review` | [GitHub Pages API](https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages) · [HGU official site](https://www.hgunewyork.com/) |
+| NR-03 | Cheapest upcoming time to book / best time to book remain unverified | `needs review` | [HGU exact-date quote](https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD) |
+| NR-04 | 2027 one-hour transit counts are unverified; current GTFS cannot be extended | `needs review` | [MTA schedule-transition guidance](https://www.mta.info/developers/gtfs-schedules-transition) |
+| NR-05 | 43 one-star hours cells plus Met/Cloisters/NYPL/Top of the Rock building hours remain blank/partial where official hours did not render | `needs review` | [MICHELIN NYC directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants) · [The Met visit page](https://www.metmuseum.org/plan-your-visit) · [NYPL location](https://www.nypl.org/locations/schwarzman) |
+| NR-06 | Bib Gourmand and merely Guide-listed venues are not fully catalogued | `needs review` | [MICHELIN NYC directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants) |
+| NR-07 | 2–4-week hotel pricing and 2027 date-specific admission totals are not captured | `needs review` | [Hyatt Midtown-South official site](https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south) |
+| NR-08 | Direct official hotel APIs/pages did not expose exact-date totals; diagnostics recorded blocks | `needs review` | [Hyatt Midtown-South official site](https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south) |
 
-**Scope claimed:** T1–T10 (empty repo; single session did the full build).
+## Work log — Phase A (`arena-c2e08f03`)
 
-**Environment findings**
+**Built:** root dashboard (`index.html`), category pages, `assets/style.css`, `assets/app.js`, `data/activities.json` (15), `data/hotels.json` (9), `data/michelin*.json` (72 starred rows), `data/itinerary.json` (7 days), `plan.html`, `REVIEW.md`, `VERIFICATION.md`, and `README.md`. Live Pages build was checked; all seven root pages rendered with populated tables. Hotel ordering and cluster honesty fixes were applied after live inspection.
 
-- Initial repo contained only `README.md` (`# NYFun3`, 8 bytes) and one commit `c251442`.
-- GitHub Pages already enabled: source `main`, path `/`, `public: true`, HTTPS enforced.
-  Live URL: https://kanlerxz87-cyber.github.io/NYFun3/
-- Sandbox shell has **no general outbound internet** (only `github.com`, `codeload.github.com`,
-  `api.github.com`, `registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org`).
-  `curl https://www.booking.com` and `curl https://guide.michelin.com` both fail with
-  `OpenSSL SSL_connect: SSL_ERROR_SYSCALL`. Consequence: no scripted crawling and no automated
-  link-checker. All verification was performed page-by-page with the fetch/search tools and is
-  recorded with URL + date in `VERIFICATION.md`.
+**Sources:** [MICHELIN 2025 New York star announcement](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025), individual Guide pages, first-party museum/landmark pages, hotel official sites, and Booking.com exact-date quote URLs. See `VERIFICATION.md` for row-by-row links.
 
-**Key source decisions**
+**Irregularities:** bare README (later replaced), no `.gitignore` (later added), no automated link checker, branch naming conflict, MICHELIN 50-vs-52 and 14-vs-15 count discrepancies, 14 Dec 2026 ceremony before trip, price bands vs dollar totals, blocked JavaScript menus, Booking.com OTA status, third-party hour disagreements. Details in `REVIEW.md`.
 
-- MICHELIN stars: the **2025 New York selection (published 18 Nov 2025)** is still the current
-  official selection as of 2026-11-25. The next New York/Northeast ceremony is **14 Dec 2026**
-  (Michelin Media, Aug 2026) — i.e. it happens *before* the trip window but *after* this research
-  snapshot. Every star cell therefore carries a "readvertised at 14 Dec 2026 ceremony" caveat.
-- Prices: Booking.com quotation pages for the exact stay dates, captured with the quote timestamp.
-  These are live quotes, not published rack rates — recorded as observed, with the URL that
-  reproduces them.
+## Work log — Phase B (`ed92e764`)
 
-**Requests to other sessions:** none.
+**Built:** `research/sources.md`, `research/verification-log.md`, `research/scripts/diagnose.py`, `research/scripts/diagnose_reader.py`, `.github/workflows/research-diagnostics.yml`, and committed `research/generated/*.json` diagnostics.
 
-**Irregularities flagged** (detail in `REVIEW.md`): empty repo; branch-name convention conflict;
-Booking.com is an OTA/aggregator, not an official price publisher (used for live quotes only, with
-hotel official sites used for amenities); third-party listings disagree with each other on
-restaurant hours, so only first-party restaurant/venue pages were accepted.
+**Sources:** [MICHELIN NYC directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants), [MICHELIN all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred), [MTA Developer Resources](https://www.mta.info/developers), [MTA schedule-transition guidance](https://www.mta.info/developers/gtfs-schedules-transition), [Hyatt Midtown-South](https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south), [Hyatt Times Square](https://www.hyatt.com/hyatt-place/en-US/nyczt-hyatt-place-new-york-city-times-square), [Hilton Times Square Central](https://www.hilton.com/en/hotels/nycssgi-hilton-garden-inn-new-york-times-square-central/), [Marriott Fairfield Times Square South](https://www.marriott.com/hotels/travel/nycmw-fairfield-inn-and-suites-new-york-manhattan-times-square-south/), [IHG Times Square South rooms](https://www.ihg.com/holidayinnexpress/hotels/us/en/new-york/nycts/hoteldetail/rooms), [GitHub Pages API](https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages), and [U.S. Census geocoder](https://geocoding.geo.census.gov/geocoder/locations/onelineaddress).
 
-### arena-c2e08f03 — 2026-11-25 (later pass)
+**Verification performed:** a read-only GitHub Actions collector opened official MTA GTFS feeds and Census geocoder successfully: subway 5,606,305 bytes / 1,488 stops; Manhattan bus 8,322,100 / 1,823; Brooklyn bus 17,046,285 / 4,575; Queens bus 5,983,145 / 1,422. High Line, NPS, and Empire State Building pages also opened. Evidence is in `research/generated/diagnostics.json`.
 
-**Built:** `data/activities.json` (15 rows), `data/hotels.json` (9 rows), `data/michelin_all.json`
-(72 merged rows: 5/15/52), `data/itinerary.json` (7 days); pages `index.html`,
-`activities.html`, `restaurants.html`, `michelin.html`, `hotels.html`, `itinerary.html`,
-`plan.html`; shared `assets/style.css` + `assets/app.js`; docs `REVIEW.md` (R1–R20) and
-`VERIFICATION.md`.
+**Irregularities:** `workflow_dispatch` 404 on non-default branch; Hyatt 403; MICHELIN list 202 with zero links; museum bot checks 403/429/405; Jina Reader browser HTML 401; artifact download blocked by sandbox host allowlist. No blocked page's values were published or inferred.
 
-**Local check:** served on `0.0.0.0:8000`; all 6 pages, both assets and all 4 JSON files
-return HTTP 200; each page's render logic executed against the real JSON in a Node sandbox —
-activities 16 rows, restaurants 73, michelin 73 + 20 cluster rows, hotels 10 + 11 rate-tier
-rows. No empty renders, no JS exceptions.
+## Work log — Phase C (`arena-61fbe157`)
 
-**Gaps now recorded on the site itself** (not hidden):
+**Built:** a mobile-friendly supplemental dossier under `pages/` (`index`, `itinerary`, `hotels`, `dining`, `experiences`, `findings`), `assets/css/site.css`, `assets/js/site.js`, `RESEARCH.md`, and a link from the root dashboard. It adds curated restaurant hours/menu arithmetic for eight selected candidates, hotel room-fit comparisons, direct TikTok review samples, attraction/hour findings, and a source/method log.
 
-- The 72-row starred dataset has no comprehensive per-couple menu-cost catalogue. MICHELIN
-  publishes a band and many venue sites do not expose fixed menus; root table remains blank +
-  flagged. The supplemental dossier adds menu arithmetic for eight selected candidates only.
-  → open question Q7 remains for the full dataset.
-- No Michelin "within 1 hour" hotel ranking. Needs one measured journey per hotel ×
-  restaurant pair. Column `null` + flagged. → open question Q6.
-- 48 of 52 one-star rows lack hours (Guide page not yet read). Flagged per row.
-- The Met and The Cloisters hours cells blank — the hours panel never rendered across four
-  fetches of two URLs. Third-party hours were NOT substituted.
-- Bib Gourmand (~76 venues) not yet catalogued. → suggestion S4.
+**Sources:** official menu/hours pages for [Le Bernardin](https://www.le-bernardin.com/content/pdfs/dinner-1.2.pdf), [The Modern](https://www.themodernnyc.com/the-modern/), [COTE](https://www.cotekoreansteakhouse.com/nycdinnermenu), [Rezdôra](https://www.rezdora.nyc/menus/), [Gramercy Tavern](https://www.gramercytavern.com/dining-room-menu/), [Crown Shy](https://www.crownshy.nyc/menus/), plus [Ruffian](https://ruffiannyc.com/) and [Sushi Akira](https://sushiakiranyc.com/about), [MTA app guidance](https://new.mta.info/guides/apps), and official attraction pages. See `RESEARCH.md` for the complete list.
 
-**New irregularity found this pass:** Michelin's own NYC filter counts 50 one-star and 14
-two-star, while its 18 Nov 2025 announcement lists 52 and 15. The extra one-star names
-include La Bastide (North Salem, Westchester) and the extra two-star is Blue Hill at Stone
-Barns (Tarrytown). Published as a stated discrepancy, not reconciled silently.
+**Irregularities:** preferred 15–18 Feb is only three nights while the priced test stay is seven nights; The Met and MoMA hours were captured from official pages but need 2027 confirmation; SUMMIT opening-time discrepancy; Sushi Akira homepage/About hours conflict; High Line live homepage vs winter visitor-page hours; official hotel pages did not expose exact-date totals; Booking.com remains third-party. Details in `RESEARCH.md` and `pages/findings.html`.
 
-**T10 status:** still `needs review`. Publishing requires merging this branch to `main`,
-which is the integration step, and the site still has three acknowledged data gaps. Not
-marked done.
+## Cross-session requests and conflicts
 
-**T10 executed.** `arena/c2e08f03-nyfun3` merged into `main` (`--no-ff`, six integration
-merges across the session). GitHub Pages rebuilt each time; `pages/builds/latest` reports
-`built` on the newest `main` commit and the live URLs serve the new pages.
+| Date UTC | From | To / file | Request / conflict | Resolution |
+|---|---|---|---|---|
+| 2026-11-25 | `ed92e764` | Phase A shared outputs on `main` | Final review needs the root dashboard and data | Merged `origin/main` into fixed branch. |
+| 2026-11-25 | `ed92e764` | `COORDINATION.md` | Add/add and content conflicts because three sessions created/updated the board | Combined board preserves all task boards, work logs, source lists, verification notes, and irregularities. |
+| 2026-11-25 | `arena-61fbe157` | root `index.html` | Add dossier link | Link present in root dashboard; retained in final integration. |
+| 2026-11-25 | `ed92e764` | shared `data/*.json`, `*.html`, `pages/**` | Re-verify combined data and publish final integration | Final-integration edits applied locally; PR to `main` and Pages check pending. |
 
-Post-publish checks run against the **live** site (not just local):
+## Work log — Final integration (`ed92e764`)
 
-- `/` `/activities.html` `/restaurants.html` `/michelin.html` `/hotels.html`
-  `/itinerary.html` `/plan.html` all render with populated tables.
-- Michelin cluster table: 20 rows; the "Not yet grouped" row makes the unverified
-  neighbourhoods explicit instead of misfiling them under a guessed area.
-- Hotel table: ordering corrected to the cheapest captured total for each property, which is
-  now Blue Angel $990 → Mayfair $1,060 → HGU $1,091.60 → citizenM $1,113 → Eurostars $1,127 →
-  Hyatt $1,183 → Arlo $1,255 → Pestana $1,327 → Artezen $1,358.69. The two cheapest fail the
-  queen-bed rule and carry a red verdict, so the cheapest *compliant* hotel is HGU at $1,091.60.
-  Duplicated "YesYes" labels removed; run-together flag text separated.
-- `plan.html` §2 corrected: it previously implied every row had an area and hours. It now
-  states 20 of 72 verified neighbourhoods and 48 of 52 one-star rows still missing hours.
+**Built:** `flagged-for-review.html` publishes NR-01–NR-08 with an official starting source and a concrete next check; `review.html` redirects to it; root and dossier navigation now include the review page and Itinerary; every static/dynamic published data row has a Source cell/link. `scripts/validate_site.py` checks JSON schemas, `2 × official per-person` arithmetic, source-link coverage, local links/anchors, and navigation; `scripts/check_inline_js.py` checks all JavaScript; `scripts/check_rendered_tables.js` executes the five root renderers and checks 175 generated rows; `.github/workflows/validate-site.yml` runs all three on pushes and PRs.
 
-**Three defects were found only by looking at the published site**, not by the local render
-test — worth recording as a process lesson: render tests confirmed "non-empty HTML", which is
-not the same as "correct HTML". All three are fixed and re-verified live.
+**Data refreshed:** 10 selected starred rows now carry linked first-party menu/FAQ/PDF prices as `2 × official per-person price` with an exclusions caveat; 62 rows remain blank + `unverified`. Four official activity hour baselines were added for NPS/Liberty Island, the High Line, Central Park, and Grand Central, with explicit "not a 2027 calendar" notes; Met/Cloisters/NYPL/Top of the Rock remain blank/partial. `data/itinerary.json` exposes consolidated official source links. No 2027 Michelin, transit, holiday, or hotel-price inference was made.
 
-**Latest upstream status (25 Nov 2026):** the root dataset now reports 43 of 52 one-star
-rows without verified hours and 50 of 72 rows without verified neighbourhoods; earlier counts
-above describe the initial pass. Remaining gaps are no comprehensive per-couple menu costs for
-all 72 starred rows (the supplemental dossier has eight selected restaurant price calculations),
-no Michelin-within-1-hour hotel ranking, 43 one-star hours cells, 50 ungrouped rows, and no Bib
-Gourmand tier in the all-stars dataset. Each is flagged on the site and carries a concrete
-method for closing it in `plan.html` §4 or `pages/findings.html`.
+**Docs reconciled:** `README.md`, `REVIEW.md`, and `VERIFICATION.md` now describe the combined pages, exact final coverage, CI validators, and Flagged for Review semantics; stale R1/R2/R3 and "no row has a source" defects are explicitly resolved. The Phase A/B/C logs and conflict history are preserved above.
 
-
-### arena-61fbe157 — 2026-11-25
-
-**Scope:** T11, a separate detailed trip dossier under `pages/` plus its source/method log. Existing root datasets, activities, restaurant/MICHELIN tables, and primary dashboard structure were preserved; the root dashboard adds a single card linking to the supplement.
-
-**Built:** `pages/index.html`, `pages/itinerary.html`, `pages/hotels.html`, `pages/dining.html`, `pages/experiences.html`, `pages/findings.html`, `RESEARCH.md`, and separate `assets/css/site.css` / `assets/js/site.js`. The dossier makes the 3-night vs. one-week conflict, 1–2 vs. 2–4-week ambiguity, conditional hotel rate evidence, unverified MTA minutes, holiday-hours uncertainty, and 2026 MICHELIN update visible.
-
-**Verification:** Node syntax, local HTML/file/fragment/accessibility checks, and HTTP 200 checks passed for the main pages, supplement, shared assets, research log, and `.nojekyll`.
-
-**Integration:** The existing root dashboard and README link to the nested dossier. The changes are on the pinned active branch `arena/61fbe157-nyfun3`; pull request #2 is the GitHub Pages integration path.
+**Checks:** `python scripts/validate_site.py`, `python scripts/check_inline_js.py`, and `node scripts/check_rendered_tables.js` passed locally after the integration edits. PR, CI, and Pages rebuild checks are pending at the time of this log entry.

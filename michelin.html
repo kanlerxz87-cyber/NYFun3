@@ -19,6 +19,8 @@
       <a href="hotels.html">Hotels</a>
       <a href="itinerary.html">Itinerary</a>
       <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
     </nav>
   </div>
 </header>
@@ -63,21 +65,24 @@ var DATA = null;
 function socialCell(s) {
   if (!s) return "";
   return ["youtube_search","tiktok_search","instagram_search"].map(function (k, i) {
-    return '<a href="' + s[k] + '" target="_blank" rel="noopener noreferrer">' + ["YT","TikTok","IG"][i] + "</a>";
-  }).join(" · ");
+    if (!s[k]) return "";
+    return '<a href="' + NYF.esc(s[k]) + '" target="_blank" rel="noopener noreferrer">' + ["YT","TikTok","IG"][i] + "</a>";
+  }).filter(Boolean).join(" · ");
+}
+function clusterKey(r) {
+  return (r.cluster && !r.cluster_flag) ? r.cluster : "Not yet grouped (see note)";
 }
 
 function draw() {
   var tier = document.getElementById("f-tier").value;
   var cl = document.getElementById("f-cluster").value;
   var rows = DATA.restaurants.filter(function (r) {
-    return (!tier || String(r.stars) === tier) && (!cl || (r.cluster || "Not yet grouped (see note)") === cl);
+    return (!tier || String(r.stars) === tier) && (!cl || clusterKey(r) === cl);
   }).sort(function (a, b) { return b.stars - a.stars || a.name.localeCompare(b.name); });
 
   var body = rows.map(function (r) {
     var price = r.price_symbol ? r.price_symbol : "";
-    var pair = r.price_for_two_usd ? NYF.money0(r.price_for_two_usd) :
-      NYF.unverified("No first-party dollar price — MICHELIN publishes a band only.");
+    var pair = NYF.priceForTwo(r);
     var site = r.official_site ? NYF.srcLink(r.official_site, "venue site") : '<span class="unver">no site</span>';
     var book = r.booking_url && /^https?:/.test(r.booking_url) ? NYF.srcLink(r.booking_url, "book") : "";
     return "<tr>" +
@@ -88,12 +93,12 @@ function draw() {
         '<br><span class="small muted">Starred — not merely listed</span></td>' +
       '<td class="small">' + NYF.esc(r.cuisine || "") + "</td>" +
       '<td class="num">' + price + "</td>" +
-      '<td class="small">' + NYF.esc(r.cluster || "") + "</td>" +
+      '<td class="small">' + (r.cluster && !r.cluster_flag ? NYF.esc(r.cluster) : NYF.unverified("Area clue is not a verified cluster; see Flagged for Review.")) + "</td>" +
       "<td>" + NYF.hoursCell(r.hours, r.hours_flag) + "</td>" +
       '<td class="num">' + pair + "</td>" +
       '<td class="small">' + site + (book ? "<br>" + book : "") + "</td>" +
       '<td class="small">' + socialCell(r.social) + "</td>" +
-      '<td class="small">' + NYF.srcLink(r.michelin_url, "Guide page") + "</td>" +
+      '<td class="small">' + NYF.sourceCell(r) + "</td>" +
     "</tr>";
   }).join("");
 
@@ -119,20 +124,24 @@ NYF.load("data/michelin_all.json", function (json) {
 
   var by = {};
   json.restaurants.forEach(function (r) {
-    var k = r.cluster || "Not yet grouped (see note)";
-    if (!by[k]) by[k] = { 3: 0, 2: 0, 1: 0 };
+    var k = clusterKey(r);
+    if (!by[k]) by[k] = { 3: 0, 2: 0, 1: 0, urls: [] };
     by[k][r.stars]++;
+    if (r.michelin_url && by[k].urls.length < 3) by[k].urls.push(r.michelin_url);
   });
   var keys = Object.keys(by).sort(function (a, b) {
     var sa = by[a][3] * 3 + by[a][2] * 2 + by[a][1], sb = by[b][3] * 3 + by[b][2] * 2 + by[b][1];
     return sb - sa || a.localeCompare(b);
   });
   document.getElementById("clusters").innerHTML =
-    '<div class="scroll"><table><thead><tr><th>Area / cluster</th><th class="num">★★★</th><th class="num">★★</th><th class="num">★</th><th class="num">Total</th></tr></thead><tbody>' +
+    '<div class="scroll"><table><thead><tr><th>Area / cluster</th><th class="num">★★★</th><th class="num">★★</th><th class="num">★</th><th class="num">Total</th><th>Source</th></tr></thead><tbody>' +
     keys.map(function (k) {
       var v = by[k];
+      var links = v.urls.map(function (u) { return NYF.srcLink(u, "Guide page"); });
+      links.push(NYF.srcLink(DATA._meta.official_list_url, "2025 MICHELIN list"));
       return "<tr><td><strong>" + NYF.esc(k) + "</strong></td><td class='num'>" + v[3] + "</td><td class='num'>" + v[2] +
-        "</td><td class='num'>" + v[1] + "</td><td class='num'><strong>" + (v[1] + v[2] + v[3]) + "</strong></td></tr>";
+        "</td><td class='num'>" + v[1] + "</td><td class='num'><strong>" + (v[1] + v[2] + v[3]) +
+        "</strong></td><td class='small'>" + links.join("<br>") + "</td></tr>";
     }).join("") + "</tbody></table></div>";
 
   var sel = document.getElementById("f-cluster");

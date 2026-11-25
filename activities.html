@@ -19,6 +19,8 @@
       <a href="hotels.html">Hotels</a>
       <a href="itinerary.html">Itinerary</a>
       <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
     </nav>
   </div>
 </header>
@@ -54,7 +56,8 @@ NYF.load("data/activities.json", function (json) {
     if (a.price_adult_usd && a.price_note) price += '<div class="flag small" style="color:#5d6673">' + NYF.esc(a.price_note) + "</div>";
     if (a.price_adult_usd === null && a.price_note) price += '<div class="flag">' + NYF.esc(a.price_note.replace(/^UNVERIFIED[^—]*—\s*/i, "")) + "</div>";
     var social = [a.social.youtube_search, a.social.tiktok_search, a.social.instagram_search]
-      .map(function (u, i) { return '<a href="' + u + '" target="_blank" rel="noopener noreferrer">' + ["YouTube","TikTok","Instagram"][i] + "</a>"; }).join(" · ");
+      .map(function (u, i) { return u ? '<a href="' + NYF.esc(u) + '" target="_blank" rel="noopener noreferrer">' + ["YouTube","TikTok","Instagram"][i] + "</a>" : ""; })
+      .filter(Boolean).join(" · ");
     return "<tr>" +
       '<td><strong>' + NYF.esc(a.name) + "</strong><br><span class='muted small'>" + NYF.esc(a.address) + "</span>" +
         (a.booking ? '<br><a class="small" href="' + a.booking + '" target="_blank" rel="noopener noreferrer">Book / tickets</a>' : "") + "</td>" +
@@ -64,7 +67,8 @@ NYF.load("data/activities.json", function (json) {
       '<td class="small">' + NYF.esc(a.typical_duration || "") + "</td>" +
       '<td class="small">' + (a.transport_note ? NYF.esc(a.transport_note) : "") + "</td>" +
       '<td class="small">' + social + "</td>" +
-      '<td class="small">' + NYF.srcLink(a.source_url, "official page") + "</td>" +
+      '<td class="small">' + NYF.srcLink(a.source_url, "official page") +
+        (a.hours_source_url ? "<br>" + NYF.srcLink(a.hours_source_url, "official hours") : "") + "</td>" +
     "</tr>";
   }).join("");
   document.getElementById("table-host").innerHTML =
