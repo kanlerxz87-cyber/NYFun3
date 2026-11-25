@@ -62,6 +62,8 @@ class Row:
     text: list[str] = field(default_factory=list)
     links: list[Link] = field(default_factory=list)
     current_cell: Cell | None = None
+    open_cell_tag: str | None = None
+    overlapping_cell_starts: int = 0
     review_required: bool = False
 
 
@@ -117,10 +119,17 @@ class Document(HTMLParser):
             if self.active_rows:
                 self.issue("warning", "NESTED_TABLE", "Nested table row: manually inspect row and source coverage.")
             self.active_rows.append(Row(line=line, review_required=any(self.table_review)))
-        if tag == "td" and self.active_rows:
-            cell = Cell()
-            self.active_rows[-1].cells.append(cell)
-            self.active_rows[-1].current_cell = cell
+        if tag in ("td", "th") and self.active_rows:
+            row = self.active_rows[-1]
+            if row.open_cell_tag is not None:
+                row.overlapping_cell_starts += 1
+            row.open_cell_tag = tag
+            if tag == "td":
+                cell = Cell()
+                row.cells.append(cell)
+                row.current_cell = cell
+            else:
+                row.current_cell = None
         if tag == "img" and self.active_rows and self.active_rows[-1].current_cell and attr.get("alt"):
             self.active_rows[-1].current_cell.text.append(attr["alt"] or "")
         for attribute in ("href", "src", "poster"):
@@ -147,8 +156,9 @@ class Document(HTMLParser):
             self.in_title = False
         if tag in ("script", "style") and self.ignored_text_depth:
             self.ignored_text_depth -= 1
-        if tag == "td" and self.active_rows:
+        if tag in ("td", "th") and self.active_rows:
             self.active_rows[-1].current_cell = None
+            self.active_rows[-1].open_cell_tag = None
         if tag == "tr" and self.active_rows:
             row = self.active_rows.pop()
             if row.cells:
@@ -394,6 +404,9 @@ def audit_site(
             row_text = normalize_text(row.text)
             label = normalize_text(row.cells[0].text)[:100] or "(first cell blank)"
             row_prefix = f"Row {label!r}: "
+            if row.overlapping_cell_starts:
+                issues.append(Issue("error", "CELL_START_BEFORE_PREVIOUS_END", doc.path, row.line,
+                                    row_prefix + f"{row.overlapping_cell_starts} cell(s) start before a previous cell closes. Browsers can insert extra cells or shift column alignment; inspect the rendered table and generated markup."))
             candidates = []
             for link in row.links:
                 parts = parse_url(link.url)

@@ -147,6 +147,15 @@ class SiteAuditTests(unittest.TestCase):
         self.assertIn("DUPLICATE_ID", self.codes(report))
         self.assertNotIn("FRAGMENT_MISSING", self.codes(report))
 
+    def test_extra_nested_cells_are_not_mistaken_for_well_formed_table(self):
+        self.page("index.html", '''<table><thead><tr><th>Hotel</th><th>Room</th><th>Source</th></tr></thead>
+        <tbody><tr><td>Hotel</td><td><td>King bed</td></td>
+        <td><a href="https://www.nps.gov/">Source</a></td></tr></tbody></table>''')
+        report = audit_site(self.root, {"www.nps.gov"})
+        self.assertIn("CELL_START_BEFORE_PREVIOUS_END", self.codes(report))
+        self.assertEqual(report["summary"]["errors"], 1)
+        self.assertEqual(report["summary"]["data_rows"], 1)
+
     def test_network_results_distinguish_broken_blocked_and_reachable(self):
         class Response:
             def __init__(self, code, url):

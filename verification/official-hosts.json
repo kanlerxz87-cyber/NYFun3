@@ -66,6 +66,46 @@
       "host": "www.nyctourism.com",
       "organization": "NYC Tourism + Conventions",
       "evidence": "https://www.nyc.gov/mayors-office/news/2025/08/mayor-adams--nyc-tourism---conventions--the-broadway-league-anno"
+    },
+    {
+      "host": "www.hyatt.com",
+      "organization": "Hyatt",
+      "evidence": "https://www.hyatt.com/hyatt-centric/en-US/nycts-hyatt-centric-times-square/rooms"
+    },
+    {
+      "host": "www.marriott.com",
+      "organization": "Marriott",
+      "evidence": "https://www.marriott.com/en-us/hotels/nycts-towneplace-suites-new-york-manhattan-times-square/overview/"
+    },
+    {
+      "host": "www.911memorial.org",
+      "organization": "National September 11 Memorial & Museum",
+      "evidence": "https://www.911memorial.org/visit"
+    },
+    {
+      "host": "www.thehighline.org",
+      "organization": "Friends of the High Line",
+      "evidence": "https://www.thehighline.org/visit/"
+    },
+    {
+      "host": "www.nycgovparks.org",
+      "organization": "New York City Department of Parks & Recreation",
+      "evidence": "https://www.nycgovparks.org/about"
+    },
+    {
+      "host": "www.esbnyc.com",
+      "organization": "Empire State Building Observatory",
+      "evidence": "https://www.esbnyc.com/hours-directions"
+    },
+    {
+      "host": "www.timessquarenyc.org",
+      "organization": "Times Square Alliance",
+      "evidence": "https://www.timessquarenyc.org/"
+    },
+    {
+      "host": "statuecitycruises.com",
+      "organization": "Statue City Cruises, National Park Service-authorized ferry operator",
+      "evidence": "https://www.nps.gov/stli/planyourvisit/hours.htm"
     }
   ]
 }
