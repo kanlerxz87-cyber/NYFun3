@@ -14,8 +14,8 @@
 
 | Task ID | Task Name | Status | Owning Session ID | Claimed At (UTC) | File Scope |
 |---|---|---|---|---|---|
-| `T1` | Repo Baseline Audit & Prompt Irregularity Analysis | `in progress` | `fc94e0d3` | `2026-11-25T22:34:00Z` | `data/repo_audit.json` |
-| `T2` | MICHELIN Guide & Starred Restaurants, Clusters, Couple Pricing, Hours & Social Reviews | `unclaimed` | — | — | `data/michelin_restaurants.json` |
+| `T1` | Repo Baseline Audit & Prompt Irregularity Analysis | `done` | `fc94e0d3` | `2026-11-25T22:34:00Z` | `data/repo_audit.json` |
+| `T2` | MICHELIN Guide & Starred Restaurants, Clusters, Couple Pricing, Hours & Social Reviews | `in progress` | `fc94e0d3` | `2026-11-25T22:39:00Z` | `data/michelin_restaurants.json` |
 | `T3` | NYC Activities, Hours, Exceptions, <=1-Hr Transit & Social Reviews | `unclaimed` | — | — | `data/activities.json` |
 | `T4` | NYC Hotels (Private Bath, Queen+ Bed, Verified 7-Night Pricing Feb–Mar 2027, Best Time to Book & Michelin Transit Ranking) | `unclaimed` | — | — | `data/hotels.json` |
 | `T5` | Decision Readiness (Questions & Missing Info Discovery) + Site Improvement Suggestions | `unclaimed` | — | — | `data/decision_and_suggestions.json` |
@@ -28,3 +28,8 @@
 ### 2026-11-25T22:34:00Z — Session `fc94e0d3` initialized board & claimed `T1`
 - Checked repository state: `COORDINATION.md` did not exist on `main` (`c251442d122a8d04aade3d8b5a0d57fd4e9ce37c`).
 - Created `COORDINATION.md` and claimed `T1` (`data/repo_audit.json`).
+
+### 2026-11-25T22:39:00Z — Session `fc94e0d3` completed `T1` & claimed `T2`
+- **Verification performed**: Inspected commit `c251442d122a8d04aade3d8b5a0d57fd4e9ce37c` (`README.md`, 1 line `# NYFun3`), GitHub Pages API configuration (`main` `/`, `https://kanlerxz87-cyber.github.io/NYFun3/`), 2027 U.S. Federal Holidays (`https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/`), NYC Public Schools 2026–2027 calendar (`https://www.schools.nyc.gov/about-us/news/morning-bell/contentdetails/morning-bell/2026/04/21/2026-27-nycps-calendar-now-available`), NYC Hotel Week 2027 (`https://www.nyctourism.com/hotel-week/`), and official MICHELIN Guide NYC Star List (`https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025`).
+- **Irregularities logged**: `IRREG-01` through `IRREG-06` saved in `data/repo_audit.json` for publication on Flagged for Review (`review.html`).
+- **Next claim**: Claimed `T2` (`data/michelin_restaurants.json`).

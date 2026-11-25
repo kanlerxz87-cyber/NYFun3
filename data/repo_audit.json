@@ -1,0 +1,90 @@
+{
+  "audit_metadata": {
+    "repository": "kanlerxz87-cyber/NYFun3",
+    "repository_url": "https://github.com/kanlerxz87-cyber/NYFun3",
+    "base_commit": "c251442d122a8d04aade3d8b5a0d57fd4e9ce37c",
+    "working_branch": "arena/fc94e0d3-nyfun3",
+    "session_id": "fc94e0d3",
+    "verified_at_utc": "2026-11-25T22:38:00Z",
+    "github_pages_url": "https://kanlerxz87-cyber.github.io/NYFun3/",
+    "github_pages_source": {
+      "branch": "main",
+      "path": "/",
+      "build_type": "legacy",
+      "https_enforced": true
+    }
+  },
+  "baseline_files_reviewed": [
+    {
+      "path": "README.md",
+      "commit": "c251442d122a8d04aade3d8b5a0d57fd4e9ce37c",
+      "lines": 1,
+      "bytes": 8,
+      "exact_content": "# NYFun3",
+      "status": "Verified — placeholder initial commit file with no trailing newline and no trip data yet.",
+      "source_url": "https://github.com/kanlerxz87-cyber/NYFun3/blob/c251442d122a8d04aade3d8b5a0d57fd4e9ce37c/README.md"
+    }
+  ],
+  "flagged_irregularities": [
+    {
+      "id": "IRREG-01",
+      "category": "Trip Duration Conflict",
+      "severity": "High",
+      "status": "needs review",
+      "summary": "Conflicting trip lengths stated across requirements: 3 nights (Feb 15–18, 2027), 7 nights (hotel pricing basis), 1–2 weeks (7–14 nights), and 2–4 weeks (14–28 nights).",
+      "details": "February 15, 2027 (Monday) to February 18, 2027 (Thursday) equals 3 nights / 4 days, whereas the specification simultaneously requests 'anywhere from 1-2 weeks long', 'up to 2-4 weeks as well' inside the 36-night Feb 15–Mar 23, 2027 window, and 'total price for a 7 night stay'. To avoid assumptions, all hotel totals are standardized on verified 7-night stays while itineraries and budget projections compare 3-night, 7-night, 14-night, and 28-night options.",
+      "official_source_label": "2027 Gregorian Calendar / U.S. OPM Holiday Schedule",
+      "official_source_url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+    },
+    {
+      "id": "IRREG-02",
+      "category": "Holiday & School Recess Overlap",
+      "severity": "Medium",
+      "status": "needs review",
+      "summary": "Preferred start date Monday, Feb 15, 2027 is Washington's Birthday (Presidents' Day) AND overlaps NYC Public Schools Midwinter Recess (Feb 15–19, 2027).",
+      "details": "Per U.S. OPM, Monday, February 15, 2027 is the federal Washington's Birthday holiday. Per NYC Public Schools' 2026–2027 calendar, February 15–19, 2027 is Midwinter Recess (all NYC public schools closed). Several museums (e.g., The Met, normally closed Wednesdays; Guggenheim/Whitney/MoMA holiday hours) and Monday-closed Michelin restaurants have holiday/weekday schedule impacts, and family attractions experience elevated daytime crowds that week.",
+      "official_source_label": "NYC Public Schools 2026–2027 Official Calendar",
+      "official_source_url": "https://www.schools.nyc.gov/about-us/news/morning-bell/contentdetails/morning-bell/2026/04/21/2026-27-nycps-calendar-now-available"
+    },
+    {
+      "id": "IRREG-03",
+      "category": "Pricing & Promotional Window Gap",
+      "severity": "Medium",
+      "status": "needs review",
+      "summary": "Travel window starting Feb 15, 2027 misses NYC Winter Outing (25% off NYC Hotel Week, Restaurant Week, 2-for-1 Broadway Week & Must-See Week) by 4 days.",
+      "details": "Per NYC Tourism + Conventions, NYC Hotel Week 2027 runs Jan 2–Feb 11, 2027 (25% off standard room rates at 148+ hotels), and NYC Restaurant Week, Broadway Week, and Must-See Week run Jan 19–Feb 11, 2027. Starting Feb 15, 2027 misses these citywide promotions unless dates can flex 1 week earlier.",
+      "official_source_label": "NYC Tourism + Conventions Official Hotel Week 2027",
+      "official_source_url": "https://www.nyctourism.com/hotel-week/"
+    },
+    {
+      "id": "IRREG-04",
+      "category": "Upcoming MICHELIN Star Ceremony",
+      "severity": "Medium",
+      "status": "needs review",
+      "summary": "Current NYC MICHELIN star standings reflect the Nov 18, 2025 ceremony + 2026 Guide additions; the next annual MICHELIN Ceremony occurs Dec 14, 2026 (prior to the Feb 2027 trip).",
+      "details": "As of Nov 25, 2026, NYC has 70 MICHELIN-starred restaurants on guide.michelin.com (5 Three-Star, 14 Two-Star, 51 One-Star in the NYC filter) plus 84 Bib Gourmands and 2026 Selected additions (Apr, Jul 15, and Nov 18, 2026). Star promotions/demotions announced Dec 14, 2026 may change star counts before February 2027.",
+      "official_source_label": "MICHELIN Guide NYC Official Star List",
+      "official_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
+    },
+    {
+      "id": "IRREG-05",
+      "category": "Westchester Outliers in NY MICHELIN List",
+      "severity": "Low",
+      "status": "needs review",
+      "summary": "Two NY MICHELIN-starred restaurants in the NYC Ceremony article (Blue Hill at Stone Barns 2★ in Tarrytown; La Bastide by Andrea Calstier 1★ in North Salem) lie outside NYC and exceed the <=1-hour subway/bus rule.",
+      "details": "Both properties are in Westchester County, NY and cannot be reached within 60 minutes via NYC MTA subway/bus from Manhattan hotels; they are excluded from <=1-hour hotel transit counts and flagged explicitly.",
+      "official_source_label": "MICHELIN Guide NYC Official Star List",
+      "official_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
+    },
+    {
+      "id": "IRREG-06",
+      "category": "Git Branch Convention",
+      "severity": "Low",
+      "status": "needs review",
+      "summary": "Arena runtime binds this session to branch arena/fc94e0d3-nyfun3 and disallows creating session-<id>/<task> branches.",
+      "details": "All task claims, file-scoped commits, and verification logs are recorded in COORDINATION.md and pushed incrementally to origin/arena/fc94e0d3-nyfun3.",
+      "official_source_label": "Repository Branches API",
+      "official_source_url": "https://github.com/kanlerxz87-cyber/NYFun3/branches"
+    }
+  ]
+}
