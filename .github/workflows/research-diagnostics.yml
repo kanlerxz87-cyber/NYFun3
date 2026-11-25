@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: research-diagnostics-${{ github.ref }}
@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,6 +41,23 @@ jobs:
 
       - name: Fetch official-source diagnostics
         run: python research/scripts/diagnose.py
+
+      - name: Commit diagnostics on the same fixed branch
+        env:
+          BRANCH: ${{ github.ref_name }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/generated/diagnostics.json
+          if git diff --staged --quiet; then
+            echo "No diagnostics change to commit."
+          else
+            git commit -m "Record official-source diagnostics for run $RUN_ID [skip ci]"
+            git pull --rebase origin "$BRANCH"
+            git push origin HEAD:"$BRANCH"
+          fi
 
       - name: Upload structured diagnostics
         if: always()
