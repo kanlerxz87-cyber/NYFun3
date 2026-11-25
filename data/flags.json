@@ -1,0 +1,177 @@
+[
+  {
+    "id": "F01",
+    "severity": "medium",
+    "title": "Four of six hotel 7-night totals remain unverified",
+    "detail": "Real dated official 7-night quotes were captured for Pod 51 and Arlo NoMad. 11 Howard, citizenM New York Times Square, AC Hotel New York Times Square and The Westin New York at Times Square still have blank totals; no estimate was substituted. Arlo's displayed total also excludes taxes.",
+    "sources": [
+      "pod51_booking_7n",
+      "arlo_booking_7n",
+      "howard_booking",
+      "citizenm_property"
+    ],
+    "page": "hotels.html"
+  },
+  {
+    "id": "F02",
+    "severity": "high",
+    "title": "Cheapest official booking window falls outside the trip window",
+    "detail": "NYC Hotel Week 2027 discount applies 2 Jan–11 Feb 2027. The requested window starts 15 Feb 2027. The verified discount cannot be used for the requested dates.",
+    "sources": [
+      "hotel_week",
+      "hotel_week_about"
+    ],
+    "page": "dates.html"
+  },
+  {
+    "id": "F03",
+    "severity": "high",
+    "title": "Michelin-density hotel ranking blocked",
+    "detail": "The ≤1-hour subway/bus criterion needs dated MTA Trip Planner results. No static official value exists, so counts and ranking are blank rather than inferred.",
+    "sources": [
+      "mta_trip",
+      "mta_maps"
+    ],
+    "page": "travel.html"
+  },
+  {
+    "id": "F04",
+    "severity": "medium",
+    "title": "2025 star roster vs current official count mismatch",
+    "detail": "The official 2025 ceremony article lists 5 three-star, 15 two-star and 52 one-star restaurants (72 names, including Westchester, Brooklyn and Queens entries). The current official all-starred listing shows 69 starred (5/14/50). Per-name current status was verified only for 13 restaurants; the remaining names are flagged unverified.",
+    "sources": [
+      "michelin_stars_2025",
+      "michelin_all_starred"
+    ],
+    "page": "michelin.html"
+  },
+  {
+    "id": "F05",
+    "severity": "medium",
+    "title": "Reported December 2026 MICHELIN ceremony is not an official source",
+    "detail": "A third-party page reports the next New York star announcement for 14 Dec 2026. No official MICHELIN announcement was fetched, so this is logged as a question, not a fact.",
+    "sources": [
+      "michelin_additions",
+      "michelin_all_starred"
+    ],
+    "page": "questions.html"
+  },
+  {
+    "id": "F06",
+    "severity": "medium",
+    "title": "11 Howard room-count conflict",
+    "detail": "Official hotel website: 207 guest rooms and suites. MICHELIN Guide hotel page: 213 rooms. Both are cited; neither was corrected.",
+    "sources": [
+      "howard",
+      "howard_michelin"
+    ],
+    "page": "hotels.html"
+  },
+  {
+    "id": "F07",
+    "severity": "medium",
+    "title": "Empire State Building February 2027 hours not published",
+    "detail": "The official hours page states it is open 365 days and lists near-term Nov–Dec 2026 hours only; no February 2027 hours are published. Hours cell is blank.",
+    "sources": [
+      "esb"
+    ],
+    "page": "activities.html"
+  },
+  {
+    "id": "F08",
+    "severity": "low",
+    "title": "Instagram review coverage incomplete; MoMA placeholder removed",
+    "detail": "Instagram site-restricted searches returned official accounts/location pages rather than third-party reviews. Such links are labeled 'official account' and are not presented as reviews. An unrelated Statue of Liberty Instagram location placeholder accidentally attached to MoMA was removed; no verified Instagram review link for MoMA remains.",
+    "sources": [
+      "youtube_lb",
+      "moma",
+      "repo"
+    ],
+    "page": "social.html"
+  },
+  {
+    "id": "F09",
+    "severity": "low",
+    "title": "Central Park hours not published on official page",
+    "detail": "NYC Parks Central Park page lists location, facilities and ZIP codes but no opening hours. Days/hours left blank.",
+    "sources": [
+      "centralpark"
+    ],
+    "page": "activities.html"
+  },
+  {
+    "id": "F10",
+    "severity": "low",
+    "title": "Some official pages could not be fetched directly",
+    "detail": "Hilton, Hyatt and Arlo booking/rooms pages redirected to generic booking shells or failed to return content. Those hotels were kept only where an official NYC Tourism listing or another official page supplied verified facts; all unverified fields are blank.",
+    "sources": [
+      "hotel_week"
+    ],
+    "page": "verification.html"
+  },
+  {
+    "id": "F11",
+    "severity": "low",
+    "title": "Trip starts on a U.S. federal holiday",
+    "detail": "Monday 15 February 2027 is Washington's Birthday (OPM). Impact on rates, crowds and venue hours is not verified.",
+    "sources": [
+      "opm"
+    ],
+    "page": "dates.html"
+  },
+  {
+    "id": "F12",
+    "severity": "low",
+    "title": "Parallel-session scope separation",
+    "detail": "Another session owns the repository-root site and .github/workflows/. This session's site is self-contained in docs/. Arena fixes the branch name, so the requested session-<id>/<task> branches could not be created; branch isolation plus file-scope claims are used instead.",
+    "sources": [
+      "repo"
+    ],
+    "page": "verification.html"
+  },
+  {
+    "id": "F13",
+    "severity": "medium",
+    "title": "Arlo Cyber Sale stay-date end conflict",
+    "detail": "Official Arlo Cyber Exclusive Access page: 40% off, sale ends 3 Dec 2026, NYC stay dates through 31 Oct 2027. Official Arlo booking page rate description: 'Book by December 3 ... stay dates through December 2027'. Both cited; neither corrected.",
+    "sources": [
+      "arlo_cyber",
+      "arlo_booking_7n"
+    ],
+    "page": "dates.html"
+  },
+  {
+    "id": "F14",
+    "severity": "medium",
+    "title": "Hotel 7-night totals are not like-for-like",
+    "detail": "Pod 51 Queen Pod $1,109 states 'Including taxes and fees'. Arlo NoMad Queen $1,296 states 'Including the urban fee, excluding taxes'. No official Arlo tax amount was published on the fetched page, so the final Arlo total and the true cheapest hotel cannot be confirmed.",
+    "sources": [
+      "pod51_booking_7n",
+      "arlo_booking_7n"
+    ],
+    "page": "hotels.html"
+  },
+  {
+    "id": "F15",
+    "severity": "low",
+    "title": "No market-wide cheapest booking time is officially verified",
+    "detail": "Arlo 40% off (book by 3 Dec 2026) and Marriott 15%/25% off (book by Tuesday 1 Dec) are the highest verified in-window discounts among the offers checked. No official source compares all NYC hotels or publishes a single best time to book; the claim is qualified, not presented as market-wide proof.",
+    "sources": [
+      "arlo_cyber",
+      "marriott_cyber",
+      "hotel_week"
+    ],
+    "page": "dates.html"
+  },
+  {
+    "id": "F16",
+    "severity": "low",
+    "title": "Pod 51 facility fee not itemized in booking total",
+    "detail": "Official FAQ lists a $29.84 incl-tax facility fee per room per night. The 7-night booking page says totals include taxes and fees but does not itemize that facility fee; no amount was added or subtracted manually.",
+    "sources": [
+      "pod51_faq",
+      "pod51_booking_7n"
+    ],
+    "page": "hotels.html"
+  }
+]

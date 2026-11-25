@@ -1,0 +1,3204 @@
+{
+  "checked": "2026-11-25",
+  "fields": [
+    {
+      "page": "dates.html",
+      "row": "Pod 51 Hotel",
+      "field": "Hotel social reviews",
+      "sources": [
+        "pod51",
+        "pod51_rooms",
+        "pod51_faq",
+        "pod51_location",
+        "pod51_booking_7n"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "Arlo NoMad",
+      "field": "Private bathroom",
+      "sources": [
+        "arlo_nomad",
+        "hotel_week",
+        "hotel_week_about",
+        "arlo_booking_7n",
+        "arlo_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "Arlo NoMad",
+      "field": "Transit",
+      "sources": [
+        "arlo_nomad",
+        "hotel_week",
+        "hotel_week_about",
+        "arlo_booking_7n",
+        "arlo_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "Arlo NoMad",
+      "field": "Hotel social reviews",
+      "sources": [
+        "arlo_nomad",
+        "hotel_week",
+        "hotel_week_about",
+        "arlo_booking_7n",
+        "arlo_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "11 Howard",
+      "field": "Private bathroom",
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "11 Howard",
+      "field": "Bed",
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "11 Howard",
+      "field": "Fees / price basis",
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "11 Howard",
+      "field": "Transit",
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "11 Howard",
+      "field": "7-night total for 2 adults",
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "11 Howard",
+      "field": "Exceptions",
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "11 Howard",
+      "field": "Hotel social reviews",
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "citizenM New York Times Square",
+      "field": "Private bathroom",
+      "sources": [
+        "citizenm",
+        "citizenm_property",
+        "citizenm_rooms",
+        "marriott_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "citizenM New York Times Square",
+      "field": "Fees / price basis",
+      "sources": [
+        "citizenm",
+        "citizenm_property",
+        "citizenm_rooms",
+        "marriott_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "citizenM New York Times Square",
+      "field": "7-night total for 2 adults",
+      "sources": [
+        "citizenm",
+        "citizenm_property",
+        "citizenm_rooms",
+        "marriott_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "citizenM New York Times Square",
+      "field": "Exceptions",
+      "sources": [
+        "citizenm",
+        "citizenm_property",
+        "citizenm_rooms",
+        "marriott_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "citizenM New York Times Square",
+      "field": "Hotel social reviews",
+      "sources": [
+        "citizenm",
+        "citizenm_property",
+        "citizenm_rooms",
+        "marriott_cyber"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Address / ZIP",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Private bathroom",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Bed",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Fees / price basis",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Transit",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "7-night total for 2 adults",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Exceptions",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Hotel social reviews",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Address / ZIP",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Private bathroom",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Bed",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Fees / price basis",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Transit",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "7-night total for 2 adults",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Exceptions",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "dates.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Hotel social reviews",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Sushi Sho",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Aska",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Atera",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Blue Hill at Stone Barns",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "César",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Chef's Table at Brooklyn Fare",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Joo Ok",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Masa",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "odo",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Saga",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Sushi Noz",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "63 Clinton",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Bar Miller",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "bōm",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Bridges",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Café Boulud",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Casa Mono",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Corima",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Crown Shy",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Dirt Candy",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Essential by Christophe",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Estela",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Family Meal at Blue Hill",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Francie",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Frevo",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Huso",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Icca",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Jeju Noodle Bar",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Jōji",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Jua",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Kochi",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Kosaka",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "L'Abeille",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "La Bastide by Andrea Calstier",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Le Pavillon",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Mari",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Meju",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Muku",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Noda",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Nōksu",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Noz 17",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Oiji Mi",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Oxomoco",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Restaurant Yuu",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Rezdôra",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Semma",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Shion 69 Leonard Street",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Shmoné",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Shota Omakase",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Sushi Nakazawa",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Tempura Matsui",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "The Four Horsemen",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Torien",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Torrisi",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Tsukimi",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Tuome",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Yamada",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "YingTao",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "hotels.html",
+      "row": "Yoshino",
+      "field": "Current star verified",
+      "sources": [
+        "michelin_stars_2025"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Per Se",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_per-se",
+        "perseny"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Per Se",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_per-se",
+        "perseny"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Jungsik New York",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_jungsik-new-york",
+        "jungsik"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Jungsik New York",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_jungsik-new-york",
+        "jungsik"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Aquavit",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_aquavit"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Aquavit",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_aquavit"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Gabriel Kreuther",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_gabriel-kreuther"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Gabriel Kreuther",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_gabriel-kreuther"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Gabriel Kreuther",
+      "field": "Social review links",
+      "sources": [
+        "michelin_page_gabriel-kreuther"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Jean-Georges",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_jean-georges"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Jean-Georges",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_jean-georges"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Jean-Georges",
+      "field": "Social review links",
+      "sources": [
+        "michelin_page_jean-georges"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Atomix",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_atomix",
+        "atomix"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Atomix",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_atomix",
+        "atomix"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Gramercy Tavern",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_gramercy-tavern"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Gramercy Tavern",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_gramercy-tavern"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Cote",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_cote",
+        "cote",
+        "youtube_cote"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Cote",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_cote",
+        "cote",
+        "youtube_cote"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Le Coucou",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_le-coucou"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Le Coucou",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_le-coucou"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Daniel",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_page_daniel"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Daniel",
+      "field": "Price basis",
+      "sources": [
+        "michelin_page_daniel"
+      ]
+    },
+    {
+      "page": "michelin.html",
+      "row": "Daniel",
+      "field": "Social review links",
+      "sources": [
+        "michelin_page_daniel"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Noury",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions",
+        "michelin_page_noury",
+        "noury_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Noury",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions",
+        "michelin_page_noury",
+        "noury_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Mūje",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions",
+        "michelin_page_muje",
+        "muje_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Mūje",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions",
+        "michelin_page_muje",
+        "muje_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Mūje",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions",
+        "michelin_page_muje",
+        "muje_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Mūje",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions",
+        "michelin_page_muje",
+        "muje_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Mūje",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions",
+        "michelin_page_muje",
+        "muje_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Nyonya",
+      "field": "Added",
+      "sources": [
+        "howard_michelin",
+        "michelin_page_nyonya",
+        "nyonya_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Nyonya",
+      "field": "Area",
+      "sources": [
+        "howard_michelin",
+        "michelin_page_nyonya",
+        "nyonya_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Nyonya",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "howard_michelin",
+        "michelin_page_nyonya",
+        "nyonya_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Nyonya",
+      "field": "Social review links",
+      "sources": [
+        "howard_michelin",
+        "michelin_page_nyonya",
+        "nyonya_official"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Border Town",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Border Town",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Border Town",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Border Town",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Border Town",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Border Town",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Border Town",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elder",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elder",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elder",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elder",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elder",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elder",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elder",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Indienne NYC",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Indienne NYC",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Indienne NYC",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Indienne NYC",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Indienne NYC",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Indienne NYC",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Indienne NYC",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oriana",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oriana",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oriana",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oriana",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oriana",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oriana",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oriana",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Or'esh",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Or'esh",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Or'esh",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Or'esh",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Or'esh",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Or'esh",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Or'esh",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Humm",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Humm",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Humm",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Humm",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Humm",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Humm",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Humm",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Graciela",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Graciela",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Graciela",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Graciela",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Graciela",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Graciela",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Graciela",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Roscioli",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Roscioli",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Roscioli",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Roscioli",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Roscioli",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Roscioli",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Roscioli",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Levant",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Levant",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Levant",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Levant",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Levant",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Levant",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Levant",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Little Banchan Shop",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Little Banchan Shop",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Little Banchan Shop",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Little Banchan Shop",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Little Banchan Shop",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Little Banchan Shop",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Little Banchan Shop",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Cuisine",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Confidant",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "arthur",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "arthur",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "arthur",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "arthur",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "arthur",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "arthur",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "arthur",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Balera",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Balera",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Balera",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Balera",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Balera",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Balera",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Balera",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Odo East Village",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Odo East Village",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Odo East Village",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Odo East Village",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Odo East Village",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Odo East Village",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Odo East Village",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Len Len",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Len Len",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Len Len",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Len Len",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Len Len",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Len Len",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Len Len",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bistrot Ha",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bistrot Ha",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bistrot Ha",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bistrot Ha",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bistrot Ha",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bistrot Ha",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bistrot Ha",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Kjun",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Kjun",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Kjun",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Kjun",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Kjun",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Kjun",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Kjun",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oyatte",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oyatte",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oyatte",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oyatte",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oyatte",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oyatte",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Oyatte",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Marcel",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Marcel",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Marcel",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Marcel",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Marcel",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Marcel",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Marcel",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Yugin",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Yugin",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Yugin",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Yugin",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Yugin",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Yugin",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Yugin",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Wild Cherry",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Wild Cherry",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Wild Cherry",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Wild Cherry",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Wild Cherry",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Wild Cherry",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Wild Cherry",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cynthia",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cynthia",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cynthia",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cynthia",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cynthia",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cynthia",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cynthia",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "AbuQir",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "AbuQir",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "AbuQir",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "AbuQir",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "AbuQir",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "AbuQir",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "AbuQir",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bolivian Llama Party",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bolivian Llama Party",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bolivian Llama Party",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bolivian Llama Party",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bolivian Llama Party",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bolivian Llama Party",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bolivian Llama Party",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Pierogi Boys",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Pierogi Boys",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Pierogi Boys",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Pierogi Boys",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Pierogi Boys",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Pierogi Boys",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Pierogi Boys",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Entre Nous",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Entre Nous",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Entre Nous",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Entre Nous",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Entre Nous",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Entre Nous",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Entre Nous",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Los Burritos Juárez",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Los Burritos Juárez",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Los Burritos Juárez",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Los Burritos Juárez",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Los Burritos Juárez",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Los Burritos Juárez",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Los Burritos Juárez",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bong",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bong",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bong",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bong",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bong",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bong",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Bong",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Vato",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Vato",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Vato",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Vato",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Vato",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Vato",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Vato",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "I Cavallini",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "I Cavallini",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "I Cavallini",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "I Cavallini",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "I Cavallini",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "I Cavallini",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "I Cavallini",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Le Chêne",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Le Chêne",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Le Chêne",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Le Chêne",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Le Chêne",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Le Chêne",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Le Chêne",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Hwaro",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Hwaro",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Hwaro",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Hwaro",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Hwaro",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Hwaro",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Hwaro",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elcielo New York",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elcielo New York",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elcielo New York",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elcielo New York",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elcielo New York",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elcielo New York",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Elcielo New York",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cove",
+      "field": "Address / ZIP",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cove",
+      "field": "Days open",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cove",
+      "field": "Hours",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cove",
+      "field": "Exceptions",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cove",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cove",
+      "field": "Official site",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "restaurants.html",
+      "row": "Cove",
+      "field": "Social review links",
+      "sources": [
+        "michelin_additions"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "American Museum of Natural History",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "amnh"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "Statue of Liberty National Monument & Ellis Island",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "nps",
+        "youtube_sol"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "Empire State Building Observatory",
+      "field": "Hours",
+      "sources": [
+        "esb"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "Empire State Building Observatory",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "esb"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "One World Observatory",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "owo"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "9/11 Memorial & Museum",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "911"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "Central Park",
+      "field": "Days open",
+      "sources": [
+        "centralpark"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "Central Park",
+      "field": "Hours",
+      "sources": [
+        "centralpark"
+      ]
+    },
+    {
+      "page": "guide-listed.html",
+      "row": "Central Park",
+      "field": "Cost for 2 adults",
+      "sources": [
+        "centralpark"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "11 Howard",
+      "field": "ZIP",
+      "sources": [
+        "michelin_all_starred",
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "11 Howard",
+      "field": "Same-ZIP count",
+      "sources": [
+        "michelin_all_starred",
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "11 Howard",
+      "field": "Restaurants",
+      "sources": [
+        "michelin_all_starred",
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "ZIP",
+      "sources": [
+        "michelin_all_starred",
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Same-ZIP count",
+      "sources": [
+        "michelin_all_starred",
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Restaurants",
+      "sources": [
+        "michelin_all_starred",
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "The Westin New York at Times Square",
+      "field": "ZIP",
+      "sources": [
+        "michelin_all_starred",
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Same-ZIP count",
+      "sources": [
+        "michelin_all_starred",
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Restaurants",
+      "sources": [
+        "michelin_all_starred",
+        "westin",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "AC Hotel New York Times Square",
+      "field": "Fields",
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "page": "activities.html",
+      "row": "The Westin New York at Times Square",
+      "field": "Fields",
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    }
+  ]
+}

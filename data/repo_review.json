@@ -1,0 +1,51 @@
+{
+  "checked": "2026-11-25",
+  "baseline_commit": "c251442d122a8d04aade3d8b5a0d57fd4e9ce37c",
+  "findings": [
+    {
+      "item": "README.md",
+      "verified": "Yes — fetched from the repository at c251442; contains only the single line '# NYFun3'.",
+      "irregularity": "The repository had no site, no data files, no COORDINATION.md and no CI/GitHub Pages configuration at the start of this session.",
+      "source": "local git show c251442:README.md",
+      "sources": [
+        "repo"
+      ]
+    },
+    {
+      "item": "COORDINATION.md",
+      "verified": "Yes — created in this session; imported the existing board from origin/arena/7386fd81-nyfun3.",
+      "irregularity": "The existing claim on the other session branch covers COORDINATION.md, README.md, index.html, assets/, pages/ and .github/workflows/. This session therefore keeps its entire deliverable in docs/, data/ and tools/.",
+      "source": "git show FETCH_HEAD:COORDINATION.md (origin/arena/7386fd81-nyfun3)",
+      "sources": [
+        "repo"
+      ]
+    },
+    {
+      "item": "Branch model",
+      "verified": "Yes — git branch / git ls-remote origin.",
+      "irregularity": "Arena fixes this session to arena/8781ea5a-nyfun3 and forbids creating or pushing other branches; the requested session-<id>/<task> branch convention cannot be used. Logged in COORDINATION.md.",
+      "source": "local git status / git ls-remote origin",
+      "sources": [
+        "repo"
+      ]
+    },
+    {
+      "item": "Existing verification",
+      "verified": "Yes — no data tables, no sources, no tests existed to review line by line.",
+      "irregularity": "All verification in this session is new work against official external sources; no prior claims were carried over.",
+      "source": "git ls-tree -r c251442",
+      "sources": [
+        "repo"
+      ]
+    },
+    {
+      "item": "origin/arena/7386fd81-nyfun3 root site",
+      "verified": "Yes — git fetch / git ls-tree / git show FETCH_HEAD:COORDINATION.md on 2026-11-25.",
+      "irregularity": "That branch now contains index.html, assets/style.css and pages/*.html and marks its task 'needs review'. It reports no comparable hotel prices or routes and a Met Thursday source conflict. This session does not edit those files; the final integration request is logged in COORDINATION.md.",
+      "source": "git show FETCH_HEAD:COORDINATION.md (origin/arena/7386fd81-nyfun3)",
+      "sources": [
+        "repo"
+      ]
+    }
+  ]
+}

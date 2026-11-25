@@ -1,0 +1,229 @@
+[
+  {
+    "name": "Pod 51 Hotel",
+    "area": "Midtown East",
+    "address": "230 E 51st St, New York, NY 10022 (official SynXis booking page)",
+    "zip": "10022",
+    "official_url": "https://www.thepodhotel.com/pod-51",
+    "booking_url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=12484&child=0&currency=USD&depart=2027-02-22&hotel=41155&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+    "private_bath": "Yes — Queen Pod official booking page: 'private bathroom with rainfall shower'; some other room types have shared baths",
+    "bed": "1 Queen bed (Queen Pod, sleeps 2, 150 sq ft)",
+    "amenities": "Queen Pod: private bathroom with rainfall shower, safe, desk/workplace, hair dryer, air conditioning, free Wi-Fi, flat-screen TV; rooftop deck, outdoor garden, free walking tours, same-day luggage storage",
+    "fees": "Official FAQ lists a facility fee of $29.84 (incl. tax) per room per night, in addition to the room rate. The 7-night booking page says its totals are 'Including taxes and fees' but does not itemize the facility fee; do not add it again.",
+    "transit": "6 / E / M at Lexington Ave–E 53rd St; M50, M101, M102, M103 buses (official location/FAQ pages)",
+    "price_7n": "$1,109 (Pod Member Rate, incl taxes & fees); $1,310 (Stay 4 & Save, incl taxes & fees)",
+    "price_quotes": [
+      {
+        "hotel": "Pod 51 Hotel",
+        "room": "Queen Pod",
+        "rate": "Pod Member Rate",
+        "total": "$1,109",
+        "basis": "15–22 Feb 2027, 2 adults, 1 room; official page states 'Total for 7 nights', 'Including taxes and fees'; free cancellation up to 3:00 PM 2 days before arrival; displayed $159/night.",
+        "source": "pod51_booking_7n"
+      },
+      {
+        "hotel": "Pod 51 Hotel",
+        "room": "Queen Pod",
+        "rate": "Stay 4 & Save",
+        "total": "$1,310",
+        "basis": "15–22 Feb 2027, 2 adults, 1 room; official page states 'Total for 7 nights', 'Including taxes and fees'; free cancellation up to 3:00 PM 2 days before arrival; displayed $188/night.",
+        "source": "pod51_booking_7n"
+      }
+    ],
+    "price_note": "Real dated official 7-night totals for 2 adults. Pod Member Rate requires the hotel's member rate; no official page states whether membership is free.",
+    "days_open": "",
+    "hours": "",
+    "exceptions": "Check-in 3:00 PM, check-out 1:00 PM (official FAQ).",
+    "social": [],
+    "sources": [
+      "pod51",
+      "pod51_rooms",
+      "pod51_faq",
+      "pod51_location",
+      "pod51_booking_7n"
+    ],
+    "flags": [
+      "Lowest verified all-in 7-night total among the official quotes captured, but no market-wide price comparison exists.",
+      "Facility fee is listed separately by the official FAQ; the booking total says taxes and fees are included but does not itemize that fee.",
+      "7-night quote verified for 15–22 Feb 2027 only; other date options were not quoted.",
+      "No verified social review link found for this hotel."
+    ]
+  },
+  {
+    "name": "Arlo NoMad",
+    "area": "NoMad",
+    "address": "11 E. 31st St., Manhattan, NY 10016 (official NYC Tourism listing)",
+    "zip": "10016",
+    "official_url": "https://www.nyctourism.com/hotel-week/arlo-hotel-nomad/",
+    "booking_url": "https://book.arlohotels.com/?adult=2&arrive=2027-02-15&chain=19470&child=0&currency=USD&depart=2027-02-22&hotel=70017&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+    "private_bath": "",
+    "bed": "1 Queen bed in the Queen room (sleeps 2; 145 sq ft) — official booking page",
+    "amenities": "250 modern micro guestrooms (150 sq ft), complimentary WiFi, Blind Barber bath amenities, custom walnut furnishings, 31st-floor rooftop bar A.R.T., Lamalo restaurant, complimentary Arlo bicycles; official booking page also lists Queen, Essential Queen, City Queen, King, Corner Queen, Sky View and Terrace room types",
+    "fees": "Booking totals state 'Including the urban fee, excluding taxes'.",
+    "transit": "",
+    "price_7n": "$1,296 (The Steal Deal); $1,985 (Plain & Simple); $2,195 (Start Your Morning Right) — all incl urban fee, excl taxes",
+    "price_quotes": [
+      {
+        "hotel": "Arlo NoMad",
+        "room": "Queen",
+        "rate": "The Steal Deal",
+        "total": "$1,296",
+        "basis": "15–22 Feb 2027, 2 adults, 1 room; 'Total for 7 nights', 'Including the urban fee, excluding taxes'; non-refundable, deposit required; book by December 3; displayed $185/night.",
+        "source": "arlo_booking_7n"
+      },
+      {
+        "hotel": "Arlo NoMad",
+        "room": "Queen",
+        "rate": "Plain & Simple",
+        "total": "$1,985",
+        "basis": "15–22 Feb 2027, 2 adults, 1 room; 'Total for 7 nights', 'Including the urban fee, excluding taxes'; free cancellation up to 1 day before arrival; displayed $283/night.",
+        "source": "arlo_booking_7n"
+      },
+      {
+        "hotel": "Arlo NoMad",
+        "room": "Queen",
+        "rate": "Start Your Morning Right",
+        "total": "$2,195",
+        "basis": "15–22 Feb 2027, 2 adults, 1 room; 'Total for 7 nights', 'Including the urban fee, excluding taxes'; breakfast included; free cancellation up to 1 day before arrival; displayed $313/night.",
+        "source": "arlo_booking_7n"
+      }
+    ],
+    "price_note": "Real dated official 7-night subtotals for 2 adults, but they EXCLUDE taxes. No official tax amount was published on the fetched booking page, so the final all-in total is blank.",
+    "days_open": "",
+    "hours": "",
+    "exceptions": "Hotel alert on official booking page: check-in age is 21 years old.",
+    "social": [],
+    "sources": [
+      "arlo_nomad",
+      "hotel_week",
+      "hotel_week_about",
+      "arlo_booking_7n",
+      "arlo_cyber"
+    ],
+    "flags": [
+      "Displayed 7-night totals exclude taxes; not like-for-like with Pod 51's taxes-and-fees-included total.",
+      "Private bathroom wording is not explicit on the fetched official pages; cell left blank.",
+      "Irregularity: official Cyber Exclusive Access page says NYC stay dates through 31 Oct 2027, while the booking page rate description says 'stay dates through December 2027'.",
+      "No verified transit statement and no verified social review link found."
+    ]
+  },
+  {
+    "name": "11 Howard",
+    "area": "SoHo",
+    "address": "11 Howard Street, New York City, NY (official hotel page / MICHELIN Guide hotel page)",
+    "zip": "",
+    "official_url": "https://www.11howard.com/",
+    "booking_url": "https://booking.11howard.com/",
+    "private_bath": "",
+    "bed": "",
+    "amenities": "207 guest rooms and suites (official hotel site), library/co-working space, bar, Le Coucou (1 MICHELIN Star) in the building; MICHELIN Guide hotel page lists 213 rooms and a guest score of 18.1/20",
+    "fees": "",
+    "transit": "",
+    "price_7n": "",
+    "price_quotes": [],
+    "price_note": "No 15–22 Feb 2027 rate could be confirmed; the official booking/availability page fetched returned only a default date search, not a dated quote. Left blank.",
+    "days_open": "",
+    "hours": "",
+    "exceptions": "",
+    "social": [],
+    "sources": [
+      "howard",
+      "howard_michelin",
+      "michelin_page_le-coucou",
+      "howard_booking"
+    ],
+    "flags": [
+      "Irregularity: official hotel site says 207 rooms; MICHELIN Guide hotel page says 213 rooms.",
+      "Private bathroom and bed size are not stated on the fetched official pages; left blank.",
+      "ZIP code and 7-night total price unverified.",
+      "No verified social review link found for this hotel."
+    ]
+  },
+  {
+    "name": "citizenM New York Times Square",
+    "area": "Times Square / Midtown West",
+    "address": "218 West 50th Street, New York, NY 10019 (official Marriott property page)",
+    "zip": "10019",
+    "official_url": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/overview/",
+    "booking_url": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/overview/",
+    "private_bath": "",
+    "bed": "XL king-size bed in every room (official Marriott property and rooms pages)",
+    "amenities": "XL king-size beds, blackout blinds, rain showers / high-pressure power shower, mood lighting, Chromecast, tablet-controlled temperature/TV, 24/7 canteenM, cloudM rooftop bar, gym, free Wi-Fi, contactless check-in; official page says eight subway lines are just outside the door",
+    "fees": "",
+    "transit": "Eight subway lines just outside the door (official Marriott property page; no specific lines named).",
+    "price_7n": "",
+    "price_quotes": [],
+    "price_note": "No 15–22 Feb 2027 7-night total confirmed. The official CYBER SALE offer gives 15% off here / 25% off for members in the Marriott Bonvoy app with code QRI, 5-day advance prepaid non-refundable rate, book by Tuesday 1 Dec, valid stay dates 29 Nov 2026–2 May 2027; no dated total is published.",
+    "days_open": "",
+    "hours": "",
+    "exceptions": "",
+    "social": [],
+    "sources": [
+      "citizenm",
+      "citizenm_property",
+      "citizenm_rooms",
+      "marriott_cyber"
+    ],
+    "flags": [
+      "Private bathroom wording is not explicit on the fetched official property/rooms pages (in-room shower is described, but not labeled 'private bathroom'); cell left blank.",
+      "7-night total price unverified; the official Cyber Sale publishes a discount, not a total.",
+      "No verified social review link found for this hotel."
+    ]
+  },
+  {
+    "name": "AC Hotel New York Times Square",
+    "area": "Garment District",
+    "address": "",
+    "zip": "",
+    "official_url": "https://www.nyctourism.com/hotel-week/",
+    "booking_url": "https://bit.ly/ACTS2027HOTELWEEK",
+    "private_bath": "",
+    "bed": "",
+    "amenities": "Private balconies and angled ceiling-to-floor windows (official NYC Tourism Hotel Week listing)",
+    "fees": "",
+    "transit": "",
+    "price_7n": "",
+    "price_quotes": [],
+    "price_note": "No 15–22 Feb 2027 rate could be confirmed; left blank. Hotel Week 25% offer applies 2 Jan–11 Feb 2027 only.",
+    "days_open": "",
+    "hours": "",
+    "exceptions": "",
+    "social": [],
+    "sources": [
+      "ac_hotel",
+      "hotel_week"
+    ],
+    "flags": [
+      "Private bathroom, bed size, address, ZIP and 7-night price not published on the fetched official listing; left blank.",
+      "No verified social review link found for this hotel."
+    ]
+  },
+  {
+    "name": "The Westin New York at Times Square",
+    "area": "Times Square / Theatre District",
+    "address": "",
+    "zip": "",
+    "official_url": "https://www.nyctourism.com/hotel-week/",
+    "booking_url": "https://www.marriott.com/event-reservations/reservation-link.mi?id=1767810805266&key=CORP&app=resvlink",
+    "private_bath": "",
+    "bed": "",
+    "amenities": "Ideally located in Times Square, in the heart of Midtown Manhattan (official NYC Tourism Hotel Week listing)",
+    "fees": "",
+    "transit": "",
+    "price_7n": "",
+    "price_quotes": [],
+    "price_note": "No 15–22 Feb 2027 rate could be confirmed; left blank. Hotel Week 25% offer applies 2 Jan–11 Feb 2027 only.",
+    "days_open": "",
+    "hours": "",
+    "exceptions": "",
+    "social": [],
+    "sources": [
+      "westin",
+      "hotel_week"
+    ],
+    "flags": [
+      "Private bathroom, bed size, address, ZIP and 7-night price not published on the fetched official listing; left blank.",
+      "No verified social review link found for this hotel."
+    ]
+  }
+]

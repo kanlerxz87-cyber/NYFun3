@@ -1,0 +1,413 @@
+{
+  "checked": "2026-11-25",
+  "method": "Only official data is used. MICHELIN restaurant pages publish street addresses incl. ZIP codes; those addresses are grouped below to show where starred restaurants cluster, and hotels with a verified ZIP are matched to same-ZIP restaurants. Same-ZIP counts are a static, verifiable cluster view, NOT the requested 'within 1 hour by subway or bus' count. That travel-time test requires a dated route/time result from the MTA Trip Planner, which is not a static official value. Because the rule says never infer or fill in values, the travel-time-based counts and the Michelin-density hotel ranking remain blank and flagged unverified. A verified-attribute ranking and a real dated price ranking are supplied instead, using only values actually published on official pages.",
+  "zip_clusters": [
+    {
+      "zip": "10003",
+      "count": 1,
+      "restaurants": [
+        {
+          "name": "Gramercy Tavern",
+          "stars": "1",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gramercy-tavern"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10010",
+      "count": 2,
+      "restaurants": [
+        {
+          "name": "Eleven Madison Park",
+          "stars": "3",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/eleven-madison-park"
+        },
+        {
+          "name": "Cote",
+          "stars": "1",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/cote"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10013",
+      "count": 2,
+      "restaurants": [
+        {
+          "name": "Jungsik New York",
+          "stars": "3",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jungsik-new-york"
+        },
+        {
+          "name": "Le Coucou",
+          "stars": "1",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10016",
+      "count": 1,
+      "restaurants": [
+        {
+          "name": "Atomix",
+          "stars": "2",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/atomix"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10019",
+      "count": 3,
+      "restaurants": [
+        {
+          "name": "Le Bernardin",
+          "stars": "3",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-bernardin"
+        },
+        {
+          "name": "Per Se",
+          "stars": "3",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/per-se"
+        },
+        {
+          "name": "The Modern",
+          "stars": "2",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/the-modern"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10022",
+      "count": 1,
+      "restaurants": [
+        {
+          "name": "Aquavit",
+          "stars": "2",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/aquavit"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10023",
+      "count": 1,
+      "restaurants": [
+        {
+          "name": "Jean-Georges",
+          "stars": "2",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jean-georges"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10036",
+      "count": 1,
+      "restaurants": [
+        {
+          "name": "Gabriel Kreuther",
+          "stars": "2",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gabriel-kreuther"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    },
+    {
+      "zip": "10065",
+      "count": 1,
+      "restaurants": [
+        {
+          "name": "Daniel",
+          "stars": "1",
+          "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/daniel"
+        }
+      ],
+      "sources": [
+        "michelin_all_starred"
+      ]
+    }
+  ],
+  "cluster_scope": "13 starred restaurants whose current MICHELIN pages were fetched and verified line by line (sample of the 69 starred restaurants in the current official listing).",
+  "travel_time": {
+    "value": "",
+    "status": "unverified",
+    "why": "MTA does not publish a static hotel→restaurant travel-time matrix; the official Trip Planner computes a dated, time-specific result and requires a manual query.",
+    "sources": [
+      "mta_maps",
+      "mta_trip",
+      "mta_riding"
+    ]
+  },
+  "michelin_density_ranking": [],
+  "verified_attribute_ranking": [
+    {
+      "hotel": "Pod 51 Hotel",
+      "score": 7,
+      "fields": [
+        "private bathroom confirmed",
+        "queen-or-larger bed confirmed",
+        "street address confirmed",
+        "ZIP code confirmed",
+        "official transit statement confirmed",
+        "fee / price basis published",
+        "dated 7-night total published"
+      ],
+      "sources": [
+        "pod51",
+        "pod51_rooms",
+        "pod51_faq",
+        "pod51_location",
+        "pod51_booking_7n"
+      ]
+    },
+    {
+      "hotel": "Arlo NoMad",
+      "score": 5,
+      "fields": [
+        "queen-or-larger bed confirmed",
+        "street address confirmed",
+        "ZIP code confirmed",
+        "fee / price basis published",
+        "dated 7-night total published"
+      ],
+      "sources": [
+        "arlo_nomad",
+        "hotel_week",
+        "hotel_week_about",
+        "arlo_booking_7n",
+        "arlo_cyber"
+      ]
+    },
+    {
+      "hotel": "citizenM New York Times Square",
+      "score": 4,
+      "fields": [
+        "queen-or-larger bed confirmed",
+        "street address confirmed",
+        "ZIP code confirmed",
+        "official transit statement confirmed"
+      ],
+      "sources": [
+        "citizenm",
+        "citizenm_property",
+        "citizenm_rooms",
+        "marriott_cyber"
+      ]
+    },
+    {
+      "hotel": "11 Howard",
+      "score": 1,
+      "fields": [
+        "street address confirmed"
+      ],
+      "sources": [
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "hotel": "AC Hotel New York Times Square",
+      "score": 0,
+      "fields": [],
+      "sources": [
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "hotel": "The Westin New York at Times Square",
+      "score": 0,
+      "fields": [],
+      "sources": [
+        "westin",
+        "hotel_week"
+      ]
+    }
+  ],
+  "verified_attribute_rule": "1 point each for: private bathroom confirmed; queen-or-larger bed confirmed; street address confirmed on an official page; ZIP code confirmed on an official page; official transit information confirmed; an official fee/price basis published; a dated 7-night total published. Only fields with a non-blank official value score. This is a count of verified information, not a quality score and not a Michelin-density ranking.",
+  "sources": [
+    "michelin_all_starred",
+    "mta_maps",
+    "mta_trip",
+    "mta_riding",
+    "hotel_week",
+    "pod51_booking_7n",
+    "arlo_booking_7n",
+    "arlo_cyber",
+    "marriott_cyber",
+    "citizenm_property",
+    "citizenm_rooms"
+  ],
+  "hotel_zip_clusters": [
+    {
+      "hotel": "Pod 51 Hotel",
+      "zip": "10022",
+      "same_zip_count": 1,
+      "restaurants": [
+        "Aquavit"
+      ],
+      "note": "Same-ZIP count from official MICHELIN street addresses; NOT a 1-hour transit count.",
+      "sources": [
+        "michelin_all_starred",
+        "pod51",
+        "pod51_rooms",
+        "pod51_faq",
+        "pod51_location",
+        "pod51_booking_7n"
+      ]
+    },
+    {
+      "hotel": "Arlo NoMad",
+      "zip": "10016",
+      "same_zip_count": 1,
+      "restaurants": [
+        "Atomix"
+      ],
+      "note": "Same-ZIP count from official MICHELIN street addresses; NOT a 1-hour transit count.",
+      "sources": [
+        "michelin_all_starred",
+        "arlo_nomad",
+        "hotel_week",
+        "hotel_week_about",
+        "arlo_booking_7n",
+        "arlo_cyber"
+      ]
+    },
+    {
+      "hotel": "11 Howard",
+      "zip": "",
+      "same_zip_count": "",
+      "restaurants": [],
+      "note": "Same-ZIP count from official MICHELIN street addresses; NOT a 1-hour transit count.",
+      "sources": [
+        "michelin_all_starred",
+        "howard",
+        "howard_michelin",
+        "michelin_page_le-coucou",
+        "howard_booking"
+      ]
+    },
+    {
+      "hotel": "citizenM New York Times Square",
+      "zip": "10019",
+      "same_zip_count": 3,
+      "restaurants": [
+        "Le Bernardin",
+        "Per Se",
+        "The Modern"
+      ],
+      "note": "Same-ZIP count from official MICHELIN street addresses; NOT a 1-hour transit count.",
+      "sources": [
+        "michelin_all_starred",
+        "citizenm",
+        "citizenm_property",
+        "citizenm_rooms",
+        "marriott_cyber"
+      ]
+    },
+    {
+      "hotel": "AC Hotel New York Times Square",
+      "zip": "",
+      "same_zip_count": "",
+      "restaurants": [],
+      "note": "Same-ZIP count from official MICHELIN street addresses; NOT a 1-hour transit count.",
+      "sources": [
+        "michelin_all_starred",
+        "ac_hotel",
+        "hotel_week"
+      ]
+    },
+    {
+      "hotel": "The Westin New York at Times Square",
+      "zip": "",
+      "same_zip_count": "",
+      "restaurants": [],
+      "note": "Same-ZIP count from official MICHELIN street addresses; NOT a 1-hour transit count.",
+      "sources": [
+        "michelin_all_starred",
+        "westin",
+        "hotel_week"
+      ]
+    }
+  ],
+  "same_zip_note": "citizenM New York Times Square (10019) shares a ZIP with 3 of the 13 detailed starred restaurants (Le Bernardin, Per Se, The Modern); Pod 51 (10022) shares with Aquavit; Arlo NoMad (10016) shares with Atomix. These are address-equality counts, not transit times, and must not be used as the requested 1-hour Michelin-density ranking.",
+  "michelin_density_ranking_status": "unverified — intentionally blank",
+  "price_rank": [
+    {
+      "hotel": "Pod 51 Hotel",
+      "room": "Queen Pod",
+      "rate": "Pod Member Rate",
+      "total": "$1,109",
+      "basis": "15–22 Feb 2027, 2 adults, 1 room; official page states 'Total for 7 nights', 'Including taxes and fees'; free cancellation up to 3:00 PM 2 days before arrival; displayed $159/night.",
+      "source": "pod51_booking_7n",
+      "amount": 1109,
+      "taxes_included": true
+    },
+    {
+      "hotel": "Arlo NoMad",
+      "room": "Queen",
+      "rate": "The Steal Deal",
+      "total": "$1,296",
+      "basis": "15–22 Feb 2027, 2 adults, 1 room; 'Total for 7 nights', 'Including the urban fee, excluding taxes'; non-refundable, deposit required; book by December 3; displayed $185/night.",
+      "source": "arlo_booking_7n",
+      "amount": 1296,
+      "taxes_included": false
+    },
+    {
+      "hotel": "Pod 51 Hotel",
+      "room": "Queen Pod",
+      "rate": "Stay 4 & Save",
+      "total": "$1,310",
+      "basis": "15–22 Feb 2027, 2 adults, 1 room; official page states 'Total for 7 nights', 'Including taxes and fees'; free cancellation up to 3:00 PM 2 days before arrival; displayed $188/night.",
+      "source": "pod51_booking_7n",
+      "amount": 1310,
+      "taxes_included": true
+    },
+    {
+      "hotel": "Arlo NoMad",
+      "room": "Queen",
+      "rate": "Plain & Simple",
+      "total": "$1,985",
+      "basis": "15–22 Feb 2027, 2 adults, 1 room; 'Total for 7 nights', 'Including the urban fee, excluding taxes'; free cancellation up to 1 day before arrival; displayed $283/night.",
+      "source": "arlo_booking_7n",
+      "amount": 1985,
+      "taxes_included": false
+    },
+    {
+      "hotel": "Arlo NoMad",
+      "room": "Queen",
+      "rate": "Start Your Morning Right",
+      "total": "$2,195",
+      "basis": "15–22 Feb 2027, 2 adults, 1 room; 'Total for 7 nights', 'Including the urban fee, excluding taxes'; breakfast included; free cancellation up to 1 day before arrival; displayed $313/night.",
+      "source": "arlo_booking_7n",
+      "amount": 2195,
+      "taxes_included": false
+    }
+  ],
+  "best_price_verified": "Pod 51 Queen Pod Pod Member Rate — $1,109 total for 7 nights including taxes and fees (15–22 Feb 2027, 2 adults, 1 room). Lowest verified all-in total among the official quotes captured; no market-wide comparison exists.",
+  "price_comparison_caveat": "Arlo NoMad's $1,296 'The Steal Deal' total includes the urban fee but excludes taxes; the final all-in amount is blank. Pod 51's total includes taxes and fees. No tax amount was published for Arlo, so the two figures are not like-for-like and no arithmetic adjustment was made."
+}

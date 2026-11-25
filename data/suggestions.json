@@ -1,0 +1,158 @@
+[
+  {
+    "id": "S01",
+    "title": "Complete the dated 'official quote' workflow for the remaining hotels",
+    "problem": "Two of six hotels now have real dated 7-night quotes; four are still blank, and Arlo's total excludes taxes.",
+    "proposal": "Add a quote-capture table (hotel, dates, 2 adults, quoted total incl. taxes/fees, official URL, capture timestamp) and fill it from official booking pages; capture Arlo's tax amount at checkout.",
+    "decision_needed": "Approve a rate-check cadence (daily/weekly) and who records quotes; choose whether to permit screenshots as evidence.",
+    "effort": "Medium",
+    "priority": "P0",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S02",
+    "title": "Integrate MTA Trip Planner results as a first-class data source",
+    "problem": "The requested Michelin-density ranking is blocked: travel time is not a static official value.",
+    "proposal": "Store per-pair Trip Planner results with travel date/time and a link, then compute the ≤60-minute counts from those stored verified values only.",
+    "decision_needed": "Choose the reference date/time (e.g. Tue 16 Feb 2027, 6:00 PM) and whether to include bus-only routes.",
+    "effort": "High",
+    "priority": "P0",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S03",
+    "title": "Add a 'last verified' date and change-detection to every row",
+    "problem": "Official hours, prices and star ratings change; a 2026-11-25 snapshot can go stale before Feb 2027.",
+    "proposal": "Add last-checked timestamps and a re-verification checklist to run in January 2027 and again 7 days before travel.",
+    "decision_needed": "Approve the re-verification dates and the owner.",
+    "effort": "Low",
+    "priority": "P1",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S04",
+    "title": "Separate 'menu subtotal' from 'final total' in restaurant pricing",
+    "problem": "Official menus publish per-person prices and state that tax/gratuity/beverages are extra.",
+    "proposal": "Add explicit columns for menu subtotal, tax, service, beverages and confirmed final total; only fill a column when an official source states it.",
+    "decision_needed": "Confirm whether to request written quotes from restaurants or use published menu subtotals only.",
+    "effort": "Low",
+    "priority": "P1",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S05",
+    "title": "Complete Instagram/TikTok coverage for every listed entry",
+    "problem": "Several rows have no verified social review link, and Instagram currently has only official accounts/location pages.",
+    "proposal": "Add platform-restricted searches per entry, open each candidate URL, and label review vs official account; never add an unopened URL.",
+    "decision_needed": "Decide whether official accounts/location pages count as acceptable social links, or third-party reviews only.",
+    "effort": "Medium",
+    "priority": "P2",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S06",
+    "title": "Publish the full 69-restaurant current star check",
+    "problem": "Only 13 of the 2025 roster names were checked against their current MICHELIN pages.",
+    "proposal": "Fetch the remaining current pages, record star icons, and replace blank 'current star verified' cells.",
+    "decision_needed": "Approve the time budget and whether to include Westchester/Brooklyn/Queens entries in the cluster analysis.",
+    "effort": "Medium",
+    "priority": "P1",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S07",
+    "title": "Resolve the 11 Howard room-count conflict",
+    "problem": "Official hotel site says 207 rooms; MICHELIN Guide hotel page says 213 rooms.",
+    "proposal": "Contact the hotel or check a newer official room inventory page; keep both cited values until one is confirmed.",
+    "decision_needed": "Choose which official source is authoritative for the site.",
+    "effort": "Low",
+    "priority": "P2",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S08",
+    "title": "Add a decision dashboard with explicit go/no-go gates",
+    "problem": "Important unknowns are spread across pages; a reviewer cannot see at a glance which decisions are blocked.",
+    "proposal": "Add a compact 'decision gates' panel: dates, budget, hotel shortlist, itinerary, reservations — each marked ready / blocked with a link to the blocking question.",
+    "decision_needed": "Approve the gate list and their order.",
+    "effort": "Low",
+    "priority": "P1",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S09",
+    "title": "Add a mobile 'trip mode' view",
+    "problem": "Full comparison tables are wide on a phone.",
+    "proposal": "Add a card view with one entry per card, sticky day headers, and a 'show unverified only' toggle.",
+    "decision_needed": "Choose the default view (table vs cards) for small screens.",
+    "effort": "Medium",
+    "priority": "P2",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S10",
+    "title": "Reconcile parallel-session site outputs before final publish",
+    "problem": "Two sessions own non-overlapping scopes (root site vs docs/ dashboard); two indexes could confuse users.",
+    "proposal": "Final integration session merges branches, keeps one navigation/index, re-verifies combined tables, checks links, and re-points GitHub Pages.",
+    "decision_needed": "Choose the canonical Pages source and landing page.",
+    "effort": "Medium",
+    "priority": "P1",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S11",
+    "title": "Add a tax-equivalent hotel price comparison",
+    "problem": "Pod 51's $1,109 includes taxes and fees; Arlo NoMad's $1,296 includes the urban fee but excludes taxes, so the cheapest hotel cannot be confirmed like-for-like.",
+    "proposal": "Add an 'all-in confirmed total' column populated only from an official checkout page that itemizes taxes; keep subtotals in a separate column.",
+    "decision_needed": "Approve capturing checkout-step quotes (not just the room-list page) for every hotel.",
+    "effort": "Low",
+    "priority": "P0",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "id": "S12",
+    "title": "Resolve the Arlo Cyber Sale stay-date conflict",
+    "problem": "The official Arlo promo page says NYC stay dates through 31 October 2027; the official booking rate description says through December 2027.",
+    "proposal": "Ask Arlo or check a newer official terms page; keep both cited values until one is confirmed and add a check date.",
+    "decision_needed": "Choose which official source is authoritative for the site.",
+    "effort": "Low",
+    "priority": "P2",
+    "status": "proposed — awaiting review",
+    "sources": [
+      "repo"
+    ]
+  }
+]

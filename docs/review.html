@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Line-by-line repository review and irregularities">
+<title>Repo review · NY 2027 Trip Research</title>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-row">
+      <a class="brand" href="index.html">NY <span>2027</span> Trip Research</a>
+      <span class="checked-badge">Official sources checked 2026-11-25</span>
+    </div>
+    <div class="nav-scroll"><nav class="site-nav" aria-label="Site navigation"><a href="index.html" class="">Overview</a><a href="executive-summary.html" class="">Executive summary</a><a href="dates.html" class="">Dates &amp; booking</a><a href="hotels.html" class="">Hotels</a><a href="travel.html" class="">Travel &amp; clusters</a><a href="michelin.html" class="">MICHELIN stars</a><a href="restaurants.html" class="">Restaurants</a><a href="guide-listed.html" class="">Guide-listed</a><a href="activities.html" class="">Activities</a><a href="social.html" class="">Social reviews</a><a href="questions.html" class="">Questions</a><a href="suggestions.html" class="">Suggestions</a><a href="flagged.html" class="">Flagged for review</a><a href="sources.html" class="">Sources</a><a href="verification.html" class="">Verification</a><a href="review.html" class="active">Repo review</a></nav></div>
+  </div>
+</header>
+<main id="main">
+
+<div class="page-head"><h1>Repository review</h1><p>Line-by-line review of the repository and parallel-session coordination, with irregularities flagged for manual review. Baseline commit: <code>c251442d122a8d04aade3d8b5a0d57fd4e9ce37c</code>.</p></div>
+<div class="warning"><strong>No hallucinations:</strong> prior repository claims were not carried over. All factual rows on this site were rebuilt against the official sources in the <a href="sources.html">source registry</a>.</div>
+<div class="table-wrap"><table><caption>Repo review findings</caption><thead><tr><th>Item</th><th>Verified</th><th>Irregularity / finding</th><th>Review source</th><th>Official sources</th></tr></thead><tbody><tr class="data-row"><td data-label="Item">README.md</td><td data-label="Verified">Yes — fetched from the repository at c251442; contains only the single line &#x27;# NYFun3&#x27;.</td><td data-label="Irregularity / finding">The repository had no site, no data files, no COORDINATION.md and no CI/GitHub Pages configuration at the start of this session.</td><td data-label="Review source">local git show c251442:README.md</td><td data-label="Official sources"><ul class="source-links"><li><a class="chip official" href="https://github.com/kanlerxz87-cyber/NYFun3" target="_blank" rel="noopener noreferrer">Official GitHub repository — kanlerxz87-cyber/NYFun3 (governance, coordination and build artifacts)<small>official repository · checked 2026-11-25</small></a></li></ul></td></tr><tr class="data-row"><td data-label="Item">COORDINATION.md</td><td data-label="Verified">Yes — created in this session; imported the existing board from origin/arena/7386fd81-nyfun3.</td><td data-label="Irregularity / finding">The existing claim on the other session branch covers COORDINATION.md, README.md, index.html, assets/, pages/ and .github/workflows/. This session therefore keeps its entire deliverable in docs/, data/ and tools/.</td><td data-label="Review source">git show FETCH_HEAD:COORDINATION.md (origin/arena/7386fd81-nyfun3)</td><td data-label="Official sources"><ul class="source-links"><li><a class="chip official" href="https://github.com/kanlerxz87-cyber/NYFun3" target="_blank" rel="noopener noreferrer">Official GitHub repository — kanlerxz87-cyber/NYFun3 (governance, coordination and build artifacts)<small>official repository · checked 2026-11-25</small></a></li></ul></td></tr><tr class="data-row"><td data-label="Item">Branch model</td><td data-label="Verified">Yes — git branch / git ls-remote origin.</td><td data-label="Irregularity / finding">Arena fixes this session to arena/8781ea5a-nyfun3 and forbids creating or pushing other branches; the requested session-&lt;id&gt;/&lt;task&gt; branch convention cannot be used. Logged in COORDINATION.md.</td><td data-label="Review source">local git status / git ls-remote origin</td><td data-label="Official sources"><ul class="source-links"><li><a class="chip official" href="https://github.com/kanlerxz87-cyber/NYFun3" target="_blank" rel="noopener noreferrer">Official GitHub repository — kanlerxz87-cyber/NYFun3 (governance, coordination and build artifacts)<small>official repository · checked 2026-11-25</small></a></li></ul></td></tr><tr class="data-row"><td data-label="Item">Existing verification</td><td data-label="Verified">Yes — no data tables, no sources, no tests existed to review line by line.</td><td data-label="Irregularity / finding">All verification in this session is new work against official external sources; no prior claims were carried over.</td><td data-label="Review source">git ls-tree -r c251442</td><td data-label="Official sources"><ul class="source-links"><li><a class="chip official" href="https://github.com/kanlerxz87-cyber/NYFun3" target="_blank" rel="noopener noreferrer">Official GitHub repository — kanlerxz87-cyber/NYFun3 (governance, coordination and build artifacts)<small>official repository · checked 2026-11-25</small></a></li></ul></td></tr><tr class="data-row"><td data-label="Item">origin/arena/7386fd81-nyfun3 root site</td><td data-label="Verified">Yes — git fetch / git ls-tree / git show FETCH_HEAD:COORDINATION.md on 2026-11-25.</td><td data-label="Irregularity / finding">That branch now contains index.html, assets/style.css and pages/*.html and marks its task &#x27;needs review&#x27;. It reports no comparable hotel prices or routes and a Met Thursday source conflict. This session does not edit those files; the final integration request is logged in COORDINATION.md.</td><td data-label="Review source">git show FETCH_HEAD:COORDINATION.md (origin/arena/7386fd81-nyfun3)</td><td data-label="Official sources"><ul class="source-links"><li><a class="chip official" href="https://github.com/kanlerxz87-cyber/NYFun3" target="_blank" rel="noopener noreferrer">Official GitHub repository — kanlerxz87-cyber/NYFun3 (governance, coordination and build artifacts)<small>official repository · checked 2026-11-25</small></a></li></ul></td></tr></tbody></table></div>
+<div class="card"><h2>Manual review links</h2><ul class="plain-list">
+<li><a href="sources.html">Official source registry</a> — direct links for every row</li>
+<li><a href="verification.html">Verification log</a> — rules and checks</li>
+<li><a href="flagged.html">Flagged for review</a> — irregularities and every blank value</li>
+<li><a href="verification-report.txt">Automated build report</a></li>
+</ul></div>
+<div class="note"><a href="verification.html">← Verification</a> · <a href="index.html">Overview →</a></div>
+
+</main>
+<footer class="site-footer">
+  <p>Verified from official sites only · Blank cells are intentionally unverified ·
+  <a href="flagged.html">Flagged for Review</a> ·
+  <a href="verification.html">Verification</a> ·
+  <a href="sources.html">Sources</a></p>
+</footer>
+</body>
+</html>

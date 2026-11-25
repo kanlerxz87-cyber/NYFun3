@@ -1,0 +1,541 @@
+{
+  "michelin_stars_2025": {
+    "title": "MICHELIN Guide — All the Stars in The MICHELIN Guide to New York City 2025 (18 Nov 2025)",
+    "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+    "type": "official guide",
+    "checked": "2026-11-25",
+    "id": "michelin_stars_2025"
+  },
+  "michelin_all_starred": {
+    "title": "MICHELIN Guide — NYC All Starred Restaurants (current selection, 69 listed)",
+    "url": "https://guide.michelin.com/en/us/new-york-state/new-york/restaurants/all-starred",
+    "type": "official guide",
+    "checked": "2026-11-25",
+    "id": "michelin_all_starred"
+  },
+  "michelin_nyc": {
+    "title": "MICHELIN Guide — NYC restaurants (369 listed; 76 Bib Gourmand; 224 Selected Restaurants)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+    "type": "official guide",
+    "checked": "2026-11-25",
+    "id": "michelin_nyc"
+  },
+  "michelin_additions": {
+    "title": "MICHELIN Guide — New Additions to the MICHELIN Guide New York (18 Nov 2026; chunks 0–5 fetched; November, July and April 2026 Selection additions)",
+    "url": "https://guide.michelin.com/us/en/article/travel/new-restaurants-new-york",
+    "type": "official guide",
+    "checked": "2026-11-25",
+    "id": "michelin_additions"
+  },
+  "hotel_week": {
+    "title": "NYC Tourism + Conventions — NYC Hotel Week (Jan 2–Feb 11, 2027; 25% off)",
+    "url": "https://www.nyctourism.com/hotel-week/",
+    "type": "official DMO",
+    "checked": "2026-11-25",
+    "id": "hotel_week"
+  },
+  "hotel_week_about": {
+    "title": "NYC Tourism + Conventions — About NYC Hotel Week FAQs",
+    "url": "https://www.nyctourism.com/hotel-week-about/",
+    "type": "official DMO",
+    "checked": "2026-11-25",
+    "id": "hotel_week_about"
+  },
+  "hotel_week_press": {
+    "title": "NYC Tourism + Conventions press release — NYC Hotel Week 2027 (17 Nov 2026)",
+    "url": "https://business.nyctourism.com/press-media/press-releases/nyc-hotel-week-2027",
+    "type": "official DMO",
+    "checked": "2026-11-25",
+    "id": "hotel_week_press"
+  },
+  "opm": {
+    "title": "U.S. Office of Personnel Management — 2027 Federal Holidays",
+    "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+    "type": "government",
+    "checked": "2026-11-25",
+    "id": "opm"
+  },
+  "mta_maps": {
+    "title": "MTA — Maps (subway and bus maps)",
+    "url": "https://www.mta.info/maps",
+    "type": "official transit agency",
+    "checked": "2026-11-25",
+    "id": "mta_maps"
+  },
+  "mta_trip": {
+    "title": "MTA NYC Transit — Trip Planner widget help (travel-time tool)",
+    "url": "http://tripplanner.mta.info/widget/help.htm",
+    "type": "official transit agency",
+    "checked": "2026-11-25",
+    "id": "mta_trip"
+  },
+  "mta_riding": {
+    "title": "MTA — How to ride the NYC subway (24/7 service)",
+    "url": "https://www.mta.info/guides/riding-the-subway",
+    "type": "official transit agency",
+    "checked": "2026-11-25",
+    "id": "mta_riding"
+  },
+  "met": {
+    "title": "The Metropolitan Museum of Art — official site / plan your visit",
+    "url": "https://www.metmuseum.org/plan-your-visit",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "met"
+  },
+  "met_home": {
+    "title": "The Metropolitan Museum of Art — homepage (closed Wednesdays, $30 general admission; weekly hours also confirmed by official site-restricted search extract met_hours)",
+    "url": "https://www.metmuseum.org/",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "met_home"
+  },
+  "moma": {
+    "title": "MoMA — Locations, hours, and admission",
+    "url": "https://www.moma.org/visit/",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "moma"
+  },
+  "amnh": {
+    "title": "American Museum of Natural History — Hours and temporary hall closures",
+    "url": "https://www.amnh.org/plan-your-visit/hours",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "amnh"
+  },
+  "nps": {
+    "title": "National Park Service — Statue of Liberty National Monument operating hours & seasons",
+    "url": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+    "type": "government",
+    "checked": "2026-11-25",
+    "id": "nps"
+  },
+  "esb": {
+    "title": "Empire State Building — Hours & directions (official)",
+    "url": "https://www.esbnyc.com/visit/hours-of-operation",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "esb"
+  },
+  "toprock": {
+    "title": "Rockefeller Center — Top of the Rock tickets & hours (official)",
+    "url": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "toprock"
+  },
+  "owo": {
+    "title": "One World Observatory — Plan your visit (official)",
+    "url": "https://www.oneworldobservatory.com/plan-your-visit/",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "owo"
+  },
+  "911": {
+    "title": "National September 11 Memorial & Museum — Visit (official)",
+    "url": "https://www.911memorial.org/visit",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "911"
+  },
+  "highline": {
+    "title": "Friends of the High Line — Visitor Info (official)",
+    "url": "https://www.thehighline.org/visit/",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "highline"
+  },
+  "whitney": {
+    "title": "Whitney Museum of American Art — Plan your visit (official)",
+    "url": "https://whitney.org/visit",
+    "type": "official venue",
+    "checked": "2026-11-25",
+    "id": "whitney"
+  },
+  "centralpark": {
+    "title": "NYC Parks — Central Park (official city site)",
+    "url": "https://www.nycgovparks.org/parks/central-park",
+    "type": "government",
+    "checked": "2026-11-25",
+    "id": "centralpark"
+  },
+  "pod51": {
+    "title": "Pod 51 Hotel — official site (home)",
+    "url": "https://www.thepodhotel.com/pod-51",
+    "type": "official hotel",
+    "checked": "2026-11-25",
+    "id": "pod51"
+  },
+  "pod51_rooms": {
+    "title": "Pod 51 Hotel — Rooms (official)",
+    "url": "https://www.thepodhotel.com/pod-51/rooms",
+    "type": "official hotel",
+    "checked": "2026-11-25",
+    "id": "pod51_rooms"
+  },
+  "pod51_faq": {
+    "title": "Pod 51 Hotel — FAQs (official)",
+    "url": "https://www.thepodhotel.com/pod-51/frequently-asked-questions",
+    "type": "official hotel",
+    "checked": "2026-11-25",
+    "id": "pod51_faq"
+  },
+  "pod51_location": {
+    "title": "Pod 51 Hotel — Location + Contact (official)",
+    "url": "https://www.thepodhotel.com/pod-51/location",
+    "type": "official hotel",
+    "checked": "2026-11-25",
+    "id": "pod51_location"
+  },
+  "howard": {
+    "title": "11 Howard — official hotel site",
+    "url": "https://www.11howard.com/",
+    "type": "official hotel",
+    "checked": "2026-11-25",
+    "id": "howard"
+  },
+  "howard_michelin": {
+    "title": "MICHELIN Guide — 11 Howard hotel (SoHo)",
+    "url": "https://guide.michelin.com/us/en/hotels-stays/nyc/11-howard-8129",
+    "type": "official guide",
+    "checked": "2026-11-25",
+    "id": "howard_michelin"
+  },
+  "arlo_nomad": {
+    "title": "NYC Tourism — Arlo NoMad (NYC Hotel Week listing)",
+    "url": "https://www.nyctourism.com/hotel-week/arlo-hotel-nomad/",
+    "type": "official DMO",
+    "checked": "2026-11-25",
+    "id": "arlo_nomad"
+  },
+  "citizenm": {
+    "title": "Marriott / citizenM brand — rooms (XL king bed, power shower)",
+    "url": "https://www.marriott.com/brands/citizenm.mi",
+    "type": "official hotel group",
+    "checked": "2026-11-25",
+    "id": "citizenm"
+  },
+  "ac_hotel": {
+    "title": "NYC Tourism — AC Hotel New York Times Square (NYC Hotel Week listing)",
+    "url": "https://www.nyctourism.com/hotel-week/",
+    "type": "official DMO",
+    "checked": "2026-11-25",
+    "id": "ac_hotel"
+  },
+  "lex_hotel": {
+    "title": "NYC Tourism — The Lex Hotel (NYC Hotel Week listing)",
+    "url": "https://www.nyctourism.com/hotel-week/",
+    "type": "official DMO",
+    "checked": "2026-11-25",
+    "id": "lex_hotel"
+  },
+  "westin": {
+    "title": "NYC Tourism — The Westin New York at Times Square (NYC Hotel Week listing)",
+    "url": "https://www.nyctourism.com/hotel-week/",
+    "type": "official DMO",
+    "checked": "2026-11-25",
+    "id": "westin"
+  },
+  "lb": {
+    "title": "Le Bernardin — official site",
+    "url": "https://www.le-bernardin.com/",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "lb"
+  },
+  "lb_lunch": {
+    "title": "Le Bernardin — official lunch menu PDF ($142 / $270 / $350 per person)",
+    "url": "https://www.le-bernardin.com/content/pdfs/lunch-10.2.pdf",
+    "type": "official menu PDF",
+    "checked": "2026-11-25",
+    "id": "lb_lunch"
+  },
+  "lb_lounge": {
+    "title": "Le Bernardin — official lounge menu PDF (item prices)",
+    "url": "https://www.le-bernardin.com/content/pdfs/lounge-menu-3.10.pdf",
+    "type": "official menu PDF",
+    "checked": "2026-11-25",
+    "id": "lb_lounge"
+  },
+  "emp": {
+    "title": "Eleven Madison Park — About / restaurant hours",
+    "url": "https://www.elevenmadisonpark.com/ourrestaurant",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "emp"
+  },
+  "emp_faq": {
+    "title": "Eleven Madison Park — FAQs (tasting menu prices, reservation policy)",
+    "url": "https://www.elevenmadisonpark.com/faq",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "emp_faq"
+  },
+  "modern": {
+    "title": "The Modern — official menu and prices",
+    "url": "https://www.themodernnyc.com/the-modern/",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "modern"
+  },
+  "cote": {
+    "title": "COTE Korean Steakhouse — NYC Flatiron (official)",
+    "url": "https://www.cotekoreansteakhouse.com/locations/cotenycflatiron",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "cote"
+  },
+  "perseny": {
+    "title": "Thomas Keller Restaurant Group — Per Se (official)",
+    "url": "https://www.thomaskeller.com/perseny/",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "perseny"
+  },
+  "jungsik": {
+    "title": "Jungsik New York (official)",
+    "url": "https://www.jungsik.com/",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "jungsik"
+  },
+  "atomix": {
+    "title": "Atomix (official)",
+    "url": "https://www.atomixnyc.com/",
+    "type": "official restaurant",
+    "checked": "2026-11-25",
+    "id": "atomix"
+  },
+  "youtube_lb": {
+    "title": "YouTube — search results: Le Bernardin review (platform page fetched)",
+    "url": "https://www.youtube.com/results?search_query=Le+Bernardin+review",
+    "type": "social platform",
+    "checked": "2026-11-25",
+    "id": "youtube_lb"
+  },
+  "youtube_emp": {
+    "title": "YouTube — search results: Eleven Madison Park review (platform page fetched)",
+    "url": "https://www.youtube.com/results?search_query=Eleven+Madison+Park+review",
+    "type": "social platform",
+    "checked": "2026-11-25",
+    "id": "youtube_emp"
+  },
+  "youtube_cote": {
+    "title": "YouTube — search results: COTE Korean Steakhouse NYC review (platform page fetched)",
+    "url": "https://www.youtube.com/results?search_query=COTE+Korean+Steakhouse+NYC+review",
+    "type": "social platform",
+    "checked": "2026-11-25",
+    "id": "youtube_cote"
+  },
+  "youtube_met": {
+    "title": "YouTube — search results: Met Museum New York review (platform page fetched)",
+    "url": "https://www.youtube.com/results?search_query=Met+Museum+New+York+review",
+    "type": "social platform",
+    "checked": "2026-11-25",
+    "id": "youtube_met"
+  },
+  "youtube_sol": {
+    "title": "YouTube — search results: Statue of Liberty visit review (platform page fetched)",
+    "url": "https://www.youtube.com/results?search_query=Statue+of+Liberty+New+York+visit+review",
+    "type": "social platform",
+    "checked": "2026-11-25",
+    "id": "youtube_sol"
+  },
+  "michelin_page_le-bernardin": {
+    "id": "michelin_page_le-bernardin",
+    "title": "MICHELIN Guide — Le Bernardin (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-bernardin",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_per-se": {
+    "id": "michelin_page_per-se",
+    "title": "MICHELIN Guide — Per Se (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/per-se",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_eleven-madison-park": {
+    "id": "michelin_page_eleven-madison-park",
+    "title": "MICHELIN Guide — Eleven Madison Park (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/eleven-madison-park",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_jungsik-new-york": {
+    "id": "michelin_page_jungsik-new-york",
+    "title": "MICHELIN Guide — Jungsik New York (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jungsik-new-york",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_the-modern": {
+    "id": "michelin_page_the-modern",
+    "title": "MICHELIN Guide — The Modern (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/the-modern",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_aquavit": {
+    "id": "michelin_page_aquavit",
+    "title": "MICHELIN Guide — Aquavit (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/aquavit",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_gabriel-kreuther": {
+    "id": "michelin_page_gabriel-kreuther",
+    "title": "MICHELIN Guide — Gabriel Kreuther (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gabriel-kreuther",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_jean-georges": {
+    "id": "michelin_page_jean-georges",
+    "title": "MICHELIN Guide — Jean-Georges (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jean-georges",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_atomix": {
+    "id": "michelin_page_atomix",
+    "title": "MICHELIN Guide — Atomix (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/atomix",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_gramercy-tavern": {
+    "id": "michelin_page_gramercy-tavern",
+    "title": "MICHELIN Guide — Gramercy Tavern (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gramercy-tavern",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_cote": {
+    "id": "michelin_page_cote",
+    "title": "MICHELIN Guide — Cote (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/cote",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_le-coucou": {
+    "id": "michelin_page_le-coucou",
+    "title": "MICHELIN Guide — Le Coucou (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_daniel": {
+    "id": "michelin_page_daniel",
+    "title": "MICHELIN Guide — Daniel (current restaurant page)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/daniel",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "pod51_booking_7n": {
+    "id": "pod51_booking_7n",
+    "title": "Pod 51 official SynXis booking page — 15–22 Feb 2027, 2 adults, 1 room; Queen Pod 7-night totals incl taxes & fees",
+    "url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=12484&child=0&currency=USD&depart=2027-02-22&hotel=41155&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+    "type": "official hotel booking engine",
+    "checked": "2026-11-25"
+  },
+  "arlo_booking_7n": {
+    "id": "arlo_booking_7n",
+    "title": "Arlo NoMad official booking page — 15–22 Feb 2027, 2 adults, 1 room; Queen 7-night totals incl urban fee, excl taxes",
+    "url": "https://book.arlohotels.com/?adult=2&arrive=2027-02-15&chain=19470&child=0&currency=USD&depart=2027-02-22&hotel=70017&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+    "type": "official hotel booking engine",
+    "checked": "2026-11-25"
+  },
+  "arlo_cyber": {
+    "id": "arlo_cyber",
+    "title": "Arlo Hotels — Cyber Exclusive Access (40% off Book Direct rates; sale ends 3 Dec 2026; NYC stay dates through 31 Oct 2027; code CYBER)",
+    "url": "https://arlohotels.com/cyber-exclusive-access/",
+    "type": "official hotel offer",
+    "checked": "2026-11-25"
+  },
+  "marriott_cyber": {
+    "id": "marriott_cyber",
+    "title": "Marriott — CYBER SALE at citizenM New York Times Square (15% off here / 25% members in app; code QRI; book by Tuesday 1 Dec; valid stays 29 Nov 2026–2 May 2027)",
+    "url": "https://www.marriott.com/offers/cyber-sale-2026-hws-us-canada-cala-off-257932/nyczt-citizenm-new-york-times-square",
+    "type": "official hotel offer",
+    "checked": "2026-11-25"
+  },
+  "citizenm_property": {
+    "id": "citizenm_property",
+    "title": "Marriott — citizenM New York Times Square official property page (address 218 W 50th St, NY 10019; XL king beds; eight subway lines)",
+    "url": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/overview/",
+    "type": "official hotel",
+    "checked": "2026-11-25"
+  },
+  "citizenm_rooms": {
+    "id": "citizenm_rooms",
+    "title": "Marriott — citizenM New York Times Square rooms page (XL king bed, power shower, tablet room controls)",
+    "url": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/rooms/",
+    "type": "official hotel",
+    "checked": "2026-11-25"
+  },
+  "howard_booking": {
+    "id": "howard_booking",
+    "title": "11 Howard official booking page root (default 25–26 Nov 2026 search form fetched; no 2027 dated quote returned)",
+    "url": "https://booking.11howard.com/",
+    "type": "official hotel booking engine",
+    "checked": "2026-11-25"
+  },
+  "repo": {
+    "id": "repo",
+    "title": "Official GitHub repository — kanlerxz87-cyber/NYFun3 (governance, coordination and build artifacts)",
+    "url": "https://github.com/kanlerxz87-cyber/NYFun3",
+    "type": "official repository",
+    "checked": "2026-11-25"
+  },
+  "met_hours": {
+    "id": "met_hours",
+    "title": "The Met official homepage hours block (site-restricted search extract: Sun–Tue & Thu 10 am–5 pm; Fri–Sat 10 am–9 pm; closed Wed)",
+    "url": "https://www.metmuseum.org/?mod=article_inline",
+    "type": "official venue (search extract)",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_noury": {
+    "id": "michelin_page_noury",
+    "title": "MICHELIN Guide — Noury (current restaurant page; Selected, no star icon)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/noury",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_muje": {
+    "id": "michelin_page_muje",
+    "title": "MICHELIN Guide — Mūje (current restaurant page; Selected, no star icon)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/muje",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "michelin_page_nyonya": {
+    "id": "michelin_page_nyonya",
+    "title": "MICHELIN Guide — Nyonya (current restaurant page; Bib Gourmand distinction, no star icon)",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/nyonya",
+    "type": "official guide",
+    "checked": "2026-11-25"
+  },
+  "noury_official": {
+    "id": "noury_official",
+    "title": "Noury New York — official restaurant website (linked as 'Visit Website' on the current MICHELIN page)",
+    "url": "https://www.nourynewyork.com/",
+    "type": "official restaurant website",
+    "checked": "2026-11-25"
+  },
+  "muje_official": {
+    "id": "muje_official",
+    "title": "MUJE — official restaurant website (linked as 'Visit Website' on the current MICHELIN page)",
+    "url": "https://www.mujenyc.com/",
+    "type": "official restaurant website",
+    "checked": "2026-11-25"
+  },
+  "nyonya_official": {
+    "id": "nyonya_official",
+    "title": "Nyonya — official restaurant website (linked as 'Visit Website' on the current MICHELIN page; says cash only)",
+    "url": "https://nyonya.res-menu.com/",
+    "type": "official restaurant website",
+    "checked": "2026-11-25"
+  }
+}

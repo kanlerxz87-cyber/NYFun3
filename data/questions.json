@@ -1,0 +1,186 @@
+[
+  {
+    "id": "Q01",
+    "question": "Which exact dates should we book?",
+    "have": "Preferred 15–18 Feb 2027; allowed window 15 Feb–23 Mar 2027; 1–2 weeks requested, 2–4 weeks acceptable; 15 Feb 2027 is a U.S. federal holiday.",
+    "answer": "Not decidable yet. Four concrete date options with real weekdays are presented on the Dates page, but no hotel rate comparison exists to choose between them.",
+    "missing": "Verified 7-night/14-night hotel totals for each option; flight/arrival times; whether the federal holiday affects price or closures.",
+    "discover": "Run each option through the official hotel booking links with 2 adults and record the dated quote; check official venue holiday calendars for 15 Feb 2027.",
+    "sources": [
+      "opm",
+      "hotel_week"
+    ],
+    "blocks_decision": true
+  },
+  {
+    "id": "Q02",
+    "question": "What is the total hotel cost for 7 nights for 2 adults?",
+    "have": "Two real official 7-night quotes for 15–22 Feb 2027, 2 adults, 1 room: Pod 51 Queen Pod $1,109 incl taxes & fees; Arlo NoMad Queen $1,296 incl urban fee, excl taxes. Official hotel pages, official booking links and one published fee (Pod 51 $29.84/room/night) are also verified.",
+    "answer": "Partially answered. The lowest verified all-in total is Pod 51 at $1,109 for 7 nights. Arlo's displayed total excludes taxes, so its final total is blank. Four other candidate hotels have no verified 7-night total.",
+    "missing": "A dated, official, all-in quote (room + taxes + fees) for 15–22 Feb 2027 for the remaining hotels, and Arlo's confirmed tax amount.",
+    "discover": "Use each hotel's official booking link with 2 adults and the exact dates; save a dated screenshot/quote and link it in the row. For Arlo, proceed to the checkout step where taxes are itemized.",
+    "sources": [
+      "pod51_booking_7n",
+      "arlo_booking_7n",
+      "pod51_faq"
+    ],
+    "blocks_decision": true
+  },
+  {
+    "id": "Q03",
+    "question": "When is the cheapest upcoming time to book a hotel, and what is the best time to book?",
+    "have": "NYC Hotel Week 2027 (2 Jan–11 Feb 2027, 25% off, reservations open 17 Nov 2026); Arlo Cyber Exclusive Access (40% off, book by 3 Dec 2026, NYC stays through 31 Oct 2027, code CYBER); Marriott CYBER SALE at citizenM (15%/25% off, book by Tuesday 1 Dec, code QRI, stays 29 Nov 2026–2 May 2027).",
+    "answer": "Partially answered. The only official city-wide discount remains Hotel Week, which ends before the requested window. The best verified in-window booking deadlines are Arlo by 3 Dec 2026 (40% off) and Marriott by Tuesday 1 Dec (15%/25% off). No official source proves these are the market-wide cheapest or publishes a single 'best time to book'.",
+    "missing": "A 2027 rate calendar or official statement comparing price movements and discounts across all NYC hotels for stays after 15 Feb 2027.",
+    "discover": "Ask NYC Tourism and the hotels directly; record dated official quotes across several booking dates; do not rely on third-party 'best time to book' claims.",
+    "sources": [
+      "hotel_week",
+      "hotel_week_about",
+      "hotel_week_press",
+      "arlo_cyber",
+      "marriott_cyber"
+    ],
+    "blocks_decision": true
+  },
+  {
+    "id": "Q04",
+    "question": "Does each candidate hotel have a private bathroom and a queen-or-larger bed?",
+    "have": "Pod 51 Queen Pod: queen bed + private bathroom (official booking page). Arlo NoMad Queen: 1 queen bed (official booking page). citizenM: XL king bed (official Marriott property/rooms pages).",
+    "answer": "Partially answered. Three hotels have a queen-or-larger bed verified; only Pod 51 has an explicit private bathroom. citizenM's private-bathroom wording is not explicit, and three hotels have both fields blank.",
+    "missing": "Room-type specifications for the other hotels from their own official room pages.",
+    "discover": "Fetch each hotel's official room-type page and quote the bed and bathroom wording verbatim.",
+    "sources": [
+      "pod51_booking_7n",
+      "arlo_booking_7n",
+      "citizenm_property",
+      "citizenm_rooms"
+    ],
+    "blocks_decision": true
+  },
+  {
+    "id": "Q05",
+    "question": "How many MICHELIN restaurants are within 1 hour by subway or bus of each hotel?",
+    "have": "Official MICHELIN addresses for 13 starred restaurants; official MTA maps, Trip Planner and 24/7 subway information; official transit statements for Pod 51.",
+    "answer": "Blank / unverified. Static same-ZIP counts are published as a separate verified cluster view (citizenM 10019 = 3; Pod 51 10022 = 1; Arlo 10016 = 1), but MTA travel time is date/time-specific and no static official value exists; the rule forbids inference.",
+    "missing": "Dated Trip Planner results for every hotel→restaurant pair, or an official MTA data feed with travel times.",
+    "discover": "Run the MTA Trip Planner for each pair on the chosen travel date/time and record the result; or use an official MTA GTFS/static timetable with a documented calculation.",
+    "sources": [
+      "michelin_all_starred",
+      "mta_maps",
+      "mta_trip",
+      "mta_riding",
+      "pod51_location",
+      "pod51_booking_7n",
+      "arlo_booking_7n",
+      "citizenm_property"
+    ],
+    "blocks_decision": true
+  },
+  {
+    "id": "Q06",
+    "question": "Will the MICHELIN star list still be current in February 2027?",
+    "have": "2025 official star article; current official listing shows 69 starred (5/14/50); official new-additions article dated 18 Nov 2026; a third-party report says the next NYC ceremony is 14 Dec 2026.",
+    "answer": "Not decidable. A reported December 2026 ceremony would fall after this review and before the trip; the report is not an official MICHELIN source, so it is flagged, not used as a fact.",
+    "missing": "An official MICHELIN announcement of the 2026 New York selection and its date.",
+    "discover": "Re-check the official MICHELIN Guide NYC star list immediately before booking; log the check date in the table.",
+    "sources": [
+      "michelin_stars_2025",
+      "michelin_all_starred",
+      "michelin_additions"
+    ],
+    "blocks_decision": true
+  },
+  {
+    "id": "Q07",
+    "question": "Are the restaurant prices really 'total for two'?",
+    "have": "Official menu prices per person for Le Bernardin, Eleven Madison Park, The Modern; official statements that tax, gratuity and beverages are additional.",
+    "answer": "The published figures are menu subtotals for 2 (per-person price × 2), not a final check total. They are labeled that way everywhere on the site.",
+    "missing": "Tax rate, service/gratuity policy and beverage choices for the actual booking.",
+    "discover": "Ask each restaurant for a written quote for 2 on the chosen date, including tax and service; replace subtotal with the confirmed total.",
+    "sources": [
+      "lb_lunch",
+      "emp_faq",
+      "modern"
+    ],
+    "blocks_decision": false
+  },
+  {
+    "id": "Q08",
+    "question": "Which restaurants are only listed in the Guide versus actually holding a Star?",
+    "have": "Official 2025 star article, current all-starred listing (69), current selection counts (76 Bib Gourmand / 224 Selected), and November 2026 new additions.",
+    "answer": "Answered for the 13 detailed starred restaurants and the 6 Guide-listed examples; per-name current status is not verified for the remaining ~58 names on the 2025 roster.",
+    "missing": "A current official page check for each of the other roster names.",
+    "discover": "Fetch each current MICHELIN restaurant page and record the star icons; update the roster's 'current star verified' column.",
+    "sources": [
+      "michelin_stars_2025",
+      "michelin_all_starred",
+      "michelin_nyc",
+      "michelin_additions"
+    ],
+    "blocks_decision": false
+  },
+  {
+    "id": "Q09",
+    "question": "Will restaurants and attractions be open on the actual travel dates?",
+    "have": "Verified weekly hours and published exceptions for 13 restaurants and 11 activities; e.g. The High Line winter hours 7 AM–8 PM cover the whole window; NPS 2026–2027 holiday closures.",
+    "answer": "Partially answered. February 2027-specific hours are published for The High Line but not for the Empire State Building or for 2027 holiday exceptions at most venues.",
+    "missing": "February 2027 dated hours and holiday/closure calendars from each official venue.",
+    "discover": "Re-check each official hours page in January 2027 and record the dated publication; add a 'last checked' column.",
+    "sources": [
+      "highline",
+      "esb",
+      "nps",
+      "moma",
+      "amnh",
+      "whitney",
+      "911"
+    ],
+    "blocks_decision": false
+  },
+  {
+    "id": "Q10",
+    "question": "Is every table row backed by an official source link?",
+    "have": "A source registry with each official page fetched and checked on 2026-11-25.",
+    "answer": "Yes — the generator refuses to emit a row without at least one official source link. Blank values are rendered as unverified and listed on the Flagged page.",
+    "missing": "Nothing for this question; ongoing re-verification is needed as official pages change.",
+    "discover": "Run tools/build_site.py and tools/verify.py before every publish; resolve any new flag.",
+    "sources": [
+      "michelin_all_starred"
+    ],
+    "blocks_decision": false
+  },
+  {
+    "id": "Q11",
+    "question": "Are the social links genuine reviews on the requested platforms?",
+    "have": "YouTube search pages fetched directly from youtube.com; TikTok video pages fetched directly from tiktok.com; Instagram location/account pages found on instagram.com.",
+    "answer": "Partially answered. Verified YouTube and TikTok review links exist for most entries; Instagram is limited to official accounts/location pages, and 3 restaurants + Central Park have no verified review link.",
+    "missing": "Instagram/TikTok review links for the blank rows; confirmation that linked videos are still available.",
+    "discover": "Repeat platform-restricted searches for the flagged entries and open each resulting URL before adding it; record the check date.",
+    "sources": [
+      "youtube_lb",
+      "youtube_emp",
+      "youtube_cote",
+      "youtube_met",
+      "youtube_sol"
+    ],
+    "blocks_decision": false
+  },
+  {
+    "id": "Q12",
+    "question": "Can we keep every planned activity within 1 hour of the hotel?",
+    "have": "Official activity locations, official MTA subway/bus route information on several venue pages, and verified hotel ZIPs/addresses for Pod 51, Arlo NoMad and citizenM.",
+    "answer": "Not decidable. No dated MTA travel-time results exist for this trip; no travel-time value was invented.",
+    "missing": "A dated itinerary with Trip Planner results for every hotel→activity leg.",
+    "discover": "Build the itinerary day by day and record each official Trip Planner result; flag legs over 60 minutes.",
+    "sources": [
+      "mta_trip",
+      "mta_maps",
+      "centralpark",
+      "owo",
+      "pod51_booking_7n",
+      "arlo_booking_7n",
+      "citizenm_property"
+    ],
+    "blocks_decision": true
+  }
+]

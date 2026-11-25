@@ -1,0 +1,132 @@
+{
+  "checked": "2026-11-25",
+  "party": "2 adults (couple)",
+  "options": [
+    {
+      "id": "A",
+      "name": "Preferred short stay",
+      "check_in": "2027-02-15",
+      "check_out": "2027-02-18",
+      "weekday_in": "Monday",
+      "weekday_out": "Thursday",
+      "nights": 3,
+      "note": "Matches the stated preferred vacation time (Feb 15–18, 2027). Check-in day is a U.S. federal holiday (Washington's Birthday).",
+      "sources": [
+        "opm"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Primary 7-night stay (used for hotel costing)",
+      "check_in": "2027-02-15",
+      "check_out": "2027-02-22",
+      "weekday_in": "Monday",
+      "weekday_out": "Monday",
+      "nights": 7,
+      "note": "1-week option inside the allowed window; the 7-night stay requested for hotel pricing.",
+      "sources": [
+        "opm"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Two-week stay",
+      "check_in": "2027-02-15",
+      "check_out": "2027-03-01",
+      "weekday_in": "Monday",
+      "weekday_out": "Monday",
+      "nights": 14,
+      "note": "2-week option, still inside the 15 Feb–23 Mar 2027 window.",
+      "sources": [
+        "opm"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Four-week stay",
+      "check_in": "2027-02-15",
+      "check_out": "2027-03-15",
+      "weekday_in": "Monday",
+      "weekday_out": "Monday",
+      "nights": 28,
+      "note": "Upper end of the optional 2–4 week extension; ends 8 days before the 23 Mar 2027 window close.",
+      "sources": [
+        "opm"
+      ]
+    }
+  ],
+  "window": {
+    "start": "2027-02-15",
+    "end": "2027-03-23",
+    "note": "Weekday values were computed with Python's datetime (not estimated)."
+  },
+  "verified_facts": [
+    {
+      "fact": "Monday 15 February 2027 is 'Washington's Birthday', a U.S. federal holiday.",
+      "sources": [
+        "opm"
+      ]
+    },
+    {
+      "fact": "NYC Hotel Week 2027 runs 2 January – 11 February 2027 with 25% off standard room rates at participating hotels; reservations opened 17 November 2026.",
+      "sources": [
+        "hotel_week",
+        "hotel_week_about",
+        "hotel_week_press"
+      ]
+    },
+    {
+      "fact": "NYC Restaurant Week, Broadway Week and Must-See Week run 19 January – 11 February 2027 with reservations opening 6 January 2027 at 10am ET.",
+      "sources": [
+        "hotel_week",
+        "hotel_week_press"
+      ]
+    },
+    {
+      "fact": "The only officially verified city-wide hotel discount window ends 4 days before the earliest allowed check-in date of 15 February 2027.",
+      "sources": [
+        "hotel_week",
+        "hotel_week_about"
+      ]
+    },
+    {
+      "fact": "Arlo Hotels Cyber Exclusive Access: 40% off Book Direct rates; sale ends 3 December 2026; NYC stay dates through 31 October 2027; code CYBER. Subject to black-out dates and availability.",
+      "sources": [
+        "arlo_cyber"
+      ]
+    },
+    {
+      "fact": "Marriott CYBER SALE at citizenM New York Times Square: 15% off when booked on the offer page, 25% off for members booking in the Marriott Bonvoy app; 5-day advance prepaid non-refundable rate; promotional code QRI; book by Tuesday, December 1; valid stay dates 29 November 2026 – 2 May 2027.",
+      "sources": [
+        "marriott_cyber"
+      ]
+    },
+    {
+      "fact": "Two official 7-night quotes were captured for 15–22 February 2027, 2 adults, 1 room: Pod 51 Queen Pod Pod Member Rate $1,109 total including taxes and fees; Arlo NoMad Queen The Steal Deal $1,296 total including the urban fee but excluding taxes.",
+      "sources": [
+        "pod51_booking_7n",
+        "arlo_booking_7n"
+      ]
+    }
+  ],
+  "cheapest_booking_window": {
+    "answer": "NYC Hotel Week 2027 (2 Jan–11 Feb 2027, 25% off) remains the only official city-wide hotel discount, but it ends before the requested 15 Feb–23 Mar 2027 travel window. Two additional official offers DO apply to the requested window: Arlo Hotels' Cyber Exclusive Access (40% off, book by 3 Dec 2026, code CYBER, NYC stays through 31 Oct 2027) and Marriott's CYBER SALE at citizenM New York Times Square (15%/25% off, book by Tuesday 1 Dec, code QRI, stays 29 Nov 2026–2 May 2027).",
+    "best_time_to_book_for_requested_dates": "Best verified upcoming booking deadlines: Arlo Hotels Cyber Exclusive Access — book by 3 December 2026 (40% off; code CYBER); Marriott CYBER SALE — book by Tuesday, December 1 (15% off here / 25% members in app; code QRI).",
+    "note": "These are the highest verified discounts among the official offers checked, not a market-wide 'cheapest price' proof: no official source compares all NYC hotels or publishes a best time to book. Pod 51's $1,109 all-in 7-night quote is the lowest verified all-in total among the two captured quotes; Arlo's $1,296 excludes taxes and is not directly comparable.",
+    "sources": [
+      "hotel_week",
+      "hotel_week_about",
+      "hotel_week_press",
+      "arlo_cyber",
+      "marriott_cyber",
+      "pod51_booking_7n",
+      "arlo_booking_7n"
+    ]
+  },
+  "flags": [
+    "No official source proves a market-wide cheapest date or best time to book; two in-window discounts and two dated 7-night quotes are recorded, with the limitations shown.",
+    "All four date options start on a U.S. federal holiday; impact on hotel rates, crowds and opening hours is not verified.",
+    "Arlo Hotels' official promo page says NYC stay dates through 31 October 2027, while the official booking rate description says through December 2027; needs review.",
+    "Arlo 7-night totals exclude taxes; they cannot be compared like-for-like with Pod 51's taxes-and-fees-included total."
+  ]
+}

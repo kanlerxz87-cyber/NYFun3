@@ -1,0 +1,40 @@
+NY 2027 trip dashboard — automated verification report
+Checked: 2026-11-25
+Status: PASS
+
+Generated HTML files: 16
+Internal links checked: 406
+Broken internal links / anchors: 0
+Data table rows: 891
+Rows missing an official-source link: 0
+Official source links rendered: 1867
+Intentionally blank / unverified fields: 384 (saved build inventory)
+Flagged irregularities: 16
+Official sources in registry: 77
+Sources missing a URL: 0
+
+Rules enforced:
+- Every table row has at least one official-source link.
+- Blank values are rendered as "— unverified" and inventoried on Flagged for Review.
+- No value is inferred, estimated, or taken from a third-party travel blog.
+- Social links are platform links and never replace an official source.
+- Weekday values are computed with Python datetime, not estimated.
+- External official links are not HTTP-checked here; they were fetched during research.
+
+Generated pages:
+  - docs/activities.html
+  - docs/dates.html
+  - docs/executive-summary.html
+  - docs/flagged.html
+  - docs/guide-listed.html
+  - docs/hotels.html
+  - docs/index.html
+  - docs/michelin.html
+  - docs/questions.html
+  - docs/restaurants.html
+  - docs/review.html
+  - docs/social.html
+  - docs/sources.html
+  - docs/suggestions.html
+  - docs/travel.html
+  - docs/verification.html
