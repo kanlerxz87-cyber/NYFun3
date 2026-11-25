@@ -1,0 +1,277 @@
+{
+ "_meta": {
+  "generated": "2026-11-25",
+  "basis": "All totals are 7 nights, 2 adults, 1 room, check-in 2027-02-15 / check-out 2027-02-22 (the user's preferred window), pulled from Booking.com rate cards on 2026-11-25 and stored as 'total before taxes' where the site exposed that line.",
+  "tax_rule": "New York: 14.75% tax + $4 per night city tax are added on top of the 'before taxes' totals unless stated otherwise. Resort fees are INCLUDED where the rate card said so (Pestana CR7).",
+  "price_caveat": "Prices are live and change daily. Every row carries the exact URL used (with check-in, check-out and group_adults=2) so the figure can be re-checked. Nothing here is an estimate.",
+  "search_page_cheapest_total_usd": "The cheapest total shown on Booking.com's New York search-results card for the same dates — sometimes a different room type than the rate tiers listed. If the room type is unknown, the bed rule cannot be confirmed for that figure.",
+  "excluded": "Pod/hostel-style bunk products (e.g. a 'Pod Bunk' twin at ~$700) were excluded because they fail the queen-or-larger bed rule.",
+  "michelin_ranking_caveat": "The user asked for hotels ranked by the number of Michelin restaurants reachable within ~1 hour by subway/bus. Producing that number honestly requires a measured or published journey time for each restaurant from each hotel. No such source was verified, so the column is left blank and flagged instead of being estimated."
+ },
+ "hotels": [
+  {
+   "id": "eurostars-wall-street",
+   "name": "Eurostars Wall Street",
+   "address": "129 Front St, New York, NY 10005",
+   "area": "Financial District",
+   "official_site": "https://www.eurostarshotels.com/eurostars-wall-street.html",
+   "booking_url": "https://www.booking.com/hotel/us/eurostars-wall-street.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/eurostars-wall-street.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 831.0,
+   "rate_tiers": [
+    {
+     "room": "Queen (lowest tier seen)",
+     "total_before_tax_usd": 1127.0,
+     "per_night_usd": null,
+     "cancellation": "See rate card on Booking.com",
+     "meets_bed_rule": "Queen or larger — confirm exact bed type in rate card before booking"
+    }
+   ],
+   "room_meets_private_bathroom": "Yes — Booking.com rate cards for this property list 'Attached bathroom'. Re-confirm at booking.",
+   "room_meets_queen_or_larger": "Believed queen or larger; the exact bed type per rate card was not fully captured — flagged UNVERIFIED for the specific room.",
+   "amenities": "",
+   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "taxes_note": "14.75% tax + $4 per night city tax added at checkout (shown on the Booking.com rate card).",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22 (the trip's preferred window)",
+   "michelin_cluster": "Financial District",
+   "michelin_note": "Same-cluster starred venues (Saga ★★, Crown Shy ★) are within the FiDi walking area. A per-restaurant measured transit time was NOT verified, so no numeric 'within 1 hour' count is asserted.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+  },
+  {
+   "id": "hgu-new-york",
+   "name": "HGU New York",
+   "address": "34 E 32nd St, New York, NY 10016",
+   "area": "NoMad / Midtown South",
+   "official_site": "https://www.hgunewyork.com/",
+   "booking_url": "https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 1092.0,
+   "rate_tiers": [
+    {
+     "room": "Queen",
+     "total_before_tax_usd": 1091.6,
+     "per_night_usd": null,
+     "cancellation": "See rate card on Booking.com",
+     "meets_bed_rule": "Queen — meets the queen-or-larger rule"
+    }
+   ],
+   "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
+   "room_meets_queen_or_larger": "Yes — queen bed listed.",
+   "amenities": "",
+   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "NoMad / Flatiron / Koreatown",
+   "michelin_note": "Closest to Atomix ★★, Odo ★★, Joo Ok ★★, Rezdôra ★, Semma ★, 63 Clinton ★, Gramercy Tavern ★. Measured transit time per venue not verified.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+  },
+  {
+   "id": "hyatt-place-chelsea",
+   "name": "Hyatt Place New York/Chelsea",
+   "address": "140 W 24th St, New York, NY 10011",
+   "area": "Chelsea / Flatiron",
+   "official_site": "https://www.hyatt.com/hyatt-place/en-US/nyczc-hyatt-place-new-york-chelsea",
+   "booking_url": "https://www.booking.com/hotel/us/hyatt-place-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/hyatt-place-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 1113.0,
+   "rate_tiers": [
+    {
+     "room": "King",
+     "total_before_tax_usd": 1183.0,
+     "per_night_usd": null,
+     "cancellation": "See rate card on Booking.com",
+     "meets_bed_rule": "King — meets the queen-or-larger rule"
+    },
+    {
+     "room": "King",
+     "total_before_tax_usd": 1482.0,
+     "per_night_usd": null,
+     "cancellation": "See rate card on Booking.com",
+     "meets_bed_rule": "King"
+    }
+   ],
+   "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
+   "room_meets_queen_or_larger": "Yes — king bed listed.",
+   "amenities": "",
+   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "Chelsea / Flatiron / NoMad",
+   "michelin_note": "Closest to Odo ★★, César ★★, Atomix ★★, Rezdôra ★, Gramercy Tavern ★, Semma ★. Measured transit time per venue not verified.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+  },
+  {
+   "id": "citizenm-new-york-times-square",
+   "name": "citizenM New York Times Square",
+   "address": "218 W 50th St, New York, NY 10019",
+   "area": "Midtown / Times Square",
+   "official_site": "https://www.citizenm.com/hotels/usa/new-york/times-square",
+   "booking_url": "https://www.booking.com/hotel/us/citizenm-new-york-times-square-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/citizenm-new-york-times-square-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 1113.0,
+   "rate_tiers": [],
+   "room_meets_private_bathroom": "Yes — Booking.com guest listing shows an in-room shower room; confirm on the rate card.",
+   "room_meets_queen_or_larger": "Rooms are compact with a large double/queen-style bed; the exact bed width per rate card was not captured — flagged UNVERIFIED. This hotel is the most at risk of failing the 'queen or larger' rule.",
+   "amenities": "Guest rating 8.9/10 from 3,010 reviews; location 9.7, staff 9.0, cleanliness 9.2, comfort 9.1, value 8.4, free WiFi 9.2. 100 m from 50 St station (line 7).",
+   "amenities_flag": "",
+   "taxes_note": "Taxes/fees shown at checkout; exact lines not captured for this property.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "Midtown / Hell's Kitchen / Columbus Circle",
+   "michelin_note": "Closest to Masa ★★, Jean-Georges ★★, The Modern ★★, Kochi ★, Le Pavillon ★, Icca ★, Torrisi ★, Gabriel Kreuther ★★. Measured transit time per venue not verified.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+  },
+  {
+   "id": "pestana-cr7-times-square",
+   "name": "Pestana CR7 Times Square",
+   "address": "338 W 39th St, New York, NY 10018",
+   "area": "Times Square / Hell's Kitchen",
+   "official_site": "https://www.pestana.com/en/hotel/pestana-cr7-new-york",
+   "booking_url": "https://www.booking.com/hotel/us/pestana-cr7-times-square.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/pestana-cr7-times-square.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 1175.0,
+   "rate_tiers": [
+    {
+     "room": "Superior King (High Floor) — ADA variant, 215 sq ft, 1 king bed",
+     "total_before_tax_usd": 1327.0,
+     "per_night_usd": 163.0,
+     "cancellation": "Non-refundable; one free reschedule until 2027-02-08",
+     "meets_bed_rule": "1 king bed — meets the queen-or-larger rule. NOTE: this specific rate card is the ADA-accessible room; a non-ADA king must be selected at booking if accessibility features are not required."
+    },
+    {
+     "room": "King (Black Friday Deal tier)",
+     "total_before_tax_usd": 1416.58,
+     "per_night_usd": 176.0,
+     "cancellation": "Free cancellation before 2027-02-08",
+     "meets_bed_rule": "1 king bed"
+    },
+    {
+     "room": "King",
+     "total_before_tax_usd": 1446.0,
+     "per_night_usd": 180.0,
+     "cancellation": "Free cancellation before 2027-02-13",
+     "meets_bed_rule": "1 king bed"
+    },
+    {
+     "room": "King",
+     "total_before_tax_usd": 1384.58,
+     "per_night_usd": 172.0,
+     "cancellation": "Free cancellation before 2027-02-01",
+     "meets_bed_rule": "1 king bed"
+    }
+   ],
+   "room_meets_private_bathroom": "Yes — 'Attached bathroom' listed on the rate cards.",
+   "room_meets_queen_or_larger": "Yes — 1 king bed on captured rate cards.",
+   "amenities": "Resort fee $26/night included in the displayed totals. Free high-speed WiFi. Guest rating 8.6/10 from 1,820 reviews (location 9.3, staff 9.3, comfort 9.0, cleanliness 8.9, WiFi 9.2, value 8.1). Penn Station 2,350 ft; MSG 8-min walk; LGA 8.1 mi.",
+   "amenities_flag": "",
+   "taxes_note": "14.75% tax + $4 per night city tax EXCLUDED from the totals above. $26/night resort fee is INCLUDED.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "Times Square / Hell's Kitchen / Midtown West",
+   "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★, Marea-adjacent Midtown cluster; Chef's Table at Brooklyn Fare ★★ and Jungsik ★★ are a short crosstown trip. Measured transit time per venue not verified.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+  },
+  {
+   "id": "arlo-midtown",
+   "name": "Arlo Midtown",
+   "address": "351 W 38th St, New York, NY 10018",
+   "area": "Midtown West",
+   "official_site": "https://www.arlohotels.com/arlo-midtown/",
+   "booking_url": "https://www.booking.com/hotel/us/arlo-midtown.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/arlo-midtown.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 1098.0,
+   "rate_tiers": [
+    {
+     "room": "King City",
+     "total_before_tax_usd": 1255.0,
+     "per_night_usd": null,
+     "cancellation": "See rate card on Booking.com",
+     "meets_bed_rule": "King — meets the rule"
+    },
+    {
+     "room": "King City",
+     "total_before_tax_usd": 2262.0,
+     "per_night_usd": null,
+     "cancellation": "See rate card on Booking.com",
+     "meets_bed_rule": "King"
+    }
+   ],
+   "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
+   "room_meets_queen_or_larger": "Yes — king bed listed.",
+   "amenities": "",
+   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "Midtown West / Hell's Kitchen",
+   "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★. Measured transit time not verified.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+  },
+  {
+   "id": "mayfair-hotel",
+   "name": "The Mayfair Hotel",
+   "address": "242 W 49th St, New York, NY 10019",
+   "area": "Midtown / Theater District",
+   "official_site": "https://www.mayfairnewyork.com/",
+   "booking_url": "https://www.booking.com/hotel/us/mayfair-hotel-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/mayfair-hotel-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 1060.0,
+   "rate_tiers": [],
+   "room_meets_private_bathroom": "Yes — en-suite listed.",
+   "room_meets_queen_or_larger": "NO — the cheapest tier captured is a full/double bed, which FAILS the queen-or-larger rule. A queen tier may exist at a higher price; not captured.",
+   "amenities": "",
+   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "taxes_note": "Taxes/fees shown at checkout.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "Theater District / Midtown",
+   "michelin_note": "Midtown cluster reachable; DQ on the bed rule.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED."
+  },
+  {
+   "id": "blue-angel-hotel",
+   "name": "Blue Angel Hotel",
+   "address": "1234 Broadway, New York, NY 10001",
+   "area": "NoMad / Herald Square",
+   "official_site": "https://www.blueangelhotel.com/",
+   "booking_url": "https://www.booking.com/hotel/us/blue-angel-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/blue-angel-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 990.0,
+   "rate_tiers": [],
+   "room_meets_private_bathroom": "Yes — en-suite listed.",
+   "room_meets_queen_or_larger": "NO — cheapest tier is a full bed and the room category captured has no windows. FAILS the bed requirement and is a poor choice for a 1–2 week stay.",
+   "amenities": "",
+   "amenities_flag": "UNVERIFIED.",
+   "taxes_note": "Taxes/fees shown at checkout.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "NoMad / Herald Square",
+   "michelin_note": "Good cluster proximity but disqualified on bed type and windowless rooms.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED."
+  },
+  {
+   "id": "artezen-hotel",
+   "name": "Artezen Hotel",
+   "address": "24 John St, New York, NY 10038",
+   "area": "Financial District",
+   "official_site": "https://www.artezenhotel.com/",
+   "booking_url": "https://www.booking.com/hotel/us/artezen-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "source_url": "https://www.booking.com/hotel/us/artezen-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+   "search_page_cheapest_total_usd": 1358.69,
+   "rate_tiers": [],
+   "room_meets_private_bathroom": "Yes — en-suite listed.",
+   "room_meets_queen_or_larger": "Large bed listed; exact width UNVERIFIED.",
+   "amenities": "",
+   "amenities_flag": "UNVERIFIED.",
+   "taxes_note": "Taxes/fees shown at checkout.",
+   "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
+   "michelin_cluster": "Financial District / Tribeca",
+   "michelin_note": "Closest to Saga ★★, Atera ★★★, Crown Shy ★. Highest price of the shortlist for the same week.",
+   "michelin_within_1h_count": null,
+   "michelin_count_flag": "UNVERIFIED."
+  }
+ ]
+}

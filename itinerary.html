@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itinerary — NYC 2027 trip planner</title>
+<meta name="description" content="A 7-day New York plan built only from activities whose hours and prices were verified on official sites.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="itinerary.html" aria-current="page">Itinerary</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Seven days, 15–22 February 2027</h1>
+    <p>Sequenced around published closures, not preferences: the Whitney is closed Tuesdays, the 9/11 Museum is closed most Tuesdays, and the Guggenheim's pay-what-you-wish window is Tuesday afternoon.</p>
+  </div>
+
+  <section class="panel">
+    <h2>Day by day</h2>
+    <p class="lede">Each slot links to the activity's verified hours and price. Evenings are left open on purpose — restaurant timings are not yet verified.</p>
+    <div id="table-host"><p class="loading">Loading itinerary…</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>If you stay a second week</h2>
+    <div id="week2"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Built from data/activities.json, which cites each venue's own site. Verification date 25 November 2026.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var NAMES = {};
+fetch("data/activities.json").then(function (r) { return r.json(); }).then(function (j) {
+  j.activities.forEach(function (a) { NAMES[a.id] = a.name; });
+  return fetch("data/itinerary.json");
+}).then(function (r) { return r.json(); }).then(function (j) {
+  function slot(list) {
+    if (!list || !list.length) return '<span class="muted small">—</span>';
+    return list.map(function (s) {
+      if (typeof s === "string") return '<span class="small">' + NYF.esc(s) + "</span>";
+      var name = NAMES[s.activity] || s.activity;
+      return '<div class="small"><strong>' + NYF.esc(name) + "</strong>" +
+        (s.why ? '<br><span class="muted">' + NYF.esc(s.why) + "</span>" : "") + "</div>";
+    }).join("<hr style='border:none;border-top:1px solid #eef1f5;margin:6px 0'>");
+  }
+  document.getElementById("table-host").innerHTML =
+    '<div class="scroll"><table><thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th><th>Dinner area</th><th>Note</th></tr></thead><tbody>' +
+    j.days.map(function (d) {
+      return "<tr><td><strong>Day " + d.day + "</strong><br><span class='muted small'>" + NYF.esc(d.weekday) +
+        "</span></td><td>" + slot(d.morning) + "</td><td>" + slot(d.afternoon) + "</td><td>" + slot(d.evening) +
+        "</td><td class='small'>" + NYF.esc(d.dinner_area || "") + "</td><td class='small'>" +
+        (d.note ? NYF.esc(d.note) : '<span class="muted">—</span>') + "</td></tr>";
+    }).join("") + "</tbody></table></div>" +
+    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(j._meta.weekday_logic) + " " + NYF.esc(j._meta.caveat) + "</p>";
+
+  document.getElementById("week2").innerHTML =
+    '<ul class="tight">' + j.second_week_suggestions.map(function (s) { return "<li>" + NYF.esc(s) + "</li>"; }).join("") + "</ul>" +
+    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(j._meta.length_options) + "</p>";
+}).catch(function (e) {
+  document.getElementById("table-host").innerHTML = '<p class="loading">Could not load itinerary data: ' + NYF.esc(e.message) + "</p>";
+});
+</script>
+</body>
+</html>
