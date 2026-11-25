@@ -1,6 +1,12 @@
 name: Research diagnostics
 
 on:
+  push:
+    branches:
+      - arena/ed92e764-nyfun3
+    paths:
+      - research/scripts/diagnose.py
+      - .github/workflows/research-diagnostics.yml
   workflow_dispatch:
 
 permissions:

@@ -43,3 +43,4 @@ Last updated: 2026-11-25 UTC
 4. MTA GTFS static feeds are current schedules, not a guarantee for February–March 2027.
 5. Hotel rates are dynamic and booking engines sometimes block non-browser fetchers. No price will be published unless the official dated page yields a rate and its tax wording.
 6. Old `tripplanner.mta.info` links are HTTP and did not open directly; the current official MTA app and Developer Resources are used instead.
+7. GitHub only registers `workflow_dispatch` workflows from the default branch; a manual dispatch to the fixed branch returned HTTP 404. The diagnostics workflow therefore uses a path-scoped `push` trigger on `arena/ed92e764-nyfun3`, avoiding any commit to `main`.
