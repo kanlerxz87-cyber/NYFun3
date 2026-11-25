@@ -132,9 +132,11 @@ Post-publish checks run against the **live** site (not just local):
 test — worth recording as a process lesson: render tests confirmed "non-empty HTML", which is
 not the same as "correct HTML". All three are fixed and re-verified live.
 
-**Remaining gaps are explicitly scoped:** no comprehensive per-couple menu costs for all 72
-starred rows (the supplemental dossier has eight selected restaurant price calculations); no
-Michelin-within-1-hour hotel ranking; 48 one-star hours cells; 52 ungrouped rows; and no Bib
+**Latest upstream status (25 Nov 2026):** the root dataset now reports 43 of 52 one-star
+rows without verified hours and 50 of 72 rows without verified neighbourhoods; earlier counts
+above describe the initial pass. Remaining gaps are no comprehensive per-couple menu costs for
+all 72 starred rows (the supplemental dossier has eight selected restaurant price calculations),
+no Michelin-within-1-hour hotel ranking, 43 one-star hours cells, 50 ungrouped rows, and no Bib
 Gourmand tier in the all-stars dataset. Each is flagged on the site and carries a concrete
 method for closing it in `plan.html` §4 or `pages/findings.html`.
 

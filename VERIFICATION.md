@@ -18,7 +18,7 @@ averaged, or carried over from a secondary source.
 | Hotels (`data/hotels.json`) | 9 | 9 (exact quote URL each) | Michelin 1-hour count on all 9 | **verified, ranking blocked** |
 | Michelin — three star | 5 | 5 | 0 | **verified** |
 | Michelin — two star | 15 | 15 | 3 hours cells | **verified, gaps flagged** |
-| Michelin — one star | 52 | 52 (Guide URL on every row) | 48 hours cells, most price cells | **status verified; hours partly missing** |
+| Michelin — one star | 52 | 52 (Guide URL on every row) | 43 hours cells, most price cells | **status verified; hours partly missing** |
 | Itinerary (`data/itinerary.json`) | 7 days | derived from the tables above | none invented | **derived, no new claims** |
 
 Every table on the site renders a `Source` column. No row anywhere is published without
@@ -80,7 +80,7 @@ verdict, because silently dropping a hotel would misrepresent the market.
 
 - `price_for_two_usd` on every Michelin row — no first-party figure exists to cite.
 - `michelin_within_1h_count` on every hotel row — no verified journey-time source.
-- `hours` on 48 one-star rows — Guide page not yet read for those.
+- `hours` on 43 one-star rows — Guide page not yet read for those.
 - `amenities` on 7 of 9 hotels — full amenity lists not captured; the two populated rows
   (citizenM, Pestana CR7) show exactly what a captured list looks like.
 - The Met / Cloisters / Top of the Rock hours.
