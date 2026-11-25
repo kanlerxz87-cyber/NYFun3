@@ -19,7 +19,7 @@
 | `T3` | NYC Activities, Hours, Exceptions, <=1-Hr Transit & Social Reviews | `done` | `fc94e0d3` | `2026-11-25T22:56:00Z` | `data/activities.json` |
 | `T4` | NYC Hotels (Private Bath, Queen+ Bed, Verified 7-Night Pricing Feb–Mar 2027, Best Time to Book & Michelin Transit Ranking) | `done` | `fc94e0d3` | `2026-11-25T23:06:00Z` | `data/hotels.json` |
 | `T5` | Decision Readiness (Questions & Missing Info Discovery) + Site Improvement Suggestions | `done` | `fc94e0d3` | `2026-11-25T23:18:00Z` | `data/decision_and_suggestions.json` |
-| `T6` | Final Integration, Line-by-Line Re-Verification, Dashboard Site & Subpages, Link Check & Live Preview | `in progress` | `fc94e0d3` | `2026-11-25T23:23:00Z` | `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `questions.html`, `suggestions.html`, `review.html`, `assets/`, `.nojekyll`, `README.md` |
+| `T6` | Final Integration, Line-by-Line Re-Verification, Dashboard Site & Subpages, Link Check & Live Preview | `done` | `fc94e0d3` | `2026-11-25T23:23:00Z` | `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `questions.html`, `suggestions.html`, `review.html`, `assets/`, `.nojekyll`, `README.md` |
 
 ---
 
@@ -62,3 +62,8 @@
 ### 2026-11-25T23:23:00Z — Session `fc94e0d3` completed `T5` & claimed `T6`
 - **Verification performed**: Verified MTA 2026–2027 OMNY subway/local bus base fare (`$3.00`) and 7-day rolling fare cap (`$35.00/person` = `$70.00/couple`) via official MTA tariff document `https://www.mta.info/document/195636`. Compiled structured Known vs. Missing Information, 6 pre-booking Decision Questions with discovery steps, 6 reviewable Site & Decision-Making Suggestions (`S01`–`S06`), and master irregularity registry (`IRREG-01`–`IRREG-14`).
 - **Next claim**: Claimed `T6` (final line-by-line cross-verification, GitHub Pages multi-page static dashboard generation, link & HTML audit, and live preview).
+
+### 2026-11-25T23:29:00Z — Session `fc94e0d3` completed `T6` (All Tasks `T1`–`T6` Done)
+- **Deliverables built & verified**:
+  - Generated 7 mobile-friendly, GitHub Pages–ready static HTML pages (`index.html`, `hotels.html`, `michelin.html`, `activities.html`, `questions.html`, `suggestions.html`, `review.html`), shared `assets/styles.css` + `assets/app.js`, `.nojekyll`, and `README.md` from primary-source JSON datasets via `scripts/build_site.py`.
+  - Automated QA (`scripts/verify_site.py`) passed 100%: monotonic hotel ranking by `<= 60 min` MICHELIN reachability (`148 -> 133`), Queen/King + private bath verification on all 8 hotels, 70-starred NYC cluster sum, blank-field enforcement on unverified `I Sodi` pricing (`IRREG-10`), exact filter-pill count parity across all tables, HTTPS-only external links, valid relative links, and zero localhost leaks.
