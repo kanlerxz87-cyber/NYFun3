@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Suggestions">
+  <title>Suggestions · NYFun3</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">NYFun3 <span>New York trip planning dashboard</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+<a href="../index.html">Overview</a>
+<a href="executive-summary.html">Executive summary</a>
+<a href="hotels.html">Hotels</a>
+<a href="michelin.html">Michelin dining</a>
+<a href="activities.html">Activities + social</a>
+<a href="itinerary.html">Itinerary</a>
+<a href="questions.html">Questions</a>
+<a href="suggestions.html" class="active" aria-current="page">Suggestions</a>
+<a href="flagged-for-review.html">Flagged for review</a>
+<a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<h1>Suggestions — choose a path before implementing</h1>
+<p>None of the items below has been applied to the data or the site. They are options for review.
+Each has a benefit, cost in effort and the missing information it would resolve.</p>
+
+<div class="panel">
+<h2>A. Decision-focused options</h2>
+<div class="idea"><h3>A1. Wait for dated rates, then rebuild the hotel ranking</h3>
+<p><span class="badge verified">Highest value</span> Benefit: turns the blank price columns into a real cheapest-stay answer.
+Effort: low once booking windows open. Needs: dated all-in totals for five hotels. Resolves Q1–Q3.</p></div>
+<div class="idea"><h3>A2. Add a verified transit-time column using MTA itineraries</h3>
+<p><span class="badge third-party">Research task</span> Benefit: makes the one-hour rule testable.
+Effort: medium (one itinerary per restaurant/activity at evening travel time). Needs: origin hotel and date/time. Resolves Q5.</p></div>
+<div class="idea"><h3>A3. Collect official menu prices for two</h3>
+<p><span class="badge third-party">Research task</span> Benefit: replaces reviewer-reported prices with official figures.
+Effort: medium; some restaurants publish only a deposit. Needs: official menu or booking deposit pages. Resolves Q7.</p></div>
+<div class="idea"><h3>A4. Fix a hard decision date and booking calendar</h3>
+<p><span class="badge verified">Recommended</span> Benefit: avoids missing the Hyatt 8 Dec 2026 deadline and similar offers.
+Effort: low. Needs: traveller confirmation of preferred dates. Resolves Q2–Q3.</p></div>
+</div>
+
+<div class="panel">
+<h2>B. Site and structure options</h2>
+<div class="idea"><h3>B1. Add sorting and CSV download to every table</h3>
+<p>Benefit: quick comparison on a phone. Effort: small JavaScript change. Needs: no new data. Does not change any verified value.</p></div>
+<div class="idea"><h3>B2. Split "verified", "third-party" and "unverified" into separate visual columns</h3>
+<p>Benefit: even clearer audit trail. Effort: small layout change. Needs: no new data.</p></div>
+<div class="idea"><h3>B3. Add a map view with official MTA links</h3>
+<p>Benefit: makes the cluster and travel constraint visual. Effort: medium. Needs: verified coordinates and transit itineraries; otherwise map would imply unverified travel times.</p></div>
+<div class="idea"><h3>B4. Add a "changes since last check" log</h3>
+<p>Benefit: catches Michelin award changes and hour edits. Effort: low. Needs: repeat captures with dates.</p></div>
+</div>
+
+<div class="panel">
+<h2>C. Research-expansion options</h2>
+<div class="idea"><h3>C1. Capture all 50 one-star restaurants</h3>
+<p>Benefit: complete starred list. Effort: medium. Needs: 17 more official Michelin detail pages.</p></div>
+<div class="idea"><h3>C2. Add Bib Gourmand and selected restaurants as a value-focused shortlist</h3>
+<p>Benefit: cheaper alternatives near the hotel. Effort: medium. Needs: official Michelin list pages and price confirmation.</p></div>
+<div class="idea"><h3>C3. Expand social coverage to every listed venue</h3>
+<p>Benefit: more review context. Effort: high. Needs: verified official or clearly-labelled third-party links; TikTok access may remain blocked.</p></div>
+<div class="idea"><h3>C4. Add Broadway show times and ticket prices for the exact dates</h3>
+<p>Benefit: completes the evening plan. Effort: medium. Needs: official Broadway league/show pages with Feb 2027 schedules.</p></div>
+</div>
+
+<div class="note warn"><strong>No change has been implemented.</strong> Review the options, choose a path, then update
+<code>COORDINATION.md</code> with a new task before work begins.</div>
+
+</main>
+<footer class="site-footer">
+  Data captured 2026-11-25 from official sources. Blank values are unverified, not estimated.
+  &nbsp;·&nbsp; <a href="https://github.com/kanlerxz87-cyber/NYFun3/blob/arena/99553b53-nyfun3/COORDINATION.md" target="_blank" rel="noopener noreferrer">Coordination board</a>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
