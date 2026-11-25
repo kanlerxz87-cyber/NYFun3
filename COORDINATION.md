@@ -37,7 +37,7 @@ At integration time, merge `arena/c2e08f03-nyfun3` into `main`.
 | T7 | Open questions + missing-information plan | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | section 4 of `plan.html` (11 items) | — |
 | T8 | Suggestions / decision section | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | section 3 of `plan.html` (S1–S9) | — |
 | T9 | Verification log (line-by-line) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `VERIFICATION.md` | — |
-| T10 | Integration: merge to `main`, re-verify, publish Pages | needs review | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `main` publish | — |
+| T10 | Integration: merge to `main`, re-verify, publish Pages | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `main` publish | — |
 
 ## Work log
 
@@ -106,3 +106,28 @@ Barns (Tarrytown). Published as a stated discrepancy, not reconciled silently.
 **T10 status:** still `needs review`. Publishing requires merging this branch to `main`,
 which is the integration step, and the site still has three acknowledged data gaps. Not
 marked done.
+
+**T10 executed.** `arena/c2e08f03-nyfun3` merged into `main` (`--no-ff`, six integration
+merges across the session). GitHub Pages rebuilt each time; `pages/builds/latest` reports
+`built` on the newest `main` commit and the live URLs serve the new pages.
+
+Post-publish checks run against the **live** site (not just local):
+
+- `/` `/activities.html` `/restaurants.html` `/michelin.html` `/hotels.html`
+  `/itinerary.html` `/plan.html` all render with populated tables.
+- Michelin cluster table: 20 rows; the "Not yet grouped" row makes the unverified
+  neighbourhoods explicit instead of misfiling them under a guessed area.
+- Hotel table: order corrected to cheapest-compliant-first (HGU $1,091.60 → Eurostars
+  $1,127 → citizenM $1,113 → Hyatt $1,183 → Arlo $1,255 → Pestana $1,327 → Artezen $1,358.69),
+  duplicated "YesYes" labels removed, run-together flag text separated.
+- `plan.html` §2 corrected: it previously implied every row had an area and hours. It now
+  states 20 of 72 verified neighbourhoods and 48 of 52 one-star rows still missing hours.
+
+**Three defects were found only by looking at the published site**, not by the local render
+test — worth recording as a process lesson: render tests confirmed "non-empty HTML", which is
+not the same as "correct HTML". All three are fixed and re-verified live.
+
+**Remaining gaps are unchanged and deliberately not closed:** no per-couple restaurant price,
+no Michelin-within-1-hour hotel ranking, 48 one-star hours cells, 52 ungrouped rows, no Bib
+Gourmand tier. Each is flagged on the site and carries a concrete method for closing it in
+`plan.html` §4.
