@@ -91,7 +91,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | 2026-11-25 | `ed92e764` | Phase A shared outputs on `main` | Final review needs the root dashboard and data | Merged `origin/main` into fixed branch. |
 | 2026-11-25 | `ed92e764` | `COORDINATION.md` | Add/add and content conflicts because three sessions created/updated the board | Combined board preserves all task boards, work logs, source lists, verification notes, and irregularities. |
 | 2026-11-25 | `arena-61fbe157` | root `index.html` | Add dossier link | Link present in root dashboard; retained in final integration. |
-| 2026-11-25 | `ed92e764` | shared `data/*.json`, `*.html`, `pages/**` | Re-verify combined data and publish final integration | PR #4 merged to `main`; Pages rebuilt at `0a2eafe`; live checks passed. A final copy reconciliation follows in PR #5. |
+| 2026-11-25 | `ed92e764` | shared `data/*.json`, `*.html`, `pages/**` | Re-verify combined data and publish final integration | PR #4 merged at `0a2eafe`; final copy reconciliation merged in PR #5 at `0b9ec96`; both Pages builds and live checks passed. |
 
 ## Work log — Final integration (`ed92e764`)
 
@@ -106,6 +106,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 ## Final publish check (`ed92e764`, 2026-11-25 UTC)
 
 - **PR #4** (`arena/ed92e764-nyfun3` → `main`) merged as `0a2eafe` after the `Validate static site` check succeeded. CI run `45722618504` passed all seven job steps, including the DOM-stub rendered-table check.
-- **GitHub Pages** build for commit `0a2eafe` reported `status: built`, `error: null`, completed 23:37:26 UTC. Legacy source remains `main` `/`.
-- **Live URLs checked:** root dashboard, `flagged-for-review.html`, `plan.html`, `pages/findings.html`, `restaurants.html`, `michelin.html`, and `itinerary.html`. The new review queue, Source columns, `2 × official per-person price` cells, and consolidated itinerary sources rendered on the published site.
-- **Final copy fix:** the Restaurants and Michelin introductions were reconciled with the partial menu-price coverage. This follow-up is published through PR #5; T13 is marked `done` because all substantive integration, CI, PR, Pages, and live checks are complete.
+- **PR #5** merged the final copy reconciliation as `0b9ec96`; its `Validate static site` check passed.
+- **GitHub Pages** reported `status: built`, `error: null` for both `0a2eafe` and `0b9ec96`. The latest build completed 23:39:31 UTC. Legacy source remains `main` `/`.
+- **Live URLs checked:** root dashboard, `flagged-for-review.html`, `plan.html`, `pages/findings.html`, `restaurants.html`, `michelin.html`, and `itinerary.html`. The new review queue, Source columns, `2 × official per-person price` cells, and consolidated itinerary sources rendered on the published site. The Restaurants and Michelin introductions were rechecked with a cache-busting query after the second build.
+- **T13:** `done`. All substantive integration, CI, PR, Pages, and live checks are complete; no 2027 inference or unverified value was introduced.
