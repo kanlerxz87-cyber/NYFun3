@@ -154,7 +154,7 @@ site. For a February trip that is a real planning hole; it is open question Q11.
 |---|---|
 | `data/michelin.json` | 5 three-star + 7 two-star with full hours from Guide pages. Validates as JSON, 12 records. |
 | `data/michelin_two_star.json` | All 15 two-star records; 7 overlap the file above and were merged by name in `michelin_all.json`, not duplicated at render time. |
-| `data/michelin_one_star.json` | 52 one-star rows. Where the Guide page was not fetched, hours and website are blank with an explicit flag — 48 of 52 rows still need their hours captured. **This is the largest known gap.** |
+| `data/michelin_one_star.json` | 52 one-star rows. Where the Guide page was not fetched, hours and website are blank with an explicit flag — 43 of 52 rows still need their hours captured. **This is the largest known gap.** |
 | `data/michelin_all.json` | Merged, de-duplicated, filterable source for the Michelin and Restaurants pages. 72 rows. |
 | `data/hotels.json` | 9 hotels, all with the exact quote URL. Michelin-proximity count deliberately null. |
 | `data/activities.json` | 15 activities; 1 row carries an unverified price (AMNH), 8 rows carry an unverified or seasonal hours cell (2 of those are seasonal-by-design: the High Line and the Statue ferry). |
@@ -169,5 +169,5 @@ site. For a February trip that is a real planning hole; it is open question Q11.
 The repository is in good shape structurally: static, dependency-free, mobile-first, and
 every published value traces to an official page. The three things that genuinely limit the
 deliverable are (a) no verified per-couple restaurant prices, (b) no computed Michelin
-proximity ranking, and (c) 48 one-star rows whose hours have not yet been read off their
+proximity ranking, and (c) 43 one-star rows whose hours have not yet been read off their
 Guide pages. All three are stated on the site rather than papered over.
