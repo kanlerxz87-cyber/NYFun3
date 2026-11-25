@@ -64,7 +64,7 @@ function draw() {
   var cl = document.getElementById("f-cluster").value;
   var tier = document.getElementById("f-tier").value;
   var rows = DATA.restaurants.filter(function (r) {
-    return (!cl || (r.cluster || "Unassigned") === cl) && (!tier || String(r.stars) === tier);
+    return (!cl || (r.cluster || "Not yet grouped") === cl) && (!tier || String(r.stars) === tier);
   }).sort(function (a, b) {
     return (a.cluster || "zz").localeCompare(b.cluster || "zz") || b.stars - a.stars || a.name.localeCompare(b.name);
   });
@@ -96,7 +96,7 @@ function draw() {
 NYF.load("data/michelin_all.json", function (json) {
   DATA = json;
   var areas = {};
-  json.restaurants.forEach(function (r) { areas[r.cluster || "Unassigned"] = 1; });
+  json.restaurants.forEach(function (r) { areas[r.cluster || "Not yet grouped"] = 1; });
   var sel = document.getElementById("f-cluster");
   Object.keys(areas).sort().forEach(function (k) {
     var o = document.createElement("option"); o.value = k; o.textContent = k; sel.appendChild(o);

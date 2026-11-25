@@ -33,7 +33,7 @@
 
   <section class="panel">
     <h2>Clusters at a glance</h2>
-    <p class="lede">Grouping by area makes the "which hotel puts you near the most stars" question answerable. Counts below cover starred restaurants only.</p>
+    <p class="lede">Grouping by area is what makes "which hotel puts you near the most stars" answerable. A cluster is only assigned where the MICHELIN page itself names the area — so the "Not yet grouped" row is a to-do, not a neighbourhood.</p>
     <div id="clusters"></div>
   </section>
 
@@ -71,7 +71,7 @@ function draw() {
   var tier = document.getElementById("f-tier").value;
   var cl = document.getElementById("f-cluster").value;
   var rows = DATA.restaurants.filter(function (r) {
-    return (!tier || String(r.stars) === tier) && (!cl || (r.cluster || "Unassigned") === cl);
+    return (!tier || String(r.stars) === tier) && (!cl || (r.cluster || "Not yet grouped (see note)") === cl);
   }).sort(function (a, b) { return b.stars - a.stars || a.name.localeCompare(b.name); });
 
   var body = rows.map(function (r) {
@@ -102,7 +102,7 @@ function draw() {
       "<th>Restaurant</th><th>Status</th><th>Cuisine</th><th class='num'>Price band</th><th>Area</th>" +
       "<th>Days &amp; hours</th><th class='num'>Cost for two</th><th>Venue / booking</th><th>Reviews</th><th>Source</th>" +
     "</tr></thead><tbody>" + body + "</tbody></table></div>" +
-    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(DATA._meta.price_rule) + " " + NYF.esc(DATA._meta.in_or_near_nyc) + "</p>";
+    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(DATA._meta.cluster_rule) + " " + NYF.esc(DATA._meta.price_rule) + " " + NYF.esc(DATA._meta.in_or_near_nyc) + "</p>";
 }
 
 NYF.load("data/michelin_all.json", function (json) {
@@ -119,7 +119,7 @@ NYF.load("data/michelin_all.json", function (json) {
 
   var by = {};
   json.restaurants.forEach(function (r) {
-    var k = r.cluster || "Unassigned";
+    var k = r.cluster || "Not yet grouped (see note)";
     if (!by[k]) by[k] = { 3: 0, 2: 0, 1: 0 };
     by[k][r.stars]++;
   });
