@@ -32,7 +32,7 @@
 
   <section class="panel">
     <h2>Ranked cheapest first</h2>
-    <p class="lede">Requirement filter: private bathroom and a queen bed or larger. Two hotels fail the bed rule and are marked as such rather than dropped.</p>
+    <p class="lede">Sorted by the cheapest room that meets your brief where one was captured, then by the cheapest available total. Two hotels fail the bed rule — Blue Angel and The Mayfair — and are kept in the table with a red verdict rather than deleted, so you can see what the cheap end of the market actually offers.</p>
     <div id="table-host"><p class="loading">Loading hotels…</p></div>
   </section>
 
@@ -59,8 +59,15 @@
 <script src="assets/app.js"></script>
 <script>
 NYF.load("data/hotels.json", function (json) {
+  function displayTotal(h) {
+    if (!h.rate_tiers || !h.rate_tiers.length) return h.search_page_cheapest_total_usd || null;
+    var t = h.rate_tiers.slice().sort(function (a, b) {
+      return (a.total_before_tax_usd || 9e9) - (b.total_before_tax_usd || 9e9);
+    })[0];
+    return t ? t.total_before_tax_usd : (h.search_page_cheapest_total_usd || null);
+  }
   var hs = json.hotels.slice().sort(function (a, b) {
-    return (a.search_page_cheapest_total_usd || 9e9) - (b.search_page_cheapest_total_usd || 9e9);
+    return (displayTotal(a) || 9e9) - (displayTotal(b) || 9e9);
   });
 
   var body = hs.map(function (h) {
@@ -72,23 +79,25 @@ NYF.load("data/hotels.json", function (json) {
     var total = cheapestTier ? NYF.money(cheapestTier.total_before_tax_usd) :
       (h.search_page_cheapest_total_usd ? NYF.money(h.search_page_cheapest_total_usd) : NYF.unverified("No total captured."));
     var totalNote = cheapestTier ? '<span class="small muted">' + NYF.esc(cheapestTier.room) + "</span>" :
-      '<span class="flag">search-card price — room type not confirmed, so the bed rule is unverified for this figure</span>';
+      '<span class="flag">Search-card price — the room type is not confirmed, so the bed rule is unverified for this figure.</span>';
 
     function verdict(ok, txt) {
-      return ok ? '<span class="pill ok">Yes</span> <span class="small">' + NYF.esc(txt || "") + "</span>"
-                : '<span class="pill warn">No / unverified</span> <span class="small">' + NYF.esc(txt || "") + "</span>";
+      var clean = String(txt || "").replace(/^(Yes|No)\s*[—-]\s*/i, "");
+      return '<div>' + (ok ? '<span class="pill ok">Yes</span>' : '<span class="pill warn">No / unverified</span>') +
+        ' <span class="small">' + NYF.esc(clean) + "</span></div>";
     }
     return "<tr>" +
       "<td><strong>" + NYF.esc(h.name) + "</strong><br><span class='muted small'>" + NYF.esc(h.address) + "</span>" +
         "<br><span class='small'>" + NYF.esc(h.amenities || "") + "</span>" +
-        (h.amenities_flag ? '<span class="flag">' + NYF.esc(h.amenities_flag) + "</span>" : "") + "</td>" +
+        (h.amenities_flag ? '<span class="flag">' + NYF.esc(h.amenities_flag.replace(/^UNVERIFIED[^—]*—?\s*/i, "").replace(/^UNVERIFIED\.?\s*/i, "Amenity list not yet captured from an official page.")) + "</span>" : "") + "</td>" +
       "<td class='small'>" + NYF.esc(h.area) + "</td>" +
       '<td class="num">' + total + "<br>" + totalNote + "</td>" +
-      "<td>" + verdict(bathOk, h.room_meets_private_bathroom) + "<br>" + verdict(bedOk, h.room_meets_queen_or_larger) + "</td>" +
+      "<td>" + verdict(bathOk, h.room_meets_private_bathroom) + verdict(bedOk, h.room_meets_queen_or_larger) + "</td>" +
       "<td class='small'>" + NYF.esc(h.taxes_note || "") + "</td>" +
       "<td class='small'>" + NYF.esc(h.michelin_cluster || "") +
         (h.michelin_within_1h_count ? "<br><strong>" + h.michelin_within_1h_count + " within 1 h</strong>" :
-          '<span class="unver">count unverified</span><span class="flag">' + NYF.esc((h.michelin_count_flag || "").replace(/^UNVERIFIED[^—]*—\s*/i, "")) + "</span>") + "</td>" +
+          '<div style="margin-top:6px"><span class="unver">count unverified</span><span class="flag">' +
+          NYF.esc((h.michelin_count_flag || "Needs a measured journey time.").replace(/^UNVERIFIED[^—]*—\s*/i, "")) + "</span></div>") + "</td>" +
       '<td class="small">' + NYF.srcLink(h.booking_url, "rate page") +
         (h.official_site ? "<br>" + NYF.srcLink(h.official_site, "hotel site") : "") + "</td>" +
     "</tr>";
