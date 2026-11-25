@@ -28,15 +28,15 @@ At integration time, merge `arena/c2e08f03-nyfun3` into `main`.
 
 | ID | Task | Status | Owner (session) | Branch | File scope | Touches |
 |----|------|--------|-----------------|--------|-----------|---------|
-| T1 | Repo review + irregularity log | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `REVIEW.md`, `review.html` | — |
-| T2 | Michelin dataset (official list, stars, links) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `data/michelin.json`, `restaurants.html` | — |
+| T1 | Repo review + irregularity log | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `REVIEW.md` (R1–R20) | — |
+| T2 | Michelin dataset (official list, stars, links) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `data/michelin*.json`, `restaurants.html`, `michelin.html` | — |
 | T3 | Hotel pricing (real 7-night totals, dates, amenities) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `data/hotels.json`, `hotels.html` | — |
 | T4 | Activities dataset + social links | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `data/activities.json`, `activities.html` | — |
 | T5 | Site shell, nav, CSS, executive summary | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `index.html`, `assets/` | — |
 | T6 | Itinerary (7-night + extended variants) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `itinerary.html`, `data/itinerary.json` | — |
-| T7 | Open questions + missing-information plan | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `questions.html` | — |
-| T8 | Suggestions / decision section | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `suggestions.html` | — |
-| T9 | Verification log (line-by-line) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `VERIFICATION.md`, `verification.html` | — |
+| T7 | Open questions + missing-information plan | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | section 4 of `plan.html` (11 items) | — |
+| T8 | Suggestions / decision section | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | section 3 of `plan.html` (S1–S9) | — |
+| T9 | Verification log (line-by-line) | done | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `VERIFICATION.md` | — |
 | T10 | Integration: merge to `main`, re-verify, publish Pages | needs review | arena-c2e08f03 | arena/c2e08f03-nyfun3 | `main` publish | — |
 
 ## Work log
@@ -73,3 +73,36 @@ At integration time, merge `arena/c2e08f03-nyfun3` into `main`.
 Booking.com is an OTA/aggregator, not an official price publisher (used for live quotes only, with
 hotel official sites used for amenities); third-party listings disagree with each other on
 restaurant hours, so only first-party restaurant/venue pages were accepted.
+
+### arena-c2e08f03 — 2026-11-25 (later pass)
+
+**Built:** `data/activities.json` (15 rows), `data/hotels.json` (9 rows), `data/michelin_all.json`
+(72 merged rows: 5/15/52), `data/itinerary.json` (7 days); pages `index.html`,
+`activities.html`, `restaurants.html`, `michelin.html`, `hotels.html`, `itinerary.html`,
+`plan.html`; shared `assets/style.css` + `assets/app.js`; docs `REVIEW.md` (R1–R20) and
+`VERIFICATION.md`.
+
+**Local check:** served on `0.0.0.0:8000`; all 6 pages, both assets and all 4 JSON files
+return HTTP 200; each page's render logic executed against the real JSON in a Node sandbox —
+activities 16 rows, restaurants 73, michelin 73 + 20 cluster rows, hotels 10 + 11 rate-tier
+rows. No empty renders, no JS exceptions.
+
+**Gaps now recorded on the site itself** (not hidden):
+
+- No verified per-couple restaurant price. MICHELIN publishes a band only; venue sites are
+  JS SPAs or gate menus behind booking. Column blank + flagged. → open question Q7.
+- No Michelin "within 1 hour" hotel ranking. Needs one measured journey per hotel ×
+  restaurant pair. Column `null` + flagged. → open question Q6.
+- 48 of 52 one-star rows lack hours (Guide page not yet read). Flagged per row.
+- The Met and The Cloisters hours cells blank — the hours panel never rendered across four
+  fetches of two URLs. Third-party hours were NOT substituted.
+- Bib Gourmand (~76 venues) not yet catalogued. → suggestion S4.
+
+**New irregularity found this pass:** Michelin's own NYC filter counts 50 one-star and 14
+two-star, while its 18 Nov 2025 announcement lists 52 and 15. The extra one-star names
+include La Bastide (North Salem, Westchester) and the extra two-star is Blue Hill at Stone
+Barns (Tarrytown). Published as a stated discrepancy, not reconciled silently.
+
+**T10 status:** still `needs review`. Publishing requires merging this branch to `main`,
+which is the integration step, and the site still has three acknowledged data gaps. Not
+marked done.
