@@ -1,0 +1,71 @@
+{
+  "description": "A small, manually reviewed host-identity list for the NYC trip source audit. A matching host is NOT proof that a particular row, value, rate, date, review, or link is correct. Hosts omitted from this list may still be official; review them individually before adding them.",
+  "reviewed_utc": "2026-11-25",
+  "hosts": [
+    {
+      "host": "guide.michelin.com",
+      "organization": "The MICHELIN Guide",
+      "evidence": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+    },
+    {
+      "host": "www.mta.info",
+      "organization": "Metropolitan Transportation Authority",
+      "evidence": "https://www.mta.info/"
+    },
+    {
+      "host": "new.mta.info",
+      "organization": "Metropolitan Transportation Authority",
+      "evidence": "https://www.mta.info/"
+    },
+    {
+      "host": "www.nyc.gov",
+      "organization": "New York City government",
+      "evidence": "https://www.nyc.gov/"
+    },
+    {
+      "host": "www.nps.gov",
+      "organization": "National Park Service",
+      "evidence": "https://www.nps.gov/"
+    },
+    {
+      "host": "docs.github.com",
+      "organization": "GitHub documentation",
+      "evidence": "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+    },
+    {
+      "host": "www.metmuseum.org",
+      "organization": "The Metropolitan Museum of Art",
+      "evidence": "https://www.metmuseum.org/plan-your-visit"
+    },
+    {
+      "host": "www.moma.org",
+      "organization": "The Museum of Modern Art",
+      "evidence": "https://www.moma.org/visit/"
+    },
+    {
+      "host": "www.themodernnyc.com",
+      "organization": "The Modern",
+      "evidence": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/the-modern"
+    },
+    {
+      "host": "www.le-bernardin.com",
+      "organization": "Le Bernardin",
+      "evidence": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-bernardin"
+    },
+    {
+      "host": "www.hilton.com",
+      "organization": "Hilton",
+      "evidence": "https://stories.hilton.com/"
+    },
+    {
+      "host": "travel.state.gov",
+      "organization": "U.S. Department of State",
+      "evidence": "https://travel.state.gov/content/travel/en/us-visas/tourism-visit.html"
+    },
+    {
+      "host": "www.nyctourism.com",
+      "organization": "NYC Tourism + Conventions",
+      "evidence": "https://www.nyc.gov/mayors-office/news/2025/08/mayor-adams--nyc-tourism---conventions--the-broadway-league-anno"
+    }
+  ]
+}
