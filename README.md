@@ -5,8 +5,7 @@ A static, mobile-first planning dashboard for a two-adult New York City trip in 
 
 **Live site:** https://kanlerxz87-cyber.github.io/NYFun3/
 
-No build step, no dependencies, no framework. Plain HTML, one stylesheet, one small JS file,
-and JSON data files loaded at runtime.
+No build step, dependencies, or framework. The primary dashboard is plain HTML with JSON data loaded at runtime; the supplemental dossier has a separate stylesheet and small progressive-enhancement script.
 
 ## Pages
 
@@ -19,20 +18,29 @@ and JSON data files loaded at runtime.
 | `hotels.html` | 9 hotels with 7-night totals for 15–22 Feb 2027, checked against private-bathroom and queen-bed requirements. |
 | `itinerary.html` | 7-day plan sequenced around published closures. |
 | `plan.html` | Executive summary, 9 reviewable suggestions, 11 open questions, irregularities found. |
+| `pages/index.html` | Supplemental curated dossier: itinerary, hotel snapshots, dining/menu arithmetic, attraction hours, and research notes. |
 
-Supporting documents: `REVIEW.md` (repo review, irregularities R1–R20) and
-`VERIFICATION.md` (what was checked, against which page, and when).
+Supporting documents: `REVIEW.md` (repo review, irregularities R1–R20),
+`VERIFICATION.md` (what was checked, against which page, and when), and `RESEARCH.md`
+(the supplemental dossier source/method log). The nested `pages/` dossier complements the
+data-driven root site; it does not replace the existing JSON datasets or star/activity tables.
+The root `.nojekyll` file keeps the linked Markdown research log available to GitHub Pages as-is.
 
 ## The rule this repo is built on
 
-> Every published value must be traceable to the operator's own official page.
-> If it can't be confirmed there, the cell is left blank and flagged — never inferred,
-> never filled from a third-party aggregator, never estimated.
+> Official venue, hotel-room, museum, award, and transit facts need a linked primary source.
+> Unknown official facts remain blank and flagged — never inferred or estimated.
 
-That is why several columns are visibly empty: MICHELIN publishes a price *band*, not a
-price; restaurant sites are often JavaScript apps that return no menu data; and no official
-source publishes subway times per hotel/restaurant pair. Each of those gaps is flagged
-inline and listed as an open question rather than papered over with a plausible number.
+For live hotel availability, the dashboard can show date-specific Booking.com observations;
+those are explicitly marked as **third-party snapshots**, linked to their query, and are not
+represented as official hotel quotes or guaranteed all-in prices. The supplemental `pages/`
+dossier also includes selected published restaurant-menu arithmetic and creator-review leads;
+menu estimates are not final bills, and social links are not treated as factual authorities.
+
+Several gaps remain visible: the primary MICHELIN table is not a complete per-couple menu-cost
+catalogue, restaurant sites may not expose menu data, and no official source publishes subway
+times per hotel/restaurant pair. Each gap is listed rather than papered over with a plausible
+number.
 
 ## Data files
 
@@ -49,7 +57,7 @@ inline and listed as an open question rather than papered over with a plausible 
 ## Preview locally
 
 ```sh
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 0.0.0.0
 # then open http://localhost:8000/
 ```
 
@@ -62,10 +70,11 @@ over `file://`. Any static server is fine.
   snapshot only**. The next New York ceremony is **14 Dec 2026** — before the trip. Re-check
   every star after that date.
 - **Hotel prices:** live Booking.com rate cards, captured with their URLs. These move daily.
-- **Known gaps:** 48 of 52 one-star rows lack verified hours; 52 of 72 rows lack a verified
-  neighbourhood; no per-couple restaurant price has been verified; no Michelin "within 1 hour"
-  hotel count has been computed. All four are flagged on the site and listed in
-  `plan.html` §4.
+- **Known gaps:** 43 of 52 one-star rows lack verified hours; 50 of 72 rows lack a verified
+  neighbourhood; the primary 72-row MICHELIN dataset has no complete per-couple cost catalogue
+  (the supplement contains menu arithmetic for eight selected candidates); no Michelin "within
+  1 hour" hotel count has been computed. These gaps are flagged on the site and listed in
+  `plan.html` §4 / `pages/findings.html`.
 
 ## Contributing / parallel sessions
 
