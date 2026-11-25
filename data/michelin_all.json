@@ -12,7 +12,9 @@
   },
   "one_star_discrepancy": "MICHELIN's own New York filter reports 50 one-star restaurants in New York City; the 18 Nov 2025 announcement lists 52 one-star names including La Bastide by Andrea Calstier (North Salem, Westchester) and borough venues. The difference is FLAGGED here, not reconciled.",
   "price_rule": "MICHELIN publishes only a price band ($–$$$$). No per-couple dollar total is shown unless a restaurant's own site published one — none did for the venues checked, so the column is blank and flagged.",
-  "in_or_near_nyc": "Blue Hill at Stone Barns (Tarrytown) and La Bastide (North Salem) are outside the NYC subway network. They are kept in the list for completeness and marked 'outside transit rule'."
+  "in_or_near_nyc": "Blue Hill at Stone Barns (Tarrytown) and La Bastide (North Salem) are outside the NYC subway network. They are kept in the list for completeness and marked 'outside transit rule'.",
+  "cluster_rule": "A cluster is only filled where the MICHELIN page (or its own blurb) names the area. 52 of 72 rows currently have no verified neighbourhood and are shown as 'Not yet grouped' rather than being assigned a guess from a street address.",
+  "ungrouped_count": 52
  },
  "restaurants": [
   {
@@ -76,8 +78,8 @@
    "note": "promoted from 2 stars to 3 stars at the 2024 ceremony; retained in 2025",
    "source_file": "data/michelin.json",
    "social": {
-    "youtube_search": "https://www.youtube.com/results?search_query=Jungsik%20New%20York%20New%20York",
-    "tiktok_search": "https://www.tiktok.com/search?q=Jungsik%20New%20York%20New%20York",
+    "youtube_search": "https://www.youtube.com/results?search_query=Jungsik%20New%20York",
+    "tiktok_search": "https://www.tiktok.com/search?q=Jungsik%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/JungsikNewYork"
    }
   },
@@ -691,7 +693,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=63%20Clinton%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=63%20Clinton%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/63Clinton"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Bar Miller",
@@ -716,7 +719,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Bar%20Miller%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Bar%20Miller%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/BarMiller"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "bōm",
@@ -741,7 +745,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=b%C5%8Dm%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=b%C5%8Dm%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/bom"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Bridges (NEW)",
@@ -766,7 +771,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Bridges%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Bridges%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Bridges"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Café Boulud",
@@ -791,7 +797,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Caf%C3%A9%20Boulud%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Caf%C3%A9%20Boulud%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/CafeBoulud"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Casa Mono",
@@ -816,7 +823,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Casa%20Mono%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Casa%20Mono%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/CasaMono"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Corima",
@@ -841,7 +849,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Corima%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Corima%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Corima"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Cote",
@@ -866,7 +875,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Cote%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Cote%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Cote"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Crown Shy",
@@ -891,7 +901,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Crown%20Shy%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Crown%20Shy%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/CrownShy"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Daniel",
@@ -916,7 +927,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Daniel%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Daniel%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Daniel"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Dirt Candy",
@@ -941,7 +953,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Dirt%20Candy%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Dirt%20Candy%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/DirtCandy"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Essential by Christophe",
@@ -966,7 +979,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Essential%20by%20Christophe%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Essential%20by%20Christophe%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/EssentialbyChristophe"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Estela",
@@ -991,7 +1005,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Estela%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Estela%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Estela"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Family Meal at Blue Hill",
@@ -1016,7 +1031,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Family%20Meal%20at%20Blue%20Hill%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Family%20Meal%20at%20Blue%20Hill%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/FamilyMealatBlueHill"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Francie",
@@ -1041,7 +1057,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Francie%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Francie%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Francie"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Frevo",
@@ -1066,7 +1083,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Frevo%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Frevo%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Frevo"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Gramercy Tavern",
@@ -1099,7 +1117,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Gramercy%20Tavern%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Gramercy%20Tavern%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/GramercyTavern"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Huso (NEW)",
@@ -1124,7 +1143,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Huso%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Huso%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Huso"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Icca",
@@ -1149,7 +1169,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Icca%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Icca%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Icca"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Jeju Noodle Bar",
@@ -1174,7 +1195,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Jeju%20Noodle%20Bar%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Jeju%20Noodle%20Bar%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/JejuNoodleBar"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Jōji",
@@ -1199,7 +1221,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=J%C5%8Dji%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=J%C5%8Dji%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Joji"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Jua",
@@ -1224,7 +1247,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Jua%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Jua%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Jua"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Kochi",
@@ -1249,7 +1273,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Kochi%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Kochi%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Kochi"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Kosaka",
@@ -1274,7 +1299,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Kosaka%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Kosaka%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Kosaka"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "L’Abeille",
@@ -1299,7 +1325,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=L%E2%80%99Abeille%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=L%E2%80%99Abeille%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/LAbeille"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "La Bastide by Andrea Calstier",
@@ -1324,7 +1351,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=La%20Bastide%20by%20Andrea%20Calstier%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=La%20Bastide%20by%20Andrea%20Calstier%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/LaBastidebyAndreaCalstier"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Le Coucou",
@@ -1357,7 +1385,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Le%20Coucou%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Le%20Coucou%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/LeCoucou"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Le Pavillon",
@@ -1382,7 +1411,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Le%20Pavillon%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Le%20Pavillon%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/LePavillon"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Mari",
@@ -1407,7 +1437,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Mari%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Mari%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Mari"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Meju",
@@ -1432,7 +1463,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Meju%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Meju%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Meju"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Muku (NEW)",
@@ -1457,7 +1489,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Muku%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Muku%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Muku"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Noda",
@@ -1482,7 +1515,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Noda%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Noda%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Noda"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Nōksu",
@@ -1507,7 +1541,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=N%C5%8Dksu%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=N%C5%8Dksu%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Noksu"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Noz 17",
@@ -1532,7 +1567,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Noz%2017%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Noz%2017%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Noz17"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Oiji Mi",
@@ -1557,7 +1593,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Oiji%20Mi%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Oiji%20Mi%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/OijiMi"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Oxomoco",
@@ -1582,7 +1619,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Oxomoco%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Oxomoco%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Oxomoco"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Restaurant Yuu",
@@ -1607,7 +1645,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Restaurant%20Yuu%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Restaurant%20Yuu%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/RestaurantYuu"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Rezdôra",
@@ -1632,7 +1671,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Rezd%C3%B4ra%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Rezd%C3%B4ra%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Rezdora"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Semma",
@@ -1666,7 +1706,8 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Semma%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Semma"
    },
-   "booking_note": "Restaurant manages its own bookings — the MICHELIN page states 'contact the restaurant directly'."
+   "booking_note": "Restaurant manages its own bookings — the MICHELIN page states 'contact the restaurant directly'.",
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Shion 69 Leonard Street",
@@ -1691,7 +1732,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Shion%2069%20Leonard%20Street%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Shion%2069%20Leonard%20Street%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Shion69LeonardStreet"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Shmoné",
@@ -1716,7 +1758,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Shmon%C3%A9%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Shmon%C3%A9%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Shmone"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Shota Omakase",
@@ -1741,7 +1784,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Shota%20Omakase%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Shota%20Omakase%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/ShotaOmakase"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Sushi Nakazawa",
@@ -1766,7 +1810,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Sushi%20Nakazawa%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Sushi%20Nakazawa%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/SushiNakazawa"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Tempura Matsui",
@@ -1791,7 +1836,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Tempura%20Matsui%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Tempura%20Matsui%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/TempuraMatsui"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "The Four Horsemen",
@@ -1816,7 +1862,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=The%20Four%20Horsemen%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=The%20Four%20Horsemen%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/TheFourHorsemen"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Torien",
@@ -1841,7 +1888,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Torien%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Torien%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Torien"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Torrisi",
@@ -1866,7 +1914,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Torrisi%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Torrisi%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Torrisi"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Tsukimi",
@@ -1891,7 +1940,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Tsukimi%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Tsukimi%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Tsukimi"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Tuome",
@@ -1916,7 +1966,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Tuome%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Tuome%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Tuome"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Yamada (NEW)",
@@ -1941,7 +1992,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Yamada%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Yamada%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Yamada"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "YingTao",
@@ -1966,7 +2018,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=YingTao%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=YingTao%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/YingTao"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   },
   {
    "name": "Yoshino",
@@ -1991,7 +2044,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Yoshino%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Yoshino%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Yoshino"
-   }
+   },
+   "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that."
   }
  ]
 }
