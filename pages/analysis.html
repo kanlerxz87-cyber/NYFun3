@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analysis &amp; Rankings · NYFun3 NYC Trip Planner</title>
+<link rel="icon" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="../index.html"><span class="dot">NY</span><span>NYFun3 · NYC Trip Planner</span></a>
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <nav class="menu" aria-label="Site">
+      <a href="../index.html">Dashboard</a>
+      <a href="executive-summary.html">Executive Summary</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="restaurants.html">Michelin Restaurants</a>
+      <a href="activities.html">Activities</a>
+      <a aria-current="page" href="analysis.html">Analysis &amp; Rankings</a>
+      <a href="questions.html">Open Questions &amp; Gaps</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="flagged.html">Flagged for Review</a>
+      <a href="sources.html">Sources &amp; Method</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <h1 class="page-title">Analysis &amp; Rankings</h1>
+  <p class="lede">Goal: rank hotels by (1) number of Michelin-starred restaurants reachable within 1 hour by subway/bus, (2) price, (3) location, (4) amenities. All counts use the verified 2026-11-25 Michelin list. Travel times are estimates (labelled), not live routing.</p>
+
+  <h2>1 · Michelin clusters in NYC (verified 2026-11-25)</h2>
+  <div class="table-scroll"><table>
+    <caption>Cluster = walkable/short-ride group of starred restaurants. Counts = tables on the Restaurants page.</caption>
+    <thead><tr><th>Cluster</th><th>Starred anchors (verified)</th><th>Also nearby (1★ secondary)</th><th>Subway</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Columbus Circle / Upper West</strong></td><td>Per Se ★★★ (10 Columbus Circle) · Masa ★★ (10 Columbus Circle St 401) · Jean-Georges ★★ (1 Central Park West)</td><td>Café Boulud ★</td><td>1/A/B/C/D to 59th–Columbus Circle · N/Q/R/W to 57th</td></tr>
+      <tr><td><strong>Midtown 50s–60s</strong></td><td>Le Bernardin ★★★ (155 W 51st) · The Modern ★★ (9 W 53rd) · Aquavit ★★ (E 55th — addr unverified)</td><td>Café Boulud area</td><td>N/Q/R/W 57th · E/M 5th/53rd · B/D/F/M 47–50th/Rockefeller</td></tr>
+      <tr><td><strong>Midtown East 40s</strong></td><td>Sushi Sho ★★★ (3 E 41st — reported)</td><td>Joo Ok ★★ (unverified details)</td><td>4/5/6 42nd–Grand Central · S (42nd Shuttle)</td></tr>
+      <tr><td><strong>Gramercy / Flatiron / NoMad</strong></td><td>Eleven Madison Park ★★★ (11 Madison Ave) · Atomix ★★ (NoMad)</td><td>Gramercy Tavern ★ · Cote ★ · Rezdôra ★</td><td>R/W 23rd/28th · 4/5/6 23rd/28th · N/R/W Union Sq</td></tr>
+      <tr><td><strong>Tribeca / Financial District</strong></td><td>Jungsik ★★★ (2 Harrison St) · César ★★ (Financial District — unverified details)</td><td>Le Coucou ★ (SoHo/Financial border)</td><td>1/2/3 Chambers/Canal · A/C/E Canal · J/Z/M Essex</td></tr>
+      <tr><td><strong>Williamsburg (Brooklyn)</strong></td><td>Aska ★★ (Williamsburg)</td><td>The Four Horsemen ★ (Williamsburg)</td><td>L to Lorimer/Graham · J/M Marcy · 35–50 min from Midtown</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>2 · Counting stars within 1 hour of each shortlisted hotel</h2>
+  <p class="small">Method: (a) walking distance &lt; 1.5 mi counts as ≤ 20 min; (b) subway ride + walk &lt; 60 min counts; (c) Brooklyn (Aska) counts for all Manhattan hotels ≤ 50 min via L/M. All 5 ★★★ verified addresses used. ★★ counts use the 14-count from the official Guide (individual 14 not all independently verified — see Flags). Times are estimates.</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Hotel</th><th>Walk to nearest ★★★</th><th>★≤1h (3★)</th><th>★★≤1h</th><th>Total starred ≤1h</th><th>Rank (Michelin density)</th></tr></thead>
+    <tbody>
+      <tr><td>Mandarin Oriental NY (Columbus Circle)</td><td>Per Se / Masa complex (2–5 min)</td><td>5 (EMP ~20' M15; Jungsik ~25'; Sushi Sho ~20'; Le Bernardin ~20'; Per Se walk)</td><td>14 (all Manhattan ★★ ≤ 40')</td><td><strong>19</strong></td><td><strong>1 (tie)</strong></td></tr>
+      <tr><td>Trump International Hotel &amp; Tower (Columbus Circle)</td><td>Jean-Georges inside building (0–2 min)</td><td>5</td><td>14</td><td><strong>19</strong></td><td><strong>1 (tie)</strong> — best walkability to ★★★</td></tr>
+      <tr><td>JW Marriott Essex House (Central Park South)</td><td>Per Se ~10 min walk</td><td>5</td><td>14</td><td><strong>19</strong></td><td><strong>1 (tie)</strong></td></tr>
+      <tr><td>citizenM Times Square (218 W 50th)</td><td>Le Bernardin ~5 min walk</td><td>5</td><td>14</td><td><strong>19</strong></td><td><strong>2</strong> — density equal, slightly longer walk</td></tr>
+      <tr><td>Arlo Nomad (11 E 31st)</td><td>EMP ~15 min walk</td><td>5</td><td>14</td><td><strong>19</strong></td><td><strong>2</strong></td></tr>
+      <tr><td>Gramercy Park Hotel (2 Lexington Ave)</td><td>EMP ~10 min walk</td><td>5</td><td>14</td><td><strong>19</strong></td><td><strong>2</strong></td></tr>
+      <tr><td>Hyatt Grand Central (109 E 42nd)</td><td>Sushi Sho ~5 min walk</td><td>5</td><td>14</td><td><strong>19</strong></td><td><strong>3</strong> — strongest to Sushi Sho cluster</td></tr>
+      <tr><td>The Peninsula New York (700 5th Ave)</td><td>The Modern ~10 min</td><td>5</td><td>14</td><td><strong>19</strong></td><td><strong>3</strong></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><strong>Conclusion — Michelin density does not discriminate between these 8 hotels (all reach all 19).</strong> Decision therefore comes from (a) <em>walk-time to your preferred dinner cluster</em>, (b) <em>price</em>, (c) <em>amenities</em>. If you plan 3★ dinners: Columbus Circle wins on walk (Per Se/Masa zero-transit). If you plan EMP + wine-pairing luck: NoMad/Gramercy wins. If you want value + Le Bernardin + MoMA: citizenM Times Square wins.</div>
+
+  <h2>3 · Ranking by price (7-night, reported snapshots — estimates only)</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Rank</th><th>Hotel</th><th>Reported nightly</th><th>7-night est.</th><th>7-night note</th></tr></thead>
+    <tbody>
+      <tr><td>1 (cheapest)</td><td>Gramercy Park Hotel</td><td>from $99 (teaser?)</td><td>≈ $693–$1,049</td><td><span class="badge warn">verify room class &amp; private bath</span></td></tr>
+      <tr><td>2</td><td>Arlo Nomad</td><td>$152–$378</td><td>≈ $1,064–$2,646</td><td>best value with full amenities</td></tr>
+      <tr><td>3</td><td>citizenM New York Times Square</td><td>$219–$310</td><td>≈ $1,533–$2,170</td><td>best midtown value</td></tr>
+      <tr><td>4</td><td>Hyatt Grand Central</td><td>$519+</td><td>≈ $3,633+</td><td>business-hotel reliability</td></tr>
+      <tr><td>5</td><td>Mandarin Oriental New York</td><td>$948–$2,394+</td><td>≈ $6,636–$16,758+</td><td>luxury tier</td></tr>
+      <tr><td>n/a</td><td>Trump Intl · Essex House · Peninsula</td><td>blank</td><td>unverified</td><td><a href="flagged.html">flagged #H6–H8</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>4 · Cheapest time to book — methodology &amp; findings</h2>
+  <ul>
+    <li><strong>Month effect (KAYAK, Gramercy market, accessed 2026-11-25):</strong> March is cheapest (avg ≈ $99/night), October peak (≈ $780); weekdays (Wed) cheaper than Fri. Source: <a href="https://www.kayak.com/New-York-Hotels_Gramercy.N210980.15830.hotel.ksp">KAYAK Gramercy</a>.</li>
+    <li><strong>Presidents Day week (Feb 14–16, 2027)</strong> typically prints <em>above</em> the March floor and <em>below</em> October peak. Rates were already elevated on some dates checked (citizenM Superior $279 vs deals from $151).</li>
+    <li><strong>Advance purchase:</strong> 30/60-day prepay rates are typically 10–25% cheaper than flexible rates (industry pattern; not verified for these dates → flagged #B1).</li>
+    <li><strong>Recommended play:</strong> book a <em>free-cancellation</em> rate today (Nov 2026) at your shortlisted hotel(s) → set calendar reminders at T−90 / T−60 / T−30 / T−14 days to re-check and re-book lower rates → only switch to prepay within 30 days of stay.</li>
+    <li><strong>Flights:</strong> not priced here — see <a href="questions.html">Open Questions Q4</a>. Book Tue–Thu departures where possible (industry pattern, unverified).</li>
+  </ul>
+
+  <h2>5 · Dinner budget scenarios (2 adults, food only, before tax/tip)</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Dinner plan</th><th>Estimate</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Eleven Madison Park (tasting)</td><td>≈ $770 + tax/tip (≈ $830–$1,000 all-in)</td><td>thelotimes.com (Mar 2026): $385/pp April 2026 price</td></tr>
+      <tr><td>Per Se (9-course)</td><td>≈ $850 + tax/tip</td><td>tastingtable.com (Jul 2026): $425/pp</td></tr>
+      <tr><td>Le Bernardin (tasting)</td><td>≈ $700 + tax/tip</td><td>tastingtable.com (Jul 2026): $350/pp; thelotimes reported $350/pp (Mar 2026)</td></tr>
+      <tr><td>Le Bernardin — 4-course LUNCH</td><td>≈ $436 + tax/tip</td><td>thelotimes.com (Mar 2026): $218/pp lunch</td></tr>
+      <tr><td>Jungsik (Signature)</td><td>≈ $670 + tax/tip</td><td>tastingtable.com (Jul 2026): $335/pp</td></tr>
+      <tr><td>Sushi Sho NY (omakase)</td><td>≈ $990 incl. 10% admin</td><td>tastingtable.com (Jul 2026): $450/pp + 10%</td></tr>
+      <tr><td>Atomix</td><td>≈ $770 + tax/tip</td><td>thelotimes.com: $385/pp</td></tr>
+      <tr><td>Aska</td><td>≈ $750 + tax/tip</td><td>thelotimes.com: $375/pp</td></tr>
+      <tr><td>Aquavit lunch (2/3-course)</td><td>≈ $160–$190 + tax/tip</td><td>happy-hour.nyc (Nov 2026)</td></tr>
+      <tr><td>Jeju Noodle Bar ★</td><td>≈ $50–$120</td><td>happy-hour.nyc (Nov 2026): ramyun $25</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>6 · One-hour travel audit (hotel → every planned item)</h2>
+  <div class="good">Planned activities and dinners from a NoMad/Midtown base are all ≤ 30 minutes by subway/walk, EXCEPT: Staten Island Ferry (to Whitehall St, 25–35 min), Statue of Liberty (ferry 20–30 min + island), Williamsburg/Aska (35–50 min). All within the 1-hour cap. Day-trip variants (Philadelphia, Hudson Valley) break the cap and are flagged as exceptions in the itinerary.</div>
+</main>
+<footer class="bot">NYFun3 · Analysis uses verified 2026-11-25 Michelin data; travel times are estimates — confirm with live MTA routing. · <a href="sources.html">Methodology</a></footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
