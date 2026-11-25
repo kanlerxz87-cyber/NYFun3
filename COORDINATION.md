@@ -17,8 +17,8 @@
 | `T1` | Repo Baseline Audit & Prompt Irregularity Analysis | `done` | `fc94e0d3` | `2026-11-25T22:34:00Z` | `data/repo_audit.json` |
 | `T2` | MICHELIN Guide & Starred Restaurants, Clusters, Couple Pricing, Hours & Social Reviews | `done` | `fc94e0d3` | `2026-11-25T22:39:00Z` | `data/michelin_restaurants.json` |
 | `T3` | NYC Activities, Hours, Exceptions, <=1-Hr Transit & Social Reviews | `done` | `fc94e0d3` | `2026-11-25T22:56:00Z` | `data/activities.json` |
-| `T4` | NYC Hotels (Private Bath, Queen+ Bed, Verified 7-Night Pricing Feb–Mar 2027, Best Time to Book & Michelin Transit Ranking) | `in progress` | `fc94e0d3` | `2026-11-25T23:06:00Z` | `data/hotels.json` |
-| `T5` | Decision Readiness (Questions & Missing Info Discovery) + Site Improvement Suggestions | `unclaimed` | — | — | `data/decision_and_suggestions.json` |
+| `T4` | NYC Hotels (Private Bath, Queen+ Bed, Verified 7-Night Pricing Feb–Mar 2027, Best Time to Book & Michelin Transit Ranking) | `done` | `fc94e0d3` | `2026-11-25T23:06:00Z` | `data/hotels.json` |
+| `T5` | Decision Readiness (Questions & Missing Info Discovery) + Site Improvement Suggestions | `in progress` | `fc94e0d3` | `2026-11-25T23:18:00Z` | `data/decision_and_suggestions.json` |
 | `T6` | Final Integration, Line-by-Line Re-Verification, Dashboard Site & Subpages, Link Check & Live Preview | `unclaimed` | — | — | `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `questions.html`, `suggestions.html`, `review.html`, `assets/`, `.nojekyll`, `README.md` |
 
 ---
@@ -50,3 +50,11 @@
   - `IRREG-09` (**9/11 Memorial Museum 2027 Tuesday Closures**): Closed on select winter Tuesdays (`Feb 24, Mar 3, Mar 10, Mar 17` schedule pattern) while open during school-break Tuesday.
   - `IRREG-10` (**The Met Cloisters Transit Threshold**): Reachable in 38–48 min via `A` express from Midtown/UWS hotels, but 55–62 min from Brooklyn/FiDi hotels — flagged as borderline on the `<= 60 min` rule.
 - **Next claim**: Claimed `T4` (`data/hotels.json`).
+
+### 2026-11-25T23:18:00Z — Session `fc94e0d3` completed `T4` & claimed `T5`
+- **Verification performed**: Verified 8 NYC hotels (`LUMA Hotel Times Square`, `Hyatt Centric Times Square`, `Arlo NoMad`, `Ace Hotel New York`, `citizenM New York Times Square`, `Pod Times Square`, `Arlo Midtown`, `Hampton Inn Brooklyn/Downtown`) for Queen/King bed + private bath compliance, NYC 14.75% + $3.50/nt tax & mandatory destination fees, Feb 2027 vs. Mar 2027 7-night totals (`Super.com` Nov 2026 12-month tables + direct engine quotes), and ranked strictly by MICHELIN reachability within `<= 60 min` by MTA subway/bus (`148 -> 133` Starred+Bib; `70 -> 65` Starred).
+- **Irregularities logged**:
+  - `IRREG-11` (**Sub-Queen / Shared-Bath Room Traps**): `Pod Times Square` sells a `Full Pod` ("Sleeps 2" on a Full bed < Queen) and `Bunk Pod`; `Ace Hotel` sells `Single` (Full) and `Cozy` ("Full or Queen" — unguaranteed Queen); `Arlo NoMad` sells `Twin Bunk` (and sister `Pod 51` sells shared-bath pods). Explicitly warned in `data/hotels.json` and `review.html`.
+  - `IRREG-12` (**Ace Hotel Destination Fee Discrepancy**): Per `suddenstay.com` Oct 2026 audit, Ace Hotel's FAQ and live booking screen display conflicting nightly destination fee amounts — flagged for checkout verification.
+  - `IRREG-13` (**Mandatory Resort Fee Distortion**): `Arlo Midtown` ($42.96/nt = $300.72/7n), `Arlo NoMad` ($42.96/nt = $300.72/7n), and `Hyatt Centric` ($45.91/nt = $321.37/7n) look much cheaper pre-fee than `$0-fee` `citizenM`, `LUMA`, and `Hampton Inn Brooklyn/Downtown`.
+- **Next claim**: Claimed `T5` (`data/decision_and_suggestions.json`).
