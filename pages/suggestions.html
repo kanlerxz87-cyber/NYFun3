@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions &amp; Improvement Paths · NYFun3 NYC Trip Planner</title>
+<link rel="icon" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="../index.html"><span class="dot">NY</span><span>NYFun3 · NYC Trip Planner</span></a>
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <nav class="menu" aria-label="Site">
+      <a href="../index.html">Dashboard</a>
+      <a href="executive-summary.html">Executive Summary</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="restaurants.html">Michelin Restaurants</a>
+      <a href="activities.html">Activities</a>
+      <a href="analysis.html">Analysis &amp; Rankings</a>
+      <a href="questions.html">Open Questions &amp; Gaps</a>
+      <a aria-current="page" href="suggestions.html">Suggestions</a>
+      <a href="flagged.html">Flagged for Review</a>
+      <a href="sources.html">Sources &amp; Method</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <h1 class="page-title">Suggestions — improvements &amp; the path to choose between them</h1>
+  <p class="lede">This is the decision room: what would make this site (and the trip plan) materially better. Every suggestion lists <strong>impact, effort, risk, cost, and a recommended option</strong>. Nothing here is implemented until you pick a path — this page exists so a choice can be made <em>before</em> changes ship. Sorted by impact ÷ effort.</p>
+
+  <div class="callout"><strong>How to use:</strong> read §1–§3, then answer with e.g. “S1=A, S2=B, S4=approve” — no other input needed. Options are pre-analyzed; you do not need to re-derive them.</div>
+
+  <h2>1 · Decision matrix (impact vs effort)</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th>#</th><th>Suggestion</th><th>Category</th><th>Impact</th><th>Effort</th><th>Risk / cost</th><th>Recommended option</th><th>Awaiting</th></tr></thead>
+    <tbody>
+      <tr><td><strong>S1</strong></td><td>Hotel choice — Path A (NoMad value) / B (Midtown convenience) / C (luxury Columbus Circle)</td><td>Trip</td><td>Very high (drives whole plan)</td><td>1 answer</td><td>None</td><td><strong>Path B</strong> (citizenM) — Le Bernardin + MoMA + minimal transit, best value/convenience balance</td><td>Traveler pick: A / B / C</td></tr>
+      <tr><td><strong>S2</strong></td><td>Live price verification pass for Feb 15–22 &amp; Feb 15–18 (needs traveler approval to “book” or at least to run checks)</td><td>Trip</td><td>High ($100s–$1,000s at stake)</td><td>30–60 min</td><td>None (read-only)</td><td><strong>Approve</strong> — re-quote all 8 hotels on official sites; replace blanks in Hotels table</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S3</strong></td><td>Map view of hotels + Michelin clusters + attractions (Leaflet + OpenStreetMap — no API key, free)</td><td>Site</td><td>High (visual decision support)</td><td>~1–2 h</td><td>None (static, no keys)</td><td><strong>Approve</strong> — biggest UX win; keep as a single “Map” subpage</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S4</strong></td><td>Re-verification sweep right after the reported Dec 2026 Michelin ceremony</td><td>Trip</td><td>High (star changes invalidate tables)</td><td>1–2 h</td><td>None</td><td><strong>Schedule for 2026-12-16</strong> — auto-add calendar reminder; re-diff the Restaurants table</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S5</strong></td><td>Budget calculator page (sliders: hotel tier, #dinners 3★, flights excluded) → total 3/7/14-night cost</td><td>Site</td><td>Medium-high</td><td>~1–2 h</td><td>None</td><td><strong>Approve</strong> — most-requested decision aid; pure client-side JS</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S6</strong></td><td>Verified social handles (replace search-links with official account URLs) — needs per-platform manual confirmation or API</td><td>Site</td><td>Medium</td><td>30–90 min</td><td>Handles may change; low technical risk</td><td><strong>Partial approve</strong> — verify top 10 (hotels + 5× ★★★) only</td><td>Approve / partial / skip</td></tr>
+      <tr><td><strong>S7</strong></td><td>Book price-drop alerts (Google Hotels tracking / Hopper / Kayak price alerts) for chosen dates</td><td>Trip</td><td>Medium (potential 10–25% saving)</td><td>10 min</td><td>None (free alerts)</td><td><strong>Approve</strong> — stack on top of free-cancellation booking</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S8</strong></td><td>Accessibility mode: step-free routing notes (High Line elevators, Statue pedestal vs crown, subway elevators)</td><td>Site</td><td>Medium</td><td>1–2 h</td><td>None</td><td><strong>Approve if relevant</strong> (see Q13); otherwise skip</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S9</strong></td><td>Print-friendly one-pager per day (itinerary as 3 printable cards) — CSS already supports print</td><td>Site</td><td>Medium</td><td>&lt;1 h</td><td>None</td><td><strong>Approve</strong> — near-zero cost</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S10</strong></td><td>Day-trip module (Hudson/Philly/New Haven >1h — explicitly out of the 1h constraint)</td><td>Trip</td><td>Low-medium</td><td>1 h</td><td>Scope creep vs stated constraint</td><td><strong>Skip for now</strong> — revisit for 2–4 week variant</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S11</strong></td><td>Weather-normalized alternate plan (auto-swap rainy/snowy day) — needs simple forecast API (Open-Meteo, free, no key)</td><td>Site</td><td>Low-medium</td><td>1 h</td><td>API dependency; freshness risk</td><td><strong>Defer</strong> — manual check 48h before is sufficient</td><td>Approve / defer / skip</td></tr>
+      <tr><td><strong>S12</strong></td><td>Multi-city comparison (NYC vs Boston vs Chicago Michelin density per $) — satisfies “framework reusable” but expands scope</td><td>Site</td><td>Low (for THIS trip)</td><td>4–8 h</td><td>Scope creep; stale-data duplication</td><td><strong>Skip</strong> — document as future project</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S13</strong></td><td>Add “Flagged” auto-count badges to nav (shows # open flags per page)</td><td>Site</td><td>Low</td><td>&lt;30 min</td><td>None</td><td><strong>Approve</strong> — free trust signal</td><td>Approve / skip</td></tr>
+      <tr><td><strong>S14</strong></td><td>Hotel-shuttle/transfer coordination (JFK/LGA/EWR → hotel) price &amp; time table</td><td>Trip</td><td>Medium (saves $30–$80 + 30 min)</td><td>30 min</td><td>Fares change; verify at travel</td><td><strong>Approve with Q4</strong></td><td>Approve / skip</td></tr>
+      <tr><td><strong>S15</strong></td><td>Newsletter-style “pre-trip brief” PDF/email generated from this site</td><td>Site</td><td>Low</td><td>1–2 h</td><td>None</td><td><strong>Optional</strong></td><td>Approve / skip</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>2 · The three questions that pick almost everything (answer in one line each)</h2>
+  <ol>
+    <li><strong>Hotel budget band?</strong> → flips S1 to a concrete hotel.</li>
+    <li><strong>Fixed Feb 15–18, or flexible inside Feb 15–Mar 23?</strong> → flips S2/S7 (cheaper windows exist later in the window).</li>
+    <li><strong>Food-first, icons, or luxury?</strong> → flips itinerary emphasis &amp; S2 targets (which reservations to chase first).</li>
+  </ol>
+
+  <h2>3 · Options for the flagship decisions (pre-analyzed)</h2>
+  <h3>S1 hotel verdicts</h3>
+  <ul>
+    <li><strong>A — NoMad (Arlo Nomad):</strong> best price ÷ quality; 15 min walk to EMP; 1 subway stop to Union Sq; rooms compact but private baths; ideal food-first trip. Pick if budget &lt;$400/night and you’re dinner-driven.</li>
+    <li><strong>B — Midtown (citizenM Times Square):</strong> $219–310 typical; walk to Le Bernardin/The Modern; MoMA next door; minimal transit friction; compact rooms. <strong>Recommended default.</strong></li>
+    <li><strong>C — Luxury (Mandarin Oriental):</strong> zero-transit Per Se/Masa cluster; full spa; $948–$2,394+; for celebration trips. Pick if budget is not a constraint.</li>
+  </ul>
+  <h3>S3 map design (if approved)</h3>
+  <ul>
+    <li>Option i: Leaflet + OSM tiles, custom markers (hotel=gold, ★★★=red pin, ★★=orange, activity=blue). Pros: free, no key. Cons: Leaflet lib ~40 KB.</li>
+    <li>Option ii: Static annotated image (generate once, embed PNG). Pros: zero JS. Cons: not zoomable/interactive, harder to keep updated.</li>
+    <li><strong>Recommended: Option i.</strong></li>
+  </ul>
+  <h3>S5 budget calculator inputs (if approved)</h3>
+  <ul>
+    <li>Sliders: hotel nightly ($99–$3,000) × nights (3/7/14/21/28); # 3★ dinners (0–4, $770–$990 each); # 1★ dinners ($50–$200); paid attractions ($0–$220); flights toggle (excluded by default).</li>
+    <li>Outputs: total range, per-day burn, % above value/comfort/luxury bands (from Executive Summary).</li>
+  </ul>
+
+  <h2>4 · Suggestions NOT recommended (and why)</h2>
+  <ul>
+    <li>“Auto-scraping booking.com for live prices” — violates ToS of most OTAs; brittle; legal/ToS risk. Use the free-cancellation + re-check pattern (S2/S7) instead.</li>
+    <li>“AI-generated restaurant reviews mixed into verified table” — contaminates the verified dataset; kept out by design.</li>
+    <li>“Scraping Instagram for handle verification” — login-walled; unreliable; kept as search links with flags instead.</li>
+    <li>“Crypto/points-maximizer optimizer” — out of scope; loyalty flagged as Q9 only.</li>
+  </ul>
+
+  <h2>5 · Tracking &amp; change control</h2>
+  <p>Every approved suggestion becomes a task in <code>COORDINATION.md</code> (Repo task board) before any file changes; every implemented suggestion re-runs the <a href="flagged.html">Flagged for Review</a> count. Declined/deferred suggestions stay on this page with status “declined — rationale”.</p>
+</main>
+<footer class="bot">NYFun3 · Suggestions are proposals, not changes. Approve in chat (“S3=approve”) to unlock implementation. · <a href="sources.html">Methodology</a></footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>
