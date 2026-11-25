@@ -79,7 +79,20 @@ class SiteAuditTests(unittest.TestCase):
           <td>Unverified</td><td><a href="https://www.nps.gov/">Official</a></td></tr></table>''')
         report = audit_site(self.root, {"www.nps.gov"})
         self.assertNotIn("ROW_EMPTY_NOT_FLAGGED", self.codes(report))
+        self.assertIn("ROW_EMPTY_FLAG_ELSEWHERE", self.codes(report))
         self.assertEqual(report["summary"]["errors"], 0)
+
+    def test_price_flag_does_not_hide_a_separate_blank_hours_cell(self):
+        self.page("index.html", '''<table><tr><td>Jungsik</td><td></td>
+          <td>Price unverified</td><td><a href="https://www.nps.gov/">Source</a></td></tr>
+          <tr><td>Another</td><td>Hours unverified</td><td>— not verified</td>
+          <td><a href="https://www.nps.gov/">Source</a></td></tr></table>''')
+        report = audit_site(self.root, {"www.nps.gov"})
+        warnings = [issue for issue in report["issues"] if issue["code"] == "ROW_EMPTY_FLAG_ELSEWHERE"]
+        self.assertEqual(len(warnings), 1)
+        self.assertIn("Jungsik", warnings[0]["message"])
+        self.assertIn("cell(s) 2", warnings[0]["message"])
+        self.assertNotIn("ROW_EMPTY_NOT_FLAGGED", self.codes(report))
 
     def test_reviewed_hosts_are_exact_and_social_is_not_official(self):
         self.page("index.html", '''<table>

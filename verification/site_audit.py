@@ -422,10 +422,18 @@ def audit_site(
                 else:
                     issues.append(Issue("warning", "ROW_SOURCE_AUTHORITY_UNREVIEWED", doc.path, row.line,
                                         row_prefix + f"candidate host(s) {', '.join(sorted(set(candidates)))} not in reviewed manifest; check manually. This does not mean unofficial."))
-            missing = sum(1 for cell in row.cells if normalize_text(cell.text).casefold() in EMPTY_MARKERS)
-            if missing and not UNVERIFIED_RE.search(row_text):
-                issues.append(Issue("warning", "ROW_EMPTY_NOT_FLAGGED", doc.path, row.line,
-                                    row_prefix + f"{missing} blank/placeholder cell(s), but the row does not say 'unverified' or 'not verified'."))
+            missing_positions = [i for i, cell in enumerate(row.cells, 1)
+                                 if normalize_text(cell.text).casefold() in EMPTY_MARKERS]
+            if missing_positions:
+                positions = ", ".join(str(i) for i in missing_positions)
+                if not UNVERIFIED_RE.search(row_text):
+                    issues.append(Issue("warning", "ROW_EMPTY_NOT_FLAGGED", doc.path, row.line,
+                                        row_prefix + f"Blank/placeholder data cell(s) {positions}, but the row does not say 'unverified' or 'not verified'."))
+                else:
+                    # A flag elsewhere in the row may apply to a *different* field.
+                    # Never assume, for example, that an unverified price flags blank hours.
+                    issues.append(Issue("warning", "ROW_EMPTY_FLAG_ELSEWHERE", doc.path, row.line,
+                                        row_prefix + f"Blank/placeholder data cell(s) {positions}; the row has an unverified label elsewhere, which may refer to another field. Check each cell's context."))
             if row.review_required or any(fnmatch.fnmatch(doc.path, pattern) for pattern in review_patterns):
                 if not any(concrete_social_video(link.url) for link in row.links):
                     issues.append(Issue("warning", "SOCIAL_REVIEW_NOT_FOUND", doc.path, row.line,

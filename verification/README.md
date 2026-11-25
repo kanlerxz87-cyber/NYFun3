@@ -12,18 +12,19 @@ python3 verification/site_audit.py . \
   --host-manifest verification/official-hosts.json \
   --base-path /NYFun3/ \
   --site-url https://kanlerxz87-cyber.github.io/NYFun3/ \
-  --review-page 'pages/dining.html' \
-  --review-page 'pages/activities.html'
+  --review-page 'restaurants.html' \
+  --review-page 'michelin.html' \
+  --review-page 'activities.html'
 ```
 
-Use the actual published site directory instead of `.` when the site is built into a subdirectory. Use `--review-page` with the actual restaurant/activity page paths (repeat the option as needed); alternatively, put `data-audit-reviews` on the relevant tables. The script also accepts `--json` for machine-readable results and `--fail-on-warnings` for stricter CI. It exits 1 for errors (and, optionally, warnings), 0 otherwise, or 2 for invalid arguments. An absence of errors is **not** a verification of claims or of the live site.
+Use the actual published site directory instead of `.` when the site is built into a subdirectory. Use `--review-page` with the actual restaurant/activity page paths (repeat the option as needed); alternatively, put `data-audit-reviews` on the relevant tables. Page-level patterns also match summary rows, so review those warnings in context. The checker examines table rows, not standalone activity or restaurant cards such as those in the `pages/` dossier. The script also accepts `--json` for machine-readable results and `--fail-on-warnings` for stricter CI. It exits 1 for errors (and, optionally, warnings), 0 otherwise, or 2 for invalid arguments. An absence of errors is **not** a verification of claims or of the live site.
 
 ## What it checks
 
 - Local HTML pages, links and selected asset references, missing local targets, HTML fragment IDs, duplicate IDs, and paths unsafe for the configured GitHub Pages project base path. A table header with only `th` cells is not treated as a data row; each row with `td` cells is. Cells started before an earlier cell closes (including nested `<td><td>`) are flagged because browsers may insert extra cells or shift columns. HTML permits some omitted end tags, so inspect any such result rather than assuming the exact rendered layout.
 - Each data row has at least an HTTPS, non-social **candidate** source link. A row with none is an error. Social links alone do not satisfy the requested official-source requirement.
 - Exact source hosts are checked against `official-hosts.json`, a small manually reviewed *identity* list. An unknown host is a review warning, not proof that the source is unofficial. A known host is not proof that its contents support a particular row or value. The source page and its relationship to the claim still need independent examination.
-- Blank/placeholder cells without an `unverified` or `not verified` label in the same row are warned about. This is a heuristic: it does not determine whether a nonempty value is true or whether every unknown value is correctly flagged.
+- Blank/placeholder cells are warned about even if another cell in the row says `unverified` or `not verified`: that label may refer to a different field. The warning includes the 1-based position among data cells. A label in the same cell as a placeholder is not itself treated as empty. These are heuristics, not proof that a value is true or that every unknown is correctly flagged; inspect row and column context manually.
 - Rows on specified review pages are checked for a recognizable *individual* YouTube video, Instagram post/reel, or TikTok video URL. A search-results page or profile is not counted. A recognized URL is still flagged for content/relevance review; a URL shape alone does not establish that a review exists.
 - Missing document language, viewport metadata, title and image alt attributes are flagged, but this is not a comprehensive accessibility or mobile test.
 
