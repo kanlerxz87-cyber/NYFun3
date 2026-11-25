@@ -62,7 +62,7 @@ over `file://`. Any static server is fine.
   snapshot only**. The next New York ceremony is **14 Dec 2026** — before the trip. Re-check
   every star after that date.
 - **Hotel prices:** live Booking.com rate cards, captured with their URLs. These move daily.
-- **Known gaps:** 48 of 52 one-star rows lack verified hours; 52 of 72 rows lack a verified
+- **Known gaps:** 43 of 52 one-star rows lack verified hours; 50 of 72 rows lack a verified
   neighbourhood; no per-couple restaurant price has been verified; no Michelin "within 1 hour"
   hotel count has been computed. All four are flagged on the site and listed in
   `plan.html` §4.
