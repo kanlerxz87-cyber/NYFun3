@@ -26,8 +26,8 @@ The Arena session policy fixes all work to `arena/ed92e764-nyfun3` and prohibits
 
 | Task ID | Task | Status | Owner session | File scope | Notes |
 |---|---|---|---|---|---|
-| TASK-00 | Create coordination board and record branch constraint | `in progress` | `ed92e764` | `COORDINATION.md` | Initial claim; repo contained only `README.md`; Pages was configured as legacy from `main`. |
-| TASK-01 | Official-source discovery, source ledger, and verification protocol | `unclaimed` |  | `research/sources.md`, `research/verification-log.md`, `research/official-pages/` | Record URLs, access date, and whether each row's source is official. |
+| TASK-00 | Create coordination board and record branch constraint | `done` | `ed92e764` | `COORDINATION.md` | Board created, claim published, and branch restriction logged. |
+| TASK-01 | Official-source discovery, source ledger, and verification protocol | `in progress` | `ed92e764` | `research/sources.md`, `research/verification-log.md`, `research/official-pages/` | Record URLs, access date, and whether each row's source is official. |
 | TASK-02 | Hotels, official pricing, Michelin Guide status, and transit evidence | `unclaimed` |  | `research/hotels/`, `research/michelin/`, `research/transit/`, `data/hotels.json`, `data/michelin.json`, `data/transit.json` | Shared combined tables are reserved for TASK-05. |
 | TASK-03 | Activities/restaurants, opening days/hours/exceptions, and social-review links | `unclaimed` |  | `research/activities/`, `research/social/`, `data/activities.json`, `data/social.json` | Each factual row needs an official-site source; social links are supplementary and independently checked. |
 | TASK-04 | Category subpages, executive summary, Q&A, and improvement suggestions | `unclaimed` |  | `site/pages/`, `site/assets/`, `site/styles.css`, `site/app.js` | Does not edit `index.html` or shared navigation/data. |
@@ -37,7 +37,7 @@ The Arena session policy fixes all work to `arena/ed92e764-nyfun3` and prohibits
 
 | Date UTC | Task | Commit | Action | Sources | Verification | Irregularities |
 |---|---|---|---|---|---|---|
-| 2026-11-25 | TASK-00 | pending | Created board and claimed bootstrap task | Local `README.md`, `git log`, `gh repo view`, GitHub Pages API response | Checked repository contents, branch, remote, auth, and existing Pages configuration | Requested session branches conflict with fixed Arena branch policy; recorded above. Pages uses legacy `main` source and will need switching to GitHub Actions in final integration. |
+| 2026-11-25 | TASK-00 | `1860bca` + this commit | Created board, claimed bootstrap task, then marked it done | Local `README.md`, `git log`, `gh repo view`, [GitHub Pages API response](https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages), [MICHELIN Guide NYC](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants), [MTA](https://www.mta.info/), [MTA apps](https://www.mta.info/guides/apps), [MTA Trip Planner help](http://tripplanner.mta.info/widget/help.htm) | Checked repository contents, branch, remote, auth, existing Pages configuration, and reachability of initial official sources | Requested session branches conflict with fixed Arena branch policy; recorded above. Pages uses legacy `main` source and will need switching to GitHub Actions in final integration. |
 
 ## Cross-session requests
 
