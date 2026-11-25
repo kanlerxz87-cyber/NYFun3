@@ -31,3 +31,4 @@ Verification rule: a row is **verified** only when its value is read from an off
 - Hotel prices are dynamic. Each published price must carry the exact check-in/check-out dates, guest count, rate name, currency, and access timestamp from the official booking page.
 - Social media links are supplementary. A link found on YouTube, TikTok, or Instagram is not used to verify a venue's hours, price, address, or Michelin status.
 - Third-party social reviews are opinions, not official venue facts; the official venue/Michelin source verifies each table row.
+- Jina Reader (`https://r.jina.ai/`) is used only as a browser-rendering/retrieval proxy for official public pages that block plain HTTP clients. Its returned HTML or text is not itself an authoritative source; every diagnostic record preserves the original official URL, and published rows cite the official venue/Michelin/MTA/hotel URL.
