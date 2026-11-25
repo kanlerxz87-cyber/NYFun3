@@ -17,11 +17,11 @@ claimed below; log requests here instead.
 | Task ID | Task | Status | Owner session | File scope |
 | --- | --- | --- | --- | --- |
 | T01 | Create coordination board and claim tasks | done | arena/99553b53-nyfun3 | COORDINATION.md |
-| T02 | Verify NYC trip dates, sources and official-source policy | in progress | arena/99553b53-nyfun3 | research/01-dates-sources.md, data/verification.json |
-| T03 | Research Michelin Guide NYC starred/selected restaurants and menu prices | unclaimed | — | data/michelin.json, research/02-michelin.md |
-| T04 | Research hotels with official rates for Feb 2027 dates | unclaimed | — | data/hotels.json, research/03-hotels.md |
-| T05 | Research activities and social-media review links | unclaimed | — | data/activities.json, research/04-activities.md |
-| T06 | Build GitHub Pages dashboard site (landing + subpages) | unclaimed | — | index.html, assets/, pages/ |
+| T02 | Verify NYC trip dates, sources and official-source policy | done | arena/99553b53-nyfun3 | research/01-dates-sources.md |
+| T03 | Research Michelin Guide NYC starred/selected restaurants and menu prices | done | arena/99553b53-nyfun3 | data/michelin.json, research/02-michelin.md |
+| T04 | Research hotels with official rates for Feb 2027 dates | done (pricing unavailable — flagged) | arena/99553b53-nyfun3 | data/hotels.json, research/03-hotels.md |
+| T05 | Research activities and social-media review links | done | arena/99553b53-nyfun3 | data/activities.json, research/04-activities.md |
+| T06 | Build GitHub Pages dashboard site (landing + subpages) | in progress | arena/99553b53-nyfun3 | index.html, assets/, pages/ |
 | T07 | Write executive summary, suggestions, open questions, flagged items | unclaimed | — | pages/executive-summary.html, pages/suggestions.html, pages/questions.html, pages/flagged-for-review.html |
 | T08 | Line-by-line verification, link check, publish to GitHub Pages | unclaimed | — | scripts/, Pages settings |
 
@@ -49,3 +49,16 @@ claimed below; log requests here instead.
 
 - 2026-11-25 — Session `arena/99553b53-nyfun3` created board, claimed all tasks
   because the runtime fixes it to one branch. No other session claims present.
+- 2026-11-25 — T02/T03/T04/T05 complete. Sources: official Michelin Guide NYC
+  restaurant list + 19 detail pages; official hotel pages (Hyatt, Marriott,
+  Hilton-indexed content); NPS, MoMA, The Met, 9/11 Memorial, High Line, NYC
+  Parks, ESB, Statue City Cruises; YouTube/Instagram pages opened directly.
+  Verification: every Michelin row transcribed from its own Michelin page;
+  every activity row from its operator/government page. Irregularities: Feb 2027
+  dated hotel rates unavailable; Michelin booking window limited to 31 days;
+  Met hours differ between indexed official versions; Saga page shows
+  millesime=2025; Hilton pages blocked direct fetch; one Atomix YouTube video
+  returned 401; a guessed Joo Ok slug failed and was replaced with verified slug
+  `joo-ok-1214822`; TikTok links not verifiable; no official subway/bus travel
+  times for Feb 2027; 17 of 50 one-star restaurants not captured. All such
+  values are blank or flagged on the Flagged for Review page.
