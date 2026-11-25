@@ -1,0 +1,498 @@
+{
+  "lastVerified": "2026-11-25",
+  "tripWindowChecked": "2027-02-15 to 2027-03-23",
+  "activities": [
+    {
+      "id": "A-01",
+      "name": "The Metropolitan Museum of Art (The Met Fifth Avenue)",
+      "category": "Museum & Culture",
+      "neighborhood": "Upper East Side",
+      "address": "1000 Fifth Ave (at 82nd St), New York, NY 10028",
+      "nearestTransit": "4, 5, 6 to 86 St; M1, M2, M3, M4 Fifth/Madison Ave buses",
+      "officialUrl": "https://www.metmuseum.org/plan-your-visit",
+      "officialTicketsUrl": "https://engage.metmuseum.org/admission/",
+      "daysOpen": "Thursday – Tuesday (Closed Wednesday)",
+      "hours": "Sun–Tue & Thu 10:00 AM–5:00 PM; Fri–Sat 10:00 AM–9:00 PM",
+      "exceptions": "CLOSED WEDNESDAYS year-round. Closed Thanksgiving, Dec 25, Jan 1 & first Monday in May — OPEN on Presidents' Day (Mon Feb 15, 2027). Ticket includes same-day entry to The Met Cloisters.",
+      "coupleTotalDisplay": "$60 ($30/adult General Admission)",
+      "coupleMinUSD": 60,
+      "coupleMaxUSD": 60,
+      "pricingNotes": "Official General Admission: $30/adult ($60 for 2 adults); NY State residents & NY/NJ/CT students Pay-What-You-Wish ($0.01 min).",
+      "maxSubwayFromRecommendedHotelsMin": 28,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "How To See The Met in 90 Mins (2026 Guide)",
+          "url": "https://www.youtube.com/watch?v=JAVzUAYj6zM"
+        },
+        {
+          "platform": "YouTube",
+          "label": "MoMA vs. The Met — Full Museum Comparison",
+          "url": "https://www.youtube.com/watch?v=aDSCQOzygBE"
+        },
+        {
+          "platform": "TikTok",
+          "label": "@inmycityandabroad — Met Date Night & Line Hacks",
+          "url": "https://www.tiktok.com/@inmycityandabroad/video/7511023702675524910?lang=en"
+        },
+        {
+          "platform": "TikTok",
+          "label": "The Met Tour & Visitor Reviews",
+          "url": "https://www.tiktok.com/discover/met-museum-tour-guide"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@metmuseum Official Feed (4M Followers)",
+          "url": "https://www.instagram.com/metmuseum/feed/"
+        }
+      ]
+    },
+    {
+      "id": "A-02",
+      "name": "The Museum of Modern Art (MoMA)",
+      "category": "Museum & Culture",
+      "neighborhood": "Midtown West",
+      "address": "11 W 53rd St (between 5th & 6th Ave), New York, NY 10019",
+      "nearestTransit": "E, M to 5 Av/53 St; B, D, F to 47–50 Sts-Rockefeller Ctr",
+      "officialUrl": "https://www.moma.org/visit/",
+      "officialTicketsUrl": "https://moma.org/visit/calendar/tickets",
+      "daysOpen": "Monday – Sunday (Open 7 Days)",
+      "hours": "Sat–Thu 10:30 AM–5:30 PM; Fri 10:30 AM–8:30 PM",
+      "exceptions": "Open daily in Feb–Mar 2027 (closed only Thanksgiving & Dec 25). Galleries begin clearing 15 mins prior to close; UNIQLO Free Friday Nights (5:30–8:30 PM) are restricted to NY State residents.",
+      "coupleTotalDisplay": "$60 ($30/adult General Admission)",
+      "coupleMinUSD": 60,
+      "coupleMaxUSD": 60,
+      "pricingNotes": "Official online admission: $30/adult ($60 for 2 adults), includes all special exhibitions, Sculpture Garden & same-day film screenings. Located adjacent to 2★ The Modern.",
+      "maxSubwayFromRecommendedHotelsMin": 22,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "Is MoMA Worth It? | June 2026 NYC Tour",
+          "url": "https://www.youtube.com/watch?v=iKhkApixPYA"
+        },
+        {
+          "platform": "YouTube",
+          "label": "MoMA or The Met Comparison Review",
+          "url": "https://www.youtube.com/watch?v=aDSCQOzygBE"
+        },
+        {
+          "platform": "TikTok",
+          "label": "MoMA NYC Reviews & First-Floor Tips",
+          "url": "https://www.tiktok.com/discover/moma-museum-nyc"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@themuseumofmodernart Official Feed",
+          "url": "https://www.instagram.com/themuseumofmodernart/"
+        }
+      ]
+    },
+    {
+      "id": "A-03",
+      "name": "SUMMIT One Vanderbilt",
+      "category": "Observation Deck & Immersive Art",
+      "neighborhood": "Midtown East (Grand Central)",
+      "address": "45 E 42nd St (Main Concourse, Grand Central Terminal), New York, NY 10017",
+      "nearestTransit": "4, 5, 6, 7, S at Grand Central–42 St (Direct Indoor Access)",
+      "officialUrl": "https://summitov.com/visit/",
+      "officialTicketsUrl": "https://summitov.com/the-ultimate-visitors-guide-to-summit/",
+      "daysOpen": "Monday – Sunday (Check Off-Peak Winter Tuesdays)",
+      "hours": "9:00 AM–12:00 AM (Last entry 10:30 PM; select winter dates 9:00 AM–10:30 PM, last entry 9:30 PM)",
+      "exceptions": "Official FAQ & seasonal pages note occasional Tuesday closures during off-peak winter weeks—verify exact Tuesday status when Feb/Mar 2027 timed slots open. Sunglasses recommended; avoid stilettos/skirts on mirrored floors.",
+      "coupleTotalDisplay": "$91–$135 ($44/adult Base + $3 Order Fee; $66/adult w/ Ascent)",
+      "coupleMinUSD": 91,
+      "coupleMaxUSD": 135,
+      "pricingNotes": "Official Visitor Guide pricing: SUMMIT Experience starts at $44/adult + $3 per-order online fee ($91 starting total for 2 before tax; sunset +$10/pp); SUMMIT Ascent starts at $63–$66/adult.",
+      "maxSubwayFromRecommendedHotelsMin": 20,
+      "verificationStatus": "needs_review",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "We Spent 2.5 Hours at SUMMIT One Vanderbilt (Honest Review, July 2026)",
+          "url": "https://www.youtube.com/watch?v=_w63Bh3-A78"
+        },
+        {
+          "platform": "YouTube",
+          "label": "Top of the Rock vs SUMMIT Comparison",
+          "url": "https://www.youtube.com/watch?v=NI6lyJ2See4"
+        },
+        {
+          "platform": "TikTok",
+          "label": "SUMMIT One Vanderbilt Honest Reviews",
+          "url": "https://www.tiktok.com/discover/summit-one-vanderbilt-review"
+        },
+        {
+          "platform": "TikTok",
+          "label": "@emmx_bxiley — 3-Floor Accessibility & View Review",
+          "url": "https://www.tiktok.com/@emmx_bxiley/video/7335299844841557279"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@summitOV Official Feed",
+          "url": "https://www.instagram.com/summitOV/"
+        }
+      ]
+    },
+    {
+      "id": "A-04",
+      "name": "Top of the Rock Observation Deck",
+      "category": "Observation Deck",
+      "neighborhood": "Midtown / Rockefeller Center",
+      "address": "30 Rockefeller Plaza (Entrance on 50th St between 5th & 6th Ave), New York, NY 10112",
+      "nearestTransit": "B, D, F, M to 47–50 Sts-Rockefeller Ctr; 1 to 50 St; N, R, W to 49 St",
+      "officialUrl": "https://topoftherocknyc.com/plan-your-visit/tickets/pricing",
+      "officialTicketsUrl": "https://topoftherocknyc.com/buy-tickets/top-of-the-rock",
+      "daysOpen": "Monday – Sunday (Open 365 Days)",
+      "hours": "Daily 8:00 AM–12:00 AM (Last entry 11:10 PM)",
+      "exceptions": "Sunset time slots carry dynamic surcharges; no refunds for low visibility/weather (rebooking offered for zero-visibility conditions). Located in same complex as Le Rock (Selected).",
+      "coupleTotalDisplay": "$84–$144 (From $42/adult Timed Entry; $72/adult w/ Beam + Skylift)",
+      "coupleMinUSD": 84,
+      "coupleMaxUSD": 144,
+      "pricingNotes": "Official pricing page: Adult (13–61) Timed Admission from $42/pp ($84 base for 2 before 8.875% tax); Beam + Skylift All-Inclusive Pass from $72/pp online ($144 for 2).",
+      "maxSubwayFromRecommendedHotelsMin": 22,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "Top of the Rock vs SUMMIT Comparison Review",
+          "url": "https://www.youtube.com/watch?v=NI6lyJ2See4"
+        },
+        {
+          "platform": "YouTube",
+          "label": "Ranking All 5 NYC Observation Decks (2026)",
+          "url": "https://www.youtube.com/watch?v=VMGaK4QkrwY"
+        },
+        {
+          "platform": "TikTok",
+          "label": "Top of the Rock vs SUMMIT Reviews",
+          "url": "https://www.tiktok.com/discover/top-of-the-rock-vs-summit-one-nyc"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@topoftherocknyc Official Feed",
+          "url": "https://www.instagram.com/topoftherocknyc/"
+        }
+      ]
+    },
+    {
+      "id": "A-05",
+      "name": "Statue of Liberty & Ellis Island (Statue City Cruises / NPS)",
+      "category": "National Monument & Harbor Ferry",
+      "neighborhood": "Battery Park / New York Harbor",
+      "address": "Castle Clinton National Monument, Battery Park, New York, NY 10004",
+      "nearestTransit": "1 to South Ferry; 4, 5 to Bowling Green; R, W to Whitehall St",
+      "officialUrl": "https://www.nps.gov/stli/planyourvisit/fees.htm",
+      "officialTicketsUrl": "https://cityexperiences.com/new-york/city-cruises/statue/faq/purchasing-tickets",
+      "daysOpen": "Monday – Sunday (Open 363 Days)",
+      "hours": "Daily 8:30 AM–5:00 PM (Winter schedule; last ferry departs Battery Park at 3:30 PM)",
+      "exceptions": "Closed only Thanksgiving & Dec 25. Statue City Cruises is the ONLY authorized ferry allowed to dock at Liberty & Ellis Islands. Crown Reserve (~500/day) must be booked 2–4 months ahead; airport-style security required.",
+      "coupleTotalDisplay": "$52.00 (General Ferry + Both Museums) | $52.60 (Pedestal or Crown Reserve)",
+      "coupleMinUSD": 52,
+      "coupleMaxUSD": 53,
+      "pricingNotes": "Official NPS & Statue City Cruises 2026 fee schedule: General Admission $26.00/adult ($52.00 for 2); Pedestal Reserve or Crown Reserve $26.30/adult ($52.60 for 2). Includes round-trip ferry, Statue of Liberty Museum, Ellis Island Immigration Museum & audio guides.",
+      "maxSubwayFromRecommendedHotelsMin": 26,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "Statue of Liberty & Ellis Island Full Tour & Review (Feb 2026)",
+          "url": "https://www.youtube.com/watch?v=dU0NVGCbqf0&vl=en-US"
+        },
+        {
+          "platform": "YouTube",
+          "label": "Liberty Island Walking Tour (July 2026)",
+          "url": "https://www.youtube.com/watch?v=DykzlpkYSvk"
+        },
+        {
+          "platform": "TikTok",
+          "label": "Lady Liberty Ticket, Ferry & Crown Tips",
+          "url": "https://www.tiktok.com/discover/lady-liberty-statue-of-liberty"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@statuecitycruises Official Feed",
+          "url": "https://www.instagram.com/statuecitycruises/"
+        }
+      ]
+    },
+    {
+      "id": "A-06",
+      "name": "9/11 Memorial & Museum",
+      "category": "Historic Memorial & Museum",
+      "neighborhood": "Lower Manhattan / World Trade Center",
+      "address": "180 Greenwich St, New York, NY 10007",
+      "nearestTransit": "E to World Trade Ctr; R, W to Cortlandt St; 1 to WTC Cortlandt; 2, 3, 4, 5, A, C, J, Z to Fulton St",
+      "officialUrl": "https://www.911memorial.org/visit/visit-museum-1",
+      "officialTicketsUrl": "https://www.911memorial.org/visit",
+      "daysOpen": "Memorial: Daily (7 Days) | Museum: Wed–Mon + Select Holiday Tuesdays",
+      "hours": "Outdoor Memorial: Daily 8:00 AM–8:00 PM. Museum: Wed–Mon 9:00 AM–7:00 PM (Last entry 5:30 PM)",
+      "exceptions": "Museum is CLOSED most non-holiday Tuesdays (often open Tuesday of Presidents' Week—verify Feb 16, 2027 on calendar). Free Admission Mondays 5:30 PM–7:00 PM (tickets released Mondays at 7:00 AM ET).",
+      "coupleTotalDisplay": "$0 (Outdoor Memorial Only / Free Mon PM) | $48–$72 (Museum Timed Entry)",
+      "coupleMinUSD": 48,
+      "coupleMaxUSD": 72,
+      "pricingNotes": "Official site: Outdoor Reflecting Pools are $0/free daily; Museum Admission $24–$36/adult depending on age/slot ($72 standard 2-adult total; $96–$120 with 60-min guided tour).",
+      "maxSubwayFromRecommendedHotelsMin": 24,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "9/11 Memorial & Museum Walking Tour (Sept 2026)",
+          "url": "https://www.youtube.com/watch?v=yjmqeCZ6Qno"
+        },
+        {
+          "platform": "TikTok",
+          "label": "9/11 Museum Visitor Tips & Free Monday Guide",
+          "url": "https://www.tiktok.com/discover/free-ny-resident-tickets-for-911-museum"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@911memorial Official Feed",
+          "url": "https://www.instagram.com/911memorial/"
+        }
+      ]
+    },
+    {
+      "id": "A-07",
+      "name": "Empire State Building Observatory (86th & 102nd Floors)",
+      "category": "Observation Deck & Landmark",
+      "neighborhood": "Midtown South / Koreatown",
+      "address": "20 W 34th St, New York, NY 10118",
+      "nearestTransit": "B, D, F, M, N, Q, R, W to 34 St–Herald Sq; 1, 2, 3 to 34 St–Penn Station; 6 to 33 St",
+      "officialUrl": "https://www.esbnyc.com/visit",
+      "officialTicketsUrl": "https://www.esbnyc.com/buy-tickets",
+      "daysOpen": "Monday – Sunday (Open 365 Days)",
+      "hours": "Winter Schedule: Daily ~9:00 AM or 10:00 AM to 10:00 PM–11:00 PM (Exact hours vary slightly by date)",
+      "exceptions": "Open 365 days rain, snow, or shine; radiant outdoor deck heaters operate on the 86th floor throughout February & March. Timed-entry reservation required.",
+      "coupleTotalDisplay": "$97 (86th Floor for 2 w/ $5 Booking Fee) | $167 (86th + 102nd Floors)",
+      "coupleMinUSD": 97,
+      "coupleMaxUSD": 167,
+      "pricingNotes": "Official Buy Tickets page: 86th Floor starts at $46/adult + $5 per-transaction booking fee ($97 starting total for 2 before tax; sunset surcharge extra); 86th + 102nd Floor starts at $81/adult ($167 w/ fee for 2).",
+      "maxSubwayFromRecommendedHotelsMin": 16,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "The Empire State Building Experience Walkthrough",
+          "url": "https://www.youtube.com/watch?v=wRAQrhjGu8s"
+        },
+        {
+          "platform": "TikTok",
+          "label": "@sarahfunkyy — Tour Guide Honest Review",
+          "url": "https://www.tiktok.com/@sarahfunkyy/video/7296509191869451563"
+        },
+        {
+          "platform": "TikTok",
+          "label": "86th vs 102nd Floor Observation Reviews",
+          "url": "https://www.tiktok.com/discover/empire-state-building-nyc-observation-deck"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@EmpireStateBldg Official Feed",
+          "url": "https://www.instagram.com/EmpireStateBldg/"
+        }
+      ]
+    },
+    {
+      "id": "A-08",
+      "name": "The High Line",
+      "category": "Elevated Park & Architecture Walk",
+      "neighborhood": "Meatpacking District · Chelsea · Hudson Yards",
+      "address": "Gansevoort St & Washington St north to W 34th St & 12th Ave, New York, NY 10014",
+      "nearestTransit": "A, C, E, L to 14 St / 8 Av; C, E to 23 St; 7 to 34 St–Hudson Yards",
+      "officialUrl": "https://www.thehighline.org/visit/",
+      "officialTicketsUrl": "https://www.thehighline.org/visit/",
+      "daysOpen": "Monday – Sunday (Open 7 Days)",
+      "hours": "Winter Hours (Dec 1 – Mar 31): Daily 7:00 AM–8:00 PM",
+      "exceptions": "Covers entire Feb 15–Mar 23, 2027 window on winter 7 AM–8 PM schedule (10 PM hours resume April 1). Rail Yard Preserve (30th–34th St) closes earlier at dusk; elevated pathways may close briefly during active ice/snow removal.",
+      "coupleTotalDisplay": "$0 (Free Public Park & Free Docent Tours)",
+      "coupleMinUSD": 0,
+      "coupleMaxUSD": 0,
+      "pricingNotes": "Official site confirms free public entry daily, with free docent-led public tours on select days.",
+      "maxSubwayFromRecommendedHotelsMin": 20,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "[4K] The High Line NYC Full Walking Tour",
+          "url": "https://www.youtube.com/watch?v=rOhaKygVT44"
+        },
+        {
+          "platform": "TikTok",
+          "label": "The High Line Place Reviews & Tips",
+          "url": "https://www.tiktok.com/place/The-High-Line-20319181086634279"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@highlinenyc Official Feed",
+          "url": "https://www.instagram.com/highlinenyc/"
+        }
+      ]
+    },
+    {
+      "id": "A-09",
+      "name": "American Museum of Natural History ( & Gilder Center)",
+      "category": "Museum & Science",
+      "neighborhood": "Upper West Side",
+      "address": "200 Central Park West (at 79th St), New York, NY 10024",
+      "nearestTransit": "B, C to 81 St–Museum of Natural History; 1 to 79 St",
+      "officialUrl": "https://www.amnh.org/plan-your-visit",
+      "officialTicketsUrl": "https://www.amnh.org/plan-your-visit/admissions-ticketing",
+      "daysOpen": "Monday – Sunday (Open 7 Days)",
+      "hours": "Daily 10:00 AM–5:30 PM",
+      "exceptions": "Open daily in Feb–Mar 2027 (closed only Thanksgiving & Dec 25). Note: Some halls/entrances (e.g., Gilder Center Columbus Ave door) may close earlier on select days per official Temporary Hall Closures page.",
+      "coupleTotalDisplay": "$74 (General Admission for 2) | $86 (+1 Special Exhibit / Planetarium)",
+      "coupleMinUSD": 74,
+      "coupleMaxUSD": 96,
+      "pricingNotes": "Official non-NY Standard Pricing: General Admission $37/adult ($74 for 2, includes 40+ halls, Rose Center & Gilder Center); General + One Ticketed Exhibit $43/adult ($86 for 2); General + All $48/adult ($96 for 2). NY State residents Pay-What-You-Wish ($25 suggested).",
+      "maxSubwayFromRecommendedHotelsMin": 27,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "Exploring American Museum of Natural History (Apr 2026 Vlog)",
+          "url": "https://www.youtube.com/watch?v=KkvGwA7AA3w&vl=en"
+        },
+        {
+          "platform": "TikTok",
+          "label": "@naturalhistorymuseum Official Clips",
+          "url": "https://www.tiktok.com/@naturalhistorymuseum"
+        },
+        {
+          "platform": "TikTok",
+          "label": "@aventurasyuyro — Floor-by-Floor Visitor Guide",
+          "url": "https://www.tiktok.com/@aventurasyuyro/video/7438775046035967278"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@amnh Official Feed",
+          "url": "https://www.instagram.com/amnh/"
+        }
+      ]
+    },
+    {
+      "id": "A-10",
+      "name": "Wicked on Broadway (Gershwin Theatre)",
+      "category": "Broadway Theater",
+      "neighborhood": "Theater District / Midtown West",
+      "address": "Gershwin Theatre, 222 W 51st St, New York, NY 10019",
+      "nearestTransit": "C, E, 1 to 50 St; N, R, W to 49 St; B, D, F, M to 47–50 Sts",
+      "officialUrl": "https://wickedthemusical.com/",
+      "officialTicketsUrl": "https://wickedthemusical.com/",
+      "daysOpen": "Tuesday – Sunday (Typically Dark Monday)",
+      "hours": "8 Performances/Week: Tue, Thu & Fri 7:00 PM; Wed 2:00 PM & 7:00 PM; Sat 2:00 PM & 8:00 PM; Sun 2:00 PM &/or 7:00 PM (2 hrs 45 mins w/ intermission)",
+      "exceptions": "Typically DARK MONDAYS (holiday schedule overrides sometimes add Monday shows during Presidents' Week). Note: NYC Broadway Week 2-for-1 ends Feb 11, 2027—four days BEFORE the Feb 15 trip start.",
+      "coupleTotalDisplay": "$178–$390+ (Official Face Value Starts at $89/person)",
+      "coupleMinUSD": 178,
+      "coupleMaxUSD": 390,
+      "pricingNotes": "Official schema/ticketing on wickedthemusical.com starts at $89/person ($178 for 2 rear mezzanine/midweek); prime Orchestra typically $155–$195+/person. In-person $49 cash/card lottery & student/military rush available.",
+      "maxSubwayFromRecommendedHotelsMin": 23,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "Wicked on Broadway — Gershwin Seat View & Review (2025)",
+          "url": "https://www.youtube.com/watch?v=epPPczYDXz4"
+        },
+        {
+          "platform": "YouTube",
+          "label": "Watching Wicked at Gershwin Theatre Vlog",
+          "url": "https://www.youtube.com/watch?v=3xZpwZCyXl4"
+        },
+        {
+          "platform": "TikTok",
+          "label": "Wicked Broadway NYC Reviews & Seat Tips",
+          "url": "https://www.tiktok.com/discover/wicked-broadway-nyc-review"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@wicked_musical Official Feed",
+          "url": "https://www.instagram.com/wicked_musical/"
+        }
+      ]
+    },
+    {
+      "id": "A-11",
+      "name": "Brooklyn Bridge Promenade & Brooklyn Bridge Park (DUMBO)",
+      "category": "Iconic Walk & Waterfront Park",
+      "neighborhood": "Civic Center (Manhattan) to DUMBO (Brooklyn)",
+      "address": "Brooklyn Bridge Pedestrian Walkway & 334 Furman St, Brooklyn, NY 11201",
+      "nearestTransit": "A, C to High St–Brooklyn Bridge (DUMBO); F to York St; 4, 5, 6 to Brooklyn Bridge–City Hall",
+      "officialUrl": "https://brooklynbridgepark.org/",
+      "officialTicketsUrl": "https://brooklynbridgepark.org/plan-your-visit/get-a-permit/permit-terms-and-conditions/",
+      "daysOpen": "Monday – Sunday (Open 7 Days)",
+      "hours": "Brooklyn Bridge Pedestrian Walkway: Open 24 Hours. Brooklyn Bridge Park: Daily 6:00 AM–1:00 AM",
+      "exceptions": "Walk Brooklyn -> Manhattan (High St A/C station back toward City Hall) so the Manhattan skyline faces you the entire 1.1-mile walk. Bundle warm layers for East River wind chill in Feb/Mar.",
+      "coupleTotalDisplay": "$0 (Free Pedestrian Bridge & Waterfront Park)",
+      "coupleMinUSD": 0,
+      "coupleMaxUSD": 0,
+      "pricingNotes": "100% free public access for both the elevated wooden promenade (bikes now separated onto roadbed lane) and all 85 acres of Brooklyn Bridge Park.",
+      "maxSubwayFromRecommendedHotelsMin": 25,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "Walking NYC's Most Historic Bridge w/ a Tour Guide (Aug 2026)",
+          "url": "https://www.youtube.com/watch?v=-3WM-OaTCHE"
+        },
+        {
+          "platform": "YouTube",
+          "label": "Brooklyn Bridge 4K Walking Tour (Aug 2026)",
+          "url": "https://www.youtube.com/watch?v=HLa87TF7fgo"
+        },
+        {
+          "platform": "TikTok",
+          "label": "DUMBO-to-Manhattan Bridge Walk Direction Tip",
+          "url": "https://www.tiktok.com/discover/nyc-tips"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@brooklynbridgepark Official Feed",
+          "url": "https://www.instagram.com/brooklynbridgepark/"
+        }
+      ]
+    },
+    {
+      "id": "A-12",
+      "name": "Central Park & Wollman Rink Winter Ice Skating",
+      "category": "Park & Seasonal Winter Activity",
+      "neighborhood": "Central Park South / Midtown",
+      "address": "830 Fifth Ave (Closest Rink Entrance: 59th St & 6th Ave / Artists' Gate), New York, NY 10065",
+      "nearestTransit": "N, R, W to 5 Av/59 St; F to 57 St; A, C, B, D, 1 to 59 St–Columbus Circle",
+      "officialUrl": "https://wollmanrinknyc.com/plan/",
+      "officialTicketsUrl": "https://www.centralparknyc.org/visit",
+      "daysOpen": "Monday – Sunday (Skating Season Ends March 16, 2027)",
+      "hours": "Central Park: Daily 6:00 AM–1:00 AM (365 Days). Wollman Rink (Oct 28, 2026–Mar 16, 2027): Mon–Tue 10:00 AM–2:30 PM; Wed, Thu & Sun 10:00 AM–9:00 PM; Fri–Sat 10:00 AM–10:00 PM",
+      "exceptions": "CRITICAL SEASONAL CUTOFF: Wollman Rink closes for ice skating after Tuesday, March 16, 2027 (CLOSED Mar 17–23, 2027!). Also note early 2:30 PM close on Mondays & Tuesdays, Peak pricing Feb 16–21 (Midwinter Recess), and End-of-Season Community Days Mar 14–16.",
+      "coupleTotalDisplay": "$0 (Central Park Walk) | $56 Off-Peak / $80 Peak (Skating + Rental for 2, Tax Included)",
+      "coupleMinUSD": 56,
+      "coupleMaxUSD": 80,
+      "pricingNotes": "Official 2026–27 Wollman Rink Pricing (tax included): Off-Peak Adult $16 + $12 skate rental = $28/pp ($56 for 2, valid Mon–Thu Feb 22–25 & ALL days Mar 1–13!); Peak Adult $28 + $12 skate rental = $40/pp ($80 for 2, applies Feb 16–21 & Feb 26–28). Optional locker $8.",
+      "maxSubwayFromRecommendedHotelsMin": 24,
+      "verificationStatus": "verified",
+      "socialLinks": [
+        {
+          "platform": "YouTube",
+          "label": "NYC Ice Skating in Central Park at Wollman Rink",
+          "url": "https://www.youtube.com/watch?v=Ko0PjAbn8iU"
+        },
+        {
+          "platform": "YouTube",
+          "label": "Discovering Central Park Spots & Wollman Rink",
+          "url": "https://www.youtube.com/watch?v=gWdKPfNiblo&vl=hi"
+        },
+        {
+          "platform": "TikTok",
+          "label": "Wollman Rink 2026–27 Season & Ticket Tips",
+          "url": "https://www.tiktok.com/discover/things-to-do-in-nyc-this-week"
+        },
+        {
+          "platform": "Instagram",
+          "label": "@wollmanrinknyc Official Feed",
+          "url": "https://www.instagram.com/wollmanrinknyc/"
+        }
+      ]
+    }
+  ]
+}
