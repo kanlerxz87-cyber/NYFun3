@@ -43,7 +43,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T10 | First Pages integration and live checks | `done` | `arena-c2e08f03` | `main` publish |
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
-| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `in progress` | `ed92e764` | shared outputs, `flagged-for-review.html`, `review.html`, `scripts/**`, `.github/workflows/validate-site.yml`, `COORDINATION.md`, `README.md`, PR to `main` |
+| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `done` | `ed92e764` | shared outputs, `flagged-for-review.html`, `review.html`, `scripts/**`, `.github/workflows/validate-site.yml`, `COORDINATION.md`, `README.md`, PR to `main` |
 
 ## `needs review` items — published on Flagged for Review page
 
@@ -91,7 +91,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | 2026-11-25 | `ed92e764` | Phase A shared outputs on `main` | Final review needs the root dashboard and data | Merged `origin/main` into fixed branch. |
 | 2026-11-25 | `ed92e764` | `COORDINATION.md` | Add/add and content conflicts because three sessions created/updated the board | Combined board preserves all task boards, work logs, source lists, verification notes, and irregularities. |
 | 2026-11-25 | `arena-61fbe157` | root `index.html` | Add dossier link | Link present in root dashboard; retained in final integration. |
-| 2026-11-25 | `ed92e764` | shared `data/*.json`, `*.html`, `pages/**` | Re-verify combined data and publish final integration | Final-integration edits applied locally; PR to `main` and Pages check pending. |
+| 2026-11-25 | `ed92e764` | shared `data/*.json`, `*.html`, `pages/**` | Re-verify combined data and publish final integration | PR #4 merged to `main`; Pages rebuilt at `0a2eafe`; live checks passed. A final copy reconciliation follows in PR #5. |
 
 ## Work log — Final integration (`ed92e764`)
 
@@ -102,3 +102,10 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 **Docs reconciled:** `README.md`, `REVIEW.md`, and `VERIFICATION.md` now describe the combined pages, exact final coverage, CI validators, and Flagged for Review semantics; stale R1/R2/R3 and "no row has a source" defects are explicitly resolved. The Phase A/B/C logs and conflict history are preserved above.
 
 **Checks:** `python scripts/validate_site.py`, `python scripts/check_inline_js.py`, and `node scripts/check_rendered_tables.js` passed locally after the integration edits. PR, CI, and Pages rebuild checks are pending at the time of this log entry.
+
+## Final publish check (`ed92e764`, 2026-11-25 UTC)
+
+- **PR #4** (`arena/ed92e764-nyfun3` → `main`) merged as `0a2eafe` after the `Validate static site` check succeeded. CI run `45722618504` passed all seven job steps, including the DOM-stub rendered-table check.
+- **GitHub Pages** build for commit `0a2eafe` reported `status: built`, `error: null`, completed 23:37:26 UTC. Legacy source remains `main` `/`.
+- **Live URLs checked:** root dashboard, `flagged-for-review.html`, `plan.html`, `pages/findings.html`, `restaurants.html`, `michelin.html`, and `itinerary.html`. The new review queue, Source columns, `2 × official per-person price` cells, and consolidated itinerary sources rendered on the published site.
+- **Final copy fix:** the Restaurants and Michelin introductions were reconciled with the partial menu-price coverage. This follow-up is published through PR #5; T13 is marked `done` because all substantive integration, CI, PR, Pages, and live checks are complete.

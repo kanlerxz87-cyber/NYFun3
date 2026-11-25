@@ -127,3 +127,7 @@ integration additionally fetched the official menu/FAQ/PDF and hours pages named
 and `research/sources.md`; no value was written from memory, from a previous conversation,
 or from a third-party summary. The offline validator does not re-fetch the web: it enforces
 that a source URL, schema field, local target, and anchor remain present and syntactically valid.
+
+## 8. Final publish check (25 November 2026, session `ed92e764`)
+
+PR #4 merged the final integration into `main` as `0a2eafe` after the `Validate static site` workflow succeeded (run `45722618504`; all seven job steps passed). GitHub Pages reported `status: built` for that commit with no error. The published root dashboard, Flagged for Review page, executive summary, dossier findings, Restaurants, Michelin, and Itinerary pages were fetched from `https://kanlerxz87-cyber.github.io/NYFun3/` and showed the expected Source columns, review queue, official-menu arithmetic, and itinerary source links. A final follow-up PR reconciles two page introductions with the partial menu-price coverage; no factual value changes.
