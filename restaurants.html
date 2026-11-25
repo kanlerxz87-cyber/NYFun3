@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurants — NYC 2027 trip planner</title>
+<meta name="description" content="Restaurant shortlist with hours, exceptions, official sites, booking links and review searches — verified against first-party pages.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html" aria-current="page">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Restaurants</h1>
+    <p>The shortlist is the MICHELIN-starred set — it is the only restaurant tier where a single authoritative source (the Guide) publishes star status, cuisine, address, booking partner and hours in one place. Each row links to that Guide page and to the restaurant's own site.</p>
+  </div>
+
+  <section class="panel">
+    <h2>What this page deliberately does not do</h2>
+    <ul class="tight">
+      <li><strong>No invented dollar totals.</strong> MICHELIN publishes a $–$$$$ band. The restaurants' own sites mostly gate menus behind reservation flows, so a per-couple total would be a guess. The "Cost for two" column stays blank and flagged until a first-party menu price is captured.</li>
+      <li><strong>No third-party price aggregators.</strong> Sites that scrape menus contradicted each other on the same dish and were rejected as sources.</li>
+      <li><strong>Bib Gourmand and "listed but not starred" venues are not on this page yet.</strong> They are the next pass — see <a href="plan.html">Summary &amp; Questions</a>.</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Shortlist by area</h2>
+    <p class="lede">Grouped so you can plan a meal next to whatever you are doing that day. Hours come from each Guide page; closed days are called out in red.</p>
+    <div class="legend">
+      <label class="small">Area
+        <select id="f-cluster"><option value="">All areas</option></select>
+      </label>
+      <label class="small">Tier
+        <select id="f-tier"><option value="">All starred</option><option value="3">★★★</option><option value="2">★★</option><option value="1">★</option></select>
+      </label>
+    </div>
+    <div id="table-host"><p class="loading">Loading restaurants…</p></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Sources: MICHELIN Guide restaurant pages and each venue's own website. Verification date 25 November 2026.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var DATA = null;
+function draw() {
+  var cl = document.getElementById("f-cluster").value;
+  var tier = document.getElementById("f-tier").value;
+  var rows = DATA.restaurants.filter(function (r) {
+    return (!cl || (r.cluster || "Unassigned") === cl) && (!tier || String(r.stars) === tier);
+  }).sort(function (a, b) {
+    return (a.cluster || "zz").localeCompare(b.cluster || "zz") || b.stars - a.stars || a.name.localeCompare(b.name);
+  });
+  document.getElementById("table-host").innerHTML =
+    '<div class="scroll"><table><thead><tr>' +
+      "<th>Restaurant</th><th>Tier</th><th>Cuisine</th><th>Area</th><th>Days &amp; hours</th>" +
+      "<th class='num'>Cost for two</th><th>Official site</th><th>Booking</th><th>Reviews</th><th>Source</th>" +
+    "</tr></thead><tbody>" +
+    rows.map(function (r) {
+      var s = r.social || {};
+      var social = ["youtube_search","tiktok_search","instagram_search"].map(function (k, i) {
+        return '<a href="' + s[k] + '" target="_blank" rel="noopener noreferrer">' + ["YouTube","TikTok","Instagram"][i] + "</a>";
+      }).join(" · ");
+      return "<tr>" +
+        "<td><strong>" + NYF.esc(r.name) + "</strong><br><span class='muted small'>" + NYF.esc(r.address || "") + "</span>" +
+          (r.phone ? "<br><span class='small'>" + NYF.esc(r.phone) + "</span>" : "") + "</td>" +
+        '<td><span class="pill">' + NYF.esc(r.status_label) + "</span></td>" +
+        "<td class='small'>" + NYF.esc(r.cuisine || "") + "</td>" +
+        "<td class='small'>" + NYF.esc(r.cluster || "") + "</td>" +
+        "<td>" + NYF.hoursCell(r.hours, r.hours_flag) + "</td>" +
+        "<td class='num'>" + NYF.unverified("MICHELIN publishes a band only; no first-party menu price captured.") + "</td>" +
+        "<td class='small'>" + (r.official_site ? NYF.srcLink(r.official_site, "venue site") : '<span class="unver">not found</span>') + "</td>" +
+        "<td class='small'>" + (r.booking_url && /^https?:/.test(r.booking_url) ? NYF.srcLink(r.booking_url, "book") : '<span class="small muted">Own bookings</span>') + "</td>" +
+        "<td class='small'>" + social + "</td>" +
+        "<td class='small'>" + NYF.srcLink(r.michelin_url, "Guide page") + "</td>" +
+      "</tr>";
+    }).join("") + "</tbody></table></div>";
+}
+NYF.load("data/michelin_all.json", function (json) {
+  DATA = json;
+  var areas = {};
+  json.restaurants.forEach(function (r) { areas[r.cluster || "Unassigned"] = 1; });
+  var sel = document.getElementById("f-cluster");
+  Object.keys(areas).sort().forEach(function (k) {
+    var o = document.createElement("option"); o.value = k; o.textContent = k; sel.appendChild(o);
+  });
+  sel.addEventListener("change", draw);
+  document.getElementById("f-tier").addEventListener("change", draw);
+  draw();
+});
+</script>
+</body>
+</html>

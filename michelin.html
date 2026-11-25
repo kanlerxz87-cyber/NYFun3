@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michelin — NYC 2027 trip planner</title>
+<meta name="description" content="Every MICHELIN-starred restaurant in and near New York City, with star status, hours, cluster and official source links.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html" aria-current="page">Michelin</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Michelin, verified</h1>
+    <p>Star status is stated explicitly for every entry — starred, or merely listed in the Guide. The count below is the 2025 selection; the 2026 New York ceremony is on <strong>14 December 2026</strong>, so re-check after that date.</p>
+  </div>
+
+  <div class="grid" id="tiers"></div>
+
+  <section class="panel">
+    <h2>Clusters at a glance</h2>
+    <p class="lede">Grouping by area makes the "which hotel puts you near the most stars" question answerable. Counts below cover starred restaurants only.</p>
+    <div id="clusters"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Full list</h2>
+    <p class="lede">Filter by tier or area. Hours are from each Guide page; a blank hours cell means the block did not render and is flagged rather than guessed.</p>
+    <div class="legend">
+      <label class="small">Tier
+        <select id="f-tier"><option value="">All</option><option value="3">★★★ Three star</option><option value="2">★★ Two star</option><option value="1">★ One star</option></select>
+      </label>
+      <label class="small">Area
+        <select id="f-cluster"><option value="">All</option></select>
+      </label>
+    </div>
+    <div id="table-host"><p class="loading">Loading Michelin data…</p></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Source: MICHELIN Guide New York 2025 selection and each restaurant's Guide page. Verification date 25 November 2026.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var DATA = null;
+
+function socialCell(s) {
+  if (!s) return "";
+  return ["youtube_search","tiktok_search","instagram_search"].map(function (k, i) {
+    return '<a href="' + s[k] + '" target="_blank" rel="noopener noreferrer">' + ["YT","TikTok","IG"][i] + "</a>";
+  }).join(" · ");
+}
+
+function draw() {
+  var tier = document.getElementById("f-tier").value;
+  var cl = document.getElementById("f-cluster").value;
+  var rows = DATA.restaurants.filter(function (r) {
+    return (!tier || String(r.stars) === tier) && (!cl || (r.cluster || "Unassigned") === cl);
+  }).sort(function (a, b) { return b.stars - a.stars || a.name.localeCompare(b.name); });
+
+  var body = rows.map(function (r) {
+    var price = r.price_symbol ? r.price_symbol : "";
+    var pair = r.price_for_two_usd ? NYF.money0(r.price_for_two_usd) :
+      NYF.unverified("No first-party dollar price — MICHELIN publishes a band only.");
+    var site = r.official_site ? NYF.srcLink(r.official_site, "venue site") : '<span class="unver">no site</span>';
+    var book = r.booking_url && /^https?:/.test(r.booking_url) ? NYF.srcLink(r.booking_url, "book") : "";
+    return "<tr>" +
+      "<td><strong>" + NYF.esc(r.name) + "</strong>" +
+        (r.note ? '<span class="flag small" style="color:#5d6673">' + NYF.esc(r.note) + "</span>" : "") +
+        "<br><span class='muted small'>" + NYF.esc(r.address || "") + "</span></td>" +
+      '<td><span class="pill' + (r.stars === 3 ? " ok" : "") + '">' + NYF.esc(r.status_label) + "</span>" +
+        '<br><span class="small muted">Starred — not merely listed</span></td>' +
+      '<td class="small">' + NYF.esc(r.cuisine || "") + "</td>" +
+      '<td class="num">' + price + "</td>" +
+      '<td class="small">' + NYF.esc(r.cluster || "") + "</td>" +
+      "<td>" + NYF.hoursCell(r.hours, r.hours_flag) + "</td>" +
+      '<td class="num">' + pair + "</td>" +
+      '<td class="small">' + site + (book ? "<br>" + book : "") + "</td>" +
+      '<td class="small">' + socialCell(r.social) + "</td>" +
+      '<td class="small">' + NYF.srcLink(r.michelin_url, "Guide page") + "</td>" +
+    "</tr>";
+  }).join("");
+
+  document.getElementById("table-host").innerHTML =
+    '<div class="scroll"><table><thead><tr>' +
+      "<th>Restaurant</th><th>Status</th><th>Cuisine</th><th class='num'>Price band</th><th>Area</th>" +
+      "<th>Days &amp; hours</th><th class='num'>Cost for two</th><th>Venue / booking</th><th>Reviews</th><th>Source</th>" +
+    "</tr></thead><tbody>" + body + "</tbody></table></div>" +
+    '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(DATA._meta.price_rule) + " " + NYF.esc(DATA._meta.in_or_near_nyc) + "</p>";
+}
+
+NYF.load("data/michelin_all.json", function (json) {
+  DATA = json;
+  var c = json._meta.counts;
+  document.getElementById("tiers").innerHTML = [
+    ["Three stars", c.three_star, "The top tier — five restaurants."],
+    ["Two stars", c.two_star, "Excellent cooking worth a detour."],
+    ["One star", c.one_star, "High-quality cooking worth a stop."],
+    ["Total entries", c.total, "Starred and verified against the Guide."]
+  ].map(function (t) {
+    return '<div class="card"><span class="count">' + t[1] + "</span><h3>" + t[0] + "</h3><p>" + t[2] + "</p></div>";
+  }).join("");
+
+  var by = {};
+  json.restaurants.forEach(function (r) {
+    var k = r.cluster || "Unassigned";
+    if (!by[k]) by[k] = { 3: 0, 2: 0, 1: 0 };
+    by[k][r.stars]++;
+  });
+  var keys = Object.keys(by).sort(function (a, b) {
+    var sa = by[a][3] * 3 + by[a][2] * 2 + by[a][1], sb = by[b][3] * 3 + by[b][2] * 2 + by[b][1];
+    return sb - sa || a.localeCompare(b);
+  });
+  document.getElementById("clusters").innerHTML =
+    '<div class="scroll"><table><thead><tr><th>Area / cluster</th><th class="num">★★★</th><th class="num">★★</th><th class="num">★</th><th class="num">Total</th></tr></thead><tbody>' +
+    keys.map(function (k) {
+      var v = by[k];
+      return "<tr><td><strong>" + NYF.esc(k) + "</strong></td><td class='num'>" + v[3] + "</td><td class='num'>" + v[2] +
+        "</td><td class='num'>" + v[1] + "</td><td class='num'><strong>" + (v[1] + v[2] + v[3]) + "</strong></td></tr>";
+    }).join("") + "</tbody></table></div>";
+
+  var sel = document.getElementById("f-cluster");
+  Object.keys(by).sort().forEach(function (k) {
+    var o = document.createElement("option"); o.value = k; o.textContent = k; sel.appendChild(o);
+  });
+
+  document.getElementById("f-tier").addEventListener("change", draw);
+  sel.addEventListener("change", draw);
+  draw();
+});
+</script>
+</body>
+</html>
