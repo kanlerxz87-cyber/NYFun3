@@ -432,7 +432,7 @@
    "hours_flag": "Sunday hours not captured in this fetch — left blank, not inferred",
    "official_site": "https://askanyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/aska",
-   "booking_url": "https://askanyc.com/ (restaurant manages its own bookings — Michelin page states 'contact the restaurant directly')",
+   "booking_url": "https://askanyc.com/",
    "phone": "+1 929-337-6792",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED dollar price",
@@ -442,7 +442,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Aska%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Aska%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Aska"
-   }
+   },
+   "booking_note": "Restaurant manages its own bookings — the MICHELIN page states 'contact the restaurant directly'."
   },
   {
    "name": "Blue Hill at Stone Barns",
@@ -1654,7 +1655,7 @@
    "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
    "official_site": "https://www.semma.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/semma",
-   "booking_url": "SevenRooms (via Michelin page)",
+   "booking_url": "https://askanyc.com/",
    "phone": "+1 212-373-8900",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
@@ -1664,7 +1665,8 @@
     "youtube_search": "https://www.youtube.com/results?search_query=Semma%20New%20York",
     "tiktok_search": "https://www.tiktok.com/search?q=Semma%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Semma"
-   }
+   },
+   "booking_note": "Restaurant manages its own bookings — the MICHELIN page states 'contact the restaurant directly'."
   },
   {
    "name": "Shion 69 Leonard Street",
