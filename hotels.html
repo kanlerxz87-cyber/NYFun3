@@ -83,13 +83,13 @@ NYF.load("data/hotels.json", function (json) {
 
     function verdict(ok, txt) {
       var clean = String(txt || "").replace(/^(Yes|No)\s*[—-]\s*/i, "");
-      return '<div>' + (ok ? '<span class="pill ok">Yes</span>' : '<span class="pill warn">No / unverified</span>') +
-        ' <span class="small">' + NYF.esc(clean) + "</span></div>";
+      return '<div style="margin-bottom:6px">' + (ok ? '<span class="pill ok">Yes</span>' : '<span class="pill warn">No / unverified</span>') +
+        '&nbsp;<span class="small">' + NYF.esc(clean) + "</span></div>";
     }
     return "<tr>" +
       "<td><strong>" + NYF.esc(h.name) + "</strong><br><span class='muted small'>" + NYF.esc(h.address) + "</span>" +
         "<br><span class='small'>" + NYF.esc(h.amenities || "") + "</span>" +
-        (h.amenities_flag ? '<span class="flag">' + NYF.esc(h.amenities_flag.replace(/^UNVERIFIED[^—]*—?\s*/i, "").replace(/^UNVERIFIED\.?\s*/i, "Amenity list not yet captured from an official page.")) + "</span>" : "") + "</td>" +
+        (h.amenities_flag ? '<span class="flag">' + NYF.esc(h.amenities_flag) + "</span>" : "") + "</td>" +
       "<td class='small'>" + NYF.esc(h.area) + "</td>" +
       '<td class="num">' + total + "<br>" + totalNote + "</td>" +
       "<td>" + verdict(bathOk, h.room_meets_private_bathroom) + verdict(bedOk, h.room_meets_queen_or_larger) + "</td>" +
@@ -97,7 +97,7 @@ NYF.load("data/hotels.json", function (json) {
       "<td class='small'>" + NYF.esc(h.michelin_cluster || "") +
         (h.michelin_within_1h_count ? "<br><strong>" + h.michelin_within_1h_count + " within 1 h</strong>" :
           '<div style="margin-top:6px"><span class="unver">count unverified</span><span class="flag">' +
-          NYF.esc((h.michelin_count_flag || "Needs a measured journey time.").replace(/^UNVERIFIED[^—]*—\s*/i, "")) + "</span></div>") + "</td>" +
+          NYF.esc(h.michelin_count_flag || "Needs a measured journey time per restaurant.") + "</span></div>") + "</td>" +
       '<td class="small">' + NYF.srcLink(h.booking_url, "rate page") +
         (h.official_site ? "<br>" + NYF.srcLink(h.official_site, "hotel site") : "") + "</td>" +
     "</tr>";
