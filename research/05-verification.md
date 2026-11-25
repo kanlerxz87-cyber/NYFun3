@@ -50,4 +50,5 @@ See `pages/flagged-for-review.html` for the full list. The material ones are:
 - [x] Internal + source-link static verification passes
 - [x] Flagged items published on their own page
 - [x] Coordination board updated
-- [ ] GitHub Pages enabled on the branch (see `COORDINATION.md` T06/T08 and repository settings)
+- [x] Static site served successfully from the repository root on a local preview server (all pages and assets returned HTTP 200).
+- [ ] GitHub Pages source changed to this branch — attempted via `gh api PUT /repos/kanlerxz87-cyber/NYFun3/pages`, blocked with HTTP 403 "Resource not accessible by integration". Pages is already enabled but currently points at `main`; changing the source requires repository settings permission that this session's GitHub token does not have. All branch-side work is complete and ready for that final settings change.

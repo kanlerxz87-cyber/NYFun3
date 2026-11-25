@@ -74,3 +74,9 @@ claimed below; log requests here instead.
   fetcher instead, and blocked pages remain flagged. Report:
   `research/05-verification.md`. Remaining step: enable GitHub Pages for this
   branch in repository settings (outside the branch file scope).
+- 2026-11-25 — T08 publish attempt: GitHub Pages is already enabled at
+  `https://kanlerxz87-cyber.github.io/NYFun3/` but its source is `main`. Changing
+  the source to this branch via `gh api PUT /repos/kanlerxz87-cyber/NYFun3/pages`
+  returned HTTP 403 (Resource not accessible by integration). No permission to
+  change repository settings with this token; branch-side files are complete.
+  Local static preview served all pages/assets with HTTP 200.
