@@ -16,8 +16,8 @@
 |---|---|---|---|---|---|
 | `T1` | Repo Baseline Audit & Prompt Irregularity Analysis | `done` | `fc94e0d3` | `2026-11-25T22:34:00Z` | `data/repo_audit.json` |
 | `T2` | MICHELIN Guide & Starred Restaurants, Clusters, Couple Pricing, Hours & Social Reviews | `done` | `fc94e0d3` | `2026-11-25T22:39:00Z` | `data/michelin_restaurants.json` |
-| `T3` | NYC Activities, Hours, Exceptions, <=1-Hr Transit & Social Reviews | `in progress` | `fc94e0d3` | `2026-11-25T22:56:00Z` | `data/activities.json` |
-| `T4` | NYC Hotels (Private Bath, Queen+ Bed, Verified 7-Night Pricing Feb–Mar 2027, Best Time to Book & Michelin Transit Ranking) | `unclaimed` | — | — | `data/hotels.json` |
+| `T3` | NYC Activities, Hours, Exceptions, <=1-Hr Transit & Social Reviews | `done` | `fc94e0d3` | `2026-11-25T22:56:00Z` | `data/activities.json` |
+| `T4` | NYC Hotels (Private Bath, Queen+ Bed, Verified 7-Night Pricing Feb–Mar 2027, Best Time to Book & Michelin Transit Ranking) | `in progress` | `fc94e0d3` | `2026-11-25T23:06:00Z` | `data/hotels.json` |
 | `T5` | Decision Readiness (Questions & Missing Info Discovery) + Site Improvement Suggestions | `unclaimed` | — | — | `data/decision_and_suggestions.json` |
 | `T6` | Final Integration, Line-by-Line Re-Verification, Dashboard Site & Subpages, Link Check & Live Preview | `unclaimed` | — | — | `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `questions.html`, `suggestions.html`, `review.html`, `assets/`, `.nojekyll`, `README.md` |
 
@@ -41,3 +41,12 @@
   - `Manhatta` (`R26`): Official site (`https://www.manhattarestaurant.com/chefs-counter/`) states the $275/pp Chef's Counter is paused; Bar/à la carte verified.
   - `Joo Ok` (`R11`), `Gramercy Tavern` (`R15`), `Torrisi` (`R17`), `Oxomoco` (`R21`), `Cho Dang Gol` (`R22`), `Via Carota` (`R24`), `I Sodi` (`R25`), `Manhatta` (`R26`): Individual platform cells without confirmed video/profile matches left empty (`[]`) rather than inferred.
 - **Next claim**: Claimed `T3` (`data/activities.json`).
+
+### 2026-11-25T23:06:00Z — Session `fc94e0d3` completed `T3` & claimed `T4`
+- **Verification performed**: Verified 16 NYC couple activities line-by-line against official attraction websites (`metmuseum.org`, `moma.org`, `amnh.org`, `summitov.com`, `rockefellercenter.com`, `esbnyc.com`, `nps.gov/stli`, `911memorial.org`, `hadestown.com/tickets`, `metopera.org`, `whitney.org`, `thehighline.org`, `themorgan.org`, `wollmanrinknyc.com`, `brooklynbridgepark.org`, `siferry.com`) plus verified YouTube/TikTok/Instagram review links.
+- **Critical 2027 schedule irregularities caught & logged**:
+  - `IRREG-07` (**The Metropolitan Opera Winter Hiatus**): Per `https://www.metopera.org/season/tickets/group-sales/extraordinary-every-night/2026-27/`, the Met Opera has **NO PERFORMANCES FROM JAN 31 TO MAR 7, 2027**, reopening Monday, March 8, 2027 (`Silent Night`, `Aida`, `Manon`). Completely unavailable during the preferred Feb 15–18 window!
+  - `IRREG-08` (**Wollman Rink 2026–27 Season End Date**): Per `https://wollmanrinknyc.com/plan/`, the rink closes for the season on **March 16, 2027** (unavailable March 17–23, 2027), and closes early at **2:30 PM** on Mondays & Tuesdays.
+  - `IRREG-09` (**9/11 Memorial Museum 2027 Tuesday Closures**): Closed on select winter Tuesdays (`Feb 24, Mar 3, Mar 10, Mar 17` schedule pattern) while open during school-break Tuesday.
+  - `IRREG-10` (**The Met Cloisters Transit Threshold**): Reachable in 38–48 min via `A` express from Midtown/UWS hotels, but 55–62 min from Brooklyn/FiDi hotels — flagged as borderline on the `<= 60 min` rule.
+- **Next claim**: Claimed `T4` (`data/hotels.json`).
