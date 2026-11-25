@@ -30,13 +30,13 @@
    "room_meets_private_bathroom": "Yes — Booking.com rate cards for this property list 'Attached bathroom'. Re-confirm at booking.",
    "room_meets_queen_or_larger": "Believed queen or larger; the exact bed type per rate card was not fully captured — flagged UNVERIFIED for the specific room.",
    "amenities": "",
-   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "amenities_flag": "Amenity list not yet captured from an official page.",
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout (shown on the Booking.com rate card).",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22 (the trip's preferred window)",
    "michelin_cluster": "Financial District",
    "michelin_note": "Same-cluster starred venues (Saga ★★, Crown Shy ★) are within the FiDi walking area. A per-restaurant measured transit time was NOT verified, so no numeric 'within 1 hour' count is asserted.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+   "michelin_count_flag": "Needs a measured journey time per restaurant."
   },
   {
    "id": "hgu-new-york",
@@ -59,13 +59,13 @@
    "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
    "room_meets_queen_or_larger": "Yes — queen bed listed.",
    "amenities": "",
-   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "amenities_flag": "Amenity list not yet captured from an official page.",
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "NoMad / Flatiron / Koreatown",
    "michelin_note": "Closest to Atomix ★★, Odo ★★, Joo Ok ★★, Rezdôra ★, Semma ★, 63 Clinton ★, Gramercy Tavern ★. Measured transit time per venue not verified.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+   "michelin_count_flag": "Needs a measured journey time per restaurant."
   },
   {
    "id": "hyatt-place-chelsea",
@@ -95,13 +95,13 @@
    "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
    "room_meets_queen_or_larger": "Yes — king bed listed.",
    "amenities": "",
-   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "amenities_flag": "Amenity list not yet captured from an official page.",
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Chelsea / Flatiron / NoMad",
    "michelin_note": "Closest to Odo ★★, César ★★, Atomix ★★, Rezdôra ★, Gramercy Tavern ★, Semma ★. Measured transit time per venue not verified.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+   "michelin_count_flag": "Needs a measured journey time per restaurant."
   },
   {
    "id": "citizenm-new-york-times-square",
@@ -122,7 +122,7 @@
    "michelin_cluster": "Midtown / Hell's Kitchen / Columbus Circle",
    "michelin_note": "Closest to Masa ★★, Jean-Georges ★★, The Modern ★★, Kochi ★, Le Pavillon ★, Icca ★, Torrisi ★, Gabriel Kreuther ★★. Measured transit time per venue not verified.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+   "michelin_count_flag": "Needs a measured journey time per restaurant."
   },
   {
    "id": "pestana-cr7-times-square",
@@ -172,7 +172,7 @@
    "michelin_cluster": "Times Square / Hell's Kitchen / Midtown West",
    "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★, Marea-adjacent Midtown cluster; Chef's Table at Brooklyn Fare ★★ and Jungsik ★★ are a short crosstown trip. Measured transit time per venue not verified.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+   "michelin_count_flag": "Needs a measured journey time per restaurant."
   },
   {
    "id": "arlo-midtown",
@@ -202,13 +202,13 @@
    "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
    "room_meets_queen_or_larger": "Yes — king bed listed.",
    "amenities": "",
-   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "amenities_flag": "Amenity list not yet captured from an official page.",
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Midtown West / Hell's Kitchen",
    "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★. Measured transit time not verified.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED — needs a measured or published journey time per restaurant."
+   "michelin_count_flag": "Needs a measured journey time per restaurant."
   },
   {
    "id": "mayfair-hotel",
@@ -223,13 +223,13 @@
    "room_meets_private_bathroom": "Yes — en-suite listed.",
    "room_meets_queen_or_larger": "NO — the cheapest tier captured is a full/double bed, which FAILS the queen-or-larger rule. A queen tier may exist at a higher price; not captured.",
    "amenities": "",
-   "amenities_flag": "UNVERIFIED — full amenity list not captured in this pass.",
+   "amenities_flag": "Amenity list not yet captured from an official page.",
    "taxes_note": "Taxes/fees shown at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Theater District / Midtown",
    "michelin_note": "Midtown cluster reachable; DQ on the bed rule.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED."
+   "michelin_count_flag": "No measured journey time captured for this hotel."
   },
   {
    "id": "blue-angel-hotel",
@@ -244,13 +244,13 @@
    "room_meets_private_bathroom": "Yes — en-suite listed.",
    "room_meets_queen_or_larger": "NO — cheapest tier is a full bed and the room category captured has no windows. FAILS the bed requirement and is a poor choice for a 1–2 week stay.",
    "amenities": "",
-   "amenities_flag": "UNVERIFIED.",
+   "amenities_flag": "Amenity list not yet captured from an official page.",
    "taxes_note": "Taxes/fees shown at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "NoMad / Herald Square",
    "michelin_note": "Good cluster proximity but disqualified on bed type and windowless rooms.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED."
+   "michelin_count_flag": "No measured journey time captured for this hotel."
   },
   {
    "id": "artezen-hotel",
@@ -265,13 +265,13 @@
    "room_meets_private_bathroom": "Yes — en-suite listed.",
    "room_meets_queen_or_larger": "Large bed listed; exact width UNVERIFIED.",
    "amenities": "",
-   "amenities_flag": "UNVERIFIED.",
+   "amenities_flag": "Amenity list not yet captured from an official page.",
    "taxes_note": "Taxes/fees shown at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Financial District / Tribeca",
    "michelin_note": "Closest to Saga ★★, Atera ★★★, Crown Shy ★. Highest price of the shortlist for the same week.",
    "michelin_within_1h_count": null,
-   "michelin_count_flag": "UNVERIFIED."
+   "michelin_count_flag": "No measured journey time captured for this hotel."
   }
  ]
 }
