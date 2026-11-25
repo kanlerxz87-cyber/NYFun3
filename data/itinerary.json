@@ -1,0 +1,157 @@
+{
+ "_meta": {
+  "basis": "Built only from activities whose hours and prices were verified on the venue's own site (data/activities.json). No travel time is asserted here; the only transit figure quoted is The Met's own ~1 h 25 min M4 estimate for The Cloisters.",
+  "weekday_logic": "Placement respects published closures: the Whitney is closed Tuesdays, so it sits on Mon and Fri; the 9/11 Museum is closed most Tuesdays, so it sits on Wed.",
+  "length_options": "7 nights (15–22 Feb 2027) is the priced baseline. A 14-night stay repeats this loop with the second week left open for starred dinners, shopping and weather contingency — nothing in week two is asserted as verified.",
+  "caveat": "February weather can close outdoor plans. Central Park, the High Line and the Statue ferry all have no indoor substitute listed on this site yet — that is open question Q11.",
+  "prices_not_summed": "No daily spend total is shown: adult admission is known, but restaurant prices are not verified, so a daily total would be a guess."
+ },
+ "days": [
+  {
+   "day": 1,
+   "weekday": "Mon 15 Feb",
+   "morning": [
+    "Arrive / check in",
+    "Walk the immediate neighbourhood to shake off the flight"
+   ],
+   "afternoon": [
+    {
+     "activity": "highline",
+     "why": "Free, open 07:00–20:00 in winter"
+    }
+   ],
+   "evening": [
+    {
+     "activity": "whitney",
+     "why": "Open Mon 10:30–18:00; free Friday nights are a different day"
+    }
+   ],
+   "dinner_area": "Meatpacking / West Village",
+   "note": "First day is kept close to the hotel and light on bookings."
+  },
+  {
+   "day": 2,
+   "weekday": "Tue 16 Feb",
+   "morning": [
+    {
+     "activity": "centralpark",
+     "why": "Free, no booking needed"
+    }
+   ],
+   "afternoon": [
+    {
+     "activity": "met",
+     "why": "Pay-what-you-wish applies only to NY residents — budget $30 each"
+    }
+   ],
+   "evening": [
+    {
+     "activity": "guggenheim",
+     "why": "Open Tue 10:30–17:30, Pay What You Wish 16:00–17:30"
+    }
+   ],
+   "dinner_area": "Upper East Side",
+   "note": "Whiteny is closed Tuesdays — that is why it is on Day 1, not here."
+  },
+  {
+   "day": 3,
+   "weekday": "Wed 17 Feb",
+   "morning": [
+    {
+     "activity": "911",
+     "why": "Museum open Wed 09:00–19:00, last entry 17:30; timed ticket required"
+    }
+   ],
+   "afternoon": [
+    {
+     "activity": "statue",
+     "why": "Ferry from The Battery; buy from the authorised operator only"
+    }
+   ],
+   "evening": [],
+   "dinner_area": "Financial District",
+   "note": "Longest transit day; keep the evening free or book one FiDi starred table."
+  },
+  {
+   "day": 4,
+   "weekday": "Thu 18 Feb",
+   "morning": [
+    {
+     "activity": "nypl",
+     "why": "Free; Rose Main Reading Room visiting hour 10:00–11:00"
+    }
+   ],
+   "afternoon": [
+    {
+     "activity": "topoftherock",
+     "why": "Timed slot; price moves with time of day — book the fixed slot"
+    }
+   ],
+   "evening": [
+    {
+     "activity": "grandcentral",
+     "why": "Free to enter, 5 minutes from the Library"
+    }
+   ],
+   "dinner_area": "Midtown",
+   "note": "Cheapest day of the week if you skip the observation deck."
+  },
+  {
+   "day": 5,
+   "weekday": "Fri 19 Feb",
+   "morning": [
+    {
+     "activity": "intrepid",
+     "why": "Winter hours 10:00–17:00, last entry 16:00"
+    }
+   ],
+   "afternoon": [],
+   "evening": [
+    {
+     "activity": "whitney",
+     "why": "Open until 22:00 on Fridays — the one late night on museum row"
+    }
+   ],
+   "dinner_area": "Chelsea / Hell's Kitchen",
+   "note": ""
+  },
+  {
+   "day": 6,
+   "weekday": "Sat 20 Feb",
+   "morning": [
+    {
+     "activity": "amnh",
+     "why": "Open daily 10:00–17:30; expect the busiest day of the week"
+    }
+   ],
+   "afternoon": [
+    {
+     "activity": "centralpark",
+     "why": "Adjacent — combine the two"
+    }
+   ],
+   "evening": [],
+   "dinner_area": "Upper West Side",
+   "note": ""
+  },
+  {
+   "day": 7,
+   "weekday": "Sun 21 Feb",
+   "morning": [
+    {
+     "activity": "cloisters",
+     "why": "A-train day trip; The Met itself states the M4 from Fifth Ave takes ~1h25"
+    }
+   ],
+   "afternoon": [],
+   "evening": [],
+   "dinner_area": "Anywhere near the hotel",
+   "note": "Half-day excursion — the only listed activity that breaks the 1-hour rule."
+  }
+ ],
+ "second_week_suggestions": [
+  "Re-book the two or three starred dinners that need a reservation window (see the Restaurants page).",
+  "Add one borough day (Brooklyn or Queens) — Michelin has starred venues there (Aska, Francie, Oxomoco, Restaurant Yuu, Shota Omakase, The Four Horsemen, Meju), but no transit time has been measured yet.",
+  "Hold one fully unplanned day for weather."
+ ]
+}
