@@ -179,6 +179,15 @@ def michelin_table():
         ''.join('<th>{}</th>'.format(e(h)) for h in head), '\n'.join(rows))
 
 
+def one_star_names_table():
+    rows = []
+    for i, name in enumerate(MICHELIN['oneStarNames'], 1):
+        source = MICHELIN['oneStarNamesPage2'] if i >= 49 else MICHELIN['oneStarNamesSource']
+        rows.append('<tr><td>#{}</td><td>{}</td><td>1 Star (awarded)</td><td><a href="{}" target="_blank" rel="noopener noreferrer">Official 1-star list</a></td></tr>'.format(
+            i, e(name), e(source)))
+    return '<div class="table-wrap"><table><thead><tr><th>#</th><th>Restaurant</th><th>Guide distinction</th><th>Source (official)</th></tr></thead><tbody>{}</tbody></table></div>'.format(''.join(rows))
+
+
 # ------------------------------- Hotels -----------------------------------
 def hotels_table():
     rows = []
@@ -307,7 +316,7 @@ summary_body = '''
   <li>The official Michelin Guide filter panel for New York City shows <strong>5 three-star, 14 two-star, 50 one-star, 76 Bib Gourmand and 224 selected restaurants</strong> (<a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/3-stars-michelin" target="_blank" rel="noopener noreferrer">source</a>).</li>
   <li>All <strong>19 starred restaurants</strong> are listed on the <a href="michelin.html">Michelin dining page</a> with distinction, address, days/hours, price band, social links and a direct Michelin source link.</li>
   <li><strong>12 of the 19</strong> have verified street addresses in Manhattan's roughly 30th–60th Street band, which is the densest cluster for a Midtown base. This is an address-based count, not a verified one-hour travel-time calculation.</li>
-  <li>Only 33 of the 50 one-star names were captured from the official listing in this pass; the remaining 17 are deliberately omitted rather than guessed.</li>
+  <li>All <strong>50 one-star names</strong> were captured from pages 1 and 2 of the official listing; names only, no unverified details were added.</li>
 </ul>
 </section>
 
@@ -360,9 +369,11 @@ in a video description and must not be treated as a current booked price.</div>
 <h2>Guide vs star distinction</h2>
 <p>A Michelin star (one, two or three) is an award. "Selected restaurants" and "Bib Gourmand" are
 MICHELIN Guide recommendations without stars. Every restaurant in the table above currently holds
-stars per the official list. The first 33 names from the 1-star list are recorded in
-<code>data/michelin.json</code>; no star status is inferred for them here.</p>
-'''.format(filters=filters('michelin'), table=michelin_table())
+stars per the official list. All 50 one-star names are listed below from the official list; only the
+19 three-/two-star entries were transcribed to full detail rows.</p>
+<h2>All 50 one-star restaurants (names only)</h2>
+{one_star_table}
+'''.format(filters=filters('michelin'), table=michelin_table(), one_star_table=one_star_names_table())
 write('pages/michelin.html', page('Michelin dining', 'pages/michelin.html', michelin_body))
 
 hotels_body = '''
@@ -576,8 +587,8 @@ Effort: low. Needs: traveller confirmation of preferred dates. Resolves Q2–Q3.
 
 <div class="panel">
 <h2>C. Research-expansion options</h2>
-<div class="idea"><h3>C1. Capture all 50 one-star restaurants</h3>
-<p>Benefit: complete starred list. Effort: medium. Needs: 17 more official Michelin detail pages.</p></div>
+<div class="idea"><h3>C1. Transcribe full detail for the 50 one-star restaurants</h3>
+<p>Benefit: complete starred table with hours, addresses and social links. Effort: high. Needs: 50 official Michelin detail pages; names are already captured.</p></div>
 <div class="idea"><h3>C2. Add Bib Gourmand and selected restaurants as a value-focused shortlist</h3>
 <p>Benefit: cheaper alternatives near the hotel. Effort: medium. Needs: official Michelin list pages and price confirmation.</p></div>
 <div class="idea"><h3>C3. Expand social coverage to every listed venue</h3>
@@ -607,7 +618,7 @@ on an official source remain blank in the tables.</p>
 <tr><td>7</td><td>One Atomix YouTube video returned HTTP 401 (private/unavailable)</td><td>Michelin dining</td><td>Link marked search-result-only</td><td><a href="https://www.youtube.com/watch?v=_XCQ1sooD2o" target="_blank" rel="noopener noreferrer">YouTube result</a></td><td><span class="badge flagged">needs review</span></td></tr>
 <tr><td>8</td><td>Joo Ok slug first tried did not resolve</td><td>Michelin dining</td><td>Replaced with verified slug from official page; detail recorded</td><td><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/joo-ok-1214822" target="_blank" rel="noopener noreferrer">Michelin Joo Ok</a></td><td><span class="badge verified">resolved</span></td></tr>
 <tr><td>9</td><td>TikTok review links could not be verified</td><td>Michelin dining, activities</td><td>No TikTok links listed</td><td><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/3-stars-michelin" target="_blank" rel="noopener noreferrer">Michelin list (source policy)</a></td><td><span class="badge flagged">needs review</span></td></tr>
-<tr><td>10</td><td>17 of 50 one-star restaurants not captured</td><td>Michelin dining</td><td>33 names recorded in data file; remainder omitted, not guessed</td><td><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin" target="_blank" rel="noopener noreferrer">Official 1-star list</a></td><td><span class="badge flagged">needs review</span></td></tr>
+<tr><td>10</td><td>17 of 50 one-star names initially not captured</td><td>Michelin dining</td><td>All 50 names now captured from official page 2; names only, no inferred detail</td><td><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin/page/2" target="_blank" rel="noopener noreferrer">Official 1-star list, page 2</a></td><td><span class="badge verified">resolved</span></td></tr>
 <tr><td>11</td><td>Restaurant prices for two not published officially</td><td>Michelin dining</td><td>Official price column blank; reviewer prices clearly separated</td><td><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/eleven-madison-park" target="_blank" rel="noopener noreferrer">Example Michelin page (price band only)</a></td><td><span class="badge flagged">needs review</span></td></tr>
 <tr><td>12</td><td>February 2027 holiday/event exceptions not published</td><td>Activities, itinerary</td><td>Left blank or noted as not published</td><td><a href="https://www.nps.gov/stli/planyourvisit/hours.htm" target="_blank" rel="noopener noreferrer">NPS hours</a></td><td><span class="badge flagged">needs review</span></td></tr>
 <tr><td>13</td><td>Broadway/times-square row has no verified hours or price</td><td>Activities</td><td>All value cells blank rather than inferred</td><td><a href="https://www.timessquarenyc.org/" target="_blank" rel="noopener noreferrer">Times Square Alliance</a></td><td><span class="badge flagged">needs review</span></td></tr>

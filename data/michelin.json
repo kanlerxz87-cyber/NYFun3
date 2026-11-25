@@ -488,9 +488,27 @@
     "Le Pavillon",
     "Jōji",
     "Mari",
-    "YingTao"
+    "YingTao",
+    "Jua",
+    "Cote",
+    "Tempura Matsui",
+    "Yoshino",
+    "Gramercy Tavern",
+    "bōm",
+    "Noz 17",
+    "Sixty Three Clinton",
+    "Francie",
+    "The Four Horsemen",
+    "Shota Omakase",
+    "Restaurant Yuu",
+    "Kochi",
+    "Café Boulud at Maison Barnes",
+    "Daniel",
+    "Essential by Christophe",
+    "Meju"
   ],
   "oneStarNamesSource": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin",
-  "oneStarNamesNote": "First 33 of 50 shown on the official listing page; remaining 17 not captured in this pass and left off the site rather than guessed.",
-  "socialPolicy": "Links are included only when the YouTube or Instagram page itself was opened and checked, or explicitly noted as search-result-only. No TikTok review links could be verified with the available search tools; none are listed."
+  "oneStarNamesNote": "First 33 of 50 shown on the official listing page; remaining 17 not captured in this pass and left off the site rather than guessed. All 50 names were captured on 2026-11-25 from pages 1 and 2 of the official 1-star list (1–48 and 49–50). Names only; individual hours, addresses and prices were not transcribed for these 50.",
+  "socialPolicy": "Links are included only when the YouTube or Instagram page itself was opened and checked, or explicitly noted as search-result-only. No TikTok review links could be verified with the available search tools; none are listed.",
+  "oneStarNamesPage2": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin/page/2"
 }

@@ -21,9 +21,9 @@ claimed below; log requests here instead.
 | T03 | Research Michelin Guide NYC starred/selected restaurants and menu prices | done | arena/99553b53-nyfun3 | data/michelin.json, research/02-michelin.md |
 | T04 | Research hotels with official rates for Feb 2027 dates | done (pricing unavailable — flagged) | arena/99553b53-nyfun3 | data/hotels.json, research/03-hotels.md |
 | T05 | Research activities and social-media review links | done | arena/99553b53-nyfun3 | data/activities.json, research/04-activities.md |
-| T06 | Build GitHub Pages dashboard site (landing + subpages) | in progress | arena/99553b53-nyfun3 | index.html, assets/, pages/ |
-| T07 | Write executive summary, suggestions, open questions, flagged items | unclaimed | — | pages/executive-summary.html, pages/suggestions.html, pages/questions.html, pages/flagged-for-review.html |
-| T08 | Line-by-line verification, link check, publish to GitHub Pages | unclaimed | — | scripts/, Pages settings |
+| T06 | Build GitHub Pages dashboard site (landing + subpages) | done | arena/99553b53-nyfun3 | index.html, assets/, pages/ |
+| T07 | Write executive summary, suggestions, open questions, flagged items | done | arena/99553b53-nyfun3 | pages/executive-summary.html, pages/suggestions.html, pages/questions.html, pages/flagged-for-review.html |
+| T08 | Line-by-line verification, link check, publish to GitHub Pages | in progress (publish pending Pages settings) | arena/99553b53-nyfun3 | scripts/, research/05-verification.md, Pages settings |
 
 ## Claim protocol
 
@@ -62,3 +62,15 @@ claimed below; log requests here instead.
   `joo-ok-1214822`; TikTok links not verifiable; no official subway/bus travel
   times for Feb 2027; 17 of 50 one-star restaurants not captured. All such
   values are blank or flagged on the Flagged for Review page.
+- 2026-11-25 — T06/T07 complete. Built mobile dashboard from committed JSON via
+  `scripts/build_site.py`: landing page, executive summary, hotels, Michelin,
+  activities, itinerary, questions, suggestions, flagged-for-review and sources.
+  Tables carry official source links; unverified cells are blank. Correction:
+  all 50 one-star names were captured from official pages 1 and 2 (previously 33).
+- 2026-11-25 — T08 verification: `scripts/verify_site.py` passes with 0 hard
+  problems and 0 warnings; 81 unique external URLs extracted. The sandbox proxy
+  blocks direct TLS checks (curl error 35 / EOF), so HTTP status could not be
+  confirmed here; representative official pages were re-opened with the page
+  fetcher instead, and blocked pages remain flagged. Report:
+  `research/05-verification.md`. Remaining step: enable GitHub Pages for this
+  branch in repository settings (outside the branch file scope).
