@@ -254,6 +254,8 @@ This session claimed board rows for a computed GTFS hotel×starred-restaurant ra
 
 | ID | Task | Status | Owner session | File scope |
 |---|---|---|---|---|
-| T74 | Link the new Guide-listed and hotel-verification pages from existing dashboards, add review cautions, validate and publish PR #21 | `in progress` | `550e02c4` | `index.html`, `guide-2026.html`, `flagged-for-review.html`, `COORDINATION.md` |
+| T74 | Link the new Guide-listed and hotel-verification pages from existing dashboards, add review cautions, validate and publish PR #21 | `done` | `550e02c4` | `index.html`, `guide-2026.html`, `flagged-for-review.html`, `COORDINATION.md` |
 
 The prior integration T24 is complete, and PR #19 merged; this follow-up preserves both previous integrations. No other open PR currently claims these files.
+
+**T74 result:** Added dashboard cards and Guide links, published NR-10, and removed unsupported blanket 2027 transit and uncertain hotel checkout assertions from the older Guide page. Five local validators and `git diff --check` pass; jsdom interaction checks additionally confirmed the 37-row combined dining filter and the hotel search filter. PR [#21](https://github.com/kanlerxz87-cyber/NYFun3/pull/21) is the publication vehicle; its final merge/deployment status is recorded after the event.
