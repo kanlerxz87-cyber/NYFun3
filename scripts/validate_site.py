@@ -349,6 +349,117 @@ if itinerary:
                 if isinstance(s, dict) and s.get("activity") not in activity_ids:
                     err(f"itinerary.json: unknown activity id {s.get('activity')}")
 
+# Post-merge correction guards. These check data/site corrections without treating
+# explicitly historical audit prose as an active claim.
+def has_hours(row):
+    hours = row.get("hours") or {}
+    return isinstance(hours, dict) and any(str(v).strip() for v in hours.values())
+
+for r in michelin_all:
+    flag = str(r.get("hours_flag") or "")
+    if not has_hours(r) and not flag.startswith(("UNVERIFIED", "PARTIAL", "SEASONAL", "N/A", "CURRENT", "CLOSED")):
+        err(f"michelin_all.json: blank hours without a flag for {r.get('name')}")
+    if has_hours(r) and flag.startswith("UNVERIFIED"):
+        err(f"michelin_all.json: populated hours still carry UNVERIFIED flag for {r.get('name')}")
+
+all_meta = data.get("michelin_all.json", {}).get("_meta", {})
+populated_count = sum(has_hours(r) for r in michelin_all)
+one_star_gap = sum(r.get("stars") == 1 and not has_hours(r) for r in michelin_all)
+if not str(all_meta.get("hours_coverage", "")).startswith(f"{populated_count} of 72"):
+    err("michelin_all.json: hours_coverage metadata does not match row-level count")
+if not str(all_meta.get("one_star_hours_gap", "")).startswith(f"{one_star_gap} one-star"):
+    err("michelin_all.json: one_star_hours_gap metadata does not match row-level count")
+for key in ("official_directory_url", "next_ceremony_source_url", "independent_rechecked_on"):
+    if not all_meta.get(key):
+        err(f"michelin_all.json: missing post-merge metadata {key}")
+
+all_by_name = {r.get("name"): r for r in michelin_all}
+for name in ("michelin.json", "michelin_two_star.json", "michelin_one_star.json"):
+    for r in data.get(name, {}).get("restaurants", []):
+        a = all_by_name.get(r.get("name"))
+        if a and r.get("hours") != a.get("hours"):
+            err(f"{name}: hours differ from michelin_all.json for {r.get('name')}")
+        if not data.get(name, {}).get("_meta", {}).get("independent_rechecked_on"):
+            err(f"{name}: missing independent_rechecked_on metadata")
+            break
+
+hotel_meta = data.get("hotels.json", {}).get("_meta", {})
+if "$3.50/night" not in str(hotel_meta.get("tax_rule", "")) or "14.75%" not in str(hotel_meta.get("tax_rule", "")):
+    err("hotels.json: tax_rule missing verified current tax components")
+tax_sources = hotel_meta.get("tax_source_urls", [])
+if len(tax_sources) < 3 or any(not valid_http_url(str(u)) for u in tax_sources):
+    err("hotels.json: missing or malformed official tax source URLs")
+hotels_by_name = {h.get("name"): h for h in hotels}
+if "hgunyc.com" not in str(hotels_by_name.get("HGU New York", {}).get("official_site", "")):
+    err("hotels.json: HGU official_site is not the verified hgunyc.com domain")
+if "marriott.com" not in str(hotels_by_name.get("citizenM New York Times Square", {}).get("official_site", "")):
+    err("hotels.json: citizenM official_site is not the verified Marriott property page")
+
+# Active fields must not reintroduce corrected-but-invalid values. Historical audit
+# fields such as `official_site_shipped_wrong` and `data/hotel_sources.json` are
+# deliberately preserved as evidence and are not active source links.
+stale_active_urls = [
+    ("hgunewyork" + ".com", "stale HGU domain"),
+    ("citizenm.com/hotels/usa/new-york/times-square", "stale citizenM URL"),
+]
+for h in hotels:
+    for field in ("official_site", "source_url", "booking_url", "official_room_url"):
+        value = str(h.get(field) or "")
+        for needle, label in stale_active_urls:
+            if needle in value:
+                err(f"hotels.json: {h.get('name')} {field} uses {label}")
+    note = str(h.get("taxes_note") or "")
+    if ("$4" + "/night") in note or "$4 per night" in note:
+        err(f"hotels.json: {h.get('name')} taxes_note repeats unsupported $4/night claim")
+for name in ("michelin.json", "michelin_two_star.json", "michelin_one_star.json", "michelin_all.json"):
+    text = (ROOT / "data" / name).read_text()
+    for needle, label in [("/article/c0/a1479", "non-canonical ceremony URL"),
+                          ("$4" + "/night", "unsupported $4/night tax claim")]:
+        if needle in text:
+            err(f"data/{name}: {label} reintroduced")
+
+active_tax_files = [
+    ROOT / "hotels.html", ROOT / "pages/hotels.html", ROOT / "pages/findings.html",
+    ROOT / "decide.html", ROOT / "plan.html", ROOT / "RESEARCH.md", ROOT / "VERIFICATION.md",
+]
+active_bad_tax = [
+    "14.75% tax + $4", "14.75% + $4", "14.75% tax and $4",
+    "14.75% lodging tax plus $4", "14.75% sales tax plus $4",
+]
+for path in active_tax_files:
+    text = path.read_text()
+    for needle in active_bad_tax:
+        if needle in text:
+            err(f"{path.relative_to(ROOT)}: unsupported active tax wording {needle!r}")
+
+review_text = (ROOT / "flagged-for-review.html").read_text()
+for i in range(1, 10):
+    if f'id="NR-{i:02d}"' not in review_text:
+        err(f"flagged-for-review.html: missing NR-{i:02d}")
+for needle in ("Resolved source corrections", "https://www.hgunyc.com/",
+               "https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page",
+               "https://www.tax.ny.gov/pdf/current_forms/st/st101_5.pdf"):
+    if needle not in review_text:
+        err(f"flagged-for-review.html: missing {needle}")
+
+index_text = (ROOT / "index.html").read_text()
+if '<span class="count">9</span><h3>Flagged for Review</h3>' not in index_text:
+    err("index.html: Flagged for Review card does not show 9 items")
+audit_text = (ROOT / "CURRENT_AUDIT.md").read_text()
+for needle in ("Independent recheck corrections", "5 / 14 / 50", "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"):
+    if needle not in audit_text:
+        err(f"CURRENT_AUDIT.md: missing independent recheck evidence {needle!r}")
+for path, needle in [
+    (ROOT / "README.md", "NR-01–NR-09"),
+    (ROOT / "COORDINATION.md", "| NR-09 |"),
+    (ROOT / "plan.html", "NR-09"),
+    (ROOT / "VERIFICATION.md", "Independent post-merge recheck"),
+    (ROOT / "RESEARCH.md", "Independent source recheck"),
+    (ROOT / "REVIEW.md", "R25 — First-party menu-option ambiguity"),
+]:
+    if needle not in path.read_text():
+        err(f"{path.relative_to(ROOT)}: missing post-merge record {needle!r}")
+
 # Report.
 print(f"Validated {len(JSON_FILES)} JSON files, {len(HTML_FILES)} HTML pages, {len(MARKDOWN_FILES)} markdown docs")
 print(f"Rows: {len(activities)} activities, {len(hotels)} hotels, {len(michelin_all)} starred restaurants, {len(itinerary.get('days', []))} itinerary days")
@@ -359,4 +470,4 @@ if errors:
     for e in errors:
         print(" -", e, file=sys.stderr)
     sys.exit(1)
-print("OK: schemas, price arithmetic, source links, local links, anchors, navigation, and table Source columns pass")
+print("OK: schemas, price arithmetic, source links, local links, anchors, navigation, table Source columns, and post-merge correction guards pass")

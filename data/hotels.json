@@ -2,13 +2,19 @@
   "_meta": {
     "generated": "2026-11-26",
     "basis": "2 adults, 1 room, 7 nights (Feb 15–22, 2027 benchmark plus Feb 15–Mar 22, 2027 seasonality), queen+ bed and verified private bathroom.",
-    "tax_rule": "Direct SynXis quotes for Pod 51, Pod 39, Pod Times Square, HGU New York, and Shoreham show all-in totals including taxes & fees; Booking.com snapshots and Arlo quotes exclude NYC hotel taxes (~14.75% + $3.50/night occupancy fee) and are labeled separately.",
+    "tax_rule": "Current official components captured 26 Nov 2026: NYC DOF lists 5.875% hotel room occupancy tax plus $2.00/day per room for rent of $40 or more; NYS ST-101.5 lists 8⅞% combined state/local sales tax for the first 90 days and a $1.50/day hotel unit fee. NYC Council states the aggregate percentage is 14.75%. Combined published flat fees are $3.50/night. Direct SynXis quotes marked all-in already include applicable taxes/fees; Booking.com snapshots and Arlo quotes are labeled separately. These are current-law components, not a 2027 rate guarantee or OTA checkout quote.",
     "price_caveat": "Live direct SynXis/Arlo quotes captured 2026-11-26 for Feb 15–Mar 22, 2027; third-party Booking.com snapshots captured 2026-11-25. Always verify cancellation deadlines and tax breakdown at checkout.",
     "search_page_cheapest_total_usd": "The cheapest total shown on Booking.com's New York search-results card for the same dates — sometimes a different room type than the rate tiers listed. If the room type is unknown, the bed rule cannot be confirmed for that figure.",
     "excluded": "Pod/hostel-style bunk products (e.g. a 'Pod Bunk' twin at ~$700) were excluded because they fail the queen-or-larger bed rule.",
     "michelin_ranking_caveat": "Measured door-to-door weekday evening (18:30) travel times from official NYC GeoSearch / US Census coordinates to all 69 active NYC MICHELIN starred venues via live MTA GTFS Subway timetable (feed 20261101–20270515). Excludes Blue Hill at Stone Barns (Tarrytown), La Bastide (North Salem), and indefinitely closed Shion 69 Leonard Street. See research/generated/transit_1h.json for every hotel × restaurant route and duration.",
     "seasonality_summary": "Multi-week direct SynXis check on Pod 51 (Queen Pod, 2 adults, all-in): Feb 15–22 ($1,109) and Feb 22–Mar 1 ($1,138) are the cheapest weeks in the window, rising +47% in Mar 1–8 ($1,628) and +81% in Mar 15–22 ($2,004). 14-night Feb 15–Mar 1 all-in totals: Pod 51 $2,246, Pod 39 $2,356, HGU Queen Deluxe $2,432.",
-    "official_site_validation": "Every hotel official_site was re-opened on 2026-11-26. Three were wrong (one parked domain, one for-sale domain, one wrong property code), one 404d and one redirected to a brand page. data/hotel_sources.json records each fetch, what it returned, and the corrected URL. hotel[\"official_site_shipped_wrong\"] preserves the old URL for audit."
+    "official_site_validation": "Every hotel official_site was re-opened on 2026-11-26. Three were wrong (one parked domain, one for-sale domain, one wrong property code), one 404d and one redirected to a brand page. data/hotel_sources.json records each fetch, what it returned, and the corrected URL. hotel[\"official_site_shipped_wrong\"] preserves the old URL for audit.",
+    "independent_rechecked_on": "2026-11-26",
+    "tax_source_urls": [
+      "https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page",
+      "https://www.tax.ny.gov/pdf/current_forms/st/st101_5.pdf",
+      "https://legistar.council.nyc.gov/View.ashx?GUID=4547DD67-B740-4FED-A1E3-596960BC0E98&ID=12994382&M=F"
+    ]
   },
   "hotels": [
     {
@@ -33,7 +39,7 @@
       "room_meets_queen_or_larger": "Believed queen or larger; the exact bed type per rate card was not fully captured — flagged UNVERIFIED for the specific room.",
       "amenities": "",
       "amenities_flag": "Amenity list not yet captured from an official page.",
-      "taxes_note": "14.75% tax + $4 per night city tax added at checkout (shown on the Booking.com rate card).",
+      "taxes_note": "Current official NYC/State components: 14.75% plus $3.50/night published unit fees; see the government source links on the Hotels page. Not a 2027 quote.",
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22 (the trip's preferred window)",
       "michelin_cluster": "Financial District",
       "michelin_note": "Same-cluster starred venues (Saga ★★, Crown Shy ★) are within the FiDi walking area. A per-restaurant measured transit time was NOT verified, so no numeric 'within 1 hour' count is asserted.",
@@ -136,7 +142,7 @@
       "room_meets_queen_or_larger": "Yes — 1 King Bed satisfies queen-or-larger.",
       "amenities": "",
       "amenities_flag": "Amenity list not yet captured from an official page.",
-      "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
+      "taxes_note": "Current official NYC/State components: 14.75% plus $3.50/night published unit fees; see the government source links on the Hotels page. Not a 2027 quote.",
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Chelsea / Flatiron / NoMad",
       "michelin_note": "Closest to Odo ★★, César ★★, Atomix ★★, Rezdôra ★, Gramercy Tavern ★, Semma ★. Measured transit time per venue not verified.",
@@ -225,7 +231,7 @@
       "room_meets_queen_or_larger": "Yes — 1 king bed on captured rate cards.",
       "amenities": "Resort fee $26/night included in the displayed totals. Free high-speed WiFi. Guest rating 8.6/10 from 1,820 reviews (location 9.3, staff 9.3, comfort 9.0, cleanliness 8.9, WiFi 9.2, value 8.1). Penn Station 2,350 ft; MSG 8-min walk; LGA 8.1 mi.",
       "amenities_flag": "",
-      "taxes_note": "14.75% tax + $4 per night city tax EXCLUDED from the totals above. $26/night resort fee is INCLUDED.",
+      "taxes_note": "Current official NYC/State components (14.75% plus $3.50/night published unit fees) are excluded from the totals above; not a 2027 quote. $26/night resort fee is INCLUDED.",
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Times Square / Hell's Kitchen / Midtown West",
       "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★, Marea-adjacent Midtown cluster; Chef's Table at Brooklyn Fare ★★ and Jungsik ★★ are a short crosstown trip. Measured transit time per venue not verified.",

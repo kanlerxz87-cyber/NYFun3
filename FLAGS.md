@@ -31,10 +31,10 @@ each replacement was opened and checked for the hotel's own address or room name
 **Do not cite:** `hgunewyork.com`, `themayfairhotel.com`, `mayfairnewyork.com`, `blueangelhotel.com`.
 `scripts/check_sources.py` now fails the build if one of these re-enters a data file.
 
-**Still wrong on the Flagged for Review page:** NR-02 still links the parked `hgunewyork.com` domain and
-NR-03 links a Booking.com page for that property. The link is public and points at a parked domain; the
-correct first-party starting point is `hgunyc.com`. Logged as a request rather than silently rewritten,
-because the surrounding NR rows are another session's evidence statements.
+**Resolved by session `3c65c9fa` (26 Nov 2026):** NR-02 now links the verified `hgunyc.com` first-party
+site; the parked `hgunewyork.com` URL is retained only in `official_site_shipped_wrong` audit fields and
+this table. NR-03 still links a Booking.com exact-date page, clearly labeled as a third-party snapshot.
+The historical request above is retained for auditability.
 
 ## 2. Blue Angel Hotel — the street address disagrees
 
@@ -125,8 +125,7 @@ four headline numbers on `decide.html` against `data/hotel_ranking.json`, `data/
 
 ## 7. Prices are snapshots, not quotes
 
-The 7-night totals are Booking.com rate snapshots captured on a stated date, before New York's 14.75%
-hotel tax and the $4/night city tax. Five hotels have a captured tier (HGU $1,091.60 · Eurostars $1,127 ·
+Some 7-night totals are historical Booking.com snapshots captured on a stated date, before current official NYC/State tax components; direct SynXis/Arlo quotes are labeled separately as all-in or pre-tax. NYC DOF, NYS ST-101.5, and the NYC Council report support 14.75% plus $3.50/night published unit fees, not a 2027 rate guarantee. Five hotels have a captured tier (HGU $1,091.60 · Eurostars $1,127 ·
 Hyatt Place $1,183 · Arlo $1,255 · Pestana $1,327); four have none and render `unverified` rather than a
 guess. **Cheapest time to book** and **best time to book** cannot be established from a single snapshot —
 a booking-timing claim would need a price history, which no official source publishes.
