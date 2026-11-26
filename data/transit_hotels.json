@@ -1,0 +1,7471 @@
+{
+ "_meta": {
+  "assumptions": {
+   "algorithm": "Connection Scan Algorithm (multi-pass, with walking transfers)",
+   "departure_windows_local_time": [
+    "12:00",
+    "18:00"
+   ],
+   "max_walk_between_stops_m": 400.0,
+   "max_walk_door_to_stop_m": 500.0,
+   "report_limit_min": 60,
+   "search_window_min": 110,
+   "station_transfer_allowance_min": 3.0,
+   "walk_speed_kmh": 4.8,
+   "walk_speed_m_per_min": 80.0
+  },
+  "feed_index_url": "https://www.mta.info/developers",
+  "feeds": {
+   "bus_brooklyn": {
+    "connections": 2341113,
+    "url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_b.zip"
+   },
+   "bus_manhattan": {
+    "connections": 1136768,
+    "url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_m.zip"
+   },
+   "subway": {
+    "connections": 542633,
+    "url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip"
+   }
+  },
+  "generated_utc": "2026-11-26T13:26:16Z",
+  "geocoder": {
+   "benchmark": "Public_AR_Current",
+   "name": "U.S. Census Bureau geocoder",
+   "url": "https://geocoding.geo.census.gov/geocoder"
+  },
+  "null_meaning": "minutes = null means no journey of 110 minutes or less was found, or the address could not be geocoded. It never means zero.",
+  "rows": 36,
+  "service_dates": {
+   "feed_first_date": "2026-11-01",
+   "feed_last_date": "2027-05-15",
+   "saturday": "20261107",
+   "wednesday": "20261104"
+  },
+  "what_this_is": "A modelled door-to-door journey time for every hotel x destination pair, computed by this script from the official MTA static GTFS timetable.",
+  "what_this_is_not": [
+   "not an MTA-published door-to-door time",
+   "not a 2027 trip plan \u2014 the static feed carries the current timetable and omits most temporary service changes",
+   "not a live disruption, elevator or weather check"
+  ]
+ },
+ "results": [
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 25.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 41.7,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 44.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 13.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 30.8,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 31.4,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 26.9,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 22.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 44.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 26.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 24.4,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 23.5,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 31.1,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 62.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 37.3,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 26.4,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 14.9,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 38.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 33.3,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 16.6,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 31.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 25.1,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 37.5,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 23.7,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 52.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 52.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 32.2,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 106.5,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 53.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 37.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 37.6,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 34.2,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 23.4,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 24.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "eurostars-wall-street",
+   "hotel_name": "Eurostars Wall Street",
+   "hotel_stops_within_walk": 14,
+   "nearest_stop_walk_min": 1.2,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 37.4,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 41.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 14.0,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 29.3,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 34.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 25.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 39.2,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 26.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 20.9,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 29.0,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 22.9,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 28.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 57.9,
+     "within_1h": true
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 38.3,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 26.7,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 15.3,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 41.1,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 36.6,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 14.1,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 30.5,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 24.6,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 38.5,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 23.0,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 46.9,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 47.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 29.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 88.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 49.2,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 39.0,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 39.0,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 35.3,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.9,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 26.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "eurostars-wall-street",
+   "hotel_name": "Eurostars Wall Street",
+   "hotel_stops_within_walk": 14,
+   "nearest_stop_walk_min": 1.2,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 31.3,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 28.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 18.4,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 38.0,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.6,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 3.7,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 9.6,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 28.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 22.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 6.9,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 11.1,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 11.0,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 9.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 20.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 23.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 21.6,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 17.3,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 20.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 10.5,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 21.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 10.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 28.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 33.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 32.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 9.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 76.0,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 34.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 22.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hgu-new-york",
+   "hotel_name": "HGU New York",
+   "hotel_stops_within_walk": 39,
+   "nearest_stop_walk_min": 0.6,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 27.6,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 14.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 38.8,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 20.2,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 3.7,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 19.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 9.1,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 28.1,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 16.2,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.4,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 6.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 74.4,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 17.8,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 21.6,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 17.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 18.7,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 10.4,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 28.1,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 15.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 25.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 23.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 7.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 77.1,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 27.2,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 15.8,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 14.3,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.8,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 20.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hgu-new-york",
+   "hotel_name": "HGU New York",
+   "hotel_stops_within_walk": 39,
+   "nearest_stop_walk_min": 0.6,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 29.6,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 26.8,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 22.4,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 38.0,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 15.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 5.1,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 27.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 12.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 17.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 18.7,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 15.3,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 20.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 17.4,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 8.1,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 27.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 12.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 33.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 32.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 13.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 76.0,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 34.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hyatt-place-chelsea",
+   "hotel_name": "Hyatt Place New York/Chelsea",
+   "hotel_stops_within_walk": 27,
+   "nearest_stop_walk_min": 1.4,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 28.7,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 24.6,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 38.8,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 16.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 5.1,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 24.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 26.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 6.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.6,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 12.6,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 8.1,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 74.4,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 17.2,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 21.6,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 18.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 18.7,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 13.5,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 24.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 10.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 33.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 34.5,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 14.4,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 77.1,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 35.2,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 22.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 22.1,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 18.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.8,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 15.0,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hyatt-place-chelsea",
+   "hotel_name": "Hyatt Place New York/Chelsea",
+   "hotel_stops_within_walk": 27,
+   "nearest_stop_walk_min": 1.4,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 33.1,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 10.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 49.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.4,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.9,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 34.1,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 16.4,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 9.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 5.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 23.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 10.2,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 3.2,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 25.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 5.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 19.0,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 34.1,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 19.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 24.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 13.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 55.6,
+     "within_1h": true
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 27.3,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 8.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.1,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 26.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "citizenm-new-york-times-square",
+   "hotel_name": "citizenM New York Times Square",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 0.7,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 36.7,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 34.3,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 12.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 45.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 17.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.8,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 20.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 34.5,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 25.6,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 13.8,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 27.1,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 21.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.4,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 5.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 25.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 10.2,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 3.2,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 5.4,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 34.5,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 22.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 25.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 62.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 25.3,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 8.8,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.1,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 28.1,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 22.1,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "citizenm-new-york-times-square",
+   "hotel_name": "citizenM New York Times Square",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 0.7,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 32.5,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 49.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.4,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.9,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 32.8,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 23.2,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 10.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 7.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 23.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 10.5,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 25.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 8.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 19.0,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 32.8,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 33.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 32.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 13.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 63.1,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.4,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 14.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 14.2,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 13.2,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 21.6,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "pestana-cr7-times-square",
+   "hotel_name": "Pestana CR7 Times Square",
+   "hotel_stops_within_walk": 34,
+   "nearest_stop_walk_min": 1.5,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.1,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 17.6,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 42.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 17.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 24.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 20.3,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 18.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 74.4,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.2,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 10.5,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 27.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 69.5,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 31.3,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 15.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 12.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "pestana-cr7-times-square",
+   "hotel_name": "Pestana CR7 Times Square",
+   "hotel_stops_within_walk": 34,
+   "nearest_stop_walk_min": 1.5,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 28.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 21.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 39.4,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.4,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.0,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.9,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 28.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 10.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 17.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 15.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 23.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 11.6,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 25.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 16.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 17.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 28.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 33.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 32.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 13.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 69.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 32.9,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 17.4,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 17.3,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 14.9,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 21.6,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "arlo-midtown",
+   "hotel_name": "Arlo Midtown",
+   "hotel_stops_within_walk": 35,
+   "nearest_stop_walk_min": 1.8,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.1,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 42.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 17.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.0,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 24.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 9.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 18.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 74.4,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 15.3,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.2,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 12.3,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 10.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 15.5,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 27.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 77.1,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 31.3,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 17.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 17.2,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 14.9,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "arlo-midtown",
+   "hotel_name": "Arlo Midtown",
+   "hotel_stops_within_walk": 35,
+   "nearest_stop_walk_min": 1.8,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 33.1,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 10.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 49.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.4,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.9,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 34.1,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 9.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 5.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 23.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 4.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 25.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 5.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 19.0,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 34.1,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 19.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 24.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 13.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 55.6,
+     "within_1h": true
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 27.3,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 8.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 26.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "mayfair-hotel",
+   "hotel_name": "The Mayfair Hotel",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 1.4,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 36.7,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 34.3,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 12.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 45.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 17.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.8,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 20.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 34.5,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 25.6,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 27.1,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 21.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.4,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 5.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 25.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 4.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 5.4,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 34.5,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 22.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 27.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 23.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 62.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 25.3,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 9.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 28.1,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 22.1,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "mayfair-hotel",
+   "hotel_name": "The Mayfair Hotel",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 1.4,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 27.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 20.7,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 34.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 16.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 6.8,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 15.3,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 5.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 27.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 22.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 8.5,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 7.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.8,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 17.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 15.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 15.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 14.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 17.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 6.9,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 17.4,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 7.1,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 27.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 12.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 33.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 32.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 11.4,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 69.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 34.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 16.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 16.6,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 13.2,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 18.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "blue-angel-hotel",
+   "hotel_name": "Blue Angel Hotel",
+   "hotel_stops_within_walk": 32,
+   "nearest_stop_walk_min": 1.0,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 26.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 35.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 6.8,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 14.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 9.1,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 24.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 14.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 23.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 17.0,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 9.0,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.5,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 74.4,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 17.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 15.8,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 18.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 14.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 18.7,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 10.5,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 10.4,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 17.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 24.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 12.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 77.1,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 32.2,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 15.2,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 18.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "blue-angel-hotel",
+   "hotel_name": "Blue Angel Hotel",
+   "hotel_stops_within_walk": 32,
+   "nearest_stop_walk_min": 1.0,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 24.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 4.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 34.4,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 44.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 9.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 26.8,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 31.4,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 37.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 17.9,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 27.5,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 23.1,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 62.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 35.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 22.7,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 10.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 38.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 33.3,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 11.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 25.9,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 21.0,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 35.4,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 19.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 48.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 44.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 24.2,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 98.0,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 49.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 33.5,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 33.5,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 31.0,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 16.7,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 24.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "artezen-hotel",
+   "hotel_name": "Artezen Hotel",
+   "hotel_stops_within_walk": 43,
+   "nearest_stop_walk_min": 0.9,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 4.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 32.8,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 41.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 9.2,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 24.8,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 33.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 24.1,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 16.4,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 35.2,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 23.3,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.4,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 25.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 23.1,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 54.4,
+     "within_1h": true
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 37.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 22.7,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 12.0,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 37.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 33.6,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 10.1,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 25.9,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 21.6,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 37.4,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 20.2,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 42.6,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 43.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 24.2,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 88.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 44.2,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 31.5,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 31.6,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 30.9,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 18.2,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 26.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "artezen-hotel",
+   "hotel_name": "Artezen Hotel",
+   "hotel_stops_within_walk": 43,
+   "nearest_stop_walk_min": 0.9,
+   "service": "wednesday",
+   "service_date": "20261104"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 24.4,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 41.4,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 40.3,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 13.8,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 30.3,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 32.4,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 25.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 23.9,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 45.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 26.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.4,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 32.5,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 23.5,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 31.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 69.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 40.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 28.4,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 15.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 38.8,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 38.3,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 14.1,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 34.0,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 25.1,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 40.5,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 23.7,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 53.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 52.1,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 32.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 98.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 54.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 42.0,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 42.0,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 38.0,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 21.4,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 26.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "eurostars-wall-street",
+   "hotel_name": "Eurostars Wall Street",
+   "hotel_stops_within_walk": 14,
+   "nearest_stop_walk_min": 1.2,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 26.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 37.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 43.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 14.4,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 32.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 32.4,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 25.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 25.0,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 39.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 26.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 22.4,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 30.4,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 25.5,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 29.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 69.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 40.4,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 26.6,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 15.9,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 38.8,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 38.3,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 14.1,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 31.2,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 26.9,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 40.5,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 25.7,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 2.6,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 47.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 46.7,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 98.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 48.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 39.7,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 39.8,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 37.5,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 21.4,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 26.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "eurostars-wall-street",
+   "hotel_name": "Eurostars Wall Street",
+   "hotel_stops_within_walk": 14,
+   "nearest_stop_walk_min": 1.2,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 19.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 36.6,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 3.7,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 19.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 9.0,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 29.2,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 18.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 11.1,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 7.8,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 9.1,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 18.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 21.9,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 9.6,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 7.7,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 29.2,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 15.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 18.9,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 18.9,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 21.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hgu-new-york",
+   "hotel_name": "HGU New York",
+   "hotel_stops_within_walk": 39,
+   "nearest_stop_walk_min": 0.6,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 31.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 15.1,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 35.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 3.7,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 10.0,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 28.6,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 18.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 22.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.4,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 9.3,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 6.9,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 18.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 22.1,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 17.8,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.0,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 11.8,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 28.6,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 6.8,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 13.5,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 22.0,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hgu-new-york",
+   "hotel_name": "HGU New York",
+   "hotel_stops_within_walk": 39,
+   "nearest_stop_walk_min": 0.6,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 29.3,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 27.2,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 32.8,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 20.2,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 14.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 5.1,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 23.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 29.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 16.5,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 21.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 23.2,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 22.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 17.8,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 8.1,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 23.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 7.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 41.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 38.7,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 16.9,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 42.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 23.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 23.1,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 13.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hyatt-place-chelsea",
+   "hotel_name": "Hyatt Place New York/Chelsea",
+   "hotel_stops_within_walk": 27,
+   "nearest_stop_walk_min": 1.4,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 29.7,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 23.3,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 25.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 35.8,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 11.2,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 14.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 5.1,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 23.8,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 16.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 31.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.5,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 17.0,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 8.2,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 17.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 22.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 23.2,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 20.1,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 17.8,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 8.1,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 23.8,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 7.6,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 39.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 38.7,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 40.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 23.1,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 23.1,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 13.8,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "hyatt-place-chelsea",
+   "hotel_name": "Hyatt Place New York/Chelsea",
+   "hotel_stops_within_walk": 27,
+   "nearest_stop_walk_min": 1.4,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 37.4,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 34.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 12.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 41.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 30.2,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 35.5,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 28.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 16.4,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 28.6,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 10.7,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 8.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 25.9,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 30.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 10.2,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 3.2,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 30.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 35.5,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 18.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 27.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 69.1,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 8.8,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.1,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 29.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 24.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "citizenm-new-york-times-square",
+   "hotel_name": "citizenM New York Times Square",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 0.7,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 40.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 34.3,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 12.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 43.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 29.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 35.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 28.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 16.4,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 28.6,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 8.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 26.6,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 29.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 10.2,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 3.2,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 30.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 35.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 27.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 27.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 69.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 28.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 8.8,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.1,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 29.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 25.1,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "citizenm-new-york-times-square",
+   "hotel_name": "citizenM New York Times Square",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 0.7,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 17.6,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 41.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 22.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 10.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 10.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 23.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 11.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 15.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 15.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 15.0,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "pestana-cr7-times-square",
+   "hotel_name": "Pestana CR7 Times Square",
+   "hotel_stops_within_walk": 34,
+   "nearest_stop_walk_min": 1.5,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 31.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 31.0,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 17.6,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 43.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 25.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.6,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 32.6,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 22.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 23.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 10.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 25.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 23.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 11.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 32.6,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 35.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 33.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 33.8,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 15.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 15.0,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "pestana-cr7-times-square",
+   "hotel_name": "Pestana CR7 Times Square",
+   "hotel_stops_within_walk": 34,
+   "nearest_stop_walk_min": 1.5,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 32.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 30.0,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 17.6,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 41.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.7,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.0,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 22.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 10.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 10.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 24.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 23.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 11.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 32.3,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 15.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 15.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "arlo-midtown",
+   "hotel_name": "Arlo Midtown",
+   "hotel_stops_within_walk": 35,
+   "nearest_stop_walk_min": 1.8,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 31.0,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 31.0,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 17.6,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 43.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 25.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 4.0,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 15.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 32.6,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 22.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 23.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 18.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 18.6,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 10.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 21.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 25.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 23.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 11.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 32.6,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 35.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 33.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 33.8,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 15.6,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 15.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 15.6,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 16.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "arlo-midtown",
+   "hotel_name": "Arlo Midtown",
+   "hotel_stops_within_walk": 35,
+   "nearest_stop_walk_min": 1.8,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 37.4,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 34.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 13.8,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 41.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 30.2,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 35.5,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 28.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 17.3,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 28.6,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 10.6,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 8.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 25.9,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 30.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 4.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 30.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 11.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 35.5,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 18.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 27.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 11.5,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 69.1,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 9.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 29.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 24.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "mayfair-hotel",
+   "hotel_name": "The Mayfair Hotel",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 1.4,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 40.5,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 34.3,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 13.8,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 43.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 29.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 13.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 20.6,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 35.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 28.8,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 16.4,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 28.6,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.3,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 83.9,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 8.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 26.6,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 29.5,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 9.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 4.1,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 30.2,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 8.7,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 8.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 35.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 27.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 27.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 69.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 28.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 9.8,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 9.7,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 7.7,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 29.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 25.1,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "mayfair-hotel",
+   "hotel_name": "The Mayfair Hotel",
+   "hotel_stops_within_walk": 29,
+   "nearest_stop_walk_min": 1.4,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 29.3,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 19.9,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 36.6,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 6.8,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 15.3,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 29.2,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 18.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 21.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.9,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 12.2,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 9.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 11.4,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 18.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 20.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 12.0,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 9.4,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 9.6,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 29.2,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 15.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 29.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 30.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 10.1,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 18.9,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 18.9,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 18.5,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 19.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "blue-angel-hotel",
+   "hotel_name": "Blue Angel Hotel",
+   "hotel_stops_within_walk": 32,
+   "nearest_stop_walk_min": 1.0,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 29.7,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 22.8,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 35.8,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 6.8,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 15.3,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 7.6,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 26.8,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 18.1,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 23.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 7.3,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 11.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 9.7,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 12.5,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 80.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 21.8,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 18.3,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 18.8,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 20.4,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 19.6,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 12.0,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 9.3,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 22.0,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 9.6,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 26.8,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 35.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 30.7,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 11.4,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 79.6,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 36.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 22.3,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 22.2,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 18.2,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 19.3,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 19.7,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "blue-angel-hotel",
+   "hotel_name": "Blue Angel Hotel",
+   "hotel_stops_within_walk": 32,
+   "nearest_stop_walk_min": 1.0,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "12:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 26.1,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 4.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 31.4,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 41.8,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 9.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 26.0,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 29.7,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 19.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 37.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.4,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 28.0,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 19.5,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 23.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 69.5,
+     "within_1h": false
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 38.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 20.7,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 10.9,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 35.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 32.8,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 12.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 26.4,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 20.9,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 38.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 19.7,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 49.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 45.6,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 24.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 98.0,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 50.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 30.9,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 30.9,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 30.5,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 18.2,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 22.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "artezen-hotel",
+   "hotel_name": "Artezen Hotel",
+   "hotel_stops_within_walk": 43,
+   "nearest_stop_walk_min": 0.9,
+   "service": "saturday",
+   "service_date": "20261107"
+  },
+  {
+   "depart_after_local": "18:00",
+   "destinations": {
+    "63 Clinton": {
+     "kind": "restaurant",
+     "minutes": 26.4,
+     "within_1h": true
+    },
+    "9/11 Memorial & Museum": {
+     "kind": "activity",
+     "minutes": 4.7,
+     "within_1h": true
+    },
+    "Aquavit": {
+     "kind": "restaurant",
+     "minutes": 34.8,
+     "within_1h": true
+    },
+    "Aska": {
+     "kind": "restaurant",
+     "minutes": 35.9,
+     "within_1h": true
+    },
+    "Atera": {
+     "kind": "restaurant",
+     "minutes": 9.5,
+     "within_1h": true
+    },
+    "Atomix": {
+     "kind": "restaurant",
+     "minutes": 24.3,
+     "within_1h": true
+    },
+    "Chef's Table at Brooklyn Fare": {
+     "kind": "restaurant",
+     "minutes": 29.9,
+     "within_1h": true
+    },
+    "Cote": {
+     "kind": "restaurant",
+     "minutes": 19.4,
+     "within_1h": true
+    },
+    "Crown Shy": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "C\u00e9sar": {
+     "kind": "restaurant",
+     "minutes": 16.3,
+     "within_1h": true
+    },
+    "Daniel": {
+     "kind": "restaurant",
+     "minutes": 35.7,
+     "within_1h": true
+    },
+    "Eleven Madison Park": {
+     "kind": "restaurant",
+     "minutes": 20.0,
+     "within_1h": true
+    },
+    "Estela": {
+     "kind": "restaurant",
+     "minutes": 19.4,
+     "within_1h": true
+    },
+    "Gabriel Kreuther": {
+     "kind": "restaurant",
+     "minutes": 27.9,
+     "within_1h": true
+    },
+    "Gramercy Tavern": {
+     "kind": "restaurant",
+     "minutes": 17.5,
+     "within_1h": true
+    },
+    "Grand Central Terminal": {
+     "kind": "activity",
+     "minutes": 25.6,
+     "within_1h": true
+    },
+    "Intrepid Museum": {
+     "kind": "activity",
+     "minutes": 59.9,
+     "within_1h": true
+    },
+    "Jean-Georges": {
+     "kind": "restaurant",
+     "minutes": 38.9,
+     "within_1h": true
+    },
+    "Jeju Noodle Bar": {
+     "kind": "restaurant",
+     "minutes": 20.7,
+     "within_1h": true
+    },
+    "Jungsik New York": {
+     "kind": "restaurant",
+     "minutes": 10.9,
+     "within_1h": true
+    },
+    "Kochi": {
+     "kind": "restaurant",
+     "minutes": 35.3,
+     "within_1h": true
+    },
+    "Le Bernardin": {
+     "kind": "restaurant",
+     "minutes": 32.8,
+     "within_1h": true
+    },
+    "Le Coucou": {
+     "kind": "restaurant",
+     "minutes": 12.0,
+     "within_1h": true
+    },
+    "New York Public Library \u2014 Stephen A. Schwarzman Building": {
+     "kind": "activity",
+     "minutes": 28.1,
+     "within_1h": true
+    },
+    "Odo": {
+     "kind": "restaurant",
+     "minutes": 19.1,
+     "within_1h": true
+    },
+    "Per Se": {
+     "kind": "restaurant",
+     "minutes": 38.9,
+     "within_1h": true
+    },
+    "Rezd\u00f4ra": {
+     "kind": "restaurant",
+     "minutes": 17.7,
+     "within_1h": true
+    },
+    "Saga": {
+     "kind": "restaurant",
+     "minutes": 6.0,
+     "within_1h": true
+    },
+    "Semma": {
+     "kind": "restaurant",
+     "minutes": 16.1,
+     "within_1h": true
+    },
+    "Solomon R. Guggenheim Museum": {
+     "kind": "activity",
+     "minutes": 43.1,
+     "within_1h": true
+    },
+    "Sushi Noz": {
+     "kind": "restaurant",
+     "minutes": 45.4,
+     "within_1h": true
+    },
+    "Sushi Sho": {
+     "kind": "restaurant",
+     "minutes": 26.7,
+     "within_1h": true
+    },
+    "The Met Cloisters": {
+     "kind": "activity",
+     "minutes": 97.5,
+     "within_1h": false
+    },
+    "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
+     "kind": "activity",
+     "minutes": 44.7,
+     "within_1h": true
+    },
+    "The Modern": {
+     "kind": "restaurant",
+     "minutes": 35.5,
+     "within_1h": true
+    },
+    "The Museum of Modern Art (MoMA)": {
+     "kind": "activity",
+     "minutes": 35.5,
+     "within_1h": true
+    },
+    "Top of the Rock Observation Deck": {
+     "kind": "activity",
+     "minutes": 33.5,
+     "within_1h": true
+    },
+    "Torrisi": {
+     "kind": "restaurant",
+     "minutes": 18.2,
+     "within_1h": true
+    },
+    "Whitney Museum of American Art": {
+     "kind": "activity",
+     "minutes": 22.3,
+     "within_1h": true
+    }
+   },
+   "hotel_id": "artezen-hotel",
+   "hotel_name": "Artezen Hotel",
+   "hotel_stops_within_walk": 43,
+   "nearest_stop_walk_min": 0.9,
+   "service": "saturday",
+   "service_date": "20261107"
+  }
+ ]
+}
