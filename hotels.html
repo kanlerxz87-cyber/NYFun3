@@ -18,6 +18,7 @@
       <a href="michelin.html">Michelin</a>
       <a href="hotels.html" aria-current="page">Hotels</a>
       <a href="itinerary.html">Itinerary</a>
+      <a href="transit.html">Transit</a>
       <a href="plan.html">Summary &amp; Questions</a>
       <a href="flagged-for-review.html">Flagged for Review</a>
       <a href="pages/index.html">Dossier</a>
@@ -97,9 +98,11 @@ NYF.load("data/hotels.json", function (json) {
       "<td>" + verdict(bathOk, h.room_meets_private_bathroom) + verdict(bedOk, h.room_meets_queen_or_larger) + "</td>" +
       "<td class='small'>" + NYF.esc(h.taxes_note || "") + "</td>" +
       "<td class='small'>" + NYF.esc(h.michelin_cluster || "") +
-        (h.michelin_within_1h_count ? "<br><strong>" + h.michelin_within_1h_count + " within 1 h</strong>" :
-          '<div style="margin-top:6px"><span class="unver">count unverified</span><span class="flag">' +
-          NYF.esc(h.michelin_count_flag || "Needs a measured journey time per restaurant.") + "</span></div>") + "</td>" +
+        (typeof h.michelin_within_1h_count === "number"
+          ? "<br><strong>" + h.michelin_within_1h_count + " of " + (h.michelin_count_denominator || 31) + " address-verified starred venues ≤ 60 min by subway</strong>" +
+            "<br><span class='small muted'>Computed 2026-11-26 — current GTFS, no bus model; not a 2027 timetable. Method + per-place minutes: <a href='transit.html'>Transit</a></span>"
+          : '<div style="margin-top:6px"><span class="unver">count unverified</span><span class="flag">' +
+            NYF.esc(h.michelin_count_flag || "Computed analysis unavailable — see transit.html.") + "</span></div>") + "</td>" +
       '<td class="small">' + NYF.srcLink(h.booking_url, "rate page") +
         (h.official_site ? "<br>" + NYF.srcLink(h.official_site, "hotel site") : "") + "</td>" +
     "</tr>";

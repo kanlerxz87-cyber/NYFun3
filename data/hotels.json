@@ -6,7 +6,8 @@
   "price_caveat": "Prices are live and change daily. Every row carries the exact URL used (with check-in, check-out and group_adults=2) so the figure can be re-checked. Nothing here is an estimate.",
   "search_page_cheapest_total_usd": "The cheapest total shown on Booking.com's New York search-results card for the same dates — sometimes a different room type than the rate tiers listed. If the room type is unknown, the bed rule cannot be confirmed for that figure.",
   "excluded": "Pod/hostel-style bunk products (e.g. a 'Pod Bunk' twin at ~$700) were excluded because they fail the queen-or-larger bed rule.",
-  "michelin_ranking_caveat": "The user asked for hotels ranked by the number of Michelin restaurants reachable within ~1 hour by subway/bus. Producing that number honestly requires a measured or published journey time for each restaurant from each hotel. No such source was verified, so the column is left blank and flagged instead of being estimated."
+  "michelin_ranking_caveat": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html.",
+  "michelin_ranking_generated": "2026-11-26"
  },
  "hotels": [
   {
@@ -34,9 +35,31 @@
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout (shown on the Booking.com rate card).",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22 (the trip's preferred window)",
    "michelin_cluster": "Financial District",
-   "michelin_note": "Same-cluster starred venues (Saga ★★, Crown Shy ★) are within the FiDi walking area. A per-restaurant measured transit time was NOT verified, so no numeric 'within 1 hour' count is asserted.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "Needs a measured journey time per restaurant."
+   "michelin_note": "Computed 2026-11-26: 31 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 14 / ★ 12); 31 within 45; 19 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 31,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_30": {
+     "three_star": 4,
+     "two_star": 6,
+     "one_star": 9,
+     "total": 19
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "hgu-new-york",
@@ -63,9 +86,31 @@
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "NoMad / Flatiron / Koreatown",
-   "michelin_note": "Closest to Atomix ★★, Odo ★★, Joo Ok ★★, Rezdôra ★, Semma ★, 63 Clinton ★, Gramercy Tavern ★. Measured transit time per venue not verified.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "Needs a measured journey time per restaurant."
+   "michelin_note": "Computed 2026-11-26: 31 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 14 / ★ 12); 30 within 45; 28 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 31,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 12,
+     "one_star": 11,
+     "total": 28
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "hyatt-place-chelsea",
@@ -99,9 +144,31 @@
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Chelsea / Flatiron / NoMad",
-   "michelin_note": "Closest to Odo ★★, César ★★, Atomix ★★, Rezdôra ★, Gramercy Tavern ★, Semma ★. Measured transit time per venue not verified.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "Needs a measured journey time per restaurant."
+   "michelin_note": "Computed 2026-11-26: 31 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 14 / ★ 12); 31 within 45; 29 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 31,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 12,
+     "one_star": 12,
+     "total": 29
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "citizenm-new-york-times-square",
@@ -120,9 +187,31 @@
    "taxes_note": "Taxes/fees shown at checkout; exact lines not captured for this property.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Midtown / Hell's Kitchen / Columbus Circle",
-   "michelin_note": "Closest to Masa ★★, Jean-Georges ★★, The Modern ★★, Kochi ★, Le Pavillon ★, Icca ★, Torrisi ★, Gabriel Kreuther ★★. Measured transit time per venue not verified.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "Needs a measured journey time per restaurant."
+   "michelin_note": "Computed 2026-11-26: 31 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 14 / ★ 12); 30 within 45; 30 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 31,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "pestana-cr7-times-square",
@@ -170,9 +259,31 @@
    "taxes_note": "14.75% tax + $4 per night city tax EXCLUDED from the totals above. $26/night resort fee is INCLUDED.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Times Square / Hell's Kitchen / Midtown West",
-   "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★, Marea-adjacent Midtown cluster; Chef's Table at Brooklyn Fare ★★ and Jungsik ★★ are a short crosstown trip. Measured transit time per venue not verified.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "Needs a measured journey time per restaurant."
+   "michelin_note": "Computed 2026-11-26: 30 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 13 / ★ 12); 30 within 45; 28 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 30,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 12,
+     "one_star": 11,
+     "total": 28
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "arlo-midtown",
@@ -206,9 +317,31 @@
    "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Midtown West / Hell's Kitchen",
-   "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★. Measured transit time not verified.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "Needs a measured journey time per restaurant."
+   "michelin_note": "Computed 2026-11-26: 30 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 13 / ★ 12); 30 within 45; 28 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 30,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 12,
+     "one_star": 11,
+     "total": 28
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "mayfair-hotel",
@@ -227,9 +360,31 @@
    "taxes_note": "Taxes/fees shown at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Theater District / Midtown",
-   "michelin_note": "Midtown cluster reachable; DQ on the bed rule.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "No measured journey time captured for this hotel."
+   "michelin_note": "Computed 2026-11-26: 31 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 14 / ★ 12); 30 within 45; 29 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 31,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 11,
+     "total": 29
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "blue-angel-hotel",
@@ -248,9 +403,31 @@
    "taxes_note": "Taxes/fees shown at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "NoMad / Herald Square",
-   "michelin_note": "Good cluster proximity but disqualified on bed type and windowless rooms.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "No measured journey time captured for this hotel."
+   "michelin_note": "Computed 2026-11-26: 31 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 14 / ★ 12); 30 within 45; 30 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 31,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 12,
+     "total": 30
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   },
   {
    "id": "artezen-hotel",
@@ -269,9 +446,31 @@
    "taxes_note": "Taxes/fees shown at checkout.",
    "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
    "michelin_cluster": "Financial District / Tribeca",
-   "michelin_note": "Closest to Saga ★★, Atera ★★★, Crown Shy ★. Highest price of the shortlist for the same week.",
-   "michelin_within_1h_count": null,
-   "michelin_count_flag": "No measured journey time captured for this hotel."
+   "michelin_note": "Computed 2026-11-26: 31 of 31 address-verified starred restaurants within 60 min by subway (★★★ 5 / ★★ 14 / ★ 12); 31 within 45; 29 within 30. Not a 2027 timetable; no bus service modelled; see transit.html.",
+   "michelin_within_1h_count": 31,
+   "michelin_count_flag": "",
+   "michelin_count_denominator": 31,
+   "michelin_count_detail": {
+    "reachable_60": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_45": {
+     "three_star": 5,
+     "two_star": 14,
+     "one_star": 12,
+     "total": 31
+    },
+    "reachable_30": {
+     "three_star": 5,
+     "two_star": 13,
+     "one_star": 11,
+     "total": 29
+    }
+   },
+   "michelin_count_method": "Counts computed 2026-11-26 from the CURRENT MTA subway GTFS feed (median scheduled stop-to-stop times; 300 s first-boarding; 480 s interchange; walking model haversine x1.3 at 75 m/min; subway only — no bus). Covers only the 31 of 72 starred restaurants whose street address was captured and geocoded by the US Census batch geocoder (39 rows lack a captured address; Blue Hill at Stone Barns and Le Pavillon return Census No_Match). This is not a Feb-Mar 2027 timetable; re-run after dates are fixed. Method, assumptions, and per-restaurant minutes: transit.html."
   }
  ]
 }

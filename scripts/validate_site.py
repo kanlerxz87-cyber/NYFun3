@@ -21,7 +21,7 @@ JSON_FILES = sorted((ROOT / "data").glob("*.json"))
 WEEKDAYS = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}
 EXPECTED_ROOT_NAV = [
     "index.html", "activities.html", "restaurants.html", "michelin.html",
-    "hotels.html", "itinerary.html", "plan.html", "flagged-for-review.html",
+    "hotels.html", "itinerary.html", "transit.html", "plan.html", "flagged-for-review.html",
     "pages/index.html",
 ]
 EXPECTED_DOSSIER_NAV = [
@@ -284,8 +284,17 @@ for h in hotels:
     for k in ("official_site", "booking_url", "source_url"):
         if h.get(k) and not valid_http_url(str(h[k])):
             err(f"hotels: invalid {k} for {h.get('name')}")
-    if h.get("michelin_within_1h_count") is not None:
-        err(f"hotels: michelin_within_1h_count must stay null for {h.get('name')}")
+    c = h.get("michelin_within_1h_count")
+    if c is not None:
+        if not isinstance(c, int) or isinstance(c, bool) or not (0 <= c <= 72):
+            err(f"hotels: michelin_within_1h_count must be an int 0-72 or null for {h.get('name')}")
+        if "GTFS" not in str(h.get("michelin_count_method", "")):
+            err(f"hotels: non-null count needs a GTFS method note for {h.get('name')}")
+        if not str(h.get("michelin_note", "")).strip():
+            err(f"hotels: non-null count needs a michelin_note for {h.get('name')}")
+        denom = h.get("michelin_count_denominator")
+        if not isinstance(denom, int) or denom < 0 or denom > 72:
+            err(f"hotels: non-null count needs michelin_count_denominator 0-72 for {h.get('name')}")
     for t in h.get("rate_tiers", []):
         if "room" not in t or not isinstance(t.get("total_before_tax_usd"), (int, float)):
             err(f"hotels: malformed rate tier for {h.get('name')}")
@@ -333,6 +342,34 @@ if michelin_all:
         err(f"michelin_all.json: expected 10 priced rows, found {priced}")
     if "14 DECEMBER 2026" not in str(meta.get("star_caveat", "")).upper():
         err("michelin_all.json: 2026 ceremony caveat missing")
+
+transit = data.get("transit.json")
+if isinstance(transit, dict):
+    thode = transit.get("hotels")
+    if not isinstance(thode, list) or len(thode) != 9:
+        err("transit.json: expected 9 hotels")
+    else:
+        for t in thode:
+            counts = t.get("counts") or {}
+            for window in ("reachable_60", "reachable_45", "reachable_30"):
+                c = counts.get(window) or {}
+                for k in ("three_star", "two_star", "one_star", "total"):
+                    if not isinstance(c.get(k), int) or not (0 <= c[k] <= 72):
+                        err(f"transit.json: bad {window}.{k} for {t.get('id')}")
+                if c.get("total", 0) != c.get("three_star", -1) + c.get("two_star", -2) + c.get("one_star", -3):
+                    err(f"transit.json: {window} total mismatch for {t.get('id')}")
+            entries = t.get("entries", [])
+            if len(entries) != 72:
+                err(f"transit.json: expected 72 entries for {t.get('id')}")
+            for e in entries:
+                if e.get("reachable") is True:
+                    if not isinstance(e.get("minutes"), (int, float)):
+                        err(f"transit.json: reachable entry without minutes for {t.get('id')}: {e.get('name')}")
+                elif e.get("reachable") is None:
+                    if not e.get("reason"):
+                        err(f"transit.json: unplaced entry without reason for {t.get('id')}: {e.get('name')}")
+    if "sources" not in transit.get("_meta", {}):
+        err("transit.json: _meta.sources missing")
 
 itinerary = data.get("itinerary.json", {})
 if itinerary:

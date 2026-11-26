@@ -14,6 +14,7 @@ const PAGES = [
   'michelin.html',
   'hotels.html',
   'itinerary.html',
+  'transit.html',
 ];
 const APP = fs.readFileSync(path.join(ROOT, 'assets/app.js'), 'utf8');
 const INLINE = /<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi;

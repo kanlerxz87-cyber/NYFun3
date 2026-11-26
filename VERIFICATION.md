@@ -131,3 +131,49 @@ that a source URL, schema field, local target, and anchor remain present and syn
 ## 8. Final publish check (25 November 2026, session `ed92e764`)
 
 PR #4 merged the final integration into `main` as `0a2eafe` after the `Validate static site` workflow succeeded (run `45722618504`; all seven job steps passed). PR #5 merged the final page-copy reconciliation as `0b9ec96`, with its validation check also passing. GitHub Pages reported `status: built` with no error for both commits; the latest build completed 23:39:31 UTC. The published root dashboard, Flagged for Review page, executive summary, dossier findings, Restaurants, Michelin, and Itinerary pages were fetched from `https://kanlerxz87-cyber.github.io/NYFun3/` and showed the expected Source columns, review queue, official-menu arithmetic, and itinerary source links. A cache-busted refetch after the second build confirmed the reconciled Restaurants introduction. No factual value changed in PR #5.
+
+## 9. Computed subway access (26 November 2026, session `67e5a326`)
+
+**T14 — hotel × starred-restaurant subway access.** Method: (1) addresses taken as captured in
+`data/hotels.json` and `data/michelin_all.json` (no address was invented; 39 starred rows have no
+captured address and are listed as excluded in `data/transit.json` and `research/generated/transit_analysis.json`);
+(2) geocoded with the US Census Bureau batch geocoder, benchmark `Public_AR_Current`, with a
+single-address retry pass (periods stripped, then street abbreviations expanded — deterministic string
+normalisation only; no coordinates were guessed). Two rows return Census `No_Match` and stay excluded:
+Blue Hill at Stone Barns (630 Bedford Rd., Tarrytown, NY 10591) and Le Pavillon (1 Vanderbilt Ave., New York, NY 10017);
+(3) travel time computed on the **current** official MTA subway GTFS feed (`https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip`),
+edge weight = **median** scheduled stop-to-stop running time per serving trip, transfer penalty 480 s,
+first-boarding allowance 300 s; (4) walking model: haversine × 1.3 detour factor at 75 m/min from the hotel to
+the six nearest stations within 2.5 km and from the arrival station to each restaurant; (5) Blue Hill at Stone Barns
+is additionally excluded from the time model because straight-line distance exceeds 25 km (beyond subway
+service area; Metro-North required, not modelled).
+
+Outputs: `data/transit.json` (site-ready), `research/generated/transit_analysis.json` (full evidence: 81 geocodes,
+station graph stats, per-hotel per-restaurant minutes). Generator: `research/scripts/transit_analysis.py`, run by
+`.github/workflows/transit-analysis.yml` on GitHub Actions (runs `45830340621`, `45831132436`,
+`45832310175` — all concluded success; results committed by the runner as `a8ca418`, `faab030`, `e8b4085`).
+
+**Result:** Artezen Hotel, Hyatt Place Chelsea, Blue Angel Hotel, citizenM Times Square, The Mayfair Hotel and
+HGU New York reach 31/31 geocoded starred venues within 60 minutes; Arlo Midtown and Pestana CR7 Times Square reach
+30/31 (Aska, 47 S. 5th St. Brooklyn, is >60 min for both under the model); Eurostars Wall Street reaches 31/31 but
+only 19 within 30 minutes. Per-hotel ≤30/≤45/≤60 tier splits are in `data/transit.json` and on `transit.html`.
+
+**Honesty scope, restated:** current GTFS is **not** a Feb–Mar 2027 timetable; no bus service is modelled (the result
+is therefore a lower bound for the user's "subway or bus" rule); competitor claims about exact 2027 journey times were
+not made anywhere on the site. `hotels.json` now carries `michelin_within_1h_count` (int), `michelin_count_denominator`,
+`michelin_count_detail`, `michelin_count_method`, `michelin_count_flag` — the CI validator enforces that a non-null
+count carries a GTFS method note. NR-04 remains `needs review` on the Flagged for Review page with the computed
+caveat folded in.
+
+## 10. Review links on priority rows (26 November 2026, session `67e5a326`)
+
+**T15.** 25 priority rows (10 priced starred restaurants — Eleven Madison Park, Le Bernardin, The Modern, Masa, COTE,
+Aquavit, Daniel, Gramercy Tavern, Le Coucou, Rezdôra — and all 15 activities) now carry dated, found-by-search creator
+links (YouTube; TikTok where the search surfaced one) recorded in each row's `review_links` array with `found_on:
+2026-11-26` and a `review_links_note` stating these are creator content, not official sources and not endorsements.
+Every row keeps the pre-existing YouTube/TikTok/Instagram **search** links as a fallback. Creator links were gathered
+with the web search tool on 2026-11-26; they are not fetched or endorsed by this repo, and no star/hours/price row
+changed as a result. Full link list: `data/michelin*.json` and `data/activities.json` (`review_links` per row).
+
+Files changed: `assets/app.js` (new `NYF.reviewCell`), `restaurants.html`, `michelin.html`, `activities.html`
+(found links rendered first, search links labelled "search:"), plus a visible footnote on all three pages.
