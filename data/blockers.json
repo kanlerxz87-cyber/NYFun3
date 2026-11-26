@@ -1,0 +1,115 @@
+{
+ "_meta": {
+  "purpose": "The questions that must be answered before anything is booked, each with the answer the evidence currently supports and what would settle it. An answer of 'no evidence' is a real answer: it means nobody has published the fact yet, not that the fact is unknowable.",
+  "updated_utc": "2026-11-26",
+  "rule": "A question is only marked answered when a first-party source in this repository states the fact. Everything else stays open, with the exact next check."
+ },
+ "blockers": [
+  {
+   "id": "B1",
+   "title": "Exact travel dates and trip length are not chosen.",
+   "status": "open",
+   "why_it_matters": "The brief asks for 1–2 weeks but names a preferred window of 15–18 Feb 2027, which is three nights. Rates, hours, booking windows and the itinerary all change with the answer, so no booking can be compared like-for-like until it is fixed.",
+   "next_action": "Choose a check-in date (15 Feb is a Monday and a federal holiday) and a length of 7 or 14 nights. Then re-quote every hotel for that exact span.",
+   "sources": [
+    {"label": "OPM 2027 federal holidays (Washington's Birthday = 15 Feb 2027)", "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"},
+    {"label": "Hotel quote URLs already store checkin=2027-02-15", "url": "data/hotels.json"}
+   ]
+  },
+  {
+   "id": "B2",
+   "title": "Hotel prices are third-party snapshots, not official quotes.",
+   "status": "open",
+   "why_it_matters": "Every total on the site comes from a Booking.com rate card captured on 2026-11-26, before New York's 14.75% tax and $4/night city tax. A hotel's own booking engine may return a different all-in total for the same room.",
+   "next_action": "For the two or three finalist hotels, take a direct-booking quote for the chosen dates and compare line by line (room, bed, bathroom, taxes, resort fee, cancellation).",
+   "sources": [
+    {"label": "HGU direct site (its own booking engine)", "url": "https://www.hgunyc.com/"},
+    {"label": "Pestana CR7 official FAQ publishes $26.14 resort fee + 14.75% tax + $3.50 local tax", "url": "https://www.pestana.com/en/hotel/pestana-cr7-times-square"}
+   ]
+  },
+  {
+   "id": "B3",
+   "title": "The Blue Angel hotel record carries the wrong address.",
+   "status": "open",
+   "why_it_matters": "data/hotels.json stores 1234 Broadway; the hotel's own site publishes 152 East 55th Street. Its journey times and its neighbourhood label were both measured from a building it does not occupy until this was caught.",
+   "next_action": "Correct the record, or drop the hotel from the shortlist. The journey-time model already routes from the published address.",
+   "sources": [
+    {"label": "Blue Angel Hotel NYC rooms page (address in page header)", "url": "https://www.blueangelhotelnyc.com/rooms"},
+    {"label": "Verification register", "url": "data/hotel_sources.json"}
+   ]
+  },
+  {
+   "id": "B4",
+   "title": "Star ratings are the 2025 selection; the next ceremony has not happened.",
+   "status": "open",
+   "why_it_matters": "MICHELIN's New York selection is refreshed annually. Star counts and the tier of any given restaurant can change before February 2027, which would change both the ranking and the dinner plan.",
+   "next_action": "Re-read guide.michelin.com after the next New York ceremony and diff the 72 rows. The journey times stand either way; only the star labels change.",
+   "sources": [
+    {"label": "MICHELIN NYC all-starred directory", "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred"},
+    {"label": "2025 star announcement", "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"}
+   ]
+  },
+  {
+   "id": "B5",
+   "title": "Journey times are modelled from the current timetable, not from a 2027 trip plan.",
+   "status": "open",
+   "why_it_matters": "The static MTA feed carries the normal timetable and omits most temporary service changes. Planned work in February 2027 is not in it, and no elevator or accessibility status is modelled.",
+   "next_action": "Two weeks before travel, run the final hotel × final restaurant pairs through the MTA trip planner for the actual date and time, and check the MTA's planned-works page.",
+   "sources": [
+    {"label": "MTA static GTFS index", "url": "https://www.mta.info/developers"},
+    {"label": "MTA planned service changes", "url": "https://www.mta.info/service-status"}
+   ]
+  },
+  {
+   "id": "B6",
+   "title": "Half the starred list has no published street address in this dataset.",
+   "status": "open",
+   "why_it_matters": "34 of 72 starred restaurants could not be measured, because the record carries no street address or the Census geocoder could not resolve it. The 'restaurants within an hour' count therefore covers 38 of 72, and is stated that way everywhere it appears.",
+   "next_action": "Read the address off each restaurant's MICHELIN Guide page and add it to data/michelin_all.json, then re-run the measurement workflow. This is mechanical work with a first-party source per row.",
+   "sources": [
+    {"label": "MICHELIN NYC all-starred directory (each venue page carries the address)", "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred"},
+    {"label": "Coverage counts and the unmeasured list", "url": "data/transit_hotels.json"}
+   ]
+  },
+  {
+   "id": "B7",
+   "title": "Restaurant hours are incomplete, and holiday hours are unknown.",
+   "status": "open",
+   "why_it_matters": "A starred dinner has to fall on a night the restaurant is open, in a week that includes a federal holiday. 45 of the 72 rows still have no verified hours.",
+   "next_action": "Capture hours from each restaurant's own site or its Guide page, then confirm by phone or booking widget for the exact dates.",
+   "sources": [
+    {"label": "MICHELIN NYC directory", "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"}
+   ]
+  },
+  {
+   "id": "B8",
+   "title": "Most review links are search pages, not verified posts.",
+   "status": "open",
+   "why_it_matters": "The brief asks for a YouTube, TikTok or Instagram link per entry. A search URL satisfies the letter of that request but not its purpose; it also breaks silently when the algorithm changes.",
+   "next_action": "Replace each search URL with a specific video or post that was opened and confirmed to be about that venue. EVIDENCE_AUDIT.md records which links are specific and which are searches.",
+   "sources": [
+    {"label": "Evidence-quality audit", "url": "EVIDENCE_AUDIT.md"}
+   ]
+  },
+  {
+   "id": "B9",
+   "title": "The Met's hours could not be read from its own page.",
+   "status": "open",
+   "why_it_matters": "The hours panel did not render to a text fetch on repeated attempts, so the Met and Cloisters rows are blank rather than wrong. The Cloisters is also 56–106 minutes away depending on the hotel, so the 1-hour rule fails for most of them.",
+   "next_action": "Open the Met's Plan Your Visit page in a browser and record the hours with the capture date.",
+   "sources": [
+    {"label": "The Met — Plan your visit", "url": "https://www.metmuseum.org/plan-your-visit"}
+   ]
+  },
+  {
+   "id": "B10",
+   "title": "'Cheapest time to book' is not a fact anyone publishes.",
+   "status": "open",
+   "why_it_matters": "The brief asks for the cheapest upcoming time to book. Hotel prices move with demand; no official source publishes a forward booking-window rule, and a single snapshot cannot show a trend.",
+   "next_action": "Keep dated snapshots of the same room on the same site, weekly, until booking. That produces real evidence of direction instead of a guess.",
+   "sources": [
+    {"label": "HGU exact-date quote page (same URL can be re-captured and compared)", "url": "https://www.booking.com/hotel/us/hgu-new-york.html"}
+   ]
+  }
+ ]
+}

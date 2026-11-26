@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decide — measured hotel ranking &amp; open questions · NYC 2027</title>
+<meta name="description" content="The decision page for the New York trip: hotels ranked by measured door-to-door time to MICHELIN-starred restaurants, what is measured and what is not, the questions still blocking a booking, and the suggestions you can approve.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="decide.html" aria-current="page">Decide</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Decide</h1>
+    <p>One page to make the call: which hotel, which dinners, and what is still missing before anything is booked.
+       Every figure below is either measured from an official file or marked <span class="unver">unverified</span> — there is no third category.</p>
+  </div>
+
+  <section class="panel">
+    <h2>1. The short answer</h2>
+    <div class="grid" style="margin-top:12px">
+      <a class="card" href="#ranking"><span class="count">5</span><h3>hotels are effectively tied</h3><p>Ranks 1–5 sit within 1.5 minutes of each other on measured door-to-door time. Choose among them on price and room, not on distance.</p></a>
+      <a class="card" href="#one-hour"><span class="count">29</span><h3>starred restaurants within an hour</h3><p>Every hotel reaches the same 29 measured starred restaurants inside 60 minutes — the 1-hour test does not separate Midtown from the Financial District.</p></a>
+      <a class="card" href="#blockers"><span class="count">10</span><h3>open questions</h3><p>Each with the answer the evidence supports today and the exact next check that would settle it.</p></a>
+      <a class="card" href="#suggestions"><span class="count">10</span><h3>suggestions to review</h3><p>Tick the ones worth doing; nothing is implemented until you choose.</p></a>
+    </div>
+    <p class="small muted" style="margin:0">What is genuinely decided today: the party is two adults, the window is 15 Feb – 23 Mar 2027, and the preferred start is 15–18 Feb 2027. What is not decided, and cannot be settled from public pages alone, is in section 4.</p>
+  </section>
+
+  <section class="panel" id="ranking">
+    <h2>2. Hotels ranked by measured journey time to MICHELIN-starred restaurants</h2>
+    <p class="lede">Door-to-door minutes from each hotel to the starred restaurants that could be measured, computed from the official MTA subway and bus timetable. Lower is better. The rank metric, the sample, the coverage and the tie warnings are all published with the numbers.</p>
+    <div id="ranking-host"><p class="loading">Loading the measured ranking…</p></div>
+  </section>
+
+  <section class="panel" id="one-hour">
+    <h2>3. The “MICHELIN restaurants within one hour” answer</h2>
+    <div id="onehour-host"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section class="panel" id="matrix-panel">
+    <h2>4. Every measured journey, hotel by hotel</h2>
+    <p class="lede">A weekday 12:00 departure, the sample used for the ranking. Read a row across to compare hotels for one restaurant; read a column down for one hotel's whole week.</p>
+    <div id="matrix-host"><p class="loading">Loading the matrix…</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>5. How the journey times were produced</h2>
+    <p class="lede">This is the part that decides whether to trust the ranking, so it is published in full: the feeds, the algorithm, the assumptions, and what the numbers are <em>not</em>.</p>
+    <div class="scroll" id="model-host"><p class="loading">Loading the model description…</p></div>
+    <ul class="tight">
+      <li><strong>Reproducible:</strong> <code>python3 scripts/transit/gtfs_route.py</code> re-downloads the official feeds and rewrites the measurement. <code>python3 scripts/transit/test_gtfs_route.py</code> checks the model against synthetic timetables before it runs.</li>
+      <li><strong>Auditable:</strong> the address used for every door is stored with the geocoder's own matched string, so a mis-geocode is visible rather than hidden. The first run produced exactly one, and it is now rejected by a borough check.</li>
+      <li><strong>Not a promise:</strong> a timetable is not a trip plan. Service changes, elevator outages, weather and crowds are outside the model.</li>
+    </ul>
+  </section>
+
+  <section class="panel" id="blockers">
+    <h2>6. What still blocks a booking</h2>
+    <p class="lede">Every row is a question you asked, the answer the evidence supports today, and the exact check that would clear it. “Open” means nobody has published the fact yet, not that the answer is unknowable.</p>
+    <div id="blockers-host"><p class="loading">Loading the question list…</p></div>
+  </section>
+
+  <section class="panel" id="suggestions">
+    <h2>7. Suggestions — review, then choose</h2>
+    <p class="lede">Each suggestion names the decision it unblocks. Tick what you want; your choices stay in this browser and nothing on the site changes until you hand the list back for implementation.</p>
+    <div id="suggestions-host"><p class="loading">Loading suggestions…</p></div>
+    <h3 style="font-size:.95rem;margin:18px 0 6px">My picks</h3>
+    <div id="suggestion-picks"></div>
+  </section>
+
+  <section class="panel" id="review-links">
+    <h2>8. Review links: what is actually behind each one</h2>
+    <p class="lede">Every restaurant and activity row links to YouTube, TikTok and Instagram. Almost all of those links were search pages, which is not the same as a review. This section shows the links that were opened and found to name the venue, with the title, uploader and view count as published; anything not listed here is still a search page.</p>
+    <div id="review-host"><p class="loading">Loading the review-link register…</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>9. What the site still cannot tell you</h2>
+    <ul class="tight">
+      <li><strong>A guaranteed all-in hotel price.</strong> The 7-night totals are third-party rate snapshots before New York's 14.75% tax and $4/night city tax. Only a checkout page is authoritative.</li>
+      <li><strong>Whether a star will still be held in February 2027.</strong> The selection is the 2025 one; the next ceremony has not happened.</li>
+      <li><strong>The journey time on your actual travel date.</strong> The measurement uses the current published timetable.</li>
+      <li><strong>Restaurant availability.</strong> Openings are released on each restaurant's own booking engine, weeks to months ahead.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Journey times: MTA static GTFS · geocoding: U.S. Census Bureau · stars: MICHELIN Guide · hotel totals: Booking.com rate snapshots, labelled as third-party.
+     Verification date 26 November 2026. Full method in <a href="EVIDENCE_AUDIT.md">EVIDENCE_AUDIT.md</a> and <a href="FLAGS.md">FLAGS.md</a>.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/cockpit.js"></script>
+</body>
+</html>
