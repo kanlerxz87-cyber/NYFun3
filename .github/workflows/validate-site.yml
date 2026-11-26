@@ -26,7 +26,13 @@ jobs:
           node-version: '22'
       - name: Validate data, links, source columns, and navigation
         run: python scripts/validate_site.py
+      - name: Check source links, verification register and data provenance
+        run: python scripts/check_sources.py
       - name: Check JavaScript syntax
         run: python scripts/check_inline_js.py
       - name: Render dynamic tables and verify generated source links
         run: node scripts/check_rendered_tables.js
+      - name: Install the DOM used by the page smoke test
+        run: npm install --no-save --no-audit --no-fund jsdom
+      - name: Execute every page in a DOM and verify each rendered host has content
+        run: node scripts/smoke_pages.js

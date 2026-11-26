@@ -1,0 +1,99 @@
+name: Measure journey times (official MTA GTFS)
+
+# Runs the door-to-door journey-time model against the official MTA static GTFS
+# feeds and the U.S. Census geocoder, then commits the measurement so the site
+# can rank hotels by the number of MICHELIN-starred restaurants reachable in
+# 60 minutes or less.
+#
+# Nothing here is invented: every number in data/transit_hotels.json is produced
+# by scripts/transit/gtfs_route.py from the downloaded official timetable, and
+# the assumptions it relies on are written into the same file.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['**']
+    paths:
+      - 'scripts/transit/**'
+      - '.github/workflows/transit-analysis.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: transit-analysis-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  measure:
+    name: Compute hotel × destination journey times
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out the session branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Self-test the model on synthetic feeds
+        run: python3 scripts/transit/test_gtfs_route.py
+
+      - name: Cache downloaded GTFS feeds
+        uses: actions/cache@v4
+        with:
+          path: scripts/transit/.cache
+          key: gtfs-${{ github.run_id }}
+          restore-keys: |
+            gtfs-
+
+      - name: Measure journey times from official MTA feeds
+        run: python3 scripts/transit/gtfs_route.py --out data/transit_hotels.json
+
+      - name: Show a summary of the measurement
+        run: |
+          python3 - <<'PY'
+          import json, collections
+          d = json.load(open('data/transit_hotels.json'))
+          print('meta:', json.dumps(d['_meta']['service_dates']))
+          print('rows:', d['_meta']['rows'])
+          for r in d['results']:
+              dests = r['destinations']
+              n = sum(1 for v in dests.values() if v['within_1h'])
+              unmeasured = sum(1 for v in dests.values() if v['minutes'] is None)
+              print(f"{r['hotel_name']:<38} {r['service']:<9} {r['depart_after_local']}  "
+                    f"within60={n:<3} measured={len(dests)-unmeasured:<3} none={unmeasured}")
+          PY
+
+      - name: Commit the measurement and the geocode register
+        env:
+          BRANCH: ${{ github.ref_name }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/transit_hotels.json data/geocode_cache.json
+          if git diff --staged --quiet; then
+            echo "No change in the measurement."
+          else
+            git commit -m "data: measure hotel-to-destination journey times from MTA GTFS (run $RUN_ID) [skip ci]"
+            git pull --rebase origin "$BRANCH"
+            git push origin "HEAD:$BRANCH"
+          fi
+
+      - name: Upload the measurement
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: transit-measurement
+          path: |
+            data/transit_hotels.json
+            data/geocode_cache.json
+          if-no-files-found: warn
+          retention-days: 14

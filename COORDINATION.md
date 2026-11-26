@@ -4,11 +4,11 @@ Shared task board. Read this before starting work. This file was combined by fin
 
 - **Repo:** `kanlerxz87-cyber/NYFun3`
 - **Live site:** https://kanlerxz87-cyber.github.io/NYFun3/ (GitHub Pages, source = `main`, `/` root)
-- **Board last updated:** 2026-11-25 UTC
+- **Board last updated:** 2026-11-26 UTC
 - **Phase A:** `arena-c2e08f03`, pinned branch `arena/c2e08f03-nyfun3`
 - **Phase B / source diagnostics:** `ed92e764`, pinned branch `arena/ed92e764-nyfun3`
 - **Phase C / supplemental dossier:** `arena-61fbe157`, pinned branch `arena/61fbe157-nyfun3`
-- **Current Arena branch:** `arena/ed92e764-nyfun3`; base `c251442d122a8d04aade3d8b5a0d57fd4e9ce37c`
+- **Current Arena branch:** `arena/79f655ba-nyfun3`; initial base `1cc713110837ecbaf2f36ab4def44dcaabeddc73`; rebased onto `c4a5467c127bd08ec0a3cf79852fc98311c87513` before T14/T15
 
 ## Rules in force
 
@@ -44,13 +44,20 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
 | T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `done` | `ed92e764` | shared outputs, `flagged-for-review.html`, `review.html`, `scripts/**`, `.github/workflows/validate-site.yml`, `COORDINATION.md`, `README.md`, PR to `main` |
-| T14 | Verification audit remediation, live direct SynXis/Arlo hotel quotes & seasonality, 100% active MICHELIN addresses/hours & 25 priced menus, measured MTA GTFS + Census Geocoder 1h transit ranking, mobile & renderer fixes, CI, PR & merge to `main` | `done` | `arena-25fd4b76` | `data/*.json`, `*.html`, `pages/*.html`, `assets/*`, `research/**`, `scripts/**`, `.github/workflows/**`, `COORDINATION.md` |
+| T14 | Fresh post-integration audit of requirements coverage, site integrity, data provenance gaps, and actionable decision readiness | `done` | `arena/79f655ba-nyfun3` | `CURRENT_AUDIT.md`, `COORDINATION.md` |
+| T15 | Publish newly verified MICHELIN directory discrepancy on the Flagged for Review page | `done` | `arena/79f655ba-nyfun3` | `flagged-for-review.html`, `COORDINATION.md` |
+| T67 | Journey-time model + Michelin-cluster hotel ranking from MTA static GTFS | `done` | `8e38e7e7` | `scripts/transit/**`, `data/transit_hotels.json`, `data/geocode_cache.json`, `.github/workflows/transit-analysis.yml` |
+| T68 | Decision cockpit page (`decide.html`) and suggestions registry | `done` | `8e38e7e7` | `decide.html`, `assets/cockpit.js`, `SUGGESTIONS.md` |
+| T69 | Evidence-quality audit of the review links | `done` | `8e38e7e7` | `EVIDENCE_AUDIT.md`, `data/review_links.json` |
+| T70 | Source-integrity checks in CI | `done` | `8e38e7e7` | `scripts/check_sources.py`, `.github/workflows/validate-site.yml` |
+| T24 | Integration of T67–T70 & `audit-53d4ee2e.md` onto `main` | `done` | `8e38e7e7` | shared outputs, `COORDINATION.md`, PR #11 |
+| T71 | Verification audit remediation (Issue #3 / `snapshot-audit.md`), live direct SynXis/Arlo hotel quotes & seasonality, 100% active MICHELIN addresses/hours & 25 priced menus, measured MTA GTFS + Census/NYC GeoSearch 1h transit ranking (`transit_1h.json`), mobile & renderer fixes, CI, PR & merge to `main` | `done` | `arena-25fd4b76` | `data/*.json`, `*.html`, `pages/*.html`, `assets/*`, `research/**`, `scripts/**`, `.github/workflows/**`, `COORDINATION.md` |
 
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |
 |---|---|---|---|
-| NR-01 | 2027 MICHELIN star status is not yet knowable; re-check after the 14 Dec 2026 ceremony | `needs review` | [MICHELIN 2025 announcement](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025) |
+| NR-01 | Current MICHELIN directory displays 3 / 14 / 50 tier counts but a 69-result heading; local 2025 data has 5 / 15 / 52 (72 total), so reconcile individual entries and the directory's own 69-vs-67 aggregate before using tiers | `needs review` | [Current MICHELIN all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred) · [2025 announcement](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025) |
 | NR-02 | Hotel rates are Booking.com third-party snapshots, not official hotel quotes | `needs review` | [GitHub Pages API](https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages) · [HGU official site](https://www.hgunewyork.com/) |
 | NR-03 | Cheapest upcoming time to book / best time to book remain unverified | `needs review` | [HGU exact-date quote](https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD) |
 | NR-04 | 2027 one-hour transit counts are unverified; current GTFS cannot be extended | `needs review` | [MTA schedule-transition guidance](https://www.mta.info/developers/gtfs-schedules-transition) |
@@ -111,3 +118,26 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 - **GitHub Pages** reported `status: built`, `error: null` for both `0a2eafe` and `0b9ec96`. The latest build completed 23:39:31 UTC. Legacy source remains `main` `/`.
 - **Live URLs checked:** root dashboard, `flagged-for-review.html`, `plan.html`, `pages/findings.html`, `restaurants.html`, `michelin.html`, and `itinerary.html`. The new review queue, Source columns, `2 × official per-person price` cells, and consolidated itinerary sources rendered on the published site. The Restaurants and Michelin introductions were rechecked with a cache-busting query after the second build.
 - **T13:** `done`. All substantive integration, CI, PR, Pages, and live checks are complete; no 2027 inference or unverified value was introduced.
+
+## Work log — Fresh audit (`arena/79f655ba-nyfun3`, 2026-11-26)
+
+**T14 result:** Added `CURRENT_AUDIT.md`, a decision-readiness crosswalk covering the travel window, holiday, hotel quote limitations, missing transit counts, current MICHELIN status discrepancy, hours/prices coverage, social-link semantics, open questions, and recommended next steps. No hotel, transit, 2027 hours, or MICHELIN row values were inferred or changed.
+
+**Sources directly inspected:** [official MICHELIN NYC all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred) (displayed 3 three-star / 14 two-star / 50 one-star counts and a 69-restaurant heading; the visible counts sum to 67; this differs from the repository's 2025-tagged 72-row dataset), and [official OPM 2027 federal holiday schedule](https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/) (Washington's Birthday is Monday 15 February 2027). Local data, pages, and validators were inspected; see `CURRENT_AUDIT.md` for exact coverage and caveats.
+
+**Verification:** `python scripts/validate_site.py`, `python scripts/check_inline_js.py`, `node scripts/check_rendered_tables.js`, and `git diff --check` all passed after rebasing this branch onto `origin/main`. Automated checks establish structure/source-link coverage, not truth or live availability.
+
+**Irregularities:** the current official MICHELIN page aggregate differs from local 2025 data and its own visible tier counts (67) differ from the displayed result total (69); 9/9 hotel ≤1-hour counts remain null; hotel quote totals are third-party and only one date range; 7/9 amenity fields and 5/15 activity hours tables are blank; 45/72 Michelin hours and 62/72 couple price totals are blank; social links are discovery searches, not verified specific content. Detailed flags and sources are in `CURRENT_AUDIT.md`.
+
+**T15:** final integration follow-up claimed to add the MICHELIN count discrepancy to `flagged-for-review.html`; it will not overwrite dataset values until individual official records can be reconciled.
+
+**T15 result:** Updated NR-01 on `flagged-for-review.html` and this board with the current official-directory count discrepancy, individual-entry recheck guidance, and links to the current Guide, historical 2025 announcement, and local dataset. Corrected the previously stated future ceremony date claim instead of retaining an unsupported date. Added the fresh audit link and updated the verification date to 26 November 2026. No restaurant tier data was changed.
+
+**Verification:** the three site validators and `git diff --check` passed after the review-page edit. The review entry is published and remains `needs review` until line-by-line individual Guide reconciliation is completed.
+
+## Final publish check — Fresh audit follow-up (`arena/79f655ba-nyfun3`, 2026-11-26 UTC)
+
+- **PR #8** (this branch → `main`) merged at `e41d259af151a3ca6799bfbc79dd03b68eabe9e4` on 2026-11-26 13:20 UTC: https://github.com/kanlerxz87-cyber/NYFun3/pull/8
+- The `Validate static site` check passed for the PR head and merge commit. Pages deployment run `45828218510` completed successfully. GitHub Pages API reported `status: built`, `error: null`, source `main` `/`, commit `e41d259af151a3ca6799bfbc79dd03b68eabe9e4`.
+- Live post-deploy checks: [Flagged for Review](https://kanlerxz87-cyber.github.io/NYFun3/flagged-for-review.html) displayed updated NR-01 and the current-audit link; [CURRENT_AUDIT.md](https://kanlerxz87-cyber.github.io/NYFun3/CURRENT_AUDIT.md) rendered with the full decision-readiness tables. No data-tier changes were made.
+- **Publish result:** PR #8 merged; static site checks passed; GitHub Pages build succeeded and the updated review queue/audit were verified live.

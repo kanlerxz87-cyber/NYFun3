@@ -4,3 +4,7 @@ __pycache__/
 .pytest_cache/
 node_modules/
 .DS_Store
+
+# GTFS feed cache (re-downloaded by the workflow). The geocode register in
+# data/geocode_cache.json IS committed, so every matched address is auditable.
+scripts/transit/.cache/

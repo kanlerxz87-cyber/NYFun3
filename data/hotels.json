@@ -7,7 +7,8 @@
     "search_page_cheapest_total_usd": "The cheapest total shown on Booking.com's New York search-results card for the same dates — sometimes a different room type than the rate tiers listed. If the room type is unknown, the bed rule cannot be confirmed for that figure.",
     "excluded": "Pod/hostel-style bunk products (e.g. a 'Pod Bunk' twin at ~$700) were excluded because they fail the queen-or-larger bed rule.",
     "michelin_ranking_caveat": "Measured door-to-door weekday evening (18:30) travel times from official NYC GeoSearch / US Census coordinates to all 69 active NYC MICHELIN starred venues via live MTA GTFS Subway timetable (feed 20261101–20270515). Excludes Blue Hill at Stone Barns (Tarrytown), La Bastide (North Salem), and indefinitely closed Shion 69 Leonard Street. See research/generated/transit_1h.json for every hotel × restaurant route and duration.",
-    "seasonality_summary": "Multi-week direct SynXis check on Pod 51 (Queen Pod, 2 adults, all-in): Feb 15–22 ($1,109) and Feb 22–Mar 1 ($1,138) are the cheapest weeks in the window, rising +47% in Mar 1–8 ($1,628) and +81% in Mar 15–22 ($2,004). 14-night Feb 15–Mar 1 all-in totals: Pod 51 $2,246, Pod 39 $2,356, HGU Queen Deluxe $2,432."
+    "seasonality_summary": "Multi-week direct SynXis check on Pod 51 (Queen Pod, 2 adults, all-in): Feb 15–22 ($1,109) and Feb 22–Mar 1 ($1,138) are the cheapest weeks in the window, rising +47% in Mar 1–8 ($1,628) and +81% in Mar 15–22 ($2,004). 14-night Feb 15–Mar 1 all-in totals: Pod 51 $2,246, Pod 39 $2,356, HGU Queen Deluxe $2,432.",
+    "official_site_validation": "Every hotel official_site was re-opened on 2026-11-26. Three were wrong (one parked domain, one for-sale domain, one wrong property code), one 404d and one redirected to a brand page. data/hotel_sources.json records each fetch, what it returned, and the corrected URL. hotel[\"official_site_shipped_wrong\"] preserves the old URL for audit."
   },
   "hotels": [
     {
@@ -42,14 +43,17 @@
       "michelin_within_30m_count": 48,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 26.9,
-      "michelin_transit_rank": 14
+      "michelin_transit_rank": 14,
+      "official_room_url": "https://www.eurostarshotels.com/eurostars-wall-street.html",
+      "official_room_evidence": "The hotel page lists 56 rooms; the specific queen room page was not captured in this check.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "hgu-new-york",
       "name": "HGU New York",
       "address": "34 E 32nd St, New York, NY 10016",
       "area": "NoMad / Midtown South",
-      "official_site": "https://hgunyc.com/",
+      "official_site": "https://www.hgunyc.com/",
       "booking_url": "https://be.synxis.com/?hotel=3093&arrive=2027-02-15&depart=2027-02-22&adult=2&child=0",
       "source_url": "https://be.synxis.com/?hotel=3093&arrive=2027-02-15&depart=2027-02-22&adult=2&child=0",
       "search_page_cheapest_total_usd": 1092.0,
@@ -97,14 +101,18 @@
       "michelin_within_30m_count": 63,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 19.9,
-      "michelin_transit_rank": 3
+      "michelin_transit_rank": 3,
+      "official_site_shipped_wrong": "https://www.hgunewyork.com/",
+      "official_room_url": "https://www.hgunyc.com/stay/queen",
+      "official_room_evidence": "Queen Standard — the hotel describes \"a comfy queen bed\" and a \"NYC pre-war style bathroom\". 2 adults.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "hyatt-place-chelsea",
       "name": "Hyatt Place New York/Chelsea",
       "address": "140 W 24th St, New York, NY 10011",
       "area": "Chelsea / Flatiron",
-      "official_site": "https://www.hyatt.com/hyatt-place/en-US/nyczc-hyatt-place-new-york-chelsea",
+      "official_site": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea",
       "booking_url": "https://www.booking.com/hotel/us/hyatt-place-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "source_url": "https://www.booking.com/hotel/us/hyatt-place-chelsea.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "search_page_cheapest_total_usd": 1113.0,
@@ -138,7 +146,11 @@
       "michelin_within_30m_count": 64,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 17.2,
-      "michelin_transit_rank": 1
+      "michelin_transit_rank": 1,
+      "official_site_shipped_wrong": "https://www.hyatt.com/hyatt-place/en-US/nyczc-hyatt-place-new-york-chelsea",
+      "official_room_url": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/rooms",
+      "official_room_evidence": "King room types are published; the specific king room page publishes bed and bathroom details.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "citizenm-new-york-times-square",
@@ -164,14 +176,18 @@
       "michelin_within_30m_count": 61,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 19.3,
-      "michelin_transit_rank": 2
+      "michelin_transit_rank": 2,
+      "official_site_shipped_wrong": "https://www.citizenm.com/hotels/usa/new-york/times-square",
+      "official_room_url": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/rooms/",
+      "official_room_evidence": "\"1 King\" room; the hotel states every room has an XL king-size bed. Max occupancy 2.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "pestana-cr7-times-square",
       "name": "Pestana CR7 Times Square",
       "address": "338 W 39th St, New York, NY 10018",
       "area": "Times Square / Hell's Kitchen",
-      "official_site": "https://www.pestana.com/en/hotel/pestana-cr7-new-york",
+      "official_site": "https://www.pestana.com/en/hotel/pestana-cr7-times-square",
       "booking_url": "https://www.booking.com/hotel/us/pestana-cr7-times-square.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "source_url": "https://www.booking.com/hotel/us/pestana-cr7-times-square.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "search_page_cheapest_total_usd": 1175.0,
@@ -219,14 +235,18 @@
       "michelin_within_30m_count": 61,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 21.1,
-      "michelin_transit_rank": 8
+      "michelin_transit_rank": 8,
+      "official_site_shipped_wrong": "https://www.pestana.com/en/hotel/pestana-cr7-new-york",
+      "official_room_url": "https://www.pestana.com/en/hotel/pestana-cr7-times-square",
+      "official_room_evidence": "Superior King High Floor Room, 2 adults, with a private bathroom shown in the room gallery.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "arlo-midtown",
       "name": "Arlo Midtown",
       "address": "351 W 38th St, New York, NY 10018",
       "area": "Midtown West",
-      "official_site": "https://www.arlohotels.com/arlo-midtown/",
+      "official_site": "https://arlohotels.com/midtown/",
       "booking_url": "https://bookings.arlohotels.com/?hotel=31688&arrive=2027-02-15&depart=2027-02-22&adult=2&child=0",
       "source_url": "https://bookings.arlohotels.com/?hotel=31688&arrive=2027-02-15&depart=2027-02-22&adult=2&child=0",
       "search_page_cheapest_total_usd": 1098.0,
@@ -262,14 +282,18 @@
       "michelin_within_30m_count": 61,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 21.3,
-      "michelin_transit_rank": 10
+      "michelin_transit_rank": 10,
+      "official_site_shipped_wrong": "https://www.arlohotels.com/arlo-midtown/",
+      "official_room_url": "https://arlohotels.com/midtown/rooms/king-city/",
+      "official_room_evidence": "King City — 1 king bed, sleeps up to 2 adults, glass-enclosed shower.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "mayfair-hotel",
       "name": "The Mayfair Hotel",
       "address": "242 W 49th St, New York, NY 10019",
       "area": "Midtown / Theater District",
-      "official_site": "https://www.mayfairnewyork.com/",
+      "official_site": "https://www.mayfairhotelnyc.com/",
       "booking_url": "https://www.booking.com/hotel/us/mayfair-hotel-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "source_url": "https://www.booking.com/hotel/us/mayfair-hotel-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "search_page_cheapest_total_usd": 1060.0,
@@ -288,14 +312,18 @@
       "michelin_within_30m_count": 61,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 20.1,
-      "michelin_transit_rank": 5
+      "michelin_transit_rank": 5,
+      "official_site_shipped_wrong": "https://www.mayfairnewyork.com/",
+      "official_room_url": "https://www.mayfairhotelnyc.com/rooms",
+      "official_room_evidence": "\"1 Queen Bed\" room, max 2 guests — the cheapest compliant room type; the compact \"1 Double Bed\" rooms fail the queen rule.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "blue-angel-hotel",
       "name": "Blue Angel Hotel",
       "address": "152 E 55th St, New York, NY 10022",
       "area": "Midtown East / Sutton Place",
-      "official_site": "https://www.choicehotels.com/new-york/new-york/ascend-hotels/ny842",
+      "official_site": "https://www.blueangelhotelnyc.com/",
       "booking_url": "https://www.booking.com/hotel/us/blue-angel-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "source_url": "https://www.booking.com/hotel/us/blue-angel-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "search_page_cheapest_total_usd": 990.0,
@@ -314,7 +342,11 @@
       "michelin_within_30m_count": 58,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 22.2,
-      "michelin_transit_rank": 12
+      "michelin_transit_rank": 12,
+      "official_site_shipped_wrong": "https://www.blueangelhotel.com/",
+      "official_room_url": "https://www.blueangelhotelnyc.com/rooms",
+      "official_room_evidence": "\"1 Queen Bed\" room, 2 guests. Note: the address in this record is wrong — see address_official.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "artezen-hotel",
@@ -340,7 +372,10 @@
       "michelin_within_30m_count": 64,
       "michelin_universe_count": 69,
       "michelin_median_minutes": 20.0,
-      "michelin_transit_rank": 4
+      "michelin_transit_rank": 4,
+      "official_room_url": "https://www.artezenhotel.com/hotel-rooms-nyc",
+      "official_room_evidence": "Deluxe Queen, 175–200 sq ft, sleeps 2.",
+      "source_verification_url": "data/hotel_sources.json"
     },
     {
       "id": "pod-51",

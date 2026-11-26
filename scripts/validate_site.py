@@ -20,7 +20,7 @@ MARKDOWN_FILES = sorted(ROOT.glob("*.md")) + sorted((ROOT / "research").glob("*.
 JSON_FILES = sorted((ROOT / "data").glob("*.json"))
 WEEKDAYS = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}
 EXPECTED_ROOT_NAV = [
-    "index.html", "activities.html", "restaurants.html", "michelin.html",
+    "index.html", "decide.html", "activities.html", "restaurants.html", "michelin.html",
     "hotels.html", "itinerary.html", "plan.html", "flagged-for-review.html",
     "pages/index.html",
 ]
