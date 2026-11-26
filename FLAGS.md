@@ -89,6 +89,10 @@ Reading the deployed page rather than the local files found four defects that al
 | The ranking said *"top four hotels sit within 0.8 minutes"* while the data shows **five** hotels within 0.8 (18.5→19.3) | the number was written in prose, not derived | the table now groups hotels whose medians are within the model's own resolution and labels them `tied #1–#5`, `tied #7–#8`, so the claim cannot drift from the data again |
 | The 1-hour section still called the top order "close calls" on a 0.8-min threshold when the *stability* figure (spread across four departures) was 1.5–3.4 min | two different thresholds were conflated | ties now come from the ranking gap; instability gets its own flag, `moves N min by time of day` |
 
+A fifth, cosmetic-but-confusing defect surfaced only after the second merge: the two status pills ran together
+in the rendered cell (`tied #1–#5moves 2.7 min by time of day`) and the spread was printed twice, once in
+the pill and once underneath. The cell now prints the spread once.
+
 Also: the Sushi Sho documentary is labelled `venue not in the title`, because it films the restaurant without
 naming it — the earlier wording implied every listed post named its venue.
 
