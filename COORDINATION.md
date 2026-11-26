@@ -60,6 +60,14 @@ a matrix column headed "The" instead of "Mayfair"; a prose claim of "four hotels
 the data shows five; and "close call" conflating a ranking gap with a stability spread. Details in
 `FLAGS.md` §5.
 
+**T24 — dataset moved under the prose (26 Nov 2026):** PR #12 (`25fd4b76`) expanded the shared input from
+9 hotels / 29 measured restaurants to **14 hotels / 65 of 72** between this branch's merges. The rendered
+table followed the data; three hand-written sentences did not, and the live page briefly read "ranks 1–5"
+above a fourteen-row table. Fixed here: the tie sentence is now computed from `data/hotel_ranking.json`
+(and correctly describes a *chain*, not one tie), the two headline counts are checked against the data by
+`check_rendered_tables.js`, and the coverage figures in `FLAGS.md` / `EVIDENCE_AUDIT.md` are updated.
+This is the standing risk with shared data files: a value written into prose rots silently.
+
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |

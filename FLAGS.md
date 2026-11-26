@@ -13,7 +13,8 @@ Verification date: **26 November 2026**. Travel window: 15 February – 23 March
 
 ## 1. Hotel source links that did not reach the hotel
 
-Eight of the nine hotel websites shipped in `data/hotels.json` did not reach the property. Each was opened;
+Eight of the hotel websites shipped in `data/hotels.json` did not reach the property when checked (the
+comparison set has since grown to 14 hotels as other sessions added rows). Each was opened;
 each replacement was opened and checked for the hotel's own address or room names.
 
 | Hotel | Link that failed | What it actually served | Verified replacement |
@@ -63,7 +64,7 @@ silently edited while another session owns the page.
 - The 2025 selection announcement is the source of the 72.
 
 Published as NR-01. Effect on this work: the ranking counts starred restaurants from the local dataset, so
-its "29 within 60 minutes" is a count against **72**, not against the Guide's current 67/69. The next
+its "65 within 60 minutes" is a count against **72**, not against the Guide's current 67/69. The next
 MICHELIN ceremony is **14 December 2026** — before the trip — so any tier can change before February.
 
 ## 5. Review links: search pages were labelled as reviews
@@ -96,14 +97,30 @@ the pill and once underneath. The cell now prints the spread once.
 Also: the Sushi Sho documentary is labelled `venue not in the title`, because it films the restaurant without
 naming it — the earlier wording implied every listed post named its venue.
 
+## 5b. The ranking is a moving target, and the prose must move with it
+
+The journey model and hotel list are shared files: between two of this branch's merges, another session grew
+the input from 9 hotels and 29 measured restaurants to **14 hotels and 65 of 72**. The rendered table followed
+the data; three pieces of hand-written prose did not, and the live page briefly said "ranks 1–5" while the
+table showed fourteen hotels. Two of its own claims were then wrong in a way no validator can see:
+
+- the tie sentence said "one tied group" when the real situation is a **chain**: with 14 hotels, no
+  *neighbouring* pair is separable (each step is under 0.8 min) but the chain spans 1.9 min end to end. Saying
+  "all tied" would have been the opposite error.
+- the headline cards printed a hotel count and a restaurant count that came from the data.
+
+The tie sentence is now computed from the ranking itself, and `scripts/check_rendered_tables.js` compares the
+four headline numbers on `decide.html` against `data/hotel_ranking.json`, `data/blockers.json` and
+`data/suggestions.json` (demonstrated by feeding it a wrong count, which it rejected).
+
 ## 6. Restaurant rows: what is still empty
 
 | Gap | Count | Why it is still blank |
 |---|---|---|
-| Starred restaurants with no measured journey time | 34 of 72 | the Guide publishes no street address for them; guessing one would fabricate a number |
+| Starred restaurants with no measured journey time | 7 of 72 (65 measured) | the record has no usable address, the Census geocoder could not resolve it, or no stop is inside the 500 m walk cap; guessing an address would fabricate a number |
 | Starred restaurants with unverified opening hours | 45 of 72 | the Guide's hours panel did not render for these rows |
 | Starred restaurants with no price for two | 62 of 72 | only the venue's own menu or booking engine publishes it |
-| Hotel amenity lists not captured first-hand | 7 of 9 | the room pages were read; the amenity pages were not |
+| Hotel amenity lists not captured first-hand | 11 of 14 | the room pages were read; the amenity pages were not |
 | Activity opening hours blank | 5 of 15 | same rendering problem on the operator's own page |
 
 ## 7. Prices are snapshots, not quotes

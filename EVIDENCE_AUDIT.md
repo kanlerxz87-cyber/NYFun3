@@ -130,7 +130,7 @@ which is why it is repeated in each table header rather than buried in a footnot
 
 ## 5. Journey times — a new measurement, and the one error it had
 
-The site previously carried `michelin_within_1h_count: null` for all nine hotels, with a note that no
+The site previously carried `michelin_within_1h_count: null` for every hotel, with a note that no
 official source publishes a journey time per hotel × restaurant pair. That was true of *published*
 times. It is not true of the timetable: the MTA publishes the whole schedule as GTFS, and a door-to-door
 time can be computed from it, reproducibly, with the assumptions written down.
@@ -158,10 +158,10 @@ does vary, from **18.5** minutes (Arlo Midtown) to **26.4** (Eurostars Wall Stre
 
 | Gap | Size | Why it is still open |
 |---|---|---|
-| Starred restaurants with no measurable address | 34 of 72 | record has no street address, or the Census geocoder cannot resolve it |
+| Starred restaurants with no measurable address | 7 of 72 | record has no usable address, the geocoder failed, no stop is inside the walk cap, or the address resolved to the wrong borough |
 | Starred hours not verified | 45 of 72 | Guide page hours blocks not read for those rows |
 | Starred couple-price totals | 62 of 72 | the operator publishes no first-party menu price |
-| Hotel amenity lists | 7 of 9 | not captured from an official page |
+| Hotel amenity lists | 11 of 14 | not captured from an official page |
 | Activity hours blank/partial | 5 of 15 | hours panel did not render (Met, Cloisters, Top of the Rock, NYPL) |
 | 2027 star status | all 72 | the next ceremony has not happened |
 | Best time to book | — | no official source publishes a forward booking-window rule |
