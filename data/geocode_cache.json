@@ -94,6 +94,14 @@
   "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=140+W+24th+St%2C+New+York%2C+NY+10011&benchmark=Public_AR_Current&format=json",
   "status": "exact number and street"
  },
+ "152 East 55th Street, New York, NY 10022": {
+  "candidates": 1,
+  "lat": 40.759323440149,
+  "lon": -73.969521295406,
+  "matched": "152 E 55TH ST, NEW YORK, NY, 10022",
+  "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=152+East+55th+Street%2C+New+York%2C+NY+10022&benchmark=Public_AR_Current&format=json",
+  "status": "partial match"
+ },
  "155 W. 51st St., New York, NY": {
   "candidates": 1,
   "lat": 40.761230152468,

@@ -6,6 +6,11 @@
     "reason": "the data file stored a street-crossing string, not a postal address",
     "source_url": "https://www.amnh.org/plan-your-visit"
    },
+   "Blue Angel Hotel": {
+    "address": "152 East 55th Street, New York, NY 10022",
+    "reason": "data/hotels.json stores 1234 Broadway, but the hotel's own site publishes 152 East 55th Street; routing from the stored address would have measured the wrong building. The data file is flagged for correction.",
+    "source_url": "https://www.blueangelhotelnyc.com/rooms"
+   },
    "Intrepid Museum": {
     "address": "Pier 86, West 46th Street and 12th Avenue, New York, NY 10036",
     "reason": "the crossing string resolved to Brooklyn in the geocoder once, so the borough was made explicit",
@@ -41,7 +46,7 @@
     "url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip"
    }
   },
-  "generated_utc": "2026-11-26T13:31:16Z",
+  "generated_utc": "2026-11-26T13:32:54Z",
   "geocode_register": {
    "1 Central Park West, New York, NY": {
     "candidates": 1,
@@ -106,14 +111,6 @@
     "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11+W+53rd+St%2C+New+York%2C+NY&benchmark=Public_AR_Current&format=json",
     "status": "exact number and street"
    },
-   "1234 Broadway, New York, NY 10001": {
-    "candidates": 1,
-    "lat": 40.747153528521,
-    "lon": -73.988303695899,
-    "matched": "1234 BROADWAY, NEW YORK, NY, 10001",
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1234+Broadway%2C+New+York%2C+NY+10001&benchmark=Public_AR_Current&format=json",
-    "status": "exact number and street"
-   },
    "129 Front St, New York, NY 10005": {
     "candidates": 1,
     "lat": 40.70571004945,
@@ -137,6 +134,14 @@
     "matched": "140 W 24TH ST, NEW YORK, NY, 10011",
     "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=140+W+24th+St%2C+New+York%2C+NY+10011&benchmark=Public_AR_Current&format=json",
     "status": "exact number and street"
+   },
+   "152 East 55th Street, New York, NY 10022": {
+    "candidates": 1,
+    "lat": 40.759323440149,
+    "lon": -73.969521295406,
+    "matched": "152 E 55TH ST, NEW YORK, NY, 10022",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=152+East+55th+Street%2C+New+York%2C+NY+10022&benchmark=Public_AR_Current&format=json",
+    "status": "partial match"
    },
    "155 W. 51st St., New York, NY": {
     "candidates": 1,
@@ -777,6 +782,7 @@
  },
  "results": [
   {
+   "address_used": "129 Front St, New York, NY 10005",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -1028,6 +1034,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "129 Front St, New York, NY 10005",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -1279,6 +1286,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "34 E 32nd St, New York, NY 10016",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -1530,6 +1538,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "34 E 32nd St, New York, NY 10016",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -1781,6 +1790,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "140 W 24th St, New York, NY 10011",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -2032,6 +2042,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "140 W 24th St, New York, NY 10011",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -2283,6 +2294,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "218 W 50th St, New York, NY 10019",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -2534,6 +2546,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "218 W 50th St, New York, NY 10019",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -2785,6 +2798,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "338 W 39th St, New York, NY 10018",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -3036,6 +3050,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "338 W 39th St, New York, NY 10018",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -3287,6 +3302,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "351 W 38th St, New York, NY 10018",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -3538,6 +3554,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "351 W 38th St, New York, NY 10018",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -3789,6 +3806,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "242 W 49th St, New York, NY 10019",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -4040,6 +4058,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "242 W 49th St, New York, NY 10019",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -4291,17 +4310,18 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "152 East 55th Street, New York, NY 10022",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
      "kind": "restaurant",
-     "minutes": 27.0,
+     "minutes": 35.7,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "9/11 Memorial & Museum": {
      "kind": "activity",
-     "minutes": 26.1,
+     "minutes": 33.7,
      "stops_within_walk": 34,
      "within_1h": true
     },
@@ -4313,91 +4333,91 @@
     },
     "Aquavit": {
      "kind": "restaurant",
-     "minutes": 20.7,
+     "minutes": 3.9,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Aska": {
      "kind": "restaurant",
-     "minutes": 34.3,
+     "minutes": 44.3,
      "stops_within_walk": 17,
      "within_1h": true
     },
     "Atera": {
      "kind": "restaurant",
-     "minutes": 16.7,
+     "minutes": 29.7,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Atomix": {
      "kind": "restaurant",
-     "minutes": 6.8,
+     "minutes": 16.5,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Chef's Table at Brooklyn Fare": {
      "kind": "restaurant",
-     "minutes": 15.3,
+     "minutes": 24.1,
      "stops_within_walk": 23,
      "within_1h": true
     },
     "Cote": {
      "kind": "restaurant",
-     "minutes": 5.4,
+     "minutes": 21.9,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Crown Shy": {
      "kind": "restaurant",
-     "minutes": 27.0,
+     "minutes": 35.0,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "C\u00e9sar": {
      "kind": "restaurant",
-     "minutes": 18.3,
+     "minutes": 31.1,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "Daniel": {
      "kind": "restaurant",
-     "minutes": 22.7,
+     "minutes": 10.9,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Eleven Madison Park": {
      "kind": "restaurant",
-     "minutes": 6.0,
+     "minutes": 22.5,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "Estela": {
      "kind": "restaurant",
-     "minutes": 19.1,
+     "minutes": 27.1,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Gabriel Kreuther": {
      "kind": "restaurant",
-     "minutes": 8.5,
+     "minutes": 13.5,
      "stops_within_walk": 47,
      "within_1h": true
     },
     "Gramercy Tavern": {
      "kind": "restaurant",
-     "minutes": 7.2,
+     "minutes": 21.0,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Grand Central Terminal": {
      "kind": "activity",
-     "minutes": 12.8,
+     "minutes": 9.6,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 11.0,
+     "minutes": 11.2,
      "stops_within_walk": 49,
      "within_1h": true
     },
@@ -4409,43 +4429,43 @@
     },
     "Jeju Noodle Bar": {
      "kind": "restaurant",
-     "minutes": 15.3,
+     "minutes": 29.3,
      "stops_within_walk": 25,
      "within_1h": true
     },
     "Jungsik New York": {
      "kind": "restaurant",
-     "minutes": 15.8,
+     "minutes": 31.8,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Kochi": {
      "kind": "restaurant",
-     "minutes": 18.3,
+     "minutes": 23.1,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Le Bernardin": {
      "kind": "restaurant",
-     "minutes": 14.1,
+     "minutes": 12.6,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Le Coucou": {
      "kind": "restaurant",
-     "minutes": 17.0,
+     "minutes": 26.7,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "New York Public Library \u2014 Stephen A. Schwarzman Building": {
      "kind": "activity",
-     "minutes": 10.0,
+     "minutes": 11.9,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Odo": {
      "kind": "restaurant",
-     "minutes": 6.9,
+     "minutes": 22.6,
      "stops_within_walk": 30,
      "within_1h": true
     },
@@ -4457,37 +4477,37 @@
     },
     "Rezd\u00f4ra": {
      "kind": "restaurant",
-     "minutes": 7.1,
+     "minutes": 21.2,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Saga": {
      "kind": "restaurant",
-     "minutes": 27.0,
+     "minutes": 35.0,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Semma": {
      "kind": "restaurant",
-     "minutes": 12.6,
+     "minutes": 25.0,
      "stops_within_walk": 46,
      "within_1h": true
     },
     "Solomon R. Guggenheim Museum": {
      "kind": "activity",
-     "minutes": 33.1,
+     "minutes": 17.6,
      "stops_within_walk": 21,
      "within_1h": true
     },
     "Sushi Noz": {
      "kind": "restaurant",
-     "minutes": 32.1,
+     "minutes": 16.1,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Sushi Sho": {
      "kind": "restaurant",
-     "minutes": 11.4,
+     "minutes": 10.7,
      "stops_within_walk": 50,
      "within_1h": true
     },
@@ -4499,300 +4519,302 @@
     },
     "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
      "kind": "activity",
-     "minutes": 34.7,
+     "minutes": 19.2,
      "stops_within_walk": 20,
      "within_1h": true
     },
     "The Modern": {
      "kind": "restaurant",
-     "minutes": 16.6,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "The Museum of Modern Art (MoMA)": {
      "kind": "activity",
-     "minutes": 16.6,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "Top of the Rock Observation Deck": {
      "kind": "activity",
-     "minutes": 13.2,
+     "minutes": 9.8,
      "stops_within_walk": 41,
      "within_1h": true
     },
     "Torrisi": {
      "kind": "restaurant",
-     "minutes": 19.3,
+     "minutes": 26.4,
      "stops_within_walk": 38,
      "within_1h": true
     },
     "Whitney Museum of American Art": {
      "kind": "activity",
-     "minutes": 18.8,
+     "minutes": 32.5,
      "stops_within_walk": 21,
      "within_1h": true
     }
    },
    "hotel_id": "blue-angel-hotel",
    "hotel_name": "Blue Angel Hotel",
-   "hotel_stops_within_walk": 32,
-   "nearest_stop_walk_min": 1.0,
+   "hotel_stops_within_walk": 38,
+   "nearest_stop_walk_min": 1.1,
    "service": "wednesday",
    "service_date": "20261104"
   },
   {
+   "address_used": "152 East 55th Street, New York, NY 10022",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
      "kind": "restaurant",
-     "minutes": 26.5,
+     "minutes": 38.0,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "9/11 Memorial & Museum": {
      "kind": "activity",
-     "minutes": 24.7,
+     "minutes": 37.8,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "American Museum of Natural History": {
      "kind": "activity",
-     "minutes": 29.3,
+     "minutes": 24.1,
      "stops_within_walk": 22,
      "within_1h": true
     },
     "Aquavit": {
      "kind": "restaurant",
-     "minutes": 21.9,
+     "minutes": 3.9,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Aska": {
      "kind": "restaurant",
-     "minutes": 35.3,
+     "minutes": 45.3,
      "stops_within_walk": 17,
      "within_1h": true
     },
     "Atera": {
      "kind": "restaurant",
-     "minutes": 19.7,
+     "minutes": 31.1,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Atomix": {
      "kind": "restaurant",
-     "minutes": 6.8,
+     "minutes": 17.0,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Chef's Table at Brooklyn Fare": {
      "kind": "restaurant",
-     "minutes": 14.6,
+     "minutes": 24.9,
      "stops_within_walk": 23,
      "within_1h": true
     },
     "Cote": {
      "kind": "restaurant",
-     "minutes": 9.1,
+     "minutes": 23.6,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Crown Shy": {
      "kind": "restaurant",
-     "minutes": 24.3,
+     "minutes": 38.0,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "C\u00e9sar": {
      "kind": "restaurant",
-     "minutes": 14.1,
+     "minutes": 30.6,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "Daniel": {
      "kind": "restaurant",
-     "minutes": 23.7,
+     "minutes": 10.9,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Eleven Madison Park": {
      "kind": "restaurant",
-     "minutes": 7.9,
+     "minutes": 22.9,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "Estela": {
      "kind": "restaurant",
-     "minutes": 17.0,
+     "minutes": 31.1,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Gabriel Kreuther": {
      "kind": "restaurant",
-     "minutes": 9.0,
+     "minutes": 13.4,
      "stops_within_walk": 47,
      "within_1h": true
     },
     "Gramercy Tavern": {
      "kind": "restaurant",
-     "minutes": 10.0,
+     "minutes": 25.0,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Grand Central Terminal": {
      "kind": "activity",
-     "minutes": 12.5,
+     "minutes": 10.1,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 11.5,
+     "minutes": 13.3,
      "stops_within_walk": 49,
      "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
-     "minutes": 17.9,
+     "minutes": 13.9,
      "stops_within_walk": 40,
      "within_1h": true
     },
     "Jeju Noodle Bar": {
      "kind": "restaurant",
-     "minutes": 15.8,
+     "minutes": 31.8,
      "stops_within_walk": 25,
      "within_1h": true
     },
     "Jungsik New York": {
      "kind": "restaurant",
-     "minutes": 18.8,
+     "minutes": 34.6,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Kochi": {
      "kind": "restaurant",
-     "minutes": 19.3,
+     "minutes": 21.4,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Le Bernardin": {
      "kind": "restaurant",
-     "minutes": 14.1,
+     "minutes": 10.8,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Le Coucou": {
      "kind": "restaurant",
-     "minutes": 18.7,
+     "minutes": 26.7,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "New York Public Library \u2014 Stephen A. Schwarzman Building": {
      "kind": "activity",
-     "minutes": 10.5,
+     "minutes": 12.9,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Odo": {
      "kind": "restaurant",
-     "minutes": 10.4,
+     "minutes": 25.3,
      "stops_within_walk": 30,
      "within_1h": true
     },
     "Per Se": {
      "kind": "restaurant",
-     "minutes": 17.9,
+     "minutes": 13.9,
      "stops_within_walk": 39,
      "within_1h": true
     },
     "Rezd\u00f4ra": {
      "kind": "restaurant",
-     "minutes": 9.8,
+     "minutes": 25.2,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Saga": {
      "kind": "restaurant",
-     "minutes": 24.3,
+     "minutes": 38.0,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Semma": {
      "kind": "restaurant",
-     "minutes": 12.1,
+     "minutes": 29.0,
      "stops_within_walk": 46,
      "within_1h": true
     },
     "Solomon R. Guggenheim Museum": {
      "kind": "activity",
-     "minutes": 30.6,
+     "minutes": 16.7,
      "stops_within_walk": 21,
      "within_1h": true
     },
     "Sushi Noz": {
      "kind": "restaurant",
-     "minutes": 30.6,
+     "minutes": 16.6,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Sushi Sho": {
      "kind": "restaurant",
-     "minutes": 11.3,
+     "minutes": 11.2,
      "stops_within_walk": 50,
      "within_1h": true
     },
     "The Met Cloisters": {
      "kind": "activity",
-     "minutes": 77.1,
+     "minutes": 62.6,
      "stops_within_walk": 5,
      "within_1h": false
     },
     "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
      "kind": "activity",
-     "minutes": 32.2,
+     "minutes": 18.7,
      "stops_within_walk": 20,
      "within_1h": true
     },
     "The Modern": {
      "kind": "restaurant",
-     "minutes": 18.6,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "The Museum of Modern Art (MoMA)": {
      "kind": "activity",
-     "minutes": 18.6,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "Top of the Rock Observation Deck": {
      "kind": "activity",
-     "minutes": 15.2,
+     "minutes": 9.8,
      "stops_within_walk": 41,
      "within_1h": true
     },
     "Torrisi": {
      "kind": "restaurant",
-     "minutes": 16.8,
+     "minutes": 32.1,
      "stops_within_walk": 38,
      "within_1h": true
     },
     "Whitney Museum of American Art": {
      "kind": "activity",
-     "minutes": 18.3,
+     "minutes": 35.0,
      "stops_within_walk": 21,
      "within_1h": true
     }
    },
    "hotel_id": "blue-angel-hotel",
    "hotel_name": "Blue Angel Hotel",
-   "hotel_stops_within_walk": 32,
-   "nearest_stop_walk_min": 1.0,
+   "hotel_stops_within_walk": 38,
+   "nearest_stop_walk_min": 1.1,
    "service": "wednesday",
    "service_date": "20261104"
   },
   {
+   "address_used": "24 John St, New York, NY 10038",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -5044,6 +5066,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "24 John St, New York, NY 10038",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -5295,6 +5318,7 @@
    "service_date": "20261104"
   },
   {
+   "address_used": "129 Front St, New York, NY 10005",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -5546,6 +5570,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "129 Front St, New York, NY 10005",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -5797,6 +5822,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "34 E 32nd St, New York, NY 10016",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -6048,6 +6074,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "34 E 32nd St, New York, NY 10016",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -6299,6 +6326,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "140 W 24th St, New York, NY 10011",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -6550,6 +6578,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "140 W 24th St, New York, NY 10011",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -6801,6 +6830,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "218 W 50th St, New York, NY 10019",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -7052,6 +7082,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "218 W 50th St, New York, NY 10019",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -7303,6 +7334,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "338 W 39th St, New York, NY 10018",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -7554,6 +7586,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "338 W 39th St, New York, NY 10018",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -7805,6 +7838,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "351 W 38th St, New York, NY 10018",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -8056,6 +8090,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "351 W 38th St, New York, NY 10018",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -8307,6 +8342,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "242 W 49th St, New York, NY 10019",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -8558,6 +8594,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "242 W 49th St, New York, NY 10019",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
@@ -8809,203 +8846,204 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "152 East 55th Street, New York, NY 10022",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
      "kind": "restaurant",
-     "minutes": 29.3,
+     "minutes": 37.4,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "9/11 Memorial & Museum": {
      "kind": "activity",
-     "minutes": 26.1,
+     "minutes": 34.7,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "American Museum of Natural History": {
      "kind": "activity",
-     "minutes": 30.4,
+     "minutes": 33.5,
      "stops_within_walk": 22,
      "within_1h": true
     },
     "Aquavit": {
      "kind": "restaurant",
-     "minutes": 19.9,
+     "minutes": 3.9,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Aska": {
      "kind": "restaurant",
-     "minutes": 36.6,
+     "minutes": 41.8,
      "stops_within_walk": 17,
      "within_1h": true
     },
     "Atera": {
      "kind": "restaurant",
-     "minutes": 19.7,
+     "minutes": 30.2,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Atomix": {
      "kind": "restaurant",
-     "minutes": 6.8,
+     "minutes": 16.7,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Chef's Table at Brooklyn Fare": {
      "kind": "restaurant",
-     "minutes": 15.3,
+     "minutes": 22.5,
      "stops_within_walk": 23,
      "within_1h": true
     },
     "Cote": {
      "kind": "restaurant",
-     "minutes": 7.9,
+     "minutes": 25.4,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Crown Shy": {
      "kind": "restaurant",
-     "minutes": 29.2,
+     "minutes": 35.5,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "C\u00e9sar": {
      "kind": "restaurant",
-     "minutes": 18.1,
+     "minutes": 30.1,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "Daniel": {
      "kind": "restaurant",
-     "minutes": 21.7,
+     "minutes": 10.9,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Eleven Madison Park": {
      "kind": "restaurant",
-     "minutes": 7.9,
+     "minutes": 23.1,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "Estela": {
      "kind": "restaurant",
-     "minutes": 19.5,
+     "minutes": 28.6,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Gabriel Kreuther": {
      "kind": "restaurant",
-     "minutes": 12.2,
+     "minutes": 11.4,
      "stops_within_walk": 47,
      "within_1h": true
     },
     "Gramercy Tavern": {
      "kind": "restaurant",
-     "minutes": 9.7,
+     "minutes": 22.5,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Grand Central Terminal": {
      "kind": "activity",
-     "minutes": 11.4,
+     "minutes": 8.6,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 14.7,
+     "minutes": 13.3,
      "stops_within_walk": 49,
      "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
-     "minutes": 21.8,
+     "minutes": 17.9,
      "stops_within_walk": 40,
      "within_1h": true
     },
     "Jeju Noodle Bar": {
      "kind": "restaurant",
-     "minutes": 18.3,
+     "minutes": 31.8,
      "stops_within_walk": 25,
      "within_1h": true
     },
     "Jungsik New York": {
      "kind": "restaurant",
-     "minutes": 18.8,
+     "minutes": 34.3,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Kochi": {
      "kind": "restaurant",
-     "minutes": 20.4,
+     "minutes": 23.1,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Le Bernardin": {
      "kind": "restaurant",
-     "minutes": 19.7,
+     "minutes": 12.9,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Le Coucou": {
      "kind": "restaurant",
-     "minutes": 20.0,
+     "minutes": 30.2,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "New York Public Library \u2014 Stephen A. Schwarzman Building": {
      "kind": "activity",
-     "minutes": 12.0,
+     "minutes": 11.4,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Odo": {
      "kind": "restaurant",
-     "minutes": 9.4,
+     "minutes": 24.1,
      "stops_within_walk": 30,
      "within_1h": true
     },
     "Per Se": {
      "kind": "restaurant",
-     "minutes": 22.0,
+     "minutes": 18.3,
      "stops_within_walk": 39,
      "within_1h": true
     },
     "Rezd\u00f4ra": {
      "kind": "restaurant",
-     "minutes": 9.6,
+     "minutes": 22.7,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Saga": {
      "kind": "restaurant",
-     "minutes": 29.2,
+     "minutes": 35.5,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Semma": {
      "kind": "restaurant",
-     "minutes": 15.1,
+     "minutes": 26.5,
      "stops_within_walk": 46,
      "within_1h": true
     },
     "Solomon R. Guggenheim Museum": {
      "kind": "activity",
-     "minutes": 29.1,
+     "minutes": 19.1,
      "stops_within_walk": 21,
      "within_1h": true
     },
     "Sushi Noz": {
      "kind": "restaurant",
-     "minutes": 30.6,
+     "minutes": 21.4,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Sushi Sho": {
      "kind": "restaurant",
-     "minutes": 10.1,
+     "minutes": 9.7,
      "stops_within_walk": 50,
      "within_1h": true
     },
@@ -9017,246 +9055,247 @@
     },
     "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
      "kind": "activity",
-     "minutes": 30.7,
+     "minutes": 20.7,
      "stops_within_walk": 20,
      "within_1h": true
     },
     "The Modern": {
      "kind": "restaurant",
-     "minutes": 18.9,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "The Museum of Modern Art (MoMA)": {
      "kind": "activity",
-     "minutes": 18.9,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "Top of the Rock Observation Deck": {
      "kind": "activity",
-     "minutes": 18.5,
+     "minutes": 9.8,
      "stops_within_walk": 41,
      "within_1h": true
     },
     "Torrisi": {
      "kind": "restaurant",
-     "minutes": 19.3,
+     "minutes": 27.9,
      "stops_within_walk": 38,
      "within_1h": true
     },
     "Whitney Museum of American Art": {
      "kind": "activity",
-     "minutes": 19.7,
+     "minutes": 33.5,
      "stops_within_walk": 21,
      "within_1h": true
     }
    },
    "hotel_id": "blue-angel-hotel",
    "hotel_name": "Blue Angel Hotel",
-   "hotel_stops_within_walk": 32,
-   "nearest_stop_walk_min": 1.0,
+   "hotel_stops_within_walk": 38,
+   "nearest_stop_walk_min": 1.1,
    "service": "saturday",
    "service_date": "20261107"
   },
   {
+   "address_used": "152 East 55th Street, New York, NY 10022",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
      "kind": "restaurant",
-     "minutes": 29.7,
+     "minutes": 38.6,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "9/11 Memorial & Museum": {
      "kind": "activity",
-     "minutes": 26.1,
+     "minutes": 38.2,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "American Museum of Natural History": {
      "kind": "activity",
-     "minutes": 30.5,
+     "minutes": 31.9,
      "stops_within_walk": 22,
      "within_1h": true
     },
     "Aquavit": {
      "kind": "restaurant",
-     "minutes": 22.8,
+     "minutes": 3.9,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Aska": {
      "kind": "restaurant",
-     "minutes": 35.8,
+     "minutes": 43.8,
      "stops_within_walk": 17,
      "within_1h": true
     },
     "Atera": {
      "kind": "restaurant",
-     "minutes": 19.7,
+     "minutes": 33.7,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Atomix": {
      "kind": "restaurant",
-     "minutes": 6.8,
+     "minutes": 17.0,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Chef's Table at Brooklyn Fare": {
      "kind": "restaurant",
-     "minutes": 15.3,
+     "minutes": 22.5,
      "stops_within_walk": 23,
      "within_1h": true
     },
     "Cote": {
      "kind": "restaurant",
-     "minutes": 7.6,
+     "minutes": 25.4,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Crown Shy": {
      "kind": "restaurant",
-     "minutes": 26.8,
+     "minutes": 36.8,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "C\u00e9sar": {
      "kind": "restaurant",
-     "minutes": 18.1,
+     "minutes": 30.1,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "Daniel": {
      "kind": "restaurant",
-     "minutes": 23.7,
+     "minutes": 10.7,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Eleven Madison Park": {
      "kind": "restaurant",
-     "minutes": 7.3,
+     "minutes": 23.1,
      "stops_within_walk": 33,
      "within_1h": true
     },
     "Estela": {
      "kind": "restaurant",
-     "minutes": 19.5,
+     "minutes": 28.6,
      "stops_within_walk": 34,
      "within_1h": true
     },
     "Gabriel Kreuther": {
      "kind": "restaurant",
-     "minutes": 11.9,
+     "minutes": 12.4,
      "stops_within_walk": 47,
      "within_1h": true
     },
     "Gramercy Tavern": {
      "kind": "restaurant",
-     "minutes": 9.7,
+     "minutes": 25.8,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Grand Central Terminal": {
      "kind": "activity",
-     "minutes": 12.5,
+     "minutes": 8.6,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 14.2,
+     "minutes": 13.3,
      "stops_within_walk": 49,
      "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
-     "minutes": 21.8,
+     "minutes": 18.2,
      "stops_within_walk": 40,
      "within_1h": true
     },
     "Jeju Noodle Bar": {
      "kind": "restaurant",
-     "minutes": 18.3,
+     "minutes": 31.8,
      "stops_within_walk": 25,
      "within_1h": true
     },
     "Jungsik New York": {
      "kind": "restaurant",
-     "minutes": 18.8,
+     "minutes": 36.8,
      "stops_within_walk": 27,
      "within_1h": true
     },
     "Kochi": {
      "kind": "restaurant",
-     "minutes": 20.4,
+     "minutes": 23.1,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Le Bernardin": {
      "kind": "restaurant",
-     "minutes": 19.6,
+     "minutes": 12.9,
      "stops_within_walk": 35,
      "within_1h": true
     },
     "Le Coucou": {
      "kind": "restaurant",
-     "minutes": 20.0,
+     "minutes": 30.2,
      "stops_within_walk": 24,
      "within_1h": true
     },
     "New York Public Library \u2014 Stephen A. Schwarzman Building": {
      "kind": "activity",
-     "minutes": 12.0,
+     "minutes": 11.4,
      "stops_within_walk": 44,
      "within_1h": true
     },
     "Odo": {
      "kind": "restaurant",
-     "minutes": 9.3,
+     "minutes": 26.9,
      "stops_within_walk": 30,
      "within_1h": true
     },
     "Per Se": {
      "kind": "restaurant",
-     "minutes": 22.0,
+     "minutes": 18.5,
      "stops_within_walk": 39,
      "within_1h": true
     },
     "Rezd\u00f4ra": {
      "kind": "restaurant",
-     "minutes": 9.6,
+     "minutes": 25.7,
      "stops_within_walk": 32,
      "within_1h": true
     },
     "Saga": {
      "kind": "restaurant",
-     "minutes": 26.8,
+     "minutes": 36.8,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Semma": {
      "kind": "restaurant",
-     "minutes": 16.1,
+     "minutes": 27.5,
      "stops_within_walk": 46,
      "within_1h": true
     },
     "Solomon R. Guggenheim Museum": {
      "kind": "activity",
-     "minutes": 35.1,
+     "minutes": 17.1,
      "stops_within_walk": 21,
      "within_1h": true
     },
     "Sushi Noz": {
      "kind": "restaurant",
-     "minutes": 30.7,
+     "minutes": 18.1,
      "stops_within_walk": 26,
      "within_1h": true
     },
     "Sushi Sho": {
      "kind": "restaurant",
-     "minutes": 11.4,
+     "minutes": 9.7,
      "stops_within_walk": 50,
      "within_1h": true
     },
@@ -9268,49 +9307,50 @@
     },
     "The Metropolitan Museum of Art (The Met Fifth Avenue)": {
      "kind": "activity",
-     "minutes": 36.7,
+     "minutes": 18.7,
      "stops_within_walk": 20,
      "within_1h": true
     },
     "The Modern": {
      "kind": "restaurant",
-     "minutes": 22.3,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "The Museum of Modern Art (MoMA)": {
      "kind": "activity",
-     "minutes": 22.2,
+     "minutes": 7.2,
      "stops_within_walk": 42,
      "within_1h": true
     },
     "Top of the Rock Observation Deck": {
      "kind": "activity",
-     "minutes": 18.2,
+     "minutes": 9.8,
      "stops_within_walk": 41,
      "within_1h": true
     },
     "Torrisi": {
      "kind": "restaurant",
-     "minutes": 19.3,
+     "minutes": 29.6,
      "stops_within_walk": 38,
      "within_1h": true
     },
     "Whitney Museum of American Art": {
      "kind": "activity",
-     "minutes": 19.7,
+     "minutes": 34.0,
      "stops_within_walk": 21,
      "within_1h": true
     }
    },
    "hotel_id": "blue-angel-hotel",
    "hotel_name": "Blue Angel Hotel",
-   "hotel_stops_within_walk": 32,
-   "nearest_stop_walk_min": 1.0,
+   "hotel_stops_within_walk": 38,
+   "nearest_stop_walk_min": 1.1,
    "service": "saturday",
    "service_date": "20261107"
   },
   {
+   "address_used": "24 John St, New York, NY 10038",
    "depart_after_local": "12:00",
    "destinations": {
     "63 Clinton": {
@@ -9562,6 +9602,7 @@
    "service_date": "20261107"
   },
   {
+   "address_used": "24 John St, New York, NY 10038",
    "depart_after_local": "18:00",
    "destinations": {
     "63 Clinton": {
