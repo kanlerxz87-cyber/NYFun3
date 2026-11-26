@@ -67,6 +67,24 @@ Flagged for Review (NR-01–NR-08) remain `needs review` and are published on th
 
 Claim rationale: prior T13 integration is complete and this branch has completed its fresh audit (T14). The current official MICHELIN all-starred page now shows aggregate counts that differ from the static 2025 dataset; T15 publishes this newly observed mismatch without changing or guessing shared restaurant rows. T15 is a final-integration follow-up on this branch; no other task is active.
 
+## Session `8e38e7e7` — Claim (2026-11-26 UTC)
+
+**Branch:** `arena/8e38e7e7-nyfun3` (rebased on `main` @ `e92b112`). **Session ID:** `arena/8e38e7e7`.
+
+Claimed tasks (checked the board first: T1–T15 are `done`; no other session holds an open claim; PR #1 belongs to a different lineage against an older tree and this session does not touch it):
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T16 | Verified-source repair: replace broken/parked/wrong hotel + activity official links with sources fetched and checked this session; log each one | `in progress` | `8e38e7e7` | `data/hotels.json`, `data/activities.json` link fields only, `FLAGS.md` (new) |
+| T17 | One-hour transit measurement + Michelin-cluster hotel ranking, computed from official MTA GTFS | `in progress` | `8e38e7e7` | `scripts/transit/**` (new), `data/transit_hotels.json` (new), `.github/workflows/transit-analysis.yml` (new) |
+| T18 | Evidence-quality audit of every social/review link (search page vs. specific verified post) + gap task list | `in progress` | `8e38e7e7` | `data/social_links.json` (new), `EVIDENCE_AUDIT.md` (new) |
+| T19 | Decision cockpit page: what is decided, what blocks a booking, ranked options, and the question list with current answers | `in progress` | `8e38e7e7` | `decide.html` (new), `assets/cockpit.js` (new) |
+| T20 | Integration + publish: merge, re-run validators, PR to `main`, Pages build check | `in progress` | `8e38e7e7` | `main` publish, `COORDINATION.md` |
+
+**Rules this session follows:** no value is written unless it was fetched from the named official source in this session; blanks stay blank; every repair is logged with the URL that was checked and what it returned. I will not edit `data/michelin_all.json`, `data/itinerary.json`, the existing root page copy, or `pages/**` — those are owned by completed tasks; any needed change there is logged as a request instead.
+
+**Findings already logged this session (details in `FLAGS.md`):** `hgunewyork.com` is now a parked/for-sale domain; `themayfairhotel.com` is a for-sale landing page; the Blue Angel record's address (1234 Broadway) disagrees with the hotel's own site (152 E 55th St); the Hyatt Place Chelsea URL uses the wrong property code (`nyczc` vs `lgazc`); Arlo's URL 404s.
+
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |
