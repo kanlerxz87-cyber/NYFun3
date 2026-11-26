@@ -1,5 +1,5 @@
 {
- "generated_at_utc": "2026-11-26T13:33:53+00:00",
+ "generated_at_utc": "2026-11-26T13:38:43+00:00",
  "method": {
   "gtfs_url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip",
   "census_batch_url": "https://geocoding.geo.census.gov/geocoder/locations/batch?benchmark=Public_AR_Current",
@@ -1178,10 +1178,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 14,
@@ -1202,7 +1198,7 @@
     }
    },
    "counts_60_address_known_denominator": 31,
-   "rank": 2
+   "rank": 3
   },
   {
    "id": "hgu-new-york",
@@ -1879,10 +1875,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 14,
@@ -1903,7 +1895,7 @@
     }
    },
    "counts_60_address_known_denominator": 31,
-   "rank": 6
+   "rank": 7
   },
   {
    "id": "hyatt-place-chelsea",
@@ -2580,10 +2572,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 14,
@@ -2604,7 +2592,7 @@
     }
    },
    "counts_60_address_known_denominator": 31,
-   "rank": 3
+   "rank": 2
   },
   {
    "id": "citizenm-new-york-times-square",
@@ -3281,10 +3269,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 14,
@@ -3982,10 +3966,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 13,
@@ -4683,10 +4663,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 13,
@@ -5384,10 +5360,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 14,
@@ -5408,7 +5380,7 @@
     }
    },
    "counts_60_address_known_denominator": 31,
-   "rank": 7
+   "rank": 6
   },
   {
    "id": "blue-angel-hotel",
@@ -6085,10 +6057,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 14,
@@ -6786,10 +6754,6 @@
     }
    ],
    "counts": {
-    "three_star": 0,
-    "two_star": 0,
-    "one_star": 0,
-    "total": 0,
     "reachable_60": {
      "three_star": 5,
      "two_star": 14,
