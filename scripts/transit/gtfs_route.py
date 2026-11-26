@@ -370,6 +370,14 @@ def geocode(address: str, cache: dict) -> dict | None:
                               "status": "no match returned by the Census geocoder"}
             return cache[address]
         matched = m[0]["matchedAddress"]
+        # A geocode into the wrong borough is a wrong pin, not a partial match:
+        # "46th St & 12th Ave, New York" resolved to BROOKLYN once during the
+        # first run. Requests that name a borough must resolve inside it.
+        want = re.search(r"(New York|Brooklyn|Queens|Bronx),?\s*NY", address)
+        if want and matched and f", {want.group(1).upper()}, NY" not in matched.upper():
+            cache[address] = {"lat": None, "lon": None, "matched": matched, "source": url,
+                              "status": f"rejected: resolved to the wrong borough ({matched})"}
+            return cache[address]
         # The geocoder usually returns several candidates; a first result whose
         # street name or number disagrees with what we asked for is recorded as
         # "partial" so it can be flagged instead of quietly trusted.
@@ -386,6 +394,28 @@ def geocode(address: str, cache: dict) -> dict | None:
     except Exception as exc:  # noqa: BLE001
         log(f"  ! geocode failed for {address!r}: {exc}")
         return None
+
+
+# Corrections applied before geocoding. Each one is a documented reason, not a
+# guess at a location: the published string in the data file is not a street
+# address the Census geocoder can resolve, and the replacement is the operator's
+# own published address, with the official page recorded next to it.
+# Corrections applied before geocoding. Each replacement is the address the
+# operator itself publishes, and the official page is stored beside it. Nothing
+# is re-pointed without a first-party page that states the address.
+ADDRESS_OVERRIDES = {
+    "American Museum of Natural History": {
+        "address": "200 Central Park West, New York, NY 10024",
+        "source_url": "https://www.amnh.org/plan-your-visit",
+        "reason": "the data file stored a street-crossing string, not a postal address",
+    },
+    "Intrepid Museum": {
+        "address": "Pier 86, West 46th Street and 12th Avenue, New York, NY 10036",
+        "source_url": "https://intrepidmuseum.org/plan-your-visit/visitor-information",
+        "reason": "the crossing string resolved to Brooklyn in the geocoder once, so the "
+                  "borough was made explicit",
+    },
+}
 
 
 def street_address(text: str) -> str | None:
@@ -445,7 +475,12 @@ def main() -> int:
         addr = a.get("address") or ""
         if "Digital ticket" in addr:
             continue
-        doors.append({"kind": "activity", "row": a, "addr": street_address(addr) or addr})
+        override = ADDRESS_OVERRIDES.get(a.get("name"))
+        if override:
+            doors.append({"kind": "activity", "row": a, "addr": override["address"],
+                          "address_override": override})
+        else:
+            doors.append({"kind": "activity", "row": a, "addr": street_address(addr) or addr})
     for d in doors:
         d["geo"] = geocode(d["addr"], cache) if d.get("addr") else None
     save_cache(cache)
@@ -469,10 +504,12 @@ def main() -> int:
             continue
         if not d.get("addr"):
             unmeasured.append({"name": d["row"].get("name"), "kind": d["kind"], "address": None,
-                               "reason": "no street address published in data/activities.json"})
+                               "reason": "the records in data/activities.json / data/michelin_all.json "
+                                         "carry no street address, so no door could be geocoded"})
         elif not d["geo"] or not d["geo"].get("lat"):
+            reason = (d["geo"] or {}).get("status") or "the U.S. Census geocoder returned no match"
             unmeasured.append({"name": d["row"].get("name"), "kind": d["kind"], "address": d["addr"],
-                               "reason": "the U.S. Census geocoder returned no match for this address"})
+                               "reason": reason})
 
     results = []
     for svc_date, label in ((weekday, "wednesday"), (saturday, "saturday")):
@@ -546,6 +583,7 @@ def main() -> int:
             },
             "null_meaning": "minutes = null means no journey of 110 minutes or less was found, or the "
                             "address could not be geocoded. It never means zero.",
+            "address_overrides": ADDRESS_OVERRIDES,
             "geocode_register": {d["addr"]: d["geo"] for d in doors if d.get("addr") and d.get("geo")},
             "unmeasured_destinations": sorted(unmeasured, key=lambda x: (x["kind"], str(x["name"]))),
             "rows": len(within),
