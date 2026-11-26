@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 node_modules/
 .DS_Store
+
+# GTFS feed cache and geocode cache (re-downloaded by the workflow)
+scripts/transit/.cache/
