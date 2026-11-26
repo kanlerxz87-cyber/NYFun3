@@ -165,15 +165,26 @@ def census_single(addresses: list[tuple[str, str]]) -> dict[str, dict]:
             resp.raise_for_status()
             matches = resp.json().get("result", {}).get("addressMatches", [])
             if not matches:
-                cleaned = addr.replace(".", "")
-                if cleaned != addr:
+                variants = []
+                stripped = addr.replace(".", "")
+                variants.append(stripped)
+                ABBR = {"Ave": "Avenue", "Rd": "Road", "St": "Street", "Blvd": "Boulevard",
+                        "Pl": "Place", "Ln": "Lane", "Dr": "Drive", "Ct": "Court", "W": "West", "E": "East"}
+                head = stripped.rsplit(",", 2)
+                street_part = head[0]
+                tokens = street_part.split()
+                expanded = " ".join(ABBR.get(t, t) for t in tokens)
+                variants.append(expanded + ("," + stripped.split(",", 1)[1] if stripped.count(",") >= 1 else ""))
+                for variant in variants:
                     resp = requests.get(
                         CENSUS_SINGLE,
-                        params={"address": cleaned, "benchmark": "Public_AR_Current", "format": "json"},
+                        params={"address": variant, "benchmark": "Public_AR_Current", "format": "json"},
                         timeout=60,
                     )
                     resp.raise_for_status()
                     matches = resp.json().get("result", {}).get("addressMatches", [])
+                    if matches:
+                        break
             if matches:
                 c = matches[0]["coordinates"]
                 out[ident] = {
