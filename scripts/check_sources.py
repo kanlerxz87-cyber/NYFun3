@@ -136,6 +136,29 @@ def main() -> int:
     else:
         errors.append("data/hotel_ranking.json is missing; run scripts/build_ranking.py")
 
+    # Any HTML page that links a dead/parked domain is shipping a broken source to
+    # the reader, even when the data files are clean. Scan the page markup too.
+    for page in sorted(ROOT.glob("*.html")) + sorted((ROOT / "pages").glob("*.html")):
+        text = page.read_text(encoding="utf-8", errors="replace")
+        # Only the parked/for-sale domains: third-party hosts such as Booking.com and
+        # YouTube are legitimate on the pages as long as they are labelled as such.
+        for dead, why in DEAD_DOMAINS.items():
+            if dead in text:
+                errors.append(f"{page.relative_to(ROOT)}: links {dead} ({why})")
+
+    # Review links must not be presented as reviews when they are search pages.
+    review_path = ROOT / "data" / "review_links.json"
+    if review_path.exists():
+        rv = json.loads(review_path.read_text())
+        for venue in rv["venues"]:
+            for l in venue["links"]:
+                if l["kind"].startswith("specific") and ("/results?" in l["url"] or "/search" in l["url"]):
+                    errors.append(f"data/review_links.json: {venue['venue']} labels a search page as {l['kind']}")
+                if l["kind"].startswith("specific") and not l.get("verified"):
+                    errors.append(f"data/review_links.json: {venue['venue']} has an unverified specific link")
+    else:
+        errors.append("data/review_links.json is missing")
+
     if errors:
         print(f"FAILED: {len(errors)} source-integrity problem(s)")
         for e in errors:

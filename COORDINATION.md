@@ -96,6 +96,21 @@ logged below as a request instead.
 the Blue Angel record's address (`1234 Broadway`) disagrees with the hotel's own site (`152 E 55th St`);
 the Hyatt Place Chelsea link uses the wrong property code (`nyczc` vs `lgazc`); the Arlo link 404s.
 
+**T67–T70/T24 progress (this session, 26 Nov 2026):**
+- `FLAGS.md` published — the defect list behind `EVIDENCE_AUDIT.md`: 8 dead hotel domains, the Blue Angel
+  address conflict, the Pestana fee arithmetic, 67-vs-72 star counts, the 261 labelled search links, the
+  coverage gaps, and the fact that pages were never executed in a browser.
+- `data/review_links.json` published — 27 verified specific links across 8 restaurants and 1 museum (title,
+  uploader, length, views as shown), and an explicit statement that the other 78 venues still have only
+  search links. `decide.html` §8 renders it; `scripts/check_sources.py` now rejects a search URL labelled as
+  a specific post.
+- Parked-domain links removed from `plan.html`, `pages/findings.html` and `flagged-for-review.html` (NR-02);
+  replaced with the hotels' own sites. Those three pages are not another session's claimed files.
+- `scripts/smoke_pages.js` added and wired into CI: 10 pages executed in jsdom, every rendered host must
+  produce content and at least one source link. It found `decide.html` §3 as the only unlinked panel, now fixed.
+- Still requested from other owners: the Pestana fee arithmetic on `hotels.html` and the Blue Angel street
+  address on the Hotels page.
+
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |

@@ -1,0 +1,89 @@
+{
+ "_meta": {
+  "purpose": "Reviewable proposals for improving the site itself. Each one names the decision it unblocks and the source it would draw on. Tick the ones you want and hand the list back; nothing here is implemented until you say so.",
+  "how_to_use": "The page lists these in the Suggestions section with a checkbox each. Your ticks are stored in this browser only. Nothing on the site changes until a suggestion is approved and implemented.",
+  "rule": "A suggestion is only acceptable if the data behind it can be sourced to an operator, an agency or the Guide. Anything that would require guessing is not on this list."
+ },
+ "suggestions": [
+  {
+   "id": "S1",
+   "title": "Add real street addresses for the 38 unmeasured starred restaurants",
+   "decision_it_unblocks": "Makes the 'restaurants within one hour' count cover all 72 rows instead of 38.",
+   "what_changes": "Three or four rows per hour of reading on the MICHELIN Guide pages, then re-run the measurement workflow. The count and the rank both become complete.",
+   "effort": "Medium — mechanical, one first-party source per row",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred"
+  },
+  {
+   "id": "S2",
+   "title": "Re-measure, then rank within 45 and 30 minutes as well as 60",
+   "decision_it_unblocks": "Answers 'which hotel is genuinely convenient for dinner', where 60 minutes does not separate the options.",
+   "what_changes": "Four hotels sit within 0.8 minutes of each other at the 60-minute mark. Tightening the threshold to 45 or 30 minutes should spread them out. The model already records within-45 and within-30 counts.",
+   "effort": "Low — the measurement data is already there",
+   "source": "data/hotel_ranking.json"
+  },
+  {
+   "id": "S3",
+   "title": "Capture the hotel's own direct-booking total for the finalist hotels",
+   "decision_it_unblocks": "Turns a third-party snapshot into a comparable all-in price, including tax and resort fee.",
+   "what_changes": "The Hotels table gains a 'direct quote' column beside the snapshot, with the capture date and the exact query. The difference between the two becomes visible instead of assumed.",
+   "effort": "Medium — one session per hotel, dated",
+   "source": "https://www.hgunyc.com/"
+  },
+  {
+   "id": "S4",
+   "title": "Add a price-tracking log instead of a 'best time to book' claim",
+   "decision_it_unblocks": "Gives evidence for booking timing rather than repeating a rule of thumb.",
+   "what_changes": "A dated table of the same room, same site, same dates, re-captured weekly. After a few weeks it shows direction; before that it honestly shows nothing.",
+   "effort": "Low per capture, needs repetition",
+   "source": "https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1"
+  },
+  {
+   "id": "S5",
+   "title": "Add a hotel comparison for Monday 15 Feb versus the surrounding dates",
+   "decision_it_unblocks": "Tests whether starting on Washington's Birthday costs more or less than starting a day earlier or later.",
+   "what_changes": "The 15–18 Feb preferred window becomes a small matrix of start dates, all quoted the same way. Right now only one start date is priced.",
+   "effort": "Medium — several exact-date queries per hotel",
+   "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+  },
+  {
+   "id": "S6",
+   "title": "Replace search-box review links with verified specific posts",
+   "decision_it_unblocks": "Makes the social column useful: a link that plays the review instead of a page that may show anything.",
+   "what_changes": "Each row that currently links to a search gets a specific video or post, with the platform and length noted. Rows with no verified post say so.",
+   "effort": "High — one verification per entry",
+   "source": "EVIDENCE_AUDIT.md"
+  },
+  {
+   "id": "S7",
+   "title": "Add an indoor fallback for every weather-exposed day",
+   "decision_it_unblocks": "Protects a February itinerary against a storm day.",
+   "what_changes": "Central Park, the High Line and the Statue ferry each get a verified indoor alternative with its own hours and price, so a rained-off day has a plan B on the page.",
+   "effort": "Medium",
+   "source": "https://www.metmuseum.org/plan-your-visit"
+  },
+  {
+   "id": "S8",
+   "title": "Filter restaurants by the night they are actually open",
+   "decision_it_unblocks": "Stops the itinerary proposing a starred dinner on the one night the kitchen is closed.",
+   "what_changes": "Once hours coverage is complete, each restaurant row gains its bookable weekdays, and the itinerary page can only place it on those days.",
+   "effort": "Medium, depends on S-hotel hours work",
+   "source": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+  },
+  {
+   "id": "S9",
+   "title": "Publish a one-page printable trip card",
+   "decision_it_unblocks": "Gives you something to carry that does not depend on a signal.",
+   "what_changes": "A print stylesheet and a single page holding the chosen hotel, the confirmed dinners, opening hours and the two or three reservations that must be made.",
+   "effort": "Low",
+   "source": "itinerary.html"
+  },
+  {
+   "id": "S10",
+   "title": "Compute journey times for the 14-night variant too",
+   "decision_it_unblocks": "Supports the two-week version of the trip the brief allows.",
+   "what_changes": "The same measurement runs against a second week's dates, so a 14-night stay gets its own ranking rather than reusing the 7-night one.",
+   "effort": "Low once the measurement workflow is trusted",
+   "source": "scripts/transit/gtfs_route.py"
+  }
+ ]
+}
