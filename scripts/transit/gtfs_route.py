@@ -343,14 +343,16 @@ class Router:
 
 
 # ---------------------------------------------------------------- geocoding
+GEOCODE_CACHE = ROOT / "data" / "geocode_cache.json"
+
+
 def load_cache() -> dict:
-    p = CACHE / "geocode.json"
-    return json.loads(p.read_text()) if p.exists() else {}
+    return json.loads(GEOCODE_CACHE.read_text()) if GEOCODE_CACHE.exists() else {}
 
 
 def save_cache(cache: dict) -> None:
-    CACHE.mkdir(parents=True, exist_ok=True)
-    (CACHE / "geocode.json").write_text(json.dumps(cache, indent=1, sort_keys=True))
+    GEOCODE_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    GEOCODE_CACHE.write_text(json.dumps(cache, indent=1, sort_keys=True))
 
 
 def geocode(address: str, cache: dict) -> dict | None:
@@ -364,10 +366,22 @@ def geocode(address: str, cache: dict) -> dict | None:
             data = json.loads(r.read())
         m = data["result"]["addressMatches"]
         if not m:
-            cache[address] = None
-            return None
+            cache[address] = {"lat": None, "lon": None, "matched": None, "source": url,
+                              "status": "no match returned by the Census geocoder"}
+            return cache[address]
+        matched = m[0]["matchedAddress"]
+        # The geocoder usually returns several candidates; a first result whose
+        # street name or number disagrees with what we asked for is recorded as
+        # "partial" so it can be flagged instead of quietly trusted.
+        asked_number = re.match(r"\s*(\d+)", address)
+        got_number = re.match(r"\s*(\d+)", matched or "")
+        street_word = re.search(r"\d+\s+(?:[NSEW]\.?\s+)?([A-Za-z0-9.]+)", address)
+        same_number = bool(asked_number and got_number and asked_number.group(1) == got_number.group(1))
+        same_street = bool(street_word and street_word.group(1).lower() in (matched or "").lower())
+        status = "exact number and street" if same_number and same_street else "partial match"
         cache[address] = {"lat": m[0]["coordinates"]["y"], "lon": m[0]["coordinates"]["x"],
-                          "matched": m[0]["matchedAddress"], "source": url}
+                          "matched": matched, "source": url, "status": status,
+                          "candidates": len(m)}
         return cache[address]
     except Exception as exc:  # noqa: BLE001
         log(f"  ! geocode failed for {address!r}: {exc}")
@@ -435,16 +449,30 @@ def main() -> int:
     for d in doors:
         d["geo"] = geocode(d["addr"], cache) if d.get("addr") else None
     save_cache(cache)
-    missing = [d for d in doors if not d["geo"]]
+    missing = [d for d in doors if not d["geo"] or not d["geo"].get("lat")]
     log(f"geocoded {len(doors) - len(missing)}/{len(doors)} doors; missing: {[d['row'].get('name') for d in missing]}")
 
     cells = defaultdict(list)
     for gid, (lat, lon) in stops_xy.items():
         cells[(int(lat * 1000 // 100), int(lon * 1000 // 100))].append(gid)
 
-    destinations = [d for d in doors if d["kind"] != "hotel" and d["geo"]]
-    for d in destinations:
+    destinations = [d for d in doors if d["kind"] != "hotel" and d["geo"] and d["geo"].get("lat")]
+    unmeasured = []
+    for d in list(destinations):
         d["stops"] = stops_near(stops_xy, cells, d["geo"]["lat"], d["geo"]["lon"], MAX_WALK_M)
+        if not d["stops"]:
+            unmeasured.append({"name": d["row"].get("name"), "kind": d["kind"],
+                               "address": d["addr"], "reason": "no subway or bus stop within the 500 m walk cap"})
+            destinations.remove(d)
+    for d in doors:
+        if d["kind"] == "hotel":
+            continue
+        if not d.get("addr"):
+            unmeasured.append({"name": d["row"].get("name"), "kind": d["kind"], "address": None,
+                               "reason": "no street address published in data/activities.json"})
+        elif not d["geo"] or not d["geo"].get("lat"):
+            unmeasured.append({"name": d["row"].get("name"), "kind": d["kind"], "address": d["addr"],
+                               "reason": "the U.S. Census geocoder returned no match for this address"})
 
     results = []
     for svc_date, label in ((weekday, "wednesday"), (saturday, "saturday")):
@@ -491,6 +519,7 @@ def main() -> int:
                         "minutes": round(best, 1) if best is not None else None,
                         "within_1h": (best is not None and round(best, 1) <= REPORT_LIMIT_MIN),
                         "kind": d["kind"],
+                        "stops_within_walk": len(d["stops"]),
                     }
                 results.append(row)
 
@@ -517,6 +546,8 @@ def main() -> int:
             },
             "null_meaning": "minutes = null means no journey of 110 minutes or less was found, or the "
                             "address could not be geocoded. It never means zero.",
+            "geocode_register": {d["addr"]: d["geo"] for d in doors if d.get("addr") and d.get("geo")},
+            "unmeasured_destinations": sorted(unmeasured, key=lambda x: (x["kind"], str(x["name"]))),
             "rows": len(within),
         },
         "results": results,
