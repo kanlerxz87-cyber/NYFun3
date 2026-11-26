@@ -63,7 +63,7 @@ Flagged for Review (NR-01–NR-08) remain `needs review` and are published on th
 | ID | Task | Status | Owner session | File scope |
 |---|---|---|---|---|
 | T14 | Fresh post-integration audit of requirements coverage, site integrity, data provenance gaps, and actionable decision readiness | `done` | `arena/79f655ba-nyfun3` | `CURRENT_AUDIT.md`, `COORDINATION.md` |
-| T15 | Publish newly verified MICHELIN directory discrepancy on the Flagged for Review page | `in progress` | `arena/79f655ba-nyfun3` | `flagged-for-review.html`, `COORDINATION.md` |
+| T15 | Publish newly verified MICHELIN directory discrepancy on the Flagged for Review page | `done` | `arena/79f655ba-nyfun3` | `flagged-for-review.html`, `COORDINATION.md` |
 
 Claim rationale: prior T13 integration is complete and this branch has completed its fresh audit (T14). The current official MICHELIN all-starred page now shows aggregate counts that differ from the static 2025 dataset; T15 publishes this newly observed mismatch without changing or guessing shared restaurant rows. T15 is a final-integration follow-up on this branch; no other task is active.
 
@@ -71,7 +71,7 @@ Claim rationale: prior T13 integration is complete and this branch has completed
 
 | ID | Item | Status | Official source link |
 |---|---|---|---|
-| NR-01 | 2027 MICHELIN star status is not yet knowable; re-check after the 14 Dec 2026 ceremony | `needs review` | [MICHELIN 2025 announcement](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025) |
+| NR-01 | Current MICHELIN directory displays 3 / 14 / 50 tier counts but a 69-result heading; local 2025 data has 5 / 15 / 52 (72 total), so reconcile individual entries and the directory's own 69-vs-67 aggregate before using tiers | `needs review` | [Current MICHELIN all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred) · [2025 announcement](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025) |
 | NR-02 | Hotel rates are Booking.com third-party snapshots, not official hotel quotes | `needs review` | [GitHub Pages API](https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages) · [HGU official site](https://www.hgunewyork.com/) |
 | NR-03 | Cheapest upcoming time to book / best time to book remain unverified | `needs review` | [HGU exact-date quote](https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD) |
 | NR-04 | 2027 one-hour transit counts are unverified; current GTFS cannot be extended | `needs review` | [MTA schedule-transition guidance](https://www.mta.info/developers/gtfs-schedules-transition) |
@@ -144,3 +144,7 @@ Claim rationale: prior T13 integration is complete and this branch has completed
 **Irregularities:** the current official MICHELIN page aggregate differs from local 2025 data and its own visible tier counts (67) differ from the displayed result total (69); 9/9 hotel ≤1-hour counts remain null; hotel quote totals are third-party and only one date range; 7/9 amenity fields and 5/15 activity hours tables are blank; 45/72 Michelin hours and 62/72 couple price totals are blank; social links are discovery searches, not verified specific content. Detailed flags and sources are in `CURRENT_AUDIT.md`.
 
 **T15:** final integration follow-up claimed to add the MICHELIN count discrepancy to `flagged-for-review.html`; it will not overwrite dataset values until individual official records can be reconciled.
+
+**T15 result:** Updated NR-01 on `flagged-for-review.html` and this board with the current official-directory count discrepancy, individual-entry recheck guidance, and links to the current Guide, historical 2025 announcement, and local dataset. Corrected the previously stated future ceremony date claim instead of retaining an unsupported date. Added the fresh audit link and updated the verification date to 26 November 2026. No restaurant tier data was changed.
+
+**Verification:** the three site validators and `git diff --check` passed after the review-page edit. The review entry is published and remains `needs review` until line-by-line individual Guide reconciliation is completed.
