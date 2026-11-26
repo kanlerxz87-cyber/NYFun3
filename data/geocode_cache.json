@@ -149,6 +149,14 @@
   "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2+Harrison+St.%2C+New+York%2C+NY&benchmark=Public_AR_Current&format=json",
   "status": "exact number and street"
  },
+ "200 Central Park West, New York, NY 10024": {
+  "candidates": 1,
+  "lat": 40.783417757659,
+  "lon": -73.970790081222,
+  "matched": "200 CENTRAL PARK W, NEW YORK, NY, 10024",
+  "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=200+Central+Park+West%2C+New+York%2C+NY+10024&benchmark=Public_AR_Current&format=json",
+  "status": "exact number and street"
+ },
  "218 W 50th St, New York, NY 10019": {
   "candidates": 1,
   "lat": 40.761507493674,
@@ -430,5 +438,13 @@
   "matched": null,
   "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=Ferry+departs+Battery+Park+%28Castle+Clinton%29%2C+New+York%2C+NY+10004&benchmark=Public_AR_Current&format=json",
   "status": "no match returned by the Census geocoder"
+ },
+ "Pier 86, West 46th Street and 12th Avenue, New York, NY 10036": {
+  "candidates": 1,
+  "lat": 40.757146671068,
+  "lon": -73.981838973273,
+  "matched": "86 W 46TH ST, NEW YORK, NY, 10036",
+  "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=Pier+86%2C+West+46th+Street+and+12th+Avenue%2C+New+York%2C+NY+10036&benchmark=Public_AR_Current&format=json",
+  "status": "partial match"
  }
 }

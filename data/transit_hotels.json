@@ -1,5 +1,17 @@
 {
  "_meta": {
+  "address_overrides": {
+   "American Museum of Natural History": {
+    "address": "200 Central Park West, New York, NY 10024",
+    "reason": "the data file stored a street-crossing string, not a postal address",
+    "source_url": "https://www.amnh.org/plan-your-visit"
+   },
+   "Intrepid Museum": {
+    "address": "Pier 86, West 46th Street and 12th Avenue, New York, NY 10036",
+    "reason": "the crossing string resolved to Brooklyn in the geocoder once, so the borough was made explicit",
+    "source_url": "https://intrepidmuseum.org/plan-your-visit/visitor-information"
+   }
+  },
   "assumptions": {
    "algorithm": "Connection Scan Algorithm (multi-pass, with walking transfers)",
    "departure_windows_local_time": [
@@ -29,7 +41,7 @@
     "url": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip"
    }
   },
-  "generated_utc": "2026-11-26T13:29:17Z",
+  "generated_utc": "2026-11-26T13:31:16Z",
   "geocode_register": {
    "1 Central Park West, New York, NY": {
     "candidates": 1,
@@ -181,6 +193,14 @@
     "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2+Harrison+St.%2C+New+York%2C+NY&benchmark=Public_AR_Current&format=json",
     "status": "exact number and street"
    },
+   "200 Central Park West, New York, NY 10024": {
+    "candidates": 1,
+    "lat": 40.783417757659,
+    "lon": -73.970790081222,
+    "matched": "200 CENTRAL PARK W, NEW YORK, NY, 10024",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=200+Central+Park+West%2C+New+York%2C+NY+10024&benchmark=Public_AR_Current&format=json",
+    "status": "exact number and street"
+   },
    "218 W 50th St, New York, NY 10019": {
     "candidates": 1,
     "lat": 40.761507493674,
@@ -307,14 +327,6 @@
     "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=431+W.+37th+St.%2C+New+York%2C+NY&benchmark=Public_AR_Current&format=json",
     "status": "exact number and street"
    },
-   "46th St & 12th Ave, New York, NY": {
-    "candidates": 1,
-    "lat": 40.638033985459,
-    "lon": -73.992572008764,
-    "matched": "46TH ST & 12TH AVE, BROOKLYN, NY, 11219",
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=46th+St+%26+12th+Ave%2C+New+York%2C+NY&benchmark=Public_AR_Current&format=json",
-    "status": "partial match"
-   },
    "47 E. Houston St., New York, NY": {
     "candidates": 1,
     "lat": 40.724738675583,
@@ -417,13 +429,6 @@
     "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=77+Worth+St.%2C+New+York%2C+NY&benchmark=Public_AR_Current&format=json",
     "status": "exact number and street"
    },
-   "79th St, New York, NY": {
-    "lat": null,
-    "lon": null,
-    "matched": null,
-    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=79th+St%2C+New+York%2C+NY&benchmark=Public_AR_Current&format=json",
-    "status": "no match returned by the Census geocoder"
-   },
    "89 E 42nd St, New York, NY": {
     "candidates": 1,
     "lat": 40.75254234506,
@@ -462,6 +467,14 @@
     "matched": null,
     "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=Ferry+departs+Battery+Park+%28Castle+Clinton%29%2C+New+York%2C+NY+10004&benchmark=Public_AR_Current&format=json",
     "status": "no match returned by the Census geocoder"
+   },
+   "Pier 86, West 46th Street and 12th Avenue, New York, NY 10036": {
+    "candidates": 1,
+    "lat": 40.757146671068,
+    "lon": -73.981838973273,
+    "matched": "86 W 46TH ST, NEW YORK, NY, 10036",
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=Pier+86%2C+West+46th+Street+and+12th+Avenue%2C+New+York%2C+NY+10036&benchmark=Public_AR_Current&format=json",
+    "status": "partial match"
    }
   },
   "geocoder": {
@@ -479,286 +492,280 @@
   },
   "unmeasured_destinations": [
    {
-    "address": "79th St, New York, NY",
-    "kind": "activity",
-    "name": "American Museum of Natural History",
-    "reason": "the U.S. Census geocoder returned no match for this address"
-   },
-   {
     "address": "59th St to 110th St, between 5th Ave and Central Park West",
     "kind": "activity",
     "name": "Central Park",
-    "reason": "the U.S. Census geocoder returned no match for this address"
+    "reason": "no match returned by the Census geocoder"
    },
    {
     "address": "Ferry departs Battery Park (Castle Clinton), New York, NY 10004",
     "kind": "activity",
     "name": "Statue of Liberty & Ellis Island (Statue City Cruises ferry)",
-    "reason": "the U.S. Census geocoder returned no match for this address"
+    "reason": "no match returned by the Census geocoder"
    },
    {
     "address": "34th St, New York, NY",
     "kind": "activity",
     "name": "The High Line",
-    "reason": "the U.S. Census geocoder returned no match for this address"
+    "reason": "no match returned by the Census geocoder"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Bar Miller",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": "630 Bedford Rd., Tarrytown, NY 10591",
     "kind": "restaurant",
     "name": "Blue Hill at Stone Barns",
-    "reason": "the U.S. Census geocoder returned no match for this address"
+    "reason": "no match returned by the Census geocoder"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Bridges (NEW)",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Caf\u00e9 Boulud",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Casa Mono",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Corima",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Dirt Candy",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Essential by Christophe",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Family Meal at Blue Hill",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Francie",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Frevo",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Huso (NEW)",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Icca",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": "16th Fl., New York, NY",
     "kind": "restaurant",
     "name": "Joo Ok",
-    "reason": "the U.S. Census geocoder returned no match for this address"
+    "reason": "no match returned by the Census geocoder"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Jua",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "J\u014dji",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Kosaka",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "La Bastide by Andrea Calstier",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": "1 Vanderbilt Ave., New York, NY",
     "kind": "restaurant",
     "name": "Le Pavillon",
-    "reason": "the U.S. Census geocoder returned no match for this address"
+    "reason": "no match returned by the Census geocoder"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "L\u2019Abeille",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Mari",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": "401, New York, NY",
     "kind": "restaurant",
     "name": "Masa",
-    "reason": "the U.S. Census geocoder returned no match for this address"
+    "reason": "no match returned by the Census geocoder"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Meju",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Muku (NEW)",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Noda",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Noz 17",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "N\u014dksu",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Oiji Mi",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Oxomoco",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Restaurant Yuu",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Shion 69 Leonard Street",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Shmon\u00e9",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Shota Omakase",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Sushi Nakazawa",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Tempura Matsui",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "The Four Horsemen",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Torien",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Tsukimi",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Tuome",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Yamada (NEW)",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "YingTao",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "Yoshino",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    },
    {
     "address": null,
     "kind": "restaurant",
     "name": "b\u014dm",
-    "reason": "no street address published in data/activities.json"
+    "reason": "the records in data/activities.json / data/michelin_all.json carry no street address, so no door could be geocoded"
    }
   ],
   "what_this_is": "A modelled door-to-door journey time for every hotel x destination pair, computed by this script from the official MTA static GTFS timetable.",
@@ -782,6 +789,12 @@
      "kind": "activity",
      "minutes": 9.4,
      "stops_within_walk": 34,
+     "within_1h": true
+    },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 48.6,
+     "stops_within_walk": 22,
      "within_1h": true
     },
     "Aquavit": {
@@ -870,9 +883,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 62.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 32.5,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -1029,6 +1042,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 51.7,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 37.4,
@@ -1115,8 +1134,8 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 57.9,
-     "stops_within_walk": 14,
+     "minutes": 31.5,
+     "stops_within_walk": 49,
      "within_1h": true
     },
     "Jean-Georges": {
@@ -1274,6 +1293,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 29.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 18.4,
@@ -1360,9 +1385,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 14.0,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -1519,6 +1544,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 32.8,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 14.9,
@@ -1605,9 +1636,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 74.4,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 11.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -1764,6 +1795,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 29.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 22.4,
@@ -1850,9 +1887,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 13.7,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -2009,6 +2046,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 32.8,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 24.6,
@@ -2095,9 +2138,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 74.4,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 15.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -2254,6 +2297,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 21.8,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 10.1,
@@ -2340,9 +2389,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -2499,6 +2548,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 19.3,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 12.1,
@@ -2585,9 +2640,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.4,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -2744,6 +2799,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 22.1,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 16.1,
@@ -2830,9 +2891,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 11.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -2989,6 +3050,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 24.1,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 17.6,
@@ -3075,9 +3142,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 74.4,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 11.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -3234,6 +3301,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 24.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 21.1,
@@ -3320,9 +3393,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 12.0,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -3479,6 +3552,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 24.1,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 19.1,
@@ -3565,9 +3644,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 74.4,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 12.0,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -3724,6 +3803,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 21.8,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 10.1,
@@ -3810,9 +3895,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -3969,6 +4054,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 19.3,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 12.1,
@@ -4055,9 +4146,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.4,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -4214,6 +4305,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 29.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 20.7,
@@ -4300,9 +4397,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 11.0,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -4459,6 +4556,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 29.3,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 21.9,
@@ -4545,9 +4648,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 74.4,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 11.5,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -4704,6 +4807,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 48.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 34.4,
@@ -4790,9 +4899,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 62.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 30.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -4949,6 +5058,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 50.8,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 32.8,
@@ -5035,8 +5150,8 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 54.4,
-     "stops_within_walk": 14,
+     "minutes": 29.6,
+     "stops_within_walk": 49,
      "within_1h": true
     },
     "Jean-Georges": {
@@ -5194,6 +5309,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 50.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 41.4,
@@ -5280,9 +5401,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 69.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 34.1,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -5439,6 +5560,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 50.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 37.9,
@@ -5525,9 +5652,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 69.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 34.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -5684,6 +5811,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 30.4,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 19.9,
@@ -5770,9 +5903,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 15.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -5929,6 +6062,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 30.5,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 15.1,
@@ -6015,9 +6154,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 12.8,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -6174,6 +6313,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 40.0,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 27.2,
@@ -6260,9 +6405,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 19.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -6419,6 +6564,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 39.1,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 25.9,
@@ -6505,9 +6656,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 19.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -6664,6 +6815,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 12.9,
@@ -6750,9 +6907,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -6909,6 +7066,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 12.9,
@@ -6995,9 +7158,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -7154,6 +7317,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 17.6,
@@ -7240,9 +7409,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 11.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -7399,6 +7568,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 17.6,
@@ -7485,9 +7660,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 11.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -7644,6 +7819,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 17.6,
@@ -7730,9 +7911,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 12.0,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -7889,6 +8070,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 17.6,
@@ -7975,9 +8162,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 12.0,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -8134,6 +8321,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 13.8,
@@ -8220,9 +8413,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -8379,6 +8572,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 26.6,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 13.8,
@@ -8465,9 +8664,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 83.9,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 6.6,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -8624,6 +8823,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 30.4,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 19.9,
@@ -8710,9 +8915,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 14.7,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -8869,6 +9074,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 30.5,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 22.8,
@@ -8955,9 +9166,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 80.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 14.2,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -9114,6 +9325,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 49.3,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 31.4,
@@ -9200,9 +9417,9 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 69.5,
-     "stops_within_walk": 14,
-     "within_1h": false
+     "minutes": 30.7,
+     "stops_within_walk": 49,
+     "within_1h": true
     },
     "Jean-Georges": {
      "kind": "restaurant",
@@ -9359,6 +9576,12 @@
      "stops_within_walk": 34,
      "within_1h": true
     },
+    "American Museum of Natural History": {
+     "kind": "activity",
+     "minutes": 49.5,
+     "stops_within_walk": 22,
+     "within_1h": true
+    },
     "Aquavit": {
      "kind": "restaurant",
      "minutes": 34.8,
@@ -9445,8 +9668,8 @@
     },
     "Intrepid Museum": {
      "kind": "activity",
-     "minutes": 59.9,
-     "stops_within_walk": 14,
+     "minutes": 31.5,
+     "stops_within_walk": 49,
      "within_1h": true
     },
     "Jean-Georges": {
