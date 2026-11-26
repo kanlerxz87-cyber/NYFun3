@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_utc": "2026-11-26T13:41:36Z",
+    "generated_utc": "2026-11-26T13:46:20Z",
     "methodology": "Door-to-door weekday evening departure (18:30 local) using live MTA GTFS Subway timetable (feed 20261101–20270515, service date 20270212) and official U.S. Census Geocoder / NYC Planning GeoSearch coordinates. Walking uses 80 m/min (~4.8 km/h) with 1.25× street-grid detour factor, 120s station-entry buffer, and GTFS transfers + <=250 m station-complex walks.",
     "schedule_caveat": "Published MTA subway GTFS covers 20261101–20270515 (extending through arrival day Feb 15, 2027); bus feeds expired 2027-01-01 so subway+walk is modeled here. Presidents' Day (Feb 15) and post-Feb 15 subway schedules should be rechecked closer to travel.",
     "gtfs_source": "https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip",
