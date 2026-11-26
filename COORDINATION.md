@@ -8,7 +8,7 @@ Shared task board. Read this before starting work. This file was combined by fin
 - **Phase A:** `arena-c2e08f03`, pinned branch `arena/c2e08f03-nyfun3`
 - **Phase B / source diagnostics:** `ed92e764`, pinned branch `arena/ed92e764-nyfun3`
 - **Phase C / supplemental dossier:** `arena-61fbe157`, pinned branch `arena/61fbe157-nyfun3`
-- **Current Arena branch:** `arena/ed92e764-nyfun3`; base `c251442d122a8d04aade3d8b5a0d57fd4e9ce37c`
+- **Current Arena branch:** `arena/67e5a326-nyfun3`; base `c4a5467c127bd08ec0a3cf79852fc98311c87513` (main after PR #7)
 
 ## Rules in force
 
@@ -43,7 +43,9 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T10 | First Pages integration and live checks | `done` | `arena-c2e08f03` | `main` publish |
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
-| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `in progress` | `a4c9c8c0` | shared outputs, `COORDINATION.md`, PR to `main` |
+| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `done` | `a4c9c8c0` | shared outputs, `COORDINATION.md`, PR to `main` |
+| T14 | Computed subway-time hotel ranking: geocode hotels + starred restaurants (US Census batch geocoder), route on official MTA GTFS subway feed, publish per-hotel counts of starred restaurants within 60 min by subway + walking | `in progress` | `67e5a326` | `research/scripts/transit_analysis.py`, `research/generated/transit_analysis.json`, `data/transit.json`, `.github/workflows/transit-analysis.yml`, `transit.html`, root `*.html` nav, `hotels.html` proximity cell, `COORDINATION.md`, `README.md`, `VERIFICATION.md`, `plan.html`, `flagged-for-review.html` |
+| T15 | Replace search-only social placeholders on priority rows with real, dated review-link findings (10 priced restaurants + 15 activities) | `in progress` | `67e5a326` | `data/michelin_all.json`, `data/michelin.json`, `data/michelin_one_star.json`, `data/michelin_two_star.json`, `data/activities.json`, renderer cells in `restaurants.html`, `michelin.html`, `activities.html` |
 
 ## Session `a4c9c8c0` — Final integration (started 2026-11-26 UTC)
 
