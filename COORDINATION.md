@@ -8,7 +8,8 @@ Shared task board. Read this before starting work. This file was combined by fin
 - **Phase A:** `arena-c2e08f03`, pinned branch `arena/c2e08f03-nyfun3`
 - **Phase B / source diagnostics:** `ed92e764`, pinned branch `arena/ed92e764-nyfun3`
 - **Phase C / supplemental dossier:** `arena-61fbe157`, pinned branch `arena/61fbe157-nyfun3`
-- **Current Arena branch:** `arena/79f655ba-nyfun3`; initial base `1cc713110837ecbaf2f36ab4def44dcaabeddc73`; rebased onto `c4a5467c127bd08ec0a3cf79852fc98311c87513` before T14/T15
+- **Current Arena branch (this session):** `arena/3c65c9fa-nyfun3`; base `c4a5467c127bd08ec0a3cf79852fc98311c87513`
+- **Other recent fixed branch:** `arena/79f655ba-nyfun3`; initial base `1cc713110837ecbaf2f36ab4def44dcaabeddc73`; rebased onto `c4a5467c127bd08ec0a3cf79852fc98311c87513` before its T14/T15
 
 ## Rules in force
 
@@ -198,3 +199,11 @@ This is the standing risk with shared data files: a value written into prose rot
 - **Result:** T16 is `done`. NR-01–NR-09 remain published as `needs review` and do not block the live dashboard. This board update is a small follow-up commit on the same branch so the PR link and merge result are preserved in `main`.
 
 **Conflict note:** PR #17 / T46 landed on `main` while this board follow-up PR #18 was open, causing an append/add-style conflict at the end of `COORDINATION.md`. Both the T46 work log and this final publish check are retained; no session work was discarded.
+
+## Final publish check — Board follow-up (`3c65c9fa`, 26 November 2026 UTC)
+
+- **PR [#18](https://github.com/kanlerxz87-cyber/NYFun3/pull/18)** (board follow-up and T46 integration) merged at `499b8564ad7b0db5bcc94124cbf0bf02afdd27d7` on 2026-11-26 14:12:24 UTC.
+- **CI:** [push run 45836519113](https://github.com/kanlerxz87-cyber/NYFun3/actions/runs/45836519113) and [pull_request run 45836530245](https://github.com/kanlerxz87-cyber/NYFun3/actions/runs/45836530245) both passed `Validate static site`; local validators, source-integrity checks, rendered-table checks, DOM smoke tests, and `git diff --check` also passed.
+- **GitHub Pages:** API reported `status: built` for `499b856` at 14:12:48 UTC with `error.message: null`, source `main` `/`, HTTPS enforced.
+- **Live URLs rechecked:** root dashboard, Flagged for Review, `guide-2026.html`, `COORDINATION.md`, and `CURRENT_AUDIT.md`. The live root dashboard showed the new Guide 2026 card and nav link; Flagged for Review showed the corrected NR-01 “Distinction 3” filter-badge explanation and NR-09; the board showed T16 `done` and the PR #16 merge record.
+- **Final state:** T16 is `done`, PR #16 and its follow-up PR #18 are merged, Pages is built, and no further PR from this session is planned. NR-01–NR-09 remain published as `needs review` and do not block the live site.
