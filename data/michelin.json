@@ -16,7 +16,7 @@
     "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
     "next_ceremony_source_url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
     "official_list_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
-    "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. Two same-day directory fetches displayed different three-star counts (3/14/50 and 5/14/50); the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled."
+    "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. An earlier \"3 / 14 / 50\" reading misidentified the official directory’s \"Distinction 3\" active-filter badge; current live NYC counts are 5 / 14 / 50 = 69; the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled."
   },
   "restaurants": [
     {

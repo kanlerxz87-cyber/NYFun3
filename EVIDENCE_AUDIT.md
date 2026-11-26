@@ -116,11 +116,9 @@ Three separate problems, all of which survive the existing validators because th
 
 ---
 
-## 4. Star ratings — the numbers on the Guide's own page do not add up
+## 4. Star ratings — 2025 baseline vs current NYC directory
 
-Re-checked this session, the official all-starred directory displays **3 / 14 / 50** as its tier counts
-while its heading reads *"1–48 of 69 restaurants"*. 3 + 14 + 50 = 67, not 69. The repository's dataset
-carries the **2025 announcement's** 5 / 15 / 52 = 72.
+The official all-starred directory’s “Distinction 3” text is an active-filter badge for the three selected star checkboxes, not a three-star count. Its live NYC tier counts are **5 / 14 / 50 = 69**, matching the *"1–48 of 69 restaurants"* heading. The root dataset carries the **2025 announcement’s** 5 / 15 / 52 = 72 rows; the scope difference is published as NR-01.
 
 Neither number set can be assumed to be the 2027 answer: the New York selection is re-announced annually,
 and the next ceremony falls **before** the trip. Every star on this site is therefore a 2025-dated claim,

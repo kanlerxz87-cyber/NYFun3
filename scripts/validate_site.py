@@ -20,7 +20,7 @@ MARKDOWN_FILES = sorted(ROOT.glob("*.md")) + sorted((ROOT / "research").glob("*.
 JSON_FILES = sorted((ROOT / "data").glob("*.json"))
 WEEKDAYS = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}
 EXPECTED_ROOT_NAV = [
-    "index.html", "decide.html", "activities.html", "restaurants.html", "michelin.html",
+    "index.html", "decide.html", "guide-2026.html", "activities.html", "restaurants.html", "michelin.html",
     "hotels.html", "itinerary.html", "plan.html", "flagged-for-review.html",
     "pages/index.html",
 ]
@@ -411,12 +411,16 @@ for h in hotels:
     note = str(h.get("taxes_note") or "")
     if ("$4" + "/night") in note or "$4 per night" in note:
         err(f"hotels.json: {h.get('name')} taxes_note repeats unsupported $4/night claim")
-for name in ("michelin.json", "michelin_two_star.json", "michelin_one_star.json", "michelin_all.json"):
+for name in ("michelin.json", "michelin_two_star.json", "michelin_one_star.json", "michelin_all.json",
+            "michelin_2026_guide.json"):
     text = (ROOT / "data" / name).read_text()
     for needle, label in [("/article/c0/a1479", "non-canonical ceremony URL"),
                           ("$4" + "/night", "unsupported $4/night tax claim")]:
         if needle in text:
             err(f"data/{name}: {label} reintroduced")
+for name in ("guide-2026.html", "COORDINATION.md", "research/audit-46804a5a.md"):
+    if ("/article/c0/a1479") in (ROOT / name).read_text():
+        err(f"{name}: non-canonical ceremony URL reintroduced")
 
 active_tax_files = [
     ROOT / "hotels.html", ROOT / "pages/hotels.html", ROOT / "pages/findings.html",
@@ -436,7 +440,7 @@ review_text = (ROOT / "flagged-for-review.html").read_text()
 for i in range(1, 10):
     if f'id="NR-{i:02d}"' not in review_text:
         err(f"flagged-for-review.html: missing NR-{i:02d}")
-for needle in ("Resolved source corrections", "https://www.hgunyc.com/",
+for needle in ("Resolved source corrections", "Distinction 3", "https://www.hgunyc.com/",
                "https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page",
                "https://www.tax.ny.gov/pdf/current_forms/st/st101_5.pdf"):
     if needle not in review_text:
@@ -446,7 +450,7 @@ index_text = (ROOT / "index.html").read_text()
 if '<span class="count">9</span><h3>Flagged for Review</h3>' not in index_text:
     err("index.html: Flagged for Review card does not show 9 items")
 audit_text = (ROOT / "CURRENT_AUDIT.md").read_text()
-for needle in ("Independent recheck corrections", "5 / 14 / 50", "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"):
+for needle in ("Independent recheck corrections", "5 / 14 / 50", "Distinction 3", "guide-2026.html", "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"):
     if needle not in audit_text:
         err(f"CURRENT_AUDIT.md: missing independent recheck evidence {needle!r}")
 for path, needle in [

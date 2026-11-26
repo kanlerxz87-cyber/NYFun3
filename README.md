@@ -16,6 +16,7 @@ No build step, dependencies, or framework. The primary dashboard is plain HTML w
 | `activities.html` | 15 museums, parks, landmarks and passes — weekday hours, exceptions, adult prices, review searches. |
 | `restaurants.html` | Starred restaurant shortlist, filterable by area and tier. |
 | `michelin.html` | All 72 starred entries (5 ★★★ / 15 ★★ / 52 ★), cluster counts, star status stated per row. |
+| `guide-2026.html` | Current starred vs Bib Gourmand vs Guide-listed tiers, 15 verified venues, clusters, hotel audit, and official 2-adult totals. |
 | `hotels.html` | 14 properties with 7-night direct/third-party totals for 15–22 Feb 2027, private-bathroom and queen-bed checks, seasonality, and current-timetable GTFS reach. |
 | `itinerary.html` | 7-day plan sequenced around published closures. |
 | `plan.html` | Executive summary, 9 reviewable suggestions, 11 open questions, irregularities found. |
