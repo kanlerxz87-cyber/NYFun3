@@ -169,3 +169,12 @@ This is the standing risk with shared data files: a value written into prose rot
 - The `Validate static site` check passed for the PR head and merge commit. Pages deployment run `45828218510` completed successfully. GitHub Pages API reported `status: built`, `error: null`, source `main` `/`, commit `e41d259af151a3ca6799bfbc79dd03b68eabe9e4`.
 - Live post-deploy checks: [Flagged for Review](https://kanlerxz87-cyber.github.io/NYFun3/flagged-for-review.html) displayed updated NR-01 and the current-audit link; [CURRENT_AUDIT.md](https://kanlerxz87-cyber.github.io/NYFun3/CURRENT_AUDIT.md) rendered with the full decision-readiness tables. No data-tier changes were made.
 - **Publish result:** PR #8 merged; static site checks passed; GitHub Pages build succeeded and the updated review queue/audit were verified live.
+
+## Session `46804a5a` — Official-source line-by-line verification & Guide/hours/transit/hotel audit (started 2026-11-26 UTC)
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T16 | Line-by-line official-source verification of Michelin 2026 vs 2025 selection, Guide-listed vs starred rows, venue hours/prices, hotel room/link/tax facts, and transit proximity evidence | `in progress` | `46804a5a` | `research/audit-46804a5a.md`, `research/enrichment-46804a5a.json`, `COORDINATION.md` (own claim and log) |
+
+Claimed on pinned Arena branch `arena/46804a5a-nyfun3` (base synced to `origin/main`). Non-overlapping scope: does not touch `research/audit-53d4ee2e.md` (`53d4ee2e`) or any shared output while active audits run; any shared-output corrections or final integration pass will be coordinated after active tasks finish.
+
