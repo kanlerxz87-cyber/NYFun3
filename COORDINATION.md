@@ -122,6 +122,13 @@ does not own are recorded as requests:
   occupancy tax, sales tax and a state unit fee. Also a request, not edited here.
 Findings A-02, A-04, A-05 and A-06 are consistent with `EVIDENCE_AUDIT.md` §3–§5 and `FLAGS.md` §7.
 
+**T24 post-merge proofread (26 Nov 2026):** the merged page was read on the live site, not just validated
+locally. Four defects that every check passed were fixed on this branch in a follow-up commit: nine
+`hotels.html#<id>` links pointing at anchors that do not exist because that table is rendered from JSON;
+a matrix column headed "The" instead of "Mayfair"; a prose claim of "four hotels within 0.8 minutes" when
+the data shows five; and "close call" conflating a ranking gap with a stability spread. Details in
+`FLAGS.md` §5.
+
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |
