@@ -184,7 +184,27 @@ async function renderPage(page) {
   }
 }
 
+// The Decide page's headline cards are static text; the numbers they print come
+// from data files other sessions update. Compare them with the data.
+function checkHeroNumbers() {
+  const html = fs.readFileSync(path.join(ROOT, 'decide.html'), 'utf8');
+  const ranking = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/hotel_ranking.json'), 'utf8'));
+  const expect = [
+    ['hotels compared', String(ranking.ranking.length)],
+    ['starred restaurants within an hour', String(ranking.ranking[0].starred_restaurants_within_60_min_total)],
+    ['open questions', String(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/blockers.json'), 'utf8')).blockers.length)],
+    ['suggestions to review', String(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/suggestions.json'), 'utf8')).suggestions.length)],
+  ];
+  for (const [label, want] of expect) {
+    const re = new RegExp('<span class="count">(\\d+)</span><h3>[^<]*' + label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+    const m = html.match(re);
+    if (!m) { errors.push(`decide.html: no headline card for "${label}"`); continue; }
+    if (m[1] !== want) errors.push(`decide.html: headline card "${label}" says ${m[1]}, data says ${want}`);
+  }
+}
+
 (async () => {
+  checkHeroNumbers();
   for (const page of PAGES) {
     await renderPage(page);
   }

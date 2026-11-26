@@ -36,23 +36,28 @@
     try { return new URL(url).hostname.replace(/^www\./, ""); } catch (e) { return ""; }
   }
 
-  // ---------------------------------------------------------------- ranking
-  function renderRanking(data) {
-    var host = document.getElementById("ranking-host");
-    if (!host) return;
-    var meta = data._meta;
-    // A gap under 0.8 min is inside the model's own resolution, so consecutive
-    // hotels that close are shown as tied and named by rank.
-    var TIE_MIN = 0.8;
+  // A gap under 0.8 min is inside the model's own resolution, so consecutive
+  // hotels that close are shown as tied and named by rank.
+  var TIE_MIN = 0.8;
+  function tieGroups(ranking) {
     var groups = [];
-    data.ranking.forEach(function (r, i) {
-      var prev = data.ranking[i - 1];
+    ranking.forEach(function (r, i) {
+      var prev = ranking[i - 1];
       var sameAsPrev = prev && Math.abs(prev.restaurants.median_minutes - r.restaurants.median_minutes) < TIE_MIN;
       if (sameAsPrev) groups[groups.length - 1].push(r.rank_by_median);
       else groups.push([r.rank_by_median]);
     });
     var groupOf = {};
     groups.forEach(function (g) { g.forEach(function (rank) { groupOf[rank] = g; }); });
+    return groupOf;
+  }
+
+  // ---------------------------------------------------------------- ranking
+  function renderRanking(data) {
+    var host = document.getElementById("ranking-host");
+    if (!host) return;
+    var meta = data._meta;
+    var groupOf = tieGroups(data.ranking);
     var rows = data.ranking.map(function (r) {
       var stars = r.starred_restaurants_within_60_min;
       var spread = r.median_spread_between_windows_min;
@@ -94,6 +99,33 @@
       "</p>";
   }
 
+  // The tie sentence must be computed, never written out: the ranking dataset is
+  // shared with other sessions and its hotel count and medians change.
+  function resolutionSentence(ranking) {
+    var groupOf = tieGroups(ranking);
+    var biggest = [], biggestSize = 0;
+    var seen = {};
+    ranking.forEach(function (r) {
+      var g = groupOf[r.rank_by_median];
+      var key = g.join("-");
+      if (seen[key] || g.length < 2) return;
+      seen[key] = true;
+      if (g.length > biggestSize) { biggest = g; biggestSize = g.length; }
+    });
+    if (!biggest.length) {
+      return "no two hotels are within " + TIE_MIN + " min of each other, so the order below is separated by " +
+        "more than the model's own resolution.";
+    }
+    var first = ranking[biggest[0] - 1].restaurants.median_minutes;
+    var last = ranking[biggest[biggest.length - 1] - 1].restaurants.median_minutes;
+    // Chained ties: no neighbouring pair is separable, but the ends of the chain
+    // can still differ by more than the resolution. Say that, do not flatten it.
+    return "ranks " + biggest[0] + "–" + biggest[biggest.length - 1] + " form a chain in which no two " +
+      "neighbouring hotels are more than " + TIE_MIN + " min apart, spanning " + one(last - first) +
+      " minutes overall (" + one(first) + " to " + one(last) + "). Adjacent ranks in that chain should not be " +
+      "read as a real ordering; the ends of it can be.";
+  }
+
   // ------------------------------------------------------- the 1-hour result
   function renderOneHourFinding(data) {
     var host = document.getElementById("onehour-host");
@@ -111,7 +143,7 @@
       "<li><strong>So the tie is broken by:</strong> the median door-to-door time to those restaurants, which does vary — from " +
         data.ranking[0].restaurants.median_minutes + " to " +
         data.ranking[data.ranking.length - 1].restaurants.median_minutes + " minutes.</li>" +
-      "<li><strong>Resolution limit:</strong> ranks 1–5 span 0.8 minutes in total (18.5 to 19.3), which is smaller than the model can honestly distinguish. They are shown as one tied group: choose among them on price, room and area instead.</li>" +
+      "<li><strong>Resolution limit:</strong> " + resolutionSentence(data.ranking) + "</li>" +
       "</ul>" +
       '<p class="small muted">Measurement: <a href="data/transit_hotels.json">data/transit_hotels.json</a> · ' +
       "ranking: <a href=\"data/hotel_ranking.json\">data/hotel_ranking.json</a> · " +
