@@ -16,7 +16,3 @@ Wrote /home/runner/work/NYFun3/NYFun3/research/generated/transit_1h.json
   #12 Blue Angel Hotel: 69/69 <=60m, 69 <=45m, 58 <=30m (median 22.2m)
   #13 Pod 51: 69/69 <=60m, 69 <=45m, 58 <=30m (median 22.2m)
   #14 Eurostars Wall Street: 69/69 <=60m, 68 <=45m, 48 <=30m (median 26.9m)
-Traceback (most recent call last):
-  File "/home/runner/work/NYFun3/NYFun3/research/scripts/compute_transit.py", line 539, in <module>
-    PY
-NameError: name 'PY' is not defined
