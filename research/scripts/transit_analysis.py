@@ -143,6 +143,13 @@ def census_batch(addresses: list[tuple[str, str]]) -> dict[str, dict]:
             except ValueError:
                 rec["match"] = "Match(parse error)"
         out[ident] = rec
+    unmatched = [ident for ident, rec in out.items() if "lat" not in rec]
+    if unmatched:
+        print(f"batch unmatched {unmatched}; retrying single-address lookups", flush=True)
+        retry = census_single([(ident, addr) for ident, addr in addresses if ident in set(unmatched)])
+        for ident, rec in retry.items():
+            if "lat" in rec:
+                out[ident] = rec
     return out
 
 
@@ -157,6 +164,16 @@ def census_single(addresses: list[tuple[str, str]]) -> dict[str, dict]:
             )
             resp.raise_for_status()
             matches = resp.json().get("result", {}).get("addressMatches", [])
+            if not matches:
+                cleaned = addr.replace(".", "")
+                if cleaned != addr:
+                    resp = requests.get(
+                        CENSUS_SINGLE,
+                        params={"address": cleaned, "benchmark": "Public_AR_Current", "format": "json"},
+                        timeout=60,
+                    )
+                    resp.raise_for_status()
+                    matches = resp.json().get("result", {}).get("addressMatches", [])
             if matches:
                 c = matches[0]["coordinates"]
                 out[ident] = {
@@ -347,6 +364,15 @@ def main() -> int:
                 entries.append({"name": r["name"], "stars": r["stars"], "reachable": None, "reason": f"geocode {rrec.get('match', 'failed')}", "michelin_url": r.get("michelin_url", "")})
                 continue
             straight = haversine_m(lat, lon, rlat, rlon)
+            if straight > 25000:
+                entries.append({
+                    "name": r["name"], "stars": r["stars"], "cluster": r.get("cluster") or "",
+                    "straight_line_km": round(straight / 1000.0, 2),
+                    "reachable": False, "minutes": None,
+                    "reason": "beyond subway service area (straight-line > 25 km); Metro-North or drive required, not modelled",
+                    "michelin_url": r.get("michelin_url", ""), "official_site": r.get("official_site", ""),
+                })
+                continue
             best_total, best_station, best_walk = None, None, None
             for sid, s in stations.items():
                 arr = best.get(sid)
@@ -374,7 +400,7 @@ def main() -> int:
                     "egress_walk_minutes": round(best_walk / 60.0, 1),
                 })
             entries.append(entry)
-        counts = {"three_star": 0, "two_star": 0, "one_star": 0, "total": 0}
+        counts = {}
         for label, cap in (("reachable_60", 3600.0), ("reachable_45", 2700.0), ("reachable_30", 1800.0)):
             c = {"three_star": 0, "two_star": 0, "one_star": 0, "total": 0}
             for e in entries:
@@ -397,7 +423,7 @@ def main() -> int:
         print(f"{h['name']}: 60-min starred reach = {counts['reachable_60']}", flush=True)
 
     ranked = [r for r in hotel_reports if r.get("counts")]
-    ranked.sort(key=lambda r: (-r["counts"]["reachable_60"]["total"], -r["counts"]["reachable_45"]["total"], r["id"]))
+    ranked.sort(key=lambda r: (-r["counts"]["reachable_60"]["total"], -r["counts"]["reachable_45"]["total"], -r["counts"]["reachable_30"]["total"], r["id"]))
     for i, r in enumerate(ranked, 1):
         r["rank"] = i
 
