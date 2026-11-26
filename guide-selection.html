@@ -32,7 +32,7 @@
 <main class="wrap">
   <div class="hero">
     <h1>MICHELIN Guide Listed vs. Michelin-Starred Restaurants</h1>
-    <p>Every entry below explicitly distinguishes <strong>merely Guide-listed (0 stars: Selected or Bib Gourmand)</strong> from <strong>Michelin-starred (1, 2, or 3 stars)</strong>, places the <strong>2-adult couple meal price/estimate in the same table</strong>, and cites both the official <a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN Guide NYC</a> and the restaurant's own menu.</p>
+    <p>Every entry below explicitly distinguishes <strong>merely Guide-listed (0 stars: Selected or Bib Gourmand)</strong> from <strong>Michelin-starred (1, 2, or 3 stars)</strong>, places the <strong>2-adult couple meal price/estimate in the same table</strong>, and cites both the official <a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN Guide NYC</a> and the restaurant menu where available.</p>
   </div>
 
   <div class="callout warn">
@@ -67,7 +67,7 @@
             <td><strong>2 MICHELIN Stars</strong></td>
             <td><span class="tag t-ok">Yes — 2 Stars</span></td>
             <td class="num"><strong>14</strong></td>
-            <td>15 rows in 2025 snapshot (1 removed/closed on live Guide; see <a href="flagged-for-review.html#NR-01">NR-01</a>)</td>
+            <td>15 rows in the 2025 snapshot; the difference requires individual reconciliation (see <a href="flagged-for-review.html#NR-01">NR-01</a>)</td>
             <td class="small">Excellent cooking, worth a detour.</td>
             <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/2-stars-michelin" target="_blank" rel="noopener noreferrer">MICHELIN 2-Star filter</a></td>
           </tr>
@@ -75,7 +75,7 @@
             <td><strong>1 MICHELIN Star</strong></td>
             <td><span class="tag t-ok">Yes — 1 Star</span></td>
             <td class="num"><strong>50</strong></td>
-            <td>52 rows in 2025 snapshot (2 removed/closed on live Guide; see <a href="flagged-for-review.html#NR-01">NR-01</a>)</td>
+            <td>52 rows in the 2025 snapshot; the difference requires individual reconciliation (see <a href="flagged-for-review.html#NR-01">NR-01</a>)</td>
             <td class="small">High-quality cooking, worth a stop.</td>
             <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin" target="_blank" rel="noopener noreferrer">MICHELIN 1-Star filter</a></td>
           </tr>
@@ -99,7 +99,7 @@
             <td><strong>All NYC &amp; Surroundings</strong></td>
             <td>69 Starred / 300 Listed-Only</td>
             <td class="num"><strong>369</strong></td>
-            <td>84 total rows across <a href="restaurants.html">Starred (72)</a> + this Guide-Listed table (12)</td>
+            <td>84 historical starred and selected Guide-listed records; not a complete current Guide catalogue</td>
             <td class="small">Complete live MICHELIN Guide New York directory (<code>69 + 76 + 224 = 369</code>).</td>
             <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN NYC Directory</a></td>
           </tr>
@@ -116,7 +116,7 @@
 
   <section class="panel" id="guide-listed-table">
     <h2>3. Verified MICHELIN Guide-Listed (Non-Starred) + Starred Comparison Table</h2>
-    <p class="lede">Every row states whether the venue <strong>holds a Michelin star</strong> or is <strong>merely listed in the Guide (Bib Gourmand / Selected)</strong>, displays the <strong>verified 2-adult couple meal price or menu range</strong> in the same table (blank + <code>unverified</code> where the official menu is image-only or unpriced), and separates verified creator/profile links from search discovery links.</p>
+    <p class="lede">Non-starred rows reflect the live Guide; starred rows are labeled by the historical 2025 selection and require a current status recheck. The table displays <strong>illustrative menu subtotals for two</strong>, with blanks marked <code>unverified</code> when the price or source ownership could not be confirmed, and separates specific profile/video links (ownership and content not independently reviewed) from search discovery links.</p>
     <div class="controls">
       <input id="q" type="search" placeholder="Search name, cuisine, neighborhood, dish…" aria-label="Search restaurants">
       <select id="tier" aria-label="Filter by Guide status">
@@ -161,8 +161,8 @@ function renderGuideHours(h, exc) {
 function renderSocialCell(links) {
   if (!links || !links.length) return '<span class="muted small">—</span>';
   return '<div class="small">' + links.map(function (l) {
-    var badge = l.kind === "verified_profile" ? '<span class="tag t-ok">Official</span> '
-      : l.kind === "verified_video" ? '<span class="tag t-info">Video</span> '
+    var badge = l.kind === "profile" ? '<span class="tag t-info">Profile</span> '
+      : l.kind === "video_result" ? '<span class="tag t-info">Video</span> '
       : '<span class="tag t-muted">Search</span> ';
     return badge + '<a href="' + NYF.esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + NYF.esc(l.label) + "</a>";
   }).join("<br>") + "</div>";
@@ -170,10 +170,10 @@ function renderSocialCell(links) {
 
 function renderClusters(clusters) {
   document.getElementById("clusters-host").innerHTML =
-    '<div class="scroll"><table><thead><tr><th>Manhattan Cluster</th><th>Approx. Starred Nearby</th><th>Verified Guide-Listed Picks (0 Stars)</th><th>Closest Candidate Hotel Bases</th><th>Planning Takeaway</th><th>Source</th></tr></thead><tbody>' +
+    '<div class="scroll"><table><thead><tr><th>Manhattan Cluster</th><th>Historical starred examples</th><th>Verified Guide-Listed Picks (0 Stars)</th><th>Closest Candidate Hotel Bases</th><th>Planning Takeaway</th><th>Source</th></tr></thead><tbody>' +
     clusters.map(function (c) {
       return "<tr><td><strong>" + NYF.esc(c.name) + "</strong></td>" +
-        "<td class='num'>" + NYF.esc(String(c.starred_examples_count)) + "</td>" +
+        "<td class='num'>" + (c.starred_examples_count == null ? "unverified" : NYF.esc(String(c.starred_examples_count))) + "</td>" +
         "<td class='small'>" + c.guide_listed_featured.map(NYF.esc).join("<br>") + "</td>" +
         "<td class='small'>" + c.nearest_candidate_hotels.map(NYF.esc).join("<br>") + "</td>" +
         "<td class='small'>" + NYF.esc(c.cluster_summary) + "</td>" +
@@ -240,7 +240,7 @@ function renderTable() {
     '</tr></thead><tbody>' +
     rows.map(function (r) {
       var badge = r.holds_michelin_star
-        ? '<span class="tag t-ok">' + "★".repeat(r.stars || 1) + " Holds " + r.guide_tier + "</span>"
+        ? '<span class="tag t-ok">' + "★".repeat(r.stars || 1) + " " + r.guide_tier + " in 2025 selection</span>"
         : (r.guide_tier === "Bib Gourmand"
             ? '<span class="tag t-warn">Bib Gourmand — Guide-Listed (0★)</span>'
             : '<span class="tag t-muted">Selected — Merely Guide-Listed (0★)</span>');
@@ -252,7 +252,7 @@ function renderTable() {
       var srcs = [];
       if (r.michelin_url) srcs.push(NYF.srcLink(r.michelin_url, "MICHELIN Guide"));
       if (r.official_site) srcs.push(NYF.srcLink(r.official_site, "official site"));
-      if (r.menu_source_url && r.menu_source_url !== r.official_site) srcs.push(NYF.srcLink(r.menu_source_url, "official menu"));
+      if (r.menu_source_url && r.menu_source_url !== r.official_site) srcs.push(NYF.srcLink(r.menu_source_url, r.id === "nyonya" ? "Guide-linked menu (ownership unverified)" : "official menu"));
 
       return "<tr>" +
         "<td><strong>" + NYF.esc(r.name) + "</strong><br><span class='muted small'>" + NYF.esc(r.cuisine) + " · " + NYF.esc(r.price_symbol) + "<br>" + NYF.esc(r.address) + "</span></td>" +

@@ -20,61 +20,100 @@
       "non_starred_subtotal": 300
     },
     "nr01_reconciliation": "Resolves NR-01: the live MICHELIN all-starred directory displays 5 three-star (Eleven Madison Park, Jungsik New York, Le Bernardin, Per Se, Sushi Sho), 14 two-star, and 50 one-star entries, summing to exactly 69 starred restaurants (matching the '1-48 of 69 restaurants' heading). Combined with 76 Bib Gourmand and 224 Selected (listed-only) venues, the live NYC directory totals 369 restaurants (69 + 76 + 224 = 369).",
-    "price_arithmetic_rule": "Prix-fixe rows use 2 × official per-person menu price; à-la-carte rows show explicit couple-dish or itemized 2-adult sample subtotals from the restaurant's own current menu/PDF. All figures exclude beverages, tax (8.875% NYC dining sales tax), and gratuity unless explicitly stated, and are not guaranteed 2027 prices. Unreadable/image-only menus remain null and flagged unverified."
+    "price_arithmetic_rule": "Prix-fixe rows use 2 × a published per-person price; à-la-carte rows show explicit example orders. Subtotals exclude beverages, tax and gratuity unless stated and are not 2027 quotes. Nyonya menu ownership is not independently confirmed; Nyonya, Nami Nori and Ruffian prices remain unverified."
   },
   "clusters": [
     {
       "id": "flatiron-nomad-gramercy-unionsq",
       "name": "Flatiron / NoMad / Gramercy / Union Square",
-      "starred_examples_count": 15,
-      "guide_listed_featured": ["Atoboy (Selected)", "Upland (Selected)", "La Dong (Bib Gourmand)"],
-      "nearest_candidate_hotels": ["HGU New York (34 E 32nd St)", "Hyatt Place Chelsea (140 W 24th St)"],
-      "cluster_summary": "Highest walking-radius concentration of both starred and Guide-listed (Selected + Bib Gourmand) dining in Manhattan along the 14th–32nd St / Broadway–Park Ave spine.",
+      "starred_examples_count": null,
+      "guide_listed_featured": [
+        "Atoboy (Selected)",
+        "Upland (Selected)",
+        "La Dong (Bib Gourmand)"
+      ],
+      "nearest_candidate_hotels": [
+        "HGU New York (34 E 32nd St)",
+        "Hyatt Place Chelsea (140 W 24th St)"
+      ],
+      "cluster_summary": "Descriptive neighborhood grouping only; no hotel-to-restaurant journey time is implied. Highest walking-radius concentration of both starred and Guide-listed (Selected + Bib Gourmand) dining in Manhattan along the 14th–32nd St / Broadway–Park Ave spine.",
       "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
     },
     {
       "id": "midtown-fifth-theater",
       "name": "Midtown / Fifth Ave / Theater District",
-      "starred_examples_count": 17,
-      "guide_listed_featured": ["Ai Fiori (Selected)"],
-      "nearest_candidate_hotels": ["Hyatt Place Midtown-South (52 W 36th St)", "Arlo Midtown (351 W 38th St)", "Pestana CR7 (338 W 39th St)", "The Mayfair Hotel (242 W 49th St)", "citizenM Times Square (218 W 50th St)", "Blue Angel Hotel NYC (152 E 55th St)"],
-      "cluster_summary": "Densest three-star and two-star fine-dining corridor (Le Bernardin, Per Se, Sushi Sho, The Modern, Gabriel Kreuther, Aquavit) paired with hotel-accessible Selected dining such as Ai Fiori on Fifth Ave.",
+      "starred_examples_count": null,
+      "guide_listed_featured": [
+        "Ai Fiori (Selected)"
+      ],
+      "nearest_candidate_hotels": [
+        "Hyatt Place Midtown-South (52 W 36th St)",
+        "Arlo Midtown (351 W 38th St)",
+        "Pestana CR7 (338 W 39th St)",
+        "The Mayfair Hotel (242 W 49th St)",
+        "citizenM Times Square (218 W 50th St)",
+        "Blue Angel Hotel NYC (152 E 55th St)"
+      ],
+      "cluster_summary": "Descriptive neighborhood grouping only; no hotel-to-restaurant journey time is implied. Densest three-star and two-star fine-dining corridor (Le Bernardin, Per Se, Sushi Sho, The Modern, Gabriel Kreuther, Aquavit) paired with hotel-accessible Selected dining such as Ai Fiori on Fifth Ave.",
       "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
     },
     {
       "id": "west-village",
       "name": "West Village / Greenwich Village",
-      "starred_examples_count": 6,
-      "guide_listed_featured": ["Don Angie (Selected)", "Nami Nori (Bib Gourmand)"],
-      "nearest_candidate_hotels": ["Hyatt Place Chelsea (140 W 24th St)"],
-      "cluster_summary": "High-demand neighborhood cluster reachable on the 1/2/3, A/C/E, and F/M lines; combines 1-star counters with Selected Italian-American (Don Angie) and Bib Gourmand temaki (Nami Nori).",
+      "starred_examples_count": null,
+      "guide_listed_featured": [
+        "Don Angie (Selected)",
+        "Nami Nori (Bib Gourmand)"
+      ],
+      "nearest_candidate_hotels": [
+        "Hyatt Place Chelsea (140 W 24th St)"
+      ],
+      "cluster_summary": "Descriptive neighborhood grouping only; no hotel-to-restaurant journey time is implied. High-demand neighborhood cluster reachable on the 1/2/3, A/C/E, and F/M lines; combines 1-star counters with Selected Italian-American (Don Angie) and Bib Gourmand temaki (Nami Nori).",
       "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
     },
     {
       "id": "soho-nolita-chinatown",
       "name": "SoHo / Nolita / Chinatown / Little Italy",
-      "starred_examples_count": 4,
-      "guide_listed_featured": ["Thai Diner (Bib Gourmand)", "Nyonya (Bib Gourmand)"],
-      "nearest_candidate_hotels": ["The Artezen Hotel (24 John St)", "Eurostars Wall Street (129 Front St)"],
-      "cluster_summary": "Best high-value Bib Gourmand daytime and casual dinner cluster along Mott and Grand Streets (N/Q/R/W, B/D, 6, J/Z).",
+      "starred_examples_count": null,
+      "guide_listed_featured": [
+        "Thai Diner (Bib Gourmand)",
+        "Nyonya (Bib Gourmand)"
+      ],
+      "nearest_candidate_hotels": [
+        "The Artezen Hotel (24 John St)",
+        "Eurostars Wall Street (129 Front St)"
+      ],
+      "cluster_summary": "Descriptive neighborhood grouping only; no hotel-to-restaurant journey time is implied. Best high-value Bib Gourmand daytime and casual dinner cluster along Mott and Grand Streets (N/Q/R/W, B/D, 6, J/Z).",
       "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/bib-gourmand"
     },
     {
       "id": "east-village-les",
       "name": "East Village / Lower East Side",
-      "starred_examples_count": 3,
-      "guide_listed_featured": ["Dhamaka (Bib Gourmand)", "Ruffian (Bib Gourmand)"],
-      "nearest_candidate_hotels": ["The Artezen Hotel (24 John St)", "HGU New York (34 E 32nd St)"],
-      "cluster_summary": "Adventurous Bib Gourmand destination cluster anchored by Essex Market (Dhamaka, F/M/J/Z Delancey-Essex) and East 7th St natural wine bars (Ruffian).",
+      "starred_examples_count": null,
+      "guide_listed_featured": [
+        "Dhamaka (Bib Gourmand)",
+        "Ruffian (Bib Gourmand)"
+      ],
+      "nearest_candidate_hotels": [
+        "The Artezen Hotel (24 John St)",
+        "HGU New York (34 E 32nd St)"
+      ],
+      "cluster_summary": "Descriptive neighborhood grouping only; no hotel-to-restaurant journey time is implied. Adventurous Bib Gourmand destination cluster anchored by Essex Market (Dhamaka, F/M/J/Z Delancey-Essex) and East 7th St natural wine bars (Ruffian).",
       "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/bib-gourmand"
     },
     {
       "id": "tribeca-fidi",
       "name": "Tribeca & Financial District",
-      "starred_examples_count": 7,
-      "guide_listed_featured": ["One White Street (Selected)", "Manhatta (Selected)"],
-      "nearest_candidate_hotels": ["The Artezen Hotel (24 John St)", "Eurostars Wall Street (129 Front St)"],
-      "cluster_summary": "Walkable from Lower Manhattan hotels: combines 3-star Jungsik, 2-star Atera/Saga, and 1-star Crown Shy with 60th-floor skyline dining at Manhatta and townhouse tasting menus at One White Street.",
+      "starred_examples_count": null,
+      "guide_listed_featured": [
+        "One White Street (Selected)",
+        "Manhatta (Selected)"
+      ],
+      "nearest_candidate_hotels": [
+        "The Artezen Hotel (24 John St)",
+        "Eurostars Wall Street (129 Front St)"
+      ],
+      "cluster_summary": "Descriptive neighborhood grouping only; no hotel-to-restaurant journey time is implied. Walkable from Lower Manhattan hotels: combines 3-star Jungsik, 2-star Atera/Saga, and 1-star Crown Shy with 60th-floor skyline dining at Manhatta and townhouse tasting menus at One White Street.",
       "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
     }
   ],
@@ -112,14 +151,14 @@
       "social_links": [
         {
           "platform": "Instagram",
-          "kind": "verified_profile",
-          "label": "@atoboynyc (official)",
+          "kind": "profile",
+          "label": "@atoboynyc (profile; ownership unconfirmed)",
           "url": "https://www.instagram.com/atoboynyc/"
         },
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "Bon Appétit — Chef Junghyun Park at Atoboy",
+          "kind": "video_result",
+          "label": "Bon Appétit — Chef Junghyun Park at Atoboy (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=HjsqE5SdAng"
         },
         {
@@ -163,8 +202,8 @@
       "social_links": [
         {
           "platform": "Instagram",
-          "kind": "verified_profile",
-          "label": "@aifiori (official)",
+          "kind": "profile",
+          "label": "@aifiori (profile; ownership unconfirmed)",
           "url": "https://www.instagram.com/aifiori/"
         },
         {
@@ -214,14 +253,14 @@
       "social_links": [
         {
           "platform": "Instagram",
-          "kind": "verified_profile",
-          "label": "@manhatta_nyc (official)",
+          "kind": "profile",
+          "label": "@manhatta_nyc (profile; ownership unconfirmed)",
           "url": "https://www.instagram.com/manhatta_nyc/"
         },
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "YouTube — Eating at Manhatta (60th Floor)",
+          "kind": "video_result",
+          "label": "YouTube — Eating at Manhatta (60th Floor) (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=I1tGCJFOD_s"
         },
         {
@@ -316,20 +355,20 @@
       "social_links": [
         {
           "platform": "Instagram",
-          "kind": "verified_profile",
-          "label": "@donangienyc (official)",
+          "kind": "profile",
+          "label": "@donangienyc (profile; ownership unconfirmed)",
           "url": "https://www.instagram.com/donangienyc/"
         },
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "Eater — Mise En Place at Don Angie",
+          "kind": "video_result",
+          "label": "Eater — Mise En Place at Don Angie (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=DrcXr0X8W38"
         },
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "YouTube — Trying Don Angie NYC",
+          "kind": "video_result",
+          "label": "YouTube — Trying Don Angie NYC (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=w1K-8s28u68"
         },
         {
@@ -363,9 +402,9 @@
       },
       "hours_exceptions": "Brunch served Sat–Sun 10:00 AM–3:00 PM only; special holiday menus published seasonally (e.g. Thanksgiving). Feb–Mar 2027 holiday exceptions unverified.",
       "pricing_format": "a_la_carte",
-      "couple_price_usd": 92,
-      "couple_price_display": "$92–$130 sample dinner for 2",
-      "couple_price_note": "Official menu items: starters $18–$26 (Crispy Artichokes $18, Beef Tartare $24), pastas $24–$28 (Bucatini Cacio e Pepe $24, Pappardelle $27), mains $31–$42 (Cheeseburger $31, Roasted Chicken $35, Skirt Steak $42). Sample 2-adult meal: 1 starter + 2 pastas/mains + 1 vegetable ($14) = $92–$130 before drinks, tax, and gratuity.",
+      "couple_price_usd": 80,
+      "couple_price_display": "$80–$124 illustrative meal for 2",
+      "couple_price_note": "Sample using published prices: one starter ($18–$26), two $24–$42 pastas or mains, and one $14 vegetable: $80–$124. Choice of dishes varies; beverages, tax and gratuity extra.",
       "price_status": "verified_menu_sample",
       "official_site": "https://uplandnyc.com/",
       "menu_source_url": "https://uplandnyc.com/",
@@ -373,8 +412,8 @@
       "social_links": [
         {
           "platform": "Instagram",
-          "kind": "verified_profile",
-          "label": "@upland_nyc (official)",
+          "kind": "profile",
+          "label": "@upland_nyc (profile; ownership unconfirmed)",
           "url": "https://www.instagram.com/upland_nyc/"
         },
         {
@@ -415,8 +454,8 @@
       "hours_exceptions": "Complete parties seated together; 1h 30m dining window for parties of 1–4. Feb–Mar 2027 holiday hours unverified.",
       "pricing_format": "a_la_carte",
       "couple_price_usd": 60,
-      "couple_price_display": "$60–$96 sample meal for 2",
-      "couple_price_note": "Official PDF menu: appetizers $14–$20 (Crispy Spring Roll $16, Bánh Xèo $20), Pho Hà Nội / Pho Gà $22, Bún Chả Hà Nội $32, Shaking Beef $35, Beef Short Ribs Curry $39. Sample 2-adult meal: 1 shared appetizer ($16) + 2 Pho ($44) = $60, or + 2 signature entrées = $80–$96 before drinks, tax, and gratuity.",
+      "couple_price_display": "$60 or $87 illustrative meal for 2",
+      "couple_price_note": "Official PDF: crispy spring roll $16 plus two $22 pho = $60; or $16 spring roll + $32 Bún Chả + $39 short rib curry = $87. Excludes drinks, tax and gratuity.",
       "price_status": "verified_menu_sample",
       "official_site": "https://www.ladongnyc.com/",
       "menu_source_url": "https://www.ladongnyc.com/_files/ugd/511aa7_3612d9811b4f4189af739d407de95d2e.pdf",
@@ -466,8 +505,8 @@
       "hours_exceptions": "Breakfast served until 4:00 PM; Coconut Cloud Pancakes served Mon–Fri only; no phone line (email contact only). Feb–Mar 2027 holiday hours unverified.",
       "pricing_format": "a_la_carte",
       "couple_price_usd": 67,
-      "couple_price_display": "$67–$89 dinner for 2 · $30–$44 breakfast for 2",
-      "couple_price_note": "Official accessible text menu: Breakfast Egg Sandwiches $15 each ($30/two); Dinner snacks $14–$17 (Thai Disco Fries $14, Chicken Liver Mee Krob $17), wok/classic mains $22–$32 (Phat See Ew Chicken $24, Khao Soi $26, Uncle Boon's Crab Fried Rice $29, Lobster Fettuccine $32). Sample 2-adult dinner: 1 snack ($15) + 2 mains ($52–$61) = $67–$76 (+ dessert ~$89) before drinks, tax, and gratuity.",
+      "couple_price_display": "$67 or $76 illustrative dinner for 2 · $30 breakfast for 2",
+      "couple_price_note": "Official menu: two $15 breakfast egg sandwiches = $30; or $15 dumplings plus two $26 khao soi = $67; or $15 dumplings plus $29 crab fried rice and $32 lobster fettuccine = $76. Before beverages, tax and gratuity.",
       "price_status": "verified_menu_sample",
       "official_site": "https://www.thaidiner.com/",
       "menu_source_url": "https://www.thaidiner.com/home-1",
@@ -517,8 +556,8 @@
       "hours_exceptions": "Weekend lunch Sat–Sun 11:30 AM–2:30 PM; tables held max 15 minutes past reservation. Feb–Mar 2027 holiday hours unverified.",
       "pricing_format": "a_la_carte_family_style",
       "couple_price_usd": 82,
-      "couple_price_display": "$82–$113 shared dinner for 2",
-      "couple_price_note": "Official PDF menu: grills/starters $18–$28 (Paneer Tikka $22, Tangri Kebab $23, Beef Pepper Fry $25), mains/pulao $32–$65 (Murgh Hari Mirch Korma $39, Dhungar Gosht $49, Short Rib Pulao $49, Goat Neck Biryani $65), rice/breads $5, Dhaba Dal $15. Sample shared 2-adult meal: 1 starter ($23) + 1 main ($39) + dal ($15) + bread ($5) = $82 (up to $113 with Goat Neck Biryani), before drinks, tax, and gratuity.",
+      "couple_price_display": "$82 or $108 sample shared meal for 2",
+      "couple_price_note": "Official PDF menu: grills/starters $18–$28 (Paneer Tikka $22, Tangri Kebab $23, Beef Pepper Fry $25), mains/pulao $32–$65 (Murgh Hari Mirch Korma $39, Dhungar Gosht $49, Short Rib Pulao $49, Goat Neck Biryani $65), rice/breads $5, Dhaba Dal $15. Sample shared 2-adult meal: 1 starter ($23) + 1 main ($39) + dal ($15) + bread ($5) = $82 (or $108 with Goat Neck Biryani instead of the korma), before drinks, tax, and gratuity.",
       "price_status": "verified_menu_sample",
       "official_site": "https://www.dhamaka.nyc/",
       "menu_source_url": "https://www.dhamaka.nyc/s/Dhamaka-Dinner-April-2026.pdf",
@@ -526,20 +565,20 @@
       "social_links": [
         {
           "platform": "Instagram",
-          "kind": "verified_profile",
-          "label": "@dhamakanyc (official)",
+          "kind": "profile",
+          "label": "@dhamakanyc (profile; ownership unconfirmed)",
           "url": "https://www.instagram.com/dhamakanyc/"
         },
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "YouTube — Eating at Dhamaka NYC",
+          "kind": "video_result",
+          "label": "YouTube — Eating at Dhamaka NYC (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=Er6oIm2l2z8"
         },
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "YouTube — Dhamaka Essex Market Review",
+          "kind": "video_result",
+          "label": "YouTube — Dhamaka Essex Market Review (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=ywqFRjmtzWQ"
         },
         {
@@ -556,7 +595,7 @@
       "guide_tier": "Bib Gourmand",
       "holds_michelin_star": false,
       "distinction_label": "Listed in MICHELIN Guide — Bib Gourmand (0 Stars)",
-      "distinction_note": "MICHELIN Bib Gourmand ($ tier, 0 stars) Malaysian classic on Grand Street. Important exception: CASH ONLY (ATM near front entrance).",
+      "distinction_note": "MICHELIN Bib Gourmand ($ price band; not a star). Confirm accepted payment methods directly.",
       "cuisine": "Malaysian",
       "price_symbol": "$",
       "cluster": "SoHo / Nolita / Chinatown / Little Italy",
@@ -571,13 +610,13 @@
         "Sat": "11:00 AM–11:00 PM",
         "Sun": "11:00 AM–10:00 PM"
       },
-      "hours_exceptions": "CASH ONLY per official website; manages bookings directly by phone (+1 212-334-3669). Feb–Mar 2027 / Lunar New Year hours unverified.",
+      "hours_exceptions": "Guide lists telephone +1 212-334-3669. Confirm payment method and holiday hours directly.",
       "pricing_format": "a_la_carte",
-      "couple_price_usd": 37,
-      "couple_price_display": "$36.85–$48.00 meal for 2 (cash only)",
-      "couple_price_note": "Official menu: Roti Canai $8.00 (or Roti Prata $7.95), Penang Asam Laksa $13.95, Chow Kueh Teow $14.95, Indian Mee Goreng $14.95, Bah Kut Teh $16.50. Sample 2-adult meal: Roti Canai ($8.00) + Penang Asam Laksa ($13.95) + Chow Kueh Teow ($14.95) = $36.90 before drinks, tax, and tip.",
-      "price_status": "verified_menu_sample",
-      "official_site": "https://nyonya.res-menu.com/",
+      "couple_price_usd": null,
+      "couple_price_display": "",
+      "couple_price_note": "UNVERIFIED — the Guide links to a menu website, but its ownership and current prices were not independently confirmed; check with the restaurant.",
+      "price_status": "unverified",
+      "official_site": "",
       "menu_source_url": "https://nyonya.res-menu.com/menu",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/nyonya",
       "social_links": [
@@ -634,8 +673,8 @@
       "social_links": [
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "YouTube — Nami Nori NYC Temaki Vlog",
+          "kind": "video_result",
+          "label": "YouTube — Nami Nori NYC Temaki Vlog (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=s52DJ1bLAI4"
         },
         {
@@ -685,8 +724,8 @@
       "social_links": [
         {
           "platform": "YouTube",
-          "kind": "verified_video",
-          "label": "YouTube — East Village Wine Bar Tour incl. Ruffian",
+          "kind": "video_result",
+          "label": "YouTube — East Village Wine Bar Tour incl. Ruffian (search result; not independently reviewed)",
           "url": "https://www.youtube.com/watch?v=-OVNOxeuqRc"
         },
         {
