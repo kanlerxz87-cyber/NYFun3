@@ -1,0 +1,22 @@
+Geocoding 14 hotels and 69 active NYC restaurants...
+Downloading MTA GTFS Subway feed from https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip...
+Loaded 989 active subway platform stops; feed dates 20261101..20270515
+Wrote /home/runner/work/NYFun3/NYFun3/research/generated/transit_1h.json
+  #1 Hyatt Place New York/Chelsea: 69/69 <=60m, 69 <=45m, 64 <=30m (median 17.2m)
+  #2 citizenM New York Times Square: 69/69 <=60m, 69 <=45m, 61 <=30m (median 19.3m)
+  #3 HGU New York: 69/69 <=60m, 69 <=45m, 63 <=30m (median 19.9m)
+  #4 Artezen Hotel: 69/69 <=60m, 69 <=45m, 64 <=30m (median 20.0m)
+  #5 The Mayfair Hotel: 69/69 <=60m, 69 <=45m, 61 <=30m (median 20.1m)
+  #6 Arlo NoMad: 69/69 <=60m, 69 <=45m, 62 <=30m (median 20.1m)
+  #7 Pod 39: 69/69 <=60m, 69 <=45m, 62 <=30m (median 20.9m)
+  #8 Pestana CR7 Times Square: 69/69 <=60m, 69 <=45m, 61 <=30m (median 21.1m)
+  #9 The Shoreham Hotel: 69/69 <=60m, 69 <=45m, 63 <=30m (median 21.2m)
+  #10 Arlo Midtown: 69/69 <=60m, 69 <=45m, 61 <=30m (median 21.3m)
+  #11 Pod Times Square: 69/69 <=60m, 69 <=45m, 60 <=30m (median 22.0m)
+  #12 Blue Angel Hotel: 69/69 <=60m, 69 <=45m, 58 <=30m (median 22.2m)
+  #13 Pod 51: 69/69 <=60m, 69 <=45m, 58 <=30m (median 22.2m)
+  #14 Eurostars Wall Street: 69/69 <=60m, 68 <=45m, 48 <=30m (median 26.9m)
+Traceback (most recent call last):
+  File "/home/runner/work/NYFun3/NYFun3/research/scripts/compute_transit.py", line 539, in <module>
+    PY
+NameError: name 'PY' is not defined
