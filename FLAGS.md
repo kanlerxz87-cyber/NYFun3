@@ -72,10 +72,25 @@ All **261** social links in `data/michelin_all.json` and `data/activities.json` 
 15 activities × 3) are search or hashtag URLs: `youtube_search`, `tiktok_search`, `instagram_search`.
 Not one is a specific post. A search page is not a review — it can show any venue, and its content changes.
 
-What has been verified instead is recorded in **`data/review_links.json`**: for 8 restaurants and 1 museum,
-the specific video that was actually opened, with its title, uploader, length, view count and URL as shown.
+What has been verified instead is recorded in **`data/review_links.json`**: for 8 restaurants and 1 museum, the specific video that was actually opened
+(26 posts in all: 25 name the venue in their own title, one — a Sushi Sho documentary — films it without naming it)
+, with its title, uploader, length, view count and URL as shown.
 A link is only marked `specific-*` when the title or description names the venue. Everything else stays
 labelled `search`. The remaining 78 venues still have no verified specific link.
+
+### What proofreading the live page changed
+
+Reading the deployed page rather than the local files found four defects that all checks had passed:
+
+| Defect | Why the checks missed it | Fix |
+|---|---|---|
+| Every "hotel row" link pointed at `hotels.html#arlo-midtown`, but `hotels.html` renders its rows from JSON and has no row anchors — all nine links landed on the top of the page | `validate_site.py` checks that a local target exists, and `hotels.html` does; an anchor into a JS-rendered table does not, and nothing checked for that | links now go to `hotels.html`, and the client check no longer follows a fragment into a rendered table |
+| The matrix header rendered **"The"** as a hotel, because the header took the first word of "The Mayfair Hotel" | no check reads a column header | leading article stripped, full name kept in the `title` attribute |
+| The ranking said *"top four hotels sit within 0.8 minutes"* while the data shows **five** hotels within 0.8 (18.5→19.3) | the number was written in prose, not derived | the table now groups hotels whose medians are within the model's own resolution and labels them `tied #1–#5`, `tied #7–#8`, so the claim cannot drift from the data again |
+| The 1-hour section still called the top order "close calls" on a 0.8-min threshold when the *stability* figure (spread across four departures) was 1.5–3.4 min | two different thresholds were conflated | ties now come from the ranking gap; instability gets its own flag, `moves N min by time of day` |
+
+Also: the Sushi Sho documentary is labelled `venue not in the title`, because it films the restaurant without
+naming it — the earlier wording implied every listed post named its venue.
 
 ## 6. Restaurant rows: what is still empty
 

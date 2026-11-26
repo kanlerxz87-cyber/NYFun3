@@ -16,6 +16,16 @@
     return '<span class="pill' + (kind ? " " + kind : "") + '">' + esc(text) + "</span>";
   }
 
+  // "The Mayfair Hotel" must not become the column header "The".
+  // 19 must not read as 19.0 in one row and 18.5 in the next.
+  function one(v) {
+    return v == null ? "" : (Math.round(v * 10) / 10).toFixed(1);
+  }
+
+  function shortName(name) {
+    return String(name || "").replace(/^The\s+/, "").split(/[\s/]+/)[0];
+  }
+
   function minutesCell(v) {
     if (!v || v.minutes === null || v.minutes === undefined) return unver("not measured");
     var cls = v.minutes <= 45 ? "ok" : (v.minutes <= 60 ? "" : "warn");
@@ -31,15 +41,34 @@
     var host = document.getElementById("ranking-host");
     if (!host) return;
     var meta = data._meta;
+    // A gap under 0.8 min is inside the model's own resolution, so consecutive
+    // hotels that close are shown as tied and named by rank.
+    var TIE_MIN = 0.8;
+    var groups = [];
+    data.ranking.forEach(function (r, i) {
+      var prev = data.ranking[i - 1];
+      var sameAsPrev = prev && Math.abs(prev.restaurants.median_minutes - r.restaurants.median_minutes) < TIE_MIN;
+      if (sameAsPrev) groups[groups.length - 1].push(r.rank_by_median);
+      else groups.push([r.rank_by_median]);
+    });
+    var groupOf = {};
+    groups.forEach(function (g) { g.forEach(function (rank) { groupOf[rank] = g; }); });
     var rows = data.ranking.map(function (r) {
       var stars = r.starred_restaurants_within_60_min;
       var spread = r.median_spread_between_windows_min;
-      var tie = spread !== null && spread >= 0.8 ? ' <span class="pill warn">close call</span>' : "";
+      var group = groupOf[r.rank_by_median] || [r.rank_by_median];
+      var tie = group.length > 1
+        ? ' <span class="pill ok">tied #' + group[0] + "–#" + group[group.length - 1] + "</span>"
+        : "";
+      var unstable = spread !== null && spread >= 1.5
+        ? ' <span class="pill warn">moves ' + one(spread) + " min by time of day</span>"
+        : "";
       return "<tr>" +
         "<td><strong>#" + r.rank_by_median + "</strong></td>" +
         "<td><strong>" + esc(r.name) + "</strong><br><span class='small muted'>" + esc(r.area || "") + "</span></td>" +
-        "<td class='num'><strong>" + r.restaurants.median_minutes + " min</strong>" + tie +
-          "<br><span class='small muted'>spread " + (spread === null ? "—" : spread + " min") + "</span></td>" +
+        "<td class='num'><strong>" + one(r.restaurants.median_minutes) + " min</strong>" + tie + unstable +
+          "<br><span class='small muted'>spread " + (spread === null ? "—" : one(spread) + " min") +
+          " over four departures</span></td>" +
         "<td class='num'>" + stars.three_star + " / " + stars.two_star + " / " + stars.one_star +
           "<br><span class='small muted'>" + r.starred_restaurants_within_60_min_total + " total</span></td>" +
         "<td class='num'>" + (r.activities.measured
@@ -49,7 +78,7 @@
           ? money0(r.hotel_quote_total_before_tax_usd)
           : unver("no tier captured")) +
           "<br><span class='small muted'>before tax, 7 nights</span></td>" +
-        "<td class='small'>" + link("hotels.html#" + r.hotel_id, "hotel row") + "</td>" +
+        "<td class='small'>" + link("hotels.html", "hotels page") + "</td>" +
         "</tr>";
     }).join("");
     host.innerHTML =
@@ -80,7 +109,7 @@
       "<li><strong>So the tie is broken by:</strong> the median door-to-door time to those restaurants, which does vary — from " +
         data.ranking[0].restaurants.median_minutes + " to " +
         data.ranking[data.ranking.length - 1].restaurants.median_minutes + " minutes.</li>" +
-      "<li><strong>Resolution limit:</strong> the top four hotels sit within 0.8 minutes of each other. Treat ranks 1–5 as a tie and choose on price, room and area instead.</li>" +
+      "<li><strong>Resolution limit:</strong> ranks 1–5 span 0.8 minutes in total (18.5 to 19.3), which is smaller than the model can honestly distinguish. They are shown as one tied group: choose among them on price, room and area instead.</li>" +
       "</ul>" +
       '<p class="small muted">Measurement: <a href="data/transit_hotels.json">data/transit_hotels.json</a> · ' +
       "ranking: <a href=\"data/hotel_ranking.json\">data/hotel_ranking.json</a> · " +
@@ -98,7 +127,9 @@
     if (!sample.length) { host.innerHTML = '<p class="loading">No weekday sample in the measurement.</p>'; return; }
     var names = Object.keys(sample[0].destinations).sort();
     var head = "<tr><th>Destination</th>" +
-      sample.map(function (r) { return "<th class='num'>" + esc(r.hotel_name.split(" ")[0]) + "</th>"; }).join("") +
+      sample.map(function (r) {
+        return "<th class='num' title='" + esc(r.hotel_name) + "'>" + esc(shortName(r.hotel_name)) + "</th>";
+      }).join("") +
       "<th>Source</th></tr>";
     var body = names.map(function (n) {
       return "<tr><td>" + esc(n) + "</td>" +
@@ -199,12 +230,18 @@
     if (!host) return;
     var rows = data.venues.map(function (v) {
       var links = v.links.map(function (l) {
-        var meta = [l.uploader, l.length, l.views_as_shown ? l.views_as_shown + " views" : null]
+        var meta = [l.uploader, l.length, l.views_as_shown && l.views_as_shown !== "unknown" ? l.views_as_shown + " views" : null]
           .filter(Boolean).join(" · ");
         var label = esc(l.title || l.url);
-        var tag = l.kind === "channel" ? "official channel" : "specific post";
-        return "<div style='margin:0 0 8px'>" + link(l.url, label) +
-          "<br><span class='small muted'>" + esc(l.platform) + " · " + esc(meta) + " · <span class='pill ok'>" + esc(tag) + "</span></span></div>";
+        var tag = l.kind === "channel" ? "official channel" : "one venue, filmed";
+        // A specific post is only worth calling verified if the page names the venue.
+        var proof = l.venue_named_in_title === false
+          ? '<span class="pill warn">venue not in the title</span>'
+          : '<span class="pill ok">' + esc(tag) + "</span>";
+        return "<div style='margin:0 0 10px'>" + link(l.url, label) +
+          "<br><span class='small muted'>" + esc(l.platform) + (meta ? " · " + esc(meta) : "") + " · " + proof + "</span>" +
+          (l.note ? "<br><span class='small muted'>" + esc(l.note) + "</span>" : "") +
+          "</div>";
       }).join("");
       return "<tr><td><strong>" + esc(v.venue) + "</strong>" +
         (v.stars ? "<br><span class='small muted'>" + esc(v.stars) + (v.stars === 1 ? " MICHELIN star" : " MICHELIN stars") + "</span>" : "") +

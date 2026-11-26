@@ -11,8 +11,10 @@
   },
   "coverage": {
    "venues_with_a_specific_link": 9,
+   "specific_posts_total": 26,
+   "specific_posts_where_the_title_names_the_venue": 25,
    "venues_with_only_search_links": 78,
-   "notes": "A specific link exists where a title unambiguously names the venue. Where the only available material was a search page, that is recorded as 'search' rather than dressed up as a review."
+   "notes": "A specific link exists where a page was opened and found to show one venue. Where the only available material was a search page, that is recorded as 'search' rather than dressed up as a review. One post films the venue but does not name it in its title; that is marked rather than counted as self-evident."
   },
   "rule": "A link is listed as specific only when its own title or description names the venue and the page was opened in this session. Views, uploaders and titles below are transcribed from the page as fetched."
  },
@@ -30,7 +32,8 @@
      "length": "16:00",
      "views_as_shown": "606K",
      "url": "https://www.youtube.com/watch?v=eRPhZXnJCtQ",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -40,7 +43,8 @@
      "length": "10:05",
      "views_as_shown": "471K",
      "url": "https://www.youtube.com/watch?v=il_uUGZCx_o",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -50,7 +54,8 @@
      "length": "9:52",
      "views_as_shown": "4.2K",
      "url": "https://www.youtube.com/watch?v=rQgmx4GYjvc",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-tiktok",
@@ -58,7 +63,8 @@
      "title": "Eater — Le Bernardin",
      "url": "https://www.tiktok.com/@eater/video/7356398018435861803",
      "verified": true,
-     "note": "verified in an earlier session; retained because the post is venue-specific"
+     "note": "verified in an earlier session; retained because the post is venue-specific",
+     "venue_named_in_title": true
     }
    ]
   },
@@ -75,7 +81,8 @@
      "length": "19:43",
      "views_as_shown": "447K",
      "url": "https://www.youtube.com/watch?v=aSE3P9REZVc",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -85,7 +92,8 @@
      "length": "20:28",
      "views_as_shown": "3.1M",
      "url": "https://www.youtube.com/watch?v=NK88iwkvjfM",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -95,7 +103,8 @@
      "length": "8:21",
      "views_as_shown": "407K",
      "url": "https://www.youtube.com/watch?v=gh-0fA55DM8",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     }
    ]
   },
@@ -112,7 +121,8 @@
      "length": "18:41",
      "views_as_shown": "426K",
      "url": "https://www.youtube.com/watch?v=YOaJo5a-MCw",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -122,7 +132,8 @@
      "length": "36:27",
      "views_as_shown": "139K",
      "url": "https://www.youtube.com/watch?v=5Jpx0k-oCdQ",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -132,7 +143,8 @@
      "length": "6:14",
      "views_as_shown": "200K",
      "url": "https://www.youtube.com/watch?v=8U1qSSKRCH4",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     }
    ]
   },
@@ -149,7 +161,8 @@
      "length": "16:35",
      "views_as_shown": "207K",
      "url": "https://www.youtube.com/watch?v=_Q56V0ISF5o",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -159,7 +172,8 @@
      "length": "15:08",
      "views_as_shown": "2M",
      "url": "https://www.youtube.com/watch?v=FVzdkDLyuHY",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -169,7 +183,8 @@
      "length": "19:47",
      "views_as_shown": "4.4K",
      "url": "https://www.youtube.com/watch?v=XGHivfQPOx0",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     }
    ]
   },
@@ -181,12 +196,14 @@
     {
      "kind": "specific-video",
      "platform": "YouTube",
-     "title": "Inside the #1 Sushi Restaurant in the US (Exclusive Access)",
+     "title": "Inside the \\#1 Sushi Restaurant in the US (Exclusive Access)",
      "uploader": "Michael Ligier",
      "length": "24:57",
      "views_as_shown": "1.1M",
      "url": "https://www.youtube.com/watch?v=UFpEdSl9FL8",
-     "verified": true
+     "verified": true,
+     "note": "the video itself is Sushi Sho in NYC (its chapter list names Sushi Sho); it is not titled with the restaurant name",
+     "venue_named_in_title": false
     },
     {
      "kind": "specific-video",
@@ -197,7 +214,8 @@
      "views_as_shown": "unknown",
      "url": "https://www.youtube.com/watch?v=xpAu6mSBB1w",
      "verified": true,
-     "note": "title names Sushi Sho New York; view and length figures were not shown on the search page"
+     "note": "title names Sushi Sho New York; view and length figures were not shown on the search page",
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-short",
@@ -208,7 +226,8 @@
      "views_as_shown": "233K",
      "url": "https://www.youtube.com/shorts/5Kt2YFv0eYc",
      "verified": true,
-     "note": "title names Sushi Sho explicitly"
+     "note": "title names Sushi Sho explicitly",
+     "venue_named_in_title": true
     }
    ]
   },
@@ -225,7 +244,8 @@
      "length": "8:24",
      "views_as_shown": "54K",
      "url": "https://www.youtube.com/watch?v=6nllLkZqO78",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -236,7 +256,8 @@
      "views_as_shown": "1.4K",
      "url": "https://www.youtube.com/watch?v=rzLHu8hWfjQ",
      "verified": true,
-     "note": "description names Atomix"
+     "note": "description names Atomix",
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -246,7 +267,8 @@
      "length": "16:58",
      "views_as_shown": "3.3K",
      "url": "https://www.youtube.com/watch?v=sEfkvUGVdZI",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     }
    ]
   },
@@ -263,7 +285,8 @@
      "length": "10:26",
      "views_as_shown": "529K",
      "url": "https://www.youtube.com/watch?v=N3R3_9nS3Z0",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     }
    ]
   },
@@ -280,7 +303,8 @@
      "length": "7:11",
      "views_as_shown": "20K",
      "url": "https://www.youtube.com/watch?v=RTkrEpQ0iqA",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -290,7 +314,8 @@
      "length": "3:34",
      "views_as_shown": "8.4K",
      "url": "https://www.youtube.com/watch?v=wxEYW0cnEMo",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -300,7 +325,8 @@
      "length": "12:09",
      "views_as_shown": "240K",
      "url": "https://www.youtube.com/watch?v=IdIIURNscCM",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     }
    ]
   },
@@ -316,7 +342,8 @@
      "length": "18:43",
      "views_as_shown": "10K",
      "url": "https://www.youtube.com/watch?v=KZ7qvNnW7no",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -326,7 +353,8 @@
      "length": "3:17",
      "views_as_shown": "77K",
      "url": "https://www.youtube.com/watch?v=wdPi5OIUpRU",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "specific-video",
@@ -336,7 +364,8 @@
      "length": "15:00",
      "views_as_shown": "7.9K",
      "url": "https://www.youtube.com/watch?v=ZMvkM_b4hTU",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     },
     {
      "kind": "channel",
@@ -344,7 +373,8 @@
      "title": "Guggenheim Museum — official channel",
      "uploader": "@guggenheim",
      "url": "https://www.youtube.com/@guggenheim",
-     "verified": true
+     "verified": true,
+     "venue_named_in_title": true
     }
    ]
   }

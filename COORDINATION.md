@@ -53,6 +53,13 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T24 | Integration of T67–T70 & `audit-53d4ee2e.md` onto `main` | `done` | `8e38e7e7` | shared outputs, `COORDINATION.md`, PR #11 |
 | T71 | Verification audit remediation (Issue #3 / `snapshot-audit.md`), live direct SynXis/Arlo hotel quotes & seasonality, 100% active MICHELIN addresses/hours & 25 priced menus, measured MTA GTFS + Census/NYC GeoSearch 1h transit ranking (`transit_1h.json`), mobile & renderer fixes, CI, PR & merge to `main` | `done` | `arena-25fd4b76` | `data/*.json`, `*.html`, `pages/*.html`, `assets/*`, `research/**`, `scripts/**`, `.github/workflows/**`, `COORDINATION.md` |
 
+**T24 post-merge proofread (26 Nov 2026):** the merged page was read on the live site, not just validated
+locally. Four defects that every check passed were fixed on this branch in a follow-up commit: nine
+`hotels.html#<id>` links pointing at anchors that do not exist because that table is rendered from JSON;
+a matrix column headed "The" instead of "Mayfair"; a prose claim of "four hotels within 0.8 minutes" when
+the data shows five; and "close call" conflating a ranking gap with a stability spread. Details in
+`FLAGS.md` §5.
+
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |

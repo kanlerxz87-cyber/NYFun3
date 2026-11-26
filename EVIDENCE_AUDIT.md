@@ -78,6 +78,20 @@ Two specific posts *were* opened and confirmed in earlier sessions and are kept 
 `pages/dining.html`: an Eater TikTok on Le Bernardin and a Jack's Dining Room TikTok on Rezdôra.
 They are recorded as leads, not as sources for any fact.
 
+### What this session added
+
+`data/review_links.json` now holds **26 posts that were opened individually** for 8 restaurants and one
+museum, each with the title, uploader, length and view count as shown on the page. Two cautions are built
+into it rather than hidden:
+
+- **25 of the 26 name the venue in their own title.** One — a Sushi Sho documentary — films the restaurant
+  without naming it in the title; the register marks it `venue not in the title` and the Decide page renders
+  that mark, rather than letting the row imply a self-evident match.
+- **A view count is not a fact about the venue.** It is transcribed so the reader can judge reach; it does
+  not establish quality, price, hours, or that the food shown is the food served in February 2027.
+
+The other 78 venues still have nothing but search links. That is published, not patched over.
+
 **Recommendation S6 on the Decide page** turns this into work: replace each search URL with a specific
 video or post that has been opened and confirmed to be about that venue, and label the ones that have none.
 
