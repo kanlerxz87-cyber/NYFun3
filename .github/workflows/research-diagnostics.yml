@@ -11,19 +11,26 @@ on:
       - '.github/workflows/research-diagnostics.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   transit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Compute measured 1-hour hotel-to-MICHELIN transit times
-        run: python3 research/scripts/compute_transit.py
-      - name: Upload transit artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: transit-report
-          path: research/generated/transit_1h.json
-          retention-days: 30
+        run: python3 research/scripts/compute_transit.py 2>&1 | tee research/generated/transit_run.log
+      - name: Commit generated transit report to branch
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/generated/transit_run.log
+          if [ -f research/generated/transit_1h.json ]; then git add research/generated/transit_1h.json; fi
+          git diff --cached --quiet || (git commit -m "Update generated MTA GTFS transit report [skip ci]" && git push origin HEAD:${GITHUB_REF_NAME})

@@ -83,7 +83,26 @@ def in_nyc_bbox(lat: float, lon: float) -> bool:
 
 def geocode_address(raw_addr: str):
     cleaned = clean_address(raw_addr)
-    # 1. U.S. Census Geocoder
+    # 1. NYC Department of City Planning GeoSearch (fast, authoritative NYC addresses)
+    for candidate in (cleaned, raw_addr):
+        qs = urllib.parse.urlencode({"text": candidate, "size": 1})
+        try:
+            data = fetch_json(f"{NYC_GEOSEARCH_URL}?{qs}", timeout=15)
+            feats = data.get("features", [])
+            if feats:
+                lon, lat = feats[0]["geometry"]["coordinates"][:2]
+                lat, lon = float(lat), float(lon)
+                if in_nyc_bbox(lat, lon):
+                    return {
+                        "lat": round(lat, 6),
+                        "lon": round(lon, 6),
+                        "matched_address": feats[0].get("properties", {}).get("label", ""),
+                        "geocoder": "NYC Planning GeoSearch",
+                    }
+        except Exception as exc:
+            print(f"GeoSearch warn ({candidate}): {exc}", flush=True)
+
+    # 2. U.S. Census Geocoder fallback
     for candidate in (cleaned, raw_addr):
         qs = urllib.parse.urlencode({
             "address": candidate,
@@ -103,27 +122,8 @@ def geocode_address(raw_addr: str):
                         "matched_address": matches[0].get("matchedAddress", ""),
                         "geocoder": "US Census Geocoder",
                     }
-        except Exception:
-            pass
-
-    # 2. NYC Department of City Planning GeoSearch fallback
-    for candidate in (cleaned, raw_addr):
-        qs = urllib.parse.urlencode({"text": candidate, "size": 1})
-        try:
-            data = fetch_json(f"{NYC_GEOSEARCH_URL}?{qs}", timeout=20)
-            feats = data.get("features", [])
-            if feats:
-                lon, lat = feats[0]["geometry"]["coordinates"][:2]
-                lat, lon = float(lat), float(lon)
-                if in_nyc_bbox(lat, lon):
-                    return {
-                        "lat": round(lat, 6),
-                        "lon": round(lon, 6),
-                        "matched_address": feats[0].get("properties", {}).get("label", ""),
-                        "geocoder": "NYC Planning GeoSearch",
-                    }
-        except Exception:
-            pass
+        except Exception as exc:
+            print(f"Census warn ({candidate}): {exc}", flush=True)
     return None
 
 
