@@ -56,16 +56,13 @@ multiplication alone. The verified figures are stored in `data/hotels.json` as `
 source URL; the page arithmetic needs its owner to re-derive it. Left in place and flagged rather than
 silently edited while another session owns the page.
 
-## 4. Star counts: three different totals for the same city
+## 4. Star counts: 2025 baseline vs current NYC directory
 
-- The shipped dataset has **72** starred restaurants (5 three-star, 15 two-star, 52 one-star).
-- The current official all-starred directory displays **3 / 14 / 50 = 67** while its own result line says
-  "1–48 of 69".
-- The 2025 selection announcement is the source of the 72.
+- The root dataset has **72** starred restaurants (5 three-star, 15 two-star, 52 one-star) from the 2025 announcement.
+- The current official all-starred directory displays **5 / 14 / 50 = 69**; the earlier “3 / 14 / 50” reading misidentified its “Distinction 3” active-filter badge.
+- `guide-2026.html` now distinguishes Starred, Bib Gourmand, and merely Guide-listed venues for 15 verified examples.
 
-Published as NR-01. Effect on this work: the ranking counts starred restaurants from the local dataset, so
-its "65 within 60 minutes" is a count against **72**, not against the Guide's current 67/69. The next
-MICHELIN ceremony is **14 December 2026** — before the trip — so any tier can change before February.
+Published as NR-01. The measured GTFS ranking reaches **65 of 72** starred rows: 7 rows are unmeasured because addresses/geocodes were unavailable; this is not a count against a 67/69 total. The next MICHELIN ceremony is **14 December 2026** — before the trip — so any tier can change before February.
 
 ## 5. Review links: search pages were labelled as reviews
 

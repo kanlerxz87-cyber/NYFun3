@@ -1,7 +1,7 @@
 {
   "_meta": {
     "compiled": "2026-11-26",
-    "selection": "MICHELIN Guide New York 2025 selection announced 18 November 2025. This site retains the announcement's 72 starred rows (5 three-star, 15 two-star, 52 one-star). The official NYC all-starred directory reports 69 active NYC starred restaurants (5 / 14 / 50) on 26 Nov 2026; dynamic count differences are flagged, not reconciled.",
+    "selection": "MICHELIN Guide New York 2025 selection announced 18 November 2025. This site retains the announcement’s 72 starred rows (5 three-star, 15 two-star, 52 one-star). The official NYC all-starred directory reports 69 active NYC starred restaurants (5 / 14 / 50) on 26 Nov 2026; the scope difference is flagged, not reconciled.",
     "official_list_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
     "star_caveat": "THE NEXT NEW YORK CEREMONY IS SCHEDULED FOR 14 DECEMBER 2026 — before this trip. Re-verify every star after that date. Nothing on this page should be treated as final for Feb/Mar 2027.",
     "counts": {
@@ -10,7 +10,7 @@
       "one_star": 52,
       "total": 72
     },
-    "one_star_discrepancy": "Official NYC directory reports 50 one-star restaurants; the 18 Nov 2025 announcement lists 52 one-star names. Two same-day 26 Nov 2026 directory fetches displayed different three-star counts (3 and 5). Differences are flagged, not silently reconciled.",
+    "one_star_discrepancy": "Official NYC directory reports 50 one-star restaurants; the 18 Nov 2025 announcement lists 52 one-star names. An earlier \"3 / 14 / 50\" reading misidentified the directory’s \"Distinction 3\" active-filter badge; current live counts are 5 / 14 / 50 = 69. The 2025-vs-current scope difference is flagged, not silently reconciled.",
     "price_rule": "Selected restaurants now show a couple subtotal only when a first-party menu, FAQ or PDF states a per-person price. Every figure is written as 2 × the official per-person amount and is NOT a quoted all-in total; beverages, tax and gratuity are excluded unless the official page says otherwise. All other rows remain blank and flagged unverified. No 2027 price inference is allowed.",
     "in_or_near_nyc": "Blue Hill at Stone Barns (Tarrytown) and La Bastide (North Salem) are outside the NYC subway network. They are kept in the list for completeness and marked 'outside transit rule'.",
     "cluster_rule": "A cluster is filled only where the MICHELIN page itself names the area. Two rows with a Guide-blurb clue (Daniel and Torrisi) still carry cluster_flag and are rendered as “Not yet grouped”; they are not silently verified.",
@@ -25,7 +25,7 @@
     "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
     "next_ceremony_source_url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
     "official_list_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
-    "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. Two same-day directory fetches displayed different three-star counts (3/14/50 and 5/14/50); the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled.",
+    "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. An earlier \"3 / 14 / 50\" reading misidentified the official directory’s \"Distinction 3\" active-filter badge; current live NYC counts are 5 / 14 / 50 = 69; the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled.",
     "source_links": [
       {
         "label": "2025 NYC star announcement",
