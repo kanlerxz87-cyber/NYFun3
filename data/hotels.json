@@ -44,24 +44,45 @@
       "name": "HGU New York",
       "address": "34 E 32nd St, New York, NY 10016",
       "area": "NoMad / Midtown South",
-      "official_site": "https://www.hgunewyork.com/",
-      "booking_url": "https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
-      "source_url": "https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+      "official_site": "https://hgunyc.com/",
+      "booking_url": "https://be.synxis.com/?hotel=3093&arrive=2027-02-15&depart=2027-02-22&adult=2&child=0",
+      "source_url": "https://be.synxis.com/?hotel=3093&arrive=2027-02-15&depart=2027-02-22&adult=2&child=0",
       "search_page_cheapest_total_usd": 1092.0,
       "rate_tiers": [
         {
-          "room": "Queen",
+          "room": "King Standard (Direct SynXis all-in, incl. taxes & fees)",
+          "total_before_tax_usd": 1200,
+          "all_in_total_usd": 1200,
+          "total_is_all_in": true,
+          "per_night_usd": 171,
+          "cancellation": "Check rate terms on SynXis",
+          "meets_bed_rule": "Yes (king >= queen)",
+          "notes": "Live SynXis quote captured 2026-11-26 for Feb 15–22, 2027 (2 adults); includes all fees and taxes."
+        },
+        {
+          "room": "Queen Deluxe (Direct SynXis all-in, incl. taxes & fees)",
+          "total_before_tax_usd": 1257,
+          "all_in_total_usd": 1257,
+          "total_is_all_in": true,
+          "per_night_usd": 180,
+          "cancellation": "Check rate terms on SynXis",
+          "meets_bed_rule": "Yes (1 queen bed)",
+          "notes": "14-night Feb 15–Mar 1, 2027 Queen Deluxe also quoted at $2,432 all-in ($174/nt, Stay 5+ Nights & Save)."
+        },
+        {
+          "room": "King Standard Room (Booking.com pre-tax snapshot)",
           "total_before_tax_usd": 1091.6,
-          "per_night_usd": null,
-          "cancellation": "See rate card on Booking.com",
-          "meets_bed_rule": "Queen — meets the queen-or-larger rule"
+          "per_night_usd": 156,
+          "cancellation": "Non-refundable",
+          "meets_bed_rule": "Yes (king >= queen)",
+          "notes": "Booking.com snapshot excludes ~$213 in NYC taxes & fees (~$1,305 estimated total)."
         }
       ],
       "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
-      "room_meets_queen_or_larger": "Yes — queen bed listed.",
+      "room_meets_queen_or_larger": "Yes — King Standard ($1,200 all-in direct) and Queen Deluxe ($1,257 all-in direct) both satisfy queen-or-larger.",
       "amenities": "",
       "amenities_flag": "Amenity list not yet captured from an official page.",
-      "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
+      "taxes_note": "Direct SynXis quotes ($1,200 King Standard / $1,257 Queen Deluxe for Feb 15–22) include all taxes & fees; Booking.com $1,091.60 snapshot excludes ~$213 in taxes/fees.",
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "NoMad / Flatiron / Koreatown",
       "michelin_note": "Closest to Atomix ★★, Odo ★★, Joo Ok ★★, Rezdôra ★, Semma ★, 63 Clinton ★, Gramercy Tavern ★. Measured transit time per venue not verified.",
@@ -83,18 +104,18 @@
           "total_before_tax_usd": 1183.0,
           "per_night_usd": null,
           "cancellation": "See rate card on Booking.com",
-          "meets_bed_rule": "King — meets the queen-or-larger rule"
+          "meets_bed_rule": "Yes (king >= queen)"
         },
         {
           "room": "King",
           "total_before_tax_usd": 1482.0,
           "per_night_usd": null,
           "cancellation": "See rate card on Booking.com",
-          "meets_bed_rule": "King"
+          "meets_bed_rule": "Yes (king >= queen)"
         }
       ],
       "room_meets_private_bathroom": "Yes — 'Attached bathroom' on the rate card.",
-      "room_meets_queen_or_larger": "Yes — king bed listed.",
+      "room_meets_queen_or_larger": "Yes — 1 King Bed satisfies queen-or-larger.",
       "amenities": "",
       "amenities_flag": "Amenity list not yet captured from an official page.",
       "taxes_note": "14.75% tax + $4 per night city tax added at checkout.",
@@ -109,7 +130,7 @@
       "name": "citizenM New York Times Square",
       "address": "218 W 50th St, New York, NY 10019",
       "area": "Midtown / Times Square",
-      "official_site": "https://www.citizenm.com/hotels/usa/new-york/times-square",
+      "official_site": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/overview/",
       "booking_url": "https://www.booking.com/hotel/us/citizenm-new-york-times-square-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "source_url": "https://www.booking.com/hotel/us/citizenm-new-york-times-square-new-york.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "search_page_cheapest_total_usd": 1113.0,
@@ -120,7 +141,7 @@
       "amenities_flag": "",
       "taxes_note": "Taxes/fees shown at checkout; exact lines not captured for this property.",
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
-      "michelin_cluster": "Midtown / Hell's Kitchen / Columbus Circle",
+      "michelin_cluster": "Midtown West / Times Square — near 50 St (1, C, E), 49 St (N, R, W), and 7 Ave (B, D, E).",
       "michelin_note": "Closest to Masa ★★, Jean-Georges ★★, The Modern ★★, Kochi ★, Le Pavillon ★, Icca ★, Torrisi ★, Gabriel Kreuther ★★. Measured transit time per venue not verified.",
       "michelin_within_1h_count": null,
       "michelin_count_flag": "Needs a measured journey time per restaurant."
@@ -140,28 +161,28 @@
           "total_before_tax_usd": 1327.0,
           "per_night_usd": 163.0,
           "cancellation": "Non-refundable; one free reschedule until 2027-02-08",
-          "meets_bed_rule": "1 king bed — meets the queen-or-larger rule. NOTE: this specific rate card is the ADA-accessible room; a non-ADA king must be selected at booking if accessibility features are not required."
+          "meets_bed_rule": "Yes (king >= queen)"
         },
         {
           "room": "King (Black Friday Deal tier)",
           "total_before_tax_usd": 1416.58,
           "per_night_usd": 176.0,
           "cancellation": "Free cancellation before 2027-02-08",
-          "meets_bed_rule": "1 king bed"
+          "meets_bed_rule": "Yes (king >= queen)"
         },
         {
           "room": "King",
           "total_before_tax_usd": 1446.0,
           "per_night_usd": 180.0,
           "cancellation": "Free cancellation before 2027-02-13",
-          "meets_bed_rule": "1 king bed"
+          "meets_bed_rule": "Yes (king >= queen)"
         },
         {
           "room": "King",
           "total_before_tax_usd": 1384.58,
           "per_night_usd": 172.0,
           "cancellation": "Free cancellation before 2027-02-01",
-          "meets_bed_rule": "1 king bed"
+          "meets_bed_rule": "Yes (king >= queen)"
         }
       ],
       "room_meets_private_bathroom": "Yes — 'Attached bathroom' listed on the rate cards.",
@@ -237,9 +258,9 @@
     {
       "id": "blue-angel-hotel",
       "name": "Blue Angel Hotel",
-      "address": "1234 Broadway, New York, NY 10001",
-      "area": "NoMad / Herald Square",
-      "official_site": "https://www.blueangelhotel.com/",
+      "address": "152 E 55th St, New York, NY 10022",
+      "area": "Midtown East / Sutton Place",
+      "official_site": "https://www.choicehotels.com/new-york/new-york/ascend-hotels/ny842",
       "booking_url": "https://www.booking.com/hotel/us/blue-angel-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "source_url": "https://www.booking.com/hotel/us/blue-angel-hotel.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
       "search_page_cheapest_total_usd": 990.0,
@@ -247,10 +268,10 @@
       "room_meets_private_bathroom": "Yes — en-suite listed.",
       "room_meets_queen_or_larger": "NO — cheapest tier is a full bed and the room category captured has no windows. FAILS the bed requirement and is a poor choice for a 1–2 week stay.",
       "amenities": "",
-      "amenities_flag": "Amenity list not yet captured from an official page.",
+      "amenities_flag": "Booking.com snapshot had misassigned address (1234 Broadway); corrected to Choice Hotels official listing 152 E 55th St, NY 10022.",
       "taxes_note": "Taxes/fees shown at checkout.",
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
-      "michelin_cluster": "NoMad / Herald Square",
+      "michelin_cluster": "Midtown East — near Lexington Av/53 St (E, F) and 51 St (6).",
       "michelin_note": "Good cluster proximity but disqualified on bed type and windowless rooms.",
       "michelin_within_1h_count": null,
       "michelin_count_flag": "No measured journey time captured for this hotel."

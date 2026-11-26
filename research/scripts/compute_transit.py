@@ -55,8 +55,14 @@ def haversine_m(lat1, lon1, lat2, lon2):
 
 def clean_address(addr: str) -> str:
     s = re.sub(r"\s*\([^)]*\)", "", addr).strip()
+    # Strip building/hotel prefixes before comma when followed by a street address
+    s = re.sub(r"^(?:Trump International Hotel & Tower|11 Howard Hotel),\s*", "", s)
+    s = re.sub(r",\s*(?:Ste\.?|Suite|Fl\.?|Floor)\s*[^,]+", "", s, flags=re.I)
+    s = re.sub(r",\s*\d+(?:st|nd|rd|th)\s+Fl\.?", "", s, flags=re.I)
     s = re.sub(r"\s+#\S+", "", s)
+    s = s.replace("Long Island City, Queens, NY", "Long Island City, NY")
     s = s.replace("Ninth Ave.", "9th Ave").replace("Ninth Ave", "9th Ave")
+    s = s.replace("Tenth Ave.", "10th Ave").replace("Tenth Ave", "10th Ave")
     s = s.replace("Eighth Ave.", "8th Ave").replace("Seventh Ave.", "7th Ave")
     s = s.replace("Fifth Ave.", "5th Ave").replace("Sixth Ave.", "6th Ave")
     s = re.sub(r"\b(St|Ave|Pl|Sq|Rd|Blvd)\.", r"\1", s)
@@ -385,21 +391,26 @@ def main():
         active_restaurants.append(r)
 
     print(f"Geocoding {len(hotels_data['hotels'])} hotels and {len(active_restaurants)} active NYC restaurants...")
-    hotel_coords = {}
-    for h in hotels_data["hotels"]:
-        g = geocode_address(h["address"])
-        if not g:
-            raise RuntimeError(f"Failed to geocode hotel {h['name']}: {h['address']}")
-        hotel_coords[h["id"]] = g
-        time.sleep(0.05)
+    from concurrent.futures import ThreadPoolExecutor
 
-    rest_coords = {}
-    for r in active_restaurants:
-        g = geocode_address(r["address"])
-        if not g:
-            raise RuntimeError(f"Failed to geocode restaurant {r['name']}: {r['address']}")
-        rest_coords[r["name"]] = g
-        time.sleep(0.05)
+    def _geo_hotel(h):
+        return h["id"], geocode_address(h["address"]), h
+
+    def _geo_rest(r):
+        return r["name"], geocode_address(r["address"]), r
+
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        hotel_coords = {}
+        for hid, g, h in pool.map(_geo_hotel, hotels_data["hotels"]):
+            if not g:
+                raise RuntimeError(f"Failed to geocode hotel {h['name']}: {h['address']}")
+            hotel_coords[hid] = g
+
+        rest_coords = {}
+        for rname, g, r in pool.map(_geo_rest, active_restaurants):
+            if not g:
+                raise RuntimeError(f"Failed to geocode restaurant {r['name']}: {r['address']}")
+            rest_coords[rname] = g
 
     print(f"Downloading MTA GTFS Subway feed from {GTFS_SUBWAY_URL}...")
     req = urllib.request.Request(GTFS_SUBWAY_URL, headers={"User-Agent": "NYFun3-TransitBot/1.0"})
