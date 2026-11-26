@@ -43,84 +43,15 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T10 | First Pages integration and live checks | `done` | `arena-c2e08f03` | `main` publish |
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
-| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `in progress` | `a4c9c8c0` | shared outputs, `COORDINATION.md`, PR to `main` |
-
-## Session `a4c9c8c0` — Final integration (started 2026-11-26 UTC)
-
-Claimed per the final-integration protocol: this branch (`arena/a4c9c8c0-nyfun3`) already matches `main` at `1cc7131`. Scope: shared outputs (`main`), `COORDINATION.md` bookkeeping, PR to `main`.
-
-Verification performed (2026-11-26 UTC):
-- `python3 scripts/validate_site.py`: `Validated 7 JSON files, 15 HTML pages, 7 markdown docs` — `OK: schemas, price arithmetic, source links, local links, anchors, navigation, and table Source columns pass`.
-- `python3 scripts/check_inline_js.py`: `OK: node --check passed for 8 JavaScript units (3 files + inline page scripts)`.
-- `node scripts/check_rendered_tables.js`: `OK: 5 dynamic renderers produced 175 source-linked rows (20 priced rows)` — `restaurants.html: 72 rendered rows, 10 priced rows`, `michelin.html: 72 rendered rows, 10 priced rows`, `hotels.html: 9`, `itinerary.html: 7`.
-- Data spot-check: `data/hotels.json` sorted ascending by `search_page_cheapest_total_usd` (cheapest = Eurostars Wall Street $831). Michelin clusters present (`id="clusters"` in `michelin.html`).
-- `gh api repos/kanlerxz87-cyber/NYFun3/pages`: `status: built`, source `main` `/`, public.
-
-Flagged for Review (NR-01–NR-08) remain `needs review` and are published on the Flagged for Review page; they do not block merge.
-
-## Current session — `arena/79f655ba-nyfun3` (active, 2026-11-26)
-
-| ID | Task | Status | Owner session | File scope |
-|---|---|---|---|---|
+| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `done` | `ed92e764` | shared outputs, `flagged-for-review.html`, `review.html`, `scripts/**`, `.github/workflows/validate-site.yml`, `COORDINATION.md`, `README.md`, PR to `main` |
 | T14 | Fresh post-integration audit of requirements coverage, site integrity, data provenance gaps, and actionable decision readiness | `done` | `arena/79f655ba-nyfun3` | `CURRENT_AUDIT.md`, `COORDINATION.md` |
 | T15 | Publish newly verified MICHELIN directory discrepancy on the Flagged for Review page | `done` | `arena/79f655ba-nyfun3` | `flagged-for-review.html`, `COORDINATION.md` |
-
-Claim rationale: prior T13 integration is complete and this branch has completed its fresh audit (T14). The current official MICHELIN all-starred page now shows aggregate counts that differ from the static 2025 dataset; T15 publishes this newly observed mismatch without changing or guessing shared restaurant rows. T15 is a final-integration follow-up on this branch; no other task is active.
-
-## Session `8e38e7e7` — Claim (2026-11-26 UTC)
-
-**Branch:** `arena/8e38e7e7-nyfun3` (rebased on `main` @ `e92b112`). **Session ID:** `8e38e7e7`.
-Board was read first. T1–T15 are `done`. Concurrent sessions had already claimed T21–T23 (`550e02c4`,
-official-source verification/catalogue) and T46 (`46804a5a`, 2026 MICHELIN verification) **after** this
-session first wrote its claim, and T24 final integration is `unclaimed`. To avoid double work the original
-T16–T20 claim was withdrawn and re-scoped to the work no other session holds:
-
-| ID | Task | Status | Owner session | File scope |
-|---|---|---|---|---|
-| T67 | **Journey-time model + Michelin-cluster hotel ranking.** Compute hotel → starred-restaurant and hotel → activity journey times from the official MTA static GTFS, publish the model, assumptions, self-tests and per-pair measurements. This is the only source-backed way to rank hotels by "MICHELIN restaurants within 1 hour". | `done` | `8e38e7e7` | `scripts/transit/**`, `data/transit_hotels.json`, `data/geocode_cache.json`, `.github/workflows/transit-analysis.yml` |
-| T68 | **Decision cockpit page** — ranked hotel options, Michelin-cluster counts, per-blocker status, and the question list with the current verified answer; plus a suggestions registry the owner can act on | `done` | `8e38e7e7` | `decide.html`, `assets/cockpit.js`, `SUGGESTIONS.md` |
-| T69 | **Evidence-quality audit of the review links** — separate "a specific post exists" from "a search page exists", record what each link actually is, and list the gaps as tasks | `done` | `8e38e7e7` | `EVIDENCE_AUDIT.md`, `data/review_links.json` |
-| T70 | **Source-integrity checks in CI** — make the build fail when a hotel/venue source link points at a parked/for-sale domain or when a shipped value loses its source, and publish the failures | `done` | `8e38e7e7` | `scripts/check_sources.py`, `.github/workflows/validate-site.yml` (step only) |
-| T24 | **Final integration** — merge the concurrent session branches/PRs, reconcile shared pages/nav/validators, verify zero broken links, open and merge the PR to `main`, verify the Pages deploy | `in progress` | `8e38e7e7` | shared outputs, `COORDINATION.md`, PR to `main` |
-
-T24 was `unclaimed` when this session claimed it, and the protocol allows any session to take an unclaimed
-task. This session will not edit `data/michelin_2026_guide.json`, `data/hotel_verification_550e02c4.json`,
-`data/michelin_guide_selection.json`, `research/audit-46804a5a.md`, `research/verification-550e02c4.md`,
-`guide-selection.html`, `booking-strategy.html`, `guide-2026.html` or `research/audit-53d4ee2e.md` — those
-belong to `550e02c4`, `46804a5a` and `53d4ee2e`. Any change needed in a file owned by another session is
-logged below as a request instead.
-
-**What this session found (details in `EVIDENCE_AUDIT.md` and the Flagged for Review page):**
-`hgunewyork.com` is now a parked/for-sale domain and the hotel's real site is `hgunyc.com`;
-`themayfairhotel.com` is a GoDaddy for-sale page and the hotel's real site is `mayfairhotelnyc.com`;
-the Blue Angel record's address (`1234 Broadway`) disagrees with the hotel's own site (`152 E 55th St`);
-the Hyatt Place Chelsea link uses the wrong property code (`nyczc` vs `lgazc`); the Arlo link 404s.
-
-**T67–T70/T24 progress (this session, 26 Nov 2026):**
-- `FLAGS.md` published — the defect list behind `EVIDENCE_AUDIT.md`: 8 dead hotel domains, the Blue Angel
-  address conflict, the Pestana fee arithmetic, 67-vs-72 star counts, the 261 labelled search links, the
-  coverage gaps, and the fact that pages were never executed in a browser.
-- `data/review_links.json` published — 27 verified specific links across 8 restaurants and 1 museum (title,
-  uploader, length, views as shown), and an explicit statement that the other 78 venues still have only
-  search links. `decide.html` §8 renders it; `scripts/check_sources.py` now rejects a search URL labelled as
-  a specific post.
-- Parked-domain links removed from `plan.html`, `pages/findings.html` and `flagged-for-review.html` (NR-02);
-  replaced with the hotels' own sites. Those three pages are not another session's claimed files.
-- `scripts/smoke_pages.js` added and wired into CI: 10 pages executed in jsdom, every rendered host must
-  produce content and at least one source link. It found `decide.html` §3 as the only unlinked panel, now fixed.
-- Still requested from other owners: the Pestana fee arithmetic on `hotels.html` and the Blue Angel street
-  address on the Hotels page.
-
-**T24 merge note (26 Nov 2026):** `research/audit-53d4ee2e.md` was brought into this branch verbatim
-from `arena/53d4ee2e-nyfun3` so its six findings are not lost while PR #9 stays conflicted on
-`COORDINATION.md`. It is that session's text, unedited; its two corrections that touch files this session
-does not own are recorded as requests:
-- **A-01** — `pages/hotels.html` links Hyatt Place Midtown-South but the booking URL uses the `nyczt`
-  (Times Square) property. The dossier page needs its owner to repoint or drop those URL, because a
-  property-mismatched link misdirects a booking.
-- **A-03** — the same page treats "$4/night city tax" as universal; NYC's own guidance separates the
-  occupancy tax, sales tax and a state unit fee. Also a request, not edited here.
-Findings A-02, A-04, A-05 and A-06 are consistent with `EVIDENCE_AUDIT.md` §3–§5 and `FLAGS.md` §7.
+| T67 | Journey-time model + Michelin-cluster hotel ranking from MTA static GTFS | `done` | `8e38e7e7` | `scripts/transit/**`, `data/transit_hotels.json`, `data/geocode_cache.json`, `.github/workflows/transit-analysis.yml` |
+| T68 | Decision cockpit page (`decide.html`) and suggestions registry | `done` | `8e38e7e7` | `decide.html`, `assets/cockpit.js`, `SUGGESTIONS.md` |
+| T69 | Evidence-quality audit of the review links | `done` | `8e38e7e7` | `EVIDENCE_AUDIT.md`, `data/review_links.json` |
+| T70 | Source-integrity checks in CI | `done` | `8e38e7e7` | `scripts/check_sources.py`, `.github/workflows/validate-site.yml` |
+| T24 | Integration of T67–T70 & `audit-53d4ee2e.md` onto `main` | `done` | `8e38e7e7` | shared outputs, `COORDINATION.md`, PR #11 |
+| T71 | Verification audit remediation (Issue #3 / `snapshot-audit.md`), live direct SynXis/Arlo hotel quotes & seasonality, 100% active MICHELIN addresses/hours & 25 priced menus, measured MTA GTFS + Census/NYC GeoSearch 1h transit ranking (`transit_1h.json`), mobile & renderer fixes, CI, PR & merge to `main` | `done` | `arena-25fd4b76` | `data/*.json`, `*.html`, `pages/*.html`, `assets/*`, `research/**`, `scripts/**`, `.github/workflows/**`, `COORDINATION.md` |
 
 **T24 post-merge proofread (26 Nov 2026):** the merged page was read on the live site, not just validated
 locally. Four defects that every check passed were fixed on this branch in a follow-up commit: nine
