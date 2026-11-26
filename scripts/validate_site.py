@@ -20,8 +20,8 @@ MARKDOWN_FILES = sorted(ROOT.glob("*.md")) + sorted((ROOT / "research").glob("*.
 JSON_FILES = sorted((ROOT / "data").glob("*.json"))
 WEEKDAYS = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}
 EXPECTED_ROOT_NAV = [
-    "index.html", "activities.html", "restaurants.html", "michelin.html",
-    "hotels.html", "itinerary.html", "transit.html", "plan.html", "flagged-for-review.html",
+    "index.html", "decide.html", "activities.html", "restaurants.html", "michelin.html",
+    "hotels.html", "itinerary.html", "plan.html", "flagged-for-review.html",
     "pages/index.html",
 ]
 EXPECTED_DOSSIER_NAV = [
@@ -241,7 +241,7 @@ for path in JSON_FILES:
 
 expected_counts = {
     "activities.json": (15, "activities"),
-    "hotels.json": (9, "hotels"),
+    "hotels.json": (14, "hotels"),
     "itinerary.json": None,
     "michelin.json": (12, "restaurants"),
     "michelin_two_star.json": (15, "restaurants"),
@@ -270,7 +270,7 @@ for a in activities:
     ht = a.get("hours_table", {})
     if not isinstance(ht, dict) or set(ht) - WEEKDAYS:
         err(f"activities: invalid hours_table for {a.get('name')}")
-    if ht and (a.get("hours_verified_on") != "2026-11-25" or not a.get("hours_baseline_note")):
+    if ht and (a.get("hours_verified_on") not in ("2026-11-25", "2026-11-26") or not a.get("hours_baseline_note")):
         err(f"activities: populated hours missing capture metadata for {a.get('name')}")
     if not ht and not str(a.get("hours_flag", "")).startswith(("UNVERIFIED", "PARTIAL", "SEASONAL", "N/A", "CURRENT")):
         err(f"activities: blank hours missing flag for {a.get('name')}")
@@ -284,17 +284,9 @@ for h in hotels:
     for k in ("official_site", "booking_url", "source_url"):
         if h.get(k) and not valid_http_url(str(h[k])):
             err(f"hotels: invalid {k} for {h.get('name')}")
-    c = h.get("michelin_within_1h_count")
-    if c is not None:
-        if not isinstance(c, int) or isinstance(c, bool) or not (0 <= c <= 72):
-            err(f"hotels: michelin_within_1h_count must be an int 0-72 or null for {h.get('name')}")
-        if "GTFS" not in str(h.get("michelin_count_method", "")):
-            err(f"hotels: non-null count needs a GTFS method note for {h.get('name')}")
-        if not str(h.get("michelin_note", "")).strip():
-            err(f"hotels: non-null count needs a michelin_note for {h.get('name')}")
-        denom = h.get("michelin_count_denominator")
-        if not isinstance(denom, int) or denom < 0 or denom > 72:
-            err(f"hotels: non-null count needs michelin_count_denominator 0-72 for {h.get('name')}")
+    cnt = h.get("michelin_within_1h_count")
+    if not isinstance(cnt, int) or cnt < 0:
+        err(f"hotels: michelin_within_1h_count must be a measured non-negative integer for {h.get('name')}")
     for t in h.get("rate_tiers", []):
         if "room" not in t or not isinstance(t.get("total_before_tax_usd"), (int, float)):
             err(f"hotels: malformed rate tier for {h.get('name')}")
@@ -338,38 +330,10 @@ if michelin_all:
     if meta.get("ungrouped_count") != sum((not r.get("cluster")) or bool(r.get("cluster_flag")) for r in michelin_all):
         err("michelin_all.json: ungrouped_count does not match flagged/blank clusters")
     priced = sum(bool(r.get("price_options")) for r in michelin_all)
-    if priced != 10:
-        err(f"michelin_all.json: expected 10 priced rows, found {priced}")
+    if priced != 25:
+        err(f"michelin_all.json: expected 25 priced rows, found {priced}")
     if "14 DECEMBER 2026" not in str(meta.get("star_caveat", "")).upper():
         err("michelin_all.json: 2026 ceremony caveat missing")
-
-transit = data.get("transit.json")
-if isinstance(transit, dict):
-    thode = transit.get("hotels")
-    if not isinstance(thode, list) or len(thode) != 9:
-        err("transit.json: expected 9 hotels")
-    else:
-        for t in thode:
-            counts = t.get("counts") or {}
-            for window in ("reachable_60", "reachable_45", "reachable_30"):
-                c = counts.get(window) or {}
-                for k in ("three_star", "two_star", "one_star", "total"):
-                    if not isinstance(c.get(k), int) or not (0 <= c[k] <= 72):
-                        err(f"transit.json: bad {window}.{k} for {t.get('id')}")
-                if c.get("total", 0) != c.get("three_star", -1) + c.get("two_star", -2) + c.get("one_star", -3):
-                    err(f"transit.json: {window} total mismatch for {t.get('id')}")
-            entries = t.get("entries", [])
-            if len(entries) != 72:
-                err(f"transit.json: expected 72 entries for {t.get('id')}")
-            for e in entries:
-                if e.get("reachable") is True:
-                    if not isinstance(e.get("minutes"), (int, float)):
-                        err(f"transit.json: reachable entry without minutes for {t.get('id')}: {e.get('name')}")
-                elif e.get("reachable") is None:
-                    if not e.get("reason"):
-                        err(f"transit.json: unplaced entry without reason for {t.get('id')}: {e.get('name')}")
-    if "sources" not in transit.get("_meta", {}):
-        err("transit.json: _meta.sources missing")
 
 itinerary = data.get("itinerary.json", {})
 if itinerary:
@@ -385,6 +349,117 @@ if itinerary:
                 if isinstance(s, dict) and s.get("activity") not in activity_ids:
                     err(f"itinerary.json: unknown activity id {s.get('activity')}")
 
+# Post-merge correction guards. These check data/site corrections without treating
+# explicitly historical audit prose as an active claim.
+def has_hours(row):
+    hours = row.get("hours") or {}
+    return isinstance(hours, dict) and any(str(v).strip() for v in hours.values())
+
+for r in michelin_all:
+    flag = str(r.get("hours_flag") or "")
+    if not has_hours(r) and not flag.startswith(("UNVERIFIED", "PARTIAL", "SEASONAL", "N/A", "CURRENT", "CLOSED")):
+        err(f"michelin_all.json: blank hours without a flag for {r.get('name')}")
+    if has_hours(r) and flag.startswith("UNVERIFIED"):
+        err(f"michelin_all.json: populated hours still carry UNVERIFIED flag for {r.get('name')}")
+
+all_meta = data.get("michelin_all.json", {}).get("_meta", {})
+populated_count = sum(has_hours(r) for r in michelin_all)
+one_star_gap = sum(r.get("stars") == 1 and not has_hours(r) for r in michelin_all)
+if not str(all_meta.get("hours_coverage", "")).startswith(f"{populated_count} of 72"):
+    err("michelin_all.json: hours_coverage metadata does not match row-level count")
+if not str(all_meta.get("one_star_hours_gap", "")).startswith(f"{one_star_gap} one-star"):
+    err("michelin_all.json: one_star_hours_gap metadata does not match row-level count")
+for key in ("official_directory_url", "next_ceremony_source_url", "independent_rechecked_on"):
+    if not all_meta.get(key):
+        err(f"michelin_all.json: missing post-merge metadata {key}")
+
+all_by_name = {r.get("name"): r for r in michelin_all}
+for name in ("michelin.json", "michelin_two_star.json", "michelin_one_star.json"):
+    for r in data.get(name, {}).get("restaurants", []):
+        a = all_by_name.get(r.get("name"))
+        if a and r.get("hours") != a.get("hours"):
+            err(f"{name}: hours differ from michelin_all.json for {r.get('name')}")
+        if not data.get(name, {}).get("_meta", {}).get("independent_rechecked_on"):
+            err(f"{name}: missing independent_rechecked_on metadata")
+            break
+
+hotel_meta = data.get("hotels.json", {}).get("_meta", {})
+if "$3.50/night" not in str(hotel_meta.get("tax_rule", "")) or "14.75%" not in str(hotel_meta.get("tax_rule", "")):
+    err("hotels.json: tax_rule missing verified current tax components")
+tax_sources = hotel_meta.get("tax_source_urls", [])
+if len(tax_sources) < 3 or any(not valid_http_url(str(u)) for u in tax_sources):
+    err("hotels.json: missing or malformed official tax source URLs")
+hotels_by_name = {h.get("name"): h for h in hotels}
+if "hgunyc.com" not in str(hotels_by_name.get("HGU New York", {}).get("official_site", "")):
+    err("hotels.json: HGU official_site is not the verified hgunyc.com domain")
+if "marriott.com" not in str(hotels_by_name.get("citizenM New York Times Square", {}).get("official_site", "")):
+    err("hotels.json: citizenM official_site is not the verified Marriott property page")
+
+# Active fields must not reintroduce corrected-but-invalid values. Historical audit
+# fields such as `official_site_shipped_wrong` and `data/hotel_sources.json` are
+# deliberately preserved as evidence and are not active source links.
+stale_active_urls = [
+    ("hgunewyork" + ".com", "stale HGU domain"),
+    ("citizenm.com/hotels/usa/new-york/times-square", "stale citizenM URL"),
+]
+for h in hotels:
+    for field in ("official_site", "source_url", "booking_url", "official_room_url"):
+        value = str(h.get(field) or "")
+        for needle, label in stale_active_urls:
+            if needle in value:
+                err(f"hotels.json: {h.get('name')} {field} uses {label}")
+    note = str(h.get("taxes_note") or "")
+    if ("$4" + "/night") in note or "$4 per night" in note:
+        err(f"hotels.json: {h.get('name')} taxes_note repeats unsupported $4/night claim")
+for name in ("michelin.json", "michelin_two_star.json", "michelin_one_star.json", "michelin_all.json"):
+    text = (ROOT / "data" / name).read_text()
+    for needle, label in [("/article/c0/a1479", "non-canonical ceremony URL"),
+                          ("$4" + "/night", "unsupported $4/night tax claim")]:
+        if needle in text:
+            err(f"data/{name}: {label} reintroduced")
+
+active_tax_files = [
+    ROOT / "hotels.html", ROOT / "pages/hotels.html", ROOT / "pages/findings.html",
+    ROOT / "decide.html", ROOT / "plan.html", ROOT / "RESEARCH.md", ROOT / "VERIFICATION.md",
+]
+active_bad_tax = [
+    "14.75% tax + $4", "14.75% + $4", "14.75% tax and $4",
+    "14.75% lodging tax plus $4", "14.75% sales tax plus $4",
+]
+for path in active_tax_files:
+    text = path.read_text()
+    for needle in active_bad_tax:
+        if needle in text:
+            err(f"{path.relative_to(ROOT)}: unsupported active tax wording {needle!r}")
+
+review_text = (ROOT / "flagged-for-review.html").read_text()
+for i in range(1, 10):
+    if f'id="NR-{i:02d}"' not in review_text:
+        err(f"flagged-for-review.html: missing NR-{i:02d}")
+for needle in ("Resolved source corrections", "https://www.hgunyc.com/",
+               "https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page",
+               "https://www.tax.ny.gov/pdf/current_forms/st/st101_5.pdf"):
+    if needle not in review_text:
+        err(f"flagged-for-review.html: missing {needle}")
+
+index_text = (ROOT / "index.html").read_text()
+if '<span class="count">9</span><h3>Flagged for Review</h3>' not in index_text:
+    err("index.html: Flagged for Review card does not show 9 items")
+audit_text = (ROOT / "CURRENT_AUDIT.md").read_text()
+for needle in ("Independent recheck corrections", "5 / 14 / 50", "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"):
+    if needle not in audit_text:
+        err(f"CURRENT_AUDIT.md: missing independent recheck evidence {needle!r}")
+for path, needle in [
+    (ROOT / "README.md", "NR-01–NR-09"),
+    (ROOT / "COORDINATION.md", "| NR-09 |"),
+    (ROOT / "plan.html", "NR-09"),
+    (ROOT / "VERIFICATION.md", "Independent post-merge recheck"),
+    (ROOT / "RESEARCH.md", "Independent source recheck"),
+    (ROOT / "REVIEW.md", "R25 — First-party menu-option ambiguity"),
+]:
+    if needle not in path.read_text():
+        err(f"{path.relative_to(ROOT)}: missing post-merge record {needle!r}")
+
 # Report.
 print(f"Validated {len(JSON_FILES)} JSON files, {len(HTML_FILES)} HTML pages, {len(MARKDOWN_FILES)} markdown docs")
 print(f"Rows: {len(activities)} activities, {len(hotels)} hotels, {len(michelin_all)} starred restaurants, {len(itinerary.get('days', []))} itinerary days")
@@ -395,4 +470,4 @@ if errors:
     for e in errors:
         print(" -", e, file=sys.stderr)
     sys.exit(1)
-print("OK: schemas, price arithmetic, source links, local links, anchors, navigation, and table Source columns pass")
+print("OK: schemas, price arithmetic, source links, local links, anchors, navigation, table Source columns, and post-merge correction guards pass")

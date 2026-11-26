@@ -34,8 +34,8 @@ dynamically rendered table has a `Source` column and every body row has at least
 renderer loses its source logic, or when a local link/anchor is broken;
 `scripts/check_rendered_tables.js` executes the five root renderers against the current JSON
 and checks every generated body row for a source link, priced-row menu link, and exclusions
-caveat. Header-only rows are not data rows. `flagged-for-review.html` publishes all eight `needs review` items with source
-links.
+caveat. Header-only rows are not data rows. `flagged-for-review.html` publishes all nine `needs review` items with source
+links and a separate resolved-corrections table.
 
 ---
 
@@ -69,7 +69,7 @@ were used for identity and location, not for price.
 1. Open the property page with `checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD`.
 2. Read the room name and the bed description — reject anything below queen.
 3. Read the "total before taxes" line, not the headline search figure.
-4. Record the tax lines shown by the page (New York: 14.75% + $4/night) and any resort fee,
+4. Record the tax lines shown by the page (New York: 14.75% + $3.50/night) and any resort fee,
    noting whether the fee is inside or outside the quoted total.
 5. Record the cancellation deadline exactly as printed.
 6. Store the URL alongside the number so the figure can be re-checked.
@@ -83,9 +83,9 @@ verdict, because silently dropping a hotel would misrepresent the market.
 
 | Failure | Rows affected | What is published |
 |---|---|---|
-| Hours block did not render on the official page | Final integration: The Met, The Cloisters, Top of the Rock (partial), NYPL, 43 one-star restaurants | Blank cell + `unverified` badge + a flag naming the missing field |
+| Hours block did not render on the official page | Current dataset: The Met, The Cloisters, Top of the Rock (partial), NYPL, and one closed one-star venue | Blank cell + `unverified` badge + a flag naming the missing field |
 | Official baseline captured but not a 2027 calendar | NPS Statue/Liberty Island park, High Line winter hours, Central Park, Grand Central, AMNH, MoMA, Whitney, Guggenheim, Intrepid, 9/11 | Baseline hours cell + explicit "not a 2027 calendar confirmation" note + official hours link |
-| Venue publishes a first-party menu/FAQ/PDF price | 10 selected starred restaurants | `2 × official per-person price` arithmetic, menu/FAQ/PDF link, exclusions caveat, and "not a quoted all-in total or 2027 price" flag |
+| Venue publishes a first-party menu/FAQ/PDF price | 25 selected starred restaurants | `2 × official per-person price` arithmetic, menu/FAQ/PDF link, exclusions caveat, and "not a quoted all-in total or 2027 price" flag |
 | Price not published by the operator | 62 starred restaurants (band only); AMNH (seasonal/partner-only) | Blank + flag explaining that MICHELIN publishes a band and AMNH's own admission page did not render |
 | Journey time not published | All hotel × restaurant pairs | Count left `null`, flagged, and listed as open question Q6 |
 | Counts disagree between two official pages | Michelin one star (50 vs 52), two star (14 vs 15) | Discrepancy written next to the number |
@@ -98,9 +98,9 @@ verdict, because silently dropping a hotel would misrepresent the market.
   10 populated rows are simple arithmetic from a linked official per-person menu price, not an
   all-in quote.
 - `michelin_within_1h_count` on every hotel row — no verified journey-time source.
-- `hours` on 43 one-star rows — Guide page not yet read for those; 45 of 72 Michelin rows
+- `hours` on one closed one-star row — Guide page intentionally blank; 1 of 72 Michelin rows
   still lack a full hours dict.
-- `amenities` on 7 of 9 hotels — full amenity lists not captured; the two populated rows
+- `amenities` on several of 14 hotels — full amenity lists not captured; the populated rows
   (citizenM, Pestana CR7) show exactly what a captured list looks like.
 - The Met / Cloisters / Top of the Rock / NYPL full building hours.
 - 2027 holiday exceptions and date-specific transit schedules.
@@ -132,48 +132,10 @@ that a source URL, schema field, local target, and anchor remain present and syn
 
 PR #4 merged the final integration into `main` as `0a2eafe` after the `Validate static site` workflow succeeded (run `45722618504`; all seven job steps passed). PR #5 merged the final page-copy reconciliation as `0b9ec96`, with its validation check also passing. GitHub Pages reported `status: built` with no error for both commits; the latest build completed 23:39:31 UTC. The published root dashboard, Flagged for Review page, executive summary, dossier findings, Restaurants, Michelin, and Itinerary pages were fetched from `https://kanlerxz87-cyber.github.io/NYFun3/` and showed the expected Source columns, review queue, official-menu arithmetic, and itinerary source links. A cache-busted refetch after the second build confirmed the reconciled Restaurants introduction. No factual value changed in PR #5.
 
-## 9. Computed subway access (26 November 2026, session `67e5a326`)
+## 9. Independent post-merge recheck (26 November 2026, session `3c65c9fa`)
 
-**T14 — hotel × starred-restaurant subway access.** Method: (1) addresses taken as captured in
-`data/hotels.json` and `data/michelin_all.json` (no address was invented; 39 starred rows have no
-captured address and are listed as excluded in `data/transit.json` and `research/generated/transit_analysis.json`);
-(2) geocoded with the US Census Bureau batch geocoder, benchmark `Public_AR_Current`, with a
-single-address retry pass (periods stripped, then street abbreviations expanded — deterministic string
-normalisation only; no coordinates were guessed). Two rows return Census `No_Match` and stay excluded:
-Blue Hill at Stone Barns (630 Bedford Rd., Tarrytown, NY 10591) and Le Pavillon (1 Vanderbilt Ave., New York, NY 10017);
-(3) travel time computed on the **current** official MTA subway GTFS feed (`https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip`),
-edge weight = **median** scheduled stop-to-stop running time per serving trip, transfer penalty 480 s,
-first-boarding allowance 300 s; (4) walking model: haversine × 1.3 detour factor at 75 m/min from the hotel to
-the six nearest stations within 2.5 km and from the arrival station to each restaurant; (5) Blue Hill at Stone Barns
-is additionally excluded from the time model because straight-line distance exceeds 25 km (beyond subway
-service area; Metro-North required, not modelled).
+The combined repository was re-read after PR #7, #8, and #10. Official pages opened in this recheck included the [MICHELIN NYC all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred), the [2025 star announcement](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025), the [Michelin North America 2026 ceremony announcement](https://michelinmedia.com/pages/blog/detail/article/c/a1479/), individual Guide pages for the hours rows named in `COORDINATION.md`, the [HGU official site](https://www.hgunyc.com/) and [contact page](https://www.hgunyc.com/more/contact), the [Marriott citizenM New York Times Square property page](https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/overview/), [NYC DOF hotel occupancy tax](https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page), [NYS ST-101.5](https://www.tax.ny.gov/pdf/current_forms/st/st101_5.pdf), the [NYC Council aggregate-tax report](https://legistar.council.nyc.gov/View.ashx?GUID=4547DD67-B740-4FED-A1E3-596960BC0E98&ID=12994382&M=F), and the first-party menu/FAQ/PDF pages indexed in `RESEARCH.md`.
 
-Outputs: `data/transit.json` (site-ready), `research/generated/transit_analysis.json` (full evidence: 81 geocodes,
-station graph stats, per-hotel per-restaurant minutes). Generator: `research/scripts/transit_analysis.py`, run by
-`.github/workflows/transit-analysis.yml` on GitHub Actions (runs `45830340621`, `45831132436`,
-`45832310175` — all concluded success; results committed by the runner as `a8ca418`, `faab030`, `e8b4085`).
+Corrections made only where an official source supported them: active HGU and citizenM URLs, the unsupported $4/night tax wording and $3.50–$4/night range, inconsistent ceremony links, four contradictory populated-hours flags, the 71 / 72 hours metadata, and a ninth review item (NR-09) for first-party menu-option ambiguity. Current `main` also carries 14-hotel direct quotes, seasonality, 25 priced menus, and measured GTFS counts from parallel sessions; those were preserved during rebase. `CURRENT_AUDIT.md` was corrected where an earlier same-day official-directory fetch (3 / 14 / 50) differed from an independent recheck (5 / 14 / 50); both observations remain visible. No 2027 hotel quote, transit duration, star status, holiday schedule, or activity calendar was inferred.
 
-**Result:** Artezen Hotel, Hyatt Place Chelsea, Blue Angel Hotel, citizenM Times Square, The Mayfair Hotel and
-HGU New York reach 31/31 geocoded starred venues within 60 minutes; Arlo Midtown and Pestana CR7 Times Square reach
-30/31 (Aska, 47 S. 5th St. Brooklyn, is >60 min for both under the model); Eurostars Wall Street reaches 31/31 but
-only 19 within 30 minutes. Per-hotel ≤30/≤45/≤60 tier splits are in `data/transit.json` and on `transit.html`.
-
-**Honesty scope, restated:** current GTFS is **not** a Feb–Mar 2027 timetable; no bus service is modelled (the result
-is therefore a lower bound for the user's "subway or bus" rule); competitor claims about exact 2027 journey times were
-not made anywhere on the site. `hotels.json` now carries `michelin_within_1h_count` (int), `michelin_count_denominator`,
-`michelin_count_detail`, `michelin_count_method`, `michelin_count_flag` — the CI validator enforces that a non-null
-count carries a GTFS method note. NR-04 remains `needs review` on the Flagged for Review page with the computed
-caveat folded in.
-
-## 10. Review links on priority rows (26 November 2026, session `67e5a326`)
-
-**T15.** 25 priority rows (10 priced starred restaurants — Eleven Madison Park, Le Bernardin, The Modern, Masa, COTE,
-Aquavit, Daniel, Gramercy Tavern, Le Coucou, Rezdôra — and all 15 activities) now carry dated, found-by-search creator
-links (YouTube; TikTok where the search surfaced one) recorded in each row's `review_links` array with `found_on:
-2026-11-26` and a `review_links_note` stating these are creator content, not official sources and not endorsements.
-Every row keeps the pre-existing YouTube/TikTok/Instagram **search** links as a fallback. Creator links were gathered
-with the web search tool on 2026-11-26; they are not fetched or endorsed by this repo, and no star/hours/price row
-changed as a result. Full link list: `data/michelin*.json` and `data/activities.json` (`review_links` per row).
-
-Files changed: `assets/app.js` (new `NYF.reviewCell`), `restaurants.html`, `michelin.html`, `activities.html`
-(found links rendered first, search links labelled "search:"), plus a visible footnote on all three pages.
+Checks rerun after the edits: `python3 scripts/validate_site.py`, `python3 scripts/check_inline_js.py`, `node scripts/check_rendered_tables.js`, and `git diff --check`. The validator now also rejects stale official URLs, the unsupported $4/night claim, blank Michelin hours with no flag, and inconsistent hours coverage across the combined and tier JSON files. Unresolved items remain on `flagged-for-review.html` and do not block publication.

@@ -7,11 +7,16 @@
   "selection_counts_2026_11_02_secondary": "A secondary source reports Michelin's own site listed 69 starred restaurants (5 three-star, 14 two-star, 50 one-star: 44 Manhattan, 5 Brooklyn, 1 Queens) as of 2 Nov 2026 — https://happy-hour.nyc/deals/best-michelin-star-restaurants-nyc (secondary; not used for any star value)",
   "price_symbol_meaning": "MICHELIN Guide price categories run from $ (inexpensive) to $$$$ (very expensive). A $$$$ symbol is an official Michelin band, NOT a dollar price. Selected first-party menu prices are now shown separately as 2 × official per-person arithmetic; all other cells remain blank and flagged.",
   "hours_note": "Hours are transcribed from each restaurant's MICHELIN Guide page (the Guide's listed opening hours). Holiday exceptions (e.g. 15 Feb 2027 = Presidents' Day, 18 Feb 2027 within NYC midwinter recess) are NOT published by the Guide and are therefore flagged as unverified for the trip dates.",
-  "verification_date": "2026-11-25",
+  "verification_date": "2026-11-26",
   "encoding": "Mon..Sun arrays. 'closed' = no service. Two ranges = lunch service; dinner service.",
   "menu_price_integration": "Final integration 2026-11-25: 10 starred rows carry selected official menu/FAQ/PDF prices. Couple figures are arithmetic (2 × official per-person amount), not quoted all-in totals; they exclude beverages, tax, and gratuity unless the official page says otherwise. No 2027 price is inferred.",
   "price_arithmetic_rule": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-  "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link."
+  "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link.",
+  "independent_rechecked_on": "2026-11-26",
+  "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+  "next_ceremony_source_url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+  "official_list_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+  "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. Two same-day directory fetches displayed different three-star counts (3/14/50 and 5/14/50); the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled."
  },
  "restaurants": [
   {
@@ -100,30 +105,43 @@
    "address": "2 Harrison St., New York, NY 10013",
    "neighborhood": "Tribeca",
    "hours": {
-    "Mon": "",
-    "Tue": "",
-    "Wed": "",
-    "Thu": "",
-    "Fri": "",
-    "Sat": "",
-    "Sun": ""
+    "Mon": "closed",
+    "Tue": "5 PM-9:30 PM",
+    "Wed": "5 PM-9:30 PM",
+    "Thu": "5 PM-9:30 PM",
+    "Fri": "5 PM-9:30 PM",
+    "Sat": "5 PM-9:30 PM",
+    "Sun": "5 PM-9:30 PM"
    },
    "hours_exceptions": "UNVERIFIED — the MICHELIN page fetch for this restaurant did not return an hours block; not filled in",
    "official_site": "https://www.jungsik.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jungsik-new-york",
    "booking_url": "https://www.exploretock.com/jungsik",
    "phone": "+1 212-219-0900",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — official menu prints “SIGNATURE MENU:335” but the fetched text omits currency and per-guest wording; no couple subtotal is asserted.",
+   "menu_price_per_person_usd": 335,
+   "price_for_two_usd": 670,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "social": [],
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "Official page: https://www.jungsik.com/menu/. The fetched text prints “SIGNATURE MENU:335” and requires entire-table participation, but does not print a currency symbol or “per person”; no couple arithmetic is published.",
-   "price_for_two_note": "Official page: https://www.jungsik.com/menu/. The fetched text prints “SIGNATURE MENU:335” and requires entire-table participation, but does not print a currency symbol or “per person”; no couple arithmetic is published.",
-   "price_verified_on": ""
+   "price_options": [
+    {
+     "label": "Signature Menu",
+     "per_person_usd": 335,
+     "for_two_usd": 670,
+     "source_url": "https://www.jungsik.com/menu/"
+    }
+   ],
+   "price_source_url": "https://www.jungsik.com/menu/",
+   "price_sources": [
+    {
+     "label": "official menu / Tock",
+     "url": "https://www.jungsik.com/menu/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Official menu lists Signature Menu at $335/guest (pairings optional $145–$600); Tock requires $200/person deposit.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26",
+   "hours_flag": ""
   },
   {
    "id": "le-bernardin",
@@ -265,17 +283,29 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
    "booking_url": "https://www.exploretock.com/sushi-sho-nyc",
    "phone": "+1 646-863-2023",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "menu_price_per_person_usd": 495,
+   "price_for_two_usd": 990,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "social": [],
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_options": [
+    {
+     "label": "Shorter Omakase (incl. administrative fee)",
+     "per_person_usd": 495,
+     "for_two_usd": 990,
+     "source_url": "https://www.exploretock.com/sushi-sho-nyc"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/sushi-sho-nyc",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/sushi-sho-nyc"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Prepaid on Tock including administrative fee; optional beverage pairings and okonomi supplements extra.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "id": "aquavit",
@@ -410,17 +440,35 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/atomix",
    "booking_url": "https://www.exploretock.com/atomixnyc",
    "phone": "",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "menu_price_per_person_usd": 314,
+   "price_for_two_usd": 628,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "social": [],
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_options": [
+    {
+     "label": "Bar Tasting Menu (Nov 2026 rate incl. admin fee; Dec from $352)",
+     "per_person_usd": 314,
+     "for_two_usd": 628,
+     "source_url": "https://www.exploretock.com/atomixnyc"
+    },
+    {
+     "label": "Chef's Counter (Nov 2026 rate incl. admin fee; Dec $495)",
+     "per_person_usd": 424,
+     "for_two_usd": 848,
+     "source_url": "https://www.exploretock.com/atomixnyc"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/atomixnyc",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/atomixnyc"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Prepaid on Tock including administrative fee; Dec 2026 rates rise to $352+ (Bar Tasting) and $495 (Chef's Counter).",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "id": "gabriel-kreuther",
@@ -433,30 +481,55 @@
    "address": "41 W. 42nd St., New York, NY 10036",
    "neighborhood": "Midtown / Bryant Park",
    "hours": {
-    "Mon": "",
-    "Tue": "",
-    "Wed": "",
-    "Thu": "",
-    "Fri": "",
-    "Sat": "",
-    "Sun": ""
+    "Mon": "4:45 PM-9:30 PM",
+    "Tue": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Wed": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Thu": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Fri": "11:45 AM-2:15 PM; 4:45 PM-10 PM",
+    "Sat": "4:45 PM-10 PM",
+    "Sun": "closed"
    },
    "hours_exceptions": "UNVERIFIED — hours block not captured in this fetch; not filled in",
    "official_site": "https://www.gknyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gabriel-kreuther",
    "booking_url": "https://resy.com/cities/ny/gabriel-kreuther",
    "phone": "+1 212-257-5826",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "menu_price_per_person_usd": 200,
+   "price_for_two_usd": 400,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "social": [],
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_options": [
+    {
+     "label": "3-Course Prix Fixe Dinner",
+     "per_person_usd": 200,
+     "for_two_usd": 400,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    },
+    {
+     "label": "4-Course Prix Fixe Dinner",
+     "per_person_usd": 235,
+     "for_two_usd": 470,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    },
+    {
+     "label": "Chef's Tasting Menu",
+     "per_person_usd": 325,
+     "for_two_usd": 650,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    }
+   ],
+   "price_source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. From official dinner PDF (Nov 2026); wine pairings ($255–$595) and supplements optional.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26",
+   "hours_flag": ""
   },
   {
    "id": "jean-georges",

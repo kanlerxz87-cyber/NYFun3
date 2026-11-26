@@ -1,11 +1,16 @@
 {
  "_meta": {
   "note": "Two-star tier of the 2025 MICHELIN Guide New York. Michelin's own NYC filter shows '1-14 of 14' two-star restaurants in NYC; Blue Hill at Stone Barns (Tarrytown, Westchester) is the 15th two-star in the wider NYC-and-surroundings selection, which is why the announcement lists 15 names under Two Stars. Final integration adds official menu arithmetic for selected rows and preserves blank + unverified prices elsewhere.",
-  "verification_date": "2026-11-25",
+  "verification_date": "2026-11-26",
   "hours_source": "Each restaurant's own MICHELIN Guide page (opening-hours block).",
   "menu_price_integration": "Final integration 2026-11-25: 10 starred rows carry selected official menu/FAQ/PDF prices. Couple figures are arithmetic (2 × official per-person amount), not quoted all-in totals; they exclude beverages, tax, and gratuity unless the official page says otherwise. No 2027 price is inferred.",
   "price_arithmetic_rule": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-  "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link."
+  "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link.",
+  "independent_rechecked_on": "2026-11-26",
+  "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+  "next_ceremony_source_url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+  "official_list_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+  "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. Two same-day directory fetches displayed different three-star counts (3/14/50 and 5/14/50); the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled."
  },
  "restaurants": [
   {
@@ -164,16 +169,34 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/atomix",
    "booking_url": "https://www.exploretock.com/atomixnyc",
    "phone": "",
-   "price_flag": "UNVERIFIED dollar price",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "menu_price_per_person_usd": 314,
+   "price_for_two_usd": 628,
+   "price_options": [
+    {
+     "label": "Bar Tasting Menu (Nov 2026 rate incl. admin fee; Dec from $352)",
+     "per_person_usd": 314,
+     "for_two_usd": 628,
+     "source_url": "https://www.exploretock.com/atomixnyc"
+    },
+    {
+     "label": "Chef's Counter (Nov 2026 rate incl. admin fee; Dec $495)",
+     "per_person_usd": 424,
+     "for_two_usd": 848,
+     "source_url": "https://www.exploretock.com/atomixnyc"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/atomixnyc",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/atomixnyc"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Prepaid on Tock including administrative fee; Dec 2026 rates rise to $352+ (Bar Tasting) and $495 (Chef's Counter).",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "id": "blue-hill-at-stone-barns",
@@ -183,8 +206,11 @@
    "price_symbol": "$$$$",
    "address": "630 Bedford Rd., Tarrytown, NY 10591",
    "cluster": "Tarrytown, Westchester (NOT in NYC — outside the 1-hour subway/bus rule)",
-   "hours": {},
-   "hours_flag": "UNVERIFIED for this plan — the hours block did not render on fetch; also outside the transit rule so excluded from hotel clustering",
+   "hours": {
+    "Sat": "5:30 PM-9:30 PM",
+    "Sun": "11:30 AM-2:30 PM; 5:30 PM-9:30 PM"
+   },
+   "hours_flag": "PARTIAL — MICHELIN chunk 1 confirmed Sat/Sun; Mon–Fri not returned in fetched chunk. Outside NYC transit area (Tarrytown, Westchester).",
    "official_site": "https://www.bluehillfarm.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/tarrytown/restaurant/blue-hill-at-stone-barns",
    "booking_url": "https://www.exploretock.com/bluehillatstonebarns",
@@ -254,16 +280,28 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/chef-s-table-at-brooklyn-fare",
    "booking_url": "https://resy.com/cities/ny/chefs-table-at-brooklyn-fare",
    "phone": "+1 718-243-0050",
-   "price_flag": "UNVERIFIED dollar price",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "menu_price_per_person_usd": 385,
+   "price_for_two_usd": 770,
+   "price_options": [
+    {
+     "label": "Chef's Tasting Menu",
+     "per_person_usd": 385,
+     "for_two_usd": 770,
+     "source_url": "https://www.brooklynfare.com/chefs-table/"
+    }
+   ],
+   "price_source_url": "https://www.brooklynfare.com/chefs-table/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.brooklynfare.com/chefs-table/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Official site lists $385/guest plus tax ($200 deposit); service and wine are not included.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "id": "gabriel-kreuther",
@@ -273,22 +311,54 @@
    "price_symbol": "$$$$",
    "address": "41 W. 42nd St., New York, NY 10036",
    "cluster": "Midtown / Bryant Park",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours block not captured on fetch; left blank rather than inferred",
+   "hours": {
+    "Mon": "4:45 PM-9:30 PM",
+    "Tue": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Wed": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Thu": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Fri": "11:45 AM-2:15 PM; 4:45 PM-10 PM",
+    "Sat": "4:45 PM-10 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
    "official_site": "https://www.gknyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gabriel-kreuther",
    "booking_url": "https://resy.com/cities/ny/gabriel-kreuther",
    "phone": "+1 212-257-5826",
-   "price_flag": "UNVERIFIED dollar price",
-   "menu_price_per_person_usd": "",
-   "price_for_two_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
+   "menu_price_per_person_usd": 200,
+   "price_for_two_usd": 400,
+   "price_options": [
+    {
+     "label": "3-Course Prix Fixe Dinner",
+     "per_person_usd": 200,
+     "for_two_usd": 400,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    },
+    {
+     "label": "4-Course Prix Fixe Dinner",
+     "per_person_usd": 235,
+     "for_two_usd": 470,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    },
+    {
+     "label": "Chef's Tasting Menu",
+     "per_person_usd": 325,
+     "for_two_usd": 650,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    }
+   ],
+   "price_source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. From official dinner PDF (Nov 2026); wine pairings ($255–$595) and supplements optional.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "id": "jean-georges",
@@ -382,35 +452,35 @@
    "price_for_two_usd": 990,
    "price_options": [
     {
-     "label": "Lunch omakase — starts at",
+     "label": "Lunch Omakase: Hinoki Counter — starts at",
      "per_person_usd": 495,
      "for_two_usd": 990,
-     "source_url": "https://www.masanyc.com/menus"
+     "source_url": "https://www.exploretock.com/masa"
     },
     {
-     "label": "Hinoki Counter omakase",
-     "per_person_usd": 950,
-     "for_two_usd": 1900,
-     "source_url": "https://www.masanyc.com/menus"
-    },
-    {
-     "label": "Table Seating omakase",
+     "label": "Dinner Omakase: Table Seating — starts at",
      "per_person_usd": 750,
      "for_two_usd": 1500,
-     "source_url": "https://www.masanyc.com/menus"
+     "source_url": "https://www.exploretock.com/masa"
+    },
+    {
+     "label": "Dinner Omakase: Hinoki Counter — starts at",
+     "per_person_usd": 950,
+     "for_two_usd": 1900,
+     "source_url": "https://www.exploretock.com/masa"
     }
    ],
-   "price_source_url": "https://www.masanyc.com/menus",
+   "price_source_url": "https://www.exploretock.com/masa",
    "price_sources": [
     {
      "label": "official menu / FAQ / PDF",
-     "url": "https://www.masanyc.com/menus"
+     "url": "https://www.exploretock.com/masa"
     }
    ],
    "price_basis": "2 × official per-person price",
-   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu says each amount is per person and excludes beverages, tax, and optional gratuity; gratuity is not required.",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Tock booking page notes standard seatings start at $495 lunch / $750 table / $950 Hinoki counter (seasonal holiday white truffle menus higher); tax, beverages, and service policies per Tock.",
    "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-   "price_verified_on": "2026-11-25",
+   "price_verified_on": "2026-11-26",
    "review_links": [
     {
      "platform": "YouTube",
@@ -435,8 +505,16 @@
    "price_symbol": "$$$$",
    "address": "17 W. 20th St., New York, NY 10011",
    "cluster": "Flatiron",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours block not captured on fetch; left blank rather than inferred",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Wed": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Thu": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Fri": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Sat": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Sun": "12 PM-1:45 PM; 6 PM-8:30 PM"
+   },
+   "hours_flag": "",
    "official_site": "https://www.odo.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/odo",
    "booking_url": "https://www.exploretock.com/odo-new-york",

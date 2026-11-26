@@ -22,9 +22,10 @@
       return t + '<span class="flag">' + window.NYF.esc(note.replace(/^UNVERIFIED\s*[—-]\s*/i, "")) + "</span>";
     },
     hoursCell: function (hours, flag) {
-      if (!hours || !Object.keys(hours).length) return window.NYF.unverified(flag || "Hours not published on the official page.");
       var order = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-      var parts = order.filter(function (d) { return hours[d]; }).map(function (d) {
+      var validDays = hours ? order.filter(function (d) { return hours[d] && String(hours[d]).trim(); }) : [];
+      if (!validDays.length) return window.NYF.unverified(flag || "Hours not published on the official page.");
+      var parts = validDays.map(function (d) {
         var v = hours[d];
         var closed = /closed/i.test(v);
         return '<span class="hours"><b>' + d + "</b> " +

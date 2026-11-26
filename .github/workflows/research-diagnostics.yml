@@ -1,71 +1,36 @@
-name: Research diagnostics
+name: Research diagnostics (census + transit GTFS)
 
 on:
   push:
     branches:
-      - arena/ed92e764-nyfun3
+      - arena/25fd4b76-nyfun3
     paths:
-      - research/scripts/**
-      - .github/workflows/research-diagnostics.yml
+      - 'research/scripts/compute_transit.py'
+      - 'data/hotels.json'
+      - 'data/michelin_all.json'
+      - '.github/workflows/research-diagnostics.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: research-diagnostics-${{ github.ref }}
-  cancel-in-progress: false
-
 jobs:
-  collect:
+  transit:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    env:
-      PYTHONUNBUFFERED: "1"
     steps:
-      - name: Check out the fixed session branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-
-      - name: Install read-only research dependencies
+          python-version: '3.12'
+      - name: Compute measured 1-hour hotel-to-MICHELIN transit times
+        run: python3 research/scripts/compute_transit.py 2>&1 | tee research/generated/transit_run.log
+      - name: Commit generated transit report to branch
+        if: always()
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install requests==2.32.3 beautifulsoup4==4.12.3
-
-      - name: Fetch official-source diagnostics
-        run: |
-          python research/scripts/diagnose.py
-          python research/scripts/diagnose_reader.py
-
-      - name: Commit diagnostics on the same fixed branch
-        env:
-          BRANCH: ${{ github.ref_name }}
-          RUN_ID: ${{ github.run_id }}
-        run: |
-          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/generated/*.json
-          if git diff --staged --quiet; then
-            echo "No diagnostics change to commit."
-          else
-            git commit -m "Record official-source diagnostics for run $RUN_ID [skip ci]"
-            git pull --rebase origin "$BRANCH"
-            git push origin HEAD:"$BRANCH"
-          fi
-
-      - name: Upload structured diagnostics
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: research-diagnostics
-          path: research/generated/*.json
-          if-no-files-found: warn
-          retention-days: 7
+          git add research/generated/transit_run.log
+          if [ -f research/generated/transit_1h.json ]; then git add research/generated/transit_1h.json; fi
+          git diff --cached --quiet || (git commit -m "Update generated MTA GTFS transit report [skip ci]" && git push origin HEAD:${GITHUB_REF_NAME})

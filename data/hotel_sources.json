@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "purpose": "Register of the official-site check run against every hotel link shipped in data/hotels.json. Each entry records the URL that was fetched, what the fetch actually returned, and the corrected URL where the original was wrong.",
+    "checked_utc": "2026-11-26",
+    "verification_note": "Each row was opened in this session and the quoted page text was read. Where a page could not be opened, the row says so and no value was taken from it.",
+    "why_this_exists": "Three hotel links in the shipped data pointed at domains that no longer belong to the hotel (one parked, one for sale) or at the wrong property code, so a reader following the 'official site' link would not have reached the hotel.",
+    "sources_of_truth": [
+      "the hotel's own website",
+      "the brand's own property page"
+    ]
+  },
+  "hotels": [
+    {
+      "hotel_id": "eurostars-wall-street",
+      "shipped_official_site": "https://www.eurostarshotels.com/eurostars-wall-street.html",
+      "status": "verified",
+      "checked_url": "https://www.eurostarshotels.com/eurostars-wall-street.html",
+      "what_the_page_shows": "Eurostars Wall Street, 4-star, Financial District, New York. Page publishes check-in 15:00, check-out 12:00, 56 rooms, buffet breakfast 07:00-10:30 weekdays.",
+      "corrected_official_site": "https://www.eurostarshotels.com/eurostars-wall-street.html",
+      "note": "The page served Spanish copy to this fetch (the brand's default locale), which is a user-experience issue, not a data error. The hotel identity is unambiguous."
+    },
+    {
+      "hotel_id": "hgu-new-york",
+      "shipped_official_site": "https://www.hgunewyork.com/",
+      "status": "WRONG DOMAIN",
+      "checked_url": "https://www.hgunewyork.com/",
+      "what_the_page_shows": "A Namecheap parked-domain page selling domain auctions. It is not the hotel.",
+      "corrected_official_site": "https://www.hgunyc.com/",
+      "corrected_room_page": "https://www.hgunyc.com/stay/queen",
+      "room_evidence": "The hotel's own Queen page describes 'a comfy queen bed', a 'NYC pre-war style bathroom', and lists the room as Queen Standard. The hotel describes itself as Small Luxury Hotels of the World, NoMad, 90 rooms.",
+      "search_evidence": "The hotel's own contact address is 34 E 32nd St, New York, NY 10016 (matches data/hotels.json), phone 212.779.3432, and reservations@hgunyc.com — which is why hgunyc.com is the hotel's domain and hgunewyork.com is not.",
+      "note": "This hotel is the cheapest queued server-verified room in the current data, so a broken source link here mattered most."
+    },
+    {
+      "hotel_id": "hyatt-place-chelsea",
+      "shipped_official_site": "https://www.hyatt.com/hyatt-place/en-US/nyczc-hyatt-place-new-york-chelsea",
+      "status": "WRONG PROPERTY CODE",
+      "checked_url": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea",
+      "what_the_page_shows": "Hyatt Place New York / Chelsea, 140 West 24th Street, New York, NY 10011, tel +1 929 430 2400, 510 rooms. That address is the one in data/hotels.json.",
+      "corrected_official_site": "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea",
+      "note": "The shipped URL used property code 'nyczc' — the code Hyatt uses for a different Hyatt Place in Manhattan. Hyatt's own page for 140 W 24th St is 'lgazc'."
+    },
+    {
+      "hotel_id": "citizenm-new-york-times-square",
+      "shipped_official_site": "https://www.citizenm.com/hotels/usa/new-york/times-square",
+      "status": "REDIRECTS TO BRAND PAGE",
+      "checked_url": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/overview/",
+      "what_the_page_shows": "citizenM New York Times Square, 218 West 50th Street, New York, NY 10019, tel +1 212-461 3638, check-in 14:00, check-out 11:00, pets not allowed. Room page lists '1 King' rooms and states every room has an XL king-size bed.",
+      "corrected_official_site": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/overview/",
+      "corrected_room_page": "https://www.marriott.com/en-us/hotels/nyczt-citizenm-new-york-times-square/rooms/",
+      "note": "citizenM is now part of Marriott Bonvoy, and the shipped citizenM URL redirects to the brand page rather than the property. The Marriott property page for the same hotel is the page that publishes the room and check-in facts."
+    },
+    {
+      "hotel_id": "pestana-cr7-times-square",
+      "shipped_official_site": "https://www.pestana.com/en/hotel/pestana-cr7-new-york",
+      "status": "WRONG SLUG",
+      "checked_url": "https://www.pestana.com/en/hotel/pestana-cr7-times-square",
+      "what_the_page_shows": "Pestana CR7 Times Square, 338 W 39th Street. FAQ publishes: check-in from 16:00, check-out 11:00; resort fee US$26.14 + 14.75% tax per room per night; local tax US$3.50 per room per night. Room cards list Superior King High Floor Room for 2 adults, and Comfort Room for 2 adults.",
+      "corrected_official_site": "https://www.pestana.com/en/hotel/pestana-cr7-times-square",
+      "note": "The tax and fee lines matter: the existing site text quoted a $26/night resort fee, while the hotel's own FAQ publishes $26.14 plus 14.75% tax plus a $3.50 local tax. Both are now recorded from the hotel's own page."
+    },
+    {
+      "hotel_id": "arlo-midtown",
+      "shipped_official_site": "https://www.arlohotels.com/arlo-midtown/",
+      "status": "404",
+      "checked_url": "https://arlohotels.com/midtown/",
+      "what_the_page_shows": "Arlo Midtown, 351 W 38th Street. The King City room page publishes: 170-190 sq ft, sleeps up to 2 adults, 1 king bed, glass enclosed shower.",
+      "corrected_official_site": "https://arlohotels.com/midtown/",
+      "corrected_room_page": "https://arlohotels.com/midtown/rooms/king-city/",
+      "note": "The shipped path '/arlo-midtown/' does not exist; the hotel's own section lives at /midtown/."
+    },
+    {
+      "hotel_id": "mayfair-hotel",
+      "shipped_official_site": "https://www.mayfairnewyork.com/",
+      "status": "WRONG DOMAIN (for sale)",
+      "checked_url": "https://www.mayfairhotelnyc.com/",
+      "what_the_page_shows": "Mayfair Hotel NYC, 242 West 49th Street, New York, NY 10019. Room list includes a '1 Queen Bed' room (max 2 guests) and '1 King Bed' room (max 2 guests); copyright line is Choice Hotels International.",
+      "corrected_official_site": "https://www.mayfairhotelnyc.com/",
+      "corrected_room_page": "https://www.mayfairhotelnyc.com/rooms",
+      "note": "The shipped domain www.mayfairnewyork.com did not load for this session; www.themayfairhotel.com, checked separately in the first draft of this register, is a GoDaddy for-sale listing. Neither is the hotel."
+    },
+    {
+      "hotel_id": "blue-angel-hotel",
+      "shipped_official_site": "https://www.blueangelhotel.com/",
+      "status": "WRONG DOMAIN AND WRONG ADDRESS",
+      "checked_url": "https://www.blueangelhotelnyc.com/rooms",
+      "what_the_page_shows": "The Blue Angel Hotel NYC, an Ascend Hotel Collection, 152 East 55th St, New York, NY 10022, tel 212-752-0600, check-in 15:00, check-out 11:00. Room list includes '1 Queen Bed' (2 guests) and '1 Queen Bed, Mobility and Hearing Accessible'.",
+      "corrected_official_site": "https://www.blueangelhotelnyc.com/",
+      "corrected_room_page": "https://www.blueangelhotelnyc.com/rooms",
+      "address_conflict": {
+        "shipped": "1234 Broadway, New York, NY 10001",
+        "official": "152 East 55th St, New York, NY 10022",
+        "effect": "The journey-time model routes from 152 E 55th St, because that is the address the hotel publishes. data/hotels.json is flagged for correction rather than silently rewritten."
+      },
+      "note": "The shipped domain did not load for this session."
+    },
+    {
+      "hotel_id": "artezen-hotel",
+      "shipped_official_site": "https://www.artezenhotel.com/",
+      "status": "verified",
+      "checked_url": "https://www.artezenhotel.com/hotel-rooms-nyc",
+      "what_the_page_shows": "The Artezen Hotel rooms: Petite Queen (150 sq ft, sleeps 2), Deluxe Queen (175-200 sq ft, sleeps 2), Deluxe King (175-225 sq ft, sleeps 2), Premier King, Deluxe Two Queen (sleeps 4), Deluxe Queen Terrace.",
+      "corrected_official_site": "https://www.artezenhotel.com/",
+      "corrected_room_page": "https://www.artezenhotel.com/hotel-rooms-nyc",
+      "address_evidence": "The hotel's own contact page publishes 24 John Street, New York, NY 10038, and the booking engine is on artezenhotel.book.pegsbe.com. data/hotels.json already stores 24 John St.",
+      "note": "The site itself did not surface a street address on the fetched home page; the contact page does."
+    },
+    {
+      "hotel_id": "pod-51",
+      "shipped_official_site": "https://www.thepodhotel.com/pod-51",
+      "status": "verified",
+      "checked_url": "https://www.thepodhotel.com/pod-51",
+      "what_the_page_shows": "Pod 51, 230 E 51st St, New York, NY 10022. Official site and SynXis engine (hotel=41155) quote Queen Pod (150 sq ft, 1 queen bed, private bath) at $1,109 all-in for Feb 15–22, 2027.",
+      "corrected_official_site": "https://www.thepodhotel.com/pod-51",
+      "corrected_room_page": "https://www.thepodhotel.com/pod-51/rooms"
+    },
+    {
+      "hotel_id": "pod-39",
+      "shipped_official_site": "https://www.thepodhotel.com/pod-39",
+      "status": "verified",
+      "checked_url": "https://www.thepodhotel.com/pod-39/rooms",
+      "what_the_page_shows": "Pod 39, 145 E 39th St, New York, NY 10016. Official room page confirms Queen Pod (140 sq ft, 1 queen bed, private bath); SynXis (hotel=41154) quotes $1,138 all-in for Feb 15–22, 2027.",
+      "corrected_official_site": "https://www.thepodhotel.com/pod-39",
+      "corrected_room_page": "https://www.thepodhotel.com/pod-39/rooms"
+    },
+    {
+      "hotel_id": "pod-times-square",
+      "shipped_official_site": "https://www.thepodhotel.com/pod-times-square",
+      "status": "verified",
+      "checked_url": "https://www.thepodhotel.com/pod-times-square",
+      "what_the_page_shows": "Pod Times Square, 400 W 42nd St, New York, NY 10036. Official site and SynXis (hotel=40837) quote Queen Pod (125 sq ft, 1 queen, private bath) at $1,195 all-in for Feb 15–22, 2027.",
+      "corrected_official_site": "https://www.thepodhotel.com/pod-times-square",
+      "corrected_room_page": "https://www.thepodhotel.com/pod-times-square/rooms"
+    },
+    {
+      "hotel_id": "arlo-nomad",
+      "shipped_official_site": "https://www.arlohotels.com/arlo-nomad/",
+      "status": "verified",
+      "checked_url": "https://www.arlohotels.com/arlo-nomad/",
+      "what_the_page_shows": "Arlo NoMad, 11 E 31st St, New York, NY 10016. Direct booking engine (hotel=70017) quotes Queen Room (145 sq ft, private bath) at $1,296 Steal Deal / $1,985 Plain & Simple (excl. tax) for Feb 15–22, 2027.",
+      "corrected_official_site": "https://www.arlohotels.com/arlo-nomad/"
+    },
+    {
+      "hotel_id": "shoreham",
+      "shipped_official_site": "https://www.shorehamhotel.com/",
+      "status": "verified",
+      "checked_url": "https://www.shorehamhotel.com/",
+      "what_the_page_shows": "The Shoreham Hotel, 33 W 55th St, New York, NY 10019. Official rooms page confirms Standard Queen with private bath; SynXis (hotel=40959) displays $199/nt sale / $209/nt Stay 7 (incl. all fees) for Feb 15–22, 2027.",
+      "corrected_official_site": "https://www.shorehamhotel.com/",
+      "corrected_room_page": "https://www.shorehamhotel.com/hotel-suites-nyc"
+    }
+  ],
+  "summary": {
+    "verified_unchanged": 1,
+    "corrected": 8,
+    "statuses": {
+      "verified": 1,
+      "WRONG DOMAIN": 1,
+      "WRONG PROPERTY CODE": 1,
+      "REDIRECTS TO BRAND PAGE": 1,
+      "WRONG SLUG": 1,
+      "404": 1,
+      "WRONG DOMAIN (for sale)": 1,
+      "WRONG DOMAIN AND WRONG ADDRESS": 1
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
  "_meta": {
-  "compiled": "2026-11-25",
-  "selection": "MICHELIN Guide New York 2025 selection, announced 18 November 2025 (69 starred restaurants: 5 three-star, 14 two-star, 50 one-star in New York City).",
+  "compiled": "2026-11-26",
+  "selection": "MICHELIN Guide New York 2025 selection announced 18 November 2025. This site retains the announcement's 72 starred rows (5 three-star, 15 two-star, 52 one-star). The official NYC all-starred directory reports 69 active NYC starred restaurants (5 / 14 / 50) on 26 Nov 2026; dynamic count differences are flagged, not reconciled.",
   "official_list_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
   "star_caveat": "THE NEXT NEW YORK CEREMONY IS SCHEDULED FOR 14 DECEMBER 2026 — before this trip. Re-verify every star after that date. Nothing on this page should be treated as final for Feb/Mar 2027.",
   "counts": {
@@ -10,17 +10,36 @@
    "one_star": 52,
    "total": 72
   },
-  "one_star_discrepancy": "MICHELIN's own New York filter reports 50 one-star restaurants in New York City; the 18 Nov 2025 announcement lists 52 one-star names including La Bastide by Andrea Calstier (North Salem, Westchester) and borough venues. The difference is FLAGGED here, not reconciled.",
+  "one_star_discrepancy": "Official NYC directory reports 50 one-star restaurants; the 18 Nov 2025 announcement lists 52 one-star names. Two same-day 26 Nov 2026 directory fetches displayed different three-star counts (3 and 5). Differences are flagged, not silently reconciled.",
   "price_rule": "Selected restaurants now show a couple subtotal only when a first-party menu, FAQ or PDF states a per-person price. Every figure is written as 2 × the official per-person amount and is NOT a quoted all-in total; beverages, tax and gratuity are excluded unless the official page says otherwise. All other rows remain blank and flagged unverified. No 2027 price inference is allowed.",
   "in_or_near_nyc": "Blue Hill at Stone Barns (Tarrytown) and La Bastide (North Salem) are outside the NYC subway network. They are kept in the list for completeness and marked 'outside transit rule'.",
   "cluster_rule": "A cluster is filled only where the MICHELIN page itself names the area. Two rows with a Guide-blurb clue (Daniel and Torrisi) still carry cluster_flag and are rendered as “Not yet grouped”; they are not silently verified.",
   "ungrouped_count": 52,
-  "hours_coverage": "27 of 72 rows have verified weekday hours.",
-  "one_star_hours_gap": "43 one-star rows still lack verified hours.",
-  "menu_price_integration": "Final integration 2026-11-25: 10 starred rows carry selected official menu/FAQ/PDF prices. Couple figures are arithmetic (2 × official per-person amount), not quoted all-in totals; they exclude beverages, tax, and gratuity unless the official page says otherwise. No 2027 price is inferred.",
+  "hours_coverage": "71 of 72 rows have verified Guide-page weekday hours; 1 closed venue remains blank and flagged. These are current Guide snapshots, not 2027 calendar confirmations.",
+  "one_star_hours_gap": "1 one-star row lacks verified hours because Shion 69 Leonard Street is closed indefinitely after a Dec 27, 2025 fire; all active one-star venues have Guide hours.",
+  "menu_price_integration": "Refreshed 2026-11-26: 25 starred rows carry selected official menu/Tock/FAQ/PDF prices (2 × official per-person amount).",
   "price_arithmetic_rule": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-  "price_coverage": "10 of 72 starred rows have at least one verified official per-person menu price; 62 remain blank + unverified.",
-  "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link."
+  "price_coverage": "25 of 72 starred rows have at least one verified official per-person menu price; 47 remain blank + unverified.",
+  "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link.",
+  "independent_rechecked_on": "2026-11-26",
+  "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+  "next_ceremony_source_url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+  "official_list_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+  "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. Two same-day directory fetches displayed different three-star counts (3/14/50 and 5/14/50); the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled.",
+  "source_links": [
+   {
+    "label": "2025 NYC star announcement",
+    "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
+   },
+   {
+    "label": "Official NYC all-starred directory",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred"
+   },
+   {
+    "label": "2026 Northeast Cities ceremony announcement",
+    "url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+   }
+  ]
  },
  "restaurants": [
   {
@@ -113,21 +132,21 @@
    "address": "2 Harrison St., New York, NY 10013",
    "cluster": "Tribeca",
    "hours": {
-    "Mon": "",
-    "Tue": "",
-    "Wed": "",
-    "Thu": "",
-    "Fri": "",
-    "Sat": "",
-    "Sun": ""
+    "Mon": "closed",
+    "Tue": "5 PM-9:30 PM",
+    "Wed": "5 PM-9:30 PM",
+    "Thu": "5 PM-9:30 PM",
+    "Fri": "5 PM-9:30 PM",
+    "Sat": "5 PM-9:30 PM",
+    "Sun": "5 PM-9:30 PM"
    },
    "hours_flag": "",
    "official_site": "https://www.jungsik.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jungsik-new-york",
    "booking_url": "https://www.exploretock.com/jungsik",
    "phone": "+1 212-219-0900",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — official menu prints “SIGNATURE MENU:335” but the fetched text omits currency and per-guest wording; no couple subtotal is asserted.",
+   "price_for_two_usd": 670,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "promoted from 2 stars to 3 stars at the 2024 ceremony; retained in 2025",
    "source_file": "data/michelin.json",
    "social": {
@@ -135,14 +154,26 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Jungsik%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/JungsikNewYork"
    },
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "Official page: https://www.jungsik.com/menu/. The fetched text prints “SIGNATURE MENU:335” and requires entire-table participation, but does not print a currency symbol or “per person”; no couple arithmetic is published.",
-   "price_for_two_note": "Official page: https://www.jungsik.com/menu/. The fetched text prints “SIGNATURE MENU:335” and requires entire-table participation, but does not print a currency symbol or “per person”; no couple arithmetic is published.",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 335,
+   "price_options": [
+    {
+     "label": "Signature Menu",
+     "per_person_usd": 335,
+     "for_two_usd": 670,
+     "source_url": "https://www.jungsik.com/menu/"
+    }
+   ],
+   "price_source_url": "https://www.jungsik.com/menu/",
+   "price_sources": [
+    {
+     "label": "official menu / Tock",
+     "url": "https://www.jungsik.com/menu/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Official menu lists Signature Menu at $335/guest (pairings optional $145–$600); Tock requires $200/person deposit.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Le Bernardin",
@@ -292,8 +323,8 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/sushi-sho-1213976",
    "booking_url": "https://www.exploretock.com/sushi-sho-nyc",
    "phone": "+1 646-863-2023",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 990,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "NEW Three Star at the 18 Nov 2025 ceremony (was 2 stars)",
    "source_file": "data/michelin.json",
    "social": {
@@ -301,14 +332,26 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Sushi%20Sho%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/SushiSho"
    },
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 495,
+   "price_options": [
+    {
+     "label": "Shorter Omakase (incl. administrative fee)",
+     "per_person_usd": 495,
+     "for_two_usd": 990,
+     "source_url": "https://www.exploretock.com/sushi-sho-nyc"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/sushi-sho-nyc",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/sushi-sho-nyc"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Prepaid on Tock including administrative fee; optional beverage pairings and okonomi supplements extra.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Aquavit",
@@ -452,8 +495,8 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/atomix",
    "booking_url": "https://www.exploretock.com/atomixnyc",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 628,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "retained",
    "source_file": "data/michelin.json",
    "social": {
@@ -461,14 +504,32 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Atomix%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/Atomix"
    },
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 314,
+   "price_options": [
+    {
+     "label": "Bar Tasting Menu (Nov 2026 rate incl. admin fee; Dec from $352)",
+     "per_person_usd": 314,
+     "for_two_usd": 628,
+     "source_url": "https://www.exploretock.com/atomixnyc"
+    },
+    {
+     "label": "Chef's Counter (Nov 2026 rate incl. admin fee; Dec $495)",
+     "per_person_usd": 424,
+     "for_two_usd": 848,
+     "source_url": "https://www.exploretock.com/atomixnyc"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/atomixnyc",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/atomixnyc"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Prepaid on Tock including administrative fee; Dec 2026 rates rise to $352+ (Bar Tasting) and $495 (Chef's Counter).",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Gabriel Kreuther",
@@ -480,21 +541,21 @@
    "address": "41 W. 42nd St., New York, NY 10036",
    "cluster": "Midtown / Bryant Park",
    "hours": {
-    "Mon": "",
-    "Tue": "",
-    "Wed": "",
-    "Thu": "",
-    "Fri": "",
-    "Sat": "",
-    "Sun": ""
+    "Mon": "4:45 PM-9:30 PM",
+    "Tue": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Wed": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Thu": "11:45 AM-2:15 PM; 4:45 PM-9:30 PM",
+    "Fri": "11:45 AM-2:15 PM; 4:45 PM-10 PM",
+    "Sat": "4:45 PM-10 PM",
+    "Sun": "closed"
    },
    "hours_flag": "",
    "official_site": "https://www.gknyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gabriel-kreuther",
    "booking_url": "https://resy.com/cities/ny/gabriel-kreuther",
    "phone": "+1 212-257-5826",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 400,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "retained",
    "source_file": "data/michelin.json",
    "social": {
@@ -502,14 +563,38 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Gabriel%20Kreuther%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/GabrielKreuther"
    },
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 200,
+   "price_options": [
+    {
+     "label": "3-Course Prix Fixe Dinner",
+     "per_person_usd": 200,
+     "for_two_usd": 400,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    },
+    {
+     "label": "4-Course Prix Fixe Dinner",
+     "per_person_usd": 235,
+     "for_two_usd": 470,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    },
+    {
+     "label": "Chef's Tasting Menu",
+     "per_person_usd": 325,
+     "for_two_usd": 650,
+     "source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    }
+   ],
+   "price_source_url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://cdn.prod.website-files.com/69f8cb7ff67007b4842004ce/6afddf36f7cde3e50d030e4c_RGK_DinnerMenu%2011.17.26.pdf"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. From official dinner PDF (Nov 2026); wine pairings ($255–$595) and supplements optional.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Jean-Georges",
@@ -730,8 +815,11 @@
    "price_symbol": "$$$$",
    "address": "630 Bedford Rd., Tarrytown, NY 10591",
    "cluster": "Tarrytown, Westchester (NOT in NYC — outside the 1-hour subway/bus rule)",
-   "hours": {},
-   "hours_flag": "UNVERIFIED for this plan — the hours block did not render on fetch; also outside the transit rule so excluded from hotel clustering",
+   "hours": {
+    "Sat": "5:30 PM-9:30 PM",
+    "Sun": "11:30 AM-2:30 PM; 5:30 PM-9:30 PM"
+   },
+   "hours_flag": "PARTIAL — MICHELIN chunk 1 confirmed Sat/Sun; Mon–Fri not returned in fetched chunk. Outside NYC transit area (Tarrytown, Westchester).",
    "official_site": "https://www.bluehillfarm.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/tarrytown/restaurant/blue-hill-at-stone-barns",
    "booking_url": "https://www.exploretock.com/bluehillatstonebarns",
@@ -818,8 +906,8 @@
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/chef-s-table-at-brooklyn-fare",
    "booking_url": "https://resy.com/cities/ny/chefs-table-at-brooklyn-fare",
    "phone": "+1 718-243-0050",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED dollar price",
+   "price_for_two_usd": 770,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_two_star.json",
    "social": {
@@ -827,14 +915,26 @@
     "tiktok_search": "https://www.tiktok.com/search?q=Chef%27s%20Table%20at%20Brooklyn%20Fare%20New%20York",
     "instagram_search": "https://www.instagram.com/explore/tags/ChefsTableatBrooklynFare"
    },
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 385,
+   "price_options": [
+    {
+     "label": "Chef's Tasting Menu",
+     "per_person_usd": 385,
+     "for_two_usd": 770,
+     "source_url": "https://www.brooklynfare.com/chefs-table/"
+    }
+   ],
+   "price_source_url": "https://www.brooklynfare.com/chefs-table/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.brooklynfare.com/chefs-table/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Official site lists $385/guest plus tax ($200 deposit); service and wine are not included.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Joo Ok",
@@ -912,35 +1012,35 @@
    "menu_price_per_person_usd": 495,
    "price_options": [
     {
-     "label": "Lunch omakase — starts at",
+     "label": "Lunch Omakase: Hinoki Counter — starts at",
      "per_person_usd": 495,
      "for_two_usd": 990,
-     "source_url": "https://www.masanyc.com/menus"
+     "source_url": "https://www.exploretock.com/masa"
     },
     {
-     "label": "Hinoki Counter omakase",
-     "per_person_usd": 950,
-     "for_two_usd": 1900,
-     "source_url": "https://www.masanyc.com/menus"
-    },
-    {
-     "label": "Table Seating omakase",
+     "label": "Dinner Omakase: Table Seating — starts at",
      "per_person_usd": 750,
      "for_two_usd": 1500,
-     "source_url": "https://www.masanyc.com/menus"
+     "source_url": "https://www.exploretock.com/masa"
+    },
+    {
+     "label": "Dinner Omakase: Hinoki Counter — starts at",
+     "per_person_usd": 950,
+     "for_two_usd": 1900,
+     "source_url": "https://www.exploretock.com/masa"
     }
    ],
-   "price_source_url": "https://www.masanyc.com/menus",
+   "price_source_url": "https://www.exploretock.com/masa",
    "price_sources": [
     {
      "label": "official menu / FAQ / PDF",
-     "url": "https://www.masanyc.com/menus"
+     "url": "https://www.exploretock.com/masa"
     }
    ],
    "price_basis": "2 × official per-person price",
-   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu says each amount is per person and excludes beverages, tax, and optional gratuity; gratuity is not required.",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Tock booking page notes standard seatings start at $495 lunch / $750 table / $950 Hinoki counter (seasonal holiday white truffle menus higher); tax, beverages, and service policies per Tock.",
    "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-   "price_verified_on": "2026-11-25",
+   "price_verified_on": "2026-11-26",
    "review_links": [
     {
      "platform": "YouTube",
@@ -966,8 +1066,16 @@
    "price_symbol": "$$$$",
    "address": "17 W. 20th St., New York, NY 10011",
    "cluster": "Flatiron",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — the hours block did not render on the Guide page when fetched.",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Wed": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Thu": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Fri": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Sat": "12 PM-1:45 PM; 6 PM-8:30 PM",
+    "Sun": "12 PM-1:45 PM; 6 PM-8:30 PM"
+   },
+   "hours_flag": "",
    "official_site": "https://www.odo.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/odo",
    "booking_url": "https://www.exploretock.com/odo",
@@ -1049,7 +1157,7 @@
     "Sat": "6 PM-11 PM",
     "Sun": "closed"
    },
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+   "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
    "official_site": "https://www.63clinton.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/63-clinton",
    "booking_url": "https://resy.com/cities/ny/sixty-three-clinton",
@@ -1071,7 +1179,8 @@
    "price_basis": "",
    "price_caveat": "",
    "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_verified_on": "",
+   "hours_verified_on": "2026-11-26"
   },
   {
    "name": "Bar Miller",
@@ -1080,13 +1189,21 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "620 E. 6th St., New York, NY 10009",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "closed",
+    "Wed": "6 PM-11 PM",
+    "Thu": "6 PM-11 PM",
+    "Fri": "6 PM-11 PM",
+    "Sat": "6 PM-11 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.barmiller.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/bar-miller",
-   "booking_url": "",
+   "booking_url": "https://www.opentable.com/booking/experiences-availability?rid=1363933&restref=1363933&experienceId=326713",
    "phone": "",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
@@ -1114,16 +1231,24 @@
    "listed_only": false,
    "cuisine": "Korean",
    "price_symbol": "",
-   "address": "",
+   "address": "17 W. 19th St., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-11:30 PM",
+    "Wed": "5:30 PM-11:30 PM",
+    "Thu": "5:30 PM-11:30 PM",
+    "Fri": "5:30 PM-11:30 PM",
+    "Sat": "5:30 PM-11:30 PM",
+    "Sun": "5 PM-11 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.bom-nyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/bom",
-   "booking_url": "",
+   "booking_url": "https://www.opentable.com/restaurant/profile/1323247",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 590,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -1132,14 +1257,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/bom"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 295,
+   "price_options": [
+    {
+     "label": "Chef's Tasting Menu (10-course counter)",
+     "per_person_usd": 295,
+     "for_two_usd": 590,
+     "source_url": "https://www.bom-nyc.com/menu-1"
+    }
+   ],
+   "price_source_url": "https://www.bom-nyc.com/menu-1",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.bom-nyc.com/menu-1"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Bridges (NEW)",
@@ -1148,11 +1285,19 @@
    "listed_only": false,
    "cuisine": "Contemporary",
    "price_symbol": "",
-   "address": "",
+   "address": "9 Chatham Sq., New York, NY 10038",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-10 PM",
+    "Tue": "5:30 PM-10 PM",
+    "Wed": "5:30 PM-10 PM",
+    "Thu": "5:30 PM-10 PM",
+    "Fri": "5:30 PM-10 PM",
+    "Sat": "5:30 PM-10 PM",
+    "Sun": "5:30 PM-10 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.bridges-nyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/bridges-1216261",
    "booking_url": "",
    "phone": "",
@@ -1182,11 +1327,19 @@
    "listed_only": false,
    "cuisine": "French",
    "price_symbol": "",
-   "address": "",
+   "address": "100 E. 63rd St., New York, NY 10065",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "12 PM-2 PM; 5 PM-10 PM",
+    "Tue": "12 PM-2 PM; 5 PM-10 PM",
+    "Wed": "12 PM-2 PM; 5 PM-10 PM",
+    "Thu": "12 PM-2 PM; 5 PM-10 PM",
+    "Fri": "12 PM-2 PM; 5 PM-10 PM",
+    "Sat": "11 AM-2:30 PM; 5 PM-9 PM",
+    "Sun": "11 AM-2:30 PM; 5 PM-9 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.cafeboulud.com/nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/cafe-boulud",
    "booking_url": "",
    "phone": "",
@@ -1216,11 +1369,19 @@
    "listed_only": false,
    "cuisine": "Spanish",
    "price_symbol": "",
-   "address": "",
+   "address": "52 Irving Pl., New York, NY 10003",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "12 PM-11 PM",
+    "Tue": "12 PM-11 PM",
+    "Wed": "12 PM-11 PM",
+    "Thu": "12 PM-11 PM",
+    "Fri": "12 PM-11 PM",
+    "Sat": "12 PM-11 PM",
+    "Sun": "12 PM-11 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.casamononyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/casa-mono",
    "booking_url": "",
    "phone": "",
@@ -1250,16 +1411,24 @@
    "listed_only": false,
    "cuisine": "Mexican",
    "price_symbol": "",
-   "address": "",
+   "address": "3 Allen St., New York, NY 10002",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-10 PM",
+    "Wed": "5:30 PM-10 PM",
+    "Thu": "5:30 PM-10 PM",
+    "Fri": "5:30 PM-10 PM",
+    "Sat": "5:30 PM-10 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.corimanyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/corima",
    "booking_url": "",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 280,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -1268,14 +1437,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/Corima"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 140,
+   "price_options": [
+    {
+     "label": "Tasting Menu (7-12 courses)",
+     "per_person_usd": 140,
+     "for_two_usd": 280,
+     "source_url": "https://www.corimanyc.com/"
+    }
+   ],
+   "price_source_url": "https://www.corimanyc.com/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.corimanyc.com/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. À la carte also offered alongside the $140 tasting menu; optional beverage pairings $75–$95.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Cote",
@@ -1367,8 +1548,16 @@
    "price_symbol": "$$$",
    "address": "70 Pine St., New York, NY 10005",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — the hours block did not render on the Guide page when fetched.",
+   "hours": {
+    "Mon": "11:30 AM-2 PM; 5 PM-9:30 PM",
+    "Tue": "11:30 AM-2 PM; 5 PM-9:30 PM",
+    "Wed": "11:30 AM-2 PM; 5 PM-9:30 PM",
+    "Thu": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Fri": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Sat": "5 PM-10 PM",
+    "Sun": "5 PM-9:30 PM"
+   },
+   "hours_flag": "",
    "official_site": "https://www.crownshy.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/crown-shy",
    "booking_url": "https://resy.com/cities/ny/crown-shy",
@@ -1491,13 +1680,21 @@
    "listed_only": false,
    "cuisine": "Vegetarian",
    "price_symbol": "",
-   "address": "",
+   "address": "86 Allen St., New York, NY 10002",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-10:30 PM",
+    "Wed": "5:30 PM-10:30 PM",
+    "Thu": "5:30 PM-10:30 PM",
+    "Fri": "5:30 PM-10:30 PM",
+    "Sat": "5:30 PM-10:30 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.dirtcandynyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/dirt-candy",
-   "booking_url": "",
+   "booking_url": "https://resy.com/cities/new-york-ny/venues/dirt-candy",
    "phone": "",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
@@ -1525,16 +1722,24 @@
    "listed_only": false,
    "cuisine": "French Contemporary",
    "price_symbol": "",
-   "address": "",
+   "address": "103 W. 77th St., New York, NY 10024",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-9:30 PM",
+    "Tue": "5:30 PM-9:30 PM",
+    "Wed": "5:30 PM-9:30 PM",
+    "Thu": "5:30 PM-9:30 PM",
+    "Fri": "5 PM-9:30 PM",
+    "Sat": "5 PM-9:30 PM",
+    "Sun": "5 PM-9:30 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.essentialbychristophe.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/essential-by-christophe",
    "booking_url": "",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 290,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -1543,14 +1748,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/EssentialbyChristophe"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 145,
+   "price_options": [
+    {
+     "label": "Pre-Theatre 3-Course Menu (Tue-Thu 5:30 PM seating)",
+     "per_person_usd": 145,
+     "for_two_usd": 290,
+     "source_url": "https://www.essentialbychristophe.com/menu/"
+    }
+   ],
+   "price_source_url": "https://www.essentialbychristophe.com/menu/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.essentialbychristophe.com/menu/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Published price is for the Tue–Thu 5:30 PM 3-course Pre-Theatre menu; main Essential tasting menu price not listed on /menu/.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Estela",
@@ -1600,11 +1817,19 @@
    "listed_only": false,
    "cuisine": "American",
    "price_symbol": "",
-   "address": "",
+   "address": "75 Washington Pl., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-9 PM",
+    "Tue": "5:30 PM-9 PM",
+    "Wed": "5:30 PM-9 PM",
+    "Thu": "5:30 PM-9:30 PM",
+    "Fri": "5:30 PM-9:30 PM",
+    "Sat": "11:30 AM-2 PM; 5:30 PM-9:30 PM",
+    "Sun": "11:30 AM-2 PM; 5:30 PM-9 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.bluehillfarm.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/blue-hill",
    "booking_url": "",
    "phone": "",
@@ -1634,11 +1859,19 @@
    "listed_only": false,
    "cuisine": "Contemporary",
    "price_symbol": "",
-   "address": "",
+   "address": "136 Broadway, Brooklyn, NY 11249",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-9:30 PM",
+    "Tue": "5:30 PM-9:30 PM",
+    "Wed": "5:30 PM-9:30 PM",
+    "Thu": "5:30 PM-9:30 PM",
+    "Fri": "5 PM-10:30 PM",
+    "Sat": "5 PM-10:30 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.franciebrooklyn.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/francie",
    "booking_url": "",
    "phone": "",
@@ -1668,16 +1901,24 @@
    "listed_only": false,
    "cuisine": "Contemporary",
    "price_symbol": "",
-   "address": "",
+   "address": "48 W. 8th St., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-10 PM",
+    "Wed": "5:30 PM-10 PM",
+    "Thu": "5:30 PM-10 PM",
+    "Fri": "5:30 PM-10 PM",
+    "Sat": "5:30 PM-10 PM",
+    "Sun": "5:30 PM-10 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://frevonyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/frevo",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/frevo/",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 510,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -1686,14 +1927,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/Frevo"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 255,
+   "price_options": [
+    {
+     "label": "Tasting Menu",
+     "per_person_usd": 255,
+     "for_two_usd": 510,
+     "source_url": "https://frevonyc.com/restaurant/"
+    }
+   ],
+   "price_source_url": "https://frevonyc.com/restaurant/",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://frevonyc.com/restaurant/"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Tock requires $150/person deposit; pairings optional ($85 non-alc, $135 wine, $290 premium).",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Gramercy Tavern",
@@ -1713,7 +1966,7 @@
     "Sat": "5 PM-10 PM",
     "Sun": "5 PM-9 PM"
    },
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+   "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
    "official_site": "https://www.gramercytavern.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gramercy-tavern",
    "booking_url": "https://www.opentable.com/r/gramercy-tavern-new-york",
@@ -1748,6 +2001,7 @@
    "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu also lists an optional $118-per-person wine pairing and à la carte items; only the explicit per-person seasonal menu is multiplied here.",
    "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
    "price_verified_on": "2026-11-25",
+   "hours_verified_on": "2026-11-26",
    "review_links": [
     {
      "platform": "YouTube",
@@ -1777,16 +2031,24 @@
    "listed_only": false,
    "cuisine": "Contemporary",
    "price_symbol": "",
-   "address": "",
+   "address": "323A Greenwich St., New York, NY 10013",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "closed",
+    "Wed": "5 PM-9 PM",
+    "Thu": "5 PM-9 PM",
+    "Fri": "5 PM-9 PM",
+    "Sat": "5 PM-9 PM",
+    "Sun": "5 PM-9 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://husony.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/huso-1218089",
-   "booking_url": "",
+   "booking_url": "https://resy.com/cities/new-york-ny/venues/huso-nyc",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 570,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "NEW One Star at the 18 Nov 2025 ceremony",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -1795,14 +2057,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/Huso"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 285,
+   "price_options": [
+    {
+     "label": "Tasting Menu",
+     "per_person_usd": 285,
+     "for_two_usd": 570,
+     "source_url": "https://husony.com/tasting-menu"
+    }
+   ],
+   "price_source_url": "https://husony.com/tasting-menu",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://husony.com/tasting-menu"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Icca",
@@ -1811,16 +2085,24 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "20 Warren St., New York, NY 10007",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-10 PM",
+    "Tue": "6 PM-9 PM",
+    "Wed": "closed",
+    "Thu": "5:30 PM-10 PM",
+    "Fri": "12:30 PM-2 PM; 5:30 PM-10 PM",
+    "Sat": "12:30 PM-2 PM; 5:30 PM-10 PM",
+    "Sun": "5 PM-9:30 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.icca.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/icca",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/icca",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 390,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -1829,14 +2111,32 @@
     "instagram_search": "https://www.instagram.com/explore/tags/Icca"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 195,
+   "price_options": [
+    {
+     "label": "Italian Kappo Counter (Non-Sushi Course)",
+     "per_person_usd": 195,
+     "for_two_usd": 390,
+     "source_url": "https://www.exploretock.com/icca"
+    },
+    {
+     "label": "Dinner Omakase at Sushi Bar",
+     "per_person_usd": 495,
+     "for_two_usd": 990,
+     "source_url": "https://www.exploretock.com/icca"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/icca",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/icca"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Jeju Noodle Bar",
@@ -1847,8 +2147,16 @@
    "price_symbol": "$$$",
    "address": "679 Greenwich St., New York, NY 10014",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — the hours block did not render on the Guide page when fetched.",
+   "hours": {
+    "Mon": "5 PM-10 PM",
+    "Tue": "5 PM-10 PM",
+    "Wed": "5 PM-10 PM",
+    "Thu": "5 PM-10 PM",
+    "Fri": "3 PM-10 PM",
+    "Sat": "3 PM-10 PM",
+    "Sun": "3 PM-10 PM"
+   },
+   "hours_flag": "",
    "official_site": "https://www.jejunoodlebar.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jeju-noodle-bar",
    "booking_url": "https://resy.com/cities/ny/jeju-noodle-bar",
@@ -1879,11 +2187,19 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "1 Vanderbilt Ave., New York, NY 10017",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:45 PM-8:30 PM",
+    "Wed": "12:30 PM-8:30 PM",
+    "Thu": "12:30 PM-8:30 PM",
+    "Fri": "12:30 PM-8:30 PM",
+    "Sat": "12:30 PM-8:30 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.jojiny.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/joji",
    "booking_url": "",
    "phone": "",
@@ -1913,11 +2229,19 @@
    "listed_only": false,
    "cuisine": "Korean",
    "price_symbol": "",
-   "address": "",
+   "address": "36 E. 22nd St., New York, NY 10010",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "6 PM-11 PM",
+    "Wed": "6 PM-11 PM",
+    "Thu": "6 PM-11 PM",
+    "Fri": "6 PM-11 PM",
+    "Sat": "6 PM-11 PM",
+    "Sun": "6 PM-11 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://juanyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/jua",
    "booking_url": "",
    "phone": "",
@@ -1989,11 +2313,19 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "220 W. 13th St., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5 PM-9 PM",
+    "Wed": "5 PM-9 PM",
+    "Thu": "5 PM-9 PM",
+    "Fri": "5 PM-9 PM",
+    "Sat": "5 PM-9 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.kosakanyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/kosaka",
    "booking_url": "",
    "phone": "",
@@ -2023,11 +2355,19 @@
    "listed_only": false,
    "cuisine": "French",
    "price_symbol": "",
-   "address": "",
+   "address": "412 Greenwich St., New York, NY 10013",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-10 PM",
+    "Wed": "5:30 PM-10 PM",
+    "Thu": "5:30 PM-10 PM",
+    "Fri": "5 PM-11 PM",
+    "Sat": "5 PM-11 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.labeille.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/l%E2%80%99abeille",
    "booking_url": "",
    "phone": "",
@@ -2057,13 +2397,21 @@
    "listed_only": false,
    "cuisine": "French",
    "price_symbol": "",
-   "address": "",
+   "address": "721 Titicus Rd., North Salem, NY 10560",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "closed",
+    "Wed": "5 PM-9 PM",
+    "Thu": "5 PM-9 PM",
+    "Fri": "5 PM-9 PM",
+    "Sat": "5 PM-9 PM",
+    "Sun": "12 PM-2:30 PM; 5:30 PM-8:30 PM"
+   },
+   "hours_flag": "Outside NYC transit area (North Salem, Westchester).",
+   "official_site": "https://www.labastidebyac.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/north-salem/restaurant/la-bastide-by-andrea-calstier",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/la-bastide-north-salem",
    "phone": "",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
@@ -2102,7 +2450,7 @@
     "Sat": "11:30 AM-2:30 PM; 5 PM-11 PM",
     "Sun": "11:30 AM-2:30 PM; 5 PM-10 PM"
    },
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+   "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
    "official_site": "https://lecoucou.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
    "booking_url": "https://resy.com/cities/new-york-ny/venues/le-coucou",
@@ -2167,6 +2515,7 @@
    "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official page says lunch and Very Coucou menus are priced per person and do not include tax or gratuity; wine accompaniments are extra. The 4-course $240 menu is for parties of 7–10 and is not a couple price.",
    "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
    "price_verified_on": "2026-11-25",
+   "hours_verified_on": "2026-11-26",
    "review_links": [
     {
      "platform": "YouTube",
@@ -2238,11 +2587,19 @@
    "listed_only": false,
    "cuisine": "Korean",
    "price_symbol": "",
-   "address": "",
+   "address": "679 Ninth Ave., New York, NY 10036",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5 PM-9:30 PM",
+    "Tue": "5 PM-9:30 PM",
+    "Wed": "5 PM-9:30 PM",
+    "Thu": "5 PM-9:30 PM",
+    "Fri": "5 PM-10 PM",
+    "Sat": "5 PM-10 PM",
+    "Sun": "5 PM-9:30 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.marinyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/mari",
    "booking_url": "",
    "phone": "",
@@ -2272,13 +2629,21 @@
    "listed_only": false,
    "cuisine": "Korean",
    "price_symbol": "",
-   "address": "",
+   "address": "5-28 49th Ave., Long Island City, Queens, NY 11101",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "closed",
+    "Wed": "6:30 PM-9:45 PM",
+    "Thu": "6:30 PM-9:45 PM",
+    "Fri": "6:30 PM-9:45 PM",
+    "Sat": "6:30 PM-9:45 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://mejunyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/queens/restaurant/meju",
-   "booking_url": "",
+   "booking_url": "https://www.sevenrooms.com/explore/meju/reservations/",
    "phone": "",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
@@ -2306,11 +2671,19 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "412 Greenwich St., New York, NY 10013",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-11:30 PM",
+    "Wed": "5:30 PM-11:30 PM",
+    "Thu": "5:30 PM-11:30 PM",
+    "Fri": "5:30 PM-11:30 PM",
+    "Sat": "5:30 PM-11:30 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.restaurantmuku.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/muku",
    "booking_url": "",
    "phone": "",
@@ -2340,16 +2713,24 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "37 W. 20th St., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:45 PM-9 PM",
+    "Wed": "5:45 PM-9 PM",
+    "Thu": "5:45 PM-9 PM",
+    "Fri": "5:45 PM-9 PM",
+    "Sat": "5:45 PM-9 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.noda.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/noda",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/noda-nyc",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 850,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -2358,14 +2739,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/Noda"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 425,
+   "price_options": [
+    {
+     "label": "noda's Counter (20-course tasting)",
+     "per_person_usd": 425,
+     "for_two_usd": 850,
+     "source_url": "https://www.exploretock.com/noda-nyc"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/noda-nyc",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/noda-nyc"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Nōksu",
@@ -2374,11 +2767,19 @@
    "listed_only": false,
    "cuisine": "Contemporary",
    "price_symbol": "",
-   "address": "",
+   "address": "49 W. 32nd St., New York, NY 10001",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "closed",
+    "Wed": "5 PM-9 PM",
+    "Thu": "5 PM-9 PM",
+    "Fri": "5 PM-9 PM",
+    "Sat": "5 PM-9 PM",
+    "Sun": "5 PM-9 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.noksunyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/noksu",
    "booking_url": "",
    "phone": "",
@@ -2408,13 +2809,21 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "458 W. 17th St., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5 PM-11 PM",
+    "Tue": "5 PM-11 PM",
+    "Wed": "5 PM-11 PM",
+    "Thu": "5 PM-11 PM",
+    "Fri": "5 PM-11 PM",
+    "Sat": "5 PM-11 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://noz.global/experience/noz-17",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/noz17",
-   "booking_url": "",
+   "booking_url": "https://www.sevenrooms.com/explore/noz17/reservations/create/search/",
    "phone": "",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
@@ -2442,11 +2851,19 @@
    "listed_only": false,
    "cuisine": "Korean",
    "price_symbol": "",
-   "address": "",
+   "address": "17 W. 19th St., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5 PM-9 PM",
+    "Tue": "5 PM-9 PM",
+    "Wed": "5 PM-9 PM",
+    "Thu": "5 PM-9 PM",
+    "Fri": "5 PM-9:30 PM",
+    "Sat": "5 PM-9:30 PM",
+    "Sun": "5 PM-9 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.oijimi.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/oiji-mi",
    "booking_url": "",
    "phone": "",
@@ -2476,11 +2893,19 @@
    "listed_only": false,
    "cuisine": "Mexican",
    "price_symbol": "",
-   "address": "",
+   "address": "128 Greenpoint Ave., Brooklyn, NY 11222",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "12 PM-3 PM; 5 PM-10 PM",
+    "Tue": "12 PM-3 PM; 5 PM-10 PM",
+    "Wed": "12 PM-3 PM; 5 PM-10 PM",
+    "Thu": "12 PM-3 PM; 5 PM-10 PM",
+    "Fri": "12 PM-3 PM; 5 PM-10 PM",
+    "Sat": "11 AM-3 PM; 5 PM-10 PM",
+    "Sun": "11 AM-3 PM; 5 PM-10 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.oxomoconyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/oxomoco",
    "booking_url": "",
    "phone": "",
@@ -2510,16 +2935,24 @@
    "listed_only": false,
    "cuisine": "French Contemporary",
    "price_symbol": "",
-   "address": "",
+   "address": "55 Nassau Ave. #1A, Brooklyn, NY 11222",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "6 PM-11 PM",
+    "Wed": "6 PM-11 PM",
+    "Thu": "6 PM-11 PM",
+    "Fri": "6 PM-11 PM",
+    "Sat": "6 PM-11 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.yuunewyork.com/restaurantyuu/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/restaurant-yuu",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/restaurant-yuu-brooklyn",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 160,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "Brooklyn",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -2528,14 +2961,32 @@
     "instagram_search": "https://www.instagram.com/explore/tags/RestaurantYuu"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 80,
+   "price_options": [
+    {
+     "label": "Wine Bar Short Course",
+     "per_person_usd": 80,
+     "for_two_usd": 160,
+     "source_url": "https://www.exploretock.com/restaurant-yuu-brooklyn"
+    },
+    {
+     "label": "Counter Tasting Menu",
+     "per_person_usd": 300,
+     "for_two_usd": 600,
+     "source_url": "https://www.exploretock.com/restaurant-yuu-brooklyn"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/restaurant-yuu-brooklyn",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/restaurant-yuu-brooklyn"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Rezdôra",
@@ -2546,8 +2997,16 @@
    "price_symbol": "$$$$",
    "address": "27 E. 20th St., New York, NY 10003",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — the hours block did not render on the Guide page when fetched.",
+   "hours": {
+    "Mon": "5 PM-11 PM",
+    "Tue": "12 PM-2:30 PM; 5 PM-11 PM",
+    "Wed": "12 PM-2:30 PM; 5 PM-11 PM",
+    "Thu": "12 PM-2:30 PM; 5 PM-11 PM",
+    "Fri": "12 PM-2:30 PM; 5 PM-11 PM",
+    "Sat": "11:30 AM-2:30 PM; 5 PM-11 PM",
+    "Sun": "11:30 AM-2:30 PM; 5 PM-11 PM"
+   },
+   "hours_flag": "",
    "official_site": "https://www.rezdora.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/rezdora-osteria-emiliana",
    "booking_url": "",
@@ -2622,7 +3081,7 @@
     "Sat": "5 PM-10 PM",
     "Sun": "closed"
    },
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+   "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
    "official_site": "https://www.semma.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/semma",
    "booking_url": "https://askanyc.com/",
@@ -2645,26 +3104,27 @@
    "price_basis": "",
    "price_caveat": "",
    "price_for_two_note": "",
-   "price_verified_on": ""
+   "price_verified_on": "",
+   "hours_verified_on": "2026-11-26"
   },
   {
    "name": "Shion 69 Leonard Street",
    "stars": 1,
-   "status_label": "★ 1 MICHELIN Star",
+   "status_label": "★ 1 MICHELIN Star (2025 list) — CLOSED INDEFINITELY",
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "69 Leonard St., New York, NY 10013 (CLOSED)",
    "cluster": "",
    "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+   "hours_flag": "CLOSED INDEFINITELY — closed after a Dec 27, 2025 fire; omitted from the live MICHELIN NYC Guide directory and excluded from active transit counts.",
    "official_site": "",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/shoji-at-69-leonard",
    "booking_url": "",
    "phone": "",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
-   "note": "",
+   "note": "Closed indefinitely after Dec 27, 2025 fire (retained in 2025 list count with closure flag).",
    "source_file": "data/michelin_one_star.json",
    "social": {
     "youtube_search": "https://www.youtube.com/results?search_query=Shion%2069%20Leonard%20Street%20New%20York",
@@ -2688,11 +3148,19 @@
    "listed_only": false,
    "cuisine": "Israeli",
    "price_symbol": "",
-   "address": "",
+   "address": "61 W. 8th St., New York, NY 10011",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-12 AM",
+    "Tue": "5:30 PM-12 AM",
+    "Wed": "5:30 PM-12 AM",
+    "Thu": "5:30 PM-12 AM",
+    "Fri": "5:30 PM-12 AM",
+    "Sat": "5:30 PM-12 AM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.shmonenyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/shmone",
    "booking_url": "",
    "phone": "",
@@ -2722,13 +3190,21 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "50 S. 3rd St., Brooklyn, NY 11249",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-10:30 PM",
+    "Tue": "5:30 PM-10:30 PM",
+    "Wed": "5:30 PM-10:30 PM",
+    "Thu": "5:30 PM-10:30 PM",
+    "Fri": "1 PM-3 PM; 5:30 PM-10:30 PM",
+    "Sat": "1 PM-3 PM; 5:30 PM-10:30 PM",
+    "Sun": "1 PM-3 PM; 5 PM-10 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.shotaomakase.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/shota-omakase",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/shota-omakase-brooklyn",
    "phone": "",
    "price_for_two_usd": "",
    "price_flag": "UNVERIFIED — no first-party dollar price captured",
@@ -2756,11 +3232,19 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "23 Commerce St., New York, NY 10014",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Tue": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Wed": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Thu": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Fri": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Sat": "11:30 AM-2 PM; 5 PM-10 PM",
+    "Sun": "11:30 AM-2 PM; 5 PM-10 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.sushinakazawa.com/new-york",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/sushi-nakazawa",
    "booking_url": "",
    "phone": "",
@@ -2790,11 +3274,19 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "222 E. 39th St., New York, NY 10016",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-8:30 PM",
+    "Wed": "5:30 PM-8:30 PM",
+    "Thu": "5:30 PM-8:30 PM",
+    "Fri": "12 PM-2 PM; 5:30 PM-8:30 PM",
+    "Sat": "12 PM-2 PM; 5:30 PM-8:30 PM",
+    "Sun": "5:30 PM-8:30 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.tempuramatsui.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/tempura-matsui",
    "booking_url": "",
    "phone": "",
@@ -2824,11 +3316,19 @@
    "listed_only": false,
    "cuisine": "American",
    "price_symbol": "",
-   "address": "",
+   "address": "295 Grand St., Brooklyn, NY 11211",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-10:45 PM",
+    "Tue": "5:30 PM-10:45 PM",
+    "Wed": "5:30 PM-10:45 PM",
+    "Thu": "5:30 PM-10:45 PM",
+    "Fri": "11 AM-3:30 PM; 5:30 PM-10:45 PM",
+    "Sat": "11 AM-3:30 PM; 5:30 PM-10:45 PM",
+    "Sun": "11 AM-3:30 PM; 5:30 PM-10:45 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.fourhorsemenbk.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/the-four-horsemen",
    "booking_url": "",
    "phone": "",
@@ -2858,11 +3358,19 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "292 Elizabeth St., New York, NY 10012",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-9 PM",
+    "Tue": "closed",
+    "Wed": "5:30 PM-9 PM",
+    "Thu": "5:30 PM-9 PM",
+    "Fri": "5:30 PM-9 PM",
+    "Sat": "5:30 PM-9 PM",
+    "Sun": "5:30 PM-9 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.torien-nyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/torien",
    "booking_url": "",
    "phone": "",
@@ -2894,9 +3402,17 @@
    "price_symbol": "$$$$",
    "address": "275 Mulberry St., New York, NY 10012",
    "cluster": "Nolita / Puck Building",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — the hours block did not render on the Guide page when fetched.",
-   "official_site": "https://www.torrisinyc.com/",
+   "hours": {
+    "Mon": "5 PM-11 PM",
+    "Tue": "5 PM-11 PM",
+    "Wed": "11:30 AM-2 PM; 5 PM-11 PM",
+    "Thu": "11:30 AM-2 PM; 5 PM-11 PM",
+    "Fri": "11:30 AM-2 PM; 5 PM-11 PM",
+    "Sat": "11:30 AM-2 PM; 5 PM-11 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://torrisinyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/torrisi",
    "booking_url": "https://resy.com/cities/ny/torrisi",
    "phone": "+1 212-254-3000",
@@ -2927,16 +3443,24 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "228 E. 10th St., New York, NY 10003",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "closed",
+    "Wed": "7 PM-11 PM",
+    "Thu": "7 PM-11 PM",
+    "Fri": "7 PM-11 PM",
+    "Sat": "7 PM-11 PM",
+    "Sun": "7 PM-11 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.tsukimi.nyc/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/tsukimi",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/tsukimi",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 600,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -2945,14 +3469,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/Tsukimi"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 300,
+   "price_options": [
+    {
+     "label": "Chef's Tasting Course (includes service charge)",
+     "per_person_usd": 300,
+     "for_two_usd": 600,
+     "source_url": "https://www.exploretock.com/tsukimi"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/tsukimi",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/tsukimi"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Tock price of $300/guest includes service charge; beverages and tax extra.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   },
   {
    "name": "Tuome",
@@ -2961,11 +3497,19 @@
    "listed_only": false,
    "cuisine": "Fusion",
    "price_symbol": "",
-   "address": "",
+   "address": "536 E. 5th St., New York, NY 10009",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "6 PM-9 PM",
+    "Wed": "6 PM-9 PM",
+    "Thu": "6 PM-9 PM",
+    "Fri": "5 PM-9:30 PM",
+    "Sat": "5 PM-9:30 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.tuomenyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/tuome",
    "booking_url": "",
    "phone": "",
@@ -2995,11 +3539,19 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "16 Elizabeth St., New York, NY 10013",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5:30 PM-11:30 PM",
+    "Wed": "5:30 PM-11:30 PM",
+    "Thu": "5:30 PM-11:30 PM",
+    "Fri": "5:30 PM-11:30 PM",
+    "Sat": "5:30 PM-11:30 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.yamadanewyork.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/yamada",
    "booking_url": "",
    "phone": "",
@@ -3029,11 +3581,19 @@
    "listed_only": false,
    "cuisine": "Contemporary, Chinese",
    "price_symbol": "",
-   "address": "",
+   "address": "805 Ninth Ave., New York, NY 10019",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "closed",
+    "Tue": "5 PM-8:30 PM",
+    "Wed": "5 PM-8:30 PM",
+    "Thu": "5 PM-8:30 PM",
+    "Fri": "5 PM-9:30 PM",
+    "Sat": "5 PM-9:30 PM",
+    "Sun": "5 PM-8:30 PM"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.yingtaonyc.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/yingtao",
    "booking_url": "",
    "phone": "",
@@ -3063,16 +3623,24 @@
    "listed_only": false,
    "cuisine": "Japanese",
    "price_symbol": "",
-   "address": "",
+   "address": "342 Bowery, New York, NY 10012",
    "cluster": "",
-   "hours": {},
-   "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
-   "official_site": "",
+   "hours": {
+    "Mon": "5:30 PM-10:30 PM",
+    "Tue": "5:30 PM-10:30 PM",
+    "Wed": "5:30 PM-10:30 PM",
+    "Thu": "5:30 PM-10:30 PM",
+    "Fri": "5:30 PM-10:30 PM",
+    "Sat": "5:30 PM-10:30 PM",
+    "Sun": "closed"
+   },
+   "hours_flag": "",
+   "official_site": "https://www.yoshinonewyork.com/",
    "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/yoshino-1185037",
-   "booking_url": "",
+   "booking_url": "https://www.exploretock.com/yoshinonewyork",
    "phone": "",
-   "price_for_two_usd": "",
-   "price_flag": "UNVERIFIED — no first-party dollar price captured",
+   "price_for_two_usd": 1200,
+   "price_flag": "VERIFIED selected official menu subtotal(s); this is not a quoted all-in total or a 2027 price.",
    "note": "",
    "source_file": "data/michelin_one_star.json",
    "social": {
@@ -3081,14 +3649,26 @@
     "instagram_search": "https://www.instagram.com/explore/tags/Yoshino"
    },
    "cluster_flag": "UNVERIFIED — the neighbourhood has not yet been read off this restaurant's Guide page. Grouping waits for that.",
-   "menu_price_per_person_usd": "",
-   "price_options": [],
-   "price_source_url": "",
-   "price_sources": [],
-   "price_basis": "",
-   "price_caveat": "",
-   "price_for_two_note": "",
-   "price_verified_on": ""
+   "menu_price_per_person_usd": 600,
+   "price_options": [
+    {
+     "label": "Omakase ($500 tasting menu + $100 20% gratuity included)",
+     "per_person_usd": 600,
+     "for_two_usd": 1200,
+     "source_url": "https://www.exploretock.com/yoshinonewyork"
+    }
+   ],
+   "price_source_url": "https://www.exploretock.com/yoshinonewyork",
+   "price_sources": [
+    {
+     "label": "official menu / FAQ / PDF",
+     "url": "https://www.exploretock.com/yoshinonewyork"
+    }
+   ],
+   "price_basis": "2 × official per-person price",
+   "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Tock experience price of $600/guest includes $500 tasting menu and 20% gratuity ($100); beverages and tax extra.",
+   "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
+   "price_verified_on": "2026-11-26"
   }
  ]
 }

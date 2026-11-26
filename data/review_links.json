@@ -1,0 +1,389 @@
+{
+ "_meta": {
+  "purpose": "Structured record of the YouTube / TikTok / Instagram links attached to each restaurant and activity, including what kind of page each link actually is. The site previously shipped 261 search or hashtag URLs and labelled them review links; this file separates a specific post from a search page so a reader knows which one they are clicking.",
+  "checked_utc": "2026-11-26",
+  "link_kinds": {
+   "specific-video": "a single YouTube video whose title and description name this venue; opened in this session",
+   "specific-short": "a single YouTube Short whose title names this venue; seen on the venue's search results page this session",
+   "specific-tiktok": "a single TikTok post verified in an earlier session",
+   "search": "a results page that runs a query; it may show any venue and can change at any time",
+   "channel": "a verified official venue or publication channel, not a review of one visit"
+  },
+  "coverage": {
+   "venues_with_a_specific_link": 9,
+   "specific_posts_total": 26,
+   "specific_posts_where_the_title_names_the_venue": 25,
+   "venues_with_only_search_links": 78,
+   "notes": "A specific link exists where a page was opened and found to show one venue. Where the only available material was a search page, that is recorded as 'search' rather than dressed up as a review. One post films the venue but does not name it in its title; that is marked rather than counted as self-evident."
+  },
+  "rule": "A link is listed as specific only when its own title or description names the venue and the page was opened in this session. Views, uploaders and titles below are transcribed from the page as fetched."
+ },
+ "venues": [
+  {
+   "venue": "Le Bernardin",
+   "type": "restaurant",
+   "stars": 3,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Eating at Le Bernardin. NYC. 3 Michelin Stars. An Amazing 8 Course $310 Tasting Menu",
+     "uploader": "James Andrews",
+     "length": "16:00",
+     "views_as_shown": "606K",
+     "url": "https://www.youtube.com/watch?v=eRPhZXnJCtQ",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Inside New York’s ICONIC Seafood Restaurant - Le Bernardin (3 Michelin Star)",
+     "uploader": "Alexander The Guest",
+     "length": "10:05",
+     "views_as_shown": "471K",
+     "url": "https://www.youtube.com/watch?v=il_uUGZCx_o",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Is Fine Dining Dead? Le Bernardin Review",
+     "uploader": "Food With Jerry",
+     "length": "9:52",
+     "views_as_shown": "4.2K",
+     "url": "https://www.youtube.com/watch?v=rQgmx4GYjvc",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-tiktok",
+     "platform": "TikTok",
+     "title": "Eater — Le Bernardin",
+     "url": "https://www.tiktok.com/@eater/video/7356398018435861803",
+     "verified": true,
+     "note": "verified in an earlier session; retained because the post is venue-specific",
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "Eleven Madison Park",
+   "type": "restaurant",
+   "stars": 3,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Eating at Eleven Madison Park. NYC. 3 Michelin Stars. BEST RESTAURANT in The World Winner",
+     "uploader": "James Andrews",
+     "length": "19:43",
+     "views_as_shown": "447K",
+     "url": "https://www.youtube.com/watch?v=aSE3P9REZVc",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "200 Employees, 3 Michelin Stars: A Day at Eleven Madison Park | On The Line | Bon Appétit",
+     "uploader": "Bon Appétit",
+     "length": "20:28",
+     "views_as_shown": "3.1M",
+     "url": "https://www.youtube.com/watch?v=NK88iwkvjfM",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "I travelled 4,354 miles for this Restaurant - Eleven Madison Park",
+     "uploader": "Alexander The Guest",
+     "length": "8:21",
+     "views_as_shown": "407K",
+     "url": "https://www.youtube.com/watch?v=gh-0fA55DM8",
+     "verified": true,
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "Per Se",
+   "type": "restaurant",
+   "stars": 3,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Eating at Per Se. NYC. 3 Michelin Stars. An Amazing 9 Course $390 Tasting Menu",
+     "uploader": "James Andrews",
+     "length": "18:41",
+     "views_as_shown": "426K",
+     "url": "https://www.youtube.com/watch?v=YOaJo5a-MCw",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Is PER SE Worth It? One of NYC's MOST EXPENSIVE Meals! Thomas Keller's 3 Michelin Star Icon!",
+     "uploader": "UA Eats",
+     "length": "36:27",
+     "views_as_shown": "139K",
+     "url": "https://www.youtube.com/watch?v=5Jpx0k-oCdQ",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Our Most Expensive Meal Ever – The Three Michelin Starred Restaurant Per Se in New York",
+     "uploader": "Anders & Kaitlin",
+     "length": "6:14",
+     "views_as_shown": "200K",
+     "url": "https://www.youtube.com/watch?v=8U1qSSKRCH4",
+     "verified": true,
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "Jungsik New York",
+   "type": "restaurant",
+   "stars": 3,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Eating at Jungsik NYC. One of the BEST Korean Restaurants in the World. 3 Michelin Stars",
+     "uploader": "James Andrews",
+     "length": "16:35",
+     "views_as_shown": "207K",
+     "url": "https://www.youtube.com/watch?v=_Q56V0ISF5o",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Inside NYC’s Only 3 Michelin Star Korean Restaurant | On The Line | Bon Appétit",
+     "uploader": "Bon Appétit",
+     "length": "15:08",
+     "views_as_shown": "2M",
+     "url": "https://www.youtube.com/watch?v=FVzdkDLyuHY",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Eleven Madison Park vs Jungsik - Which NYC 3 Michelin Star Restaurant is Better?",
+     "uploader": "Food With Jerry",
+     "length": "19:47",
+     "views_as_shown": "4.4K",
+     "url": "https://www.youtube.com/watch?v=XGHivfQPOx0",
+     "verified": true,
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "Sushi Sho",
+   "type": "restaurant",
+   "stars": 3,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Inside the \\#1 Sushi Restaurant in the US (Exclusive Access)",
+     "uploader": "Michael Ligier",
+     "length": "24:57",
+     "views_as_shown": "1.1M",
+     "url": "https://www.youtube.com/watch?v=UFpEdSl9FL8",
+     "verified": true,
+     "note": "the video itself is Sushi Sho in NYC (its chapter list names Sushi Sho); it is not titled with the restaurant name",
+     "venue_named_in_title": false
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "A sushi documentary — Sushi Sho, New York",
+     "uploader": "Aron Sörensen",
+     "length": "unknown",
+     "views_as_shown": "unknown",
+     "url": "https://www.youtube.com/watch?v=xpAu6mSBB1w",
+     "verified": true,
+     "note": "title names Sushi Sho New York; view and length figures were not shown on the search page",
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-short",
+     "platform": "YouTube Shorts",
+     "title": "Trying Every Restaurant on the NYT 2025 Top 100 List - Sushi Sho (#8)",
+     "uploader": "not shown on the results page",
+     "length": "short",
+     "views_as_shown": "233K",
+     "url": "https://www.youtube.com/shorts/5Kt2YFv0eYc",
+     "verified": true,
+     "note": "title names Sushi Sho explicitly",
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "Atomix",
+   "type": "restaurant",
+   "stars": 2,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Inside ATOMIX: Discovering America's Best Restaurant | 2 Michelin Star",
+     "uploader": "S3",
+     "length": "8:24",
+     "views_as_shown": "54K",
+     "url": "https://www.youtube.com/watch?v=6nllLkZqO78",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "This is The Best Restaurant in North America",
+     "uploader": "The 50",
+     "length": "1:25",
+     "views_as_shown": "1.4K",
+     "url": "https://www.youtube.com/watch?v=rzLHu8hWfjQ",
+     "verified": true,
+     "note": "description names Atomix",
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "NY Vlogㅣ$300 tasting menu at ATOMIX, Korean Michelin 2 star restaurant",
+     "uploader": "NewyorkerDiary",
+     "length": "16:58",
+     "views_as_shown": "3.3K",
+     "url": "https://www.youtube.com/watch?v=sEfkvUGVdZI",
+     "verified": true,
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "Sushi Noz",
+   "type": "restaurant",
+   "stars": 2,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "What it Takes to Run a 2 Michelin $550 omakase in NYC | Sushi Noz",
+     "uploader": "S3",
+     "length": "10:26",
+     "views_as_shown": "529K",
+     "url": "https://www.youtube.com/watch?v=N3R3_9nS3Z0",
+     "verified": true,
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "The Modern",
+   "type": "restaurant",
+   "stars": 2,
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Eating at The Modern. NYC. Two Michelin Stars. Bar Room Menu",
+     "uploader": "James Andrews",
+     "length": "7:11",
+     "views_as_shown": "20K",
+     "url": "https://www.youtube.com/watch?v=RTkrEpQ0iqA",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "2 MICHELIN STAR Restaurant | The Modern, NYC",
+     "uploader": "S3",
+     "length": "3:34",
+     "views_as_shown": "8.4K",
+     "url": "https://www.youtube.com/watch?v=wxEYW0cnEMo",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Eating 2 Michelin Starred Fried Chicken at The Modern. NYC. Bar Room.",
+     "uploader": "James Andrews",
+     "length": "12:09",
+     "views_as_shown": "240K",
+     "url": "https://www.youtube.com/watch?v=IdIIURNscCM",
+     "verified": true,
+     "venue_named_in_title": true
+    }
+   ]
+  },
+  {
+   "venue": "Solomon R. Guggenheim Museum",
+   "type": "activity",
+   "links": [
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Is The Guggenheim Really Worth It? | NYC Museum Tour",
+     "uploader": "Art Insider",
+     "length": "18:43",
+     "views_as_shown": "10K",
+     "url": "https://www.youtube.com/watch?v=KZ7qvNnW7no",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "An Inside Look at New York's Solomon R. Guggenheim Museum",
+     "uploader": "Open House TV",
+     "length": "3:17",
+     "views_as_shown": "77K",
+     "url": "https://www.youtube.com/watch?v=wdPi5OIUpRU",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "specific-video",
+     "platform": "YouTube",
+     "title": "Art in New York City | The GUGGENHEIM, a Modern Museum at a UNESCO World Heritage Site.",
+     "uploader": "Two Tickets Today",
+     "length": "15:00",
+     "views_as_shown": "7.9K",
+     "url": "https://www.youtube.com/watch?v=ZMvkM_b4hTU",
+     "verified": true,
+     "venue_named_in_title": true
+    },
+    {
+     "kind": "channel",
+     "platform": "YouTube",
+     "title": "Guggenheim Museum — official channel",
+     "uploader": "@guggenheim",
+     "url": "https://www.youtube.com/@guggenheim",
+     "verified": true,
+     "venue_named_in_title": true
+    }
+   ]
+  }
+ ],
+ "venues_with_search_links_only": {
+  "note": "These venues carry only YouTube/TikTok search links and Instagram hashtag links in data/michelin_all.json and data/activities.json. They are recorded here rather than relabelled, because a search URL is not a review.",
+  "restaurants": 72,
+  "restaurants_with_specific": 7,
+  "activities": 15,
+  "activities_with_specific": 1
+ }
+}

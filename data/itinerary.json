@@ -1,172 +1,181 @@
 {
- "_meta": {
-  "basis": "Built only from activities whose hours and prices were verified on the venue’s own site (data/activities.json). Each rendered day row links to the official pages for its planned activities. No travel time is asserted here; the only transit figure quoted is The Met’s own ~1 h 25 min M4 estimate for The Cloisters.",
-  "weekday_logic": "Placement respects published closures: the Whitney is closed Tuesdays, so it sits on Mon and Fri; the 9/11 Museum is closed most Tuesdays, so it sits on Wed.",
-  "length_options": "7 nights (15–22 Feb 2027) is the priced baseline. A 14-night stay repeats this loop with the second week left open for starred dinners, shopping and weather contingency — nothing in week two is asserted as verified.",
-  "caveat": "February weather can close outdoor plans. Central Park, the High Line and the Statue ferry all have no indoor substitute listed on this site yet — that is open question Q11.",
-  "prices_not_summed": "No daily spend total is shown: adult admission is known, but restaurant prices are not verified, so a daily total would be a guess.",
-  "source_links": [
-   {
-    "label": "MTA schedule guidance",
-    "url": "https://www.mta.info/developers/gtfs-schedules-transition"
-   },
-   {
-    "label": "MICHELIN NYC directory",
-    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
-   },
-   {
-    "label": "Central Park alerts",
-    "url": "https://www.centralparknyc.org/alerts"
-   }
+  "_meta": {
+    "basis": "Built only from activities whose hours and prices were verified on the venue’s own site (data/activities.json). Each rendered day row links to the official pages for its planned activities. No travel time is asserted here; the only transit figure quoted is The Met’s own ~1 h 25 min M4 estimate for The Cloisters.",
+    "weekday_logic": "Placement respects published closures: the Whitney is closed Tuesdays, so it sits on Mon and Fri; the 9/11 Museum is closed most Tuesdays, so it sits on Wed.",
+    "length_options": "7 nights (15–22 Feb 2027) is the priced baseline. A 14-night stay repeats this loop with the second week left open for starred dinners, shopping and weather contingency — nothing in week two is asserted as verified.",
+    "caveat": "February weather can close outdoor plans. Central Park, the High Line and the Statue ferry all have no indoor substitute listed on this site yet — that is open question Q11.",
+    "prices_not_summed": "No daily spend total is shown: adult admission is known, but restaurant prices are not verified, so a daily total would be a guess.",
+    "source_links": [
+      {
+        "label": "MTA schedule guidance",
+        "url": "https://www.mta.info/developers/gtfs-schedules-transition"
+      },
+      {
+        "label": "MICHELIN NYC directory",
+        "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+      },
+      {
+        "label": "Central Park alerts",
+        "url": "https://www.centralparknyc.org/alerts"
+      }
+    ],
+    "week2_source_note": "Second-week suggestions are planning prompts, not verified bookings; the linked official planning sources are the starting point for route, award, and weather re-checks.",
+    "verified": "2026-11-26",
+    "schedule_note": "Daytime museums (Whitney 18:00 close, Guggenheim 17:30 close) placed in morning/afternoon slots; MoMA Friday evening (open until 20:30) or MICHELIN dinner placed in evening slots."
+  },
+  "days": [
+    {
+      "day": 1,
+      "weekday": "Mon 15 Feb",
+      "morning": [
+        "Arrive / check in",
+        "Walk the immediate neighbourhood to shake off the flight"
+      ],
+      "afternoon": [
+        {
+          "activity": "highline",
+          "why": "Walk the High Line south to Meatpacking (winter hours 07:00–20:00)"
+        },
+        {
+          "activity": "whitney",
+          "why": "Open Mon 10:30–18:00 (closed Tuesdays); place before 18:00 close"
+        }
+      ],
+      "evening": [
+        "Dinner near Meatpacking / West Village (e.g., Jeju Noodle Bar, Family Meal at Blue Hill, or Frevo — reserve ahead)"
+      ],
+      "dinner_area": "Meatpacking / West Village",
+      "note": "Whitney closes at 18:00 on Mondays and is closed Tuesdays, so it sits in the afternoon slot."
+    },
+    {
+      "day": 2,
+      "weekday": "Tue 16 Feb",
+      "morning": [
+        {
+          "activity": "centralpark",
+          "why": "Open daily 06:00–01:00; walk up toward Upper East Side"
+        }
+      ],
+      "afternoon": [
+        {
+          "activity": "guggenheim",
+          "why": "Open Tue 10:30–17:30 ($30/adult; Pay What You Wish is Tue/Sun 16:00–17:30)"
+        }
+      ],
+      "evening": [
+        {
+          "activity": "topoftherock",
+          "why": "Open daily 08:00–00:00 (last entry 23:10; timed tickets from $42); pairs with Midtown dinner"
+        }
+      ],
+      "dinner_area": "Midtown / Upper East Side",
+      "note": "Whitney is closed Tuesdays — scheduled on Day 1 afternoon instead. Guggenheim closes at 17:30, so it runs in the afternoon while Top of the Rock covers the evening."
+    },
+    {
+      "day": 3,
+      "weekday": "Wed 17 Feb",
+      "morning": [
+        {
+          "activity": "911",
+          "why": "Museum open Wed 09:00–19:00, last entry 17:30; timed ticket required"
+        }
+      ],
+      "afternoon": [
+        {
+          "activity": "statue",
+          "why": "Ferry from The Battery; buy from the authorised operator only"
+        }
+      ],
+      "evening": [
+        "FiDi or Midtown MICHELIN dinner (e.g., Crown Shy, Saga, Gabriel Kreuther, or Le Bernardin — reserve ahead)"
+      ],
+      "dinner_area": "Financial District / Tribeca",
+      "note": "Longest Lower Manhattan day; The Met is closed Wednesdays, so downtown museums and harbour ferry fit here."
+    },
+    {
+      "day": 4,
+      "weekday": "Thu 18 Feb",
+      "morning": [
+        {
+          "activity": "nypl",
+          "why": "Free; Mon/Thu–Sat 10:00–18:00; Rose Main Reading Room visiting hour 10:00–11:00"
+        }
+      ],
+      "afternoon": [
+        {
+          "activity": "met",
+          "why": "Open Thu (closed Wed); $30/adult standard admission (pay-what-you-wish only for NY residents and NY/NJ/CT students with ID)"
+        }
+      ],
+      "evening": [
+        {
+          "activity": "grandcentral",
+          "why": "Open 05:15–02:00 daily; walk through on return to Midtown before dinner"
+        }
+      ],
+      "dinner_area": "Midtown East / Bryant Park",
+      "note": "Free-entry highlights (NYPL & Grand Central) paired with The Met Fifth Avenue ($30/adult standard rate)."
+    },
+    {
+      "day": 5,
+      "weekday": "Fri 19 Feb",
+      "morning": [
+        {
+          "activity": "intrepid",
+          "why": "Winter hours 10:00–17:00, last entry 16:00"
+        }
+      ],
+      "afternoon": [],
+      "evening": [
+        {
+          "activity": "moma",
+          "why": "Open until 20:30 on Fridays (E/F to 5 Av/53 St); optional dinner nearby at The Modern or Midtown"
+        }
+      ],
+      "dinner_area": "Midtown West / 53rd St",
+      "note": "MoMA is the one major museum open until 20:30 on Fridays, making it ideal for an evening art + dinner pairing."
+    },
+    {
+      "day": 6,
+      "weekday": "Sat 20 Feb",
+      "morning": [
+        {
+          "activity": "amnh",
+          "why": "Open daily 10:00–17:30; expect the busiest day of the week"
+        }
+      ],
+      "afternoon": [
+        {
+          "activity": "centralpark",
+          "why": "Adjacent on Central Park West — combine the two"
+        }
+      ],
+      "evening": [
+        "Upper West Side / Midtown West dinner (e.g., Essential by Christophe, YingTao, or Daniel)"
+      ],
+      "dinner_area": "Upper West Side / Midtown",
+      "note": "Morning AMNH timing helps beat Saturday midday crowds."
+    },
+    {
+      "day": 7,
+      "weekday": "Sun 21 Feb",
+      "morning": [
+        {
+          "activity": "cloisters",
+          "why": "A train to 190 St + 10-min walk; The Met states M4 bus from Met Fifth Ave area takes ~1h25"
+        }
+      ],
+      "afternoon": [],
+      "evening": [
+        "Open final evening / farewell MICHELIN dinner (check Sunday hours — e.g., Jungsik, Atomix closed Sun; Odo, Frevo, Bridges open Sun)"
+      ],
+      "dinner_area": "Flexible / MICHELIN farewell",
+      "note": "Half-day excursion — the only listed activity whose M4 bus route from The Met Fifth Ave exceeds 1 hour."
+    }
   ],
-  "week2_source_note": "Second-week suggestions are planning prompts, not verified bookings; the linked official planning sources are the starting point for route, award, and weather re-checks."
- },
- "days": [
-  {
-   "day": 1,
-   "weekday": "Mon 15 Feb",
-   "morning": [
-    "Arrive / check in",
-    "Walk the immediate neighbourhood to shake off the flight"
-   ],
-   "afternoon": [
-    {
-     "activity": "highline",
-     "why": "Free, open 07:00–20:00 in winter"
-    }
-   ],
-   "evening": [
-    {
-     "activity": "whitney",
-     "why": "Open Mon 10:30–18:00; free Friday nights are a different day"
-    }
-   ],
-   "dinner_area": "Meatpacking / West Village",
-   "note": "First day is kept close to the hotel and light on bookings."
-  },
-  {
-   "day": 2,
-   "weekday": "Tue 16 Feb",
-   "morning": [
-    {
-     "activity": "centralpark",
-     "why": "Free, no booking needed"
-    }
-   ],
-   "afternoon": [
-    {
-     "activity": "met",
-     "why": "Pay-what-you-wish applies only to NY residents — budget $30 each"
-    }
-   ],
-   "evening": [
-    {
-     "activity": "guggenheim",
-     "why": "Open Tue 10:30–17:30, Pay What You Wish 16:00–17:30"
-    }
-   ],
-   "dinner_area": "Upper East Side",
-   "note": "Whiteny is closed Tuesdays — that is why it is on Day 1, not here."
-  },
-  {
-   "day": 3,
-   "weekday": "Wed 17 Feb",
-   "morning": [
-    {
-     "activity": "911",
-     "why": "Museum open Wed 09:00–19:00, last entry 17:30; timed ticket required"
-    }
-   ],
-   "afternoon": [
-    {
-     "activity": "statue",
-     "why": "Ferry from The Battery; buy from the authorised operator only"
-    }
-   ],
-   "evening": [],
-   "dinner_area": "Financial District",
-   "note": "Longest transit day; keep the evening free or book one FiDi starred table."
-  },
-  {
-   "day": 4,
-   "weekday": "Thu 18 Feb",
-   "morning": [
-    {
-     "activity": "nypl",
-     "why": "Free; Rose Main Reading Room visiting hour 10:00–11:00"
-    }
-   ],
-   "afternoon": [
-    {
-     "activity": "topoftherock",
-     "why": "Timed slot; price moves with time of day — book the fixed slot"
-    }
-   ],
-   "evening": [
-    {
-     "activity": "grandcentral",
-     "why": "Free to enter, 5 minutes from the Library"
-    }
-   ],
-   "dinner_area": "Midtown",
-   "note": "Cheapest day of the week if you skip the observation deck."
-  },
-  {
-   "day": 5,
-   "weekday": "Fri 19 Feb",
-   "morning": [
-    {
-     "activity": "intrepid",
-     "why": "Winter hours 10:00–17:00, last entry 16:00"
-    }
-   ],
-   "afternoon": [],
-   "evening": [
-    {
-     "activity": "whitney",
-     "why": "Open until 22:00 on Fridays — the one late night on museum row"
-    }
-   ],
-   "dinner_area": "Chelsea / Hell's Kitchen",
-   "note": ""
-  },
-  {
-   "day": 6,
-   "weekday": "Sat 20 Feb",
-   "morning": [
-    {
-     "activity": "amnh",
-     "why": "Open daily 10:00–17:30; expect the busiest day of the week"
-    }
-   ],
-   "afternoon": [
-    {
-     "activity": "centralpark",
-     "why": "Adjacent — combine the two"
-    }
-   ],
-   "evening": [],
-   "dinner_area": "Upper West Side",
-   "note": ""
-  },
-  {
-   "day": 7,
-   "weekday": "Sun 21 Feb",
-   "morning": [
-    {
-     "activity": "cloisters",
-     "why": "A-train day trip; The Met itself states the M4 from Fifth Ave takes ~1h25"
-    }
-   ],
-   "afternoon": [],
-   "evening": [],
-   "dinner_area": "Anywhere near the hotel",
-   "note": "Half-day excursion — the only listed activity that breaks the 1-hour rule."
-  }
- ],
- "second_week_suggestions": [
-  "Re-book the two or three starred dinners that need a reservation window (see the Restaurants page).",
-  "Add one borough day (Brooklyn or Queens) — Michelin has starred venues there (Aska, Francie, Oxomoco, Restaurant Yuu, Shota Omakase, The Four Horsemen, Meju), but no transit time has been measured yet.",
-  "Hold one fully unplanned day for weather."
- ]
+  "second_week_suggestions": [
+    "Re-book the two or three starred dinners that need a reservation window (see the Restaurants page).",
+    "Add one borough day (Brooklyn or Queens) — Michelin has starred venues there (Aska, Francie, Oxomoco, Restaurant Yuu, Shota Omakase, The Four Horsemen, Meju), but no transit time has been measured yet.",
+    "Hold one fully unplanned day for weather."
+  ]
 }

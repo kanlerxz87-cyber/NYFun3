@@ -16,16 +16,16 @@ No build step, dependencies, or framework. The primary dashboard is plain HTML w
 | `activities.html` | 15 museums, parks, landmarks and passes — weekday hours, exceptions, adult prices, review searches. |
 | `restaurants.html` | Starred restaurant shortlist, filterable by area and tier. |
 | `michelin.html` | All 72 starred entries (5 ★★★ / 15 ★★ / 52 ★), cluster counts, star status stated per row. |
-| `hotels.html` | 9 hotels with 7-night totals for 15–22 Feb 2027, checked against private-bathroom and queen-bed requirements. |
+| `hotels.html` | 14 properties with 7-night direct/third-party totals for 15–22 Feb 2027, private-bathroom and queen-bed checks, seasonality, and current-timetable GTFS reach. |
 | `itinerary.html` | 7-day plan sequenced around published closures. |
-| `transit.html` | Computed subway access from each hotel to address-verified starred restaurants (ranking + per-restaurant minutes; generated 26 Nov 2026). |
 | `plan.html` | Executive summary, 9 reviewable suggestions, 11 open questions, irregularities found. |
-| `flagged-for-review.html` | Published NR-01–NR-08 `needs review` queue, each with an official starting source and next check. |
+| `flagged-for-review.html` | Published NR-01–NR-09 `needs review` queue, resolved source corrections, official starting sources, and next checks. |
 | `pages/index.html` | Supplemental curated dossier: itinerary, hotel snapshots, dining/menu arithmetic, attraction hours, and research notes. |
 
-Supporting documents: `REVIEW.md` (repo review, irregularities R1–R20, with final-integration resolutions),
-`VERIFICATION.md` (what was checked, against which page, and when), and `RESEARCH.md`
-(the supplemental dossier source/method log). The nested `pages/` dossier complements the
+Supporting documents: `REVIEW.md` (repo review, irregularities R1–R25, with final-integration resolutions), `EVIDENCE_AUDIT.md`, `FLAGS.md`,
+`VERIFICATION.md` (what was checked, against which page, and when), `RESEARCH.md`
+(the supplemental dossier source/method log), and `CURRENT_AUDIT.md` (26 Nov 2026 decision-readiness
+audit and independent source corrections). The nested `pages/` dossier complements the
 data-driven root site; it does not replace the existing JSON datasets or star/activity tables.
 The root `.nojekyll` file keeps the linked Markdown research log available to GitHub Pages as-is.
 
@@ -41,28 +41,24 @@ dossier also includes selected published restaurant-menu arithmetic and creator-
 menu estimates are not final bills, and social links are not treated as factual authorities.
 
 Several gaps remain visible: the primary MICHELIN table is only a partial per-couple menu-cost
-catalogue (10 selected rows have explicit `2 × official per-person price` arithmetic; 62 remain
-blank + `unverified`), restaurant sites may not expose menu data, and no official source publishes a Feb–Mar 2027
-journey time. Subway access is **computed** from the current MTA GTFS feed (see `transit.html`
-and `data/transit.json`): it covers only the 31 address-verified, geocoded starred restaurants,
-assumes walking at 75 m/min with fixed boarding/interchange allowances, models no bus service,
-and is labelled everywhere it appears as not being a 2027 timetable. The figures that are
-published are paired with menu/FAQ/PDF links and an exclusions caveat; they are not quoted
-all-in totals or 2027 price guarantees. Each gap is listed rather than papered over with a plausible number, and the
-`needs review` queue lives on `flagged-for-review.html`.
+catalogue (25 selected rows have explicit `2 × official per-person price` arithmetic; 47 remain
+blank + `unverified`), restaurant sites may not expose menu data, and no official source publishes
+subway times per hotel/restaurant pair. The figures that are published are paired with
+menu/FAQ/PDF links and an exclusions caveat; they are not quoted all-in totals or 2027 price
+guarantees. Each gap is listed rather than papered over with a plausible number, and the
+`needs review` queue (NR-01–NR-09) and resolved source corrections live on `flagged-for-review.html`.
 
 ## Data files
 
 | File | Contents |
 |---|---|
 | `data/activities.json` | 15 activities, each with `source_url`. |
-| `data/hotels.json` | 9 hotels, each with the exact quote URL (check-in, check-out, 2 adults). |
+| `data/hotels.json` | 14 hotels, each with official/first-party and exact-date quote links where available. |
 | `data/michelin.json` | 5 three-star + 7 two-star, full detail. |
 | `data/michelin_two_star.json` | All 15 two-star records. |
 | `data/michelin_one_star.json` | All 52 one-star records. |
 | `data/michelin_all.json` | Merged, de-duplicated source used by the site (72 rows). |
 | `data/itinerary.json` | 7-day plan plus 3 second-week suggestions, derived from source-linked activity data. |
-| `data/transit.json` | Computed 2026-11-26: per-hotel ≤30/≤45/≤60-minute starred-restaurant reach by subway (GTFS median running times + walking model); see `transit.html` and `research/generated/transit_analysis.json`. |
 
 ## Preview and validation
 
@@ -78,10 +74,10 @@ Opening `index.html` directly from disk will not work: browsers block `fetch()` 
 over `file://`. Any static server is fine. The validators check JSON schemas, official source links, local links/anchors, navigation,
 table Source columns, and `2 × official per-person` arithmetic; the JavaScript checker runs
 `node --check` on every script; the rendered-table harness executes each root renderer with a
-minimal DOM stub and checks all 184 generated rows for source links.
+minimal DOM stub and checks all 175 generated rows for source links.
 `.github/workflows/validate-site.yml` runs both on pushes and pull requests.
 
-## Verification status (26 November 2026)
+## Verification status (25 November 2026)
 
 - **Stars:** the MICHELIN 2025 selection (announced 18 Nov 2025) is current **as of this
   snapshot only**. The next New York ceremony is **14 Dec 2026** — before the trip. Re-check
@@ -89,15 +85,11 @@ minimal DOM stub and checks all 184 generated rows for source links.
 - **Hotel prices:** live Booking.com rate cards, captured with their URLs. These move daily.
 - **Known gaps:** 43 of 52 one-star rows lack verified hours; 52 of 72 rows lack a verified
   neighbourhood (20 verified plus 2 flagged Guide-blurb clues rendered as "Not yet grouped");
-  62 of 72 starred rows still lack a published first-party menu subtotal (10 have selected
-  official-menu arithmetic, and the supplement adds eight curated candidates); the "within 1 hour"
-  ranking is now computed (26 Nov 2026) from current GTFS — subway only, no bus, and only the
-  31 address-verified/geocoded starred restaurants. These gaps are flagged on the site and listed
-  in `plan.html` §4 / `pages/findings.html` / `flagged-for-review.html`.
-- **Review links:** every row keeps search links for YouTube/TikTok/Instagram; 25 priority rows
-  (10 priced restaurants + 15 activities) additionally carry dated, found-by-search creator links
-  (recorded in each row's `review_links`, marked as creator content — not official sources, not
-  endorsements).
+  47 of 72 starred rows still lack a published first-party menu subtotal (25 have selected
+  official-menu arithmetic, and the supplement adds eight curated candidates); a measured
+  current-timetable MTA GTFS ≤1 h hotel count is published with explicit 2027 schedule caveats,
+  not as a 2027 guarantee. These gaps are flagged on the site and listed in `plan.html` §4 /
+  `pages/findings.html` / `flagged-for-review.html`.
 
 ## Contributing / parallel sessions
 
