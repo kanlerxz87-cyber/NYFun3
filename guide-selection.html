@@ -13,6 +13,7 @@
     <span class="brand">NYC <span>2027</span></span>
     <nav class="main" aria-label="Sections">
       <a href="index.html">Dashboard</a>
+      <a href="decide.html">Decide</a>
       <a href="activities.html">Activities</a>
       <a href="restaurants.html">Restaurants</a>
       <a href="michelin.html">Michelin</a>
@@ -121,7 +122,7 @@
         <option value="non_starred">Non-Starred Guide-Listed Only (12 verified)</option>
         <option value="Selected">Merely Listed — Selected (0 Stars)</option>
         <option value="Bib Gourmand">Guide Value — Bib Gourmand (0 Stars)</option>
-        <option value="all_combined">All Combined: Guide-Listed (12) + Priced Starred (10)</option>
+        <option value="all_combined" id="opt-all-combined">All Combined: Guide-Listed + Priced Starred</option>
       </select>
       <select id="cluster" aria-label="Filter by Manhattan cluster">
         <option value="">All Manhattan clusters</option>
@@ -265,13 +266,17 @@ function renderTable() {
 }
 
 Promise.all([
-  NYF.load("data/michelin_guide_selection.json"),
-  NYF.load("data/michelin_all.json")
+  fetch("data/michelin_guide_selection.json").then(function (r) { return r.json(); }),
+  fetch("data/michelin_all.json").then(function (r) { return r.json(); })
 ]).then(function (res) {
   GUIDE_DATA = res[0];
   STARRED_PRICED = (res[1].restaurants || []).filter(function (r) {
     return r.price_options && r.price_options.length > 0;
   }).map(normalizeStarred);
+  var optAll = document.getElementById("opt-all-combined");
+  if (optAll) {
+    optAll.textContent = "All Combined: Guide-Listed (" + GUIDE_DATA.restaurants.length + ") + Priced Starred (" + STARRED_PRICED.length + ")";
+  }
 
   renderClusters(GUIDE_DATA.clusters);
 

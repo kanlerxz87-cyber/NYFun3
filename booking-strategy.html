@@ -13,6 +13,7 @@
     <span class="brand">NYC <span>2027</span></span>
     <nav class="main" aria-label="Sections">
       <a href="index.html">Dashboard</a>
+      <a href="decide.html">Decide</a>
       <a href="activities.html">Activities</a>
       <a href="restaurants.html">Restaurants</a>
       <a href="michelin.html">Michelin</a>
@@ -45,7 +46,7 @@
 
   <section class="panel" id="hotel-verification-matrix">
     <h2>1. First-Party Room-Fit (≥Queen + Private Bath), Amenities &amp; 7-Night Cost Matrix</h2>
-    <p class="lede">Official direct 7-night checkout totals remain <code>unverified</code> because hotel booking engines require live browser sessions. Alongside each dated Booking.com pre-tax snapshot (<code>15–22 Feb 2027</code>), we compute transparent statutory NYC taxes (<strong>14.75% + $3.50/night</strong> = $2.00 NYC flat + $1.50 NYS unit fee per <a href="https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page" target="_blank" rel="noopener noreferrer">NYC DOF</a>) plus disclosed mandatory facility fees so you never mistake a pre-tax OTA card for a final bill.</p>
+    <p class="lede">Shows verified direct quotes where exposed by SynXis/Arlo (e.g., <strong>HGU New York $1,200–$1,257 all-in</strong>; see also <a href="hotels.html">Pod 51 $1,109 all-in &amp; Pod 39 $1,138 all-in</a>) and keeps other direct totals <code>unverified</code> where browser checkout sessions are required. Alongside each dated Booking.com pre-tax snapshot (<code>15–22 Feb 2027</code>), we compute statutory NYC taxes (<strong>14.75% + $3.50/night</strong> = $2.00 NYC flat + $1.50 NYS unit fee per <a href="https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page" target="_blank" rel="noopener noreferrer">NYC DOF</a>) plus disclosed mandatory facility fees.</p>
     <div class="controls">
       <input id="hq" type="search" placeholder="Search hotel, neighborhood, room type, amenity…" aria-label="Filter verified hotels">
       <select id="hfit" aria-label="Filter by room-fit status">
@@ -169,7 +170,7 @@ function renderHotelsVerify() {
         "<td class='small'>" + fitTag + "<br><span class='muted'>" + NYF.esc(h.verified_qualifying_rooms) + "</span></td>" +
         "<td class='small'><ul class='tight'>" + (h.verified_amenities || []).map(function (a) { return "<li>" + NYF.esc(a) + "</li>"; }).join("") +
         "</ul><div class='muted' style='margin-top:4px'><strong>Audit note:</strong> " + NYF.esc(h.repo_defect_found) + "</div></td>" +
-        "<td class='small'><span class='unver'>unverified</span><br><span class='muted'>live engine session required</span></td>" +
+        "<td class='small'>" + (h.official_7n_label ? "<strong>" + NYF.esc(h.official_7n_label) + "</strong>" : "<span class='unver'>unverified</span><br><span class='muted'>live engine session required</span>") + "</td>" +
         "<td class='num'>" + otaStr + "</td>" +
         "<td class='num'>" + estStr + "</td>" +
         "<td class='small'>" + srcs + "</td>" +
@@ -202,7 +203,7 @@ function renderWindows(windows) {
     }).join("") + "</tbody></table></div>";
 }
 
-NYF.load("data/hotel_verification_550e02c4.json").then(function (d) {
+fetch("data/hotel_verification_550e02c4.json").then(function (r) { return r.json(); }).then(function (d) {
   HVERIFY = d;
   renderHotelsVerify();
   renderWindows(d.stay_window_comparison || []);
