@@ -79,11 +79,7 @@ function draw() {
       "<th class='num'>Cost for two</th><th>Official site</th><th>Booking</th><th>Reviews</th><th>Source</th>" +
     "</tr></thead><tbody>" +
     rows.map(function (r) {
-      var s = r.social || {};
-      var social = ["youtube_search","tiktok_search","instagram_search"].map(function (k, i) {
-        if (!s[k]) return "";
-        return '<a href="' + NYF.esc(s[k]) + '" target="_blank" rel="noopener noreferrer">' + ["YouTube","TikTok","Instagram"][i] + "</a>";
-      }).filter(Boolean).join(" · ");
+      var social = NYF.reviewCell(r);
       return "<tr>" +
         "<td><strong>" + NYF.esc(r.name) + "</strong><br><span class='muted small'>" + NYF.esc(r.address || "") + "</span>" +
           (r.phone ? "<br><span class='small'>" + NYF.esc(r.phone) + "</span>" : "") + "</td>" +

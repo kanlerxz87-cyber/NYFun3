@@ -60,7 +60,22 @@
    "price_basis": "2 × official per-person price",
    "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. Official PDFs print 195PP and 305PP; wine and non-alcoholic pairings are listed separately and menus are subject to change.",
    "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-   "price_verified_on": "2026-11-25"
+   "price_verified_on": "2026-11-25",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=wgscC-0tXT8",
+     "title": "Aquavit 2 Michelin Star NYC Restaurant Review",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@highspeeddining/video/7362381305851530542",
+     "title": "High Speed Dining: Michelin star Nordic cuisine at Aquavit NYC",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "aska",
@@ -395,7 +410,22 @@
    "price_basis": "2 × official per-person price",
    "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu says each amount is per person and excludes beverages, tax, and optional gratuity; gratuity is not required.",
    "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-   "price_verified_on": "2026-11-25"
+   "price_verified_on": "2026-11-25",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=fnYmB-4xEzk",
+     "title": "Masa NYC EXCLUSIVE Behind the Curtain of a 3 Star Michelin Restaurant",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/shorts/AAO3N31zAnY",
+     "title": "Masa NYC: $750 per person and it's worth it",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "odo",
@@ -540,7 +570,28 @@
    "price_basis": "2 × official per-person price",
    "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu also lists a $255-per-person lunch tasting, $345-per-person Kitchen Table, and pairings; those are not used as the displayed couple subtotal here.",
    "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-   "price_verified_on": "2026-11-25"
+   "price_verified_on": "2026-11-25",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=RTkrEpQ0iqA",
+     "title": "Eating at The Modern. NYC. Two Michelin Stars. Bar Room Menu",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=wM6sGPN4R0g",
+     "title": "Eating a Luxurious $275 Tasting Menu at The Modern NYC. 2 Michelin Stars",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=IdIIURNscCM",
+     "title": "Eating 2 Michelin Starred Fried Chicken at The Modern. NYC",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   }
  ]
 }

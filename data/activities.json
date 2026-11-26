@@ -40,7 +40,22 @@
    "hours_source_url": "https://www.moma.org/visit/",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_flag": "CURRENT BASELINE — official visit page shows Mon–Thu/Sat–Sun 10:30–17:30 and Fri 10:30–20:30; closed Thanksgiving and Christmas. Galleries close about 15 minutes before museum closing."
+   "hours_flag": "CURRENT BASELINE — official visit page shows Mon–Thu/Sat–Sun 10:30–17:30 and Fri 10:30–20:30; closed Thanksgiving and Christmas. Galleries close about 15 minutes before museum closing.",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=iKhkApixPYA",
+     "title": "Is MoMA Worth It? | NYC Museum Tour",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=cUiBPdqd_m8",
+     "title": "Inside MoMA NYC | 2025 Art Vlog",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "met",
@@ -65,7 +80,22 @@
    "transport_note": "4/5/6 to 86 St then 3 blocks west; M1–M4 bus along 5th/Madison.",
    "hours_source_url": "https://www.metmuseum.org/plan-your-visit",
    "hours_verified_on": "",
-   "hours_baseline_note": ""
+   "hours_baseline_note": "",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=788Zi2S6XSQ",
+     "title": "Is The Metropolitan Museum Of Art Worth Visiting?",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=2KyaQ2qMfi8",
+     "title": "The Metropolitan Museum of Art / New York City (part 1)",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "cloisters",
@@ -90,7 +120,22 @@
    "transport_note": "A train to 190 St + 10-min walk, or M4 bus. The Met's own page states M4 from 5th Ave/83 St takes ~1 h 25 min — EXCEEDS the 1-hour transit rule; treat as a half-day excursion.",
    "hours_source_url": "https://www.metmuseum.org/plan-your-visit/met-cloisters",
    "hours_verified_on": "",
-   "hours_baseline_note": ""
+   "hours_baseline_note": "",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=HkSDJ9neBUM",
+     "title": "The Met Cloisters - An Underrated New York City Museum Gem!",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=WFYvCcu8eYs",
+     "title": "Museum Tours: The Met Cloisters, New York (4K)",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "amnh",
@@ -123,7 +168,22 @@
    "hours_source_url": "https://www.amnh.org/plan-your-visit/hours",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_flag": "CURRENT BASELINE — official hours page says open daily 10:00–17:30; closed Thanksgiving and Christmas. Extended holiday hours are date-specific and not a 2027 confirmation."
+   "hours_flag": "CURRENT BASELINE — official hours page says open daily 10:00–17:30; closed Thanksgiving and Christmas. Extended holiday hours are date-specific and not a 2027 confirmation.",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=UphcGvF-bsc",
+     "title": "American Museum of Natural History Tour & Review",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=KkvGwA7AA3w",
+     "title": "Exploring American Museum of Natural History New York",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "whitney",
@@ -156,7 +216,22 @@
    "hours_source_url": "https://whitney.org/visit",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_flag": "CURRENT BASELINE — official visit page shows Tue closed and Fri 10:30–22:00; holiday hours listed for 2026 are not a 2027 confirmation."
+   "hours_flag": "CURRENT BASELINE — official visit page shows Tue closed and Fri 10:30–22:00; holiday hours listed for 2026 are not a 2027 confirmation.",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=j9j05nW-Q3A",
+     "title": "The Whitney Museum of American Art in New York City",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=NGBSYkjjDHE",
+     "title": "Art That Changed America (Whitney tour)",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "guggenheim",
@@ -189,7 +264,22 @@
    "hours_source_url": "https://www.guggenheim.org/plan-your-visit",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_flag": "CURRENT BASELINE — official plan-your-visit page says every day 10:30–17:30, with select Monday members-only hours 18:00–20:00. Holiday hours listed for 2026 are not a 2027 confirmation."
+   "hours_flag": "CURRENT BASELINE — official plan-your-visit page says every day 10:30–17:30, with select Monday members-only hours 18:00–20:00. Holiday hours listed for 2026 are not a 2027 confirmation.",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=KZ7qvNnW7no",
+     "title": "Is The Guggenheim Really Worth It?",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=TIofg2Q-R4M",
+     "title": "The Guggenheim Art Museum / New York City (part 3)",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "911",
@@ -222,7 +312,22 @@
    "hours_source_url": "https://www.911memorial.org/visit/visit-museum-1",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_flag": "CURRENT BASELINE — official visit page says Wed–Mon and select Tuesdays 09:00–19:00, last entry 18:00 (visit page says 17:30 last admission); free Monday 17:30–19:00. Memorial open daily 08:00–20:00. 2027 select-Tuesday calendar not asserted."
+   "hours_flag": "CURRENT BASELINE — official visit page says Wed–Mon and select Tuesdays 09:00–19:00, last entry 18:00 (visit page says 17:30 last admission); free Monday 17:30–19:00. Memorial open daily 08:00–20:00. 2027 select-Tuesday calendar not asserted.",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=YEx-6W_tZ4g",
+     "title": "I Visit The 9-11 Memorial & Museum In New York",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=AkJ0K0IBOA4",
+     "title": "Visiting The 9/11 Memorial & Museum In New York",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "intrepid",
@@ -255,7 +360,22 @@
    "hours_source_url": "https://intrepidmuseum.org/plan-your-visit/visitor-information/tickets",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_flag": "SEASONAL — official ticket page says Oct–Mar daily 10:00–17:00 and Apr–Sep weekends/holidays 10:00–18:00. Last entry one hour before closing; 2027 calendar not yet asserted."
+   "hours_flag": "SEASONAL — official ticket page says Oct–Mar daily 10:00–17:00 and Apr–Sep weekends/holidays 10:00–18:00. Last entry one hour before closing; 2027 calendar not yet asserted.",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=f99bIRAUaj0",
+     "title": "A day at the Intrepid Museum in New York City: What to expect!",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=6fOH2Rfu8Tg",
+     "title": "Ultimate Intrepid Museum Guide",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "topoftherock",
@@ -280,7 +400,28 @@
    "transport_note": "B/D/F/M to 47–50 Sts–Rockefeller Center.",
    "hours_source_url": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
    "hours_verified_on": "",
-   "hours_baseline_note": ""
+   "hours_baseline_note": "",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=PLEB6Oxm8Fs",
+     "title": "Top of the Rock: A Must-Do in NYC?",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=k_EnhKGsU4U",
+     "title": "Why Top of the Rock is the BEST NYC Observation Deck!",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=Z-Tvpwh6sMY",
+     "title": "Visiting the Top of the Rock Observation Deck in Rockefeller Center",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "statue",
@@ -313,7 +454,22 @@
    "transport_note": "4/5 to Bowling Green; R/W to Whitehall St; 1 to South Ferry.",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_source_url": "https://www.nps.gov/stli/planyourvisit/hours.htm"
+   "hours_source_url": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=AQCGuRDCqGM",
+     "title": "Liberty Island (Statue of Liberty) Ferry",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=yztXihxeSsg",
+     "title": "4K Liberty Island, NYC to Ellis Island Full Statue Cruises Ferry Ride",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "highline",
@@ -346,7 +502,22 @@
    "transport_note": "A/C/E/L to 14 St–8 Ave; 1 to 14 St; L to 8 Ave.",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_source_url": "https://www.thehighline.org/visit/"
+   "hours_source_url": "https://www.thehighline.org/visit/",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=dL2gLUNr5Mg",
+     "title": "What is the High Line? New York City Travel Vlog #57",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=m-X5wYdqW6s",
+     "title": "High Line New York City the new urban park",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "centralpark",
@@ -379,7 +550,22 @@
    "transport_note": "A/B/C/D/1 to Columbus Circle (SW corner); N/R/W to 5th Ave–59 St (SE corner).",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_source_url": "https://www.centralparknyc.org/visit"
+   "hours_source_url": "https://www.centralparknyc.org/visit",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=lOhDOVJILtQ",
+     "title": "New York Winter Walk [4K] Central Park - Crunchy Ice & Snow",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=cjXwPYGN2W0",
+     "title": "New York City Walking Tour - Central Park - Winter 2022",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "nypl",
@@ -404,7 +590,22 @@
    "transport_note": "B/D/F/M to 42 St–Bryant Park; 7 to 5th Ave.",
    "hours_source_url": "https://www.nypl.org/locations/schwarzman",
    "hours_verified_on": "",
-   "hours_baseline_note": ""
+   "hours_baseline_note": "",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=ZX9eEmi7oiI",
+     "title": "Step inside the iconic Rose Main Reading Room at the New York Public Library",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.architecturaldigest.com/video/watch/new-york-public-library-virtual-walking-tour",
+     "title": "Hidden Secrets of the New York Public Library (virtual walking tour)",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "grandcentral",
@@ -437,7 +638,22 @@
    "transport_note": "4/5/6/7/S to Grand Central–42 St.",
    "hours_verified_on": "2026-11-25",
    "hours_baseline_note": "Current official baseline captured 2026-11-25; not a 2027 calendar confirmation.",
-   "hours_source_url": "https://grandcentralterminal.com/visit/"
+   "hours_source_url": "https://grandcentralterminal.com/visit/",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=UxEH67vQhlI",
+     "title": "Grand Central in NYC – World's Best Train Station?",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=LZF_-XDHZDc",
+     "title": "Grand Central Terminal Walking Tour",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   },
   {
    "id": "citypass",
@@ -462,7 +678,22 @@
    "transport_note": "N/A.",
    "hours_source_url": "",
    "hours_verified_on": "",
-   "hours_baseline_note": ""
+   "hours_baseline_note": "",
+   "review_links": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=9stzTuk58Mg",
+     "title": "New York City Pass Honest Review",
+     "found_on": "2026-11-26"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/watch?v=BDiawhz3Y1w",
+     "title": "Is the New York CityPASS worth it?",
+     "found_on": "2026-11-26"
+    }
+   ],
+   "review_links_note": "Creator content found via web search on 2026-11-26; not an official source, not an endorsement, and the visit described may predate the publication of this page."
   }
  ]
 }
