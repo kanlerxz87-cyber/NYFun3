@@ -1,0 +1,851 @@
+{
+ "_meta": {
+  "generated_utc": "2026-11-26T13:32:54Z",
+  "ranking_metric": "median_minutes_to_measured_starred_restaurants",
+  "ranking_metric_explained": "Each hotel's rank is the median modelled door-to-door time to the starred restaurants that could be measured for it. A lower median is better. The metric is chosen because the requested 'count within 1 hour' turned out not to discriminate: every hotel reaches every measured starred restaurant inside 60 minutes, so the count is identical and the tie has to be broken by something that is actually measured.",
+  "why_the_1h_count_is_not_a_ranking": "starred_restaurants_within_60_min_total is published for every hotel and is the same number for all of them. That is a real result of the measurement, not a placeholder: Midtown and the Financial District are both within an hour of every measured starred restaurant on the timetable used.",
+  "sample_used_for_the_rank": "wednesday 12:00 local departure",
+  "sensitivity_note": "median_spread_between_windows_min shows how much the median moves across the four samples (weekday/Saturday \u00d7 12:00/18:00). A rank whose spread overlaps the next hotel's median is a tie, not a win.",
+  "coverage": {
+   "starred_restaurants_in_dataset": 72,
+   "starred_restaurants_measured": 29,
+   "starred_restaurants_unmeasured": 43,
+   "unmeasured_names": [
+    "Bar Miller",
+    "Blue Hill at Stone Barns",
+    "Bridges (NEW)",
+    "Caf\u00e9 Boulud",
+    "Casa Mono",
+    "Corima",
+    "Dirt Candy",
+    "Essential by Christophe",
+    "Family Meal at Blue Hill",
+    "Francie",
+    "Frevo",
+    "Huso (NEW)",
+    "Icca",
+    "Joo Ok",
+    "Jua",
+    "J\u014dji",
+    "Kosaka",
+    "La Bastide by Andrea Calstier",
+    "Le Pavillon",
+    "L\u2019Abeille",
+    "Mari",
+    "Masa",
+    "Meju",
+    "Muku (NEW)",
+    "Noda",
+    "Noz 17",
+    "N\u014dksu",
+    "Oiji Mi",
+    "Oxomoco",
+    "Restaurant Yuu",
+    "Shion 69 Leonard Street",
+    "Shmon\u00e9",
+    "Shota Omakase",
+    "Sushi Nakazawa",
+    "Tempura Matsui",
+    "The Four Horsemen",
+    "Torien",
+    "Tsukimi",
+    "Tuome",
+    "Yamada (NEW)",
+    "YingTao",
+    "Yoshino",
+    "b\u014dm"
+   ],
+   "why_unmeasured": "the records carry no street address, or the U.S. Census geocoder could not resolve the address, or no stop is within the 500 m walk cap. Each one is listed in data/transit_hotels.json \u2192 _meta.unmeasured_destinations with its reason."
+  },
+  "sources": {
+   "journey_times": "data/transit_hotels.json (MTA GTFS model)",
+   "hotel_totals": "data/hotels.json (Booking.com third-party rate snapshots, 15\u201322 Feb 2027)",
+   "stars": "data/michelin_all.json (MICHELIN Guide 2025 selection)",
+   "gtfs": "https://www.mta.info/developers",
+   "geocoder": "https://geocoding.geo.census.gov/geocoder"
+  },
+  "caveats": [
+   "journey times are modelled from the current timetable, not a 2027 trip plan",
+   "hotel totals are third-party snapshots before tax, not official quotes",
+   "star counts are the 2025 selection and must be re-read after the next ceremony"
+  ]
+ },
+ "ranking": [
+  {
+   "hotel_id": "arlo-midtown",
+   "name": "Arlo Midtown",
+   "area": "Midtown West",
+   "address_used": "351 W 38th St, New York, NY 10018",
+   "nearest_stop_walk_min": 1.8,
+   "stops_within_walk": 35,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 18.5,
+    "best_minutes": 4.0,
+    "worst_minutes": 39.4,
+    "within_45_min": 29,
+    "within_30_min": 26
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 21.6,
+    "best_minutes": 11.2,
+    "worst_minutes": 69.6,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 18.5,
+    "wednesday 18:00": 18.3,
+    "saturday 12:00": 18.6,
+    "saturday 18:00": 18.5
+   },
+   "median_spread_between_windows_min": 0.3,
+   "hotel_quote_total_before_tax_usd": 1255.0,
+   "hotel_search_page_total_usd": 1098.0,
+   "quality_flag": null,
+   "rank_by_median": 1
+  },
+  {
+   "hotel_id": "citizenm-new-york-times-square",
+   "name": "citizenM New York Times Square",
+   "area": "Midtown / Times Square",
+   "address_used": "218 W 50th St, New York, NY 10019",
+   "nearest_stop_walk_min": 0.7,
+   "stops_within_walk": 29,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.0,
+    "best_minutes": 3.2,
+    "worst_minutes": 49.3,
+    "within_45_min": 28,
+    "within_30_min": 25
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 11,
+    "median_minutes": 21.8,
+    "best_minutes": 6.6,
+    "worst_minutes": 55.6,
+    "within_45_min": 10,
+    "within_30_min": 9
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.0,
+    "wednesday 18:00": 21.2,
+    "saturday 12:00": 21.7,
+    "saturday 18:00": 21.7
+   },
+   "median_spread_between_windows_min": 2.7,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 1113.0,
+   "quality_flag": null,
+   "rank_by_median": 2
+  },
+  {
+   "hotel_id": "pestana-cr7-times-square",
+   "name": "Pestana CR7 Times Square",
+   "area": "Times Square / Hell's Kitchen",
+   "address_used": "338 W 39th St, New York, NY 10018",
+   "nearest_stop_walk_min": 1.5,
+   "stops_within_walk": 34,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.0,
+    "best_minutes": 4.6,
+    "worst_minutes": 49.3,
+    "within_45_min": 28,
+    "within_30_min": 24
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 21.6,
+    "best_minutes": 11.2,
+    "worst_minutes": 63.1,
+    "within_45_min": 10,
+    "within_30_min": 7
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.0,
+    "wednesday 18:00": 18.2,
+    "saturday 12:00": 18.6,
+    "saturday 18:00": 18.5
+   },
+   "median_spread_between_windows_min": 0.8,
+   "hotel_quote_total_before_tax_usd": 1327.0,
+   "hotel_search_page_total_usd": 1175.0,
+   "quality_flag": null,
+   "rank_by_median": 3
+  },
+  {
+   "hotel_id": "mayfair-hotel",
+   "name": "The Mayfair Hotel",
+   "area": "Midtown / Theater District",
+   "address_used": "242 W 49th St, New York, NY 10019",
+   "nearest_stop_walk_min": 1.4,
+   "stops_within_walk": 29,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.0,
+    "best_minutes": 4.1,
+    "worst_minutes": 49.3,
+    "within_45_min": 28,
+    "within_30_min": 25
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 11,
+    "median_minutes": 21.8,
+    "best_minutes": 6.6,
+    "worst_minutes": 55.6,
+    "within_45_min": 10,
+    "within_30_min": 9
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.0,
+    "wednesday 18:00": 21.3,
+    "saturday 12:00": 21.7,
+    "saturday 18:00": 21.7
+   },
+   "median_spread_between_windows_min": 2.7,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 1060.0,
+   "quality_flag": null,
+   "rank_by_median": 4
+  },
+  {
+   "hotel_id": "hyatt-place-chelsea",
+   "name": "Hyatt Place New York/Chelsea",
+   "area": "Chelsea / Flatiron",
+   "address_used": "140 W 24th St, New York, NY 10011",
+   "nearest_stop_walk_min": 1.4,
+   "stops_within_walk": 27,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.3,
+    "best_minutes": 5.1,
+    "worst_minutes": 38.0,
+    "within_45_min": 29,
+    "within_30_min": 27
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 20.1,
+    "best_minutes": 12.8,
+    "worst_minutes": 76.0,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.3,
+    "wednesday 18:00": 18.7,
+    "saturday 12:00": 20.2,
+    "saturday 18:00": 19.7
+   },
+   "median_spread_between_windows_min": 1.5,
+   "hotel_quote_total_before_tax_usd": 1183.0,
+   "hotel_search_page_total_usd": 1113.0,
+   "quality_flag": null,
+   "rank_by_median": 5
+  },
+  {
+   "hotel_id": "hgu-new-york",
+   "name": "HGU New York",
+   "area": "NoMad / Midtown South",
+   "address_used": "34 E 32nd St, New York, NY 10016",
+   "nearest_stop_walk_min": 0.6,
+   "stops_within_walk": 39,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 20.2,
+    "best_minutes": 3.7,
+    "worst_minutes": 38.0,
+    "within_45_min": 29,
+    "within_30_min": 26
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 22.3,
+    "best_minutes": 9.6,
+    "worst_minutes": 76.0,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 20.2,
+    "wednesday 18:00": 18.7,
+    "saturday 12:00": 19.5,
+    "saturday 18:00": 18.8
+   },
+   "median_spread_between_windows_min": 1.5,
+   "hotel_quote_total_before_tax_usd": 1091.6,
+   "hotel_search_page_total_usd": 1092.0,
+   "quality_flag": null,
+   "rank_by_median": 6
+  },
+  {
+   "hotel_id": "blue-angel-hotel",
+   "name": "Blue Angel Hotel",
+   "area": "NoMad / Herald Square",
+   "address_used": "152 East 55th Street, New York, NY 10022",
+   "nearest_stop_walk_min": 1.1,
+   "stops_within_walk": 38,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 22.6,
+    "best_minutes": 3.9,
+    "worst_minutes": 44.3,
+    "within_45_min": 29,
+    "within_30_min": 23
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 17.6,
+    "best_minutes": 7.2,
+    "worst_minutes": 69.6,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 22.6,
+    "wednesday 18:00": 25.0,
+    "saturday 12:00": 23.1,
+    "saturday 18:00": 25.7
+   },
+   "median_spread_between_windows_min": 3.1,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 990.0,
+   "quality_flag": null,
+   "rank_by_median": 7
+  },
+  {
+   "hotel_id": "artezen-hotel",
+   "name": "Artezen Hotel",
+   "area": "Financial District",
+   "address_used": "24 John St, New York, NY 10038",
+   "nearest_stop_walk_min": 0.9,
+   "stops_within_walk": 43,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 22.7,
+    "best_minutes": 6.0,
+    "worst_minutes": 44.3,
+    "within_45_min": 29,
+    "within_30_min": 19
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 31.0,
+    "best_minutes": 4.7,
+    "worst_minutes": 98.0,
+    "within_45_min": 7,
+    "within_30_min": 4
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 22.7,
+    "wednesday 18:00": 24.1,
+    "saturday 12:00": 20.9,
+    "saturday 18:00": 20.7
+   },
+   "median_spread_between_windows_min": 3.4,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 1358.69,
+   "quality_flag": null,
+   "rank_by_median": 8
+  },
+  {
+   "hotel_id": "eurostars-wall-street",
+   "name": "Eurostars Wall Street",
+   "area": "Financial District",
+   "address_used": "129 Front St, New York, NY 10005",
+   "nearest_stop_walk_min": 1.2,
+   "stops_within_walk": 14,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 26.4,
+    "best_minutes": 2.6,
+    "worst_minutes": 52.1,
+    "within_45_min": 28,
+    "within_30_min": 17
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 34.2,
+    "best_minutes": 9.4,
+    "worst_minutes": 106.5,
+    "within_45_min": 7,
+    "within_30_min": 2
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 26.4,
+    "wednesday 18:00": 26.0,
+    "saturday 12:00": 26.0,
+    "saturday 18:00": 26.6
+   },
+   "median_spread_between_windows_min": 0.6,
+   "hotel_quote_total_before_tax_usd": 1127.0,
+   "hotel_search_page_total_usd": 831.0,
+   "quality_flag": null,
+   "rank_by_median": 9
+  }
+ ],
+ "all_hotels": [
+  {
+   "hotel_id": "eurostars-wall-street",
+   "name": "Eurostars Wall Street",
+   "area": "Financial District",
+   "address_used": "129 Front St, New York, NY 10005",
+   "nearest_stop_walk_min": 1.2,
+   "stops_within_walk": 14,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 26.4,
+    "best_minutes": 2.6,
+    "worst_minutes": 52.1,
+    "within_45_min": 28,
+    "within_30_min": 17
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 34.2,
+    "best_minutes": 9.4,
+    "worst_minutes": 106.5,
+    "within_45_min": 7,
+    "within_30_min": 2
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 26.4,
+    "wednesday 18:00": 26.0,
+    "saturday 12:00": 26.0,
+    "saturday 18:00": 26.6
+   },
+   "median_spread_between_windows_min": 0.6,
+   "hotel_quote_total_before_tax_usd": 1127.0,
+   "hotel_search_page_total_usd": 831.0,
+   "quality_flag": null,
+   "rank_by_median": 9
+  },
+  {
+   "hotel_id": "hgu-new-york",
+   "name": "HGU New York",
+   "area": "NoMad / Midtown South",
+   "address_used": "34 E 32nd St, New York, NY 10016",
+   "nearest_stop_walk_min": 0.6,
+   "stops_within_walk": 39,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 20.2,
+    "best_minutes": 3.7,
+    "worst_minutes": 38.0,
+    "within_45_min": 29,
+    "within_30_min": 26
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 22.3,
+    "best_minutes": 9.6,
+    "worst_minutes": 76.0,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 20.2,
+    "wednesday 18:00": 18.7,
+    "saturday 12:00": 19.5,
+    "saturday 18:00": 18.8
+   },
+   "median_spread_between_windows_min": 1.5,
+   "hotel_quote_total_before_tax_usd": 1091.6,
+   "hotel_search_page_total_usd": 1092.0,
+   "quality_flag": null,
+   "rank_by_median": 6
+  },
+  {
+   "hotel_id": "hyatt-place-chelsea",
+   "name": "Hyatt Place New York/Chelsea",
+   "area": "Chelsea / Flatiron",
+   "address_used": "140 W 24th St, New York, NY 10011",
+   "nearest_stop_walk_min": 1.4,
+   "stops_within_walk": 27,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.3,
+    "best_minutes": 5.1,
+    "worst_minutes": 38.0,
+    "within_45_min": 29,
+    "within_30_min": 27
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 20.1,
+    "best_minutes": 12.8,
+    "worst_minutes": 76.0,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.3,
+    "wednesday 18:00": 18.7,
+    "saturday 12:00": 20.2,
+    "saturday 18:00": 19.7
+   },
+   "median_spread_between_windows_min": 1.5,
+   "hotel_quote_total_before_tax_usd": 1183.0,
+   "hotel_search_page_total_usd": 1113.0,
+   "quality_flag": null,
+   "rank_by_median": 5
+  },
+  {
+   "hotel_id": "citizenm-new-york-times-square",
+   "name": "citizenM New York Times Square",
+   "area": "Midtown / Times Square",
+   "address_used": "218 W 50th St, New York, NY 10019",
+   "nearest_stop_walk_min": 0.7,
+   "stops_within_walk": 29,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.0,
+    "best_minutes": 3.2,
+    "worst_minutes": 49.3,
+    "within_45_min": 28,
+    "within_30_min": 25
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 11,
+    "median_minutes": 21.8,
+    "best_minutes": 6.6,
+    "worst_minutes": 55.6,
+    "within_45_min": 10,
+    "within_30_min": 9
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.0,
+    "wednesday 18:00": 21.2,
+    "saturday 12:00": 21.7,
+    "saturday 18:00": 21.7
+   },
+   "median_spread_between_windows_min": 2.7,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 1113.0,
+   "quality_flag": null,
+   "rank_by_median": 2
+  },
+  {
+   "hotel_id": "pestana-cr7-times-square",
+   "name": "Pestana CR7 Times Square",
+   "area": "Times Square / Hell's Kitchen",
+   "address_used": "338 W 39th St, New York, NY 10018",
+   "nearest_stop_walk_min": 1.5,
+   "stops_within_walk": 34,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.0,
+    "best_minutes": 4.6,
+    "worst_minutes": 49.3,
+    "within_45_min": 28,
+    "within_30_min": 24
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 21.6,
+    "best_minutes": 11.2,
+    "worst_minutes": 63.1,
+    "within_45_min": 10,
+    "within_30_min": 7
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.0,
+    "wednesday 18:00": 18.2,
+    "saturday 12:00": 18.6,
+    "saturday 18:00": 18.5
+   },
+   "median_spread_between_windows_min": 0.8,
+   "hotel_quote_total_before_tax_usd": 1327.0,
+   "hotel_search_page_total_usd": 1175.0,
+   "quality_flag": null,
+   "rank_by_median": 3
+  },
+  {
+   "hotel_id": "arlo-midtown",
+   "name": "Arlo Midtown",
+   "area": "Midtown West",
+   "address_used": "351 W 38th St, New York, NY 10018",
+   "nearest_stop_walk_min": 1.8,
+   "stops_within_walk": 35,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 18.5,
+    "best_minutes": 4.0,
+    "worst_minutes": 39.4,
+    "within_45_min": 29,
+    "within_30_min": 26
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 21.6,
+    "best_minutes": 11.2,
+    "worst_minutes": 69.6,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 18.5,
+    "wednesday 18:00": 18.3,
+    "saturday 12:00": 18.6,
+    "saturday 18:00": 18.5
+   },
+   "median_spread_between_windows_min": 0.3,
+   "hotel_quote_total_before_tax_usd": 1255.0,
+   "hotel_search_page_total_usd": 1098.0,
+   "quality_flag": null,
+   "rank_by_median": 1
+  },
+  {
+   "hotel_id": "mayfair-hotel",
+   "name": "The Mayfair Hotel",
+   "area": "Midtown / Theater District",
+   "address_used": "242 W 49th St, New York, NY 10019",
+   "nearest_stop_walk_min": 1.4,
+   "stops_within_walk": 29,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 19.0,
+    "best_minutes": 4.1,
+    "worst_minutes": 49.3,
+    "within_45_min": 28,
+    "within_30_min": 25
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 11,
+    "median_minutes": 21.8,
+    "best_minutes": 6.6,
+    "worst_minutes": 55.6,
+    "within_45_min": 10,
+    "within_30_min": 9
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 19.0,
+    "wednesday 18:00": 21.3,
+    "saturday 12:00": 21.7,
+    "saturday 18:00": 21.7
+   },
+   "median_spread_between_windows_min": 2.7,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 1060.0,
+   "quality_flag": null,
+   "rank_by_median": 4
+  },
+  {
+   "hotel_id": "blue-angel-hotel",
+   "name": "Blue Angel Hotel",
+   "area": "NoMad / Herald Square",
+   "address_used": "152 East 55th Street, New York, NY 10022",
+   "nearest_stop_walk_min": 1.1,
+   "stops_within_walk": 38,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 22.6,
+    "best_minutes": 3.9,
+    "worst_minutes": 44.3,
+    "within_45_min": 29,
+    "within_30_min": 23
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 17.6,
+    "best_minutes": 7.2,
+    "worst_minutes": 69.6,
+    "within_45_min": 10,
+    "within_30_min": 8
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 22.6,
+    "wednesday 18:00": 25.0,
+    "saturday 12:00": 23.1,
+    "saturday 18:00": 25.7
+   },
+   "median_spread_between_windows_min": 3.1,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 990.0,
+   "quality_flag": null,
+   "rank_by_median": 7
+  },
+  {
+   "hotel_id": "artezen-hotel",
+   "name": "Artezen Hotel",
+   "area": "Financial District",
+   "address_used": "24 John St, New York, NY 10038",
+   "nearest_stop_walk_min": 0.9,
+   "stops_within_walk": 43,
+   "starred_restaurants_within_60_min": {
+    "three_star": 5,
+    "two_star": 12,
+    "one_star": 12
+   },
+   "starred_restaurants_within_60_min_total": 29,
+   "restaurants": {
+    "measured": 29,
+    "within_60_min": 29,
+    "median_minutes": 22.7,
+    "best_minutes": 6.0,
+    "worst_minutes": 44.3,
+    "within_45_min": 29,
+    "within_30_min": 19
+   },
+   "activities": {
+    "measured": 11,
+    "within_60_min": 10,
+    "median_minutes": 31.0,
+    "best_minutes": 4.7,
+    "worst_minutes": 98.0,
+    "within_45_min": 7,
+    "within_30_min": 4
+   },
+   "median_minutes_by_window": {
+    "wednesday 12:00": 22.7,
+    "wednesday 18:00": 24.1,
+    "saturday 12:00": 20.9,
+    "saturday 18:00": 20.7
+   },
+   "median_spread_between_windows_min": 3.4,
+   "hotel_quote_total_before_tax_usd": null,
+   "hotel_search_page_total_usd": 1358.69,
+   "quality_flag": null,
+   "rank_by_median": 8
+  }
+ ]
+}

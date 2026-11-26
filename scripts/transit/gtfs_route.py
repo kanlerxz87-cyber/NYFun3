@@ -576,6 +576,7 @@ def main() -> int:
             "generated_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "what_this_is": "A modelled door-to-door journey time for every hotel x destination pair, "
                             "computed by this script from the official MTA static GTFS timetable.",
+            "is_modelled_estimate": True,
             "what_this_is_not": [
                 "not an MTA-published door-to-door time",
                 "not a 2027 trip plan — the static feed carries the current timetable and omits most "

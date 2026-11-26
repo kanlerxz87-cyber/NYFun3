@@ -487,6 +487,7 @@
    "name": "U.S. Census Bureau geocoder",
    "url": "https://geocoding.geo.census.gov/geocoder"
   },
+  "is_modelled_estimate": true,
   "null_meaning": "minutes = null means no journey of 110 minutes or less was found, or the address could not be geocoded. It never means zero.",
   "rows": 36,
   "service_dates": {

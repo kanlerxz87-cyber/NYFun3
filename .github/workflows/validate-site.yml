@@ -26,6 +26,8 @@ jobs:
           node-version: '22'
       - name: Validate data, links, source columns, and navigation
         run: python scripts/validate_site.py
+      - name: Check source links, verification register and data provenance
+        run: python scripts/check_sources.py
       - name: Check JavaScript syntax
         run: python scripts/check_inline_js.py
       - name: Render dynamic tables and verify generated source links
