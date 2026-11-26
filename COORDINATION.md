@@ -44,6 +44,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
 | T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `done` | `ed92e764` | shared outputs, `flagged-for-review.html`, `review.html`, `scripts/**`, `.github/workflows/validate-site.yml`, `COORDINATION.md`, `README.md`, PR to `main` |
+| T14 | Verification audit remediation, live direct SynXis/Arlo hotel quotes & seasonality, 100% active MICHELIN addresses/hours & 25 priced menus, measured MTA GTFS + Census Geocoder 1h transit ranking, mobile & renderer fixes, CI, PR & merge to `main` | `in_progress` | `arena-25fd4b76` | `data/*.json`, `*.html`, `pages/*.html`, `assets/*`, `research/**`, `scripts/**`, `.github/workflows/**`, `COORDINATION.md`, `REVIEW.md`, `VERIFICATION.md`, `RESEARCH.md` |
 
 ## `needs review` items — published on Flagged for Review page
 
