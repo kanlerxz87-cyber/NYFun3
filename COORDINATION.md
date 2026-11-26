@@ -62,9 +62,10 @@ Flagged for Review (NR-01–NR-08) remain `needs review` and are published on th
 
 | ID | Task | Status | Owner session | File scope |
 |---|---|---|---|---|
-| T14 | Fresh post-integration audit of requirements coverage, site integrity, data provenance gaps, and actionable decision readiness | `in progress` | `arena/79f655ba-nyfun3` | `CURRENT_AUDIT.md`, `COORDINATION.md` |
+| T14 | Fresh post-integration audit of requirements coverage, site integrity, data provenance gaps, and actionable decision readiness | `done` | `arena/79f655ba-nyfun3` | `CURRENT_AUDIT.md`, `COORDINATION.md` |
+| T15 | Publish newly verified MICHELIN directory discrepancy on the Flagged for Review page | `in progress` | `arena/79f655ba-nyfun3` | `flagged-for-review.html`, `COORDINATION.md` |
 
-Claim rationale: prior T13 integration is marked complete, but this is a new active branch based at `1cc7131`; no other task is active in the board. This task does not modify shared tables, site navigation, or the existing integration-owned pages.
+Claim rationale: prior T13 integration is complete and this branch has completed its fresh audit (T14). The current official MICHELIN all-starred page now shows aggregate counts that differ from the static 2025 dataset; T15 publishes this newly observed mismatch without changing or guessing shared restaurant rows. T15 is a final-integration follow-up on this branch; no other task is active.
 
 ## `needs review` items — published on Flagged for Review page
 
@@ -131,3 +132,15 @@ Claim rationale: prior T13 integration is marked complete, but this is a new act
 - **GitHub Pages** reported `status: built`, `error: null` for both `0a2eafe` and `0b9ec96`. The latest build completed 23:39:31 UTC. Legacy source remains `main` `/`.
 - **Live URLs checked:** root dashboard, `flagged-for-review.html`, `plan.html`, `pages/findings.html`, `restaurants.html`, `michelin.html`, and `itinerary.html`. The new review queue, Source columns, `2 × official per-person price` cells, and consolidated itinerary sources rendered on the published site. The Restaurants and Michelin introductions were rechecked with a cache-busting query after the second build.
 - **T13:** `done`. All substantive integration, CI, PR, Pages, and live checks are complete; no 2027 inference or unverified value was introduced.
+
+## Work log — Fresh audit (`arena/79f655ba-nyfun3`, 2026-11-26)
+
+**T14 result:** Added `CURRENT_AUDIT.md`, a decision-readiness crosswalk covering the travel window, holiday, hotel quote limitations, missing transit counts, current MICHELIN status discrepancy, hours/prices coverage, social-link semantics, open questions, and recommended next steps. No hotel, transit, 2027 hours, or MICHELIN row values were inferred or changed.
+
+**Sources directly inspected:** [official MICHELIN NYC all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred) (displayed 3 three-star / 14 two-star / 50 one-star counts and a 69-restaurant heading; the visible counts sum to 67; this differs from the repository's 2025-tagged 72-row dataset), and [official OPM 2027 federal holiday schedule](https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/) (Washington's Birthday is Monday 15 February 2027). Local data, pages, and validators were inspected; see `CURRENT_AUDIT.md` for exact coverage and caveats.
+
+**Verification:** `python scripts/validate_site.py`, `python scripts/check_inline_js.py`, `node scripts/check_rendered_tables.js`, and `git diff --check` all passed after rebasing this branch onto `origin/main`. Automated checks establish structure/source-link coverage, not truth or live availability.
+
+**Irregularities:** the current official MICHELIN page aggregate differs from local 2025 data and its own visible tier counts (67) differ from the displayed result total (69); 9/9 hotel ≤1-hour counts remain null; hotel quote totals are third-party and only one date range; 7/9 amenity fields and 5/15 activity hours tables are blank; 45/72 Michelin hours and 62/72 couple price totals are blank; social links are discovery searches, not verified specific content. Detailed flags and sources are in `CURRENT_AUDIT.md`.
+
+**T15:** final integration follow-up claimed to add the MICHELIN count discrepancy to `flagged-for-review.html`; it will not overwrite dataset values until individual official records can be reconciled.
