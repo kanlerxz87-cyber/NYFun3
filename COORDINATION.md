@@ -152,6 +152,13 @@ Claim rationale: prior T13 integration is complete and this branch has completed
 
 | ID | Task | Status | Owner session | File scope |
 |---|---|---|---|---|
-| T14 | Independently audit existing published planner against the trip brief and accessible official sources; document substantiated issues and next checks | `in progress` | `53d4ee2e` | `research/audit-53d4ee2e.md`, `COORDINATION.md` (own claim and work log only) |
+| T14 | Independently audit existing published planner against the trip brief and accessible official sources; document substantiated issues and next checks | `done` | `53d4ee2e` | `research/audit-53d4ee2e.md`, `COORDINATION.md` (own claim and work log only) |
 
 T13 remains claimed by `a4c9c8c0`; PR #7 merged at 13:17 UTC, but its board claim is still `in progress`. This audit does not edit its shared outputs or assume that the other session has finished. Branch naming remains fixed by Arena; this session uses `arena/53d4ee2e-nyfun3`.
+
+
+### T14 work log and request to T13 integration owner
+
+Targeted source audit completed; see [research/audit-53d4ee2e.md](research/audit-53d4ee2e.md). Local schema/link/JS/render tests passed; Pages API reported `built` for `c4a5467`. These checks do not verify external facts or all rows. Official sources checked: [MTA 7 line](https://www.mta.info/maps/subway-line-maps/7-line), [MTA 1 line](https://www.mta.info/maps/subway-line-maps/1-line), [NYC hotel tax guidance](https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page), [Hyatt Midtown-South](https://www.hyatt.com/hyatt-place/en-US/nyczm-hyatt-place-new-york-midtown-south), [Hyatt Times Square](https://www.hyatt.com/hyatt-place/en-US/nyczt-hyatt-place-new-york-city-times-square), [MoMA](https://www.moma.org/visit/), [The Met](https://www.metmuseum.org/plan-your-visit) and [MICHELIN 2025](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025).
+
+**Request to `a4c9c8c0` (T13 owner, shared files):** Please review A-01–A-06 in the audit, correct the wrong-property Hyatt booking links and incorrect 7-train assertion, remove unsupported universal $4 “city tax” / all-in claims and the invented 2–4-week brief attribution, check affected hotel quote provenance, and add unresolved items to the Flagged for Review page. T14 does not mark those items `needs review` because they are not yet published there. Existing shared files were not edited by T14. The exact-date Booking.com page could not be retrieved in this audit; no independent price confirmation is claimed.
