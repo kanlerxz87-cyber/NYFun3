@@ -182,7 +182,7 @@
             <td><strong>The Met Cloisters</strong></td>
             <td>Thu–Tue 10:00–17:00; <strong>Closed Wed</strong> (plus Thanksgiving, 25 Dec, 1 Jan)</td>
             <td><strong>$60</strong> ($30/adult; same-day Met Fifth Ave ticket valid)</td>
-            <td>Combine on the same day as Met Fifth Ave to use one $30/adult admission across both locations; ~55–62 min subway from Lower Manhattan.</td>
+            <td>Check The Met's current ticket terms and the MTA planner for the selected date.</td>
             <td><a href="https://www.metmuseum.org/plan-your-visit/met-cloisters" target="_blank" rel="noopener noreferrer">Met Cloisters official</a></td>
           </tr>
           <tr>
@@ -214,7 +214,7 @@
   <section class="panel" id="suggestions-and-questions">
     <h2>5. Reviewable Pre-Implementation Suggestions &amp; Open Questions</h2>
     <ul class="tight">
-      <li><strong>Suggestion 1 — Lock Duration (3 vs. 7 vs. 14 Nights):</strong> Confirm whether <em>15–18 Feb 2027</em> is a 3-night trip or the preferred arrival window for a 7–14 night stay (late Feb is ~30–45% cheaper than mid-March).</li>
+      <li><strong>Suggestion 1 — Lock Duration (3 vs. 7 vs. 14 Nights):</strong> Confirm whetheruration (3 vs. 7 vs. 14 Nights):</strong> Confirm whether <em>15–18 Feb 2027</em> is a 3-night trip or the preferred arrival window for a 7–14 night stay (late Feb is ~30–45% cheaper than mid-March).</li>
       <li><strong>Suggestion 2 — Book Refundable Direct Promo Rates Before 3 / 8 Dec 2026:</strong> Lock a refundable direct rate at <strong>HGU New York (Queen Deluxe / King Standard)</strong>, <strong>Pod 51 / Pod 39 (Queen Pod)</strong>, <strong>Arlo Midtown (<code>CYBER</code> by 3 Dec)</strong>, or <strong>Hyatt Place Chelsea / Midtown-South (by 8 Dec)</strong>, then re-compare if winter sales drop in January.</li>
       <li><strong>Suggestion 3 — Combine Skyline Views + MICHELIN Dining at Manhatta:</strong> Booking <em>Manhatta</em>'s 3-course dinner ($256/couple) or 2-course lunch ($130/couple) on the 60th floor of 28 Liberty St delivers a Lower Manhattan observatory view plus a MICHELIN Guide meal, saving $84–$96 on separate observation-deck tickets.</li>
       <li><strong>Suggestion 4 — Re-Check Stars on 15 Dec 2026:</strong> Review the 14 Dec 2026 Northeast Cities Ceremony results before 30–60 day January 2027 Resy/Tock booking windows open. Full line-by-line audit ledger: <a href="research/audit-46804a5a.md">research/audit-46804a5a.md</a> · <a href="flagged-for-review.html">Flagged for Review</a>.</li>
@@ -309,8 +309,8 @@
         "<td><strong>" + esc(c.name) + "</strong></td>" +
         "<td>" + esc(c.starred_highlights) + "</td>" +
         "<td>" + esc(c.guide_listed_highlights) + "</td>" +
-        "<td>" + esc(c.nearest_shortlist_hotels) + "<br><span class=\"small muted\">Subway: " + esc(c.subway_lines) + "</span></td>" +
-        "<td><span class=\"pill ok\">&le;60 min verified</span><br><span class=\"small muted\">" + esc(c.within_60_min_transit_note) + "</span></td>" +
+        "<td><span class=\"small muted\">Subway lines listed by neighborhood: " + esc(c.subway_lines) + "</span></td>" +
+        "<td><span class=\"unver\">2027 journey unverified</span><br><a href=\"decide.html\">Model and caveats</a></td>" +
         "<td class=\"small\">" + extLink(c.source_url, "MICHELIN Guide") + "<br>" + extLink("https://new.mta.info/guides/apps", "MTA Official") + "</td>" +
         "</tr>";
     }).join("");
@@ -321,10 +321,18 @@
       return "<tr>" +
         "<td><strong>" + esc(h.name) + "</strong><br><span class=\"small muted\">" + esc(h.verified_neighborhood) + " · " + esc(h.verified_address) + "</span></td>" +
         "<td><span class=\"" + pillCls + "\">" + esc(h.audit_status.replace(/_/g, " ")) + "</span><br><span class=\"small\">" + esc(h.bed_and_couple_fit) + " " + esc(h.private_bathroom_status) + "</span></td>" +
-        "<td class=\"num\"><strong>$" + Number(h.snapshot_7n_room_subtotal_usd).toFixed(2) + "</strong><br><span class=\"small muted\">Booking.com 7n</span></td>" +
-        "<td class=\"num\"><strong>$" + Number(h.estimated_pre_resort_fee_7n_usd).toFixed(2) + "</strong><br><span class=\"small muted\">Incl. $" + Number(h.estimated_statutory_tax_7n_usd).toFixed(2) + " tax</span><span class=\"flag\">" + esc(h.resort_or_facility_fee_note) + "</span></td>" +
+        "<td><span class=\"unver\">Recheck quote</span><br><a href=\"hotels.html\">Hotel comparison</a></td>" +
+        "<td><span class=\"unver\">Final total unverified</span><br><span class=\"flag\">" + esc(h.resort_or_facility_fee_note) + "</span></td>" +
         "<td><span class=\"small\"><b>URL Audit:</b> " + esc(h.repo_url_status) + "<br><b>Amenities:</b> " + esc(h.verified_amenities) + "<br><b>&le;1 hr MICHELIN:</b> " + esc(h.michelin_1hr_subway_access) + "</span></td>" +
         "<td class=\"small\">" + extLink(h.verified_official_url, "Official hotel") + "<br>" + extLink("https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page", "NYC DOF tax") + "<br>" + extLink(h.booking_snapshot_url, "Rate snapshot") + "</td>" +
+        "</tr>";
+    }).join("");
+  });
+})();
+</script>
+</body>
+</html>
+"<br>" + extLink(h.booking_snapshot_url, "Rate snapshot") + "</td>" +
         "</tr>";
     }).join("");
   });

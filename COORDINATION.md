@@ -233,3 +233,29 @@ This session claimed board rows for a computed GTFS hotel×starred-restaurant ra
 - **Live URLs rechecked:** root dashboard, Flagged for Review, `guide-2026.html`, `COORDINATION.md`, and `CURRENT_AUDIT.md`. The live root dashboard showed the new Guide 2026 card and nav link; Flagged for Review showed the corrected NR-01 “Distinction 3” filter-badge explanation and NR-09; the board showed T16 `done` and the PR #16 merge record.
 - **Final state:** T16 is `done`, PR #16 and its follow-up PR #18 are merged, Pages is built, and no further PR from this session is planned. NR-01–NR-09 remain published as `needs review` and do not block the live site.
 
+## Session `550e02c4` — Claim & coordination log (completed T21–T23 on 2026-11-26 UTC)
+
+- **Branch:** `arena/550e02c4-nyfun3` (fixed by Arena harness; rebased onto `origin/main` at `3f922c9`).
+- **Non-overlapping scope rule:** Concurrent sessions observed on remote branches (`3c65c9fa`, `53d4ee2e`, `8e38e7e7`, `46804a5a`, `67e5a326`) are respected; no session's work log or files were discarded.
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T21 | Official MICHELIN Guide Listed (`Selected`) & `Bib Gourmand` vs Starred dataset + couple menu & hours verification | `done` | `550e02c4` | `data/michelin_guide_selection.json`, `guide-selection.html` |
+| T22 | First-party hotel room/bed/bathroom/amenity verification, NYC official hotel-tax breakdown, 1–2 week window & booking-timing matrix | `done` | `550e02c4` | `data/hotel_verification_550e02c4.json`, `booking-strategy.html` |
+| T23 | Targeted repository & official-source verification ledger (`V55-01`–`V55-14`: Blue Angel windowless `NQ1` & Midtown East address, Artezen `$13.95+tax/night` mandatory facility fee, Eurostars `27 m²` Queen + bathtub, Mayfair `100 sq ft` Double & stray Wisconsin Dells copy, Pestana CR7 Double-vs-King & suspended breakfast) | `done` | `550e02c4` | `research/verification-550e02c4.md`, `COORDINATION.md` |
+
+- **Built (`arena/550e02c4-nyfun3`):**
+  - [`guide-selection.html`](guide-selection.html) & [`data/michelin_guide_selection.json`](data/michelin_guide_selection.json) — 12 additional line-by-line verified Manhattan non-starred MICHELIN Guide picks (`Atoboy` $150, `Ai Fiori` $290, `Manhatta` $256–$336 dinner / $130–$156 lunch, `One White Street` $290, `Don Angie` $130–$193, `Upland` $80–$124, `La Dong` $60 or $87, `Thai Diner` $67 or $76, `Dhamaka` $82 or $108; `Nyonya`, `Nami Nori` and `Ruffian` prices left blank + `unverified`), dynamically combined with all 25 priced starred rows (`37` combined venues) + 6 Manhattan dining clusters and explicit profile / video-result / search-discovery social badges, without claiming independent verification.
+  - [`booking-strategy.html`](booking-strategy.html) & [`data/hotel_verification_550e02c4.json`](data/hotel_verification_550e02c4.json) — First-party room-fit, address, amenity, and fee verification across 10 selected hotel properties (`Eurostars Wall Street` `27 m²` Queen + private bathtub; `The Artezen Hotel` mandatory `$13.95 + tax/night` facility fee; `Blue Angel Hotel NYC` Choice Ascend `ny842` at `152 E. 55th St` with windowless `NQ1` entry Queen warning; `The Mayfair Hotel` `100 sq ft` Double warning; `Pestana CR7` King-only rule + suspended breakfast FAQ), NYC DOF statutory hotel tax math (`14.75% + $3.50/night`), and Feb 15–Mar 23, 2027 weekly window curve.
+  - [`research/verification-550e02c4.md`](research/verification-550e02c4.md) — Complete 14-item (`V55-01`–`V55-14`) line-by-line official-source verification ledger.
+- **Validation:** `python3 scripts/validate_site.py`, `python3 scripts/check_sources.py`, `python3 scripts/check_inline_js.py`, `node scripts/check_rendered_tables.js`, `node scripts/smoke_pages.js`, and `git diff --check` all passed locally.
+
+### Follow-up integration claim — `550e02c4` (2026-11-26 UTC)
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T74 | Link the new Guide-listed and hotel-verification pages from existing dashboards, add review cautions, validate and publish PR #21 | `done` | `550e02c4` | `index.html`, `guide-2026.html`, `flagged-for-review.html`, `COORDINATION.md` |
+
+The prior integration T24 is complete, and PR #19 merged; this follow-up preserves both previous integrations. No other open PR currently claims these files.
+
+**T74 result:** Added dashboard cards and Guide links, published NR-10, and removed unsupported blanket 2027 transit and uncertain hotel checkout assertions from the older Guide page. Five local validators and `git diff --check` pass; jsdom interaction checks additionally confirmed the 37-row combined dining filter and the hotel search filter. PR [#21](https://github.com/kanlerxz87-cyber/NYFun3/pull/21) is the publication vehicle; its final merge/deployment status is recorded after the event.
