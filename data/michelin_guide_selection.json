@@ -1,0 +1,707 @@
+{
+  "_meta": {
+    "dataset": "MICHELIN Guide New York City — Non-Starred Guide-Listed Selection (Bib Gourmand & Selected) + Full 369-Entry Directory Reconciliation",
+    "verified_on": "2026-11-26",
+    "verified_by_session": "550e02c4",
+    "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants",
+    "official_starred_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+    "official_bib_gourmand_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/bib-gourmand",
+    "official_selected_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/the-plate-michelin",
+    "ceremony_2026_announcement_url": "https://michelinmedia.com/pages/blog/detail/article/c0/a1479",
+    "ceremony_2026_note": "Michelin North America announced on 2026-08-11 that the 2026 MICHELIN Guide Northeast Cities ceremony takes place on 2026-12-14 at The Glasshouse in New York City. Re-verify all distinctions after 2026-12-14 before Feb–Mar 2027 bookings.",
+    "live_directory_counts_2026_11_26": {
+      "total_nyc_and_surroundings": 369,
+      "three_star": 5,
+      "two_star": 14,
+      "one_star": 50,
+      "starred_subtotal": 69,
+      "bib_gourmand": 76,
+      "selected_listed_only": 224,
+      "non_starred_subtotal": 300
+    },
+    "nr01_reconciliation": "Resolves NR-01: the live MICHELIN all-starred directory displays 5 three-star (Eleven Madison Park, Jungsik New York, Le Bernardin, Per Se, Sushi Sho), 14 two-star, and 50 one-star entries, summing to exactly 69 starred restaurants (matching the '1-48 of 69 restaurants' heading). Combined with 76 Bib Gourmand and 224 Selected (listed-only) venues, the live NYC directory totals 369 restaurants (69 + 76 + 224 = 369).",
+    "price_arithmetic_rule": "Prix-fixe rows use 2 × official per-person menu price; à-la-carte rows show explicit couple-dish or itemized 2-adult sample subtotals from the restaurant's own current menu/PDF. All figures exclude beverages, tax (8.875% NYC dining sales tax), and gratuity unless explicitly stated, and are not guaranteed 2027 prices. Unreadable/image-only menus remain null and flagged unverified."
+  },
+  "clusters": [
+    {
+      "id": "flatiron-nomad-gramercy-unionsq",
+      "name": "Flatiron / NoMad / Gramercy / Union Square",
+      "starred_examples_count": 15,
+      "guide_listed_featured": ["Atoboy (Selected)", "Upland (Selected)", "La Dong (Bib Gourmand)"],
+      "nearest_candidate_hotels": ["HGU New York (34 E 32nd St)", "Hyatt Place Chelsea (140 W 24th St)"],
+      "cluster_summary": "Highest walking-radius concentration of both starred and Guide-listed (Selected + Bib Gourmand) dining in Manhattan along the 14th–32nd St / Broadway–Park Ave spine.",
+      "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+    },
+    {
+      "id": "midtown-fifth-theater",
+      "name": "Midtown / Fifth Ave / Theater District",
+      "starred_examples_count": 17,
+      "guide_listed_featured": ["Ai Fiori (Selected)"],
+      "nearest_candidate_hotels": ["Hyatt Place Midtown-South (52 W 36th St)", "Arlo Midtown (351 W 38th St)", "Pestana CR7 (338 W 39th St)", "The Mayfair Hotel (242 W 49th St)", "citizenM Times Square (218 W 50th St)", "Blue Angel Hotel NYC (152 E 55th St)"],
+      "cluster_summary": "Densest three-star and two-star fine-dining corridor (Le Bernardin, Per Se, Sushi Sho, The Modern, Gabriel Kreuther, Aquavit) paired with hotel-accessible Selected dining such as Ai Fiori on Fifth Ave.",
+      "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+    },
+    {
+      "id": "west-village",
+      "name": "West Village / Greenwich Village",
+      "starred_examples_count": 6,
+      "guide_listed_featured": ["Don Angie (Selected)", "Nami Nori (Bib Gourmand)"],
+      "nearest_candidate_hotels": ["Hyatt Place Chelsea (140 W 24th St)"],
+      "cluster_summary": "High-demand neighborhood cluster reachable on the 1/2/3, A/C/E, and F/M lines; combines 1-star counters with Selected Italian-American (Don Angie) and Bib Gourmand temaki (Nami Nori).",
+      "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+    },
+    {
+      "id": "soho-nolita-chinatown",
+      "name": "SoHo / Nolita / Chinatown / Little Italy",
+      "starred_examples_count": 4,
+      "guide_listed_featured": ["Thai Diner (Bib Gourmand)", "Nyonya (Bib Gourmand)"],
+      "nearest_candidate_hotels": ["The Artezen Hotel (24 John St)", "Eurostars Wall Street (129 Front St)"],
+      "cluster_summary": "Best high-value Bib Gourmand daytime and casual dinner cluster along Mott and Grand Streets (N/Q/R/W, B/D, 6, J/Z).",
+      "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/bib-gourmand"
+    },
+    {
+      "id": "east-village-les",
+      "name": "East Village / Lower East Side",
+      "starred_examples_count": 3,
+      "guide_listed_featured": ["Dhamaka (Bib Gourmand)", "Ruffian (Bib Gourmand)"],
+      "nearest_candidate_hotels": ["The Artezen Hotel (24 John St)", "HGU New York (34 E 32nd St)"],
+      "cluster_summary": "Adventurous Bib Gourmand destination cluster anchored by Essex Market (Dhamaka, F/M/J/Z Delancey-Essex) and East 7th St natural wine bars (Ruffian).",
+      "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/bib-gourmand"
+    },
+    {
+      "id": "tribeca-fidi",
+      "name": "Tribeca & Financial District",
+      "starred_examples_count": 7,
+      "guide_listed_featured": ["One White Street (Selected)", "Manhatta (Selected)"],
+      "nearest_candidate_hotels": ["The Artezen Hotel (24 John St)", "Eurostars Wall Street (129 Front St)"],
+      "cluster_summary": "Walkable from Lower Manhattan hotels: combines 3-star Jungsik, 2-star Atera/Saga, and 1-star Crown Shy with 60th-floor skyline dining at Manhatta and townhouse tasting menus at One White Street.",
+      "source_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "atoboy",
+      "name": "Atoboy",
+      "guide_tier": "Selected",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Selected (0 Stars)",
+      "distinction_note": "Recommended in the live MICHELIN Guide NYC Selection (non-starred); sister restaurant to 2-star Atomix.",
+      "cuisine": "Korean, Contemporary",
+      "price_symbol": "$$$$",
+      "cluster": "Flatiron / NoMad / Gramercy / Union Square",
+      "neighborhood": "NoMad",
+      "address": "43 E. 28th St., New York, NY 10016",
+      "hours": {
+        "Mon": "5:00 PM–9:00 PM",
+        "Tue": "5:00 PM–9:00 PM",
+        "Wed": "5:00 PM–9:00 PM",
+        "Thu": "5:00 PM–9:00 PM",
+        "Fri": "5:00 PM–10:00 PM",
+        "Sat": "5:00 PM–10:00 PM",
+        "Sun": "5:00 PM–9:00 PM"
+      },
+      "hours_exceptions": "unverified — Feb–Mar 2027 and Mon 15 Feb 2027 (Presidents' Day) holiday hours not yet published",
+      "pricing_format": "prix_fixe",
+      "couple_price_usd": 150,
+      "couple_price_display": "$150 ($75/person prix-fixe × 2)",
+      "couple_price_note": "2 × $75 official shareable prix-fixe (includes seasonal rice, banchan, kimchi); optional add-ons (e.g. Fried Chicken), beverages, tax, and gratuity extra.",
+      "price_status": "verified",
+      "official_site": "https://www.atoboynyc.com/",
+      "menu_source_url": "https://www.atoboynyc.com/s/Atoboy-food-menu-1120.pdf",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/atoboy",
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "kind": "verified_profile",
+          "label": "@atoboynyc (official)",
+          "url": "https://www.instagram.com/atoboynyc/"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "Bon Appétit — Chef Junghyun Park at Atoboy",
+          "url": "https://www.youtube.com/watch?v=HjsqE5SdAng"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Atoboy%20NYC"
+        }
+      ]
+    },
+    {
+      "id": "ai-fiori",
+      "name": "Ai Fiori",
+      "guide_tier": "Selected",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Selected (0 Stars)",
+      "distinction_note": "Currently MICHELIN Guide Selected (0 stars) in the live directory; held 1 star in earlier editions, so older blogs/videos may still say '1 star'.",
+      "cuisine": "Italian, French (Riviera)",
+      "price_symbol": "$$$$",
+      "cluster": "Midtown / Fifth Ave / Theater District",
+      "neighborhood": "Midtown / Fifth Ave",
+      "address": "400 Fifth Ave., 2nd Level (The Langham NYC), New York, NY 10018",
+      "hours": {
+        "Mon": "7:00 AM–11:00 AM; 12:00 PM–2:30 PM; 5:00 PM–9:30 PM",
+        "Tue": "7:00 AM–11:00 AM; 12:00 PM–2:30 PM; 5:00 PM–9:30 PM",
+        "Wed": "7:00 AM–11:00 AM; 12:00 PM–2:30 PM; 5:00 PM–9:30 PM",
+        "Thu": "7:00 AM–11:00 AM; 12:00 PM–2:30 PM; 5:00 PM–9:30 PM",
+        "Fri": "7:00 AM–11:00 AM; 12:00 PM–2:30 PM; 5:00 PM–9:45 PM",
+        "Sat": "7:30 AM–11:30 AM; 5:00 PM–9:45 PM",
+        "Sun": "7:30 AM–11:30 AM; 5:00 PM–9:00 PM"
+      },
+      "hours_exceptions": "No weekend lunch service (Sat–Sun breakfast + dinner only). 4-course prix-fixe dinner noted Mon–Sat after 5:00 PM; Feb–Mar 2027 holiday exceptions unverified.",
+      "pricing_format": "prix_fixe_and_a_la_carte",
+      "couple_price_usd": 290,
+      "couple_price_display": "$290 ($145/person 4-course prix-fixe × 2)",
+      "couple_price_note": "2 × $145 official 4-course dinner prix-fixe (Mon–Sat); à la carte pastas $41–$46 and secondi $50–$85 also available. Excludes beverages, supplements, tax, and gratuity.",
+      "price_status": "verified",
+      "official_site": "https://www.aifiorinyc.com/",
+      "menu_source_url": "https://www.aifiorinyc.com/menu/dinner",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/ai-fiori",
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "kind": "verified_profile",
+          "label": "@aifiori (official)",
+          "url": "https://www.instagram.com/aifiori/"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "search_discovery",
+          "label": "YouTube search (discovery)",
+          "url": "https://www.youtube.com/results?search_query=Ai+Fiori+NYC+review"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Ai%20Fiori%20NYC"
+        }
+      ]
+    },
+    {
+      "id": "manhatta",
+      "name": "Manhatta",
+      "guide_tier": "Selected",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Selected (0 Stars)",
+      "distinction_note": "Listed in the MICHELIN Guide NYC Selection (0 stars); 60th-floor dining room & bar from Union Square Hospitality Group. Reservations open 28 days ahead.",
+      "cuisine": "Contemporary, New American",
+      "price_symbol": "$$$$",
+      "cluster": "Tribeca & Financial District",
+      "neighborhood": "Financial District",
+      "address": "28 Liberty St., 60th Floor, New York, NY 10005",
+      "hours": {
+        "Mon": "11:30 AM–2:00 PM; 5:00 PM–9:30 PM",
+        "Tue": "11:30 AM–2:00 PM; 5:00 PM–9:30 PM",
+        "Wed": "11:30 AM–2:00 PM; 5:00 PM–9:30 PM",
+        "Thu": "11:30 AM–2:00 PM; 5:00 PM–10:30 PM",
+        "Fri": "11:30 AM–2:00 PM; 5:00 PM–10:30 PM",
+        "Sat": "11:30 AM–2:00 PM; 5:00 PM–10:30 PM",
+        "Sun": "11:30 AM–2:00 PM; 5:00 PM–9:30 PM"
+      },
+      "hours_exceptions": "Chef's Counter paused per official site; Dining Room & walk-in Bar operate daily. Feb–Mar 2027 holiday hours unverified.",
+      "pricing_format": "prix_fixe",
+      "couple_price_usd": 256,
+      "couple_price_display": "Dinner: $256 / $296 / $336 (3/4/5 courses for 2) · Lunch: $130 / $156",
+      "couple_price_note": "2 × official Dining Room prix-fixe: Dinner 3-course $128/pp ($256/two), 4-course $148/pp ($296/two), 5-course $168/pp ($336/two); Lunch 2-course $65/pp ($130/two), 3-course $78/pp ($156/two). Excludes wine pairings ($75–$115/pp), tax, and gratuity.",
+      "price_status": "verified",
+      "official_site": "https://www.manhattarestaurant.com/",
+      "menu_source_url": "https://www.manhattarestaurant.com/the-dining-room/",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/manhatta",
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "kind": "verified_profile",
+          "label": "@manhatta_nyc (official)",
+          "url": "https://www.instagram.com/manhatta_nyc/"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "YouTube — Eating at Manhatta (60th Floor)",
+          "url": "https://www.youtube.com/watch?v=I1tGCJFOD_s"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Manhatta%20NYC"
+        }
+      ]
+    },
+    {
+      "id": "one-white-street",
+      "name": "One White Street",
+      "guide_tier": "Selected",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Selected (0 Stars)",
+      "distinction_note": "Currently MICHELIN Guide Selected (0 stars, with MICHELIN sustainability/farm distinction note); held 1 star in earlier editions. Both à la carte and 6-course tasting offered across all 3 townhouse floors.",
+      "cuisine": "Contemporary, Farm-to-Table",
+      "price_symbol": "$$$$",
+      "cluster": "Tribeca & Financial District",
+      "neighborhood": "Tribeca",
+      "address": "1 White St., New York, NY 10013",
+      "hours": {
+        "Mon": "5:00 PM–9:00 PM",
+        "Tue": "5:00 PM–9:00 PM",
+        "Wed": "5:00 PM–9:00 PM",
+        "Thu": "5:00 PM–9:00 PM",
+        "Fri": "5:00 PM–10:00 PM",
+        "Sat": "5:00 PM–10:00 PM",
+        "Sun": "5:00 PM–9:00 PM"
+      },
+      "hours_exceptions": "unverified — Feb–Mar 2027 holiday exceptions not published on official site",
+      "pricing_format": "tasting_and_a_la_carte",
+      "couple_price_usd": 290,
+      "couple_price_display": "$290 ($145/person 6-course tasting × 2)",
+      "couple_price_note": "2 × $145 official 6-course seasonal tasting menu; optional wine pairing $95/pp ($190/two) or reserve pairing $225/pp. À la carte also served. Excludes beverages, tax, and gratuity.",
+      "price_status": "verified",
+      "official_site": "https://onewhitestreetnyc.com/",
+      "menu_source_url": "https://onewhitestreetnyc.com/tasting",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/one-white-street",
+      "social_links": [
+        {
+          "platform": "YouTube",
+          "kind": "search_discovery",
+          "label": "YouTube search (discovery)",
+          "url": "https://www.youtube.com/results?search_query=One+White+Street+NYC+review"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=One%20White%20Street%20NYC"
+        },
+        {
+          "platform": "Instagram",
+          "kind": "search_discovery",
+          "label": "Instagram tag (discovery)",
+          "url": "https://www.instagram.com/explore/tags/onewhitestreet/"
+        }
+      ]
+    },
+    {
+      "id": "don-angie",
+      "name": "Don Angie",
+      "guide_tier": "Selected",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Selected (0 Stars)",
+      "distinction_note": "Currently MICHELIN Guide Selected (0 stars) in the live Guide; held 1 star in earlier editions (hence older video titles). Reservations release 7 days ahead at 9:00 AM on OpenTable.",
+      "cuisine": "Italian-American",
+      "price_symbol": "$$$",
+      "cluster": "West Village / Greenwich Village",
+      "neighborhood": "West Village",
+      "address": "103 Greenwich Ave., New York, NY 10014",
+      "hours": {
+        "Mon": "5:00 PM–10:30 PM",
+        "Tue": "5:00 PM–10:30 PM",
+        "Wed": "5:00 PM–10:30 PM",
+        "Thu": "5:00 PM–10:30 PM",
+        "Fri": "11:30 AM–2:00 PM; 4:00 PM–10:30 PM",
+        "Sat": "11:30 AM–2:00 PM; 4:00 PM–10:30 PM",
+        "Sun": "11:30 AM–2:00 PM; 4:00 PM–10:30 PM"
+      },
+      "hours_exceptions": "Weekend lunch Fri–Sun 11:30 AM–2:00 PM; Whole Roasted Lobster & Grilled Pork Shoulder are dinner-only. Feb–Mar 2027 holiday exceptions unverified.",
+      "pricing_format": "a_la_carte_with_couple_entrees",
+      "couple_price_usd": 130,
+      "couple_price_display": "$130–$193 sample meal for 2 (Lasagna for Two $72)",
+      "couple_price_note": "Official menu lists 'Our Lasagna for Two' at $72 and 'Whole Roasted Lobster for Two' at $135. Sample couple meal: Stuffed Garlic Flatbread ($16) + Chrysanthemum Salad ($26) + Lasagna for Two ($72) + Black Cocoa Tiramisu ($16) = $130 (or $193 with Lobster for Two). Excludes drinks, tax, and gratuity.",
+      "price_status": "verified_menu_sample",
+      "official_site": "https://www.donangie.com/",
+      "menu_source_url": "https://www.donangie.com/menus/",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/don-angie",
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "kind": "verified_profile",
+          "label": "@donangienyc (official)",
+          "url": "https://www.instagram.com/donangienyc/"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "Eater — Mise En Place at Don Angie",
+          "url": "https://www.youtube.com/watch?v=DrcXr0X8W38"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "YouTube — Trying Don Angie NYC",
+          "url": "https://www.youtube.com/watch?v=w1K-8s28u68"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Don%20Angie%20NYC"
+        }
+      ]
+    },
+    {
+      "id": "upland",
+      "name": "Upland",
+      "guide_tier": "Selected",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Selected (0 Stars)",
+      "distinction_note": "Listed in the MICHELIN Guide NYC Selection (0 stars); spacious Park Ave South brasserie with lunch, weekend brunch, and dinner.",
+      "cuisine": "Mediterranean, American Contemporary",
+      "price_symbol": "$$$",
+      "cluster": "Flatiron / NoMad / Gramercy / Union Square",
+      "neighborhood": "Flatiron / Rose Hill",
+      "address": "345 Park Ave. South, New York, NY 10010",
+      "hours": {
+        "Mon": "11:30 AM–3:00 PM; 5:00 PM–10:00 PM",
+        "Tue": "11:30 AM–3:00 PM; 5:00 PM–10:00 PM",
+        "Wed": "11:30 AM–3:00 PM; 5:00 PM–10:00 PM",
+        "Thu": "11:30 AM–3:00 PM; 5:00 PM–10:00 PM",
+        "Fri": "11:30 AM–3:00 PM; 5:00 PM–11:00 PM",
+        "Sat": "10:00 AM–3:00 PM; 5:00 PM–11:00 PM",
+        "Sun": "10:00 AM–3:00 PM; 5:00 PM–10:15 PM"
+      },
+      "hours_exceptions": "Brunch served Sat–Sun 10:00 AM–3:00 PM only; special holiday menus published seasonally (e.g. Thanksgiving). Feb–Mar 2027 holiday exceptions unverified.",
+      "pricing_format": "a_la_carte",
+      "couple_price_usd": 92,
+      "couple_price_display": "$92–$130 sample dinner for 2",
+      "couple_price_note": "Official menu items: starters $18–$26 (Crispy Artichokes $18, Beef Tartare $24), pastas $24–$28 (Bucatini Cacio e Pepe $24, Pappardelle $27), mains $31–$42 (Cheeseburger $31, Roasted Chicken $35, Skirt Steak $42). Sample 2-adult meal: 1 starter + 2 pastas/mains + 1 vegetable ($14) = $92–$130 before drinks, tax, and gratuity.",
+      "price_status": "verified_menu_sample",
+      "official_site": "https://uplandnyc.com/",
+      "menu_source_url": "https://uplandnyc.com/",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/upland",
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "kind": "verified_profile",
+          "label": "@upland_nyc (official)",
+          "url": "https://www.instagram.com/upland_nyc/"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "search_discovery",
+          "label": "YouTube search (discovery)",
+          "url": "https://www.youtube.com/results?search_query=Upland+NYC+restaurant+review"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Upland%20NYC"
+        }
+      ]
+    },
+    {
+      "id": "la-dong",
+      "name": "La Dong",
+      "guide_tier": "Bib Gourmand",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Bib Gourmand (0 Stars)",
+      "distinction_note": "MICHELIN Bib Gourmand ('good quality, good value' inspector award; not a Michelin star). Walk-ins welcome; 90-minute table policy for parties of 1–4.",
+      "cuisine": "Vietnamese",
+      "price_symbol": "$$",
+      "cluster": "Flatiron / NoMad / Gramercy / Union Square",
+      "neighborhood": "Union Square / Flatiron",
+      "address": "11 E. 17th St., New York, NY 10003",
+      "hours": {
+        "Mon": "11:30 AM–3:15 PM; 4:30 PM–10:15 PM",
+        "Tue": "11:30 AM–3:15 PM; 4:30 PM–10:15 PM",
+        "Wed": "11:30 AM–3:15 PM; 4:30 PM–10:15 PM",
+        "Thu": "11:30 AM–3:15 PM; 4:30 PM–10:15 PM",
+        "Fri": "11:30 AM–3:15 PM; 4:30 PM–10:45 PM",
+        "Sat": "11:30 AM–3:15 PM; 4:30 PM–10:45 PM",
+        "Sun": "11:30 AM–3:15 PM; 4:30 PM–10:15 PM"
+      },
+      "hours_exceptions": "Complete parties seated together; 1h 30m dining window for parties of 1–4. Feb–Mar 2027 holiday hours unverified.",
+      "pricing_format": "a_la_carte",
+      "couple_price_usd": 60,
+      "couple_price_display": "$60–$96 sample meal for 2",
+      "couple_price_note": "Official PDF menu: appetizers $14–$20 (Crispy Spring Roll $16, Bánh Xèo $20), Pho Hà Nội / Pho Gà $22, Bún Chả Hà Nội $32, Shaking Beef $35, Beef Short Ribs Curry $39. Sample 2-adult meal: 1 shared appetizer ($16) + 2 Pho ($44) = $60, or + 2 signature entrées = $80–$96 before drinks, tax, and gratuity.",
+      "price_status": "verified_menu_sample",
+      "official_site": "https://www.ladongnyc.com/",
+      "menu_source_url": "https://www.ladongnyc.com/_files/ugd/511aa7_3612d9811b4f4189af739d407de95d2e.pdf",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/la-dong",
+      "social_links": [
+        {
+          "platform": "YouTube",
+          "kind": "search_discovery",
+          "label": "YouTube search (discovery)",
+          "url": "https://www.youtube.com/results?search_query=La+Dong+NYC+Vietnamese+review"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=La%20Dong%20NYC"
+        },
+        {
+          "platform": "Instagram",
+          "kind": "search_discovery",
+          "label": "Instagram tag (discovery)",
+          "url": "https://www.instagram.com/explore/tags/ladongnyc/"
+        }
+      ]
+    },
+    {
+      "id": "thai-diner",
+      "name": "Thai Diner",
+      "guide_tier": "Bib Gourmand",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Bib Gourmand (0 Stars)",
+      "distinction_note": "MICHELIN Bib Gourmand (0 stars) by the Uncle Boons team; open continuously from morning breakfast through late dinner.",
+      "cuisine": "Thai-American",
+      "price_symbol": "$$",
+      "cluster": "SoHo / Nolita / Chinatown / Little Italy",
+      "neighborhood": "Nolita",
+      "address": "186 Mott St., New York, NY 10012",
+      "hours": {
+        "Mon": "8:30 AM–10:30 PM",
+        "Tue": "8:30 AM–10:30 PM",
+        "Wed": "8:30 AM–10:30 PM",
+        "Thu": "8:30 AM–11:30 PM",
+        "Fri": "8:30 AM–11:30 PM",
+        "Sat": "10:00 AM–11:30 PM",
+        "Sun": "10:00 AM–10:30 PM"
+      },
+      "hours_exceptions": "Breakfast served until 4:00 PM; Coconut Cloud Pancakes served Mon–Fri only; no phone line (email contact only). Feb–Mar 2027 holiday hours unverified.",
+      "pricing_format": "a_la_carte",
+      "couple_price_usd": 67,
+      "couple_price_display": "$67–$89 dinner for 2 · $30–$44 breakfast for 2",
+      "couple_price_note": "Official accessible text menu: Breakfast Egg Sandwiches $15 each ($30/two); Dinner snacks $14–$17 (Thai Disco Fries $14, Chicken Liver Mee Krob $17), wok/classic mains $22–$32 (Phat See Ew Chicken $24, Khao Soi $26, Uncle Boon's Crab Fried Rice $29, Lobster Fettuccine $32). Sample 2-adult dinner: 1 snack ($15) + 2 mains ($52–$61) = $67–$76 (+ dessert ~$89) before drinks, tax, and gratuity.",
+      "price_status": "verified_menu_sample",
+      "official_site": "https://www.thaidiner.com/",
+      "menu_source_url": "https://www.thaidiner.com/home-1",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/thai-diner",
+      "social_links": [
+        {
+          "platform": "YouTube",
+          "kind": "search_discovery",
+          "label": "YouTube search (discovery)",
+          "url": "https://www.youtube.com/results?search_query=Thai+Diner+NYC+review"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Thai%20Diner%20NYC"
+        },
+        {
+          "platform": "Instagram",
+          "kind": "search_discovery",
+          "label": "Instagram tag (discovery)",
+          "url": "https://www.instagram.com/explore/tags/thaidiner/"
+        }
+      ]
+    },
+    {
+      "id": "dhamaka",
+      "name": "Dhamaka",
+      "guide_tier": "Bib Gourmand",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Bib Gourmand (0 Stars)",
+      "distinction_note": "MICHELIN Bib Gourmand (0 stars) inside Essex Market by Unapologetic Foods (sister to 1-star Semma). Reservations via SevenRooms; strict 15-minute grace period.",
+      "cuisine": "Indian (Regional / Provincial)",
+      "price_symbol": "$$",
+      "cluster": "East Village / Lower East Side",
+      "neighborhood": "Lower East Side (Essex Market)",
+      "address": "119 Delancey St., New York, NY 10002",
+      "hours": {
+        "Mon": "5:00 PM–10:00 PM",
+        "Tue": "5:00 PM–10:00 PM",
+        "Wed": "5:00 PM–10:00 PM",
+        "Thu": "5:00 PM–10:00 PM",
+        "Fri": "5:00 PM–10:00 PM",
+        "Sat": "11:30 AM–2:30 PM; 5:00 PM–10:00 PM",
+        "Sun": "11:30 AM–2:30 PM; 5:00 PM–10:00 PM"
+      },
+      "hours_exceptions": "Weekend lunch Sat–Sun 11:30 AM–2:30 PM; tables held max 15 minutes past reservation. Feb–Mar 2027 holiday hours unverified.",
+      "pricing_format": "a_la_carte_family_style",
+      "couple_price_usd": 82,
+      "couple_price_display": "$82–$113 shared dinner for 2",
+      "couple_price_note": "Official PDF menu: grills/starters $18–$28 (Paneer Tikka $22, Tangri Kebab $23, Beef Pepper Fry $25), mains/pulao $32–$65 (Murgh Hari Mirch Korma $39, Dhungar Gosht $49, Short Rib Pulao $49, Goat Neck Biryani $65), rice/breads $5, Dhaba Dal $15. Sample shared 2-adult meal: 1 starter ($23) + 1 main ($39) + dal ($15) + bread ($5) = $82 (up to $113 with Goat Neck Biryani), before drinks, tax, and gratuity.",
+      "price_status": "verified_menu_sample",
+      "official_site": "https://www.dhamaka.nyc/",
+      "menu_source_url": "https://www.dhamaka.nyc/s/Dhamaka-Dinner-April-2026.pdf",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/dhamaka",
+      "social_links": [
+        {
+          "platform": "Instagram",
+          "kind": "verified_profile",
+          "label": "@dhamakanyc (official)",
+          "url": "https://www.instagram.com/dhamakanyc/"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "YouTube — Eating at Dhamaka NYC",
+          "url": "https://www.youtube.com/watch?v=Er6oIm2l2z8"
+        },
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "YouTube — Dhamaka Essex Market Review",
+          "url": "https://www.youtube.com/watch?v=ywqFRjmtzWQ"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Dhamaka%20NYC"
+        }
+      ]
+    },
+    {
+      "id": "nyonya",
+      "name": "Nyonya",
+      "guide_tier": "Bib Gourmand",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Bib Gourmand (0 Stars)",
+      "distinction_note": "MICHELIN Bib Gourmand ($ tier, 0 stars) Malaysian classic on Grand Street. Important exception: CASH ONLY (ATM near front entrance).",
+      "cuisine": "Malaysian",
+      "price_symbol": "$",
+      "cluster": "SoHo / Nolita / Chinatown / Little Italy",
+      "neighborhood": "Chinatown / Little Italy",
+      "address": "199 Grand St., New York, NY 10013",
+      "hours": {
+        "Mon": "11:00 AM–10:00 PM",
+        "Tue": "11:00 AM–10:00 PM",
+        "Wed": "11:00 AM–10:00 PM",
+        "Thu": "11:00 AM–10:00 PM",
+        "Fri": "11:00 AM–11:00 PM",
+        "Sat": "11:00 AM–11:00 PM",
+        "Sun": "11:00 AM–10:00 PM"
+      },
+      "hours_exceptions": "CASH ONLY per official website; manages bookings directly by phone (+1 212-334-3669). Feb–Mar 2027 / Lunar New Year hours unverified.",
+      "pricing_format": "a_la_carte",
+      "couple_price_usd": 37,
+      "couple_price_display": "$36.85–$48.00 meal for 2 (cash only)",
+      "couple_price_note": "Official menu: Roti Canai $8.00 (or Roti Prata $7.95), Penang Asam Laksa $13.95, Chow Kueh Teow $14.95, Indian Mee Goreng $14.95, Bah Kut Teh $16.50. Sample 2-adult meal: Roti Canai ($8.00) + Penang Asam Laksa ($13.95) + Chow Kueh Teow ($14.95) = $36.90 before drinks, tax, and tip.",
+      "price_status": "verified_menu_sample",
+      "official_site": "https://nyonya.res-menu.com/",
+      "menu_source_url": "https://nyonya.res-menu.com/menu",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/nyonya",
+      "social_links": [
+        {
+          "platform": "YouTube",
+          "kind": "search_discovery",
+          "label": "YouTube search (discovery)",
+          "url": "https://www.youtube.com/results?search_query=Nyonya+Chinatown+NYC+Malaysian"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Nyonya%20NYC"
+        },
+        {
+          "platform": "Instagram",
+          "kind": "search_discovery",
+          "label": "Instagram tag (discovery)",
+          "url": "https://www.instagram.com/explore/tags/nyonyanyc/"
+        }
+      ]
+    },
+    {
+      "id": "nami-nori",
+      "name": "Nami Nori",
+      "guide_tier": "Bib Gourmand",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Bib Gourmand (0 Stars)",
+      "distinction_note": "MICHELIN Bib Gourmand ($ tier, 0 stars) casual open-style temaki sushi bar in the West Village.",
+      "cuisine": "Japanese, Temaki Sushi",
+      "price_symbol": "$",
+      "cluster": "West Village / Greenwich Village",
+      "neighborhood": "West Village",
+      "address": "33 Carmine St., New York, NY 10014",
+      "hours": {
+        "Mon": "5:30 PM–11:00 PM",
+        "Tue": "5:30 PM–11:00 PM",
+        "Wed": "5:30 PM–11:00 PM",
+        "Thu": "5:30 PM–12:00 AM",
+        "Fri": "5:30 PM–12:00 AM",
+        "Sat": "5:30 PM–12:00 AM",
+        "Sun": "closed"
+      },
+      "hours_exceptions": "Closed Sundays on MICHELIN Guide West Village profile; confirm branch hours directly on naminori.us/westvillage before visiting.",
+      "pricing_format": "unverified_image_menu",
+      "couple_price_usd": null,
+      "couple_price_display": "",
+      "couple_price_note": "UNVERIFIED — official West Village menu page (naminori.us/menu) embeds a raster JPEG image without machine-readable text prices; left blank rather than inferred.",
+      "price_status": "unverified",
+      "official_site": "https://www.naminori.us/",
+      "menu_source_url": "https://www.naminori.us/menu",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/nami-nori",
+      "social_links": [
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "YouTube — Nami Nori NYC Temaki Vlog",
+          "url": "https://www.youtube.com/watch?v=s52DJ1bLAI4"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Nami%20Nori%20West%20Village"
+        },
+        {
+          "platform": "Instagram",
+          "kind": "search_discovery",
+          "label": "Instagram tag (discovery)",
+          "url": "https://www.instagram.com/explore/tags/naminori/"
+        }
+      ]
+    },
+    {
+      "id": "ruffian",
+      "name": "Ruffian",
+      "guide_tier": "Bib Gourmand",
+      "holds_michelin_star": false,
+      "distinction_label": "Listed in MICHELIN Guide — Bib Gourmand (0 Stars)",
+      "distinction_note": "MICHELIN Bib Gourmand each year since 2020 (0 stars); intimate East Village natural wine bar & chef's counter.",
+      "cuisine": "Contemporary, Eastern European Wine Bar",
+      "price_symbol": "$$",
+      "cluster": "East Village / Lower East Side",
+      "neighborhood": "East Village",
+      "address": "125 E. 7th St., New York, NY 10009",
+      "hours": {
+        "Mon": "4:00 PM–11:30 PM",
+        "Tue": "4:00 PM–11:30 PM",
+        "Wed": "4:00 PM–11:30 PM",
+        "Thu": "4:00 PM–11:30 PM",
+        "Fri": "4:00 PM–11:30 PM",
+        "Sat": "3:00 PM–11:30 PM",
+        "Sun": "3:00 PM–10:30 PM"
+      },
+      "hours_exceptions": "Kitchen closes at 10:30 PM nightly. Happy Hour ($5 off wines by the glass, $5 off select food items): Mon–Fri 4–6 PM, Sat–Sun 3–5 PM.",
+      "pricing_format": "unverified_rotating_menu",
+      "couple_price_usd": null,
+      "couple_price_display": "",
+      "couple_price_note": "UNVERIFIED — current daily rotating small-plates / 4-course tasting dollar prices are not published in current homepage text (only Happy Hour $5-off discount is printed); left blank rather than inferred.",
+      "price_status": "unverified",
+      "official_site": "https://ruffiannyc.com/",
+      "menu_source_url": "https://ruffiannyc.com/",
+      "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/ruffian",
+      "social_links": [
+        {
+          "platform": "YouTube",
+          "kind": "verified_video",
+          "label": "YouTube — East Village Wine Bar Tour incl. Ruffian",
+          "url": "https://www.youtube.com/watch?v=-OVNOxeuqRc"
+        },
+        {
+          "platform": "TikTok",
+          "kind": "search_discovery",
+          "label": "TikTok search (discovery)",
+          "url": "https://www.tiktok.com/search?q=Ruffian%20NYC%20wine%20bar"
+        },
+        {
+          "platform": "Instagram",
+          "kind": "search_discovery",
+          "label": "Instagram tag (discovery)",
+          "url": "https://www.instagram.com/explore/tags/ruffiannyc/"
+        }
+      ]
+    }
+  ]
+}

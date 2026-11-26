@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MICHELIN Guide Listed vs Starred — NYC 2027 trip planner</title>
+<meta name="description" content="Official reconciliation of all 369 MICHELIN Guide NYC restaurants (69 Starred vs 76 Bib Gourmand vs 224 Selected) with verified couple menu prices, hours, clusters, and social links.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="guide-selection.html" aria-current="page">Guide Listed vs Starred</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="booking-strategy.html">Hotel Verification &amp; Booking</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>MICHELIN Guide Listed vs. Michelin-Starred Restaurants</h1>
+    <p>Every entry below explicitly distinguishes <strong>merely Guide-listed (0 stars: Selected or Bib Gourmand)</strong> from <strong>Michelin-starred (1, 2, or 3 stars)</strong>, places the <strong>2-adult couple meal price/estimate in the same table</strong>, and cites both the official <a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN Guide NYC</a> and the restaurant's own menu.</p>
+  </div>
+
+  <div class="callout warn">
+    <strong>2026 Ceremony Alert (18 days after this check):</strong> Per Michelin North America's official announcement (<a href="https://michelinmedia.com/pages/blog/detail/article/c0/a1479" target="_blank" rel="noopener noreferrer">Michelin Media, Aug 11, 2026</a>), the <strong>2026 MICHELIN Guide Northeast Cities Ceremony</strong> takes place on <strong>Monday, December 14, 2026</strong> at The Glasshouse in NYC. Re-check star and Bib Gourmand distinctions after Dec 14 before locking February–March 2027 reservations.
+  </div>
+
+  <section class="panel" id="directory-reconciliation">
+    <h2>1. Live MICHELIN Guide NYC Directory Reconciliation (369 Total Entries)</h2>
+    <p class="lede">Directly verified on 26 November 2026 against the live MICHELIN Guide filters. This resolves review item <code>NR-01</code>: all 5 three-star restaurants remain live (<code>5 + 14 + 50 = 69</code> starred), alongside <strong>300 non-starred Guide-listed venues</strong> (<code>76 Bib Gourmand + 224 Selected = 300</code>; <code>69 + 300 = 369</code>).</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>MICHELIN Distinction</th>
+            <th>Holds Michelin Star?</th>
+            <th>Live NYC Count (26 Nov 2026)</th>
+            <th>Repo Coverage</th>
+            <th>What the Distinction Means</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>3 MICHELIN Stars</strong></td>
+            <td><span class="tag t-ok">Yes — 3 Stars</span></td>
+            <td class="num"><strong>5</strong></td>
+            <td>5 starred rows in <a href="michelin.html">Michelin</a> (<code>data/michelin_all.json</code>)</td>
+            <td class="small">Exceptional cuisine, worth a special journey (Eleven Madison Park, Jungsik New York, Le Bernardin, Per Se, Sushi Sho).</td>
+            <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/3-stars-michelin" target="_blank" rel="noopener noreferrer">MICHELIN 3-Star filter</a></td>
+          </tr>
+          <tr>
+            <td><strong>2 MICHELIN Stars</strong></td>
+            <td><span class="tag t-ok">Yes — 2 Stars</span></td>
+            <td class="num"><strong>14</strong></td>
+            <td>15 rows in 2025 snapshot (1 removed/closed on live Guide; see <a href="flagged-for-review.html#NR-01">NR-01</a>)</td>
+            <td class="small">Excellent cooking, worth a detour.</td>
+            <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/2-stars-michelin" target="_blank" rel="noopener noreferrer">MICHELIN 2-Star filter</a></td>
+          </tr>
+          <tr>
+            <td><strong>1 MICHELIN Star</strong></td>
+            <td><span class="tag t-ok">Yes — 1 Star</span></td>
+            <td class="num"><strong>50</strong></td>
+            <td>52 rows in 2025 snapshot (2 removed/closed on live Guide; see <a href="flagged-for-review.html#NR-01">NR-01</a>)</td>
+            <td class="small">High-quality cooking, worth a stop.</td>
+            <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/1-star-michelin" target="_blank" rel="noopener noreferrer">MICHELIN 1-Star filter</a></td>
+          </tr>
+          <tr>
+            <td><strong>Bib Gourmand</strong></td>
+            <td><span class="tag t-warn">No — Guide-Listed (Value Award)</span></td>
+            <td class="num"><strong>76</strong></td>
+            <td>6 Manhattan cluster picks verified in full below (out of 76 citywide)</td>
+            <td class="small">Inspector distinction for good quality, good value cooking — <strong>not a Michelin star</strong>.</td>
+            <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/bib-gourmand" target="_blank" rel="noopener noreferrer">MICHELIN Bib Gourmand</a></td>
+          </tr>
+          <tr>
+            <td><strong>Selected Restaurants</strong></td>
+            <td><span class="tag t-muted">No — Merely Guide-Listed</span></td>
+            <td class="num"><strong>224</strong></td>
+            <td>6 Manhattan cluster picks verified in full below (out of 224 citywide)</td>
+            <td class="small">Recommended in the MICHELIN Guide ("The Plate" / Selected) — <strong>merely listed in the Guide, holds 0 Michelin stars</strong> (includes former 1-star venues like Don Angie, Ai Fiori, and One White Street).</td>
+            <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/the-plate-michelin" target="_blank" rel="noopener noreferrer">MICHELIN Selected</a></td>
+          </tr>
+          <tr>
+            <td><strong>All NYC &amp; Surroundings</strong></td>
+            <td>69 Starred / 300 Listed-Only</td>
+            <td class="num"><strong>369</strong></td>
+            <td>84 total rows across <a href="restaurants.html">Starred (72)</a> + this Guide-Listed table (12)</td>
+            <td class="small">Complete live MICHELIN Guide New York directory (<code>69 + 76 + 224 = 369</code>).</td>
+            <td class="small"><a class="src" href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN NYC Directory</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" id="manhattan-clusters">
+    <h2>2. Manhattan Dining Clusters — Starred + Guide-Listed Pairing</h2>
+    <p class="lede">Pairing splurge Michelin-starred tables with nearby <strong>Bib Gourmand</strong> and <strong>Selected</strong> restaurants lets two adults dine in the MICHELIN Guide every night without paying $400+ tasting prices nightly.</p>
+    <div id="clusters-host"><p class="loading">Loading Manhattan clusters…</p></div>
+  </section>
+
+  <section class="panel" id="guide-listed-table">
+    <h2>3. Verified MICHELIN Guide-Listed (Non-Starred) + Starred Comparison Table</h2>
+    <p class="lede">Every row states whether the venue <strong>holds a Michelin star</strong> or is <strong>merely listed in the Guide (Bib Gourmand / Selected)</strong>, displays the <strong>verified 2-adult couple meal price or menu range</strong> in the same table (blank + <code>unverified</code> where the official menu is image-only or unpriced), and separates verified creator/profile links from search discovery links.</p>
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search name, cuisine, neighborhood, dish…" aria-label="Search restaurants">
+      <select id="tier" aria-label="Filter by Guide status">
+        <option value="non_starred">Non-Starred Guide-Listed Only (12 verified)</option>
+        <option value="Selected">Merely Listed — Selected (0 Stars)</option>
+        <option value="Bib Gourmand">Guide Value — Bib Gourmand (0 Stars)</option>
+        <option value="all_combined">All Combined: Guide-Listed (12) + Priced Starred (10)</option>
+      </select>
+      <select id="cluster" aria-label="Filter by Manhattan cluster">
+        <option value="">All Manhattan clusters</option>
+      </select>
+      <span class="count" id="shown"></span>
+    </div>
+    <div id="table-host"><p class="loading">Loading verified MICHELIN Guide selection…</p></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Verified 26 November 2026 against live MICHELIN Guide NYC pages and first-party restaurant menus/PDFs. Couple subtotals exclude beverages, 8.875% NYC sales tax, and gratuity unless stated.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var GUIDE_DATA = null;
+var STARRED_PRICED = [];
+
+function renderGuideHours(h, exc) {
+  if (!h) return '<span class="unver">unverified</span>';
+  var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  var rows = [], i = 0;
+  while (i < 7) {
+    var v = h[days[i]] || "—", j = i;
+    while (j + 1 < 7 && (h[days[j + 1]] || "—") === v) j++;
+    var label = i === j ? days[i] : days[i] + "–" + days[j];
+    rows.push("<strong>" + label + ":</strong> " + NYF.esc(v));
+    i = j + 1;
+  }
+  return '<div class="small">' + rows.join("<br>") +
+    (exc ? '<div class="muted" style="margin-top:4px">' + NYF.esc(exc) + "</div>" : "") + "</div>";
+}
+
+function renderSocialCell(links) {
+  if (!links || !links.length) return '<span class="muted small">—</span>';
+  return '<div class="small">' + links.map(function (l) {
+    var badge = l.kind === "verified_profile" ? '<span class="tag t-ok">Official</span> '
+      : l.kind === "verified_video" ? '<span class="tag t-info">Video</span> '
+      : '<span class="tag t-muted">Search</span> ';
+    return badge + '<a href="' + NYF.esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + NYF.esc(l.label) + "</a>";
+  }).join("<br>") + "</div>";
+}
+
+function renderClusters(clusters) {
+  document.getElementById("clusters-host").innerHTML =
+    '<div class="scroll"><table><thead><tr><th>Manhattan Cluster</th><th>Approx. Starred Nearby</th><th>Verified Guide-Listed Picks (0 Stars)</th><th>Closest Candidate Hotel Bases</th><th>Planning Takeaway</th><th>Source</th></tr></thead><tbody>' +
+    clusters.map(function (c) {
+      return "<tr><td><strong>" + NYF.esc(c.name) + "</strong></td>" +
+        "<td class='num'>" + NYF.esc(String(c.starred_examples_count)) + "</td>" +
+        "<td class='small'>" + c.guide_listed_featured.map(NYF.esc).join("<br>") + "</td>" +
+        "<td class='small'>" + c.nearest_candidate_hotels.map(NYF.esc).join("<br>") + "</td>" +
+        "<td class='small'>" + NYF.esc(c.cluster_summary) + "</td>" +
+        "<td class='small'>" + NYF.srcLink(c.source_url, "MICHELIN Guide") + "</td></tr>";
+    }).join("") + "</tbody></table></div>";
+}
+
+function normalizeStarred(r) {
+  return {
+    id: r.id,
+    name: r.name,
+    guide_tier: r.stars + " Star" + (r.stars > 1 ? "s" : ""),
+    holds_michelin_star: true,
+    stars: r.stars,
+    distinction_label: "Holds " + r.stars + " MICHELIN Star" + (r.stars > 1 ? "s" : "") + " (2025 selection)",
+    distinction_note: r.star_change_2025 || "Starred in 2025 NYC selection",
+    cuisine: r.cuisine,
+    price_symbol: r.price_symbol,
+    cluster: r.cluster || r.neighborhood,
+    neighborhood: r.neighborhood,
+    address: r.address,
+    hours: r.hours,
+    hours_exceptions: r.hours_exceptions,
+    couple_price_usd: r.price_for_two_usd,
+    couple_price_display: r.price_options && r.price_options.length
+      ? r.price_options.map(function (o) { return o.label + ": $" + o.for_two_usd + " (2 × $" + o.per_person_usd + ")"; }).join(" · ")
+      : "",
+    couple_price_note: r.price_caveat || "",
+    price_status: "verified",
+    official_site: r.official_site,
+    menu_source_url: r.price_source_url,
+    michelin_url: r.michelin_url,
+    social_links: (r.social_links || []).map(function (s) {
+      return { platform: s.platform, kind: "search_discovery", label: s.platform + " search (discovery)", url: s.url };
+    })
+  };
+}
+
+function renderTable() {
+  var q = document.getElementById("q").value.trim().toLowerCase();
+  var tier = document.getElementById("tier").value;
+  var cl = document.getElementById("cluster").value;
+
+  var pool = tier === "all_combined"
+    ? GUIDE_DATA.restaurants.concat(STARRED_PRICED)
+    : GUIDE_DATA.restaurants.filter(function (r) {
+        return tier === "non_starred" ? !r.holds_michelin_star : r.guide_tier === tier;
+      });
+
+  var rows = pool.filter(function (r) {
+    if (cl && r.cluster !== cl) return false;
+    if (!q) return true;
+    var hay = [r.name, r.cuisine, r.neighborhood, r.cluster, r.distinction_label, r.couple_price_note, r.address].join(" ").toLowerCase();
+    return hay.indexOf(q) !== -1;
+  });
+
+  document.getElementById("shown").textContent = rows.length + " shown";
+
+  document.getElementById("table-host").innerHTML =
+    '<div class="scroll"><table><thead><tr>' +
+    '<th>Restaurant</th><th>Guide-Listed vs. Starred Status</th><th>Cluster / Area</th>' +
+    '<th>Couple Total / Range (2 Adults)</th><th>Open Days, Hours &amp; Exceptions</th>' +
+    '<th>YouTube / TikTok / Instagram</th><th>Official &amp; Menu Sources</th>' +
+    '</tr></thead><tbody>' +
+    rows.map(function (r) {
+      var badge = r.holds_michelin_star
+        ? '<span class="tag t-ok">' + "★".repeat(r.stars || 1) + " Holds " + r.guide_tier + "</span>"
+        : (r.guide_tier === "Bib Gourmand"
+            ? '<span class="tag t-warn">Bib Gourmand — Guide-Listed (0★)</span>'
+            : '<span class="tag t-muted">Selected — Merely Guide-Listed (0★)</span>');
+
+      var priceHtml = r.couple_price_display
+        ? '<strong>' + NYF.esc(r.couple_price_display) + '</strong><br><span class="muted small">' + NYF.esc(r.couple_price_note) + '</span>'
+        : '<span class="unver">unverified</span><br><span class="muted small">' + NYF.esc(r.couple_price_note) + '</span>';
+
+      var srcs = [];
+      if (r.michelin_url) srcs.push(NYF.srcLink(r.michelin_url, "MICHELIN Guide"));
+      if (r.official_site) srcs.push(NYF.srcLink(r.official_site, "official site"));
+      if (r.menu_source_url && r.menu_source_url !== r.official_site) srcs.push(NYF.srcLink(r.menu_source_url, "official menu"));
+
+      return "<tr>" +
+        "<td><strong>" + NYF.esc(r.name) + "</strong><br><span class='muted small'>" + NYF.esc(r.cuisine) + " · " + NYF.esc(r.price_symbol) + "<br>" + NYF.esc(r.address) + "</span></td>" +
+        "<td class='small'>" + badge + "<br><span class='muted'>" + NYF.esc(r.distinction_note) + "</span></td>" +
+        "<td class='small'><strong>" + NYF.esc(r.neighborhood) + "</strong><br><span class='muted'>" + NYF.esc(r.cluster) + "</span></td>" +
+        "<td class='small'>" + priceHtml + "</td>" +
+        "<td>" + renderGuideHours(r.hours, r.hours_exceptions) + "</td>" +
+        "<td>" + renderSocialCell(r.social_links) + "</td>" +
+        "<td class='small'>" + srcs.join("<br>") + "</td>" +
+        "</tr>";
+    }).join("") + "</tbody></table></div>";
+}
+
+Promise.all([
+  NYF.load("data/michelin_guide_selection.json"),
+  NYF.load("data/michelin_all.json")
+]).then(function (res) {
+  GUIDE_DATA = res[0];
+  STARRED_PRICED = (res[1].restaurants || []).filter(function (r) {
+    return r.price_options && r.price_options.length > 0;
+  }).map(normalizeStarred);
+
+  renderClusters(GUIDE_DATA.clusters);
+
+  var cSel = document.getElementById("cluster");
+  var seen = {};
+  GUIDE_DATA.restaurants.concat(STARRED_PRICED).forEach(function (r) {
+    if (r.cluster && !seen[r.cluster]) {
+      seen[r.cluster] = true;
+      var o = document.createElement("option");
+      o.value = r.cluster;
+      o.textContent = r.cluster;
+      cSel.appendChild(o);
+    }
+  });
+
+  ["q", "tier", "cluster"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", renderTable);
+    document.getElementById(id).addEventListener("change", renderTable);
+  });
+  renderTable();
+}).catch(function (e) {
+  document.getElementById("table-host").innerHTML = '<p class="loading">Could not load MICHELIN Guide selection: ' + NYF.esc(e.message) + "</p>";
+});
+</script>
+</body>
+</html>

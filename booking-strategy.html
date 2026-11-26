@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Verification, Tax Math &amp; Booking Window — NYC 2027 trip planner</title>
+<meta name="description" content="Line-by-line official hotel room, bed, private-bathroom, address, and mandatory-fee verification plus NYC Department of Finance hotel-tax math and Feb 15–Mar 23, 2027 window analysis.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="brand">NYC <span>2027</span></span>
+    <nav class="main" aria-label="Sections">
+      <a href="index.html">Dashboard</a>
+      <a href="activities.html">Activities</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="michelin.html">Michelin</a>
+      <a href="guide-selection.html">Guide Listed vs Starred</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="booking-strategy.html" aria-current="page">Hotel Verification &amp; Booking</a>
+      <a href="itinerary.html">Itinerary</a>
+      <a href="plan.html">Summary &amp; Questions</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="pages/index.html">Dossier</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>First-Party Hotel Verification, All-In Tax Math &amp; Booking Strategy</h1>
+    <p>Every candidate hotel in the planner was re-verified line by line on <strong>26 November 2026</strong> against its <strong>real official website</strong>, Choice/Marriott/Hyatt brand directory, and the <a href="https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page" target="_blank" rel="noopener noreferrer">NYC Department of Finance Hotel Room Occupancy Tax law</a>.</p>
+  </div>
+
+  <div class="callout warn">
+    <strong>Critical Defects Caught During Line-by-Line Verification (26 Nov 2026):</strong>
+    <ul class="tight" style="margin-top:6px">
+      <li><strong>Blue Angel Hotel NYC wrong address &amp; windowless entry room:</strong> Listed in earlier data at <code>1234 Broadway</code> (NoMad), but Choice Hotels' official Ascend page (<a href="https://www.choicehotels.com/nova-york/new-york/ascend-hotels/ny842" target="_blank" rel="noopener noreferrer">Choice ny842</a>) proves it is at <strong>152 E. 55th St, NY 10022 (Midtown East)</strong> — and its entry <code>1 Queen Bed (NQ1)</code> explicitly has <strong>no window</strong>.</li>
+      <li><strong>HGU New York real official domain &amp; couple room caveat:</strong> Earlier pages linked a parked domain; the real official site is <a href="https://www.hgunyc.com/stay/queen" target="_blank" rel="noopener noreferrer">hgunyc.com</a>, where <code>Queen Standard</code> is described as <em>"Ideal for a solo traveler"</em> (couples should select <code>Queen Deluxe</code> or <code>King Standard</code>).</li>
+      <li><strong>The Artezen Hotel undisclosed facility fee:</strong> Official FAQ (<a href="https://www.artezenhotel.com/faq" target="_blank" rel="noopener noreferrer">artezenhotel.com/faq</a>) discloses a mandatory <strong>$13.95 + tax/night</strong> daily facility fee ($97.65 + tax over 7 nights).</li>
+      <li><strong>Eurostars Wall Street &amp; citizenM Times Square upgraded to VERIFIED:</strong> Official room pages confirm Eurostars' <strong>27 m² (~290 sq ft) Queen Room + private bathtub</strong> and citizenM's <strong>wall-to-wall XL King + private power shower</strong>.</li>
+    </ul>
+  </div>
+
+  <section class="panel" id="hotel-verification-matrix">
+    <h2>1. First-Party Room-Fit (≥Queen + Private Bath), Amenities &amp; 7-Night Cost Matrix</h2>
+    <p class="lede">Official direct 7-night checkout totals remain <code>unverified</code> because hotel booking engines require live browser sessions. Alongside each dated Booking.com pre-tax snapshot (<code>15–22 Feb 2027</code>), we compute transparent statutory NYC taxes (<strong>14.75% + $3.50/night</strong> = $2.00 NYC flat + $1.50 NYS unit fee per <a href="https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page" target="_blank" rel="noopener noreferrer">NYC DOF</a>) plus disclosed mandatory facility fees so you never mistake a pre-tax OTA card for a final bill.</p>
+    <div class="controls">
+      <input id="hq" type="search" placeholder="Search hotel, neighborhood, room type, amenity…" aria-label="Filter verified hotels">
+      <select id="hfit" aria-label="Filter by room-fit status">
+        <option value="">All 10 verified properties</option>
+        <option value="VERIFIED">Fully Verified Fit Only</option>
+        <option value="CONDITIONAL">Conditional / Category-Specific Only</option>
+      </select>
+      <span class="count" id="hshown"></span>
+    </div>
+    <div id="hotels-verify-host"><p class="loading">Loading verified hotel matrix…</p></div>
+  </section>
+
+  <section class="panel" id="window-comparison">
+    <h2>2. Cheapest Travel Window Comparison (15 Feb – 23 Mar 2027)</h2>
+    <p class="lede">Weekly 7-night comparison across the permitted <strong>15 Feb – 23 Mar 2027</strong> window, plus the 3-night preferred date sample (<code>15–18 Feb</code>) and <a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener noreferrer">U.S. OPM 2027 holiday</a> check.</p>
+    <div id="window-host"><p class="loading">Loading Feb–Mar 2027 stay-window curve…</p></div>
+  </section>
+
+  <section class="panel" id="booking-timing">
+    <h2>3. Cheapest Upcoming Time to Book vs. Best Time to Purchase — Evidence Ledger</h2>
+    <p class="lede">Separates what is <strong>directly verified today (26 Nov 2026)</strong> from claims that have no longitudinal price-history proof (kept <code>unverified</code>).</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Booking Question</th>
+            <th>Verified Finding (26 Nov 2026)</th>
+            <th>Verification Status</th>
+            <th>Actionable Strategy for 2 Adults</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Active Direct Hotel Sale Right Now?</strong></td>
+            <td class="small"><strong>Yes — Arlo Midtown Cyber Sale (<code>promo=CYBER</code>)</strong> is live on the hotel's official site from <strong>Nov 17 – Dec 3, 2026</strong> (7 days remaining from today).</td>
+            <td><span class="tag t-ok">Verified Direct Promo</span></td>
+            <td class="small">Check refundable direct <code>King City</code> Cyber Sale rates at Arlo Midtown before <strong>Dec 3, 2026</strong> and compare all-in checkout total (including urban fee) against OTA rates.</td>
+            <td class="small"><a class="src" href="https://arlohotels.com/midtown/" target="_blank" rel="noopener noreferrer">Arlo Midtown official</a></td>
+          </tr>
+          <tr>
+            <td><strong>Cheapest 7-Night Stay Dates in Window?</strong></td>
+            <td class="small">Among sampled weeks across 15 Feb – 23 Mar 2027, <strong>Feb 15–22 ($942.91)</strong> and <strong>Feb 22–Mar 1 ($968.09)</strong> are nearly half the price of <strong>Mar 15–22 ($1,825.01, +93.5%)</strong> on the DoubleTree weekly benchmark.</td>
+            <td><span class="tag t-info">Verified Sample Curve</span></td>
+            <td class="small">Keep the stay in <strong>Feb 15–22</strong> (captures preferred Feb 15–18 dates) or <strong>Feb 15–Mar 1</strong> (if taking a full 14-night 2-week trip) rather than mid-March.</td>
+            <td class="small"><a class="src" href="https://www.booking.com/hotel/us/doubletree-new-york-city-chelsea.html?checkin=2027-02-15&amp;checkout=2027-02-22&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener noreferrer">Booking.com weekly curve</a></td>
+          </tr>
+          <tr>
+            <td><strong>Universal "Best Day of Week / Lead Time" to Click Buy?</strong></td>
+            <td class="small"><span class="unver">unverified</span> — No multi-week historical rate time-series exists for Feb–Mar 2027 NYC inventory; claiming "book on Tuesday" or "wait until January" would be guesswork.</td>
+            <td><span class="tag t-warn">Unverified (No Guesswork)</span></td>
+            <td class="small">Lock a <strong>free-cancellation refundable rate</strong> now (during Cyber Week through Dec 3, 2026), then re-check the exact same room at 30, 14, and 7 days out to capture any winter hotel price drop risk-free.</td>
+            <td class="small"><a class="src" href="flagged-for-review.html#NR-03">Flagged item NR-03</a></td>
+          </tr>
+          <tr>
+            <td><strong>NYC Statutory Hotel Taxes &amp; Fees</strong></td>
+            <td class="small">Rooms ≥ $40/day pay <strong>5.875% NYC occupancy + 8.875% sales (14.75% total) + $2.00/day NYC flat + $1.50/day NYS unit fee = $3.50/night flat statutory fees</strong> ($24.50 on 7 nights), plus any property-imposed facility/resort fee.</td>
+            <td><span class="tag t-ok">Verified Law</span></td>
+            <td class="small">Always compare <strong>final step-3 checkout totals</strong> including mandatory facility fees ($97.65+tax at Artezen; $150–$182 at Pestana CR7; $0 at Eurostars / Hyatt Place Chelsea).</td>
+            <td class="small"><a class="src" href="https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page" target="_blank" rel="noopener noreferrer">NYC Dept. of Finance</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Verified 26 November 2026 against official hotel room pages and NYC Department of Finance tax schedules. All third-party snapshots are dated observations, not official direct quotes.</p>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+var HVERIFY = null;
+
+function renderHotelsVerify() {
+  var q = document.getElementById("hq").value.trim().toLowerCase();
+  var fit = document.getElementById("hfit").value;
+
+  var rows = HVERIFY.hotels.filter(function (h) {
+    if (fit === "VERIFIED" && h.room_fit_status.indexOf("VERIFIED") !== 0) return false;
+    if (fit === "CONDITIONAL" && h.room_fit_status.indexOf("VERIFIED") === 0) return false;
+    if (!q) return true;
+    var hay = [h.name, h.verified_address, h.neighborhood, h.verified_qualifying_rooms, h.repo_defect_found, (h.verified_amenities || []).join(" ")].join(" ").toLowerCase();
+    return hay.indexOf(q) !== -1;
+  });
+
+  document.getElementById("hshown").textContent = rows.length + " of " + HVERIFY.hotels.length + " hotels";
+
+  document.getElementById("hotels-verify-host").innerHTML =
+    '<div class="scroll"><table><thead><tr>' +
+    '<th>Hotel &amp; Verified Address</th><th>≥Queen + Private Bath Status</th>' +
+    '<th>Verified Amenities &amp; Audit Findings</th><th>Official Direct 7N Total</th>' +
+    '<th>OTA Pre-Tax Snapshot (15–22 Feb)</th><th>Est. 7N Checkout w/ NYC Tax &amp; Known Fees</th><th>Source</th>' +
+    '</tr></thead><tbody>' +
+    rows.map(function (h) {
+      var fitTag = h.room_fit_status.indexOf("VERIFIED") === 0
+        ? '<span class="tag t-ok">' + NYF.esc(h.room_fit_status) + "</span>"
+        : '<span class="tag t-warn">' + NYF.esc(h.room_fit_status) + "</span>";
+
+      var otaStr = h.ota_room_tier_7n_usd
+        ? "<strong>$" + h.ota_room_tier_7n_usd.toLocaleString("en-US") + "</strong><br><span class='muted small'>room-tier base" +
+          (h.ota_search_snapshot_7n_usd !== h.ota_room_tier_7n_usd ? " (search card: $" + h.ota_search_snapshot_7n_usd + ")" : "") + "</span>"
+        : (h.ota_search_snapshot_7n_usd
+            ? "<strong>$" + h.ota_search_snapshot_7n_usd.toLocaleString("en-US") + "</strong><br><span class='muted small'>search card only (room tier uncaptured)</span>"
+            : '<span class="unver">unverified</span>');
+
+      var estStr = h.est_all_in_from_room_tier_7n_usd
+        ? "<strong>~$" + h.est_all_in_from_room_tier_7n_usd.toLocaleString("en-US") + "</strong><br><span class='muted small'>incl. 14.75% + $24.50 statutory tax/fees" +
+          (h.mandatory_facility_fee_7n_usd ? " + $" + h.mandatory_facility_fee_7n_usd + " hotel fee" : "") + "<br>" + NYF.esc(h.mandatory_fee_note) + "</span>"
+        : '<span class="unver">unverified</span>';
+
+      var srcs = [
+        NYF.srcLink(h.official_site, "official hotel"),
+        h.official_rooms_url && h.official_rooms_url !== h.official_site ? NYF.srcLink(h.official_rooms_url, "official rooms/FAQ") : "",
+        NYF.srcLink(h.ota_snapshot_url, "OTA snapshot")
+      ].filter(Boolean).join("<br>");
+
+      return "<tr>" +
+        "<td><strong>" + NYF.esc(h.name) + "</strong><br><span class='muted small'>" + NYF.esc(h.neighborhood) + "<br>" + NYF.esc(h.verified_address) + "</span></td>" +
+        "<td class='small'>" + fitTag + "<br><span class='muted'>" + NYF.esc(h.verified_qualifying_rooms) + "</span></td>" +
+        "<td class='small'><ul class='tight'>" + (h.verified_amenities || []).map(function (a) { return "<li>" + NYF.esc(a) + "</li>"; }).join("") +
+        "</ul><div class='muted' style='margin-top:4px'><strong>Audit note:</strong> " + NYF.esc(h.repo_defect_found) + "</div></td>" +
+        "<td class='small'><span class='unver'>unverified</span><br><span class='muted'>live engine session required</span></td>" +
+        "<td class='num'>" + otaStr + "</td>" +
+        "<td class='num'>" + estStr + "</td>" +
+        "<td class='small'>" + srcs + "</td>" +
+        "</tr>";
+    }).join("") + "</tbody></table></div>";
+}
+
+function renderWindows(windows) {
+  document.getElementById("window-host").innerHTML =
+    '<div class="scroll"><table><thead><tr>' +
+    '<th>Stay Window (2027)</th><th>Nights</th><th>Meets 1–2 Week Rule?</th>' +
+    '<th>DoubleTree Benchmark Base</th><th>Pod 39 / Ace Samples</th><th>Calendar &amp; Pricing Assessment</th><th>Source</th>' +
+    '</tr></thead><tbody>' +
+    windows.map(function (w) {
+      var ruleTag = w.meets_1_to_2_week_rule
+        ? '<span class="tag t-ok">Yes (' + w.nights + 'N)</span>'
+        : '<span class="tag t-warn">No (' + w.nights + 'N &lt; 7N)</span>';
+      var otherSamples = w.pod39_queen_sample_base_usd
+        ? "Pod 39 Queen: $" + w.pod39_queen_sample_base_usd.toFixed(2) + "<br>Ace Med. Queen: $" + w.ace_medium_queen_sample_base_usd.toFixed(2)
+        : '<span class="muted small">not sampled</span>';
+      return "<tr>" +
+        "<td><strong>" + NYF.esc(w.window_label) + "</strong></td>" +
+        "<td class='num'>" + w.nights + "</td>" +
+        "<td class='small'>" + ruleTag + "</td>" +
+        "<td class='num'><strong>$" + w.doubletree_sample_base_usd.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "</strong><br><span class='muted small'>pre-tax OTA snapshot</span></td>" +
+        "<td class='small'>" + otherSamples + "</td>" +
+        "<td class='small'>" + NYF.esc(w.assessment) + "<br><span class='muted'>" + NYF.esc(w.holiday_calendar_note) + "</span></td>" +
+        "<td class='small'>" + NYF.srcLink(w.source_url, "official / snapshot source") + "</td>" +
+        "</tr>";
+    }).join("") + "</tbody></table></div>";
+}
+
+NYF.load("data/hotel_verification_550e02c4.json").then(function (d) {
+  HVERIFY = d;
+  renderHotelsVerify();
+  renderWindows(d.stay_window_comparison || []);
+  ["hq", "hfit"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", renderHotelsVerify);
+    document.getElementById(id).addEventListener("change", renderHotelsVerify);
+  });
+}).catch(function (e) {
+  document.getElementById("hotels-verify-host").innerHTML = '<p class="loading">Could not load hotel verification data: ' + NYF.esc(e.message) + "</p>";
+});
+</script>
+</body>
+</html>
