@@ -241,7 +241,7 @@ for path in JSON_FILES:
 
 expected_counts = {
     "activities.json": (15, "activities"),
-    "hotels.json": (9, "hotels"),
+    "hotels.json": (14, "hotels"),
     "itinerary.json": None,
     "michelin.json": (12, "restaurants"),
     "michelin_two_star.json": (15, "restaurants"),
@@ -270,7 +270,7 @@ for a in activities:
     ht = a.get("hours_table", {})
     if not isinstance(ht, dict) or set(ht) - WEEKDAYS:
         err(f"activities: invalid hours_table for {a.get('name')}")
-    if ht and (a.get("hours_verified_on") != "2026-11-25" or not a.get("hours_baseline_note")):
+    if ht and (a.get("hours_verified_on") not in ("2026-11-25", "2026-11-26") or not a.get("hours_baseline_note")):
         err(f"activities: populated hours missing capture metadata for {a.get('name')}")
     if not ht and not str(a.get("hours_flag", "")).startswith(("UNVERIFIED", "PARTIAL", "SEASONAL", "N/A", "CURRENT")):
         err(f"activities: blank hours missing flag for {a.get('name')}")
@@ -284,8 +284,9 @@ for h in hotels:
     for k in ("official_site", "booking_url", "source_url"):
         if h.get(k) and not valid_http_url(str(h[k])):
             err(f"hotels: invalid {k} for {h.get('name')}")
-    if h.get("michelin_within_1h_count") is not None:
-        err(f"hotels: michelin_within_1h_count must stay null for {h.get('name')}")
+    cnt = h.get("michelin_within_1h_count")
+    if not isinstance(cnt, int) or cnt < 0:
+        err(f"hotels: michelin_within_1h_count must be a measured non-negative integer for {h.get('name')}")
     for t in h.get("rate_tiers", []):
         if "room" not in t or not isinstance(t.get("total_before_tax_usd"), (int, float)):
             err(f"hotels: malformed rate tier for {h.get('name')}")
@@ -329,8 +330,8 @@ if michelin_all:
     if meta.get("ungrouped_count") != sum((not r.get("cluster")) or bool(r.get("cluster_flag")) for r in michelin_all):
         err("michelin_all.json: ungrouped_count does not match flagged/blank clusters")
     priced = sum(bool(r.get("price_options")) for r in michelin_all)
-    if priced != 10:
-        err(f"michelin_all.json: expected 10 priced rows, found {priced}")
+    if priced != 25:
+        err(f"michelin_all.json: expected 25 priced rows, found {priced}")
     if "14 DECEMBER 2026" not in str(meta.get("star_caveat", "")).upper():
         err("michelin_all.json: 2026 ceremony caveat missing")
 

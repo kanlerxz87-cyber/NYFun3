@@ -301,8 +301,8 @@
       },
       "transport_note": "B/D/F/M to 47–50 Sts–Rockefeller Center.",
       "hours_source_url": "https://www.rockefellercenter.com/tickets/top-of-the-rock-observation-deck/",
-      "hours_verified_on": "",
-      "hours_baseline_note": "",
+      "hours_verified_on": "2026-11-26",
+      "hours_baseline_note": "Official page lists 08:00–midnight (last entry 23:10); reconfirm Feb 2027 hours closer to travel.",
       "hours": {
         "Mon": "8 AM-12 AM (last entry 11:10 PM)",
         "Tue": "8 AM-12 AM (last entry 11:10 PM)",
@@ -442,8 +442,8 @@
       },
       "transport_note": "B/D/F/M to 42 St–Bryant Park; 7 to 5th Ave.",
       "hours_source_url": "https://www.nypl.org/locations/schwarzman",
-      "hours_verified_on": "",
-      "hours_baseline_note": ""
+      "hours_verified_on": "2026-11-26",
+      "hours_baseline_note": "Captured from NYPL official Manhattan Library Hours PDF (Nov 2026); confirm holiday hours before travel."
     },
     {
       "id": "grandcentral",

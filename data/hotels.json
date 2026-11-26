@@ -6,7 +6,7 @@
     "price_caveat": "Live direct SynXis/Arlo quotes captured 2026-11-26 for Feb 15–Mar 22, 2027; third-party Booking.com snapshots captured 2026-11-25. Always verify cancellation deadlines and tax breakdown at checkout.",
     "search_page_cheapest_total_usd": "The cheapest total shown on Booking.com's New York search-results card for the same dates — sometimes a different room type than the rate tiers listed. If the room type is unknown, the bed rule cannot be confirmed for that figure.",
     "excluded": "Pod/hostel-style bunk products (e.g. a 'Pod Bunk' twin at ~$700) were excluded because they fail the queen-or-larger bed rule.",
-    "michelin_ranking_caveat": "Measured hotel-to-MICHELIN 1-hour counts will be populated from research/generated/transit_1h.json (Census Geocoder + MTA GTFS subway schedule).",
+    "michelin_ranking_caveat": "Measured door-to-door weekday evening (18:30) travel times from official NYC GeoSearch / US Census coordinates to all 69 active NYC MICHELIN starred venues via live MTA GTFS Subway timetable (feed 20261101–20270515). Excludes Blue Hill at Stone Barns (Tarrytown), La Bastide (North Salem), and indefinitely closed Shion 69 Leonard Street. See research/generated/transit_1h.json for every hotel × restaurant route and duration.",
     "seasonality_summary": "Multi-week direct SynXis check on Pod 51 (Queen Pod, 2 adults, all-in): Feb 15–22 ($1,109) and Feb 22–Mar 1 ($1,138) are the cheapest weeks in the window, rising +47% in Mar 1–8 ($1,628) and +81% in Mar 15–22 ($2,004). 14-night Feb 15–Mar 1 all-in totals: Pod 51 $2,246, Pod 39 $2,356, HGU Queen Deluxe $2,432."
   },
   "hotels": [
@@ -36,8 +36,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22 (the trip's preferred window)",
       "michelin_cluster": "Financial District",
       "michelin_note": "Same-cluster starred venues (Saga ★★, Crown Shy ★) are within the FiDi walking area. A per-restaurant measured transit time was NOT verified, so no numeric 'within 1 hour' count is asserted.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Needs a measured journey time per restaurant."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 68,
+      "michelin_within_30m_count": 48,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 26.9,
+      "michelin_transit_rank": 14
     },
     {
       "id": "hgu-new-york",
@@ -86,8 +91,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "NoMad / Flatiron / Koreatown",
       "michelin_note": "Closest to Atomix ★★, Odo ★★, Joo Ok ★★, Rezdôra ★, Semma ★, 63 Clinton ★, Gramercy Tavern ★. Measured transit time per venue not verified.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Needs a measured journey time per restaurant."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 63,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 19.9,
+      "michelin_transit_rank": 3
     },
     {
       "id": "hyatt-place-chelsea",
@@ -122,8 +132,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Chelsea / Flatiron / NoMad",
       "michelin_note": "Closest to Odo ★★, César ★★, Atomix ★★, Rezdôra ★, Gramercy Tavern ★, Semma ★. Measured transit time per venue not verified.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Needs a measured journey time per restaurant."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 64,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 17.2,
+      "michelin_transit_rank": 1
     },
     {
       "id": "citizenm-new-york-times-square",
@@ -137,14 +152,19 @@
       "rate_tiers": [],
       "room_meets_private_bathroom": "Yes — Booking.com guest listing shows an in-room shower room; confirm on the rate card.",
       "room_meets_queen_or_larger": "Rooms are compact with a large double/queen-style bed; the exact bed width per rate card was not captured — flagged UNVERIFIED. This hotel is the most at risk of failing the 'queen or larger' rule.",
-      "amenities": "Guest rating 8.9/10 from 3,010 reviews; location 9.7, staff 9.0, cleanliness 9.2, comfort 9.1, value 8.4, free WiFi 9.2. 100 m from 50 St station (line 7).",
+      "amenities": "Guest rating 8.9/10 from 3,010 reviews; location 9.7, staff 9.0, cleanliness 9.2, comfort 9.1, value 8.4, free WiFi 9.2. Near 50 St stations (1, C, E) and 49 St (N, R, W).",
       "amenities_flag": "",
       "taxes_note": "Taxes/fees shown at checkout; exact lines not captured for this property.",
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Midtown West / Times Square — near 50 St (1, C, E), 49 St (N, R, W), and 7 Ave (B, D, E).",
       "michelin_note": "Closest to Masa ★★, Jean-Georges ★★, The Modern ★★, Kochi ★, Le Pavillon ★, Icca ★, Torrisi ★, Gabriel Kreuther ★★. Measured transit time per venue not verified.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Needs a measured journey time per restaurant."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 61,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 19.3,
+      "michelin_transit_rank": 2
     },
     {
       "id": "pestana-cr7-times-square",
@@ -193,8 +213,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Times Square / Hell's Kitchen / Midtown West",
       "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★, Marea-adjacent Midtown cluster; Chef's Table at Brooklyn Fare ★★ and Jungsik ★★ are a short crosstown trip. Measured transit time per venue not verified.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Needs a measured journey time per restaurant."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 61,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 21.1,
+      "michelin_transit_rank": 8
     },
     {
       "id": "arlo-midtown",
@@ -231,8 +256,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Midtown West / Hell's Kitchen",
       "michelin_note": "Closest to Kochi ★, Gabriel Kreuther ★★, Le Pavillon ★, Icca ★. Measured transit time not verified.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Needs a measured journey time per restaurant."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 61,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 21.3,
+      "michelin_transit_rank": 10
     },
     {
       "id": "mayfair-hotel",
@@ -252,8 +282,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Theater District / Midtown",
       "michelin_note": "Midtown cluster reachable; DQ on the bed rule.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "No measured journey time captured for this hotel."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 61,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 20.1,
+      "michelin_transit_rank": 5
     },
     {
       "id": "blue-angel-hotel",
@@ -273,8 +308,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Midtown East — near Lexington Av/53 St (E, F) and 51 St (6).",
       "michelin_note": "Good cluster proximity but disqualified on bed type and windowless rooms.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "No measured journey time captured for this hotel."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 58,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 22.2,
+      "michelin_transit_rank": 12
     },
     {
       "id": "artezen-hotel",
@@ -294,8 +334,13 @@
       "cheapest_dates_checked": "2027-02-15 → 2027-02-22",
       "michelin_cluster": "Financial District / Tribeca",
       "michelin_note": "Closest to Saga ★★, Atera ★★★, Crown Shy ★. Highest price of the shortlist for the same week.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "No measured journey time captured for this hotel."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 64,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 20.0,
+      "michelin_transit_rank": 4
     },
     {
       "id": "pod-51",
@@ -326,8 +371,13 @@
       "cheapest_dates_checked": "Feb 15–22 ($1,109), Feb 22–Mar 1 ($1,138), Mar 1–8 ($1,628), Mar 15–22 ($2,004), 14n Feb 15–Mar 1 ($2,246).",
       "michelin_cluster": "Midtown East — walking distance to 51 St (6), Lexington Av/53 St (E, F).",
       "michelin_note": "Central Midtown East subway hub.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Pending measured GTFS computation."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 58,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 22.2,
+      "michelin_transit_rank": 13
     },
     {
       "id": "pod-39",
@@ -358,8 +408,13 @@
       "cheapest_dates_checked": "Feb 15–22 ($1,138 all-in); Feb 15–Mar 1 14n ($2,356 all-in).",
       "michelin_cluster": "Murray Hill / Grand Central — near Grand Central-42 St (4, 5, 6, 7, S).",
       "michelin_note": "Major multi-line Grand Central transit access.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Pending measured GTFS computation."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 62,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 20.9,
+      "michelin_transit_rank": 7
     },
     {
       "id": "pod-times-square",
@@ -390,8 +445,13 @@
       "cheapest_dates_checked": "Feb 15–22 ($1,195 all-in).",
       "michelin_cluster": "Times Square / Port Authority — near 42 St-Port Authority (A, C, E) and Times Sq-42 St (1, 2, 3, 7, N, Q, R, W, S).",
       "michelin_note": "Direct access to A/C/E + Times Sq hub.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Pending measured GTFS computation."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 60,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 22.0,
+      "michelin_transit_rank": 11
     },
     {
       "id": "arlo-nomad",
@@ -428,8 +488,13 @@
       "cheapest_dates_checked": "Feb 15–22 ($1,296 excl. tax).",
       "michelin_cluster": "NoMad / Flatiron — near 33 St (6) and 34 St-Herald Sq (B, D, F, M, N, Q, R, W).",
       "michelin_note": "Walking distance to Atomix, Eleven Madison Park, Rezdôra, Jua.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Pending measured GTFS computation."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 62,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 20.1,
+      "michelin_transit_rank": 6
     },
     {
       "id": "shoreham",
@@ -460,8 +525,13 @@
       "cheapest_dates_checked": "Feb 15–22 ($199/nt sale / $209/nt Stay 7).",
       "michelin_cluster": "Midtown West / 5th Ave — steps from 5 Av/53 St (E, F) and 57 St (F).",
       "michelin_note": "Walking distance to Le Bernardin, The Modern, Aquavit, Gabriel Kreuther.",
-      "michelin_within_1h_count": null,
-      "michelin_count_flag": "Pending measured GTFS computation."
+      "michelin_within_1h_count": 69,
+      "michelin_count_flag": "",
+      "michelin_within_45m_count": 69,
+      "michelin_within_30m_count": 63,
+      "michelin_universe_count": 69,
+      "michelin_median_minutes": 21.2,
+      "michelin_transit_rank": 9
     }
   ]
 }

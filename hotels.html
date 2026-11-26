@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hotels — NYC 2027 trip planner</title>
-<meta name="description" content="Nine NYC hotels with verified 7-night totals for 15–22 Feb 2027, checked against a private-bathroom and queen-bed requirement.">
+<meta name="description" content="Fourteen NYC hotels with live direct SynXis/Arlo and Booking.com 7-night totals for 15–22 Feb 2027, checked against private-bath, queen+ bed, and measured ≤1h MTA GTFS MICHELIN reach.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -28,34 +28,33 @@
 <main class="wrap">
   <div class="hero">
     <h1>Hotels — 7 nights, 2 adults</h1>
-    <p>All figures are <strong>totals for 15–22 Feb 2027</strong> (7 nights, 1 room, 2 adults), captured from Booking.com rate cards on 25 Nov 2026.
-       Totals are <em>before</em> New York's 14.75% tax and $4/night city tax unless stated. Every row links to the exact URL used.</p>
+    <p>Fourteen NYC properties priced for <strong>15–22 Feb 2027</strong> (2 adults, 1 room). Live direct SynXis quotes for <strong>Pod 51 ($1,109 all-in)</strong>, <strong>Pod 39 ($1,138 all-in)</strong>, <strong>Pod Times Square ($1,195 all-in)</strong>, <strong>HGU New York ($1,200 King / $1,257 Queen all-in)</strong>, and <strong>Shoreham ($199/nt)</strong> include all taxes &amp; fees; Arlo direct &amp; Booking.com snapshots exclude NYC hotel taxes and are labeled accordingly.</p>
   </div>
 
   <section class="panel">
-    <h2>Ranked cheapest first</h2>
-    <p class="lede">Sorted by the cheapest room that meets your brief where one was captured, then by the cheapest available total. Two hotels fail the bed rule — Blue Angel and The Mayfair — and are kept in the table with a red verdict rather than deleted, so you can see what the cheap end of the market actually offers.</p>
+    <h2>Ranked cheapest first (with measured ≤1 h MICHELIN transit reach)</h2>
+    <p class="lede">Sorted by lowest captured 7-night total. Blue Angel (address corrected to Choice Hotels official 152 E 55th St) and The Mayfair fail the queen+ bed rule at their cheapest tier and remain visible with red badges. Transit counts are measured door-to-door weekday 18:30 trips across all 69 active NYC MICHELIN venues via MTA Subway GTFS.</p>
     <div id="table-host"><p class="loading">Loading hotels…</p></div>
   </section>
 
   <section class="panel">
-    <h2>Rate tiers individually</h2>
-    <p class="lede">The cheapest total on a search card is often a smaller room. These are the specific rate cards read on each property page.</p>
+    <h2>Rate tiers &amp; Feb–Mar 2027 seasonality</h2>
+    <p class="lede">Multi-week SynXis quotes on Pod 51 (Queen Pod, all-in) confirm late February is ~30–45% cheaper than March: <strong>Feb 15–22 $1,109</strong> · <strong>Feb 22–Mar 1 $1,138</strong> · <strong>Mar 1–8 $1,628</strong> · <strong>Mar 15–22 $2,004</strong>. 14-night Feb 15–Mar 1 all-in totals: Pod 51 <strong>$2,246</strong>, Pod 39 <strong>$2,356</strong>, HGU Queen Deluxe <strong>$2,432</strong>.</p>
     <div id="tiers"></div>
   </section>
 
   <section class="panel">
     <h2>Tax maths, so nothing surprises you</h2>
     <ul class="tight">
-      <li>New York City hotel tax: <strong>14.75%</strong> plus a <strong>$4 per night</strong> city tax — both added at checkout on top of the "total before taxes" figures.</li>
-      <li>Example: Pestana CR7 at <strong>$1,327</strong> before tax for 7 nights → 14.75% tax = $195.73, city tax = $28 → roughly <strong>$1,550.73</strong> all-in. The $26/night resort fee is already inside the $1,327.</li>
-      <li>That all-in figure is arithmetic on published numbers, not a quoted price — the booking engine is the only authority.</li>
+      <li>Direct SynXis quotes marked <strong>incl. taxes &amp; fees</strong> (Pod 51, Pod 39, Pod Times Square, HGU New York, Shoreham) already incorporate NYC hotel occupancy &amp; sales taxes.</li>
+      <li>Pre-tax third-party Booking.com snapshots and Arlo Steal Deal rates add NYC's <strong>14.75%</strong> tax + <strong>$3.50–$4/night</strong> occupancy/unit tax at checkout (e.g., Pestana CR7 $1,327 pre-tax → ~$1,551 estimated all-in).</li>
+      <li>Always verify the exact room category, non-ADA availability (if accessibility features are not needed), and cancellation deadline on the linked booking engine before paying.</li>
     </ul>
   </section>
 </main>
 
 <footer class="wrap">
-  <p>Source: Booking.com property pages with <code>checkin=2027-02-15&amp;checkout=2027-02-22&amp;group_adults=2</code>, read 25 November 2026. Prices are live and change daily.</p>
+  <p>Sources: Direct SynXis &amp; Arlo booking engines (captured 26 Nov 2026), official hotel pages, Booking.com snapshots (25 Nov 2026), and MTA GTFS Subway timetable (<a href="research/generated/transit_1h.json">transit_1h.json</a>).</p>
 </footer>
 
 <script src="assets/app.js"></script>
@@ -78,16 +77,23 @@ NYF.load("data/hotels.json", function (json) {
     var cheapestTier = (h.rate_tiers || []).slice().sort(function (a, b) {
       return (a.total_before_tax_usd || 9e9) - (b.total_before_tax_usd || 9e9);
     })[0];
-    var total = cheapestTier ? NYF.money(cheapestTier.total_before_tax_usd) :
-      (h.search_page_cheapest_total_usd ? NYF.money(h.search_page_cheapest_total_usd) : NYF.unverified("No total captured."));
+    var total = cheapestTier ? NYF.money(cheapestTier.total_before_tax_usd) +
+      (cheapestTier.total_is_all_in ? ' <span class="pill ok">incl. tax &amp; fees</span>' : ' <span class="small muted">(before tax)</span>') :
+      (h.search_page_cheapest_total_usd ? NYF.money(h.search_page_cheapest_total_usd) + ' <span class="small muted">(before tax)</span>' : NYF.unverified("No total captured."));
     var totalNote = cheapestTier ? '<span class="small muted">' + NYF.esc(cheapestTier.room) + "</span>" :
       '<span class="flag">Search-card price — the room type is not confirmed, so the bed rule is unverified for this figure.</span>';
 
     function verdict(ok, txt) {
       var clean = String(txt || "").replace(/^(Yes|No)\s*[—-]\s*/i, "");
-      return '<div style="margin-bottom:6px">' + (ok ? '<span class="pill ok">Yes</span>' : '<span class="pill warn">No / unverified</span>') +
-        '&nbsp;<span class="small">' + NYF.esc(clean) + "</span></div>";
+      var badge = ok ? '<span class="pill ok">Yes</span>' : (/^Conditional/i.test(txt || "") ? '<span class="pill warn">Conditional</span>' : '<span class="pill warn">No / unverified</span>');
+      return '<div style="margin-bottom:6px">' + badge + '&nbsp;<span class="small">' + NYF.esc(clean) + "</span></div>";
     }
+    var transitHtml = (typeof h.michelin_within_1h_count === "number")
+      ? '<br><strong>' + h.michelin_within_1h_count + '/' + (h.michelin_universe_count || 69) + ' within 1 h</strong>' +
+        (typeof h.michelin_within_30m_count === "number" ? ' <span class="muted">(' + h.michelin_within_30m_count + ' ≤30 min · median ' + h.michelin_median_minutes + ' min · #' + h.michelin_transit_rank + ')</span>' : "")
+      : '<div style="margin-top:6px"><span class="unver">count unverified</span><span class="flag">' +
+        NYF.esc(h.michelin_count_flag || "Needs a measured journey time per restaurant.") + "</span></div>";
+
     return "<tr>" +
       "<td><strong>" + NYF.esc(h.name) + "</strong><br><span class='muted small'>" + NYF.esc(h.address) + "</span>" +
         "<br><span class='small'>" + NYF.esc(h.amenities || "") + "</span>" +
@@ -96,10 +102,7 @@ NYF.load("data/hotels.json", function (json) {
       '<td class="num">' + total + "<br>" + totalNote + "</td>" +
       "<td>" + verdict(bathOk, h.room_meets_private_bathroom) + verdict(bedOk, h.room_meets_queen_or_larger) + "</td>" +
       "<td class='small'>" + NYF.esc(h.taxes_note || "") + "</td>" +
-      "<td class='small'>" + NYF.esc(h.michelin_cluster || "") +
-        (h.michelin_within_1h_count ? "<br><strong>" + h.michelin_within_1h_count + " within 1 h</strong>" :
-          '<div style="margin-top:6px"><span class="unver">count unverified</span><span class="flag">' +
-          NYF.esc(h.michelin_count_flag || "Needs a measured journey time per restaurant.") + "</span></div>") + "</td>" +
+      "<td class='small'>" + NYF.esc(h.michelin_cluster || "") + transitHtml + "</td>" +
       '<td class="small">' + NYF.srcLink(h.booking_url, "rate page") +
         (h.official_site ? "<br>" + NYF.srcLink(h.official_site, "hotel site") : "") + "</td>" +
     "</tr>";
@@ -107,7 +110,7 @@ NYF.load("data/hotels.json", function (json) {
 
   document.getElementById("table-host").innerHTML =
     '<div class="scroll"><table><thead><tr>' +
-      "<th>Hotel</th><th>Area</th><th class='num'>7-night total (before tax)</th><th>Meets requirements</th>" +
+      "<th>Hotel</th><th>Area</th><th class='num'>7-night total</th><th>Meets requirements</th>" +
       "<th>Taxes &amp; fees</th><th>Michelin proximity</th><th>Source</th>" +
     "</tr></thead><tbody>" + body + "</tbody></table></div>" +
     '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(json._meta.michelin_ranking_caveat) + "</p>";
@@ -116,7 +119,7 @@ NYF.load("data/hotels.json", function (json) {
   hs.forEach(function (h) {
     (h.rate_tiers || []).forEach(function (t) {
       tierRows.push("<tr><td><strong>" + NYF.esc(h.name) + "</strong></td><td class='small'>" + NYF.esc(t.room) +
-        "</td><td class='num'>" + NYF.money(t.total_before_tax_usd) + "</td>" +
+        "</td><td class='num'>" + NYF.money(t.total_before_tax_usd) + (t.total_is_all_in ? " <span class='small muted'>(all-in)</span>" : "") + "</td>" +
         (t.per_night_usd ? "<td class='num'>" + NYF.money0(t.per_night_usd) + "</td>" : "<td class='num'>—</td>") +
         "<td class='small'>" + NYF.esc(t.cancellation || "") + "</td><td class='small'>" + NYF.esc(t.meets_bed_rule || "") +
         "</td><td class='small'>" + NYF.srcLink(h.official_site, "official hotel") +
@@ -124,7 +127,7 @@ NYF.load("data/hotels.json", function (json) {
     });
   });
   document.getElementById("tiers").innerHTML = tierRows.length
-    ? '<div class="scroll"><table><thead><tr><th>Hotel</th><th>Room</th><th class="num">7 nights, before tax</th><th class="num">Per night</th><th>Cancellation</th><th>Bed rule</th><th>Source</th></tr></thead><tbody>' + tierRows.join("") + "</tbody></table></div>"
+    ? '<div class="scroll"><table><thead><tr><th>Hotel</th><th>Room</th><th class="num">7 nights</th><th class="num">Per night</th><th>Cancellation</th><th>Bed rule</th><th>Source</th></tr></thead><tbody>' + tierRows.join("") + "</tbody></table></div>"
     : '<p class="loading">No individual rate cards were captured for these properties in this pass — only the search-card total.</p>';
 });
 </script>
