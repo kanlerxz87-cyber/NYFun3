@@ -35,6 +35,24 @@
       if (flag) html += '<span class="flag">' + window.NYF.esc(flag.replace(/^UNVERIFIED\s*[—-]\s*/i, "")) + "</span>";
       return html;
     },
+    reviewCell: function (entity) {
+      var out = [];
+      var found = (entity && entity.review_links) || [];
+      found.forEach(function (l) {
+        out.push('<a href="' + window.NYF.esc(l.url) + '" target="_blank" rel="noopener noreferrer" title="' +
+          window.NYF.esc(l.title || l.platform) + '">' + window.NYF.esc(l.platform) + "</a>");
+      });
+      var s = (entity && entity.social) || {};
+      var keys = ["youtube_search", "tiktok_search", "instagram_search"];
+      var labels = ["YouTube", "TikTok", "Instagram"];
+      var searchLinks = keys.map(function (k, i) {
+        return s[k] ? '<a href="' + window.NYF.esc(s[k]) + '" target="_blank" rel="noopener noreferrer">' + labels[i] + "</a>" : "";
+      }).filter(Boolean).join(" · ");
+      if (searchLinks) {
+        out.push((found.length ? "<br>" : "") + '<span class="muted">search: ' + searchLinks + "</span>");
+      }
+      return out.join("") || '<span class="muted">—</span>';
+    },
     srcLink: function (url, label) {
       if (!url) return "";
       return '<a href="' + window.NYF.esc(url) + '" target="_blank" rel="noopener noreferrer">' +

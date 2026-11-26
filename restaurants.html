@@ -54,6 +54,7 @@
       </label>
     </div>
     <div id="table-host"><p class="loading">Loading restaurants…</p></div>
+    <p class="small muted" style="margin:6px 0 0">Review links marked with a platform name were found by web search on 2026-11-26 (creator content, not an official source and not an endorsement); rows without one show search links instead. Every found link is stored in the row’s <code>review_links</code> in <a href="data/michelin_all.json">the data</a>.</p>
   </section>
 </main>
 
@@ -81,11 +82,7 @@ function draw() {
       "<th class='num'>Cost for two</th><th>Official site</th><th>Booking</th><th>Reviews</th><th>Source</th>" +
     "</tr></thead><tbody>" +
     rows.map(function (r) {
-      var s = r.social || {};
-      var social = ["youtube_search","tiktok_search","instagram_search"].map(function (k, i) {
-        if (!s[k]) return "";
-        return '<a href="' + NYF.esc(s[k]) + '" target="_blank" rel="noopener noreferrer">' + ["YouTube","TikTok","Instagram"][i] + "</a>";
-      }).filter(Boolean).join(" · ");
+      var social = NYF.reviewCell(r);
       return "<tr>" +
         "<td><strong>" + NYF.esc(r.name) + "</strong><br><span class='muted small'>" + NYF.esc(r.address || "") + "</span>" +
           (r.phone ? "<br><span class='small'>" + NYF.esc(r.phone) + "</span>" : "") + "</td>" +

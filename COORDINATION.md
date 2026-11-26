@@ -8,7 +8,8 @@ Shared task board. Read this before starting work. This file was combined by fin
 - **Phase A:** `arena-c2e08f03`, pinned branch `arena/c2e08f03-nyfun3`
 - **Phase B / source diagnostics:** `ed92e764`, pinned branch `arena/ed92e764-nyfun3`
 - **Phase C / supplemental dossier:** `arena-61fbe157`, pinned branch `arena/61fbe157-nyfun3`
-- **Current Arena branch (this session):** `arena/3c65c9fa-nyfun3`; base `c4a5467c127bd08ec0a3cf79852fc98311c87513`
+- **Current Arena branch (this session):** `arena/67e5a326-nyfun3`; base `c4a5467c127bd08ec0a3cf79852fc98311c87513` (main after PR #7); merged `origin/main` (PRs #8–#17, then #18/#20) on 2026-11-26 before updating PR #19
+- **Other recent fixed branch:** `arena/3c65c9fa-nyfun3`; base `c4a5467c127bd08ec0a3cf79852fc98311c87513` (T16, merged as PRs #16/#18/#20)
 - **Other recent fixed branch:** `arena/79f655ba-nyfun3`; initial base `1cc713110837ecbaf2f36ab4def44dcaabeddc73`; rebased onto `c4a5467c127bd08ec0a3cf79852fc98311c87513` before its T14/T15
 
 ## Rules in force
@@ -54,6 +55,8 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T70 | Source-integrity checks in CI | `done` | `8e38e7e7` | `scripts/check_sources.py`, `.github/workflows/validate-site.yml` |
 | T24 | Integration of T67–T70 & `audit-53d4ee2e.md` onto `main` | `done` | `8e38e7e7` | shared outputs, `COORDINATION.md`, PR #11 |
 | T71 | Verification audit remediation (Issue #3 / `snapshot-audit.md`), live direct SynXis/Arlo hotel quotes & seasonality, 100% active MICHELIN addresses/hours & 25 priced menus, measured MTA GTFS + Census/NYC GeoSearch 1h transit ranking (`transit_1h.json`), mobile & renderer fixes, CI, PR & merge to `main` | `done` | `arena-25fd4b76` | `data/*.json`, `*.html`, `pages/*.html`, `assets/*`, `research/**`, `scripts/**`, `.github/workflows/**`, `COORDINATION.md` |
+| T72 | Session `67e5a326` contribution: priority review links (10 priced restaurants + 15 activities) with dated creator links | `done` | `67e5a326` | `data/michelin*.json`, `data/activities.json`, `assets/app.js`, `restaurants.html`, `michelin.html`, `activities.html` |
+| T73 | Session `67e5a326` contribution: computed GTFS ranking drafted in parallel, then **superseded by T67/T71** (kept on this board for the record; not merged) | `superseded` | `67e5a326` | `research/scripts/transit_analysis.py`, `data/transit.json`, `transit.html` (all removed in the main-merge reconciliation) |
 
 **T24 post-merge proofread (26 Nov 2026):** the merged page was read on the live site, not just validated
 locally. Four defects that every check passed were fixed on this branch in a follow-up commit: nine
@@ -190,6 +193,28 @@ This is the standing risk with shared data files: a value written into prose rot
   4. **Couple Room-Tier Caveat:** Official [HGU Queen Standard](https://www.hgunyc.com/stay/queen) states *"Ideal for a solo traveler"* and [Artezen Rooms](https://www.artezenhotel.com/rooms) describes *Petite Queen* for individual business travelers — couples of 2 adults should verify *Queen Deluxe* / *Deluxe Queen* / *King Standard* tiers.
 - **Validation:** `python3 scripts/validate_site.py`, `python3 scripts/check_sources.py`, `python3 scripts/check_inline_js.py`, `node scripts/check_rendered_tables.js`, `node scripts/smoke_pages.js`, and `git diff --check` all passed locally.
 
+## Session `67e5a326` — Priority review links kept; transit drafted then superseded (closed 2026-11-26 UTC)
+
+This session claimed board rows for a computed GTFS hotel×starred-restaurant ranking and for dated creator links on the priority rows. Partway through, `origin/main` advanced through PRs #8–#17 (sessions `79f655ba`, `8e38e7e7`, `3c65c9fa`, `46804a5a`, `arena-25fd4b76`) with a strictly more complete implementation of the same ranking (T67 `scripts/transit/gtfs_route.py` + `data/transit_hotels.json`; T71 `research/generated/transit_1h.json` with measured 18:30 in-window weekday routing, 14 hotels, 100% active MICHELIN addresses, direct SynXis/Arlo quotes, `decide.html` cockpit, source-integrity CI). Duplicate work would have forked the dataset, so the parallel transit draft from this session (`research/scripts/transit_analysis.py`, `data/transit.json`, `transit.html`, branch-local `.github/workflows/transit-analysis.yml`) was **not merged**; the branch instead carries only main's implementation plus this session's additions below. My two GTFS workflow runs (`45830340621`, `45831132436`, `45832310175`) ran on my branch only and touched only my draft files.
+
+**T72 — priority review links (`done`).** All 10 priced starred restaurants (Eleven Madison Park, Le Bernardin, The Modern, Masa, COTE, Aquavit, Daniel, Gramercy Tavern, Le Coucou, Rezdôra) and all 15 activities now carry dated creator links found by web search on 2026-11-26 in each row's `review_links` array (`platform`, `url`, `title`, `found_on: 2026-11-26`), plus `review_links_note` (creator content, not official sources, not endorsements). Rendered via `NYF.reviewCell` in `assets/app.js` on `restaurants.html`, `michelin.html`, `activities.html`, found links first with platform labels and tooltips, search links kept as a labelled `search:` fallback. Footnotes added to the three pages. Note: T69 (`data/review_links.json`, session `8e38e7e7`) is the higher-assurance registry (opened pages, link-kind taxonomy, 9 venues with 25 title-verified posts) — it is complementary; neither file overwrites the other. Coverage overlap (venues with both a T69 registry entry and a T72 row link, e.g. Le Bernardin) is intentional and flagged here for the reviewer.
+
+**T73 — computed transit ranking (`superseded`).** Built on this branch, then removed in the merge reconciliation exactly because T67/T71 merged first and cover more (time-of-day routing vs my median-edge model; 65–69 of 72 venues placed vs my 31; hotel universe 14 vs 9). Kept as a record only.
+
+**Verification performed (on this branch, after merging `origin/main`):**
+- Data injection ran against main's regenerated dataset: 10 restaurant rows and 15 activity rows updated; counts verified programmatically.
+- `restaurants.html`, `michelin.html`, `activities.html` renderers and footnotes survived the auto-merge cleanly; all `transit.html` references removed (page dropped); `git grep transit.html` clean.
+- Validators re-run on the reconciled tree (see below; results recorded in the publish check for PR #19).
+
+**Irregularities / notes:**
+1. GitHub registered `.github/workflows/transit-analysis.yml` under the name **“Measure journey times (official MTA GTFS)”** before this branch created its own file at the same path; after the reconciliation the file on this branch is main's version, so the registration is correct on merge.
+2. My earlier claim used `T14`/`T15`, which main had already assigned to sessions `79f655ba` (audit, directory discrepancy) — renumbered to `T72`/`T73` in this reconciliation; no session's task IDs were rewritten.
+3. `scripts/validate_site.py` / `scripts/check_rendered_tables.js` from this branch were **not** carried over; main's versions (with `check_sources.py` and CI source-integrity gates) govern.
+4. Found creator links are dated pointers, not verifications; links can rot. `.github/workflows/validate-site.yml` on main checks source integrity for the published tables.
+5. `data/michelin_all.json` from main (directory-count tension documented on the Flagged for Review page under NR-01) is left untouched; this session injected only `review_links`.
+
+**Cross-session notes:** merge conflict resolution took `origin/main` for every shared output (`data/*.json` rows, `hotels.html`, `index.html`, `plan.html`, `flagged-for-review.html`, `README.md`, `VERIFICATION.md`, validators) and re-applied only this session's additive changes. No other session's file was overwritten, and no fact from main was reverted. The dossier (`pages/`) and audit docs from other sessions are untouched.
+
 ## Final publish check — Independent recheck (`3c65c9fa`, 26 November 2026 UTC)
 
 - **PR [#16](https://github.com/kanlerxz87-cyber/NYFun3/pull/16)** (`arena/3c65c9fa-nyfun3` → `main`) merged at `9297c78e7b491573986cf1c4cfe9adf25ec97cdd` on 2026-11-26 14:02:02 UTC.
@@ -207,3 +232,4 @@ This is the standing risk with shared data files: a value written into prose rot
 - **GitHub Pages:** API reported `status: built` for `499b856` at 14:12:48 UTC with `error.message: null`, source `main` `/`, HTTPS enforced.
 - **Live URLs rechecked:** root dashboard, Flagged for Review, `guide-2026.html`, `COORDINATION.md`, and `CURRENT_AUDIT.md`. The live root dashboard showed the new Guide 2026 card and nav link; Flagged for Review showed the corrected NR-01 “Distinction 3” filter-badge explanation and NR-09; the board showed T16 `done` and the PR #16 merge record.
 - **Final state:** T16 is `done`, PR #16 and its follow-up PR #18 are merged, Pages is built, and no further PR from this session is planned. NR-01–NR-09 remain published as `needs review` and do not block the live site.
+

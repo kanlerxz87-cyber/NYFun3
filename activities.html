@@ -37,6 +37,7 @@
     <h2>Weekday hours, prices and exceptions</h2>
     <p class="lede">Prices are per adult, pre-booked where a booking link is shown. Tap a source link to confirm on the day.</p>
     <div id="table-host"><p class="loading">Loading activities…</p></div>
+    <p class="small muted" style="margin:6px 0 0">Review links marked with a platform name were found by web search on 2026-11-26 (creator content, not an official source and not an endorsement); rows without one show search links instead. Every found link is stored in each row’s <code>review_links</code>.</p>
   </section>
 
   <section class="panel">
@@ -57,9 +58,7 @@ NYF.load("data/activities.json", function (json) {
     var price = a.price_adult_usd === 0 ? "Free" : (a.price_adult_usd ? NYF.money0(a.price_adult_usd) : NYF.unverified("Price not published on the official page."));
     if (a.price_adult_usd && a.price_note) price += '<div class="flag small" style="color:#5d6673">' + NYF.esc(a.price_note) + "</div>";
     if (a.price_adult_usd === null && a.price_note) price += '<div class="flag">' + NYF.esc(a.price_note.replace(/^UNVERIFIED[^—]*—\s*/i, "")) + "</div>";
-    var social = [a.social.youtube_search, a.social.tiktok_search, a.social.instagram_search]
-      .map(function (u, i) { return u ? '<a href="' + NYF.esc(u) + '" target="_blank" rel="noopener noreferrer">' + ["YouTube","TikTok","Instagram"][i] + "</a>" : ""; })
-      .filter(Boolean).join(" · ");
+    var social = NYF.reviewCell(a);
     return "<tr>" +
       '<td><strong>' + NYF.esc(a.name) + "</strong><br><span class='muted small'>" + NYF.esc(a.address) + "</span>" +
         (a.booking ? '<br><a class="small" href="' + a.booking + '" target="_blank" rel="noopener noreferrer">Book / tickets</a>' : "") + "</td>" +

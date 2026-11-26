@@ -53,6 +53,7 @@
       </label>
     </div>
     <div id="table-host"><p class="loading">Loading Michelin data…</p></div>
+    <p class="small muted" style="margin:6px 0 0">Review links marked with a platform name were found by web search on 2026-11-26 (creator content, not an official source and not an endorsement); rows without one show search links instead. Every found link is stored in the row’s <code>review_links</code> in <a href="data/michelin_all.json">the data</a>.</p>
   </section>
 </main>
 
@@ -64,12 +65,8 @@
 <script>
 var DATA = null;
 
-function socialCell(s) {
-  if (!s) return "";
-  return ["youtube_search","tiktok_search","instagram_search"].map(function (k, i) {
-    if (!s[k]) return "";
-    return '<a href="' + NYF.esc(s[k]) + '" target="_blank" rel="noopener noreferrer">' + ["YT","TikTok","IG"][i] + "</a>";
-  }).filter(Boolean).join(" · ");
+function socialCell(r) {
+  return NYF.reviewCell(r);
 }
 function clusterKey(r) {
   return (r.cluster && !r.cluster_flag) ? r.cluster : "Not yet grouped (see note)";
@@ -99,7 +96,7 @@ function draw() {
       "<td>" + NYF.hoursCell(r.hours, r.hours_flag) + "</td>" +
       '<td class="num">' + pair + "</td>" +
       '<td class="small">' + site + (book ? "<br>" + book : "") + "</td>" +
-      '<td class="small">' + socialCell(r.social) + "</td>" +
+      '<td class="small">' + socialCell(r) + "</td>" +
       '<td class="small">' + NYF.sourceCell(r) + "</td>" +
     "</tr>";
   }).join("");
