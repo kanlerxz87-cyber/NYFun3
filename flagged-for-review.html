@@ -37,7 +37,7 @@
     <div class="scroll"><table>
       <thead><tr><th>ID</th><th>Item</th><th>Status</th><th>Next check</th><th>Source</th></tr></thead>
       <tbody>
-        <tr id="NR-01"><td><strong>NR-01</strong></td><td>2027 MICHELIN star status is not yet knowable; the next New York ceremony is 14 Dec 2026.</td><td><span class="pill warn">needs review</span></td><td>Re-read the Guide after the ceremony and update every star label.</td><td class="small"><a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener noreferrer">2025 MICHELIN list</a><br><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants" target="_blank" rel="noopener noreferrer">MICHELIN NYC directory</a></td></tr>
+        <tr id="NR-01"><td><strong>NR-01</strong></td><td>MICHELIN counts need reconciliation: current official directory shows 3 three-star, 14 two-star, and 50 one-star counts, but its heading says 69 restaurants; the local 2025 dataset has 5 / 15 / 52 (72 total).</td><td><span class="pill warn">needs review</span></td><td>Reconcile individual restaurant profiles against the current Guide and resolve the displayed 69-versus-67 aggregate before changing any local tier; recheck before travel.</td><td class="small"><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener noreferrer">Current MICHELIN all-starred directory</a><br><a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025" target="_blank" rel="noopener noreferrer">2025 selection announcement</a><br><a href="data/michelin_all.json">Local combined dataset</a></td></tr>
         <tr id="NR-02"><td><strong>NR-02</strong></td><td>Hotel rates are Booking.com third-party snapshots, not official hotel quotes.</td><td><span class="pill warn">needs review</span></td><td>Confirm a matching direct/booking checkout total including taxes and fees.</td><td class="small"><a href="https://api.github.com/repos/kanlerxz87-cyber/NYFun3/pages" target="_blank" rel="noopener noreferrer">Pages config</a><br><a href="https://www.hgunewyork.com/" target="_blank" rel="noopener noreferrer">HGU official site</a></td></tr>
         <tr id="NR-03"><td><strong>NR-03</strong></td><td>Cheapest upcoming time to book / best time to book remain unverified.</td><td><span class="pill warn">needs review</span></td><td>Re-quote the exact dates after the trip length is chosen; do not infer a booking-time rule.</td><td class="small"><a href="https://www.booking.com/hotel/us/hgu-new-york.html?checkin=2027-02-15&amp;checkout=2027-02-22&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0&amp;selected_currency=USD" target="_blank" rel="noopener noreferrer">HGU exact-date quote</a></td></tr>
         <tr id="NR-04"><td><strong>NR-04</strong></td><td>2027 one-hour transit counts are unverified; current GTFS cannot be extended to Feb–Mar 2027.</td><td><span class="pill warn">needs review</span></td><td>Use a date-specific MTA journey planner after the final hotel and restaurant list is known.</td><td class="small"><a href="https://www.mta.info/developers/gtfs-schedules-transition" target="_blank" rel="noopener noreferrer">MTA transition guidance</a><br><a href="https://new.mta.info/guides/apps" target="_blank" rel="noopener noreferrer">MTA app guidance</a></td></tr>
@@ -55,13 +55,14 @@
       <li><strong>Blank is a value.</strong> A blank cell with <span class="unver">unverified</span> means the official source did not publish the fact; it never means zero.</li>
       <li><strong>Do not infer 2027.</strong> Stars, schedules, hotel rates, and menu prices may change before travel.</li>
       <li><strong>Source links are starting points.</strong> Use them to re-check the fact on the operator, venue, Guide, or transit authority’s own page.</li>
+      <li><strong>Latest audit:</strong> read the <a href="CURRENT_AUDIT.md">26 November 2026 decision-readiness audit</a> for the full coverage table and unresolved evidence gaps.</li>
       <li><strong>Coordination:</strong> the task board and work logs are in <a href="COORDINATION.md">COORDINATION.md</a>; the curated dossier’s own findings are in <a href="pages/findings.html">pages/findings.html</a>.</li>
     </ul>
   </section>
 </main>
 
 <footer class="wrap">
-  <p>Verification date 25 November 2026. <code>needs review</code> does not block the published dashboard; it keeps unresolved official-source checks visible.</p>
+  <p>Verification date 26 November 2026. <code>needs review</code> does not block the published dashboard; it keeps unresolved official-source checks visible.</p>
 </footer>
 </body>
 </html>
