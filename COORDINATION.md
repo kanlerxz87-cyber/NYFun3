@@ -111,6 +111,17 @@ the Hyatt Place Chelsea link uses the wrong property code (`nyczc` vs `lgazc`); 
 - Still requested from other owners: the Pestana fee arithmetic on `hotels.html` and the Blue Angel street
   address on the Hotels page.
 
+**T24 merge note (26 Nov 2026):** `research/audit-53d4ee2e.md` was brought into this branch verbatim
+from `arena/53d4ee2e-nyfun3` so its six findings are not lost while PR #9 stays conflicted on
+`COORDINATION.md`. It is that session's text, unedited; its two corrections that touch files this session
+does not own are recorded as requests:
+- **A-01** — `pages/hotels.html` links Hyatt Place Midtown-South but the booking URL uses the `nyczt`
+  (Times Square) property. The dossier page needs its owner to repoint or drop those URL, because a
+  property-mismatched link misdirects a booking.
+- **A-03** — the same page treats "$4/night city tax" as universal; NYC's own guidance separates the
+  occupancy tax, sales tax and a state unit fee. Also a request, not edited here.
+Findings A-02, A-04, A-05 and A-06 are consistent with `EVIDENCE_AUDIT.md` §3–§5 and `FLAGS.md` §7.
+
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |
