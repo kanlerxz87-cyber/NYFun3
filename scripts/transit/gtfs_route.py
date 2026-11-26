@@ -409,6 +409,13 @@ ADDRESS_OVERRIDES = {
         "source_url": "https://www.amnh.org/plan-your-visit",
         "reason": "the data file stored a street-crossing string, not a postal address",
     },
+    "Blue Angel Hotel": {
+        "address": "152 East 55th Street, New York, NY 10022",
+        "source_url": "https://www.blueangelhotelnyc.com/rooms",
+        "reason": "data/hotels.json stores 1234 Broadway, but the hotel's own site publishes "
+                  "152 East 55th Street; routing from the stored address would have measured "
+                  "the wrong building. The data file is flagged for correction.",
+    },
     "Intrepid Museum": {
         "address": "Pier 86, West 46th Street and 12th Avenue, New York, NY 10036",
         "source_url": "https://intrepidmuseum.org/plan-your-visit/visitor-information",
@@ -468,7 +475,9 @@ def main() -> int:
     cache = load_cache()
     doors = []
     for h in hotels:
-        doors.append({"kind": "hotel", "row": h, "addr": h.get("address")})
+        override = ADDRESS_OVERRIDES.get(h["name"])
+        doors.append({"kind": "hotel", "row": h, "addr": (override or {}).get("address") or h.get("address"),
+                      **({"address_override": override} if override else {})})
     for r in restaurants:
         doors.append({"kind": "restaurant", "row": r, "addr": street_address(r.get("address")) or r.get("address")})
     for a in activities:
@@ -541,6 +550,7 @@ def main() -> int:
                     "depart_after_local": window,
                     "hotel_stops_within_walk": len(origins),
                     "nearest_stop_walk_min": round(min(origins.values()), 1),
+                    "address_used": (ADDRESS_OVERRIDES.get(h["name"]) or {}).get("address") or h.get("address"),
                     "destinations": {},
                 }
                 for d in destinations:
