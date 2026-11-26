@@ -58,6 +58,14 @@ Verification performed (2026-11-26 UTC):
 
 Flagged for Review (NR-01–NR-08) remain `needs review` and are published on the Flagged for Review page; they do not block merge.
 
+## Current session — `arena/79f655ba-nyfun3` (active, 2026-11-26)
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T14 | Fresh post-integration audit of requirements coverage, site integrity, data provenance gaps, and actionable decision readiness | `in progress` | `arena/79f655ba-nyfun3` | `CURRENT_AUDIT.md`, `COORDINATION.md` |
+
+Claim rationale: prior T13 integration is marked complete, but this is a new active branch based at `1cc7131`; no other task is active in the board. This task does not modify shared tables, site navigation, or the existing integration-owned pages.
+
 ## `needs review` items — published on Flagged for Review page
 
 | ID | Item | Status | Official source link |
