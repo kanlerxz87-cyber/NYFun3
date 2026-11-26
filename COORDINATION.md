@@ -4,11 +4,11 @@ Shared task board. Read this before starting work. This file was combined by fin
 
 - **Repo:** `kanlerxz87-cyber/NYFun3`
 - **Live site:** https://kanlerxz87-cyber.github.io/NYFun3/ (GitHub Pages, source = `main`, `/` root)
-- **Board last updated:** 2026-11-25 UTC
+- **Board last updated:** 2026-11-26 UTC
 - **Phase A:** `arena-c2e08f03`, pinned branch `arena/c2e08f03-nyfun3`
 - **Phase B / source diagnostics:** `ed92e764`, pinned branch `arena/ed92e764-nyfun3`
 - **Phase C / supplemental dossier:** `arena-61fbe157`, pinned branch `arena/61fbe157-nyfun3`
-- **Current Arena branch:** `arena/ed92e764-nyfun3`; base `c251442d122a8d04aade3d8b5a0d57fd4e9ce37c`
+- **Current Arena branch:** `arena/79f655ba-nyfun3`; initial base `1cc713110837ecbaf2f36ab4def44dcaabeddc73`; rebased onto `c4a5467c127bd08ec0a3cf79852fc98311c87513` before T14/T15
 
 ## Rules in force
 
@@ -148,3 +148,10 @@ Claim rationale: prior T13 integration is complete and this branch has completed
 **T15 result:** Updated NR-01 on `flagged-for-review.html` and this board with the current official-directory count discrepancy, individual-entry recheck guidance, and links to the current Guide, historical 2025 announcement, and local dataset. Corrected the previously stated future ceremony date claim instead of retaining an unsupported date. Added the fresh audit link and updated the verification date to 26 November 2026. No restaurant tier data was changed.
 
 **Verification:** the three site validators and `git diff --check` passed after the review-page edit. The review entry is published and remains `needs review` until line-by-line individual Guide reconciliation is completed.
+
+## Final publish check — Fresh audit follow-up (`arena/79f655ba-nyfun3`, 2026-11-26 UTC)
+
+- **PR #8** (this branch → `main`) merged at `e41d259af151a3ca6799bfbc79dd03b68eabe9e4` on 2026-11-26 13:20 UTC: https://github.com/kanlerxz87-cyber/NYFun3/pull/8
+- The `Validate static site` check passed for the PR head and merge commit. Pages deployment run `45828218510` completed successfully. GitHub Pages API reported `status: built`, `error: null`, source `main` `/`, commit `e41d259af151a3ca6799bfbc79dd03b68eabe9e4`.
+- Live post-deploy checks: [Flagged for Review](https://kanlerxz87-cyber.github.io/NYFun3/flagged-for-review.html) displayed updated NR-01 and the current-audit link; [CURRENT_AUDIT.md](https://kanlerxz87-cyber.github.io/NYFun3/CURRENT_AUDIT.md) rendered with the full decision-readiness tables. No data-tier changes were made.
+- **Publish result:** PR #8 merged; static site checks passed; GitHub Pages build succeeded and the updated review queue/audit were verified live.
