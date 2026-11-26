@@ -5,29 +5,25 @@ on:
     branches:
       - arena/25fd4b76-nyfun3
     paths:
-      - 'research/**'
+      - 'research/scripts/compute_transit.py'
       - 'data/hotels.json'
       - 'data/michelin_all.json'
       - '.github/workflows/research-diagnostics.yml'
   workflow_dispatch:
 
 jobs:
-  diagnose:
+  transit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run official source & GTFS feed diagnostics
-        run: python3 research/scripts/diagnose.py
       - name: Compute measured 1-hour hotel-to-MICHELIN transit times
         run: python3 research/scripts/compute_transit.py
-      - name: Upload diagnostics and transit artifacts
+      - name: Upload transit artifact
         uses: actions/upload-artifact@v4
         with:
-          name: diagnostics-report
-          path: |
-            research/generated/diagnostics.json
-            research/generated/transit_1h.json
+          name: transit-report
+          path: research/generated/transit_1h.json
           retention-days: 30
