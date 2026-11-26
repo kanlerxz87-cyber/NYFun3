@@ -63,12 +63,14 @@
       var unstable = spread !== null && spread >= 1.5
         ? ' <span class="pill warn">moves ' + one(spread) + " min by time of day</span>"
         : "";
+      // When the instability pill already prints the spread, do not print it twice.
+      var spreadNote = spread === null ? "—" : one(spread) + " min over four departures";
+      var spreadLine = unstable ? "" : "<br><span class='small muted'>spread " + spreadNote + "</span>";
       return "<tr>" +
         "<td><strong>#" + r.rank_by_median + "</strong></td>" +
         "<td><strong>" + esc(r.name) + "</strong><br><span class='small muted'>" + esc(r.area || "") + "</span></td>" +
         "<td class='num'><strong>" + one(r.restaurants.median_minutes) + " min</strong>" + tie + unstable +
-          "<br><span class='small muted'>spread " + (spread === null ? "—" : one(spread) + " min") +
-          " over four departures</span></td>" +
+          spreadLine + "</td>" +
         "<td class='num'>" + stars.three_star + " / " + stars.two_star + " / " + stars.one_star +
           "<br><span class='small muted'>" + r.starred_restaurants_within_60_min_total + " total</span></td>" +
         "<td class='num'>" + (r.activities.measured
