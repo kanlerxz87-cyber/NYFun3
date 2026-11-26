@@ -44,8 +44,54 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
 | T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `done` | `a4c9c8c0` | shared outputs, `COORDINATION.md`, PR to `main` |
-| T14 | Computed subway-time hotel ranking: geocode hotels + starred restaurants (US Census batch geocoder), route on official MTA GTFS subway feed, publish per-hotel counts of starred restaurants within 60 min by subway + walking | `in progress` | `67e5a326` | `research/scripts/transit_analysis.py`, `research/generated/transit_analysis.json`, `data/transit.json`, `.github/workflows/transit-analysis.yml`, `transit.html`, root `*.html` nav, `hotels.html` proximity cell, `COORDINATION.md`, `README.md`, `VERIFICATION.md`, `plan.html`, `flagged-for-review.html` |
-| T15 | Replace search-only social placeholders on priority rows with real, dated review-link findings (10 priced restaurants + 15 activities) | `in progress` | `67e5a326` | `data/michelin_all.json`, `data/michelin.json`, `data/michelin_one_star.json`, `data/michelin_two_star.json`, `data/activities.json`, renderer cells in `restaurants.html`, `michelin.html`, `activities.html` |
+| T14 | Computed subway-time hotel ranking: geocode hotels + starred restaurants (US Census batch geocoder), route on official MTA GTFS subway feed, publish per-hotel counts of starred restaurants within 60 min by subway + walking | `done` | `67e5a326` | `research/scripts/transit_analysis.py`, `research/generated/transit_analysis.json`, `data/transit.json`, `.github/workflows/transit-analysis.yml`, `transit.html`, root `*.html` nav, `hotels.html` proximity cell, `COORDINATION.md`, `README.md`, `VERIFICATION.md`, `plan.html`, `flagged-for-review.html`, `scripts/validate_site.py`, `scripts/check_rendered_tables.js`, `index.html`, `assets/app.js` |
+| T15 | Replace search-only social placeholders on priority rows with real, dated review-link findings (10 priced restaurants + 15 activities) | `done` | `67e5a326` | `data/michelin_all.json`, `data/michelin.json`, `data/michelin_one_star.json`, `data/michelin_two_star.json`, `data/activities.json`, renderer cells in `restaurants.html`, `michelin.html`, `activities.html`, `assets/app.js` |
+
+## Session `67e5a326` — Computed transit ranking + priority review links (started 2026-11-26 UTC)
+
+**T14 — Computed subway access ranking (`done`).** Method and full evidence: `VERIFICATION.md` §9,
+`transit.html`, `data/transit.json`, `research/generated/transit_analysis.json`. Pipeline: addresses as captured →
+US Census batch geocoder (Public_AR_Current; single-address retry with deterministic normalisation) →
+current official MTA subway GTFS (`rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip`), edge weight = median
+scheduled stop-to-stop time, 480 s interchange, 300 s first boarding; walking = haversine × 1.3 at 75 m/min to/from
+the six nearest stations within 2.5 km. Computed **31 of 72** starred restaurants (33 with a captured address;
+Blue Hill at Stone Barns and Le Pavillon return Census `No_Match` after batch, single-address, and abbreviation-expansion
+retries; 39 rows have no captured street address). Result: Artezen Hotel, Hyatt Place Chelsea, Blue Angel Hotel,
+citizenM Times Square, The Mayfair Hotel, HGU New York reach 31/31 geocoded starred venues ≤ 60 min; Arlo Midtown and
+Pestana CR7 reach 30/31 (Aska > 60 min for both under the model); Eurostars Wall Street reaches 31/31 but only 19 ≤ 30 min.
+Per-hotel ≤30/≤45/≤60 splits published on `transit.html` and in `data/transit.json`.
+
+**T15 — Found review links on 25 priority rows (`done`).** Every priority row (10 priced starred restaurants +
+all 15 activities) now carries dated creator links found by web search on 2026-11-26 (YouTube; TikTok where surfaced):
+stored as `review_links` per row with `found_on` and `review_links_note` (creator content, not official, not an endorsement).
+Search links remain as fallbacks. See `VERIFICATION.md` §10.
+
+**Verification performed (branch `arena/67e5a326-nyfun3`):** `scripts/validate_site.py` (now also validates
+`data/transit.json` schema/totals and allows non-null `michelin_within_1h_count` only with a GTFS method note),
+`scripts/check_inline_js.py` (9 units), `scripts/check_rendered_tables.js` (6 renderers, 184 source-linked rows).
+GitHub Actions: validate-site success on every push; transit-analysis runs `45830340621`, `45831132436`, `45832310175`
+all concluded success. Static serving spot-check: all 11 probed routes returned HTTP 200.
+
+**Irregularities / notes for review:**
+1. Only 33 of 72 starred restaurants have a captured street address (Guide-page capture gap from 25 Nov); 39 rows
+   are excluded from the computed counts — nothing was inferred. Two more fail Census geocoding (Blue Hill at Stone Barns;
+   Le Pavillon, 1 Vanderbilt Ave.) despite three deterministic retry passes. Capturing the Guide address for all 72 is the
+   single highest-value follow-up.
+2. The computed times are **current-GTFS, subway-only, walking-included** — not a Feb–Mar 2027 timetable; no bus model;
+   therefore a lower bound on the user's "subway or bus" rule. NR-04 remains `needs review` with the caveat folded in.
+3. GitHub registers `.github/workflows/transit-analysis.yml` under the name **“Measure journey times (official MTA GTFS)”**
+   although this branch's file declares `name: Transit analysis` — the registration appears cached from a prior (since
+   rewritten or removed) branch. No runtime impact; the registered name refreshes from `main` once this merges.
+4. Scripts `scripts/validate_site.py` and `scripts/check_rendered_tables.js` were edited to admit the computed ranking
+   (the previous validator hard-failed any non-null `michelin_within_1h_count`); this extends the originally claimed scope,
+   logged here deliberately.
+5. Ranking ties on the 60-minute metric are broken by ≤45 and ≤30 minutes; all nine hotels are within 1–2 venues of each
+   other at ≤60 min, so the ≤30-minute column is the practical differentiator.
+6. Found creator links are dated pointers, not verifications; a stale/removed video is possible at any time.
+
+**Cross-session note:** the supplemental dossier (`pages/`) still carries its 25-Nov statements that no transit minutes
+exist; it was not edited (outside this session's scope). `RESEARCH.md` is likewise a dated log. This board and
+`transit.html` supersede those statements for the address-verified subset as of 26 Nov 2026.
 
 ## Session `a4c9c8c0` — Final integration (started 2026-11-26 UTC)
 
