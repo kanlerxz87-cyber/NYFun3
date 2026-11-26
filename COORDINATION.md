@@ -43,18 +43,23 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T10 | First Pages integration and live checks | `done` | `arena-c2e08f03` | `main` publish |
 | T11 | Supplemental curated dossier with official menu arithmetic, room-fit comparisons, source/method log | `done` | `arena-61fbe157` | `pages/**`, `RESEARCH.md`, `assets/css/site.css`, `assets/js/site.js`, root dashboard dossier link |
 | T12 | Official-source diagnostics and MTA/Hyatt/MICHELIN access ledger | `done` | `ed92e764` | `research/**`, `.github/workflows/research-diagnostics.yml` |
-| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `in progress` | `a4c9c8c0` | shared outputs, `COORDINATION.md`, PR to `main` |
+| T13 | Final integration: merge all branches, re-verify combined data, add Flagged for Review page, link/schema validation, PR to `main`, Pages build check | `done` | `a4c9c8c0` | shared outputs, `COORDINATION.md`, PR to `main` |
 
 ## Session `a4c9c8c0` — Final integration (started 2026-11-26 UTC)
 
 Claimed per the final-integration protocol: this branch (`arena/a4c9c8c0-nyfun3`) already matches `main` at `1cc7131`. Scope: shared outputs (`main`), `COORDINATION.md` bookkeeping, PR to `main`.
 
-Verification performed (2026-11-26 UTC):
+Verification re-run (2026-11-26 UTC, final):
 - `python3 scripts/validate_site.py`: `Validated 7 JSON files, 15 HTML pages, 7 markdown docs` — `OK: schemas, price arithmetic, source links, local links, anchors, navigation, and table Source columns pass`.
 - `python3 scripts/check_inline_js.py`: `OK: node --check passed for 8 JavaScript units (3 files + inline page scripts)`.
 - `node scripts/check_rendered_tables.js`: `OK: 5 dynamic renderers produced 175 source-linked rows (20 priced rows)` — `restaurants.html: 72 rendered rows, 10 priced rows`, `michelin.html: 72 rendered rows, 10 priced rows`, `hotels.html: 9`, `itinerary.html: 7`.
 - Data spot-check: `data/hotels.json` sorted ascending by `search_page_cheapest_total_usd` (cheapest = Eurostars Wall Street $831). Michelin clusters present (`id="clusters"` in `michelin.html`).
-- `gh api repos/kanlerxz87-cyber/NYFun3/pages`: `status: built`, source `main` `/`, public.
+- `gh api repos/kanlerxz87-cyber/NYFun3/pages`: `status: built` at 13:18:05 UTC (polling through `building`).
+
+Publish record:
+- **PR #7** (`arena/a4c9c8c0-nyfun3` → `main`), merged at 2026-11-26 UTC, merge commit `c4a5467c127bd08ec0a3cf79852fc98311c87513` (PR state `MERGED`, no approval waited for).
+- **Pages:** `https://kanlerxz87-cyber.github.io/NYFun3/` — final `gh api` status `built`, `https_enforced: true`; live page fetched (`title: "NYC Trip Planner — Feb 15–Mar 23, 2027 (2 adults)"`) with dashboard sections (Activities 15, Michelin 72, Hotels 9, Itinerary 7, Open questions 11, Flagged for Review 8, Detailed trip dossier 8).
+- Irregularities and unverified items follow the existing `needs review` queue (NR-01–NR-08); flagged pages published; merge not blocked by them.
 
 Flagged for Review (NR-01–NR-08) remain `needs review` and are published on the Flagged for Review page; they do not block merge.
 
