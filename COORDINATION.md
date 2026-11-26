@@ -249,3 +249,11 @@ This session claimed board rows for a computed GTFS hotel×starred-restaurant ra
   - [`booking-strategy.html`](booking-strategy.html) & [`data/hotel_verification_550e02c4.json`](data/hotel_verification_550e02c4.json) — First-party room-fit, address, amenity, and fee verification across 10 selected hotel properties (`Eurostars Wall Street` `27 m²` Queen + private bathtub; `The Artezen Hotel` mandatory `$13.95 + tax/night` facility fee; `Blue Angel Hotel NYC` Choice Ascend `ny842` at `152 E. 55th St` with windowless `NQ1` entry Queen warning; `The Mayfair Hotel` `100 sq ft` Double warning; `Pestana CR7` King-only rule + suspended breakfast FAQ), NYC DOF statutory hotel tax math (`14.75% + $3.50/night`), and Feb 15–Mar 23, 2027 weekly window curve.
   - [`research/verification-550e02c4.md`](research/verification-550e02c4.md) — Complete 14-item (`V55-01`–`V55-14`) line-by-line official-source verification ledger.
 - **Validation:** `python3 scripts/validate_site.py`, `python3 scripts/check_sources.py`, `python3 scripts/check_inline_js.py`, `node scripts/check_rendered_tables.js`, `node scripts/smoke_pages.js`, and `git diff --check` all passed locally.
+
+### Follow-up integration claim — `550e02c4` (2026-11-26 UTC)
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T74 | Link the new Guide-listed and hotel-verification pages from existing dashboards, add review cautions, validate and publish PR #21 | `in progress` | `550e02c4` | `index.html`, `guide-2026.html`, `flagged-for-review.html`, `COORDINATION.md` |
+
+The prior integration T24 is complete, and PR #19 merged; this follow-up preserves both previous integrations. No other open PR currently claims these files.
