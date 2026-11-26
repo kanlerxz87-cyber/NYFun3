@@ -6,7 +6,12 @@
     "verification_date": "2026-11-26",
     "menu_price_integration": "Final integration 2026-11-25: 10 starred rows carry selected official menu/FAQ/PDF prices. Couple figures are arithmetic (2 × official per-person amount), not quoted all-in totals; they exclude beverages, tax, and gratuity unless the official page says otherwise. No 2027 price is inferred.",
     "price_arithmetic_rule": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-    "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link."
+    "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link.",
+    "independent_rechecked_on": "2026-11-26",
+    "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+    "next_ceremony_source_url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+    "official_list_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+    "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. Two same-day directory fetches displayed different three-star counts (3/14/50 and 5/14/50); the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled."
   },
   "restaurants": [
     {
@@ -27,7 +32,7 @@
         "Sat": "6 PM-11 PM",
         "Sun": "closed"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://www.63clinton.com/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/63-clinton",
       "booking_url": "https://resy.com/cities/ny/sixty-three-clinton",
@@ -41,7 +46,8 @@
       "price_basis": "",
       "price_caveat": "",
       "price_for_two_note": "",
-      "price_verified_on": ""
+      "price_verified_on": "",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Bar Miller",
@@ -280,7 +286,15 @@
       "address": "",
       "borough": "new-york",
       "note": "",
-      "hours": {},
+      "hours": {
+        "Mon": "5 PM-11 PM",
+        "Tue": "5 PM-11 PM",
+        "Wed": "5 PM-11 PM",
+        "Thu": "5 PM-12 AM",
+        "Fri": "5 PM-12 AM",
+        "Sat": "5 PM-12 AM",
+        "Sun": "5 PM-11 PM"
+      },
       "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
       "official_site": "",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/cote",
@@ -358,7 +372,15 @@
       "address": "",
       "borough": "new-york",
       "note": "",
-      "hours": {},
+      "hours": {
+        "Mon": "closed",
+        "Tue": "5 PM-9:30 PM",
+        "Wed": "5 PM-9:30 PM",
+        "Thu": "5 PM-9:30 PM",
+        "Fri": "5 PM-9:30 PM",
+        "Sat": "5 PM-9:30 PM",
+        "Sun": "5 PM-9:30 PM"
+      },
       "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
       "official_site": "",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/daniel",
@@ -498,7 +520,14 @@
       "address": "",
       "borough": "new-york",
       "note": "",
-      "hours": {},
+      "hours": {
+        "Mon": "5 PM-10:30 PM",
+        "Tue": "5 PM-10:30 PM",
+        "Wed": "5 PM-10:30 PM",
+        "Thu": "5 PM-10:30 PM",
+        "Fri": "12 PM-2:30 PM; 2:30 PM-5 PM; 5 PM-10:30 PM",
+        "Sat": "12 PM-2:30 PM (Saturday remainder not captured)"
+      },
       "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
       "official_site": "",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/estela",
@@ -647,7 +676,7 @@
         "Sat": "5 PM-10 PM",
         "Sun": "5 PM-9 PM"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://www.gramercytavern.com/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gramercy-tavern",
       "booking_url": "https://www.opentable.com/r/gramercy-tavern-new-york",
@@ -673,7 +702,8 @@
       "price_basis": "2 × official per-person price",
       "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu also lists an optional $118-per-person wine pairing and à la carte items; only the explicit per-person seasonal menu is multiplied here.",
       "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-      "price_verified_on": "2026-11-25"
+      "price_verified_on": "2026-11-25",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Huso (NEW)",
@@ -884,7 +914,15 @@
       "address": "",
       "borough": "new-york",
       "note": "",
-      "hours": {},
+      "hours": {
+        "Mon": "5 PM-9:30 PM",
+        "Tue": "5 PM-9:30 PM",
+        "Wed": "5 PM-9:30 PM",
+        "Thu": "5 PM-9:30 PM",
+        "Fri": "5 PM-10 PM",
+        "Sat": "5 PM-10 PM",
+        "Sun": "5 PM-9:30 PM"
+      },
       "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
       "official_site": "",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/kochi",
@@ -1021,7 +1059,7 @@
         "Sat": "11:30 AM-2:30 PM; 5 PM-11 PM",
         "Sun": "11:30 AM-2:30 PM; 5 PM-10 PM"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://lecoucou.com/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
       "booking_url": "https://resy.com/cities/new-york-ny/venues/le-coucou",
@@ -1077,7 +1115,8 @@
       "price_basis": "2 × official per-person price",
       "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official page says lunch and Very Coucou menus are priced per person and do not include tax or gratuity; wine accompaniments are extra. The 4-course $240 menu is for parties of 7–10 and is not a couple price.",
       "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-      "price_verified_on": "2026-11-25"
+      "price_verified_on": "2026-11-25",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Le Pavillon",
@@ -1088,7 +1127,15 @@
       "address": "",
       "borough": "new-york",
       "note": "",
-      "hours": {},
+      "hours": {
+        "Mon": "11:30 AM-2 PM; 5 PM-9:30 PM",
+        "Tue": "11:30 AM-2 PM; 5 PM-9:30 PM",
+        "Wed": "11:30 AM-2 PM; 5 PM-9:30 PM",
+        "Thu": "11:30 AM-2 PM; 5 PM-9:30 PM",
+        "Fri": "11:30 AM-2 PM; 5 PM-9:30 PM",
+        "Sat": "5 PM-9:30 PM",
+        "Sun": "closed"
+      },
       "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
       "official_site": "",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-pavillon-1192744",
@@ -1505,7 +1552,7 @@
         "Sat": "5 PM-10 PM",
         "Sun": "closed"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://www.semma.nyc/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/semma",
       "booking_url": "SevenRooms (via Michelin page)",
@@ -1519,7 +1566,8 @@
       "price_basis": "",
       "price_caveat": "",
       "price_for_two_note": "",
-      "price_verified_on": ""
+      "price_verified_on": "",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Shion 69 Leonard Street",

@@ -20,7 +20,7 @@
    "id": "B2",
    "title": "Hotel prices are third-party snapshots, not official quotes.",
    "status": "open",
-   "why_it_matters": "Every total on the site comes from a Booking.com rate card captured on 2026-11-26, before New York's 14.75% tax and $4/night city tax. A hotel's own booking engine may return a different all-in total for the same room.",
+   "why_it_matters": "Some totals are historical Booking.com rate snapshots captured on 2026-11-26, before New York's current official tax components (14.75% plus $3.50/night published unit fees); direct SynXis/Arlo quotes are labeled separately. A hotel's own booking engine may return a different all-in total for the same room.",
    "next_action": "For the two or three finalist hotels, take a direct-booking quote for the chosen dates and compare line by line (room, bed, bathroom, taxes, resort fee, cancellation).",
    "sources": [
     {"label": "HGU direct site (its own booking engine)", "url": "https://www.hgunyc.com/"},

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "compiled": "2026-11-26",
-    "selection": "MICHELIN Guide New York 2025 selection, announced 18 November 2025 (69 starred restaurants: 5 three-star, 14 two-star, 50 one-star in New York City).",
+    "selection": "MICHELIN Guide New York 2025 selection announced 18 November 2025. This site retains the announcement's 72 starred rows (5 three-star, 15 two-star, 52 one-star). The official NYC all-starred directory reports 69 active NYC starred restaurants (5 / 14 / 50) on 26 Nov 2026; dynamic count differences are flagged, not reconciled.",
     "official_list_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
     "star_caveat": "THE NEXT NEW YORK CEREMONY IS SCHEDULED FOR 14 DECEMBER 2026 — before this trip. Re-verify every star after that date. Nothing on this page should be treated as final for Feb/Mar 2027.",
     "counts": {
@@ -10,17 +10,36 @@
       "one_star": 52,
       "total": 72
     },
-    "one_star_discrepancy": "MICHELIN's own New York filter reports 50 one-star restaurants in New York City; the 18 Nov 2025 announcement lists 52 one-star names including La Bastide by Andrea Calstier (North Salem, Westchester) and borough venues. The difference is FLAGGED here, not reconciled.",
+    "one_star_discrepancy": "Official NYC directory reports 50 one-star restaurants; the 18 Nov 2025 announcement lists 52 one-star names. Two same-day 26 Nov 2026 directory fetches displayed different three-star counts (3 and 5). Differences are flagged, not silently reconciled.",
     "price_rule": "Selected restaurants now show a couple subtotal only when a first-party menu, FAQ or PDF states a per-person price. Every figure is written as 2 × the official per-person amount and is NOT a quoted all-in total; beverages, tax and gratuity are excluded unless the official page says otherwise. All other rows remain blank and flagged unverified. No 2027 price inference is allowed.",
     "in_or_near_nyc": "Blue Hill at Stone Barns (Tarrytown) and La Bastide (North Salem) are outside the NYC subway network. They are kept in the list for completeness and marked 'outside transit rule'.",
     "cluster_rule": "A cluster is filled only where the MICHELIN page itself names the area. Two rows with a Guide-blurb clue (Daniel and Torrisi) still carry cluster_flag and are rendered as “Not yet grouped”; they are not silently verified.",
     "ungrouped_count": 52,
-    "hours_coverage": "71 of 72 rows have verified hours (all 70 active NYC/Westchester venues excluding Blue Hill at Stone Barns' partial Wed-Fri schedule; Shion 69 Leonard Street closed indefinitely after Dec 27, 2025 fire).",
-    "one_star_hours_gap": "All 51 active 1-star venues have verified addresses, official links, and weekday hours; Shion 69 Leonard Street is closed indefinitely.",
+    "hours_coverage": "71 of 72 rows have verified Guide-page weekday hours; 1 closed venue remains blank and flagged. These are current Guide snapshots, not 2027 calendar confirmations.",
+    "one_star_hours_gap": "1 one-star row lacks verified hours because Shion 69 Leonard Street is closed indefinitely after a Dec 27, 2025 fire; all active one-star venues have Guide hours.",
     "menu_price_integration": "Refreshed 2026-11-26: 25 starred rows carry selected official menu/Tock/FAQ/PDF prices (2 × official per-person amount).",
     "price_arithmetic_rule": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
     "price_coverage": "25 of 72 starred rows have at least one verified official per-person menu price; 47 remain blank + unverified.",
-    "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link."
+    "price_scalar_meaning": "For priced rows, scalar price_for_two_usd and menu_price_per_person_usd are the LOWEST official option shown in price_options; they are not an all-in total. Use price_options for every individual 2 × official per-person amount and source link.",
+    "independent_rechecked_on": "2026-11-26",
+    "official_directory_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred",
+    "next_ceremony_source_url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/",
+    "official_list_source_url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025",
+    "independent_verification_note": "Official 2025 star announcement, current NYC all-starred directory, Michelin Media 2026 ceremony announcement, and individual Guide pages were rechecked on 26 Nov 2026. Two same-day directory fetches displayed different three-star counts (3/14/50 and 5/14/50); the 2025 announcement dataset retains 5/15/52 rows and the difference is flagged, not reconciled.",
+    "source_links": [
+      {
+        "label": "2025 NYC star announcement",
+        "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025"
+      },
+      {
+        "label": "Official NYC all-starred directory",
+        "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred"
+      },
+      {
+        "label": "2026 Northeast Cities ceremony announcement",
+        "url": "https://michelinmedia.com/pages/blog/detail/article/c/a1479/"
+      }
+    ]
   },
   "restaurants": [
     {
@@ -1051,7 +1070,7 @@
         "Sat": "6 PM-11 PM",
         "Sun": "closed"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://www.63clinton.com/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/63-clinton",
       "booking_url": "https://resy.com/cities/ny/sixty-three-clinton",
@@ -1073,7 +1092,8 @@
       "price_basis": "",
       "price_caveat": "",
       "price_for_two_note": "",
-      "price_verified_on": ""
+      "price_verified_on": "",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Bar Miller",
@@ -1823,7 +1843,7 @@
         "Sat": "5 PM-10 PM",
         "Sun": "5 PM-9 PM"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://www.gramercytavern.com/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/gramercy-tavern",
       "booking_url": "https://www.opentable.com/r/gramercy-tavern-new-york",
@@ -1857,7 +1877,8 @@
       "price_basis": "2 × official per-person price",
       "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official menu also lists an optional $118-per-person wine pairing and à la carte items; only the explicit per-person seasonal menu is multiplied here.",
       "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-      "price_verified_on": "2026-11-25"
+      "price_verified_on": "2026-11-25",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Huso (NEW)",
@@ -2285,7 +2306,7 @@
         "Sat": "11:30 AM-2:30 PM; 5 PM-11 PM",
         "Sun": "11:30 AM-2:30 PM; 5 PM-10 PM"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://lecoucou.com/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/le-coucou",
       "booking_url": "https://resy.com/cities/new-york-ny/venues/le-coucou",
@@ -2349,7 +2370,8 @@
       "price_basis": "2 × official per-person price",
       "price_caveat": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price. The official page says lunch and Very Coucou menus are priced per person and do not include tax or gratuity; wine accompaniments are extra. The 4-course $240 menu is for parties of 7–10 and is not a couple price.",
       "price_for_two_note": "Computed as 2 × official per-person menu price; excludes beverages, tax, and gratuity unless the official page says otherwise; not a quoted all-in total or a 2027 price.",
-      "price_verified_on": "2026-11-25"
+      "price_verified_on": "2026-11-25",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Le Pavillon",
@@ -2873,7 +2895,7 @@
         "Sat": "5 PM-10 PM",
         "Sun": "closed"
       },
-      "hours_flag": "UNVERIFIED — hours not yet captured from the official Guide page",
+      "hours_flag": "CURRENT GUIDE SNAPSHOT — hours captured from the official MICHELIN Guide page on 26 Nov 2026; not a 2027 calendar confirmation.",
       "official_site": "https://www.semma.nyc/",
       "michelin_url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/semma",
       "booking_url": "https://askanyc.com/",
@@ -2896,7 +2918,8 @@
       "price_basis": "",
       "price_caveat": "",
       "price_for_two_note": "",
-      "price_verified_on": ""
+      "price_verified_on": "",
+      "hours_verified_on": "2026-11-26"
     },
     {
       "name": "Shion 69 Leonard Street",

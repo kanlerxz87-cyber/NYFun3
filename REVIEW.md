@@ -2,7 +2,9 @@
 
 Session `arena-c2e08f03` · branch `arena/c2e08f03-nyfun3` · checked 2026-11-25.
 
-**Final-integration note (2026-11-25, session `ed92e764`):** this document is retained as the original Phase A review. The numbered irregularities below record what that session observed; the "resolution" lines describe the combined three-session state. R1–R3 are now closed by `README.md`, `.gitignore`, `scripts/validate_site.py`, `scripts/check_inline_js.py`, and `.github/workflows/validate-site.yml`. R8 is partly closed: 10 selected starred rows now publish `2 × official per-person price` arithmetic with first-party menu/FAQ/PDF links and exclusions; 62 rows remain blank + `unverified`.
+> **Current-state note (26 Nov 2026, session `3c65c9fa`):** this remains the original Phase A review plus post-merge corrections. Current `main` additionally has 14 hotels, 25 official priced Michelin rows, 71 / 72 Guide-hours rows, direct SynXis/Arlo all-in quotes, seasonality, and a measured current-timetable GTFS ≤1 h ranking. See `CURRENT_AUDIT.md`, `EVIDENCE_AUDIT.md`, `FLAGS.md`, and `decide.html` for the current decision cockpit. Historical numeric baselines below are updated where they became materially stale.
+
+**Final-integration note (2026-11-25, session `ed92e764`):** this document is retained as the original Phase A review. The numbered irregularities below record what that session observed; the "resolution" lines describe the combined three-session state. R1–R3 are now closed by `README.md`, `.gitignore`, `scripts/validate_site.py`, `scripts/check_inline_js.py`, and `.github/workflows/validate-site.yml`. R8 is partly closed: 25 selected starred rows now publish `2 × official per-person price` arithmetic with first-party menu/FAQ/PDF links and exclusions; 47 rows remain blank + `unverified`.
 
 Scope of this review: every file in the repository, plus every value published on the site,
 checked against the official page named in its row. Third-party blogs, aggregators, listicles
@@ -73,7 +75,7 @@ caveat; the star cells are not claimed as final.
 ### R8 — Michelin publishes no price, only a band
 `$`–`$$$$` is a band, not a number. A "cost per couple" figure cannot be derived from it
 without inventing a number. The original column was blank and flagged. **Partly resolved:**
-10 selected rows now use first-party menu/FAQ/PDF amounts as `2 × official per-person price`,
+25 selected rows now use first-party menu/FAQ/PDF amounts as `2 × official per-person price`,
 with links and an exclusions caveat; the other 62 rows remain blank + `unverified`. No figure
 is a quoted all-in bill or a 2027 price guarantee.
 
@@ -160,9 +162,9 @@ site. For a February trip that is a real planning hole; it is open question Q11.
 |---|---|
 | `data/michelin.json` | 5 three-star + 7 two-star with full hours from Guide pages. Validates as JSON, 12 records. |
 | `data/michelin_two_star.json` | All 15 two-star records; 7 overlap the file above and were merged by name in `michelin_all.json`, not duplicated at render time. |
-| `data/michelin_one_star.json` | 52 one-star rows. Where the Guide page was not fetched, hours and website are blank with an explicit flag — 43 of 52 rows still need their hours captured. **This is the largest known gap.** |
+| `data/michelin_one_star.json` | 52 one-star rows. Where the Guide page was not fetched, hours and website are blank with an explicit flag — 51 of 52 one-star rows have Guide hours; one closed venue remains blank and flagged. |
 | `data/michelin_all.json` | Merged, de-duplicated, filterable source for the Michelin and Restaurants pages. 72 rows; 10 have verified official menu arithmetic; 20 have a verified neighbourhood; 52 are ungrouped/flags. |
-| `data/hotels.json` | 9 hotels, all with the exact quote URL. Michelin-proximity count deliberately null. |
+| `data/hotels.json` | 14 hotels, official/quote links, seasonality, and measured current-timetable GTFS 1h counts with 2027 caveats. |
 | `data/activities.json` | 15 activities; final integration has 10 populated baseline-hours rows, 5 blank/partial/unverified hours rows, and 1 unverified price (AMNH). The High Line, Statue, Central Park, and Grand Central rows are now explicit current official baselines, not 2027 calendar confirmations. |
 | `data/itinerary.json` | Derived only from verified activity hours; no invented travel times. |
 | `index.html`, `assets/` | Static, no build step, no external JS. Renders on GitHub Pages as-is; root nav now includes Itinerary and Flagged for Review. |
@@ -173,7 +175,27 @@ site. For a February trip that is a real planning hole; it is open question Q11.
 ## 5. Honest summary
 
 The integrated repository is static, dependency-free, mobile-first, and every published table
-row has a source link. The remaining limitations are (a) only 10 of 72 starred rows have
-verified per-couple menu arithmetic, (b) no computed Michelin proximity ranking, and (c) 43
-one-star rows whose hours have not yet been read off their Guide pages. All three are stated on
-the site and in the Flagged for Review queue rather than papered over.
+row has a source link. The remaining limitations are (a) 25 of 72 starred rows have
+verified per-couple menu arithmetic, (b) a measured current-timetable GTFS ranking with 2027 schedule caveats, and (c) one closed one-star venue whose hours are intentionally blank. All three are stated on
+the site and in the Flagged for Review queue rather than papered over. Section 6 records the
+post-merge source corrections (R21–R25); those do not remove the need to recheck 2027 rates,
+transit, holiday hours, and current MICHELIN status.
+
+## 6. Independent post-merge recheck (26 November 2026, session `3c65c9fa`)
+
+### R21 — HGU official-domain defect
+`hgunewyork.com` resolved to a Namecheap parking page. The verified official [HGU site](https://www.hgunyc.com/) and [contact page](https://www.hgunyc.com/more/contact) confirm the hotel and 34 E. 32nd Street. All stale occurrences were replaced; the defect is recorded in the resolved-corrections table on `flagged-for-review.html`.
+
+### R22 — Unsupported hotel-tax wording
+The site previously claimed “14.75% + $4/night city tax.” [NYC DOF](https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page), [NYS ST-101.5](https://www.tax.ny.gov/pdf/current_forms/st/st101_5.pdf), and the [NYC Council report](https://legistar.council.nyc.gov/View.ashx?GUID=4547DD67-B740-4FED-A1E3-596960BC0E98&ID=12994382&M=F) support 14.75% plus $2.00/day NYC occupancy tax for room rent ≥$40 and $1.50/day NY State hotel unit fee. The unsupported $4/night claim was removed; current-law components are not a 2027 quote.
+
+### R23 — Dynamic MICHELIN directory count
+Two same-day fetches of the [official all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred) displayed 3 / 14 / 50 and 5 / 14 / 50, while the heading said 69. The repository retains the official 2025 announcement baseline (5 / 15 / 52, 72) and publishes the dynamic-count irregularity as NR-01; no individual tier was guessed.
+
+### R24 — Contradictory Michelin hours flags
+Four populated rows still carried contradictory UNVERIFIED flags after the 14-hotel/25-price expansion. Their official Guide pages were rechecked and the flags were cleared. Combined and tier datasets now agree on 71 / 72 populated Guide-hours rows; one closed venue remains blank and flagged.
+
+### R25 — First-party menu-option ambiguity
+The [EMP FAQ](https://www.elevenmadisonpark.com/faq), [Gramercy Tavern menu](https://www.gramercytavern.com/dining-room-menu/), and [Le Coucou menus](https://lecoucou.com/) publish multiple differently priced options on one page. The 25 priced rows use explicit official per-person options with the standard exclusions caveat. NR-09 asks for a tasting-menu/lunch/dinner scope decision before any like-for-like comparison or budget claim; no price was inferred.
+
+The original R1–R20 notes remain historical. R21–R25 are post-merge corrections and newly published review items; `CURRENT_AUDIT.md` carries the decision-readiness crosswalk.
