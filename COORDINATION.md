@@ -69,21 +69,32 @@ Claim rationale: prior T13 integration is complete and this branch has completed
 
 ## Session `8e38e7e7` — Claim (2026-11-26 UTC)
 
-**Branch:** `arena/8e38e7e7-nyfun3` (rebased on `main` @ `e92b112`). **Session ID:** `arena/8e38e7e7`.
-
-Claimed tasks (checked the board first: T1–T15 are `done`; no other session holds an open claim; PR #1 belongs to a different lineage against an older tree and this session does not touch it):
+**Branch:** `arena/8e38e7e7-nyfun3` (rebased on `main` @ `e92b112`). **Session ID:** `8e38e7e7`.
+Board was read first. T1–T15 are `done`. Concurrent sessions had already claimed T21–T23 (`550e02c4`,
+official-source verification/catalogue) and T46 (`46804a5a`, 2026 MICHELIN verification) **after** this
+session first wrote its claim, and T24 final integration is `unclaimed`. To avoid double work the original
+T16–T20 claim was withdrawn and re-scoped to the work no other session holds:
 
 | ID | Task | Status | Owner session | File scope |
 |---|---|---|---|---|
-| T16 | Verified-source repair: replace broken/parked/wrong hotel + activity official links with sources fetched and checked this session; log each one | `in progress` | `8e38e7e7` | `data/hotels.json`, `data/activities.json` link fields only, `FLAGS.md` (new) |
-| T17 | One-hour transit measurement + Michelin-cluster hotel ranking, computed from official MTA GTFS | `in progress` | `8e38e7e7` | `scripts/transit/**` (new), `data/transit_hotels.json` (new), `.github/workflows/transit-analysis.yml` (new) |
-| T18 | Evidence-quality audit of every social/review link (search page vs. specific verified post) + gap task list | `in progress` | `8e38e7e7` | `data/social_links.json` (new), `EVIDENCE_AUDIT.md` (new) |
-| T19 | Decision cockpit page: what is decided, what blocks a booking, ranked options, and the question list with current answers | `in progress` | `8e38e7e7` | `decide.html` (new), `assets/cockpit.js` (new) |
-| T20 | Integration + publish: merge, re-run validators, PR to `main`, Pages build check | `in progress` | `8e38e7e7` | `main` publish, `COORDINATION.md` |
+| T67 | **Journey-time model + Michelin-cluster hotel ranking.** Compute hotel → starred-restaurant and hotel → activity journey times from the official MTA static GTFS, publish the model, assumptions, self-tests and per-pair measurements. This is the only source-backed way to rank hotels by "MICHELIN restaurants within 1 hour". | `done` | `8e38e7e7` | `scripts/transit/**`, `data/transit_hotels.json`, `data/geocode_cache.json`, `.github/workflows/transit-analysis.yml` |
+| T68 | **Decision cockpit page** — ranked hotel options, Michelin-cluster counts, per-blocker status, and the question list with the current verified answer; plus a suggestions registry the owner can act on | `done` | `8e38e7e7` | `decide.html`, `assets/cockpit.js`, `SUGGESTIONS.md` |
+| T69 | **Evidence-quality audit of the review links** — separate "a specific post exists" from "a search page exists", record what each link actually is, and list the gaps as tasks | `done` | `8e38e7e7` | `EVIDENCE_AUDIT.md`, `data/review_links.json` |
+| T70 | **Source-integrity checks in CI** — make the build fail when a hotel/venue source link points at a parked/for-sale domain or when a shipped value loses its source, and publish the failures | `done` | `8e38e7e7` | `scripts/check_sources.py`, `.github/workflows/validate-site.yml` (step only) |
+| T24 | **Final integration** — merge the concurrent session branches/PRs, reconcile shared pages/nav/validators, verify zero broken links, open and merge the PR to `main`, verify the Pages deploy | `in progress` | `8e38e7e7` | shared outputs, `COORDINATION.md`, PR to `main` |
 
-**Rules this session follows:** no value is written unless it was fetched from the named official source in this session; blanks stay blank; every repair is logged with the URL that was checked and what it returned. I will not edit `data/michelin_all.json`, `data/itinerary.json`, the existing root page copy, or `pages/**` — those are owned by completed tasks; any needed change there is logged as a request instead.
+T24 was `unclaimed` when this session claimed it, and the protocol allows any session to take an unclaimed
+task. This session will not edit `data/michelin_2026_guide.json`, `data/hotel_verification_550e02c4.json`,
+`data/michelin_guide_selection.json`, `research/audit-46804a5a.md`, `research/verification-550e02c4.md`,
+`guide-selection.html`, `booking-strategy.html`, `guide-2026.html` or `research/audit-53d4ee2e.md` — those
+belong to `550e02c4`, `46804a5a` and `53d4ee2e`. Any change needed in a file owned by another session is
+logged below as a request instead.
 
-**Findings already logged this session (details in `FLAGS.md`):** `hgunewyork.com` is now a parked/for-sale domain; `themayfairhotel.com` is a for-sale landing page; the Blue Angel record's address (1234 Broadway) disagrees with the hotel's own site (152 E 55th St); the Hyatt Place Chelsea URL uses the wrong property code (`nyczc` vs `lgazc`); Arlo's URL 404s.
+**What this session found (details in `EVIDENCE_AUDIT.md` and the Flagged for Review page):**
+`hgunewyork.com` is now a parked/for-sale domain and the hotel's real site is `hgunyc.com`;
+`themayfairhotel.com` is a GoDaddy for-sale page and the hotel's real site is `mayfairhotelnyc.com`;
+the Blue Angel record's address (`1234 Broadway`) disagrees with the hotel's own site (`152 E 55th St`);
+the Hyatt Place Chelsea link uses the wrong property code (`nyczc` vs `lgazc`); the Arlo link 404s.
 
 ## `needs review` items — published on Flagged for Review page
 
