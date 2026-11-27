@@ -285,3 +285,11 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
 
 - **Verification performed (2026-11-27):** `validate_site.py`, `check_sources.py`, `check_inline_js.py`, `check_rendered_tables.js` all pass (18 JSON, 19 HTML, 203 rendered rows). `data/michelin_all.json` = 72 starred rows. GitHub Pages API: `status: built`, source `main` `/`, HTTPS enforced. Direct `curl` to `*.github.io` returns 000 from this sandbox (egress blocked, same limitation noted in PR #19) — live content verified via Pages API + deployed `main` artifacts instead.
 - **Irregularity flagged:** MICHELIN New York 2026 ceremony is 14 Dec 2026 (after this audit, before the trip) — star status must be re-checked after that date; already flagged on `plan.html` / `flagged-for-review.html`. NR-01–NR-10 remain `needs review` and do not block merge.
+
+## Session `758e5e86` — Claim (2026-11-27 UTC)
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T81 | Audit and refresh README's dated metrics, verification summary, and validation claims against current repository artifacts; record corrections and rerun validators | `in progress` | `758e5e86` | `README.md`, `COORDINATION.md` |
+
+This documentation-only scope avoids shared site/data outputs. No other active claim in the board owns these files.
