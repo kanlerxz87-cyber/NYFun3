@@ -37,8 +37,8 @@
   <section class="panel">
     <h2>1. The short answer</h2>
     <div class="grid" style="margin-top:12px">
-      <a class="card" href="#ranking"><span class="count">14</span><h3>hotels compared, most of them effectively tied</h3><p>The measured door-to-door times chain together: no neighbouring hotel is separable inside the model's own resolution, so choose on price and room rather than on distance. Section 2 states the chain and its span.</p></a>
-      <a class="card" href="#one-hour"><span class="count">65</span><h3>starred restaurants within an hour</h3><p>Every hotel reaches the same 65 measured starred restaurants inside 60 minutes — the 1-hour test cannot separate Midtown from the Financial District.</p></a>
+      <a class="card" href="#ranking"><span class="count">14</span><h3>hotels compared by modeled journey time</h3><p>All reach the same 69 active NYC starred venues within an hour. The median-time order is only one modelled comparison; price, private-bathroom and queen+ bed fit remain decisive.</p></a>
+      <a class="card" href="#one-hour"><span class="count">69</span><h3>active NYC starred restaurants within an hour</h3><p>Every hotel reaches the same 69 of 69 venues in the current NYC directory snapshot; the one-hour count cannot distinguish hotels, so compare median time, price, and room fit.</p></a>
       <a class="card" href="#blockers"><span class="count">10</span><h3>open questions</h3><p>Each with the answer the evidence supports today and the exact next check that would settle it.</p></a>
       <a class="card" href="#suggestions"><span class="count">10</span><h3>suggestions to review</h3><p>Tick the ones worth doing; nothing is implemented until you choose.</p></a>
     </div>
@@ -46,30 +46,33 @@
   </section>
 
   <section class="panel" id="ranking">
-    <h2>2. Hotels ranked by measured journey time to MICHELIN-starred restaurants</h2>
-    <p class="lede">Door-to-door minutes from each hotel to the starred restaurants that could be measured, computed from the official MTA subway and bus timetable. Lower is better. The rank metric, the sample, the coverage and the tie warnings are all published with the numbers.</p>
+    <h2>2. Hotels ranked by current NYC MICHELIN-starred restaurant travel times</h2>
+    <p class="lede">This current comparison uses the 69 active starred restaurants in the official NYC directory snapshot and the MTA subway timetable. It ranks modelled door-to-door median time for a weekday 18:30 departure. It is distinct from the older 2025-selection route archive used only for the activity baseline below.</p>
     <div id="ranking-host"><p class="loading">Loading the measured ranking…</p></div>
   </section>
 
   <section class="panel" id="one-hour">
-    <h2>3. The “MICHELIN restaurants within one hour” answer</h2>
+    <h2>3. The current “MICHELIN restaurants within one hour” answer</h2>
     <div id="onehour-host"><p class="loading">Loading…</p></div>
   </section>
 
   <section class="panel" id="matrix-panel">
-    <h2>4. Every measured journey, hotel by hotel</h2>
-    <p class="lede">A weekday 12:00 departure, the sample used for the ranking. Read a row across to compare hotels for one restaurant; read a column down for one hotel's whole week.</p>
-    <div id="matrix-host"><p class="loading">Loading the matrix…</p></div>
+    <h2>4. Current route matrix, hotel by hotel</h2>
+    <p class="lede">Current model: weekday 18:30 departure, subway plus walking, with one row per active starred restaurant. Read across for one venue or down for a hotel's route set.</p>
+    <div id="matrix-host"><p class="loading">Loading current restaurant routes…</p></div>
+    <h3>Activity route baseline (separate earlier model)</h3>
+    <p class="small muted">Activity routes are retained from a separate weekday-noon subway/bus measurement. Blank cells mean no route was measured. They are not merged into the current restaurant ranking or guaranteed for 2027 service.</p>
+    <div id="activity-matrix-host"><p class="loading">Loading activity routes…</p></div>
   </section>
 
   <section class="panel">
-    <h2>5. How the journey times were produced</h2>
-    <p class="lede">This is the part that decides whether to trust the ranking, so it is published in full: the feeds, the algorithm, the assumptions, and what the numbers are <em>not</em>.</p>
+    <h2>5. How the current restaurant journeys were produced</h2>
+    <p class="lede">The current route model, service window, sources, exclusions and remaining limits are recorded next to the figures.</p>
     <div class="scroll" id="model-host"><p class="loading">Loading the model description…</p></div>
     <ul class="tight">
-      <li><strong>Reproducible:</strong> <code>python3 scripts/transit/gtfs_route.py</code> re-downloads the official feeds and rewrites the measurement. <code>python3 scripts/transit/test_gtfs_route.py</code> checks the model against synthetic timetables before it runs.</li>
-      <li><strong>Auditable:</strong> the address used for every door is stored with the geocoder's own matched string, so a mis-geocode is visible rather than hidden. The first run produced exactly one, and it is now rejected by a borough check.</li>
-      <li><strong>Not a promise:</strong> a timetable is not a trip plan. Service changes, elevator outages, weather and crowds are outside the model.</li>
+      <li><strong>Reproducible:</strong> the committed implementation is <code>research/scripts/compute_transit.py</code>; its output is <code>research/generated/transit_1h.json</code>.</li>
+      <li><strong>Auditable:</strong> each hotel route record stores the geocoder match and each restaurant journey stores its modelled duration and route string.</li>
+      <li><strong>Not a promise:</strong> published timetable coverage does not guarantee real-world service, elevator access, weather, crowds, or the final 2027 service calendar.</li>
     </ul>
   </section>
 
@@ -105,8 +108,7 @@
 </main>
 
 <footer class="wrap">
-  <p>Journey times: MTA static GTFS · geocoding: U.S. Census Bureau · stars: MICHELIN Guide · hotel totals: Booking.com rate snapshots, labelled as third-party.
-     Verification date 26 November 2026. Full method in <a href="EVIDENCE_AUDIT.md">EVIDENCE_AUDIT.md</a> and <a href="FLAGS.md">FLAGS.md</a>.</p>
+  <p>Current restaurant journey model: MTA Subway GTFS + NYC Planning / U.S. Census geocoding; current star universe: the MICHELIN NYC directory snapshot. Activity routes are a separate earlier transit baseline. Hotel rates and room evidence remain on <a href="hotels.html">Hotels</a>, with third-party snapshots labeled. Verification date 27 November 2026. Method and evidence limits: <a href="research/generated/transit_1h.json">route data</a>, <a href="EVIDENCE_AUDIT.md">EVIDENCE_AUDIT.md</a>, and <a href="FLAGS.md">FLAGS.md</a>.</p>
 </footer>
 
 <script src="assets/app.js"></script>

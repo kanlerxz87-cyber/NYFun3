@@ -9,6 +9,8 @@ Two companions: `EVIDENCE_AUDIT.md` (how good the evidence behind each table is)
 
 Verification date: **26 November 2026**. Travel window: 15 February – 23 March 2027, preferred 15–18 February.
 
+> **Historical audit note (updated 27 November 2026):** this file preserves issue findings and counts from the 26 Nov review. Some formerly active defects were corrected after that snapshot. In particular, `Decide` now uses the same current 69-venue MTA Subway route output as `Hotels`; the 65/72 figures below describe the older 2025-selection model, retained separately for activity-route context. The DOM smoke test now covers all 19 HTML pages. Current unresolved items and their next checks are the NR-01–NR-10 rows on [`flagged-for-review.html`](flagged-for-review.html) and the decision-readiness summary in [`CURRENT_AUDIT.md`](CURRENT_AUDIT.md).
+
 ---
 
 ## 1. Hotel source links that did not reach the hotel
@@ -145,7 +147,7 @@ if any host still shows a placeholder or renders no source link. While wiring th
 Decide page was found to be the one panel with no link at all; it now cites
 `data/transit_hotels.json`, `data/hotel_ranking.json` and the method section.
 
-## 10. Items awaiting another owner
+## 10. Historical handoffs at the 26 Nov audit snapshot — superseded by the current queue
 
 - Hotels page: Pestana fee arithmetic (§3) and the Blue Angel address (§2).
 - Flagged for Review page: the parked HGU domain in NR-02/NR-03 (§1).
