@@ -295,3 +295,5 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
 - **Not confirmed (kept open):** The Met Fifth Ave weekday hours (NR-05); the 5.875% room-tax percentage attributed to DOF (I1).
 - **Irregularities handed to integration (I1–I9, detail in the audit file):** 5.875% attribution; FA-12 Met "verified" wording; CityPASS "8 attractions" vs 10 listed; 69/69 saturated 1-hour metric on `hotels.html`; garbled NR-08 text; stale T80 `in progress` row; unsupported Pestana fee inference; mixed-basis cheapest-first sort; missing NY-resident Met pricing option.
 - **Validation (27 Nov 2026):** `validate_site.py`, `check_sources.py`, `check_inline_js.py`, `check_rendered_tables.js` (203 source-linked rows) and `git diff --check` all passed on this branch.
+
+- **PR:** https://github.com/kanlerxz87-cyber/NYFun3/pull/25 (open, not merged; for the final integration session to review and merge).
