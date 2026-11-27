@@ -320,14 +320,6 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
 
 | ID | Task | Status | Owner session | File scope |
 |---|---|---|---|---|
-| T83 | Independent requirements/site-quality audit: reproduce checks, inspect project artifacts for decision-readiness gaps, and record evidenced findings without overwriting another session's integration work | `in progress` | `b9f9777f` | `research/audit-b9f9777f.md`, `COORDINATION.md` |
-
-**Rebase conflict record (2026-11-27):** `origin/main` advanced through PRs #26–#31 while this branch was being audited. The shared board contains completed T80/T81 closeout blocks from other sessions; those were preserved intact. The local read-only audit is numbered T83 to avoid colliding with parallel T81 task IDs. No upstream work was discarded.
-
-## Session `b9f9777f` — Independent quality audit (T83)
-
-| ID | Task | Status | Owner session | File scope |
-|---|---|---|---|---|
 | T83 | Independent requirements/site-quality audit: reproduce checks, inspect project artifacts for decision-readiness gaps, and record evidenced findings without overwriting another session's integration work | `done` | `b9f9777f` | `research/audit-b9f9777f.md`, `COORDINATION.md` |
 
 **T83 result (2026-11-27):** [`research/audit-b9f9777f.md`](research/audit-b9f9777f.md) records initial-base findings QA-01 (65/72 vs 69/69 transit model split) and QA-03 (DOM smoke coverage omitted nested dossier pages), plus official source starting points and the original reproducible tests. Current T82 changes resolve QA-01 and QA-03 on this branch; OTA pricing and future service limits remain flagged.
