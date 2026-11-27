@@ -113,10 +113,13 @@ def main() -> int:
         if not row.get("checked_url"):
             errors.append(f"data/hotel_sources.json: {row.get('hotel_id')} has no checked_url")
 
-    # The journey-time measurement must stay honestly labelled.
+    # Journey-time estimates must stay labelled, sourced and complete for every
+    # activity. A route is measured only when a numeric GTFS result exists; known
+    # unresolved points remain explicit instead of being filled from a guess.
     transit_path = ROOT / "data" / "transit_hotels.json"
     if transit_path.exists():
-        t = json.loads(transit_path.read_text())["_meta"]
+        transit = json.loads(transit_path.read_text())
+        t = transit.get("_meta", {})
         if t.get("is_modelled_estimate") is not True:
             errors.append("data/transit_hotels.json: journey times must be labelled is_modelled_estimate=true")
         if not t.get("what_this_is_not"):
@@ -125,6 +128,93 @@ def main() -> int:
             errors.append("data/transit_hotels.json: missing the assumptions block")
         if not t.get("feeds"):
             errors.append("data/transit_hotels.json: missing the feed provenance block")
+        if t.get("feed_index_url"):
+            check_url(transit_path, "MTA feed index", t["feed_index_url"])
+        else:
+            errors.append("data/transit_hotels.json: missing the official MTA feed index URL")
+        geocoder = t.get("geocoder", {})
+        if geocoder.get("url"):
+            check_url(transit_path, "Census geocoder", geocoder["url"])
+        else:
+            errors.append("data/transit_hotels.json: missing the official U.S. Census Geocoder URL")
+        for feed_name, feed in t.get("feeds", {}).items():
+            if feed.get("url"):
+                check_url(transit_path, f"MTA {feed_name} feed", feed["url"])
+            else:
+                errors.append(f"data/transit_hotels.json: MTA feed {feed_name} has no URL")
+
+        activities_by_name = {a.get("name"): a for a in activities.get("activities", []) if a.get("name")}
+        expected_activity_names = set(activities_by_name)
+        unmeasured_rows = [
+            row for row in t.get("unmeasured_destinations", [])
+            if row.get("kind") == "activity"
+        ]
+        unmeasured_names = {row.get("name") for row in unmeasured_rows if row.get("name")}
+        digital_pass_names = {
+            name for name, activity in activities_by_name.items()
+            if str(activity.get("address", "")).lower().startswith("digital ticket")
+        }
+        for row in unmeasured_rows:
+            if row.get("name") not in expected_activity_names:
+                errors.append(f"data/transit_hotels.json: unmeasured activity is not in activities.json: {row.get('name')}")
+            if not row.get("reason"):
+                errors.append(f"data/transit_hotels.json: unmeasured activity {row.get('name')} has no reason")
+        for name in digital_pass_names:
+            if name not in activities_by_name:
+                errors.append(f"data/activities.json: digital pass has no activity record: {name}")
+
+        route_rows = transit.get("results", [])
+        hotel_ids = {h.get("id") for h in hotels.get("hotels", []) if h.get("id")}
+        combos_by_hotel: dict[str, set[tuple[str, str, str]]] = {}
+        report_limit = t.get("assumptions", {}).get("report_limit_min", 60)
+        if not route_rows:
+            errors.append("data/transit_hotels.json: no hotel route result rows are available")
+        for route in route_rows:
+            hotel_id = route.get("hotel_id")
+            if hotel_id not in hotel_ids:
+                errors.append(f"data/transit_hotels.json: route row references unknown hotel {hotel_id!r}")
+            combo = (route.get("service", ""), route.get("service_date", ""), route.get("depart_after_local", ""))
+            if not all(combo):
+                errors.append(f"data/transit_hotels.json: route row for {hotel_id!r} is missing its service/date/time")
+            if hotel_id:
+                combos_by_hotel.setdefault(hotel_id, set()).add(combo)
+            destinations = route.get("destinations", {})
+            measured_names = {
+                name for name, value in destinations.items()
+                if value.get("kind") == "activity"
+            }
+            missing_names = expected_activity_names - measured_names - unmeasured_names - digital_pass_names
+            extra_names = measured_names - expected_activity_names
+            if missing_names:
+                errors.append(f"data/transit_hotels.json: {hotel_id} {combo} omits activities without an explicit flag: {sorted(missing_names)}")
+            if extra_names:
+                errors.append(f"data/transit_hotels.json: {hotel_id} {combo} contains unknown activities: {sorted(extra_names)}")
+            for name in measured_names:
+                value = destinations[name]
+                minutes = value.get("minutes")
+                within = value.get("within_1h")
+                if not isinstance(within, bool):
+                    errors.append(f"data/transit_hotels.json: {hotel_id} {combo} {name} has no boolean within_1h status")
+                elif type(minutes) in (int, float) and within != (round(float(minutes), 1) <= report_limit):
+                    errors.append(f"data/transit_hotels.json: {hotel_id} {combo} {name} has an inconsistent 60-minute status")
+                elif minutes is None and within:
+                    errors.append(f"data/transit_hotels.json: {hotel_id} {combo} {name} marks a null route within one hour")
+                elif minutes is not None and type(minutes) not in (int, float):
+                    errors.append(f"data/transit_hotels.json: {hotel_id} {combo} {name} has a nonnumeric journey time")
+
+        if len(combos_by_hotel) != len(hotel_ids):
+            missing_hotels = sorted(hotel_ids - set(combos_by_hotel))
+            errors.append(f"data/transit_hotels.json: no journey-time rows for hotels {missing_hotels}")
+        if combos_by_hotel and len({tuple(sorted(v)) for v in combos_by_hotel.values()}) != 1:
+            errors.append("data/transit_hotels.json: hotels do not share the same service/date/departure samples")
+
+        routed_or_flagged = set().union(*[
+            {name for name, value in route.get("destinations", {}).items() if value.get("kind") == "activity"}
+            for route in route_rows
+        ]) if route_rows else set()
+        omitted = expected_activity_names - routed_or_flagged - unmeasured_names - digital_pass_names
+        if omitted:
+            errors.append(f"data/transit_hotels.json: activities lack both a route and an explicit unmeasured/pass reason: {sorted(omitted)}")
     else:
         errors.append("data/transit_hotels.json is missing; run scripts/transit/gtfs_route.py")
 
@@ -212,8 +302,8 @@ def main() -> int:
             print("  -", e)
         return 1
     print(f"OK: {len(hotels['hotels'])} hotel sources, {len(activities['activities'])} activity "
-          f"sources, the verification register, the journey-time caveats and the ranking "
-          f"provenance all pass")
+          f"sources, the verification register, hotel-to-activity route coverage, "
+          f"journey-time caveats and ranking provenance all pass")
     return 0
 
 

@@ -17,9 +17,15 @@ const PAGES = [
   'decide.html',
 ];
 // Pages whose renderer lives in a separate file (loaded with <script src>).
-const EXTRA_SCRIPTS = { 'decide.html': ['assets/cockpit.js'] };
+const EXTRA_SCRIPTS = {
+  'activities.html': ['assets/activity_access.js'],
+  'decide.html': ['assets/cockpit.js'],
+};
 // Rendered hosts to verify, other than the page's own table-host.
-const EXTRA_HOSTS = { 'decide.html': ['ranking-host', 'matrix-host', 'activity-matrix-host', 'review-host'] };
+const EXTRA_HOSTS = {
+  'activities.html': ['activity-access-host'],
+  'decide.html': ['ranking-host', 'matrix-host', 'activity-matrix-host', 'review-host'],
+};
 const APP = fs.readFileSync(path.join(ROOT, 'assets/app.js'), 'utf8');
 const INLINE = /<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi;
 const errors = [];
@@ -32,8 +38,20 @@ function makeElement(id) {
     innerHTML: '',
     value: '',
     textContent: '',
-    appendChild() {},
-    addEventListener() {},
+    options: [],
+    selectedOptions: [],
+    children: [],
+    listeners: {},
+    appendChild(child) {
+      this.children.push(child);
+      if (child && typeof child.value !== 'undefined') this.options.push(child);
+    },
+    addEventListener(type, fn) {
+      (this.listeners[type] = this.listeners[type] || []).push(fn);
+    },
+    fire(type) {
+      (this.listeners[type] || []).forEach((fn) => fn({ type }));
+    },
     setAttribute() {},
   };
 }
@@ -128,9 +146,84 @@ async function renderPage(page) {
         errors.push(`${page}: #${id} did not render a table (${extra.slice(0, 140)})`);
         continue;
       }
+      const extraHeader = extra.match(/<thead[\s\S]*?<\/thead>/i);
       const extraRows = [...extra.replace(/<thead[\s\S]*?<\/thead>/i, '').matchAll(/<tr[\s\S]*?<\/tr>/gi)]
         .filter((r) => /<td[\s>]/i.test(r[0]));
       if (!extraRows.length) errors.push(`${page}: #${id} rendered no body rows`);
+      if (page === 'activities.html' && id === 'activity-access-host') {
+        if (!extraHeader || !/<th[^>]*>\s*Source\s*<\/th>/i.test(extraHeader[0])) {
+          errors.push(`${page}: activity access table has no singular Source column`);
+        }
+        const activities = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/activities.json'), 'utf8')).activities;
+        const hotelData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/hotels.json'), 'utf8')).hotels;
+        const transit = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/transit_hotels.json'), 'utf8'));
+        const firstHotel = hotelData.slice().sort((a, b) => a.name.localeCompare(b.name))[0];
+        const sampleRoute = transit.results
+          .filter((r) => r.hotel_id === firstHotel.id)
+          .sort((a, b) => a.service_date.localeCompare(b.service_date) || a.depart_after_local.localeCompare(b.depart_after_local))[0];
+        if (extraRows.length !== activities.length) {
+          errors.push(`${page}: activity access table has ${extraRows.length} rows; data has ${activities.length}`);
+        }
+        const sampleMinutes = [];
+        extraRows.forEach((row, i) => {
+          const url = String(activities[i].source_url || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+          if (!url || !row[0].includes(`href="${url}"`)) {
+            errors.push(`${page}: activity access row ${i + 1} is missing its official activity source`);
+          }
+          const routeDestination = sampleRoute && sampleRoute.destinations[activities[i].name];
+          if (routeDestination && routeDestination.kind === 'activity') {
+            if (!row[0].includes('MTA GTFS source')) errors.push(`${page}: measured activity row ${i + 1} is missing its MTA source`);
+            if (!row[0].includes('Census geocoder query')) errors.push(`${page}: measured activity row ${i + 1} is missing its geocoder source`);
+            if (typeof routeDestination.minutes === 'number') {
+              sampleMinutes.push(routeDestination);
+              if (!row[0].includes(`~${routeDestination.minutes.toFixed(1)} min`)) {
+                errors.push(`${page}: activity row ${i + 1} does not show the saved modelled minute value`);
+              }
+            }
+          } else if (/^Digital ticket/i.test(String(activities[i].address || ''))) {
+            if (!row[0].includes('No single destination')) errors.push(`${page}: pass row ${i + 1} is not labelled as a non-place`);
+          } else if (!row[0].includes('Unmeasured')) {
+            errors.push(`${page}: unmeasured activity row ${i + 1} is not clearly flagged`);
+          }
+        });
+        const expectedWithin = sampleMinutes.filter((d) => d.within_1h === true).length;
+        const expectedSummary = `${expectedWithin} of ${sampleMinutes.length} measured activities`;
+        if (!get('activity-access-summary').innerHTML.includes(expectedSummary)) {
+          errors.push(`${page}: activity access summary does not match the saved sample route data`);
+        }
+        const hotelControl = get('activity-access-hotel');
+        const serviceControl = get('activity-access-service');
+        const departureControl = get('activity-access-departure');
+        if (hotelControl.options.length > 1) {
+          hotelControl.value = hotelControl.options[1].value;
+          hotelControl.fire('change');
+          if (!get('activity-access-summary').innerHTML.includes(hotelControl.options[1].textContent)) {
+            errors.push(`${page}: changing the hotel filter did not update the access summary`);
+          }
+        } else {
+          errors.push(`${page}: hotel filter has fewer than two options`);
+        }
+        if (serviceControl.options.length > 1) {
+          serviceControl.value = serviceControl.options[1].value;
+          serviceControl.fire('change');
+          const [service, date] = serviceControl.value.split('|');
+          const expected = `${service[0].toUpperCase()}${service.slice(1)} service · ${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6, 8)} sample`;
+          if (!get('activity-access-summary').innerHTML.includes(expected)) {
+            errors.push(`${page}: changing the sample service day did not update the access summary`);
+          }
+        } else {
+          errors.push(`${page}: service-day filter has fewer than two options`);
+        }
+        if (departureControl.options.length > 1) {
+          departureControl.value = departureControl.options[1].value;
+          departureControl.fire('change');
+          if (!get('activity-access-summary').innerHTML.includes(`depart ${departureControl.value}`)) {
+            errors.push(`${page}: changing the departure time did not update the access summary`);
+          }
+        } else {
+          errors.push(`${page}: departure-time filter has fewer than two options`);
+        }
+      }
       for (const [i, r] of extraRows.entries()) {
         if (!/href=/i.test(r[0])) errors.push(`${page}: #${id} body row ${i + 1} has no link`);
       }
