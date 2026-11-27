@@ -30,7 +30,7 @@
 <main class="wrap">
   <div class="hero">
     <h1>Activities</h1>
-    <p>Hours, exceptions and adult admission taken from each venue's own site. Review links open searches on YouTube, TikTok and Instagram rather than fixed videos — a fixed video can disappear, a search cannot.</p>
+    <p>Hours, exceptions and adult admission are sourced from each venue's own site; published hours are current baselines, not confirmations for the 2027 trip dates or the <a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener noreferrer">15 February federal holiday</a>. Review links open YouTube, TikTok and Instagram searches or found creator posts; neither replaces an official venue source.</p>
   </div>
 
   <section class="panel">
@@ -40,15 +40,34 @@
     <p class="small muted" style="margin:6px 0 0">Review links marked with a platform name were found by web search on 2026-11-26 (creator content, not an official source and not an endorsement); rows without one show search links instead. Every found link is stored in each row’s <code>review_links</code>.</p>
   </section>
 
-  <section class="panel">
-    <h2>Transit notes against the 1-hour rule</h2>
-    <p class="lede">The Met's own page states the M4 bus from the Met to The Cloisters runs about 1 h 25 min — so The Cloisters is flagged as a half-day excursion, not a 1-hour stop. Everything else sits on the Manhattan grid.</p>
-    <p class="small muted" style="margin:0">No journey time in this table was computed here; the Cloisters figure is quoted from The Met's own page.</p>
+  <section class="panel" id="activity-access">
+    <h2>Public-transit access from a selected hotel</h2>
+    <p class="lede">Door-to-door subway/bus plus walking estimates, computed from the repository's MTA static GTFS model. Pick a hotel, a representative service day and departure time to see which geocoded activities fall within 60 minutes.</p>
+    <div class="activity-access-controls" role="group" aria-label="Journey estimate filters">
+      <label for="activity-access-hotel">Origin hotel
+        <select id="activity-access-hotel" aria-label="Origin hotel"></select>
+      </label>
+      <label for="activity-access-service">Representative service day
+        <select id="activity-access-service" aria-label="Representative service day"></select>
+      </label>
+      <label for="activity-access-departure">Depart at
+        <select id="activity-access-departure" aria-label="Departure time"></select>
+      </label>
+    </div>
+    <p id="activity-access-summary" class="activity-access-summary" aria-live="polite">Loading the sourced route estimates…</p>
+    <div id="activity-access-host"><p class="loading">Loading hotel-to-activity estimates…</p></div>
+    <div class="activity-access-method small">
+      <p><strong>What this is:</strong> a modelled estimate, not an MTA-published journey time. It uses the sampled MTA GTFS service dates shown above—not a dated itinerary for 2027—and does not represent disruptions, elevator availability, weather, or a guaranteed arrival time. Recheck the <a href="https://www.mta.info/developers/gtfs-schedules-transition" target="_blank" rel="noopener noreferrer">MTA schedule transition guidance</a> and live service closer to travel.</p>
+      <p><strong>Sources and method:</strong> <a href="https://www.mta.info/developers" target="_blank" rel="noopener noreferrer">MTA Developer Resources</a> · <a href="https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip" target="_blank" rel="noopener noreferrer">subway GTFS</a> · <a href="https://rrgtfsfeeds.s3.amazonaws.com/gtfs_m.zip" target="_blank" rel="noopener noreferrer">Manhattan bus GTFS</a> · <a href="https://rrgtfsfeeds.s3.amazonaws.com/gtfs_b.zip" target="_blank" rel="noopener noreferrer">Brooklyn bus GTFS</a> · <a href="https://geocoding.geo.census.gov/geocoder" target="_blank" rel="noopener noreferrer">U.S. Census Geocoder</a>.</p>
+      <p id="activity-access-assumptions" class="muted">Walking and transfer assumptions load from the source data. Hotel choices are alphabetical; the initial selection is a display example, not a recommendation.</p>
+      <p><strong>Unmeasured stays blank:</strong> Central Park, the High Line and the Statue City Cruises ferry departure are not treated as a single confirmed point by this model. CityPASS is a pass rather than one physical destination. No coordinates or journey times are guessed for these rows.</p>
+      <p><strong>Official exception:</strong> The Met states that the M4 bus from The Met Fifth Avenue to The Met Cloisters takes about 1 h 25 min; it remains a half-day excursion, not a within-one-hour activity. See <a href="https://www.metmuseum.org/plan-your-visit/met-cloisters" target="_blank" rel="noopener noreferrer">The Met's official Cloisters visit page</a>.</p>
+    </div>
   </section>
 </main>
 
 <footer class="wrap">
-  <p>Sources: each venue's official visit or ticket page (linked per row). Verification date 25 November 2026.</p>
+  <p>Activity pages and hours were source-checked 25–26 November 2026. The saved journey estimates were generated 26 November 2026 using representative 4 and 7 November 2026 service samples—not 2027 trip-date schedules.</p>
 </footer>
 
 <script src="assets/app.js"></script>
@@ -80,5 +99,6 @@ NYF.load("data/activities.json", function (json) {
     '<p class="small muted" style="margin:10px 0 0">' + NYF.esc(json._meta.excluded) + "</p>";
 });
 </script>
+<script src="assets/activity_access.js"></script>
 </body>
 </html>

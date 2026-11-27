@@ -69,3 +69,18 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding:22px 0 40px;colo
 .filters label,.controls label,.legend label{max-width:100%;min-width:0;display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
 .filters select,.filters input,.controls select,.controls input,.legend select,.legend input{max-width:100%;min-width:0;box-sizing:border-box;text-overflow:ellipsis}
 select,input{max-width:100%;box-sizing:border-box}
+
+.activity-access-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px 12px;margin:12px 0 10px;max-width:100%}
+.activity-access-controls label{display:block;font-size:.78rem;font-weight:700;color:var(--muted)}
+.activity-access-controls select{display:block;width:100%;min-height:42px;margin-top:4px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-size:.9rem}
+.activity-access-summary{margin:8px 0 12px;padding:12px 14px;border-radius:10px;background:var(--accent-soft);font-size:.9rem}
+.activity-access-summary .small{display:inline-block;margin-top:3px}
+.activity-access-method{margin-top:14px;color:var(--muted)}
+.activity-access-method p{margin:7px 0}
+.activity-access-table{min-width:690px}
+.activity-access-table .activity-access-time{white-space:nowrap;font-variant-numeric:tabular-nums}
+.activity-access-table .activity-access-sources a{display:inline-block;margin:0 2px 2px 0}
+@media(max-width:700px){
+  .activity-access-controls{grid-template-columns:1fr;gap:8px}
+  .activity-access-controls select{min-height:44px}
+}
