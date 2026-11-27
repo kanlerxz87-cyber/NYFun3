@@ -285,3 +285,28 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
 
 - **Verification performed (2026-11-27):** `validate_site.py`, `check_sources.py`, `check_inline_js.py`, `check_rendered_tables.js` all pass (18 JSON, 19 HTML, 203 rendered rows). `data/michelin_all.json` = 72 starred rows. GitHub Pages API: `status: built`, source `main` `/`, HTTPS enforced. Direct `curl` to `*.github.io` returns 000 from this sandbox (egress blocked, same limitation noted in PR #19) — live content verified via Pages API + deployed `main` artifacts instead.
 - **Irregularity flagged:** MICHELIN New York 2026 ceremony is 14 Dec 2026 (after this audit, before the trip) — star status must be re-checked after that date; already flagged on `plan.html` / `flagged-for-review.html`. NR-01–NR-10 remain `needs review` and do not block merge.
+
+## Session `arena/134002e7-nyfun3` — final verification, closeout and publish (2026-11-27 UTC)
+
+- **Branch:** `arena/134002e7-nyfun3` (fixed by Arena harness; base `1823ca8ca7d93b00aa94a96bde35693d718f9e4f` = main after PR #23; identical to `main` at claim time).
+- **Scope (non-overlapping):** `COORDINATION.md` (this log only); no shared data/nav/HTML files edited.
+- **Claim:** T81 below.
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T81 | Final session verification: re-run all validators, independent spot-checks against official sources, confirm Pages status, create PR to `main`, merge and confirm Pages deploy | `in progress` | `arena/134002e7-nyfun3` | `COORDINATION.md` |
+
+- **Verification performed (2026-11-27):**
+  - `validate_site.py`, `check_inline_js.py`, `check_sources.py`, `check_rendered_tables.js` all pass (18 JSON, 19 HTML, 203 source-linked rendered rows); `git diff --check` clean.
+  - GitHub Pages API before this session's changes: `status: built`, source `main` `/`, HTTPS enforced, URL https://kanlerxz87-cyber.github.io/NYFun3/.
+  - Independent official-source spot checks (all fetched 2026-11-27, values match the repo; no value was changed or inferred):
+    * [MICHELIN NYC all-starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred): live display 5 three-star / 14 two-star / 50 one-star = 69 starred, 76 Bib Gourmand, 224 Selected, 369 total Guide venues — confirms the NR-01 framing that the live directory differs from the repo's 2025-tagged 72-row dataset; discrepancy stays flagged, not silently reconciled.
+    * [NYC DOF hotel room occupancy tax](https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page): NYC room occupancy tax plus NY State sales tax, NYC sales tax, $2.00/day NYC unit fee (rent ≥ $40) and $1.50/day NYS hotel unit fee; NYC Council states the aggregate percentage is 14.75% — confirms `hotels.json` tax_rule (`14.75%` + `$3.50/night` flat fees).
+    * [OPM 2027 federal holidays](https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/): Washington's Birthday is Monday, 15 February 2027 — confirms the Presidents' Day references in `plan.html`.
+    * [MTA GTFS schedules transition](https://www.mta.info/developers/gtfs-schedules-transition): subway GTFS roughly twice yearly, buses roughly four, schedules replaced about a week before going into effect — confirms the NR-04 caveat that current GTFS cannot be extended to 2027 travel dates.
+  - No new irregularities found; NR-01–NR-10 remain `needs review` and do not block the site.
+- **Publish plan:** PR from `arena/134002e7-nyfun3` → `main` (this COORDINATION.md claim/log only), then merge after CI passes, then confirm GitHub Pages rebuilds, then record the PR link and merge result below (follow-up board commit in the style of PR #18 if the link is not known before merge).
+
+- **PR link:** (to be filled after merge)
+- **Merge result:** (to be filled after merge)
+- **Pages post-merge:** (to be filled after merge)
