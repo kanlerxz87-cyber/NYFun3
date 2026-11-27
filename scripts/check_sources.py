@@ -25,6 +25,7 @@ Exit code 1 on any violation.
 from __future__ import annotations
 
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -135,6 +136,52 @@ def main() -> int:
                 errors.append(f"data/hotel_ranking.json: missing {key}")
     else:
         errors.append("data/hotel_ranking.json is missing; run scripts/build_ranking.py")
+
+    # The active restaurant-ranking page and Hotels table must use the same
+    # current-directory route output. The older hotel_ranking/transit_hotels
+    # files remain a separately labelled activity/history baseline.
+    current_path = ROOT / "research" / "generated" / "transit_1h.json"
+    if not current_path.exists():
+        errors.append("research/generated/transit_1h.json is missing; current hotel comparison has no route evidence")
+    else:
+        current = json.loads(current_path.read_text())
+        meta = current.get("_meta", {})
+        ranking = current.get("ranking", [])
+        routes = current.get("hotels", [])
+        if not meta.get("generated_utc") or not meta.get("methodology") or not meta.get("schedule_caveat"):
+            errors.append("research/generated/transit_1h.json: missing generation/method/schedule provenance")
+        if not re.match(r"^https://", meta.get("gtfs_source", "")):
+            errors.append("research/generated/transit_1h.json: missing official MTA GTFS source URL")
+        elif "rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip" not in meta["gtfs_source"]:
+            errors.append("research/generated/transit_1h.json: expected the official MTA subway feed source")
+        if len(ranking) != len(hotels["hotels"]) or len(routes) != len(hotels["hotels"]):
+            errors.append("research/generated/transit_1h.json: ranking/route hotel counts do not match data/hotels.json")
+        expected_ids = {h.get("id") for h in hotels["hotels"]}
+        if {h.get("id") for h in ranking} != expected_ids or {h.get("id") for h in routes} != expected_ids:
+            errors.append("research/generated/transit_1h.json: ranking/route hotel IDs do not match data/hotels.json")
+        hotel_by_id = {h.get("id"): h for h in hotels["hotels"]}
+        routes_by_id = {h.get("id"): h for h in routes}
+        for item in ranking:
+            hid = item.get("id")
+            route = routes_by_id.get(hid)
+            hotel = hotel_by_id.get(hid)
+            if not route or not hotel:
+                errors.append(f"research/generated/transit_1h.json: unknown or missing hotel id {hid!r}")
+                continue
+            journeys = route.get("journeys", [])
+            if len(journeys) != item.get("universe_count") or item.get("universe_count") != meta.get("active_nyc_restaurants"):
+                errors.append(f"research/generated/transit_1h.json: {hid} route coverage does not match its stated universe")
+            if item.get("within_60_min_count") != hotel.get("michelin_within_1h_count"):
+                errors.append(f"data/hotels.json: {hid} one-hour count disagrees with the current route dataset")
+            if not math.isclose(float(item.get("median_minutes", -1)), float(hotel.get("michelin_median_minutes", -2)), abs_tol=0.051):
+                errors.append(f"data/hotels.json: {hid} median disagrees with the current route dataset")
+            if item.get("rank") != hotel.get("michelin_transit_rank"):
+                errors.append(f"data/hotels.json: {hid} rank disagrees with the current route dataset")
+        cockpit = (ROOT / "assets" / "cockpit.js").read_text()
+        if 'fetch("research/generated/transit_1h.json")' not in cockpit:
+            errors.append("assets/cockpit.js: current decision ranking must load research/generated/transit_1h.json")
+        if 'fetch("data/hotel_ranking.json")' in cockpit:
+            errors.append("assets/cockpit.js: stale 2025 selection ranking is still used for the current hotel comparison")
 
     # Any HTML page that links a dead/parked domain is shipping a broken source to
     # the reader, even when the data files are clean. Scan the page markup too.

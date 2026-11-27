@@ -19,13 +19,14 @@ No build step, dependencies, or framework. The primary dashboard is plain HTML w
 | `guide-2026.html` | Current starred vs Bib Gourmand vs Guide-listed tiers, 15 verified venues, clusters, hotel audit, and official 2-adult totals. |
 | `hotels.html` | 14 properties with 7-night direct/third-party totals for 15–22 Feb 2027, private-bathroom and queen-bed checks, seasonality, and current-timetable GTFS reach. |
 | `itinerary.html` | 7-day plan sequenced around published closures. |
-| `plan.html` | Executive summary, 9 reviewable suggestions, 11 open questions, irregularities found. |
+| `plan.html` | Executive summary, reviewable suggestions, open questions, and irregularities found. |
+| `decide.html` | Current 69-venue MICHELIN transit comparison, restaurant route matrix, separate activity-route baseline, open questions, and reviewable suggestions. |
 | `flagged-for-review.html` | Published NR-01–NR-10 `needs review` queue, resolved source corrections, official starting sources, and next checks. |
 | `pages/index.html` | Supplemental curated dossier: itinerary, hotel snapshots, dining/menu arithmetic, attraction hours, and research notes. |
 
 Supporting documents: `REVIEW.md` (repo review, irregularities R1–R25, with final-integration resolutions), `EVIDENCE_AUDIT.md`, `FLAGS.md`,
 `VERIFICATION.md` (what was checked, against which page, and when), `RESEARCH.md`
-(the supplemental dossier source/method log), and `CURRENT_AUDIT.md` (26 Nov 2026 decision-readiness
+(the supplemental dossier source/method log), and `CURRENT_AUDIT.md` (27 Nov 2026 decision-readiness
 audit and independent source corrections). The nested `pages/` dossier complements the
 data-driven root site; it does not replace the existing JSON datasets or star/activity tables.
 The root `.nojekyll` file keeps the linked Markdown research log available to GitHub Pages as-is.
@@ -68,22 +69,28 @@ refer to the prior NR-01–NR-09 count.
 python3 -m http.server 8000 --bind 0.0.0.0
 # then open http://localhost:8000/ in your own browser (local preview only)
 python scripts/validate_site.py
+python scripts/check_sources.py
 python scripts/check_inline_js.py
 node scripts/check_rendered_tables.js
+npm install --no-save --no-package-lock --no-audit --no-fund jsdom
+node scripts/smoke_pages.js
 ```
 
 Opening `index.html` directly from disk will not work: browsers block `fetch()` of local JSON
 over `file://`. Any static server is fine. The validators check JSON schemas, official source links, local links/anchors, navigation,
-table Source columns, and `2 × official per-person` arithmetic; the JavaScript checker runs
-`node --check` on every script; the rendered-table harness executes each root renderer with a
-minimal DOM stub and checks the current 203 generated rows for source links (50 priced rows).
-`.github/workflows/validate-site.yml` runs both on pushes and pull requests.
+table Source columns, and `2 × official per-person` arithmetic; `check_sources.py` also compares
+the current transit ranking against the hotel-page values. The JavaScript checker runs
+`node --check` on every script; the rendered-table harness executes each data renderer with a
+minimal DOM stub and checks every generated row for a source link. The recursive jsdom smoke test
+executes root and nested HTML pages, including the dossier. CI installs jsdom and runs the full suite
+on pushes and pull requests.
 
 ## Verification status (27 November 2026)
 
 - **Star scope:** the official MICHELIN NYC-and-surroundings all-starred directory currently displays 5 three-star, 14 two-star, and 50 one-star entries (69 total; checked 27 Nov 2026). The separate [18 Nov 2025 New York selection release](https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-in-the-michelin-guide-to-new-york-city-2025) is preserved as a 72-row dataset (5 / 15 / 52). These are different source snapshots/scopes; the repository does not silently reconcile them. The [officially announced 2026 New York ceremony](https://michelinmedia.com/pages/blog/detail/article/c/a1479/) is scheduled for **14 Dec 2026**, before the trip, so re-check every restaurant's current status after that date. See the [live starred directory](https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred), [Guide comparison](guide-2026.html), and [Flagged for Review](flagged-for-review.html).
 - **Hotel prices:** date-specific direct quotes and Booking.com observations are captured with links and capture dates. OTA observations are third-party snapshots, not guaranteed totals; rates, availability, room tier, cancellation rules, taxes, and fees can change. Recheck the actual dates and selected room at checkout.
-- **Current data gaps:** 71 of 72 2025-release rows have verified Guide-page weekday hours; the remaining closed venue is blank and flagged. These current Guide hours are not a promise of Feb/Mar 2027 opening. The 72-row dataset has 25 first-party menu subtotals for two and 47 blank/unverified price rows. Neighborhood/cluster uncertainty and every other unresolved source issue are documented in the [review queue](flagged-for-review.html), rather than summarized with stale counts here. Modelled hotel-to-restaurant journey times use an MTA GTFS snapshot, not a 2027 guarantee; the [MTA's schedule-transition guidance](https://www.mta.info/developers/gtfs-schedules-transition) explains why timetable feeds must be rechecked.
+- **Transit comparison:** the current hotel ranking uses the 69-venue active NYC directory snapshot and current MTA Subway GTFS route model. Every hotel reaches 69/69 venues within 60 minutes in that model, so compare median travel time only as a secondary factor to price and room fit. The older 65/72 2025-selection dataset is separately labeled as an activity-route baseline. Neither result guarantees Feb/Mar 2027 operations; verify Presidents’ Day and planned service near travel using the [MTA schedule guidance](https://www.mta.info/developers/gtfs-schedules-transition).
+- **Other data gaps:** 71 of 72 2025-release rows have current MICHELIN Guide weekday hours; one closed venue remains blank/flagged. These are not a promise of Feb/Mar 2027 opening. The 72-row dataset has 25 first-party menu subtotals for two and 47 blank/unverified price rows. Hotel rates and some room/amenity facts still need exact-checkout confirmation. The [review queue](flagged-for-review.html) lists these gaps.
 
 ## Contributing / parallel sessions
 

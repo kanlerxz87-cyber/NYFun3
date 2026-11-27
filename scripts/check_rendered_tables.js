@@ -19,7 +19,7 @@ const PAGES = [
 // Pages whose renderer lives in a separate file (loaded with <script src>).
 const EXTRA_SCRIPTS = { 'decide.html': ['assets/cockpit.js'] };
 // Rendered hosts to verify, other than the page's own table-host.
-const EXTRA_HOSTS = { 'decide.html': ['ranking-host', 'review-host'] };
+const EXTRA_HOSTS = { 'decide.html': ['ranking-host', 'matrix-host', 'activity-matrix-host', 'review-host'] };
 const APP = fs.readFileSync(path.join(ROOT, 'assets/app.js'), 'utf8');
 const INLINE = /<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi;
 const errors = [];
@@ -188,10 +188,10 @@ async function renderPage(page) {
 // from data files other sessions update. Compare them with the data.
 function checkHeroNumbers() {
   const html = fs.readFileSync(path.join(ROOT, 'decide.html'), 'utf8');
-  const ranking = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/hotel_ranking.json'), 'utf8'));
+  const ranking = JSON.parse(fs.readFileSync(path.join(ROOT, 'research/generated/transit_1h.json'), 'utf8'));
   const expect = [
     ['hotels compared', String(ranking.ranking.length)],
-    ['starred restaurants within an hour', String(ranking.ranking[0].starred_restaurants_within_60_min_total)],
+    ['starred restaurants within an hour', String(ranking.ranking[0].within_60_min_count)],
     ['open questions', String(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/blockers.json'), 'utf8')).blockers.length)],
     ['suggestions to review', String(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/suggestions.json'), 'utf8')).suggestions.length)],
   ];

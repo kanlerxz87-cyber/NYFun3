@@ -64,6 +64,8 @@
         <tr><td><strong>Hotel tax components</strong></td><td><span class="pill ok">resolved</span></td><td>Removed the unsupported $4/night claim; current official components are 14.75% plus $2.00/day NYC and $1.50/day NYS unit fees, not a 2027 quote.</td><td class="small"><a href="https://www.nyc.gov/site/finance/business/business-hotel-room-occupancy-tax.page" target="_blank" rel="noopener noreferrer">NYC DOF</a><br><a href="https://www.tax.ny.gov/pdf/current_forms/st/st101_5.pdf" target="_blank" rel="noopener noreferrer">NYS ST-101.5</a><br><a href="https://legistar.council.nyc.gov/View.ashx?GUID=4547DD67-B740-4FED-A1E3-596960BC0E98&amp;ID=12994382&amp;M=F" target="_blank" rel="noopener noreferrer">NYC Council report</a></td></tr>
         <tr><td><strong>2026 ceremony link</strong></td><td><span class="pill ok">resolved</span></td><td>Normalized Michelin Media URL variants to the fetched official article; 14 Dec 2026 is confirmed, but 2027 stars are not inferred.</td><td class="small"><a href="https://michelinmedia.com/pages/blog/detail/article/c/a1479/" target="_blank" rel="noopener noreferrer">Michelin Media announcement</a></td></tr>
         <tr><td><strong>Guide hours flags</strong></td><td><span class="pill ok">resolved</span></td><td>Four populated rows with contradictory UNVERIFIED flags were cleared; 71 / 72 rows now have Guide hours and one closed venue remains blank/flagged.</td><td class="small"><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener noreferrer">MICHELIN NYC directory</a><br><a href="data/michelin_all.json">Combined dataset</a></td></tr>
+        <tr><td><strong>Current hotel transit comparison (QA-01)</strong></td><td><span class="pill ok">reconciled, schedule still needs recheck</span></td><td>The Decide and Hotels pages now use the same current 69-venue subway-only route dataset. The older 65/72 2025-selection model is explicitly separated as an activity-route baseline; neither model promises February–March 2027 service.</td><td class="small"><a href="https://rrgtfsfeeds.s3.amazonaws.com/gtfs_subway.zip" target="_blank" rel="noopener noreferrer">Official MTA Subway GTFS</a><br><a href="https://guide.michelin.com/us/en/new-york-state/new-york/restaurants/all-starred" target="_blank" rel="noopener noreferrer">Official MICHELIN directory</a><br><a href="research/generated/transit_1h.json">Current route model</a></td></tr>
+        <tr><td><strong>HTML DOM smoke coverage (QA-03)</strong></td><td><span class="pill ok">resolved</span></td><td>The page smoke test now discovers root and nested HTML recursively; all 19 HTML pages are exercised in CI when jsdom is installed.</td><td class="small"><a href="scripts/smoke_pages.js">Recursive smoke test</a><br><a href=".github/workflows/validate-site.yml">CI workflow</a></td></tr>
       </tbody>
     </table></div>
   </section>
@@ -74,7 +76,7 @@
       <li><strong>Blank is a value.</strong> A blank cell with <span class="unver">unverified</span> means the official source did not publish the fact; it never means zero.</li>
       <li><strong>Do not infer 2027.</strong> Stars, schedules, hotel rates, and menu prices may change before travel.</li>
       <li><strong>Source links are starting points.</strong> Use them to re-check the fact on the operator, venue, Guide, or transit authority’s own page.</li>
-      <li><strong>Latest audit:</strong> read the <a href="CURRENT_AUDIT.md">26 November 2026 decision-readiness audit</a> for the full coverage table and unresolved evidence gaps.</li>
+      <li><strong>Latest audit:</strong> read the <a href="CURRENT_AUDIT.md">27 November 2026 decision-readiness audit</a> for the full coverage table and unresolved evidence gaps.</li>
       <li><strong>Evidence quality:</strong> read <a href="EVIDENCE_AUDIT.md">EVIDENCE_AUDIT.md</a> for how far each table can be trusted, and <a href="FLAGS.md">FLAGS.md</a> for the list of defects: dead hotel domains, the Blue Angel address conflict, the Pestana fee arithmetic, the 67-versus-72 star-count mismatch, and the 261 search links that were labelled as reviews.</li>
       <li><strong>Coordination:</strong> the task board and work logs are in <a href="COORDINATION.md">COORDINATION.md</a>; the curated dossier’s own findings are in <a href="pages/findings.html">pages/findings.html</a>.</li>
     </ul>
@@ -82,7 +84,7 @@
 </main>
 
 <footer class="wrap">
-  <p>Verification date 26 November 2026. NR-01–NR-09 remain <code>needs review</code>; resolved corrections stay visible for auditability. These items do not block the published dashboard.</p>
+  <p>Verification date 27 November 2026. NR-01–NR-10 remain <code>needs review</code>; resolved corrections stay visible for auditability. These items do not block the published dashboard.</p>
 </footer>
 </body>
 </html>
