@@ -4,7 +4,7 @@ Shared task board. Read this before starting work. This file was combined by fin
 
 - **Repo:** `kanlerxz87-cyber/NYFun3`
 - **Live site:** https://kanlerxz87-cyber.github.io/NYFun3/ (GitHub Pages, source = `main`, `/` root)
-- **Board last updated:** 2026-11-26 UTC
+- **Board last updated:** 2026-11-27 UTC (T81 claimed by `957d4019`)
 - **Phase A:** `arena-c2e08f03`, pinned branch `arena/c2e08f03-nyfun3`
 - **Phase B / source diagnostics:** `ed92e764`, pinned branch `arena/ed92e764-nyfun3`
 - **Phase C / supplemental dossier:** `arena-61fbe157`, pinned branch `arena/61fbe157-nyfun3`
@@ -57,6 +57,7 @@ The protocol asks for `session-<id>/<task>` branches. All Arena sessions are pin
 | T71 | Verification audit remediation (Issue #3 / `snapshot-audit.md`), live direct SynXis/Arlo hotel quotes & seasonality, 100% active MICHELIN addresses/hours & 25 priced menus, measured MTA GTFS + Census/NYC GeoSearch 1h transit ranking (`transit_1h.json`), mobile & renderer fixes, CI, PR & merge to `main` | `done` | `arena-25fd4b76` | `data/*.json`, `*.html`, `pages/*.html`, `assets/*`, `research/**`, `scripts/**`, `.github/workflows/**`, `COORDINATION.md` |
 | T72 | Session `67e5a326` contribution: priority review links (10 priced restaurants + 15 activities) with dated creator links | `done` | `67e5a326` | `data/michelin*.json`, `data/activities.json`, `assets/app.js`, `restaurants.html`, `michelin.html`, `activities.html` |
 | T73 | Session `67e5a326` contribution: computed GTFS ranking drafted in parallel, then **superseded by T67/T71** (kept on this board for the record; not merged) | `superseded` | `67e5a326` | `research/scripts/transit_analysis.py`, `data/transit.json`, `transit.html` (all removed in the main-merge reconciliation) |
+| T81 | Session `957d4019`: independent official-source spot audit of the open `needs review` items (NR-01, NR-04, NR-05, NR-07, NR-08), the hotel-tax components, and the repo irregularities list; publishes results as a new audit file only; no shared output edited | `in progress` | `957d4019` | `research/audit-957d4019.md`, `COORDINATION.md` (own row and log only) |
 
 **T24 post-merge proofread (26 Nov 2026):** the merged page was read on the live site, not just validated
 locally. Four defects that every check passed were fixed on this branch in a follow-up commit: nine
