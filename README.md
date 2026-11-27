@@ -46,8 +46,9 @@ catalogue (25 selected rows have explicit `2 × official per-person price` arith
 blank + `unverified`), restaurant sites may not expose menu data, and no official source publishes
 subway times per hotel/restaurant pair. The figures that are published are paired with
 menu/FAQ/PDF links and an exclusions caveat; they are not quoted all-in totals or 2027 price
-guarantees. Each gap is listed rather than papered over with a plausible number, and the
-The `needs review` queue on `flagged-for-review.html` currently covers NR-01–NR-10; earlier notes may still refer to the prior NR-01–NR-09 count.
+guarantees. Each gap is listed rather than papered over with a plausible number. The
+review queue on `flagged-for-review.html` currently covers NR-01–NR-10; earlier notes may still
+refer to the prior NR-01–NR-09 count.
 
 ## Data files
 
