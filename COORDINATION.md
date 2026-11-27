@@ -285,3 +285,5 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
 
 - **Verification performed (2026-11-27):** `validate_site.py`, `check_sources.py`, `check_inline_js.py`, `check_rendered_tables.js` all pass (18 JSON, 19 HTML, 203 rendered rows). `data/michelin_all.json` = 72 starred rows. GitHub Pages API: `status: built`, source `main` `/`, HTTPS enforced. Direct `curl` to `*.github.io` returns 000 from this sandbox (egress blocked, same limitation noted in PR #19) — live content verified via Pages API + deployed `main` artifacts instead.
 - **Irregularity flagged:** MICHELIN New York 2026 ceremony is 14 Dec 2026 (after this audit, before the trip) — star status must be re-checked after that date; already flagged on `plan.html` / `flagged-for-review.html`. NR-01–NR-10 remain `needs review` and do not block merge.
+
+- **Result:** PR [#23](https://github.com/kanlerxz87-cyber/NYFun3/pull/23) merged; T80 `done`. CI passed (run 46040798037). Pages API re-checked after merge. NR-01–NR-10 remain `needs review` on flagged-for-review.html.
