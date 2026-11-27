@@ -337,3 +337,11 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
 - **PR [#32](https://github.com/kanlerxz87-cyber/NYFun3/pull/32)** merged 2026-11-27 at 17:38:41 UTC; merge commit `237e0416bba864b7d4c35b5a22c53fcabc5e2682`. PR `Validate static site` checks passed on the head; post-merge run [46043455321](https://github.com/kanlerxz87-cyber/NYFun3/actions/runs/46043455321) passed.
 - **GitHub Pages:** deployment run [46043454779](https://github.com/kanlerxz87-cyber/NYFun3/actions/runs/46043454779) completed successfully; Pages API reports `status: built`, source `main` `/`, HTTPS enforced. Published URL: https://kanlerxz87-cyber.github.io/NYFun3/.
 - **Residual flags:** NR-01–NR-10 remain published for post-ceremony star review, actual 2027 transit/service, third-party vs final hotel checkout prices, room fit and amenity confirmation, and venue hours/pricing. No unverified value was filled in.
+
+## Session `1dda0a39` — Claim and implementation log (2026-11-27 UTC)
+
+| ID | Task | Status | Owner session | File scope |
+|---|---|---|---|---|
+| T84 | Surface existing official MTA GTFS hotel-to-activity journey estimates on the Activities page; add hotel/service/date/time filters, preserve unmeasured destinations as flagged blanks, and add automated coverage/source guards | `in progress` | `1dda0a39` | `activities.html`, `assets/activity_access.js`, `assets/style.css`, `scripts/check_sources.py`, `scripts/check_rendered_tables.js`, `COORDINATION.md` |
+
+This session first claimed T82 on its fixed branch. After rebasing onto main, PR #32 had assigned T82 and T83 to the quality-audit integration; this task is renumbered T84 to keep IDs unique. The rebase conflict in this shared board was resolved by retaining all upstream T80/T81 closeout and T82/T83 work logs, then appending only this session's row; no other session's work was discarded. The implementation reads the existing `data/transit_hotels.json` and does not change activity, hotel, restaurant or route source data. The active PR #25 official-source audit remains in its separate research-file scope. Every displayed estimate keeps the representative-service-date and model caveats; destinations without a route remain unverified rather than being assigned a guessed point.
