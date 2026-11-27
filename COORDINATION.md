@@ -294,7 +294,7 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
 
 | ID | Task | Status | Owner session | File scope |
 |---|---|---|---|---|
-| T81 | Final session verification: re-run all validators, independent spot-checks against official sources, confirm Pages status, create PR to `main`, merge and confirm Pages deploy | `in progress` | `arena/134002e7-nyfun3` | `COORDINATION.md` |
+| T81 | Final session verification: re-run all validators, independent spot-checks against official sources, confirm Pages status, create PR to `main`, merge and confirm Pages deploy | `done` | `arena/134002e7-nyfun3` | `COORDINATION.md` |
 
 - **Verification performed (2026-11-27):**
   - `validate_site.py`, `check_inline_js.py`, `check_sources.py`, `check_rendered_tables.js` all pass (18 JSON, 19 HTML, 203 source-linked rendered rows); `git diff --check` clean.
@@ -307,6 +307,6 @@ The prior integration T24 is complete, and PR #19 merged; this follow-up preserv
   - No new irregularities found; NR-01–NR-10 remain `needs review` and do not block the site.
 - **Publish plan:** PR from `arena/134002e7-nyfun3` → `main` (this COORDINATION.md claim/log only), then merge after CI passes, then confirm GitHub Pages rebuilds, then record the PR link and merge result below (follow-up board commit in the style of PR #18 if the link is not known before merge).
 
-- **PR link:** (to be filled after merge)
-- **Merge result:** (to be filled after merge)
-- **Pages post-merge:** (to be filled after merge)
+- **PR link:** https://github.com/kanlerxz87-cyber/NYFun3/pull/26
+- **Merge result:** merged via `gh pr merge 26 --merge`; merge commit `e7f4c217c4b05f44ce14781f4b480d04a9460391`; PR closed and merged 2026-11-27 UTC; `Validate static site` check ran `completed | success` on PR head `98e233fd` before merge.
+- **Pages post-merge:** GitHub Pages API `status: built`, `error: None`, source `main` `/`, HTTPS enforced after merge commit `e7f4c2`; live site https://kanlerxz87-cyber.github.io/NYFun3/ verified built. No broken-link risk introduced: the only changed file is `COORDINATION.md` (no links added).
